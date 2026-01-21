@@ -1,0 +1,12 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "description": "Next - Multi-Purpose PHP Template",
+  "author": "Parv Infotech",
+  "scripts": {
+    "dev": "sass --watch assets/scss/main.scss:assets/css/main.css",
+    "build": "sass assets/scss/main.scss:assets/css/main.css",
+    "minify": "sass assets/scss/main.scss:assets/css/main.min.css --style=compressed"
+  },
+  "license": "ISC"
+}

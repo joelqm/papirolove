@@ -1,0 +1,6 @@
+.gitignore
+.htaccess
+application/Config.php
+sistema/
+foro/
+wxv6tqz4/
