@@ -17,14 +17,12 @@ class indexController extends Controller{
 
 	public function index(){
 
-		/*
-		$this->_view->assign('titulo','.:: COEDEM ::.');
+		
+		$this->_view->assign('titulo','.:: PAPIROLOVE ::.');
 		$this->_view->setJs(array('script'));
-		$this->_view->render('index');
-		*/
+		$this->_view->renderConstruction('index');
+		
 
-		header('Location: ' . BASE_URL . 'preinscripcion');
-        exit;
 
 	}
 

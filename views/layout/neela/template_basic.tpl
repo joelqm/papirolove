@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
     <head>
@@ -16,11 +17,11 @@
         <meta name="apple-mobile-web-app-status-bar-style"
             content="black-translucent" />
         <meta name="description"
-            content="{$descripcion|default:'Celebremos'} " />
+            content="{$descripcion} " />
         <meta name="keywords" content />
 
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="{$_layoutParams.ruta}img/f_i/{$_layoutParams.configs.favicon}">
+        <!-- <link rel="icon" type="image/png" sizes="16x16"
+            href="{$_layoutParams.ruta}img/f_i/{$_layoutParams.configs.favicon}"> -->
         <script type="text/javascript"
             src="//code.jquery.com/jquery-3.6.0.min.js"></script>
         <script type="text/javascript"
@@ -37,7 +38,9 @@
     <body>
         <input type="hidden" id="root" value="{$_layoutParams.host2}">
         {nocache}
-        {include file=$_contenido}
+        {if isset($_contenido)}
+            {include file=$_contenido}
+        {/if}
         {/nocache}
 
         <script
@@ -66,9 +69,9 @@
             src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
             
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
         <footer>
-            <p>© {date('Y')} celebremos.pe - Todos los derechos reservados. -
+            <p>© {$smarty.now|date_format:"%Y"} celebremos.pe - Todos los derechos reservados. -
                 Contáctanos</p>
         </footer>
 

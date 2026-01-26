@@ -1,0 +1,28 @@
+name: Despliegue a HestiaCP
+
+on:
+  push:
+    branches:
+      - main  # O 'master', asegúrate de cómo se llama tu rama principal
+
+jobs:
+  web-deploy:
+    name: 🎉 Desplegar
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Obtener el código más reciente
+      uses: actions/checkout@v4
+
+    - name: 📂 Sincronizar archivos vía FTP 2
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-ip: ${{ secrets.FTP_SERVER }}
+        remote-path: /home/magnum/web/papirolove.pe/public_html/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          application/Config.php

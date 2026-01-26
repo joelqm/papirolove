@@ -127,4 +127,103 @@ class View extends Smarty
     }
 
 
+
+    public function renderConstruction($vista, $item = false)
+    {
+        // Configuración de directorios Smarty para el tema actual
+        $this->setTemplateDir(ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_CONSTRUCTION . DS);
+        $this->setConfigDir(ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_CONSTRUCTION . DS . 'configs' . DS);
+        $this->setCacheDir(ROOT . 'tmp' . DS . 'cache' . DS);
+        $this->setCompileDir(ROOT . 'tmp' . DS . 'template' . DS);
+
+        $js = array();
+        if(count($this->_js)){
+            $js = $this->_js;
+        }
+
+        $_params = array(
+            'rutacentral' => BASE_URL . 'views/',
+            'ruta_css'    => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONSTRUCTION . '/assets/css/', // Ajustado a "assets"
+            'ruta_img'    => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONSTRUCTION . '/assets/img/', // Ajustado a "assets"
+            'ruta_js'     => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONSTRUCTION . '/assets/js/',  // Ajustado a "assets"
+            'ruta_fonts'  => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONSTRUCTION . '/assets/fonts/',
+            'ruta_layout' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONSTRUCTION . '/',
+            'js'          => $js,
+            'item'        => $item,
+            'root'        => BASE_URL,
+            'filever'     => rand(),
+            'configs'     => array(
+                'app_name' => APP_NAME,
+                'app_company' => APP_COMPANY
+            )
+        );
+
+        // Verificar si existe la vista solicitada (el contenido central)
+        if(is_readable($this->_rutas['view'] . $vista . '.tpl')){
+            // Asignamos la ruta del contenido para que template.tpl la incluya
+            $this->assign('_contenido', $this->_rutas['view'] . $vista . '.tpl');
+        } else {
+            throw new Exception('Error de vista: ' . $this->_rutas['view'] . $vista . '.tpl');
+        }
+
+        $this->assign('_layoutParams', $_params);
+        
+        // Renderizamos la plantilla principal del tema
+        $this->display('template.tpl');
+    }
+
+
+
+    public function renderContent($vista, $item = false)
+    {
+        // Configuración de directorios Smarty para el tema actual
+        $this->setTemplateDir(ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_CONTENT . DS);
+        $this->setConfigDir(ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_CONTENT . DS . 'configs' . DS);
+        $this->setCacheDir(ROOT . 'tmp' . DS . 'cache' . DS);
+        $this->setCompileDir(ROOT . 'tmp' . DS . 'template' . DS);
+
+        $js = array();
+        if(count($this->_js)){
+            $js = $this->_js;
+        }
+
+        if (HOST == 'localhost') {
+            $host2 = BASE_URL;
+        } else {
+            $host2 = 'https://'.HOST.'/';
+        }
+
+
+        $_params = array(
+            'rutacentral' => BASE_URL . 'views/',
+            'ruta_css'    => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONTENT . '/assets/css/', // Ajustado a "assets"
+            'ruta_img'    => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONTENT . '/assets/img/', // Ajustado a "assets"
+            'ruta_js'     => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONTENT . '/assets/js/',  // Ajustado a "assets"
+            'ruta_fonts'  => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONTENT . '/assets/fonts/',
+            'ruta_layout' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_CONTENT . '/',
+            'js'          => $js,
+            'item'        => $item,
+            'root'        => BASE_URL,
+            'filever'     => rand(),
+            'host2' => $host2,
+            'configs'     => array(
+                'app_name' => APP_NAME,
+                'app_company' => APP_COMPANY
+            )
+        );
+
+        // Verificar si existe la vista solicitada (el contenido central)
+        if(is_readable($this->_rutas['view'] . $vista . '.tpl')){
+            // Asignamos la ruta del contenido para que template.tpl la incluya
+            $this->assign('_contenido', $this->_rutas['view'] . $vista . '.tpl');
+        } else {
+            throw new Exception('Error de vista: ' . $this->_rutas['view'] . $vista . '.tpl');
+        }
+
+        $this->assign('_layoutParams', $_params);
+        
+        // Renderizamos la plantilla principal del tema
+        $this->display('template_basic.tpl');
+    }
+
 }

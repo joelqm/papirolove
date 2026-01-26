@@ -8,6 +8,8 @@ define('HOST',$host);
 
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'next-theme');
+define('DEFAULT_LAYOUT_CONSTRUCTION', 'construction-theme');
+define('DEFAULT_LAYOUT_CONTENT', 'neela');
 //define('DEFAULT_LAYOUT_ASSETS', 'assets');
 
 define('IMAGE_LOGO','logo_florever.png');
