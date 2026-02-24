@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-01-22 10:53:08
+/* Smarty version 5.5.1, created on 2026-02-24 11:37:45
   from 'file:views/shirleyycrysthian/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_697247e438ff64_19835846',
+  'unifunc' => 'content_699dd3d9e114d8_79593628',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2bfd0b9ac68bf677e4ebc959ac8cb179d6866a99' => 
     array (
       0 => 'views/shirleyycrysthian/components/hero.tpl',
-      1 => 1761152960,
+      1 => 1771949990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_697247e438ff64_19835846 (\Smarty\Template $_smarty_tpl) {
+function content_699dd3d9e114d8_79593628 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\shirleyycrysthian\\components';
 ?><div class="container-page">
     <div class="background" data-aos="fade-up"></div>

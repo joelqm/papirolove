@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-01-22 10:53:08
+/* Smarty version 5.5.1, created on 2026-02-24 11:37:45
   from 'file:views/shirleyycrysthian/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_697247e4674455_53251302',
+  'unifunc' => 'content_699dd3d9e35d91_90556888',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1eea79b737817ce61d82beaa0ac3b9b70251cd92' => 
     array (
       0 => 'views/shirleyycrysthian/components/galery.tpl',
-      1 => 1761152960,
+      1 => 1771949990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_697247e4674455_53251302 (\Smarty\Template $_smarty_tpl) {
+function content_699dd3d9e35d91_90556888 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\shirleyycrysthian\\components';
 ?><div class="container-galery" id="galery">
     <div class="owl-carousel owl-theme">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-01-22 10:53:08
+/* Smarty version 5.5.1, created on 2026-02-24 11:37:45
   from 'file:views/shirleyycrysthian/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_697247e481afd1_78004575',
+  'unifunc' => 'content_699dd3d9e44b33_59789932',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac383f8227fce33e6e9d5cc905a8beef6047d6fb' => 
     array (
       0 => 'views/shirleyycrysthian/components/gifts.tpl',
-      1 => 1761152960,
+      1 => 1771949990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_697247e481afd1_78004575 (\Smarty\Template $_smarty_tpl) {
+function content_699dd3d9e44b33_59789932 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\shirleyycrysthian\\components';
 ?><div class="container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
