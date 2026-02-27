@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-01-22 10:56:30
+/* Smarty version 5.5.1, created on 2026-01-26 14:24:22
   from 'file:template_basic.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_697248ae584fd4_40681563',
+  'unifunc' => 'content_6977bf666b79d0_58733798',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2bd157f0757b167e996d36c9df4d5a79560326db' => 
     array (
       0 => 'template_basic.tpl',
-      1 => 1769097365,
+      1 => 1769451209,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_697248ae584fd4_40681563 (\Smarty\Template $_smarty_tpl) {
+function content_6977bf666b79d0_58733798 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\layout\\neela';
 ?>
 <!doctype html>
@@ -41,7 +41,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\layout\\neela';
         <meta name="apple-mobile-web-app-status-bar-style"
             content="black-translucent" />
         <meta name="description"
-            content="<?php echo (($tmp = $_smarty_tpl->getValue('descripcion') ?? null)===null||$tmp==='' ? 'Celebremos' ?? null : $tmp);?>
+            content="<?php echo $_smarty_tpl->getValue('descripcion');?>
  " />
         <meta name="keywords" content />
 

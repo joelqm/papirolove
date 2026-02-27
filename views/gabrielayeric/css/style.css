@@ -39,9 +39,15 @@
 }
 
 @font-face {
-    font-family: 'Baskervville';
-    src: url("../fonts/Baskervville-Regular.ttf");
+    font-family: 'BaskervilleBT';
+    src: url("../fonts/BaskervilleBT.ttf");
 }
+
+@font-face {
+    font-family: 'Alana';
+    src: url("../fonts/Alana.otf");
+}
+
 
 /*solicita tu web*/
 
@@ -60,7 +66,7 @@
     gap: 0.3rem;
     background: #fff;
     padding: 0.5rem 0.8rem;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
 }
 
 .whatsapp-button svg {
@@ -147,7 +153,7 @@
 .loader-button {
     background: var(--primary-color);
     color: white;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
     border: none;
@@ -206,7 +212,7 @@
     --footer-color: #8ba273;
     --location-button-color: #f1e9d2;
     --text-color: #797979;
-    --button-color: #333;
+    --button-color: #6b7052;
     --button-hover-scale: 110%;
     --transition-duration: 0.3s;
 }
@@ -265,10 +271,8 @@ body {
 
 .couple-name {
     white-space: nowrap;
-    /* Evita el salto de línea */
     margin: 0 auto;
-    word-spacing: 1rem;
-    font-size: 60px;
+    font-size: 5.5rem;
     font-weight: 100;
     color: white;
     margin-bottom: 10px;
@@ -299,10 +303,13 @@ body {
     font-family: 'AbhayaLibre';
 }
 
-.font-Baskervville {
-    font-family: 'Baskervville';
+.font-BaskervilleBT {
+    font-family: 'BaskervilleBT';
 }
 
+.font-Alana {
+    font-family: 'Alana';
+}
 
 
 
@@ -340,12 +347,10 @@ body {
 .wedding-date {
     max-width: 80%;
     margin: 0 auto;
-    font-family: "Forum";
     font-weight: bold;
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
-
 }
 
 .count {
@@ -353,8 +358,7 @@ body {
     justify-content: center;
     gap: 40px;
     margin-bottom: 30px;
-
-
+    
 }
 
 .countdown-item {
@@ -369,12 +373,12 @@ body {
 
 .countdown-number {
     font-size: 48px;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
 .countdown-label {
 
-    font-weight: 600;
+    /*font-weight: 600;*/
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 5px;
@@ -389,10 +393,10 @@ body {
 }
 
 .button {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     font-size: 2rem;
     background-color: white;
-    color: #333;
+    color: #6b7052;
     border: none;
     border-radius: 50px;
     padding: 10px 20px;
@@ -402,12 +406,12 @@ body {
     justify-items: center;
     align-items: center;
     gap: 8px;
+    font-weight: 600;
 }
 
 .button-2 {
-    font-weight: bold;
-    font-family: "Forum";
-    font-size: 1.5rem;
+    font-family: "BaskervilleBT";
+    font-size: 1.2rem;
     border: transparent;
     color: #fff;
     padding: 10px 20px;
@@ -417,7 +421,7 @@ body {
     justify-items: center;
     align-items: center;
     gap: 8px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 1); */
 }
 
 .button-2 svg {
@@ -452,7 +456,7 @@ body {
 
 /* Estilo de los ítems de navegación */
 .nav-item {
-    font-family: "Forum", serif;
+    font-family: "AbhayaLibre", serif;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -601,20 +605,17 @@ body {
     flex-grow: 1;
 }
 
-
 @media (max-width: 768px) {
     .couple-name {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         padding: 0rem 2rem;
     }
 
     .wedding-date {
-        font-size: 0.8rem;
-
+        font-size: 1.3rem;
     }
 
     .count {
-
         gap: 20px;
     }
 
@@ -692,12 +693,12 @@ body {
 }
 
 .text-body {
-    font-family: "Forum";
-    font-size: 1.1rem;
+    font-family: "BaskervilleBT";
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     color: white;
     text-align: center;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
     max-width: 500px;
 }
 
@@ -707,26 +708,27 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 
 .history-title-small {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     margin-bottom: 0rem;
     text-align: center !important;
     top: 10%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #797979;
 
 }
 
 .history-title-big {
-    font-family: "AmalfiCoast";
-    font-size: 1.5rem;
-    font-weight: 100;
+    font-family: "Alana";
+    font-size: 3rem;
+    /* font-weight: 500; */
     color: #797979;
-
+    top: -20px;
+    left: 80px;
+    position: relative;
 }
 
 .rm-container {
@@ -762,27 +764,7 @@ body {
     align-items: center;
 }
 
-.circular-image {
-    position: relative;
-    width: 250px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-}
 
-.rectangular-image {
-    position: absolute;
-    bottom: -30%;
-    left: 10%;
-    z-index: 1000;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 
 .pattern {
     position: relative;
@@ -812,6 +794,31 @@ body {
     white-space: nowrap;
     color: var(--background-color);
 }
+
+
+.circular-image {
+    position: relative;
+    width: 270px;
+    height: 328px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 180px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    left: 54px;
+}
+
+.rectangular-image {
+    position: absolute;
+    bottom: -5%;
+    left: 20%;
+    z-index: 1000;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 
 @media (max-width: 400px) {
 
@@ -866,7 +873,13 @@ body {
     }
 
     .history-title-big {
-        font-size: 1.4rem;
+        font-family: "Alana";
+        font-size: 3rem;
+        /* font-weight: 500; */
+        color: #797979;
+        top: -13px;
+        left: 82px;
+        position: relative;
     }
 
     .text-body {
@@ -874,13 +887,26 @@ body {
     }
 
     .circular-image {
+        position: relative;
         width: 220px;
         height: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 180px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        left: 54px;
     }
 
     .rectangular-image {
-        width: 200px;
-        height: 160px;
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        z-index: 1000;
+        width: 220px;
+        height: 190px;
+        object-fit: cover;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .history-images {
@@ -921,14 +947,14 @@ body {
 
 .text-invitation-primary {
     padding: 0rem 2rem;
-    font-family: "Baskervville";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-size: 1.2rem;
 }
 
 .text-invitation-secondary {
     padding: 0rem 2rem;
-    font-family: "Baskervville";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-size: 1.2rem;
     font-weight: bold;
@@ -995,7 +1021,7 @@ body {
 }
 
 .location-type {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-weight: bold;
 
@@ -1014,7 +1040,7 @@ body {
 }
 
 .location-address {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-size: 1rem;
     margin-bottom: 10px;
@@ -1022,7 +1048,7 @@ body {
 
 .location-time {
 
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-weight: bold;
     margin-bottom: 15px;
@@ -1118,7 +1144,7 @@ body {
 
 .palette-title {
     text-align: center;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     font-size: 16px;
     text-transform: uppercase;
@@ -1233,7 +1259,7 @@ body {
 }
 
 .gift-section h5 {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     font-size: 1rem;
     color: var(--secondary-color);
 }
@@ -1249,7 +1275,7 @@ body {
 .gift-section .text {
     width: 18rem;
     padding-top: 0.8rem;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     text-align: center;
 }
@@ -1258,7 +1284,7 @@ body {
     width: 18rem;
     font-size: 2rem;
     padding: 1rem 0rem;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: var(--secondary-color);
     text-align: center;
 }
@@ -1276,7 +1302,7 @@ body {
 
 .button-gift,
 .button-free-gift {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     background: #fff;
     color: var(--primary-color);
     width: 100%;
@@ -1300,7 +1326,7 @@ body {
 }
 
 .button-3 {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     color: #fff;
     background: var(--primary-ligth-color);
     border: none;
@@ -1341,14 +1367,14 @@ footer {
     text-align: center;
     background: var(--footer-color);
     color: #fff;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     padding: 1rem 0rem;
 }
 
 /*GIFTS SECTION*/
 
 .izi-wrapper {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1489,7 +1515,7 @@ footer {
 }
 
 .category-button {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     padding: 15px 20px;
     border: 1px solid #ddd;
     border-radius: 25px;
@@ -1508,7 +1534,7 @@ footer {
 }
 
 .category-button.primary {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     background-color: #e2c3c3;
     color: #555;
     border: none;
@@ -1525,7 +1551,7 @@ footer {
 
 .product-card {
     background-color: white;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -1559,7 +1585,7 @@ footer {
 
 .product-title {
     font-size: 16px;
-    color: #333;
+    color: #6b7052;
     margin-bottom: 8px;
 }
 
@@ -1627,7 +1653,7 @@ footer {
     bottom: 20px;
     right: 10px;
     z-index: 2000;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     background-color: var(--primary-ligth-color);
     color: white;
     border: none;
@@ -1643,7 +1669,7 @@ footer {
 
 /* Cart aside container */
 .cart {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     position: fixed;
     top: 0;
     /* Hace que se alinee al principio de la pantalla */
@@ -1676,7 +1702,7 @@ footer {
 .cart-title h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #333;
+    color: #6b7052;
     margin: 0;
 }
 
@@ -1723,7 +1749,7 @@ footer {
 .cart-item-name {
     font-weight: 500;
     margin-bottom: 5px;
-    color: #333;
+    color: #6b7052;
 }
 
 .cart-item-price {
@@ -1760,7 +1786,7 @@ footer {
 .quantity-value {
     margin: 0 10px;
     font-size: 0.9rem;
-    color: #333;
+    color: #6b7052;
 }
 
 .cart-item-remove {
@@ -1787,7 +1813,7 @@ footer {
     border-top: 2px solid #f0f0f0;
     margin-top: auto;
     font-weight: 600;
-    color: #333;
+    color: #6b7052;
 }
 
 .total-price {
@@ -1796,7 +1822,7 @@ footer {
 }
 
 .checkout-button {
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     background-color: var(--primary-ligth-color);
     color: white;
     border: none;
@@ -1841,7 +1867,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5000;
-    font-family: "Forum";
+    font-family: "BaskervilleBT";
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1866,7 +1892,7 @@ footer {
 
 
 .form-title {
-    color: #333;
+    color: #6b7052;
     margin-bottom: 25px;
     font-size: 1.8rem;
     font-weight: 600;

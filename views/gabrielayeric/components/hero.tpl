@@ -1,28 +1,19 @@
 <div class="container-page">
     <div class="background" data-aos="fade-up"></div>
 
-    <div class="header">
-        <h1 class="couple-name font-Chandia" data-aos="fade-up">Gabriela <span style="margin-left: 1rem;">y</span>
+    <div class="header" style="justify-items: center;">
+        <h1 class="couple-name font-Alana" data-aos="fade-up">Gabriela <span style="margin-left: 1rem;">y</span>
             Eric</h1>
-        <p class="wedding-date" data-aos="fade-up">SÁBADO, 18 DE ABRIL DEL 2026</p>
+        <p class="wedding-date font-Baskervville" data-aos="fade-up">SÁBADO, 18 DE ABRIL DEL 2026</p>
+
+        <button id="player" class="button-2 button-hovers">
+            <i class="fa-solid fa-play play-icon"></i>
+            <i class="fa-solid fa-pause pause-icon" style="display: none;"></i>
+            <p>NUESTRA CANCIÓN</p>
+        </button>
     </div>
 
     <div class="content">
-        <div class="count" id="countdown">
-            <div class="countdown-item">
-                <span class="countdown-number font-forum" id="counter1">00</span>
-                <span class="countdown-label font-forum">DÍAS</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number font-forum" id="counter2">00</span>
-                <span class="countdown-label font-forum">HORAS</span>
-            </div>
-            <div class="countdown-item">
-                <span class="countdown-number font-forum" id="counter3">00</span>
-                <span class="countdown-label font-forum">MINUTOS</span>
-            </div>
-        </div>
-
         <div class="buttons">
             <button class="button button-hover button-calendar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -34,11 +25,26 @@
                 <p>AGREGAR A CALENDARIO</p>
             </button>
             <audio id="myAudio" src="{$_layoutParams.root}views/gabrielayeric/sound/song.mp3"></audio>
-            <button id="player" class="button-2 button-hovers">
+            <!-- <button id="player" class="button-2 button-hovers">
                 <i class="fa-solid fa-play play-icon"></i>
                 <i class="fa-solid fa-pause pause-icon" style="display: none;"></i>
                 <p>NUESTRA CANCIÓN</p>
-            </button>
+            </button> -->
+        </div>
+
+        <div class="count" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number font-BaskervilleBT" id="counter1">00</span>
+                <span class="countdown-label font-BaskervilleBT">DÍAS</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number font-BaskervilleBT" id="counter2">00</span>
+                <span class="countdown-label font-BaskervilleBT">HORAS</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number font-BaskervilleBT" id="counter3">00</span>
+                <span class="countdown-label font-BaskervilleBT">MINUTOS</span>
+            </div>
         </div>
     </div>
 
