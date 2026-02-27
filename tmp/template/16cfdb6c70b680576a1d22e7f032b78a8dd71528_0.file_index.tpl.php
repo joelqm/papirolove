@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-24 12:40:10
+/* Smarty version 5.5.1, created on 2026-02-26 12:50:43
   from 'file:C:\laragon\www\papirolove\views\gabrielayeric\index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_699de27a928728_51947537',
+  'unifunc' => 'content_69a087f37f7b65_51189934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16cfdb6c70b680576a1d22e7f032b78a8dd71528' => 
     array (
       0 => 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\index.tpl',
-      1 => 1771954725,
+      1 => 1772128241,
       2 => 'file',
     ),
   ),
@@ -22,46 +22,46 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:views/gabrielayeric/components/hero.tpl' => 1,
     'file:views/gabrielayeric/components/history.tpl' => 1,
     'file:views/gabrielayeric/components/information.tpl' => 1,
-    'file:views/gabrielayeric/components/dresscode.tpl' => 1,
     'file:views/gabrielayeric/components/galery.tpl' => 1,
+    'file:views/gabrielayeric/components/dresscode.tpl' => 1,
     'file:views/gabrielayeric/components/attendance.tpl' => 1,
     'file:views/gabrielayeric/components/gifts.tpl' => 1,
     'file:views/gabrielayeric/components/button-whatsapp.tpl' => 1,
   ),
 ))) {
-function content_699de27a928728_51947537 (\Smarty\Template $_smarty_tpl) {
+function content_69a087f37f7b65_51189934 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_215703867699de27a91e7f6_26634591', "styles");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_40026899369a087f37ef286_16981834', "styles");
 ?>
-
 
 
 <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/loader.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/hero.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/history.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/information.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-$_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/dresscode.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>   
-<?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/galery.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+$_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/galery.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
-
 <div class="pattern">
-    <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/attendance.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?>
-    <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/gifts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+    <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/dresscode.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
 </div>
+
+<!-- <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/attendance.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?> -->
+<?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/gifts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
 <?php $_smarty_tpl->renderSubTemplate("file:views/gabrielayeric/components/button-whatsapp.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 }
 /* {block "styles"} */
-class Block_215703867699de27a91e7f6_26634591 extends \Smarty\Runtime\Block
+class Block_40026899369a087f37ef286_16981834 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric';
 ?>
 
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+<link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/gabrielayeric/css/style.css">
 <?php
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-24 12:40:10
+/* Smarty version 5.5.1, created on 2026-02-26 12:26:43
   from 'file:views/gabrielayeric/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_699de27a965dc9_41942094',
+  'unifunc' => 'content_69a08253812f58_12616974',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0678218338aa6e4855c67c093c2a44d5cbf5c08e' => 
     array (
       0 => 'views/gabrielayeric/components/galery.tpl',
-      1 => 1771954731,
+      1 => 1772126798,
       2 => 'file',
     ),
   ),
@@ -20,29 +20,37 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_699de27a965dc9_41942094 (\Smarty\Template $_smarty_tpl) {
+function content_69a08253812f58_12616974 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
-?><div class="container-galery" id="galery">
-    <div class="owl-carousel owl-theme">
-        <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/gabrielayeric/imgs/preboda.webp" alt="Imagen 1">
-        </div>
-        <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/gabrielayeric/imgs/preboda-1.webp" alt="Imagen 2">
-        </div>
-        <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/gabrielayeric/imgs/preboda-2.webp" alt="Imagen 3">
-        </div>
-        <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/gabrielayeric/imgs/preboda-3.webp" alt="Imagen 4">
+?><div class="galery-full-wrapper" style="background: #636C53;">
+    <div class="container-galery" id="galery">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/gabrielayeric/imgs/preboda-1.webp" alt="Imagen 1">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/gabrielayeric/imgs/preboda-2.webp" alt="Imagen 2">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/gabrielayeric/imgs/preboda-3.webp" alt="Imagen 3">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/gabrielayeric/imgs/preboda-4.webp" alt="Imagen 4">
+            </div>
         </div>
     </div>
 </div>
 
 <style>
+    /* Agregamos esta regla para asegurar el ancho total */
+    .galery-full-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .container-galery {
         max-width: 1000px;
-        /* El ancho máximo del carrusel */
         margin: 0 auto;
         padding: 20px 0;
     }
@@ -53,44 +61,27 @@ views/gabrielayeric/imgs/preboda-3.webp" alt="Imagen 4">
         align-items: center;
         padding: 10px;
         height: 500px;
-        /* Establecemos la altura fija para el contenedor de la imagen */
         overflow: hidden;
-        /* Aseguramos que el contenido no se desborde */
     }
 
     .owl-carousel .item img {
         width: 100%;
-        /* Las imágenes ocupan el 100% del ancho del contenedor */
         height: 100%;
-        /* La altura será 100% para llenar el contenedor */
         object-fit: cover;
-        /* Ajusta las imágenes al contenedor sin distorsionar */
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    /* Hacer que el carrusel sea responsive */
+    /* Responsive */
     @media (max-width: 768px) {
         .owl-carousel .item {
             height: 400px;
-            /* Ajuste de la altura para pantallas más pequeñas */
-        }
-
-        .owl-carousel .item img {
-            object-fit: cover;
-            /* Asegura que las imágenes sigan ajustándose adecuadamente */
         }
     }
 
     @media (max-width: 480px) {
         .owl-carousel .item {
             height: 300px;
-            /* Ajuste de la altura para pantallas muy pequeñas */
-        }
-
-        .owl-carousel .item img {
-            object-fit: cover;
-            /* Asegura que las imágenes sigan ajustándose adecuadamente */
         }
     }
 </style>

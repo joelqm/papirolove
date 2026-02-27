@@ -1,27 +1,25 @@
 <div class="container-history" id="new-history">
+
     <div class="section">
         <div class="history-title" data-aos="fade-up">
             <h1 class="history-title-small">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
-
         <p class="text-body" data-aos="fade-up">
-            Nuestros caminos se cruzaron de forma inesperada
-            en una celebración de amor.
-            Quién imaginaría que asistir como invitados a una
-            boda nos llevaría a construir la nuestra.
-            Un café después selló lo que nuestros corazones
-            ya sabían: estábamos destinados a estar juntos.
-            Con gran alegría, les invitamos a celebrar el
-            inicio de nuestro próximo capítulo como esposos,
-            aquel que comenzó con
-            un encuentro mágico.
+            Y hasta el final de los días te amaré<br>
+            con el alma porque el corazón deja de latir. <br><br>
+            Mejor son dos que uno porque obtienen más<br>
+            fruto de su esfuerzo.<br>
+            Si caen, el uno levanta al otro.<br>
+            La cuerda triple no se rompe fácilmente.<br>
+            Eclesiastés 4:9-12b<br>
         </p>
     </div>
 
     <div class="rm-container">
         <img class="logo-history" src="{$_layoutParams.root}views/gabrielayeric/imgs/logo-history.webp" alt="">
     </div>
+
     <div class="divider"></div>
 
     <div class="history-images" data-aos="fade-up">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-24 12:40:10
+/* Smarty version 5.5.1, created on 2026-02-26 12:16:15
   from 'file:views/gabrielayeric/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_699de27a948489_30751914',
+  'unifunc' => 'content_69a07fdf931c07_66712718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee5ddcb2d86c5875ad5dff391c60a6b780055883' => 
     array (
       0 => 'views/gabrielayeric/components/history.tpl',
-      1 => 1771954798,
+      1 => 1772125813,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,23 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_699de27a948489_30751914 (\Smarty\Template $_smarty_tpl) {
+function content_69a07fdf931c07_66712718 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container-history" id="new-history">
+
     <div class="section">
         <div class="history-title" data-aos="fade-up">
             <h1 class="history-title-small">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
-
         <p class="text-body" data-aos="fade-up">
-            Nuestros caminos se cruzaron de forma inesperada
-            en una celebración de amor.
-            Quién imaginaría que asistir como invitados a una
-            boda nos llevaría a construir la nuestra.
-            Un café después selló lo que nuestros corazones
-            ya sabían: estábamos destinados a estar juntos.
-            Con gran alegría, les invitamos a celebrar el
-            inicio de nuestro próximo capítulo como esposos,
-            aquel que comenzó con
-            un encuentro mágico.
+            Y hasta el final de los días te amaré<br>
+            con el alma porque el corazón deja de latir. <br><br>
+            Mejor son dos que uno porque obtienen más<br>
+            fruto de su esfuerzo.<br>
+            Si caen, el uno levanta al otro.<br>
+            La cuerda triple no se rompe fácilmente.<br>
+            Eclesiastés 4:9-12b<br>
         </p>
     </div>
 
@@ -47,6 +44,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
         <img class="logo-history" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/gabrielayeric/imgs/logo-history.webp" alt="">
     </div>
+
     <div class="divider"></div>
 
     <div class="history-images" data-aos="fade-up">

@@ -2,8 +2,9 @@
     <div class="background" data-aos="fade-up"></div>
 
     <div class="header">
-        <h1 class="couple-name font-Scriptina" data-aos="fade-up">Gabriela <span style="margin-left: 1rem;">y</span> Eric</h1>
-        <p class="wedding-date" data-aos="fade-up">SÁBADO, 12 DE JULIO DEL 2025</p>
+        <h1 class="couple-name font-Chandia" data-aos="fade-up">Gabriela <span style="margin-left: 1rem;">y</span>
+            Eric</h1>
+        <p class="wedding-date" data-aos="fade-up">SÁBADO, 18 DE ABRIL DEL 2026</p>
     </div>
 
     <div class="content">
@@ -41,18 +42,18 @@
         </div>
     </div>
 
- 
+
 </div>
 <div class="navigation">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">
-      <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+        <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
     </a>
     <div class="menu" id="menu">
-      <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a>
-      <a data-id="info" class="nav-item">INFORMACIÓN</a>
-      <a data-id="galery" class="nav-item">NUESTRAS FOTOS</a>
-      <a data-id="dresscode" class="nav-item">CÓDIGO DE VESTIMENTA</a>
-      <a data-id="attendance" class="nav-item">ASISTENCIA</a>
-      <a data-id="gifts" class="nav-item">REGALOS</a>
+        <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a>
+        <a data-id="info" class="nav-item">INFORMACIÓN</a>
+        <a data-id="galery" class="nav-item">NUESTRAS FOTOS</a>
+        <a data-id="dresscode" class="nav-item">CÓDIGO DE VESTIMENTA</a>
+        <a data-id="attendance" class="nav-item">ASISTENCIA</a>
+        <a data-id="gifts" class="nav-item">REGALOS</a>
     </div>
-  </div>
+</div>

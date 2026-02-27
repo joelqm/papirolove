@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Definir la fecha de destino
-  var targetDate = new Date("jul 12, 2025 00:00:00").getTime();
+  var targetDate = new Date("Apr 18, 2026 00:00:00").getTime();
 
   // Guardar el último valor para comparar
   var lastDays = -1;
@@ -176,8 +176,8 @@ function crearEventoEnGoogleCalendar() {
   const title = encodeURIComponent("Boda Gabriela y Eric");
   const description = encodeURIComponent("¡No faltes! 💍🎉");
 
-  const startDate = "20250712T163000Z"; // 11:30 a. m. hora Perú
-  const endDate = "20250712T200000Z";   // 3:00 p. m. hora Perú
+  const startDate = "20260418T163000Z"; // 11:30 a. m. hora Perú
+  const endDate = "20260418T200000Z";   // 3:00 p. m. hora Perú
 
   const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${description}`;
 

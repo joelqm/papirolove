@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-24 12:41:42
+/* Smarty version 5.5.1, created on 2026-02-27 09:25:54
   from 'file:views/gabrielayeric/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_699de2d6576583_88830460',
+  'unifunc' => 'content_69a1a97285a6c0_23386904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '713f02eec8e0d950449ac742ad1a1e77f290cddb' => 
     array (
       0 => 'views/gabrielayeric/components/gifts.tpl',
-      1 => 1771954863,
+      1 => 1772128483,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_699de2d6576583_88830460 (\Smarty\Template $_smarty_tpl) {
+function content_69a1a97285a6c0_23386904 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
-?><div class="container" id="gifts">
+?><div class="container" id="gifts" style="background: #636C53;color: white !important;">
     <div class="gift-section" data-aos="fade-up">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
@@ -35,23 +35,23 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
             </g>
         </svg>
 
-
         <p class="gift-title">Regalos</p>
 
-
-        <p class="text-body" style="padding: 0 2rem;">CUALQUIER DETALLE EN NUESTRA
-            NUEVA ETAPA, SERÁ ETERNAMENTE
-            AGRADECIDO</p>
-        <p class="text-body">CTA SOLES BCP<br>
-            215-00753174-0-77<br>
-            CCI: 00221510075317407721</p>
-        <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Shirley Loaiza</p>
-
-        <p class="text-body">Cta Soles INTERBANK<br>
-            2003084862610<br>
-            CCI: 00320001308486261032
+        <p class="text-body" style="padding: 0 2rem;">
+            CUALQUIER DETALLE EN ESTA <br>
+            NUEVA ETAPA SERA AGRADECIDO
         </p>
-        <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Crysthian Castañeda</p>
+
+        <p class="text-body">Cta Soles BCP (Eric)<br>
+            385-13844000-0-05<br>
+            CCI: 00238511384400000534</p>
+        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Shirley Loaiza</p> -->
+
+        <p class="text-body">Cta Soles BCP (Gabriela)<br>
+            215-37096605-0-14<br>
+            CCI: 00221513709660501424
+        </p>
+        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Crysthian Castañeda</p> -->
 
     </div>
 

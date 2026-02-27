@@ -1,57 +1,46 @@
 <section class="invitation-card" id="info">
 
   <div>
-    <p class="font-dulcinea invitation-message">“Vistanse de amor, porque es un lazo de unión perfecto”</p>
+    <p class="font-dulcinea invitation-message">“Hoy comienza nuestro para siempre”</p>
   </div>
 
   <div data-aos="fade-up" class="text-invitation-primary">
-    <h3>Junto a nuestros padres</h3>
+    <h3>CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</h3>
   </div>
+
   <div class="couple">
-
-
     <div data-aos="fade-up" class="text-invitation-secondary">
-      <p>Jesús Loaiza Llerena &amp;</p>
-      <p>Elsa Llerena Urrutia de Loaiza</p>
+      <p>JULIO BUSTAMANTE GONZALES &amp;</p>
+      <p>ADA PEREZ VASQUEZ</p>
     </div>
-
     <div data-aos="fade-up" class="text-invitation-secondary">
-      <p>Pedro Castañeda Vásquez &amp;</p>
-      <p>Esther Zorrilla Ames</p>
+      <p>MARCO VELASQUEZ JIMENEZ &amp;</p>
+      <p>MARITZA ZAFRA AREVALO</p>
     </div>
-
   </div>
-
-
 
   <div data-aos="fade-up" class="text-invitation-primary">
-    <h3>Y Padrinos</h3>
+    <h3>DESEAMOS COMPARTIR CON USTEDES EL DÍA MÁS IMPORTANTE</h3>
+    <h3>DE NUESTRA VIDA ¡NUESTRO MATRIMONIO!</h3>
   </div>
 
-  <div class="couple">
-
-
+  <!-- <div class="couple">
     <div data-aos="fade-up" class="text-invitation-secondary">
       <p>Jonathan Percy Ibañez Valdivia &amp;</p>
       <p>Katherine Lesly Loaiza Llerena</p>
     </div>
-
-
   </div>
-
   <div class="couple">
-
     <div data-aos="fade-up" class="text-invitation-secondary text-greeting">
       <p>Nos uniremos en matrimonio y agradeceríamos nos
         acompañen en uno de los días más importantes
         de nuestras vidas</p>
     </div>
-
-  </div>
+  </div> -->
 
 
   <div class="location-title" data-aos="fade-up">
-    <p>Ubicación</p>
+    <p>Celebremos</p>
     <div class="line-base line2"></div>
   </div>
 
@@ -90,10 +79,10 @@
         </svg>
       </div>
       <h3 class="location-type">CEREMONIA</h3>
-      <p class="location-address">Parroquia “San Juan Bautista”</p>
-      <p class="location-address">Cta. del ángel, Yanahuara</p>
-      <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">11:30 am</p>
+      <p class="location-address">Parroquia “San Martin de Porres”</p>
+      <p class="location-address">Av. Mariscal Castilla s/n</p>
+      <p class="location-address">Mollendo - Arequipa</p>
+      <p class="location-time">12:30 pm</p>
       <a target="_blank"
         href="https://www.google.com/maps/place/parroquia+san+juan+bautista+de+yanahuara/data=!4m2!3m1!1s0x91424a45c42de1e7:0x89a446ae1d02825c?sa=X&ved=1t:155783&ictx=111"
         class="location-button">
@@ -147,10 +136,10 @@
           </svg></span>
       </div>
       <h3 class="location-type">RECEPCIÓN</h3>
-      <p class="location-address">Palacio de Goyeneche</p>
-      <p class="location-address">Av. Fernandini S/N</p>
-      <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">1:30 pm</p>
+      <p class="location-address">Charlies Catarindo</p>
+      <p class="location-address">Catarindo</p>
+      <p class="location-address">Mollendo - Arequipa</p>
+      <p class="location-time">3:00 pm</p>
       <a target="_blank"
         href="https://www.google.com/maps/place/Palacio+Goyeneche,+Fernandini,+Arequipa+04013/@-16.4296705,-71.5675601,18.82z/data=!4m6!3m5!1s0x91424aa1fd0c5f39:0x3d1d1de5dcd20cb7!8m2!3d-16.4298828!4d-71.5670171!16s%2Fg%2F11bvtkn_9k?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
         class="location-button"> <svg fill="#555" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#555">
@@ -161,7 +150,7 @@
               d="M12,2a8,8,0,0,0-7.992,8A12.816,12.816,0,0,0,12,22v0H12v0a12.816,12.816,0,0,0,7.988-12A8,8,0,0,0,12,2Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,13Z">
             </path>
           </g>
-        </svg> UBICACIÓN</a>
+        </svg> CELEBREMOS</a>
     </div>
   </div>
 </section>

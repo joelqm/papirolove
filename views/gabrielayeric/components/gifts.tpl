@@ -1,4 +1,4 @@
-<div class="container" id="gifts">
+<div class="container" id="gifts" style="background: #636C53;color: white !important;">
     <div class="gift-section" data-aos="fade-up">
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
@@ -11,23 +11,23 @@
             </g>
         </svg>
 
-
         <p class="gift-title">Regalos</p>
 
-
-        <p class="text-body" style="padding: 0 2rem;">CUALQUIER DETALLE EN NUESTRA
-            NUEVA ETAPA, SERÁ ETERNAMENTE
-            AGRADECIDO</p>
-        <p class="text-body">CTA SOLES BCP<br>
-            215-00753174-0-77<br>
-            CCI: 00221510075317407721</p>
-        <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Shirley Loaiza</p>
-
-        <p class="text-body">Cta Soles INTERBANK<br>
-            2003084862610<br>
-            CCI: 00320001308486261032
+        <p class="text-body" style="padding: 0 2rem;">
+            CUALQUIER DETALLE EN ESTA <br>
+            NUEVA ETAPA SERA AGRADECIDO
         </p>
-        <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Crysthian Castañeda</p>
+
+        <p class="text-body">Cta Soles BCP (Eric)<br>
+            385-13844000-0-05<br>
+            CCI: 00238511384400000534</p>
+        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Shirley Loaiza</p> -->
+
+        <p class="text-body">Cta Soles BCP (Gabriela)<br>
+            215-37096605-0-14<br>
+            CCI: 00221513709660501424
+        </p>
+        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Crysthian Castañeda</p> -->
 
     </div>
 

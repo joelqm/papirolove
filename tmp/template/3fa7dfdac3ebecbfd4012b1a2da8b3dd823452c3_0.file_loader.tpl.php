@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-24 12:40:10
+/* Smarty version 5.5.1, created on 2026-02-25 11:35:21
   from 'file:views/gabrielayeric/components/loader.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_699de27a935582_83837934',
+  'unifunc' => 'content_699f24c90a3727_79786130',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3fa7dfdac3ebecbfd4012b1a2da8b3dd823452c3' => 
     array (
       0 => 'views/gabrielayeric/components/loader.tpl',
-      1 => 1771953079,
+      1 => 1772037306,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_699de27a935582_83837934 (\Smarty\Template $_smarty_tpl) {
+function content_699f24c90a3727_79786130 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div id="loader" class="palpita">
 
@@ -43,6 +43,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
 
 <?php echo '<script'; ?>
 >
+
 
   $(document).ready(function () {
     $(".loader-button").click(function (e) {

@@ -17,6 +17,7 @@
 {literal}
 <script>
 
+
   $(document).ready(function () {
     $(".loader-button").click(function (e) {
       $('#loader').fadeOut(300, function () {

@@ -1,36 +1,48 @@
 @font-face {
     font-family: 'Gatha';
-    src: url("../fonts/Gatha.ttf");/
+    src: url("../fonts/Gatha.ttf");
 }
 
 @font-face {
     font-family: 'Dulcinea';
-    src: url("../fonts/Dulcinea.ttf");/
+    src: url("../fonts/Dulcinea.ttf");
 }
 
 @font-face {
     font-family: 'AmalfiCoast';
-    src: url("../fonts/AmalfiCoast.ttf");/
-} 
+    src: url("../fonts/AmalfiCoast.ttf");
+}
 
 @font-face {
     font-family: 'Bacalisties';
-    src: url("../fonts/Bacalisties.ttf");/
+    src: url("../fonts/Bacalisties.ttf");
 }
 
 @font-face {
     font-family: 'Scriptina';
-    src: url("../fonts/hlscriptibk2.ttf");/
+    src: url("../fonts/hlscriptibk2.ttf");
 }
 
 @font-face {
     font-family: 'Forum';
-    src: url("../fonts/Forum-Regular.ttf");/
+    src: url("../fonts/Forum-Regular.ttf");
 }
+
+@font-face {
+    font-family: 'Chandia';
+    src: url("../fonts/Chandia.otf");
+}
+
+@font-face {
+    font-family: 'AbhayaLibre';
+    src: url("../fonts/AbhayaLibre-Regular.ttf");
+}
+
+
 
 /*solicita tu web*/
 
-.whatsapp-button{
+.whatsapp-button {
     text-decoration: none;
     color: #06bd3d;
     z-index: 5000;
@@ -48,14 +60,14 @@
     font-family: "Forum";
 }
 
-.whatsapp-button svg{
+.whatsapp-button svg {
     width: 32px;
     height: 32px;
 }
 
 /*loader*/
 
-#icon-loader{
+#icon-loader {
     width: 20rem;
     height: 20rem;
     display: flex;
@@ -72,24 +84,29 @@
 
     background: var(--primary-ligth-color);
 
-height: 100vh; /* Altura total de la ventana */
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
+    height: 100vh;
+    /* Altura total de la ventana */
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
     z-index: 9999;
 }
 
 
-.sponsor-logo{
+.sponsor-logo {
     width: auto;
-    
-    height: 60px; /* Importante para que se vea la imagen */
+
+    height: 60px;
+    /* Importante para que se vea la imagen */
     max-height: 60px;
-    object-fit: contain; /* Mantiene la proporción sin recortar */
+    object-fit: contain;
+    /* Mantiene la proporción sin recortar */
 
 }
 
-.sponsors{
+.sponsors {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,24 +135,25 @@ height: 100vh; /* Altura total de la ventana */
     gap: 8rem;
 }
 
-.palpita  {
+.palpita {
     display: flex;
     flex-direction: column;
     gap: 8rem;
 }
-.loader-button{
+
+.loader-button {
     background: var(--primary-color);
     color: white;
     font-family: "Forum";
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
-    border:none;
-    border:2px white solid;
+    border: none;
+    border: 2px white solid;
     font-weight: bold;
     border-radius: 50px;
 }
 
-.loader-button:hover{
+.loader-button:hover {
     scale: 110%;
     cursor: pointer;
     transition: all 0.5s;
@@ -191,21 +209,22 @@ height: 100vh; /* Altura total de la ventana */
 }
 
 .logo {
-  width: 500px;
-  margin-bottom: 1rem;
-  height: 500px;
-  display: flex;
+    width: 500px;
+    margin-bottom: 1rem;
+    height: 500px;
+    display: flex;
 
-  background-image: url('../imgs/logo.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url('../imgs/logo.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    /*background-color: #E8DDD5;*/
 }
 
 .container-page {
@@ -232,8 +251,8 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -1;
-  }
-  
+}
+
 
 .header {
     text-align: center;
@@ -242,19 +261,20 @@ body {
 }
 
 .couple-name {
-    white-space: nowrap;  /* Evita el salto de línea */
+    white-space: nowrap;
+    /* Evita el salto de línea */
     margin: 0 auto;
     word-spacing: 1rem;
     font-size: 60px;
-    font-weight: 100 ;
+    font-weight: 100;
     color: white;
     margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
     .couple-name {
-      white-space: inherit;
-      
+        white-space: inherit;
+
     }
 }
 
@@ -267,6 +287,18 @@ body {
 .font-Scriptina {
     font-family: 'Scriptina';
 }
+
+.font-Chandia {
+    font-family: 'Chandia';
+}
+
+.font-AbhayaLibre {
+    font-family: 'AbhayaLibre';
+}
+
+
+
+
 
 .name-bank-account {
     font-size: 2rem;
@@ -285,7 +317,7 @@ body {
     font-family: 'Dulcinea';
 }
 
-.invitation-message{
+.invitation-message {
     font-size: 1.5rem;
     width: 80%;
     margin: 0 auto;
@@ -324,7 +356,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: white;
-    
+
 }
 
 
@@ -335,7 +367,7 @@ body {
 }
 
 .countdown-label {
-    
+
     font-weight: 600;
     font-size: 24px;
     letter-spacing: 1px;
@@ -406,14 +438,14 @@ body {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-  }
-  
-  .navigation:hover {
+}
+
+.navigation:hover {
     background-color: var(--footer-color);
-  }
-  
-  /* Estilo de los ítems de navegación */
-  .nav-item {
+}
+
+/* Estilo de los ítems de navegación */
+.nav-item {
     font-family: "Forum", serif;
     font-weight: bold;
     color: white;
@@ -423,9 +455,9 @@ body {
     position: relative;
     transition: all 0.3s ease;
     letter-spacing: 1px;
-  }
-  
-  .nav-item:after {
+}
+
+.nav-item:after {
     content: '';
     position: absolute;
     width: 0;
@@ -435,19 +467,19 @@ body {
     background-color: white;
     transition: all 0.3s ease;
     transform: translateX(-50%);
-  }
-  
-  .nav-item:hover {
+}
+
+.nav-item:hover {
     transform: translateY(-2px);
     text-decoration: none;
-  }
-  
-  .nav-item:hover:after {
+}
+
+.nav-item:hover:after {
     width: 70%;
-  }
-  
-  /* Estilo del ícono de hamburguesa */
-  .icon {
+}
+
+/* Estilo del ícono de hamburguesa */
+.icon {
     display: none;
     font-size: 24px;
     cursor: pointer;
@@ -458,85 +490,102 @@ body {
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-  }
-  
-  .icon:hover {
+}
+
+.icon:hover {
     transform: translateY(-50%) scale(1.1);
-  }
-  
-  /* Estilo del menú en pantallas grandes */
-  .menu {
+}
+
+/* Estilo del menú en pantallas grandes */
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 30px;
     transition: all 0.3s ease;
-  }
-  
-  /* Media Query para pantallas pequeñas (móviles) */
-  @media (max-width: 768px) {
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
     .navigation {
-      justify-content: flex-start;
-      padding: 15px;
-      height: 4rem;
+        justify-content: flex-start;
+        padding: 15px;
+        height: 4rem;
     }
-  
+
     .menu {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      padding: 0;
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: all 0.5s ease;
-      color: #fff;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: var(--primary-color);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
-  
+
     .menu.active {
-      display: flex;
-      color: #fff;
-      max-height: 500px;
-      opacity: 1;
-      padding: 1rem 0;
+        display: flex;
+        color: #fff;
+        max-height: 500px;
+        opacity: 1;
+        padding: 1rem 0;
     }
-  
+
     .icon {
-      display: block;
+        display: block;
     }
-  
+
     .icon.active i {
-      transform: rotate(90deg);
+        transform: rotate(90deg);
     }
-  
+
     .nav-item {
-      font-size: 16px;
-      padding: 15px 20px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.3s ease;
+        font-size: 16px;
+        padding: 15px 20px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
     }
-  
+
     .menu.active .nav-item {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  
-    .menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
-    .menu.active .nav-item:nth-child(2) { transition-delay: 0.2s; }
-    .menu.active .nav-item:nth-child(3) { transition-delay: 0.3s; }
-    .menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
-    .menu.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
-    .menu.active .nav-item:nth-child(6) { transition-delay: 0.6s; }
-  }
-  
+
+    .menu.active .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .menu.active .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .menu.active .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .menu.active .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .menu.active .nav-item:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .menu.active .nav-item:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+}
+
 
 .content {
     display: flex;
@@ -591,13 +640,12 @@ body {
 
 @media (max-width: 290px) {}
 
-
 /*HISTORY-SECTION*/
 
 /* Historia de Amor Section */
 .logo-history {
     width: 60px;
-    height: 100px;
+    height: auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -609,9 +657,24 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    /* Para distribuir mejor los elementos */
     padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
+    /* Asegúrate de que no haya margen que genere espacios */
+
+    /* SOLUCIÓN AL FONDO: Imagen + Color */
+    background-image: url(../imgs/pattern.webp);
+    /*background-color: #E8DDD5;*/
+    background-repeat: repeat;
+    /* O 'no-repeat' y 'cover' según tu patrón */
+    background-blend-mode: multiply;
+    /* Esto mezcla la imagen con el color de fondo */
+
+    /* SOLUCIÓN A LA FRANJA BLANCA */
+    width: 100%;
+    overflow: hidden;
+    /* Corta cualquier margen rebelde de los hijos */
 }
 
 .section {
@@ -626,7 +689,7 @@ body {
     font-family: "Forum";
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #797979;
+    color: white;
     text-align: center;
     line-height: 1.6;
     max-width: 500px;
@@ -667,9 +730,10 @@ body {
     transform: translateX(-50%);
     z-index: 2;
 }
+
 .rm-container svg {
-   width: 100px;
-   height: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .divider {
@@ -723,11 +787,15 @@ body {
 .pattern::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('../imgs/pattern.webp');
     background-repeat: repeat;
     background-size: cover;
-    opacity: 0.5; /* 🔧 Ajusta este valor (0.0 a 1.0) según la opacidad deseada */
+    opacity: 0.5;
+    /* 🔧 Ajusta este valor (0.0 a 1.0) según la opacidad deseada */
     z-index: -1;
 }
 
@@ -735,19 +803,18 @@ body {
     font-family: "AmalfiCoast";
     font-weight: 100;
     font-size: 1.8rem;
-    white-space: nowrap; 
-    color: var(--secondary-color);
+    white-space: nowrap;
+    color: var(--background-color);
 }
 
-
 @media (max-width: 400px) {
-   
+
     .gift-title {
         font-family: "AmalfiCoast";
         font-weight: 100;
         font-size: 2rem;
-        white-space: nowrap; 
-        color: var(--secondary-color);
+        white-space: nowrap;
+        color: var(--background-color);
     }
 }
 
@@ -829,8 +896,7 @@ body {
     }
 }
 
-
-.pigeon svg{
+.pigeon svg {
     width: 25px;
     height: 25px;
     padding: inherit;
@@ -838,7 +904,7 @@ body {
 
 .invitation-card {
     background-color: var(--background-color);
-    margin-top: 2rem;
+    /*margin-top: 2rem;*/
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
@@ -856,7 +922,7 @@ body {
 
 }
 
-.text-invitation-secondary{
+.text-invitation-secondary {
     color: var(--secondary-color);
     font-size: 1.2rem;
     font-family: "Forum";
@@ -901,8 +967,8 @@ body {
     font-weight: 100;
 }
 
-.location-title .line{
-     width: 150px;
+.location-title .line {
+    width: 150px;
 }
 
 .locations {
@@ -915,8 +981,6 @@ body {
 }
 
 .location-card {
-
-
     padding: 10px;
 }
 
@@ -978,7 +1042,7 @@ body {
     }
 
     .couple {
-        gap:1rem
+        gap: 1rem
     }
 
     .locations {
@@ -1173,7 +1237,7 @@ body {
     font-family: "AmalfiCoast";
     font-weight: 100;
     font-size: 1.6rem;
-    white-space: nowrap; 
+    white-space: nowrap;
     color: var(--secondary-color);
 }
 
@@ -1205,7 +1269,8 @@ body {
     font-size: 1rem;
 }
 
-.button-gift, .button-free-gift{
+.button-gift,
+.button-free-gift {
     font-family: "Forum";
     background: #fff;
     color: var(--primary-color);
@@ -1215,6 +1280,7 @@ body {
     border: 1px solid var(--primary-color);
     border-radius: 5px;
 }
+
 .button-gift:hover {
     color: white;
     transition: all 0.5s ease-in-out;
@@ -1222,8 +1288,10 @@ body {
 }
 
 .button-gift:focus {
-    outline: none;  /* Removes the default focus outline */
-    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.3);  /* Adds a custom focus ring */
+    outline: none;
+    /* Removes the default focus outline */
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.3);
+    /* Adds a custom focus ring */
 }
 
 .button-3 {
@@ -1540,17 +1608,17 @@ footer {
         width: 100%;
     }
 
-   
+
 
 }
 
 
-/*CONTAINER GALERY*/    
+/*CONTAINER GALERY*/
 
 
 /*CART*/
-.show-cart{
-    position: fixed; 
+.show-cart {
+    position: fixed;
     bottom: 20px;
     right: 10px;
     z-index: 2000;
@@ -1572,10 +1640,14 @@ footer {
 .cart {
     font-family: "Forum";
     position: fixed;
-    top: 0; /* Hace que se alinee al principio de la pantalla */
-    right: 0; /* Lo coloca en el lado derecho */
-    width: 320px; /* Ancho fijo */
-    height: 100vh; /* Altura completa de la pantalla */
+    top: 0;
+    /* Hace que se alinee al principio de la pantalla */
+    right: 0;
+    /* Lo coloca en el lado derecho */
+    width: 320px;
+    /* Ancho fijo */
+    height: 100vh;
+    /* Altura completa de la pantalla */
     background-color: white;
 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -1584,7 +1656,8 @@ footer {
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    overflow-y: auto; /* Permite hacer scroll si hay más contenido */
+    overflow-y: auto;
+    /* Permite hacer scroll si hay más contenido */
 }
 
 
@@ -1609,7 +1682,8 @@ footer {
 }
 
 .cart-items {
-    overflow-y: auto; /* Hace que los ítems se puedan desplazar si hay muchos */
+    overflow-y: auto;
+    /* Hace que los ítems se puedan desplazar si hay muchos */
     flex-grow: 1;
     margin-bottom: 15px;
 }
@@ -1658,7 +1732,8 @@ footer {
     margin-top: 5px;
 }
 
-.add, .remove {
+.add,
+.remove {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -1769,19 +1844,20 @@ footer {
     max-width: 600px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  
-  .form-overlay {
+}
+
+
+.form-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* Gris oscuro traslúcido */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Gris oscuro traslúcido */
     z-index: 4999;
-  }
-  
+}
+
 
 
 .form-title {
@@ -1894,7 +1970,7 @@ textarea.form-control {
     }
 }
 
-.form-close{
+.form-close {
     cursor: pointer;
 }
 
@@ -1903,6 +1979,4 @@ textarea.form-control {
     font-size: 14px;
     margin-top: 5px;
     display: block;
-  }
-  
-
+}
