@@ -8,7 +8,7 @@
 
 
   <div class="sponsors">
-    <img class="sponsor-logo" src="{$_layoutParams.root}/src/celebremos-logo.webp" alt="celebremos peru">
+    <!-- <img class="sponsor-logo" src="{$_layoutParams.root}/src/celebremos-logo.webp" alt="celebremos peru"> -->
     <img class="sponsor-logo" src="{$_layoutParams.root}/src/papiro-logo.webp" alt="papiro peru">
   </div>
 

@@ -4,7 +4,7 @@
     <p class="font-dulcinea invitation-message">“Hoy comienza nuestro para siempre”</p>
   </div>
 
-  <div data-aos="fade-up" class="text-invitation-primary">
+  <div data-aos="fade-up" class="text-invitation-primary ">
     <h3>CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</h3>
   </div>
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-26 12:16:15
+/* Smarty version 5.5.1, created on 2026-02-27 11:22:04
   from 'file:views/gabrielayeric/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a07fdf93dd96_60336345',
+  'unifunc' => 'content_69a1c4ac55e789_08029296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '05de07d7d09b22c3239e80598f0c72c2a09c240b' => 
     array (
       0 => 'views/gabrielayeric/components/information.tpl',
-      1 => 1772126158,
+      1 => 1772209299,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a07fdf93dd96_60336345 (\Smarty\Template $_smarty_tpl) {
+function content_69a1c4ac55e789_08029296 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><section class="invitation-card" id="info">
 
@@ -28,7 +28,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
     <p class="font-dulcinea invitation-message">“Hoy comienza nuestro para siempre”</p>
   </div>
 
-  <div data-aos="fade-up" class="text-invitation-primary">
+  <div data-aos="fade-up" class="text-invitation-primary ">
     <h3>CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</h3>
   </div>
 

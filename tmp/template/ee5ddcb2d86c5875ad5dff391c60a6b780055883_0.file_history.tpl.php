@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-26 12:16:15
+/* Smarty version 5.5.1, created on 2026-02-27 11:05:41
   from 'file:views/gabrielayeric/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a07fdf931c07_66712718',
+  'unifunc' => 'content_69a1c0d575aa76_37629208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee5ddcb2d86c5875ad5dff391c60a6b780055883' => 
     array (
       0 => 'views/gabrielayeric/components/history.tpl',
-      1 => 1772125813,
+      1 => 1772208337,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a07fdf931c07_66712718 (\Smarty\Template $_smarty_tpl) {
+function content_69a1c0d575aa76_37629208 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container-history" id="new-history">
 
@@ -29,7 +29,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
             <h1 class="history-title-small">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
-        <p class="text-body" data-aos="fade-up">
+        <p class="text-body" data-aos="fade-up" style="color: #636C53;">
             Y hasta el final de los días te amaré<br>
             con el alma porque el corazón deja de latir. <br><br>
             Mejor son dos que uno porque obtienen más<br>

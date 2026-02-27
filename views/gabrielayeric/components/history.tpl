@@ -5,7 +5,7 @@
             <h1 class="history-title-small">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
-        <p class="text-body" data-aos="fade-up">
+        <p class="text-body" data-aos="fade-up" style="color: #636C53;">
             Y hasta el final de los días te amaré<br>
             con el alma porque el corazón deja de latir. <br><br>
             Mejor son dos que uno porque obtienen más<br>

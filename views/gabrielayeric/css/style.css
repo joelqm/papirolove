@@ -38,7 +38,10 @@
     src: url("../fonts/AbhayaLibre-Regular.ttf");
 }
 
-
+@font-face {
+    font-family: 'Baskervville';
+    src: url("../fonts/Baskervville-Regular.ttf");
+}
 
 /*solicita tu web*/
 
@@ -296,6 +299,9 @@ body {
     font-family: 'AbhayaLibre';
 }
 
+.font-Baskervville {
+    font-family: 'Baskervville';
+}
 
 
 
@@ -644,7 +650,7 @@ body {
 
 /* Historia de Amor Section */
 .logo-history {
-    width: 60px;
+    width: 100px;
     height: auto;
     background-size: contain;
     background-repeat: no-repeat;
@@ -910,23 +916,22 @@ body {
     flex-direction: column;
     gap: 1.8rem;
     border-radius: 10px;
-
     text-align: center;
 }
 
 .text-invitation-primary {
     padding: 0rem 2rem;
-    font-family: "Forum";
+    font-family: "Baskervville";
     color: var(--secondary-color);
-    font-size: 1.5rem;
-
+    font-size: 1.2rem;
 }
 
 .text-invitation-secondary {
+    padding: 0rem 2rem;
+    font-family: "Baskervville";
     color: var(--secondary-color);
     font-size: 1.2rem;
-    font-family: "Forum";
-
+    font-weight: bold;
 }
 
 .parents {
