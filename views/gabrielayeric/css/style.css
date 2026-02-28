@@ -234,6 +234,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     /*background-color: #E8DDD5;*/
+    background: #f3eee9 !important;
 }
 
 .container-page {
