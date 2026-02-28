@@ -171,7 +171,7 @@ $(document).ready(function () {
   });
 });
 
-
+/*
 function crearEventoEnGoogleCalendar() {
   const title = encodeURIComponent("Boda Gabriela y Eric");
   const description = encodeURIComponent("¡No faltes! 💍🎉");
@@ -182,4 +182,42 @@ function crearEventoEnGoogleCalendar() {
   const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${description}`;
 
   window.open(url, '_blank');
+}
+*/
+
+
+function crearEventoEnGoogleCalendar() {
+  const title = "Boda Gabriela y Eric";
+  const description = "¡No faltes! 💍🎉";
+  const location = "Arequipa, Perú"; // Opcional: añade la dirección aquí
+  const startDate = "20260418T163000Z"; 
+  const endDate = "20260418T200000Z";
+
+  // Estructura del archivo .ics (estándar universal)
+  const icsMsg = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:${startDate}
+DTEND:${endDate}
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+END:VEVENT
+END:VCALENDAR`;
+
+  // Creamos el archivo en memoria
+  const blob = new Blob([icsMsg], { type: 'text/calendar;charset=utf-8' });
+  const url = window.URL.createObjectURL(blob);
+
+  // Creamos un link invisible para forzar la descarga
+  const link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', 'Boda_Gabriela_y_Eric.ics');
+  document.body.appendChild(link);
+  
+  link.click(); // Inicia la descarga
+
+  // Limpieza
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(url);
 }

@@ -349,7 +349,7 @@ body {
 .wedding-date {
     max-width: 80%;
     margin: 0 auto;
-    font-weight: bold;
+    font-weight: normal;
     color: white;
     font-size: 20px;
     letter-spacing: 2px;
@@ -609,7 +609,7 @@ body {
 
 @media (max-width: 768px) {
     .couple-name {
-        font-size: 3.5rem;
+        font-size: 3rem;
         padding: 0rem 2rem;
     }
 
