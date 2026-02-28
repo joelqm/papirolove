@@ -265,9 +265,13 @@ body {
 
 
 .header {
-    text-align: center;
     padding-top: 80px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno debajo del otro */
+    align-items: center;    /* Centra horizontalmente todo el contenido */
+    text-align: center;     /* Asegura que el texto interno también se centre */
+    width: 100%;
 }
 
 .couple-name {
