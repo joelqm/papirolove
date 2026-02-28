@@ -331,7 +331,7 @@ body {
 }
 
 .invitation-message {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 80%;
     margin: 0 auto;
     color: #6b7052;
@@ -351,7 +351,7 @@ body {
     margin: 0 auto;
     font-weight: normal;
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
     letter-spacing: 2px;
 }
 
@@ -374,14 +374,13 @@ body {
 
 
 .countdown-number {
-    font-size: 48px;
+    font-size: 40px;
     /*font-weight: 600;*/
 }
 
 .countdown-label {
-
     /*font-weight: 600;*/
-    font-size: 24px;
+    font-size: 20px;
     letter-spacing: 1px;
     margin-top: 5px;
 }
@@ -614,7 +613,11 @@ body {
     }
 
     .wedding-date {
-        font-size: 1.3rem;
+        font-size: 1rem;
+    }
+
+    .button-2 {
+        font-size: 1rem;
     }
 
     .count {
@@ -622,11 +625,11 @@ body {
     }
 
     .countdown-number {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .countdown-label {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .buttons {
@@ -689,7 +692,7 @@ body {
 
 .text-body {
     font-family: "BaskervilleBT";
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: white;
     text-align: center;
@@ -710,7 +713,7 @@ body {
     margin-bottom: 0rem;
     text-align: center !important;
     top: 10%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #6b7052;
 }
@@ -728,12 +731,13 @@ body {
 
 .history-title-big {
     font-family: "Alana";
-    font-size: 3rem;
+    font-size: 2rem;
     /* font-weight: 500; */
     color: #6b7052;
-    top: -20px;
+    top: -10px;
     left: 80px;
     position: relative;
+    font-weight: normal;
 }
 
 .rm-container {
@@ -830,7 +834,7 @@ body {
     .gift-title {
         font-family: "AmalfiCoast";
         font-weight: 100;
-        font-size: 2rem;
+        font-size: 1.5rem;
         white-space: nowrap;
         color: var(--background-color);
     }
@@ -870,16 +874,21 @@ body {
         bottom: 5%;
         right: 5%;
     }
+
+    .history-title-small-2 {
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width: 480px) {
     .history-title-small {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .history-title-big {
         font-family: "Alana";
-        font-size: 3rem;
+        font-size: 2rem;
         /* font-weight: 500; */
         color: #6b7052;
         top: -13px;
@@ -888,13 +897,18 @@ body {
     }
 
     .text-body {
+        font-size: 1rem;
+    }
+
+    .invitation-message {
         font-size: 1.5rem;
+        line-height: 30px;
     }
 
     .circular-image {
         position: relative;
         width: 220px;
-        height: 220px;
+        height: 275px;
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 180px;
@@ -905,7 +919,7 @@ body {
 
     .rectangular-image {
         position: absolute;
-        bottom: 5%;
+        bottom: 0%;
         left: 10%;
         z-index: 1000;
         width: 220px;
@@ -913,6 +927,8 @@ body {
         object-fit: cover;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
+
+
 
     .history-images {
         height: 400px;
@@ -962,16 +978,16 @@ body {
     padding: 0rem 2rem;
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-size: 1.4rem !important;
-    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    font-weight: normal !important;
 }
 
 .text-invitation-secondary {
     padding: 0rem 2rem;
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-size: 1.4rem !important;
-    font-weight: bold !important;
+    font-size: 1.1rem !important;
+    font-weight: normal !important;
 }
 
 .parents {
@@ -1037,8 +1053,8 @@ body {
 .location-type {
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-weight: normal;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -1056,17 +1072,17 @@ body {
 .location-address {
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-size: 1.3rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: normal;
     margin-bottom: 10px;
 }
 
 .location-time {
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 15px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .location-button {
@@ -1162,7 +1178,7 @@ body {
     text-align: center;
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -1256,7 +1272,6 @@ body {
 
 /*ATTENDANCE SECTION*/
 
-
 .attendace-container {
 
     padding: 3rem 0rem;
@@ -1278,7 +1293,7 @@ body {
     font-family: "Alana";
     font-size: 3rem;
     color: #6b7052;
-    font-weight: 500;
+    font-weight: 100;
 }
 
 .gift-section .big {
@@ -1295,8 +1310,8 @@ body {
     padding: 0rem 2rem;
     font-family: "BaskervilleBT";
     color: #6b7052;
-    font-size: 1.4rem !important;
-    font-weight: bold !important;
+    font-size: 1.2rem !important;
+    font-weight: normal !important;
 }
 
 .gift-section .date {
@@ -1659,7 +1674,34 @@ footer {
         width: 100%;
     }
 
+    .text-invitation-primary {
+        font-size: 0.9rem !important;
+    }
 
+    .text-invitation-secondary {
+        font-size: 0.9rem !important;
+    }
+
+    .location-title {
+        font-size: 2.5rem;
+    }
+
+    .location-type {
+        font-size: 1rem;
+    }
+
+
+    .location-address {
+        font-size: 1rem;
+    }
+
+    .location-time {
+        font-size: 1rem;
+    }
+
+    .gift-section .text {
+        font-size: 1rem !important;
+    }
 
 }
 

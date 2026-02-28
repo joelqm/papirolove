@@ -20,7 +20,7 @@
   </div>
 
   <div data-aos="fade-up" class="text-invitation-primary">
-    DESEAMOS COMPARTIR CON USTEDES EL DÍA MÁS IMPORTANTE
+    DESEAMOS COMPARTIR CON USTEDES EL DÍA MÁS IMPORTANTE<br>
     DE NUESTRA VIDA ¡NUESTRO MATRIMONIO!
   </div>
 
@@ -84,7 +84,7 @@
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">12:30 pm</p>
       <a target="_blank"
-        href="https://www.google.com/maps/place/parroquia+san+juan+bautista+de+yanahuara/data=!4m2!3m1!1s0x91424a45c42de1e7:0x89a446ae1d02825c?sa=X&ved=1t:155783&ictx=111"
+        href="https://maps.app.goo.gl/bYNoWawTj6Rnuhqq9"
         class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -141,7 +141,7 @@
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">3:00 pm</p>
       <a target="_blank"
-        href="https://www.google.com/maps/place/Palacio+Goyeneche,+Fernandini,+Arequipa+04013/@-16.4296705,-71.5675601,18.82z/data=!4m6!3m5!1s0x91424aa1fd0c5f39:0x3d1d1de5dcd20cb7!8m2!3d-16.4298828!4d-71.5670171!16s%2Fg%2F11bvtkn_9k?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
+        href="https://share.google/1fziwWGnliGPSPCIf"
         class="location-button"> <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

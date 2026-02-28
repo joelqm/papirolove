@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-28 10:28:43
+/* Smarty version 5.5.1, created on 2026-02-28 17:04:58
   from 'file:views/gabrielayeric/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a309ab34fd89_44061364',
+  'unifunc' => 'content_69a3668accb264_54242707',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61f12e0106484d0a4d501e42bb2715e5ebddfd13' => 
     array (
       0 => 'views/gabrielayeric/components/dresscode.tpl',
-      1 => 1772292519,
+      1 => 1772316297,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a309ab34fd89_44061364 (\Smarty\Template $_smarty_tpl) {
+function content_69a3668accb264_54242707 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container" id="dresscode">
 
@@ -100,7 +100,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
         <div class="right-section" data-aos="fade-up">
             <div class="inspiration-label">INSPIRACIÓN</div>
 
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695231671" height="520" width="236"
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695235654" height="520" width="236"
                 frameborder="0" scrolling="no"></iframe>
         </div>
 
@@ -114,6 +114,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
         <!-- <div class="line-base line"></div> -->
 
         <h1 class="history-title-small">Confirma tu asistencia</h1>
+        <br><br>
 
         <p class="text">
             AGRADECEREMOS CONFIRMAR
@@ -147,6 +148,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
 
     </div>
 
-
+    <br><br>
+    
 </div><?php }
 }
