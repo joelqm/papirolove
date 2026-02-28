@@ -331,9 +331,11 @@ body {
 }
 
 .invitation-message {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     width: 80%;
     margin: 0 auto;
+    color: #6b7052;
+    line-height: 50px;
 }
 
 .font-ai {
@@ -670,18 +672,11 @@ body {
     margin: 0;
     /* Asegúrate de que no haya margen que genere espacios */
 
-    /* SOLUCIÓN AL FONDO: Imagen + Color */
     background-image: url(../imgs/pattern.webp);
-    /*background-color: #E8DDD5;*/
     background-repeat: repeat;
-    /* O 'no-repeat' y 'cover' según tu patrón */
     background-blend-mode: multiply;
-    /* Esto mezcla la imagen con el color de fondo */
-
-    /* SOLUCIÓN A LA FRANJA BLANCA */
     width: 100%;
     overflow: hidden;
-    /* Corta cualquier margen rebelde de los hijos */
 }
 
 .section {
@@ -710,22 +705,32 @@ body {
     justify-content: center;
 }
 
-.history-title-small {
+.history-title-small-2 {
     font-family: "BaskervilleBT";
     margin-bottom: 0rem;
     text-align: center !important;
     top: 10%;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #797979;
+    color: #6b7052;
+}
 
+.history-title-small {
+    font-family: "Alana";
+    margin-bottom: 0rem;
+    text-align: center !important;
+    top: 10%;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: #6b7052;
+    line-height: 80px;
 }
 
 .history-title-big {
     font-family: "Alana";
     font-size: 3rem;
     /* font-weight: 500; */
-    color: #797979;
+    color: #6b7052;
     top: -20px;
     left: 80px;
     position: relative;
@@ -788,9 +793,9 @@ body {
 }
 
 .gift-title {
-    font-family: "AmalfiCoast";
+    font-family: "Alana";
     font-weight: 100;
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     white-space: nowrap;
     color: var(--background-color);
 }
@@ -869,21 +874,21 @@ body {
 
 @media (max-width: 480px) {
     .history-title-small {
-        font-size: 1.5rem;
+        font-size: 3.5rem;
     }
 
     .history-title-big {
         font-family: "Alana";
         font-size: 3rem;
         /* font-weight: 500; */
-        color: #797979;
+        color: #6b7052;
         top: -13px;
         left: 82px;
         position: relative;
     }
 
     .text-body {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .circular-image {
@@ -935,7 +940,7 @@ body {
 }
 
 .invitation-card {
-    background-color: var(--background-color);
+    /*background-color: var(--background-color);*/
     /*margin-top: 2rem;*/
     padding: 80px 20px;
     display: flex;
@@ -943,21 +948,30 @@ body {
     gap: 1.8rem;
     border-radius: 10px;
     text-align: center;
+
+    background-image: url(../imgs/pattern.webp);
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+    width: 100%;
+    overflow: hidden;
 }
+
+
 
 .text-invitation-primary {
     padding: 0rem 2rem;
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
-    font-size: 1.2rem;
+    color: #6b7052;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
 }
 
 .text-invitation-secondary {
     padding: 0rem 2rem;
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #6b7052;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
 }
 
 .parents {
@@ -991,10 +1005,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
-    color: var(--secondary-color);
+    font-size: 3.5rem;
+    color: #6b7052;
     margin-bottom: 0.8rem;
-    font-family: "Gatha";
+    font-family: "Alana";
     font-weight: 100;
 }
 
@@ -1022,9 +1036,9 @@ body {
 
 .location-type {
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
+    color: #6b7052;
     font-weight: bold;
-
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
@@ -1041,27 +1055,29 @@ body {
 
 .location-address {
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
-    font-size: 1rem;
+    color: #6b7052;
+    font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .location-time {
-
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
+    color: #6b7052;
     font-weight: bold;
     margin-bottom: 15px;
+    font-size: 1.3rem;
 }
 
 .location-button {
     display: inline-block;
-    background-color: var(--location-button-color);
-    color: #666;
+    background-color: #6b7052;
+    color: white;
     padding: 8px 20px;
     border-radius: 20px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1rem;
+    font-family: "BaskervilleBT";
     transition: background-color 0.3s;
 }
 
@@ -1145,8 +1161,8 @@ body {
 .palette-title {
     text-align: center;
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
-    font-size: 16px;
+    color: #6b7052;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -1259,9 +1275,10 @@ body {
 }
 
 .gift-section h5 {
-    font-family: "BaskervilleBT";
-    font-size: 1rem;
-    color: var(--secondary-color);
+    font-family: "Alana";
+    font-size: 3rem;
+    color: #6b7052;
+    font-weight: 500;
 }
 
 .gift-section .big {
@@ -1269,28 +1286,30 @@ body {
     font-weight: 100;
     font-size: 1.6rem;
     white-space: nowrap;
-    color: var(--secondary-color);
+    color: #6b7052;
 }
 
 .gift-section .text {
-    width: 18rem;
-    padding-top: 0.8rem;
-    font-family: "BaskervilleBT";
-    color: var(--secondary-color);
+    width: 450px;
     text-align: center;
+    padding: 0rem 2rem;
+    font-family: "BaskervilleBT";
+    color: #6b7052;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
 }
 
 .gift-section .date {
-    width: 18rem;
+    width: 450px;
     font-size: 2rem;
     padding: 1rem 0rem;
     font-family: "BaskervilleBT";
-    color: var(--secondary-color);
+    color: #6b7052;
     text-align: center;
 }
 
 .gift-section svg {
-    fill: var(--button-color);
+    fill: white;
     width: 8rem;
     height: 8rem;
     margin: 0.8rem;
@@ -1331,11 +1350,12 @@ body {
     background: var(--primary-ligth-color);
     border: none;
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+    text-decoration: none;
 }
 
 .button-3 svg {

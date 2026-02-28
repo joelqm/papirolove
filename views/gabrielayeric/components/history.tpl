@@ -2,7 +2,7 @@
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
-            <h1 class="history-title-small">NUESTRA HISTORIA</h1>
+            <h1 class="history-title-small-2">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
         <p class="text-body" data-aos="fade-up" style="color: #636C53;">
@@ -11,7 +11,7 @@
             Mejor son dos que uno porque obtienen más<br>
             fruto de su esfuerzo.<br>
             Si caen, el uno levanta al otro.<br>
-            La cuerda triple no se rompe fácilmente.<br>
+            La cuerda triple no se rompe fácilmente.<br><br>
             Eclesiastés 4:9-12b<br>
         </p>
     </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-27 11:22:04
+/* Smarty version 5.5.1, created on 2026-02-28 09:41:25
   from 'file:views/gabrielayeric/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a1c4ac55e789_08029296',
+  'unifunc' => 'content_69a2fe95ac9004_39343555',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '05de07d7d09b22c3239e80598f0c72c2a09c240b' => 
     array (
       0 => 'views/gabrielayeric/components/information.tpl',
-      1 => 1772209299,
+      1 => 1772289658,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,32 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a1c4ac55e789_08029296 (\Smarty\Template $_smarty_tpl) {
+function content_69a2fe95ac9004_39343555 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><section class="invitation-card" id="info">
 
-  <div>
-    <p class="font-dulcinea invitation-message">“Hoy comienza nuestro para siempre”</p>
+  <div class="font-Alana invitation-message">
+    Hoy comienza nuestro para siempre
   </div>
 
   <div data-aos="fade-up" class="text-invitation-primary ">
-    <h3>CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES</h3>
+    CON LA BENDICIÓN DE DIOS Y NUESTROS PADRES
   </div>
 
   <div class="couple">
     <div data-aos="fade-up" class="text-invitation-secondary">
-      <p>JULIO BUSTAMANTE GONZALES &amp;</p>
-      <p>ADA PEREZ VASQUEZ</p>
+      JULIO BUSTAMANTE GONZALES &amp; <br>
+      ADA PEREZ VASQUEZ
     </div>
     <div data-aos="fade-up" class="text-invitation-secondary">
-      <p>MARCO VELASQUEZ JIMENEZ &amp;</p>
-      <p>MARITZA ZAFRA AREVALO</p>
+      MARCO VELASQUEZ JIMENEZ &amp; <br>
+      MARITZA ZAFRA AREVALO
     </div>
   </div>
 
   <div data-aos="fade-up" class="text-invitation-primary">
-    <h3>DESEAMOS COMPARTIR CON USTEDES EL DÍA MÁS IMPORTANTE</h3>
-    <h3>DE NUESTRA VIDA ¡NUESTRO MATRIMONIO!</h3>
+    DESEAMOS COMPARTIR CON USTEDES EL DÍA MÁS IMPORTANTE
+    DE NUESTRA VIDA ¡NUESTRO MATRIMONIO!
   </div>
 
   <!-- <div class="couple">
@@ -62,10 +62,10 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
     </div>
   </div> -->
 
-
+  <br><br>
   <div class="location-title" data-aos="fade-up">
     <p>Celebremos</p>
-    <div class="line-base line2"></div>
+    <!-- <div class="line-base line2"></div> -->
   </div>
 
   <div class="locations">
@@ -110,7 +110,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
       <a target="_blank"
         href="https://www.google.com/maps/place/parroquia+san+juan+bautista+de+yanahuara/data=!4m2!3m1!1s0x91424a45c42de1e7:0x89a446ae1d02825c?sa=X&ved=1t:155783&ictx=111"
         class="location-button">
-        <svg fill="#555" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#555">
+        <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -166,7 +166,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
       <p class="location-time">3:00 pm</p>
       <a target="_blank"
         href="https://www.google.com/maps/place/Palacio+Goyeneche,+Fernandini,+Arequipa+04013/@-16.4296705,-71.5675601,18.82z/data=!4m6!3m5!1s0x91424aa1fd0c5f39:0x3d1d1de5dcd20cb7!8m2!3d-16.4298828!4d-71.5670171!16s%2Fg%2F11bvtkn_9k?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D"
-        class="location-button"> <svg fill="#555" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#555">
+        class="location-button"> <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -174,7 +174,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
               d="M12,2a8,8,0,0,0-7.992,8A12.816,12.816,0,0,0,12,22v0H12v0a12.816,12.816,0,0,0,7.988-12A8,8,0,0,0,12,2Zm0,11a3,3,0,1,1,3-3A3,3,0,0,1,12,13Z">
             </path>
           </g>
-        </svg> CELEBREMOS</a>
+        </svg> UBICACIÓN</a>
     </div>
   </div>
 </section><?php }

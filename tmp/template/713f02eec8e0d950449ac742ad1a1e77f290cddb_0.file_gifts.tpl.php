@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-27 09:25:54
+/* Smarty version 5.5.1, created on 2026-02-28 10:31:55
   from 'file:views/gabrielayeric/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a1a97285a6c0_23386904',
+  'unifunc' => 'content_69a30a6b8e64a9_10732113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '713f02eec8e0d950449ac742ad1a1e77f290cddb' => 
     array (
       0 => 'views/gabrielayeric/components/gifts.tpl',
-      1 => 1772128483,
+      1 => 1772292714,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a1a97285a6c0_23386904 (\Smarty\Template $_smarty_tpl) {
+function content_69a30a6b8e64a9_10732113 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container" id="gifts" style="background: #636C53;color: white !important;">
     <div class="gift-section" data-aos="fade-up">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#fff">
             <g id="a" />
             <g id="b">
                 <g id="c">
@@ -36,6 +36,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
         </svg>
 
         <p class="gift-title">Regalos</p>
+        <br>
 
         <p class="text-body" style="padding: 0 2rem;">
             CUALQUIER DETALLE EN ESTA <br>

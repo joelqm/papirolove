@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-27 11:05:41
+/* Smarty version 5.5.1, created on 2026-02-28 09:55:54
   from 'file:views/gabrielayeric/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a1c0d575aa76_37629208',
+  'unifunc' => 'content_69a301faebd496_53640723',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee5ddcb2d86c5875ad5dff391c60a6b780055883' => 
     array (
       0 => 'views/gabrielayeric/components/history.tpl',
-      1 => 1772208337,
+      1 => 1772290530,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a1c0d575aa76_37629208 (\Smarty\Template $_smarty_tpl) {
+function content_69a301faebd496_53640723 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container-history" id="new-history">
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
-            <h1 class="history-title-small">NUESTRA HISTORIA</h1>
+            <h1 class="history-title-small-2">NUESTRA HISTORIA</h1>
             <h2 class="history-title-big">de Amor</h2>
         </div>
         <p class="text-body" data-aos="fade-up" style="color: #636C53;">
@@ -35,7 +35,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
             Mejor son dos que uno porque obtienen más<br>
             fruto de su esfuerzo.<br>
             Si caen, el uno levanta al otro.<br>
-            La cuerda triple no se rompe fácilmente.<br>
+            La cuerda triple no se rompe fácilmente.<br><br>
             Eclesiastés 4:9-12b<br>
         </p>
     </div>

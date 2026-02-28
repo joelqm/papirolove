@@ -1,7 +1,7 @@
 <div class="container" id="gifts" style="background: #636C53;color: white !important;">
     <div class="gift-section" data-aos="fade-up">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#fff">
             <g id="a" />
             <g id="b">
                 <g id="c">
@@ -12,6 +12,7 @@
         </svg>
 
         <p class="gift-title">Regalos</p>
+        <br>
 
         <p class="text-body" style="padding: 0 2rem;">
             CUALQUIER DETALLE EN ESTA <br>

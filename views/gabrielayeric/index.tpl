@@ -4,6 +4,7 @@
 
 {include file="views/gabrielayeric/components/loader.tpl"}
 {include file="views/gabrielayeric/components/hero.tpl"}
+
 {include file="views/gabrielayeric/components/history.tpl"}
 {include file="views/gabrielayeric/components/information.tpl"}
 {include file="views/gabrielayeric/components/galery.tpl"}

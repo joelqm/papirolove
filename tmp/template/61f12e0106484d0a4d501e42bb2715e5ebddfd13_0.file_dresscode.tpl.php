@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-27 18:10:33
+/* Smarty version 5.5.1, created on 2026-02-28 10:28:43
   from 'file:views/gabrielayeric/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a22469b47ac9_10185103',
+  'unifunc' => 'content_69a309ab34fd89_44061364',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61f12e0106484d0a4d501e42bb2715e5ebddfd13' => 
     array (
       0 => 'views/gabrielayeric/components/dresscode.tpl',
-      1 => 1772233719,
+      1 => 1772292519,
       2 => 'file',
     ),
   ),
@@ -20,19 +20,19 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a22469b47ac9_10185103 (\Smarty\Template $_smarty_tpl) {
+function content_69a309ab34fd89_44061364 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container" id="dresscode">
 
     <div class="dresscode-title" data-aos="fade-up">
-        <h1 class="history-title-small">CÓDIGO</h1>
-        <h2 class="history-title-big">de Vestimenta</h2>
+        <h1 class="history-title-small">Código de Vestimenta</h1> 
+        <!-- <h2 class="history-title-big">Código de Vestimenta</h2> -->
     </div>
 
     <div class="dresscode-content">
         <div class="color-section " data-aos="fade-up">
             <div class="dresscode-img">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.03 157.72">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138.03 157.72" fill="#6b7052">
                     <g id="a" />
                     <g id="b">
                         <g id="c">
@@ -88,12 +88,12 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
 
 
             <div class="palette-section">
-                <h2 class="palette-title">FORMAL ELEGANTE</h2>
-                <div class="text-body">
+                <h2 class="palette-title">ETIQUETA ESTRICTA</h2>
+                <!-- <div class="text-body">
                     <p>Queremos una boda llena
                         de colores, dejemos el blanco
                         solo para la novia</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -109,17 +109,18 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
     <br><br>
 
     <div class="gift-section" data-aos="fade-up">
-        <h5>CONFIRMA</h5>
-        <p class="big">Tu Asistencia</p>
+        <!-- <h5>Confirma tu asistencia</h5> -->
+        <!-- <p class="big">Tu Asistencia</p> -->
+        <!-- <div class="line-base line"></div> -->
 
-        <div class="line-base line"></div>
+        <h1 class="history-title-small">Confirma tu asistencia</h1>
 
         <p class="text">
             AGRADECEREMOS CONFIRMAR
             TU ASISTENCIA HASTA EL
         </p>
 
-        <h3 class="date">18.04.26 </h3>
+        <h3 class="date">18.03.26</h3>
 
         <a href="https://wa.link/uea3vw" class="button-3">
             <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" stroke="">
@@ -135,6 +136,8 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
                 </g>
             </svg> CONFIRMA AQUÍ
         </a>
+
+        <br>
 
         <p class="text">
             AUNQUE NOS GUSTE LOS NIÑOS,
