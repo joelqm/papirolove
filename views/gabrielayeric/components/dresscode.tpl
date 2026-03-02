@@ -76,7 +76,7 @@
         <div class="right-section" data-aos="fade-up">
             <div class="inspiration-label">INSPIRACIÓN</div>
 
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695235654" height="520" width="236"
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695231671" height="520" width="236"
                 frameborder="0" scrolling="no"></iframe>
         </div>
 

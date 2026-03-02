@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-28 17:04:58
+/* Smarty version 5.5.1, created on 2026-03-02 15:23:12
   from 'file:views/gabrielayeric/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a3668accb264_54242707',
+  'unifunc' => 'content_69a5f1b0b1f6c6_42900691',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61f12e0106484d0a4d501e42bb2715e5ebddfd13' => 
     array (
       0 => 'views/gabrielayeric/components/dresscode.tpl',
-      1 => 1772316297,
+      1 => 1772482952,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a3668accb264_54242707 (\Smarty\Template $_smarty_tpl) {
+function content_69a5f1b0b1f6c6_42900691 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container" id="dresscode">
 
@@ -100,7 +100,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
         <div class="right-section" data-aos="fade-up">
             <div class="inspiration-label">INSPIRACIÓN</div>
 
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695235654" height="520" width="236"
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=816981188695231671" height="520" width="236"
                 frameborder="0" scrolling="no"></iframe>
         </div>
 
