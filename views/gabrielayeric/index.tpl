@@ -16,3 +16,4 @@
 {include file="views/gabrielayeric/components/gifts.tpl"}
 
 {include file="views/gabrielayeric/components/button-whatsapp.tpl"}
+
