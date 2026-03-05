@@ -16,7 +16,7 @@
 
         <p class="text-body" style="padding: 0 2rem;">
             CUALQUIER DETALLE EN ESTA <br>
-            NUEVA ETAPA SERA AGRADECIDO
+            NUEVA ETAPA SERÁ AGRADECIDO
 
         </p>
 
