@@ -24,14 +24,14 @@
             385-13844000-0-05<br>
             CCI: 00238511384400000534</p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Eric</p>
+        <p class="name-bank-account font-Alana" style="color:white;">Eric Velásquez</p>
 
         <p class="text-body">Cta Soles BCP<br>
             215-37096605-0-14<br>
             CCI: 00221513709660501424
         </p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Gabriela</p>
+        <p class="name-bank-account font-Alana" style="color:white;">Gabriela Bustamante</p>
 
     </div>
 
