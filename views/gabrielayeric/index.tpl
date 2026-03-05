@@ -1,5 +1,9 @@
 {block name="styles"}
 <link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/gabrielayeric/css/style.css">
+
+<link rel="preload" href="{$_layoutParams.root}views/gabrielayeric/fonts/Bellisia.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{$_layoutParams.root}views/gabrielayeric/fonts/Baskervville-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
 {/block}
 
 {include file="views/gabrielayeric/components/loader.tpl"}

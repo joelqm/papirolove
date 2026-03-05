@@ -1,53 +1,68 @@
 @font-face {
     font-family: 'Gatha';
     src: url("../fonts/Gatha.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Dulcinea';
     src: url("../fonts/Dulcinea.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'AmalfiCoast';
     src: url("../fonts/AmalfiCoast.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Bacalisties';
-    src: url("../fonts/Bacalisties.ttf");
+    src: url("../fonts/Bacalisties.woff2") format("woff2"),
+         url("../fonts/Bacalisties.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Scriptina';
     src: url("../fonts/hlscriptibk2.ttf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Forum';
-    src: url("../fonts/Forum-Regular.ttf");
+    src: url("../fonts/Forum-Regular.woff2") format("woff2"),
+         url("../fonts/Forum-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Chandia';
     src: url("../fonts/Chandia.otf");
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'AbhayaLibre';
-    src: url("../fonts/AbhayaLibre-Regular.ttf");
+    src: url("../fonts/AbhayaLibre-Regular.woff2") format("woff2"),
+         url("../fonts/AbhayaLibre-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
-    font-family: 'BaskervilleBT';
-    src: url("../fonts/BaskervilleBT.ttf");
+    font-family: 'BaskervilleBT';    
+    src: url("../fonts/BaskervilleBT.woff2") format("woff2"),
+         url("../fonts/BaskervilleBT.ttf") format("truetype");
+    font-display: swap;
+    
 }
 
 @font-face {
     font-family: 'Alana';
-    src: url("../fonts/Alana.otf");
+    src: url("../fonts/Alana.woff2") format("woff2"),
+         url("../fonts/Alana.otf") format("opentype");
+    font-display: swap;
 }
-
 
 /*solicita tu web*/
 

@@ -17,18 +17,21 @@
         <p class="text-body" style="padding: 0 2rem;">
             CUALQUIER DETALLE EN ESTA <br>
             NUEVA ETAPA SERA AGRADECIDO
+
         </p>
 
-        <p class="text-body">Cta Soles BCP (Eric)<br>
+        <p class="text-body">Cta Soles BCP<br>
             385-13844000-0-05<br>
             CCI: 00238511384400000534</p>
-        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Shirley Loaiza</p> -->
 
-        <p class="text-body">Cta Soles BCP (Gabriela)<br>
+        <p class="name-bank-account font-Alana" style="color:white;">Eric</p>
+
+        <p class="text-body">Cta Soles BCP<br>
             215-37096605-0-14<br>
             CCI: 00221513709660501424
         </p>
-        <!-- <p class="name-bank-account font-Scriptina" style="font-family: Gatha;">Crysthian Castañeda</p> -->
+
+        <p class="name-bank-account font-Alana" style="color:white;">Gabriela</p>
 
     </div>
 
