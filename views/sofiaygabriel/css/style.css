@@ -1,0 +1,2183 @@
+/* ==========================================================================
+   ORGANIZACIÓN DEL CSS: FUENTES, VARIABLES, RESET, UTILIDADES Y SECCIONES
+   ========================================================================== */
+
+/* ===== 1. FUENTES PERSONALIZADAS (@font-face) - Orden alfabético por font-family ===== */
+@font-face {
+    font-family: 'Baskervville-Bold';
+    src: url("../fonts/Baskervville-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Abramo';
+    src: url("../fonts/AbramoSerif.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskervville-Regular';
+    src: url("../fonts/Baskervville-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bellisia';
+    src: url("../fonts/Bellisia.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CalliforniaSignature';
+    src: url("../fonts/CalliforniaSignature.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant-Regular';
+    src: url("../fonts/Cormorant-Regular.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dulcinea';
+    src: url("../fonts/Dulcinea.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Forum';
+    src: url("../fonts/Forum-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lile';
+    src: url("../fonts/LileDahliyaScript.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bacalisties';
+    src: url("../fonts/Bacalisties.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url("../fonts/CaviarDreams.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KarenaSerif';
+    src: url("../fonts/KarenaSerif-Extralight.otf");
+    font-display: swap;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
+:root {
+    --accent: #474641;
+    --background-color: #DDD9CD;
+    --button-color: #333;
+    --button-hover-scale: 110%;
+    --footer-color: #b57966;
+    --primary-color: #474641;
+    --primary-ligth-color: #DDD9CD;
+    --secondary-color: #555;
+    --text-color: #474641;
+    --transition-duration: 0.3s;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 3. RESET Y ESTILOS BASE (Universal y body) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 4. CLASES DE FUENTES UTILITARIAS (Helpers) - Orden alfabético ===== */
+.font-abramo {
+    font-family: 'Abramo';
+}
+
+.font-Baskervville-Regular {
+    font-family: 'Baskervville-Regular';
+}
+
+.font-Bellisia {
+    font-family: 'Bellisia';
+    font-weight: normal !important;
+}
+
+.font-california {
+    font-family: 'CalliforniaSignature';
+}
+
+.font-lile {
+    font-family: 'Lile';
+}
+
+.font-Bacalisties {
+    font-family: 'Bacalisties';
+}
+
+.font-CaviarDreams {
+    font-family: 'CaviarDreams';
+}
+
+.font-KarenaSerif {
+    font-family: 'KarenaSerif';
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 5. LOADER Y ANIMACIÓN DE INICIO ===== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-ligth-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 9999;
+}
+
+#loader svg {
+    height: 8rem;
+    width: 8rem;
+    fill: var(--primary-color);
+}
+
+#contenido {
+    display: none;
+}
+
+.palpita {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.palpita svg {
+    display: inline-block;
+    animation: palpite 1.2s infinite;
+}
+
+.loader-logo {
+    animation: palpite 1.2s infinite;
+    height: auto;
+    width: 300px;
+}
+
+.loader-button {
+    background: var(--primary-color);
+    color: white;
+    font-family: "Baskervville-Regular";
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
+.loader-button:hover {
+    scale: 110%;
+    cursor: pointer;
+    transition: all 0.5s;
+    background: var(--primary-ligth-color);
+    border: 1px white solid;
+}
+
+.history-logo {
+    height: auto !important;
+    width: 210px !important;
+}
+
+.text-elige-un-obsequio {
+    font-family: "KarenaSerif";
+    color: #474641;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+@keyframes palpite {
+    0% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.3);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.3);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 6. BOTÓN FLOTANTE (WhatsApp) ===== */
+.whatsapp-button {
+    text-decoration: none;
+    color: #06bd3d;
+    z-index: 5000;
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    display: flex;
+    font-size: 0.5rem;
+    border-radius: 30px;
+    border: 1px solid #06bd3d;
+    justify-items: center;
+    align-items: center;
+    gap: 0.3rem;
+    background: #fff;
+    padding: 0.2rem 0.5rem;
+    font-family: "Baskervville-Regular";
+}
+
+.whatsapp-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 7. HERO SECTION (Sección principal y Contador) ===== */
+.container-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url("../imgs/preboda.webp");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.header {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 20px;
+
+    /* Agrega esto para asegurar el centrado de elementos bloque */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.couple-name {
+    font-family: 'Bellisia', 'Abramo', serif;
+    font-size: 5.5rem;
+    margin: 0;
+    color: white !important;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.couple-name.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wedding-date {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: "Baskervville-Regular";
+    font-weight: normal;
+    color: white;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-top: 26px;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    margin-top: 180px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.countdown-number {
+    font-family: "Baskervville-Regular";
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.countdown-label {
+    font-family: "Baskervville-Regular";
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button {
+    font-family: "Baskervville-Regular";
+    font-size: 2rem;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.button-calendar {
+    background-color: white;
+    color: var(--accent);
+}
+
+.button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.button-2 {
+    font-weight: normal;
+    font-family: "Baskervville-Regular";
+    font-size: 1.5rem;
+    border: transparent;
+    color: white;
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 8px;
+    /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);*/
+}
+
+.button-2 svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 8. NAVEGACIÓN (Sticky Menu) ===== */
+.navigation {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-ligth-color);
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    transition: all 0.3s ease;
+}
+
+.menu a {
+    color: var(--accent) !important;
+}
+
+.nav-item {
+    font-family: "Baskervville-Regular", serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.nav-item:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.nav-item:hover:after {
+    width: 70%;
+}
+
+.icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 9. HISTORY SECTION (Nuestra Historia) ===== */
+.history-section {
+    background-color: #f0eada;
+    padding: 80px 20px;
+    display: flex;
+    position: relative;
+    color: #474641;
+    flex-direction: column;
+    gap: 1.4rem;
+    border-radius: 10px;
+    /*
+    background-image: url('../imgs/background-flowers.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    */
+    text-align: center;
+}
+
+.container-history {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flower-left {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    opacity: 0.1;
+    z-index: 1;
+    height: 100%;
+    width: 500px;
+    background-image: url('../imgs/flower-left.webp');
+    background-size: cover;
+}
+
+.section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.history-title {
+    display: flex;
+    padding: 1.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-title-small {
+    font-family: "Baskervville-Regular";
+    margin-bottom: 0rem;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+.history-title-small-2 {
+    font-family: "Bacalisties";
+    margin-bottom: 0rem;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+.history-title-small-3 {
+    font-family: "CaviarDreams";
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+.detalle-nombre {
+    position: relative;
+    display: inline-block;
+}
+
+.detalle-nombre img {
+    width: 22px;
+    margin-top: -14px;
+    vertical-align: middle;
+}
+
+.detalle-nombre::after {
+    content: " &";
+    margin-left: 4px;
+    color: #555;
+    /* ajusta color si lo deseas */
+}
+
+
+.history-title-big {
+    font-family: "Bacalisties";
+    font-size: 3.2rem;
+    color: #474641;
+    padding: 5px;
+}
+
+.text-body {
+    font-family: "Baskervville-Regular";
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #474641;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.text-body-2 {
+    font-family: "Forum";
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #7c7c7c;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.rm-container {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.rm-container svg {
+    width: 100px;
+    height: 100px;
+}
+
+.divider {
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    border-left: 1px solid var(--primary-color);
+    height: 70%;
+}
+
+.history-images {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.rectangular-image {
+    position: absolute;
+    bottom: -40%;
+    left: 10%;
+    z-index: 1000;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 10. INVITATION & LOCATIONS SECTION (Información del evento) ===== */
+.invitation-card {
+    background-color: #f0eada;
+    padding: 80px 20px;
+    display: flex;
+    position: relative;
+    color: #474641;
+    flex-direction: column;
+    gap: 1.4rem;
+    border-radius: 10px;
+    background-image: url('../imgs/background-flowers.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.pigeon svg {
+    width: 25px;
+    height: 25px;
+    padding: inherit;
+}
+
+.flower,
+.flower-2,
+.flower-invert,
+.flower-invert-2 {
+    height: 16rem;
+    width: 16rem;
+    position: absolute;
+}
+
+.flower {
+    bottom: 0;
+    left: 0;
+}
+
+.flower-invert {
+    top: 0;
+    right: 0;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.flower-2 {
+    top: 0;
+    left: 0;
+    transform: scaleY(-1);
+}
+
+.flower-invert-2 {
+    right: 0;
+    bottom: 0;
+    transform: scaleX(-1);
+}
+
+.text-invitation-primary {
+    font-family: "Baskervville-Regular";
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+.text-invitation-secondary {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-family: "CaviarDreams";
+}
+
+.parents {
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+}
+
+.couple {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.couple-info {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 10px;
+}
+
+.godparents {
+    margin-bottom: 25px;
+}
+
+.invitation-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.invitation-message {
+    font-size: 2.5rem;
+    width: 70%;
+    margin: 0 auto;
+    color: var(--accent) !important;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.invitation-message-secondary {
+    font-size: 1rem;
+    color: var(--accent) !important;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.locations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 20px;
+}
+
+.location-title {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-family: "Lile";
+    padding-bottom: 10px;
+}
+
+.location-card {
+    padding: 10px;
+}
+
+.location-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.location-icon svg {
+    width: 8rem;
+    height: 8rem;
+    fill: #474641;
+}
+
+.location-type {
+    font-family: "KarenaSerif";
+    color: #474641;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.location-address {
+    font-family: "CaviarDreams";
+    color: #474641;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.location-time {
+    font-family: "CaviarDreams";
+    color: #474641;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.location-button {
+    display: inline-block;
+    background-color: #474641;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.location-button svg {
+    width: 16px;
+    height: 16px;
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 11. DRESSCODE SECTION (Código de vestimenta) ===== */
+.container-dresscode {
+    /* background: none; */
+    padding: 3rem 0rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(../imgs/background-flowers.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.dresscode-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 36px;
+    margin: 0;
+    font-weight: normal;
+    color: #555;
+}
+
+.dresscode-content {
+    display: flex;
+    color: var(--accent);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.desscode-card {
+    display: flex;
+    max-width: 50%;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dresscode-card {
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    font-family: "Baskervville-Regular";
+    max-width: 500px;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: start;
+}
+
+.dresscode-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-family: "Baskervville-Regular";
+}
+
+.dresscode-img {
+    fill: #474641;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dresscode-img svg {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+/* Paleta de colores */
+.palette-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.palette-title {
+    text-align: center;
+    font-family: "Baskervville-Regular";
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.color-section {
+    width: 12rem;
+    display: flex;
+    justify-items: center;
+    align-self: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 30px;
+    margin-left: 2rem;
+    width: 120px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.color:hover {
+    scale: 120%;
+    transition: all 0.3s;
+}
+
+.color-1 {
+    background-color: #E8937C;
+    left: 0;
+    z-index: 4;
+}
+
+.color-2 {
+    background-color: #F0B94D;
+    left: 20px;
+    z-index: 3;
+}
+
+.color-3 {
+    background-color: #6B7F40;
+    left: 40px;
+    z-index: 2;
+}
+
+.color-4 {
+    background-color: #B67BA4;
+    left: 60px;
+    z-index: 1;
+}
+
+/* Inspiración */
+.inspiration-label {
+    text-align: center;
+    background-color: #474641;
+    color: var(--accent);
+    padding: 15px 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.inspiration-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.inspiration-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 12. GALERY SECTION (Galería de imágenes) ===== */
+.galery {
+    width: 100%;
+    padding: 50px 0px;
+    background: #ddd9cd;
+}
+
+.container-galery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 13. GIFTS & ATTENDANCE SECTION (Regalos y Asistencia) ===== */
+
+/* Contenedor principal de Asistencia */
+.attendace-container {
+    background: #f0eada;
+    padding: 60px 20px;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../imgs/background-flowers.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.button-3 {
+    font-family: "Forum";
+    background-color: #474641;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-3-svg {
+    fill: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: inherit;
+}
+
+/* Contenedor principal de Regalos */
+
+.svg_gifs {
+    width: 6rem !important;
+    height: 6rem !important;
+    margin: inherit !important;
+    fill: var(--primary-color);
+}
+
+.gift-container {
+    background: #f0eada;
+    padding: 3rem 0rem;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-section {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gift-section h5 {
+    font-family: "Baskervville-Regular";
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.gift-container-title {
+    font-family: "Baskervville-Regular";
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.gift-title {
+    font-family: "Abramo";
+    font-weight: 600;
+    font-size: 3rem;
+    white-space: nowrap;
+    color: var(--secondary-color);
+}
+
+.gift-couple-name {
+    font-family: "Bellisia";
+    font-size: 4rem;
+    white-space: nowrap;
+    color: var(--accent);
+    margin-top: 1rem;
+}
+
+.gift-title-small {
+    font-family: "Bacalisties";
+    margin-bottom: 0rem;
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: var(--accent) !important;
+}
+
+.gift-title-big {
+    font-family: "Bacalisties";
+    margin-bottom: 0rem;
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: var(--accent) !important;
+}
+
+.gift-section .big {
+    font-family: "Bellisia";
+    font-size: 3.2rem;
+    white-space: nowrap;
+    line-height: 2.3;
+    color: #474641;
+}
+
+.gift-section .text {
+    width: 18rem;
+    padding-top: 0.8rem;
+    font-family: "CaviarDreams";
+    color: var(--accent);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.gift-section .date {
+    width: 18rem;
+    font-size: 3.5rem;
+    padding: 1rem 0rem;
+    font-family: "Forum";
+    color: var(--accent);
+    text-align: center;
+}
+
+
+
+.title-divider {
+    font-size: 1rem;
+}
+
+.button-gift,
+.button-free-gift {
+    font-family: "Baskervville-Regular";
+    background: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.button-gift:hover {
+    color: white;
+    transition: all 0.5s ease-in-out;
+    background: var(--footer-color);
+}
+
+.button-gift:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.3);
+}
+
+.line {
+    width: 40%;
+    top: 5.8rem;
+    border-bottom: 0.5px solid black;
+    position: absolute;
+}
+
+/* Integración Izi (Regalos) */
+.izi-wrapper {
+    font-family: "Baskervville-Regular";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.8rem auto;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.izi-wrapper2 {
+    display: flex;
+    flex-direction: rpw;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.izi-wrapper2 p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #585858;
+    margin: 0;
+}
+
+.izi-img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Estilos de la tienda/lista de regalos */
+.content-products {
+    padding: 2rem;
+    border-radius: 12px;
+    background: none;
+    display: flex;
+    gap: 30px;
+}
+
+.header-products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Búsqueda y Opciones de Vista */
+.search-container {
+    display: flex;
+    position: relative;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+}
+
+.view-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view-toggle {
+    display: flex;
+}
+
+.view-button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-button.active {
+    background-color: #f0f0f0;
+}
+
+/* Sidebar (Categorías) */
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.category-button {
+    font-family: "Baskervville-Regular";
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: white;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #f5f5f5;
+}
+
+.category-button.primary {
+    font-family: "Baskervville-Regular";
+    background-color: #EBF2D7;
+    color: #555;
+    border: none;
+}
+
+/* Productos */
+.products {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    font-family: "Baskervville-Regular";
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.product-progress {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 5px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 14. CARRITO DE COMPRAS (Cart Sidebar) ===== */
+
+/* Botón flotante */
+.show-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.show-cart:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
+}
+
+.show-cart:hover i {
+    color: white;
+}
+
+.show-cart i {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+/* Sidebar del carrito */
+.cart {
+    font-family: "Baskervville-Regular";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-title h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.cart-title i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.cart-items {
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 15px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.cart-item-price {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.add,
+.remove {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.quantity-value {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.cart-item-remove {
+    color: #ff6b6b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 5px;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.cart-item-remove:hover {
+    color: #ff4757;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px solid #f0f0f0;
+    margin-top: auto;
+    font-weight: 600;
+    color: #333;
+}
+
+.total-price {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.checkout-button {
+    font-family: "Baskervville-Regular";
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.checkout-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 134, 222, 0.2);
+}
+
+.empty-cart {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 15. FORMULARIOS (Modales, RSVP, etc.) ===== */
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4999;
+}
+
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5000;
+    font-family: "Baskervville-Regular";
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-title {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.form-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.signature-field {
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.signature-input {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    padding: 8px 0;
+    font-style: italic;
+    background-color: transparent;
+}
+
+.signature-input:focus {
+    outline: none;
+    border-bottom-color: var(--primary-color);
+}
+
+.signature-hint {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 14px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--footer-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 108, 247, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-close {
+    cursor: pointer;
+}
+
+.error-form {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 16. FOOTER ===== */
+footer {
+    text-align: center;
+    background: var(--footer-color);
+    color: #fff;
+    font-family: "Baskervville-Regular";
+    padding: 1rem 0rem;
+}
+
+.sponsor-logo {
+    width: auto;
+    height: 84px;
+    max-height: 84px;
+    object-fit: contain;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 17. MEDIA QUERIES (Responsive Design) ===== */
+
+/* Media Query: Max 700px (Cambio de fondo para Hero) */
+@media (max-width: 700px) {
+    .background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5)), url("../imgs/preboda.webp");
+    }
+
+    .header img {
+        width: 80%;
+    }
+
+}
+
+/* Media Query: Max 768px (Estructura principal para móvil/tablet) */
+@media (max-width: 768px) {
+    .button-2 {
+        font-size: 1rem;
+    }
+
+    /* Navegación */
+    .navigation {
+        justify-content: flex-start;
+        padding: 15px;
+        height: 4rem;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease;
+        color: #fff !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #474641;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu a{
+        color: white !important;
+    }
+
+    .menu.active {
+        display: flex;
+        color: #fff;
+        max-height: 500px;
+        opacity: 1;
+        padding: 1rem 0;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .icon.active i {
+        transform: rotate(90deg);
+    }
+
+    .nav-item {
+        font-size: 16px;
+        padding: 15px 20px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+
+    .menu.active .nav-item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu.active .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .menu.active .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .menu.active .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .menu.active .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .menu.active .nav-item:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .menu.active .nav-item:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+
+    /* Hero Section */
+    .couple-name {
+        font-size: 2.8rem;
+    }
+
+    .wedding-date {
+        font-size: 1.2rem;
+    }
+
+    .count {
+        gap: 20px;
+    }
+
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+
+    .countdown-label {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        width: 80%;
+    }
+
+    .navigation {
+        gap: 10px;
+        padding: 10px 5px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    /* History Section */
+    .flower-left {
+        left: -260px;
+    }
+
+    .history-section,
+    .invitation-card {
+        /*background-image: url('../imgs/background-flowers-3.webp');*/
+
+        /*background-size: contain;*/
+        background-position: center center;
+        background-repeat: repeat;
+        justify-content: center;
+
+        background-attachment: scroll !important;
+
+    }
+
+    .container-history {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section,
+    .history-images {
+        width: 90%;
+    }
+
+    .history-images {
+        margin-top: 1rem;
+        height: 500px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .rm-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        text-align: center;
+    }
+
+    .circular-image {
+        top: -10%;
+        right: -20%;
+    }
+
+    .rectangular-image {
+        bottom: -9%;
+        right: -25%;
+    }
+
+    .gift-title-small {
+        font-size: 2.4rem !important;
+    }
+
+    .gift-section .big {}
+
+
+    .gift-title-big {
+        font-size: 2.5rem !important;
+    }
+
+
+    /* Information Section */
+    .flower,
+    .flower-invert,
+    .flower-2,
+    .flower-invert-2 {
+        opacity: 0.1;
+    }
+
+    .couple,
+    .locations {
+        flex-direction: column;
+    }
+
+    /* Dresscode Section */
+    .dresscode-content {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .desscode-card {
+        max-width: 100%;
+    }
+
+    /* Productos y Sidebar */
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-products {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .category-button {
+        flex: 1 1 auto;
+        max-width: 48%;
+    }
+
+    .header-products {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .view-options {
+        justify-content: center;
+    }
+
+    /* Formularios */
+    .form-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+
+    .gift-couple-name {
+        font-size: 36px;
+        margin: 35px 0px;
+    }
+
+    .attendace-container {
+        /*
+        background: linear-gradient(rgba(240, 234, 218, 0.5), rgba(240, 234, 218, 0.7)),
+            url(../imgs/background-flowers.webp);
+        */
+
+        background: url(../imgs/background-flowers.webp);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        justify-content: center;
+        padding: 200px 0px;
+    }
+
+    .count {
+        margin-top: 68%;
+    }
+
+    .history-title-small {
+        font-size: 1.2rem;
+        padding: 20px 0px;
+    }
+
+    .history-title-small-2 {
+        font-size: 2.4rem;
+        padding: 5px 5px;
+    }
+
+    .text-invitation-secondary {
+        font-size: 1.5rem;
+    }
+
+    .gift-section .text {
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* Arreglo para que las imágenes no se vean borrosas en iPhone/Android */
+@media (max-width: 1024px) {
+    .invitation-card, 
+    .container-dresscode, 
+    .attendace-container {
+        background-attachment: scroll !important; /* Desactiva el modo fijo que causa el error */
+        background-position: center center;
+        background-size: cover;
+    }
+}

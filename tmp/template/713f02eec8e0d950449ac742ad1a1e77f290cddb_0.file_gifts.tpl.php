@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-05 08:32:53
+/* Smarty version 5.5.1, created on 2026-03-05 13:36:35
   from 'file:views/gabrielayeric/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a98605cdda88_87462798',
+  'unifunc' => 'content_69a9cd33578788_42546301',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '713f02eec8e0d950449ac742ad1a1e77f290cddb' => 
     array (
       0 => 'views/gabrielayeric/components/gifts.tpl',
-      1 => 1772717572,
+      1 => 1772735668,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a98605cdda88_87462798 (\Smarty\Template $_smarty_tpl) {
+function content_69a9cd33578788_42546301 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><div class="container" id="gifts" style="background: #636C53;color: white !important;">
     <div class="gift-section" data-aos="fade-up">
@@ -40,7 +40,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
 
         <p class="text-body" style="padding: 0 2rem;">
             CUALQUIER DETALLE EN ESTA <br>
-            NUEVA ETAPA SERA AGRADECIDO
+            NUEVA ETAPA SERÁ AGRADECIDO
 
         </p>
 
@@ -48,14 +48,14 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
             385-13844000-0-05<br>
             CCI: 00238511384400000534</p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Eric</p>
+        <p class="name-bank-account font-Alana" style="color:white;">Eric Velásquez</p>
 
         <p class="text-body">Cta Soles BCP<br>
             215-37096605-0-14<br>
             CCI: 00221513709660501424
         </p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Gabriela</p>
+        <p class="name-bank-account font-Alana" style="color:white;">Gabriela Bustamante</p>
 
     </div>
 
