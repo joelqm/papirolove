@@ -1,7 +1,7 @@
 <div id="loader" class="palpita">
 
   <div>
-    <img class="loader-logo" src="{$_layoutParams.root}views/claudiayangelo/imgs/logo.webp" alt="logo">
+    <img class="loader-logo" src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo.webp" alt="logo">
   </div>
   <button class="loader-button">IR A LA PÁGINA</button>
 

@@ -38,7 +38,9 @@ class sofiaygabrielController extends Controller
 
 		$this->_view->assign('pk', $ps_k['defpk']);
 		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
-		$this->_view->render_template_basic('index');
+		//$this->_view->render_template_basic('index');
+		$this->_view->renderContent('index');
+
 	}
 
 	public function guardarMensaje()
@@ -58,6 +60,10 @@ class sofiaygabrielController extends Controller
 
 		$data = $this->getPostParam('cart');
 		$messageId = $this->getTexto('messageId');
+
+
+
+
 
 
 

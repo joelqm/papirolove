@@ -2,31 +2,31 @@ let cart = new Map();
 
 
 const generateRandom = () => {
-    const ruta = $("#root").val();
-    var numPosibilidades = 99999999;
-    var random = Math.random() * numPosibilidades;
-    random = Math.round(random);
-    ao = parseInt(1) + random;
+  const ruta = $("#root").val();
+  var numPosibilidades = 99999999;
+  var random = Math.random() * numPosibilidades;
+  random = Math.round(random);
+  ao = parseInt(1) + random;
 
-    $.post(
-      ruta + "claudiayangelo/g_ao",
-      "ao=" + ao,
-      function (respuesta) {
-        if (respuesta == true) {
-          generateRandom();
-        } else if (respuesta == false) {
-      
-          $("#messageId").val(ao);
-          
-        }
-      },
-      "json"
-    );
+  $.post(
+    ruta + "sofiaygabriel/g_ao",
+    "ao=" + ao,
+    function (respuesta) {
+      if (respuesta == true) {
+        generateRandom();
+      } else if (respuesta == false) {
+
+        $("#messageId").val(ao);
+
+      }
+    },
+    "json"
+  );
 }
 
 $(document).ready(function () {
 
-  
+
   getCart();
   generateRandom();
 
@@ -89,11 +89,11 @@ $(document).ready(function () {
       data.cart = cartJson;
 
       $.ajax({
-        url: `${$("#root").val()}claudiayangelo/guardarMensajeMonto`,
+        url: `${$("#root").val()}sofiaygabriel/guardarMensajeMonto`,
         method: 'POST',
         data: data,
         success: function (response) {
-          window.location.href = `${$("#root").val()}claudiayangelo/obsequio/${formData[0].value}`;
+          window.location.href = `${$("#root").val()}sofiaygabriel/obsequio/${formData[0].value}`;
           //form.reset();
           //$(".form").hide();
         },
@@ -111,7 +111,7 @@ $(document).ready(function () {
     }
   });
 
-  
+
 
 
   $(document).on("click", ".form-close", async function () {
@@ -120,10 +120,10 @@ $(document).ready(function () {
 
   $(document).on("click", ".checkout-button", async function (e) {
     getCart();
-  
+
     if (cart.size === 0) {
       closeCart();
-  
+
       Swal.fire({
         toast: true,
         position: 'top-end',
@@ -136,7 +136,7 @@ $(document).ready(function () {
         color: '#fff',
         iconColor: '#fff',
       });
-  
+
       $('html, body').animate({
         scrollTop: $("#gifts").offset().top
       }, 800);
@@ -145,14 +145,14 @@ $(document).ready(function () {
 
     $(".form").fadeIn(300);
     closeCart();
-  
-    
-    
+
+
+
   });
-  
-  
-  
-  
+
+
+
+
 
   $(document).on("click", ".add", function (e) {
     const id = $(this).data("id");
@@ -197,27 +197,27 @@ $(document).ready(function () {
       quantity: 1,
     };
 
-  // 🔹 Obtener carrito como Map
-  // getCart();
-  // const existingItem = cart.get(id);
-  // const currentQty = existingItem ? existingItem.quantity : 0;
+    // 🔹 Obtener carrito como Map
+    // getCart();
+    // const existingItem = cart.get(id);
+    // const currentQty = existingItem ? existingItem.quantity : 0;
 
-  // // 🔸 Validar límite basado en cupos restantes
-  // if (currentQty >= restantes) {
-  //   Swal.fire({
-  //     toast: true,
-  //     position: "top-end",
-  //     icon: "warning",
-  //     title: `Solo quedan ${restantes} cupos disponibles.`,
-  //     showConfirmButton: false,
-  //     timer: 2000,
-  //     timerProgressBar: true,
-  //     background: "#ffc107",
-  //     color: "#000",
-  //     iconColor: "#000",
-  //   });
-  //   return; // 🚫 No agregar más
-  // }
+    // // 🔸 Validar límite basado en cupos restantes
+    // if (currentQty >= restantes) {
+    //   Swal.fire({
+    //     toast: true,
+    //     position: "top-end",
+    //     icon: "warning",
+    //     title: `Solo quedan ${restantes} cupos disponibles.`,
+    //     showConfirmButton: false,
+    //     timer: 2000,
+    //     timerProgressBar: true,
+    //     background: "#ffc107",
+    //     color: "#000",
+    //     iconColor: "#000",
+    //   });
+    //   return; // 🚫 No agregar más
+    // }
 
     // ✅ Si aún hay cupos disponibles
     addToCart(item);
@@ -260,81 +260,81 @@ $(document).ready(function () {
 
   $(document).on("click", ".button-free-gift", function () {
 
-    
+
     const id = $(this).data("id");
     removeToCart(id)
     const name = $(this)
-    .closest(".product-info")
-    .find(".product-title")
-    .text()
-    .trim();
+      .closest(".product-info")
+      .find(".product-title")
+      .text()
+      .trim();
 
-  const img = $(this)
-    .closest(".product-card")
-    .find(".product-image img")
-    .attr("src");
+    const img = $(this)
+      .closest(".product-card")
+      .find(".product-image img")
+      .attr("src");
 
-  const item = {
-    id: id,
-    name: name,
-    img: img,
-    quantity: 1,
-  };
+    const item = {
+      id: id,
+      name: name,
+      img: img,
+      quantity: 1,
+    };
 
     Swal.fire({
-        title: 'Ingresa el monto',
-        input: 'number', // Tipo de entrada para número
-        inputAttributes: {
-            min: 0, // Mínimo permitido
-            step: 0.01, // Paso de 0.01
-        },
-        showCancelButton: true,
-        confirmButtonText: 'Aceptar',
-        cancelButtonText: 'Cancelar',
-        showLoaderOnConfirm: true,
-        customClass: {
-            popup: 'font-Forum', // Añadido para personalizar el popup
-            title: 'font-bellisia', // Añadido para personalizar el título
-            input: 'font-Forum', // Añadido para personalizar el campo de entrada
-            confirmButton: 'custom-button', // Añadido para personalizar el botón de confirmar
-            cancelButton: 'custom-cancel', // Añadido para personalizar el botón de cancelar
-        },
-        background: '#f7f7f7', // Fondo del popup
-        color: '#333', // Color del texto
-        confirmButtonColor: '#c58888', // Color del botón de confirmación
-        cancelButtonColor: '#797979', // Color del botón de cancelar
-        preConfirm: (amount) => {
-            if (!amount || amount <= 0) {
-                Swal.showValidationMessage('Por favor ingresa un monto válido');
-            } else {
-                return amount; // Retorna el monto ingresado
-            }
-        }
-    }).then((result) => {
-        if (result.isConfirmed) {
-            const amount = result.value;
-            Swal.fire({
-                title: `Monto ingresado: S/${amount}`,
-                icon: 'success',
-                customClass: {
-                    popup: 'font-forum',
-                    title: 'font-forum',
-                    confirmButton: 'custom-button',
-                },
-                confirmButtonColor: '#c58888',
-                background: '#fff', // Fondo del popup
-            });
-            console.log('Monto ingresado:', amount); // Aquí puedes usar el monto como lo necesites
-           
-            item.price = amount;
-            addToCart(item)
-      
-          
+      title: 'Ingresa el monto',
+      input: 'number', // Tipo de entrada para número
+      inputAttributes: {
+        min: 0, // Mínimo permitido
+        step: 0.01, // Paso de 0.01
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar',
+      showLoaderOnConfirm: true,
+      customClass: {
+        popup: 'font-Forum', // Añadido para personalizar el popup
+        title: 'font-bellisia', // Añadido para personalizar el título
+        input: 'font-Forum', // Añadido para personalizar el campo de entrada
+        confirmButton: 'custom-button', // Añadido para personalizar el botón de confirmar
+        cancelButton: 'custom-cancel', // Añadido para personalizar el botón de cancelar
+      },
+      background: '#f7f7f7', // Fondo del popup
+      color: '#333', // Color del texto
+      confirmButtonColor: '#c58888', // Color del botón de confirmación
+      cancelButtonColor: '#797979', // Color del botón de cancelar
+      preConfirm: (amount) => {
+        if (!amount || amount <= 0) {
+          Swal.showValidationMessage('Por favor ingresa un monto válido');
         } else {
-            console.log('Operación cancelada');
+          return amount; // Retorna el monto ingresado
         }
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const amount = result.value;
+        Swal.fire({
+          title: `Monto ingresado: S/${amount}`,
+          icon: 'success',
+          customClass: {
+            popup: 'font-forum',
+            title: 'font-forum',
+            confirmButton: 'custom-button',
+          },
+          confirmButtonColor: '#c58888',
+          background: '#fff', // Fondo del popup
+        });
+        console.log('Monto ingresado:', amount); // Aquí puedes usar el monto como lo necesites
+
+        item.price = amount;
+        addToCart(item)
+
+
+      } else {
+        console.log('Operación cancelada');
+      }
     });
-});
+  });
 
 });
 
@@ -353,14 +353,14 @@ const getGifts = async (categoryId = 0) => {
       dataType: "json",
     });
 
-    if(categoryId!=5){
+    if (categoryId != 5) {
       renderGifts(response);
       //return
-    }else{
+    } else {
       renderFree(response)
     }
 
-    
+
   } catch (error) {
     console.error(error);
   }
@@ -374,9 +374,9 @@ const renderGifts = (items) => {
 
   items.forEach((item) => {
 
-    if(item.id != 100){
+    if (item.id != 100) {
 
-      const progress = (item.progreso / item.cupos)* 100;
+      const progress = (item.progreso / item.cupos) * 100;
 
       //console.log(item.categoria_id)
 
@@ -417,7 +417,7 @@ const renderGifts = (items) => {
 
     }
 
-   
+
   });
   productGrid.append(grid);
 };
@@ -470,7 +470,7 @@ const showCart = () => {
 
 const getCart = () => {
   const data = localStorage.getItem("cart");
-  
+
   if (!data) {
     cart = new Map();
     saveCart();
@@ -492,7 +492,7 @@ const getCart = () => {
     cart = new Map();
     saveCart();
   }
-  
+
   return cart;
 };
 
@@ -547,7 +547,7 @@ const removeItem = (id) => {
 
 const rederCart = () => {
   getCart();
-  
+
   if (!cart) {
     return;
   }
@@ -555,8 +555,8 @@ const rederCart = () => {
   const list = $(".cart-items");
   list.html("");
 
-  
- 
+
+
 
   let row = "";
   let total = 0;

@@ -1,4 +1,28 @@
-<style>
+<?php
+/* Smarty version 5.5.1, created on 2026-03-14 11:29:18
+  from 'file:views/sofiaygabriel/components/hero.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_69b58cde8d7b83_60226892',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
+    array (
+      0 => 'views/sofiaygabriel/components/hero.tpl',
+      1 => 1773505756,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_69b58cde8d7b83_60226892 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
+?><style>
     #player {
         display: flex;
         align-items: center;
@@ -90,9 +114,11 @@
         <!-- Columna izquierda -->
         <div class="col-left">
 
-            <img src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo_02.webp" alt="logo" class="logo">
+            <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/sofiaygabriel/imgs/logo_02.webp" alt="logo" class="logo">
 
-            <audio id="myAudio" src="{$_layoutParams.root}views/sofiaygabriel/sound/song.mp3"></audio>
+            <audio id="myAudio" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/sofiaygabriel/sound/song.mp3"></audio>
 
             <button id="player" class="button-2">
                 <i class="fa-solid fa-play play-icon"></i>
@@ -150,4 +176,5 @@
         <a data-id="attendance" class="nav-item">ASISTENCIA</a>
         <a data-id="gifts" class="nav-item">REGALOS</a>
     </div>
-</div>
+</div><?php }
+}

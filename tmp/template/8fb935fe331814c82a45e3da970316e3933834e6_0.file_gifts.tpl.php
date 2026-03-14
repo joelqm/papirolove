@@ -1,4 +1,28 @@
-<div class="gift-container" id="gifts">
+<?php
+/* Smarty version 5.5.1, created on 2026-03-14 08:48:31
+  from 'file:views/sofiaygabriel/components/gifts.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_69b5672f2ae8a6_97655173',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8fb935fe331814c82a45e3da970316e3933834e6' => 
+    array (
+      0 => 'views/sofiaygabriel/components/gifts.tpl',
+      1 => 1773495944,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_69b5672f2ae8a6_97655173 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
+?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
 
         <svg class="svg_gifs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
@@ -18,16 +42,19 @@
 
         <!-- <p class="gift-couple-name">Sofia y Gabriel</p> -->
 
-        <img style="margin:25px 0px;" class="history-logo" src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo.webp"
+        <img style="margin:25px 0px;" class="history-logo" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/sofiaygabriel/imgs/logo.webp"
             alt="logo">
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
                 <p>Powered by</p>
-                <img class="izi-img" src="{$_layoutParams.root}views/layout/neela/images/izipay.png"
+                <img class="izi-img" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/layout/neela/images/izipay.png"
                     alt="Logotipo de Izipay">
             </div>
-            <img class="izi-img" src="{$_layoutParams.root}views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
+            <img class="izi-img" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
                 style="width: 100px;">
         </div>
 
@@ -51,4 +78,5 @@
             </main>
         </div>
     </div>
-</div>
+</div><?php }
+}

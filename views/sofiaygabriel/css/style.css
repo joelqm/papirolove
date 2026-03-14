@@ -80,15 +80,16 @@
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
 :root {
     --accent: #474641;
-    --background-color: #DDD9CD;
+    --background-color: #3b5354;
     --button-color: #333;
     --button-hover-scale: 110%;
     --footer-color: #b57966;
     --primary-color: #474641;
-    --primary-ligth-color: #DDD9CD;
+    --primary-ligth-color: #3b5354;
     --secondary-color: #555;
     --text-color: #474641;
     --transition-duration: 0.3s;
+    --text-color-light: #fff;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -186,8 +187,8 @@ body {
 }
 
 .loader-button {
-    background: var(--primary-color);
-    color: white;
+    background: var(--text-color-light);
+    color: var(--primary-color);
     font-family: "Baskervville-Regular";
     font-size: 1.1rem;
     padding: 0.5rem 0.8rem;
@@ -200,8 +201,8 @@ body {
     scale: 110%;
     cursor: pointer;
     transition: all 0.5s;
-    background: var(--primary-ligth-color);
-    border: 1px white solid;
+    background: var(--text-color-light);
+    border: 1px var(--primary-color) solid;
 }
 
 .history-logo {
@@ -1057,7 +1058,7 @@ body {
 .galery {
     width: 100%;
     padding: 50px 0px;
-    background: #ddd9cd;
+    background: #3b5354;
 }
 
 .container-galery {
@@ -1904,7 +1905,7 @@ footer {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .menu a{
+    .menu a {
         color: white !important;
     }
 
@@ -2173,10 +2174,12 @@ footer {
 
 /* Arreglo para que las imágenes no se vean borrosas en iPhone/Android */
 @media (max-width: 1024px) {
-    .invitation-card, 
-    .container-dresscode, 
+
+    .invitation-card,
+    .container-dresscode,
     .attendace-container {
-        background-attachment: scroll !important; /* Desactiva el modo fijo que causa el error */
+        background-attachment: scroll !important;
+        /* Desactiva el modo fijo que causa el error */
         background-position: center center;
         background-size: cover;
     }

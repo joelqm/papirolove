@@ -174,7 +174,7 @@ $(document).ready(function () {
 function crearEventoEnGoogleCalendar() {
   // Datos del evento: cámbialos directamente aquí
   /*
-  const titulo = "Boda Claudia y Angelo";
+  const titulo = "Boda Sofia y Gabriel";
   const descripcion = "¡No faltes! 💍🎉";
   const lugar = "Arequipa, Perú";
   const fechaInicioTexto = "02/05/2026 14:00"; // DD/MM/YYYY HH:mm hora Perú
@@ -202,8 +202,8 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-
-  const url = `https://calendar.app.google/9TK6ehnkoWAf5wJ46`;
+  const url = `https://calendar.app.google/FojSfQfqcxGqNTCy7`;
 
   window.open(url, "_blank");
+
 }

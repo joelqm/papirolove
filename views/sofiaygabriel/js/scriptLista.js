@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     var ruta = $("#root").val();
 
@@ -29,7 +29,7 @@ $(function() {
 
     iniciarTabla();
 
-    function iniciarTabla(tipbus = null,value = null) {
+    function iniciarTabla(tipbus = null, value = null) {
 
         // " + ver + "  " + eli + " " + print + " " + track + " " + option +"
 
@@ -44,14 +44,14 @@ $(function() {
             "responsive": true,
             'pageLength': 25,
             "order": [[0, 'desc']],
-            "ajax": `${$("#root").val()}claudiayangelo/mostrarListaRegistros`,
+            "ajax": `${$("#root").val()}sofiaygabriel/mostrarListaRegistros`,
             "columnDefs": [
                 { responsivePriority: 1, targets: 1 },
                 //{ responsivePriority: 2, targets: -1 },
                 {
-                "targets": -1,
-                "data": null,
-                "defaultContent": "<div class='list-icons'>" + ver + "</div>"
+                    "targets": -1,
+                    "data": null,
+                    "defaultContent": "<div class='list-icons'>" + ver + "</div>"
                 }
             ],
             "language": {
@@ -75,7 +75,7 @@ $(function() {
         });
 
     }
-   
+
     async function getGifts(id) {
         try {
             const response = await $.ajax({
@@ -84,11 +84,11 @@ $(function() {
                 data: { id },
                 dataType: "json" // Asegúrate de recibir la respuesta como JSON
             });
-    
+
             if (response.length === 0) {
                 return `<p>No hay obsequios en este mensaje</p>`;
             }
-    
+
             // Genera el HTML para la tabla de regalos
             let tablaRegalos = `
                 <div class="table-container">
@@ -103,7 +103,7 @@ $(function() {
                         </thead>
                         <tbody>
             `;
-    
+
             response.forEach((regalo) => {
                 tablaRegalos += `
                     <tr>
@@ -114,31 +114,31 @@ $(function() {
                     </tr>
                 `;
             });
-    
+
             tablaRegalos += `
                         </tbody>
                     </table>
                 </div>
             `;
-    
+
             return tablaRegalos;
         } catch (error) {
             console.error("Error al obtener los obsequios: ", error);
             return "<p>Hubo un error al cargar los obsequios.</p>";
         }
     }
-    
-    $("#tb_data").on("click", "#btn_ver", async function() {
+
+    $("#tb_data").on("click", "#btn_ver", async function () {
         const tabla = $("#tb_data").DataTable();
         const data = tabla.row($(this).parents('tr')).data();
         if (data == undefined) {
             tabla = $("#tb_data").DataTable();
             data = tabla.row($(this).parents('tr')).data();
         }
-    
+
         const tableRowId = $(this).closest('tr').attr('id').split('_')[1];
         const giftsHtml = await getGifts(tableRowId); // Espera el HTML de la tabla
-    
+
         bootbox.dialog({
             title: " ",
             message: `
@@ -158,18 +158,18 @@ $(function() {
                 ok: {
                     label: "Cerrar",
                     className: 'colorone',
-                    callback: function() {
+                    callback: function () {
                         bootbox.hideAll();
                     }
                 }
             }
         });
-    
+
         $('.modal-footer').addClass('text-center');
         $(".modal-footer").css({ "display": "block" });
         $(".modal-header").hide();
     });
-    
+
 
 
     /*
@@ -193,35 +193,35 @@ $(function() {
 
     function resultdiv(title,message){
 
-		bootbox.dialog({
-			title: " ",
-			message: '<div class="row"><div class="col-lg-12">'+ //offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3
-			'<div class="form-wrapper neela-style text-center" style="padding: 0px 10px;margin-bottom: 0px;">'+
-			'<h2 class="section-title" style="margin: 0 auto 20px;">'+title+'</h2>'+
-			'<p class="cta">'+message+'</p>'+
-			'</div>'+
-			'</div>'+
-			'</div>',
-			size: 'medium',
-			className: 'rubberBand animated',
-			buttons: {
-				ok: {
-					label: "Cerrar",
-					className: 'colorone',
-					callback: function(){
-						//location.reload();
-						window.location.href = ruta+'
+        bootbox.dialog({
+            title: " ",
+            message: '<div class="row"><div class="col-lg-12">'+ //offset-lg-1 col-xl-8 offset-xl-2  col-xxl-6 offset-xxl-3
+            '<div class="form-wrapper neela-style text-center" style="padding: 0px 10px;margin-bottom: 0px;">'+
+            '<h2 class="section-title" style="margin: 0 auto 20px;">'+title+'</h2>'+
+            '<p class="cta">'+message+'</p>'+
+            '</div>'+
+            '</div>'+
+            '</div>',
+            size: 'medium',
+            className: 'rubberBand animated',
+            buttons: {
+                ok: {
+                    label: "Cerrar",
+                    className: 'colorone',
+                    callback: function(){
+                        //location.reload();
+                        window.location.href = ruta+'
                         
                         
                         /';
-					}
-				}
-			}
-		});
+                    }
+                }
+            }
+        });
 
-		$('.modal-footer').addClass('text-center');
-		$(".modal-footer").css({"display": "block"});
-		$(".modal-header").hide();
+        $('.modal-footer').addClass('text-center');
+        $(".modal-footer").css({"display": "block"});
+        $(".modal-header").hide();
 
         // bootbox.alert({
         //     title: " ",

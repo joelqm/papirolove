@@ -15,7 +15,7 @@
         <div class="notification-content">
             <span class="heart-icon">♥</span> Deslízate hacia abajo y presiona
             el botón <strong>Obsequiar y enviar</strong> para completar el
-            registro y hacer llegar tu presente a Claudia y Angelo
+            registro y hacer llegar tu presente a Sofia y Gabriel
         </div>
     </div>
 
@@ -23,7 +23,7 @@
         <!-- Gift Form Card -->
         <div class="gift-card">
             <div class="card-header">
-                <span class="font-titulo-obsequio">Claudia y Angelo</span>
+                <span class="font-titulo-obsequio">Sofia y Gabriel</span>
             </div>
 
             <div class="card-body">
@@ -103,7 +103,7 @@
 <link rel="stylesheet" href="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic-reset.css">
 <script src="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic.js"></script>
 <script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-    kr-public-key="{$pk}" kr-post-url-success="{$_layoutParams.root}claudiayangelo/estado/{$codigo}">
+    kr-public-key="{$pk}" kr-post-url-success="{$_layoutParams.root}sofiaygabriel/estado/{$codigo}">
     </script>
 {block name="styles"}
 <style>
@@ -579,12 +579,12 @@
         background-color: var(--primary-color) !important;
         color: white;
     }
-    
-    
+
+
     /*.kr-header-border {
         background-color: transparent !important;
     }*/
-    
+
     .kr-embedded[kr-popin] .kr-popin-modal-header .kr-popin-modal-header-image .kr-header-border {
         width: 80px;
         height: 80px;
@@ -637,7 +637,8 @@
         content: url("https://celebremos.pe/views/layout/neela/images/izipay.png") !important;
         background-color: var(--primary-color) !important;
         object-fit: contain !important;
-        padding: 5px; /* Ajusta según necesites */
+        padding: 5px;
+        /* Ajusta según necesites */
     }
 
     .kr-embedded[kr-popin] .kr-popin-modal-header {
