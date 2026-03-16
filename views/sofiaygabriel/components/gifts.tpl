@@ -18,7 +18,7 @@
 
         <!-- <p class="gift-couple-name">Sofia y Gabriel</p> -->
 
-        <img style="margin:25px 0px;" class="history-logo" src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo.webp"
+        <img style="margin:25px 0px;" class="history-logo" src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo_02.webp"
             alt="logo">
 
         <div class="izi-wrapper">

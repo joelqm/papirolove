@@ -1,3 +1,5 @@
+
+
 <div class="container-dresscode" id="dresscode">
     <div class="dresscode-title" data-aos="fade-up">
         <!-- <h1 class="gift-title-small">Código de Vestimenta</h1> -->
@@ -70,14 +72,14 @@
             </div>
         </div>
 
-        <!-- <div class="right-section" data-aos="fade-up">
+        <div class="right-section" data-aos="fade-up">
             <a href="https://assets.pinterest.com/ext/embed.html?id=14988611255250869" class="button-3"
                 style="margin-bottom: 12px;text-decoration: none;cursor: pointer;">
                 INSPIRACIÓN
             </a>
             <iframe src="https://assets.pinterest.com/ext/embed.html?id=14988611255250869" height="532" width="345"
                 frameborder="0" scrolling="no"></iframe>
-        </div> -->
+        </div>
 
     </div>
 </div>

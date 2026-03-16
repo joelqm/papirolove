@@ -3,9 +3,11 @@
         <div class="owl-carousel owl-theme">
             <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-1.webp" alt="Imagen 1">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda.webp" alt="Imagen 2">
+            <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-2.webp" alt="Imagen 2">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-2.webp" alt="Imagen 3">
+            <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-3.webp" alt="Imagen 3">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-4.webp" alt="Imagen 3">
             </div>
         </div>
     </div>

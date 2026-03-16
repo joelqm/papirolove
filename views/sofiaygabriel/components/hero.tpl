@@ -143,7 +143,7 @@
         <i class="fas fa-bars"></i>
     </a>
     <div class="menu" id="menu">
-        <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a>
+        <!-- <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a> -->
         <a data-id="info" class="nav-item">INFORMACIÓN</a>
         <a data-id="galery" class="nav-item">NUESTRAS FOTOS</a>
         <a data-id="dresscode" class="nav-item">CÓDIGO DE VESTIMENTA</a>

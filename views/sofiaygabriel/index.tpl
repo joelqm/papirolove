@@ -7,9 +7,11 @@
 {include file="views/sofiaygabriel/components/loader.tpl"}
 {include file="views/sofiaygabriel/components/cart.tpl"}
 {include file="views/sofiaygabriel/components/hero.tpl"}
-{include file="views/sofiaygabriel/components/history.tpl"}
+
 {include file="views/sofiaygabriel/components/information.tpl"}
 {include file="views/sofiaygabriel/components/galery.tpl"}
+
+
 
 {include file="views/sofiaygabriel/components/attendance.tpl"}
 {include file="views/sofiaygabriel/components/gifts.tpl"}

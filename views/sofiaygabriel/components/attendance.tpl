@@ -64,25 +64,30 @@
 
 
             <div class="text-body">
-                <span style="display: inline;">ETIQUETA ESTRICTA</span><br>
-                <!-- <span>El blanco y el beige son
-                    exclusivos de la novia,
-                    gracias por respetarlo</span> -->
+                <span style="display: inline;">ETIQUETA ESTRICTA</span><br><br>
+                <span class="texto-content">Mujeres<br>
+                Vestido largo de color entero, sin flores
+                ni diseños. Les pedimos evitar los
+                colores rojo y blanco.
+                <br><br>
+                Hombres<br>
+                Les pedimos no utilizar trajes en tonos
+                gris ni beige.</span>
             </div>
         </div>
 
-        <!-- <div class="right-section" data-aos="fade-up">
-            <a href="https://assets.pinterest.com/ext/embed.html?id=14988611255250869" class="button-3"
+        <div class="right-section" data-aos="fade-up">
+            <a href="https://assets.pinterest.com/ext/embed.html?id=515028907408977428" class="button-3"
                 style="margin-bottom: 12px;text-decoration: none;cursor: pointer;">
                 INSPIRACIÓN
             </a>
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=14988611255250869" height="532" width="345"
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=515028907408977428" height="532" width="345"
                 frameborder="0" scrolling="no"></iframe>
-        </div> -->
+        </div>
 
     </div>
 
-    <br><br><br>
+    <br>
 
     <div id="attendance"></div>
 
@@ -96,9 +101,9 @@
             Agradeceremos confirmar tu asistencia hasta el
         </p>
 
-        <h3 class="date">20.04.2026</h3>
+        <h3 class="date">13.04.2026</h3>
 
-        <a href="https://wa.link/5w82j7" class="button-3">
+        <a href="https://wa.link/r01p5j" class="button-3">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="button-3-svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -114,7 +119,7 @@
         </a>
 
         <p class="text">
-            Asistencia exclusiva para adultos
+            Invitación exclusiva para adultos
         </p>
 
 

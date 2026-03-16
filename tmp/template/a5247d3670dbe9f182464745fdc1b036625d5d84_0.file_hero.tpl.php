@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-14 11:29:18
+/* Smarty version 5.5.1, created on 2026-03-15 22:01:58
   from 'file:views/sofiaygabriel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69b58cde8d7b83_60226892',
+  'unifunc' => 'content_69b772a6279d26_65867676',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
     array (
       0 => 'views/sofiaygabriel/components/hero.tpl',
-      1 => 1773505756,
+      1 => 1773630084,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69b58cde8d7b83_60226892 (\Smarty\Template $_smarty_tpl) {
+function content_69b772a6279d26_65867676 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><style>
     #player {
@@ -169,7 +169,7 @@ views/sofiaygabriel/sound/song.mp3"></audio>
         <i class="fas fa-bars"></i>
     </a>
     <div class="menu" id="menu">
-        <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a>
+        <!-- <a data-id="new-history" href="#new-history" class="nav-item">NUESTRA HISTORIA</a> -->
         <a data-id="info" class="nav-item">INFORMACIÓN</a>
         <a data-id="galery" class="nav-item">NUESTRAS FOTOS</a>
         <a data-id="dresscode" class="nav-item">CÓDIGO DE VESTIMENTA</a>

@@ -2,21 +2,21 @@
 
   <div class="invitation-pattern"></div>
 
-  <h1 class="history-title-small-2">Comienza nuestra historia para toda la vida</h1>
+  <h1 class="history-title-small-2">Hoy comienza nuestro para siempre</h1>
 
 
-  <h1 class="history-title-small-3">En compañia de nuestros padres</h1>
+  <h1 class="history-title-small-3">JUNTO A NUESTROS PADRES</h1>
 
   <div class="couple">
 
     <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>César Ibarra Zavala &</p>
-      <p>Yane Hernani Tapia</p>
+      <p>GABRIEL RIEGA ABUAPARA & </p>
+      <p>YELKA GUERRA PÉREZ</p>
     </div>
 
     <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>Edgar Valladares Velasquez &</p>
-      <p>Marcia Caceres Arroyo</p>
+      <p>ALBERTO PÉREZ ALBELA FERNÁNDEZ &</p>
+      <p>BEATRIZ CARRANZA LADINES</p>
     </div>
 
   </div>
@@ -38,8 +38,7 @@
   </div> -->
 
   <h1 class="history-title-small-3">
-    Deseamos compartir con ustedes la alegría de
-    nuestro matrimonio.
+    QUEREMOS COMPARTIR CONTIGO LA FELICIDAD DE CELEBRAR <br> NUESTRO MATRIMONIO
   </h1>
 
 
@@ -84,11 +83,11 @@
         </svg>
       </div>
       <h3 class="location-type">CEREMONIA</h3>
-      <p class="location-address">Parroquia “San Juan Bautista”</p>
-      <p class="location-address">Cta del Ángel 4, Yanahuara</p>
+      <p class="location-address">Parroquia “San Miguel Árcangel”</p>
+      <p class="location-address">Calle Arospide 208, Cayma</p>
       <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">1:00 pm</p>
-      <a target="_blank" href="https://share.google/2iJwBtqO6mFFF21mB" class="location-button">
+      <p class="location-time">11:30 am</p>
+      <a target="_blank" href="https://share.google/tOGSCf4eU4tGT2bfW" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -139,11 +138,11 @@
           </svg></span>
       </div>
       <h3 class="location-type">RECEPCIÓN</h3>
-      <p class="location-address">Molino Blanco</p>
-      <p class="location-address">Alameda San Lázaro 137, Cercado</p>
+      <p class="location-address">Mansión Ugarteche</p>
+      <p class="location-address">Calle Manuel Ugarteche 313, Cercado</p>
       <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">3:00 pm</p>
-      <a target="_blank" href="https://share.google/nmlrFtEzoVupsfdlM" class="location-button"> <svg fill="#fff"
+      <p class="location-time">1:30 pm</p>
+      <a target="_blank" href="https://share.google/IAZ5MgfrHzERrwXBM" class="location-button"> <svg fill="#fff"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
