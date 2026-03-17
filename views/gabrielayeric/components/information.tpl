@@ -83,9 +83,7 @@
       <p class="location-address">Av. Mariscal Castilla s/n</p>
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">12:30 pm</p>
-      <a target="_blank"
-        href="https://maps.app.goo.gl/bYNoWawTj6Rnuhqq9"
-        class="location-button">
+      <a target="_blank" href="https://maps.app.goo.gl/bYNoWawTj6Rnuhqq9" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -140,9 +138,8 @@
       <p class="location-address">Catarindo</p>
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">3:00 pm</p>
-      <a target="_blank"
-        href="https://share.google/1fziwWGnliGPSPCIf"
-        class="location-button"> <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+      <a target="_blank" href="https://share.google/1fziwWGnliGPSPCIf" class="location-button"> <svg fill="#fff"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">

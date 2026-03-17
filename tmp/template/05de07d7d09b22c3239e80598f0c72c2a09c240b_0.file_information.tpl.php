@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-02-28 16:58:14
+/* Smarty version 5.5.1, created on 2026-03-17 09:35:57
   from 'file:views/gabrielayeric/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69a364f66a7718_83726140',
+  'unifunc' => 'content_69b966cd5bee96_33436324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '05de07d7d09b22c3239e80598f0c72c2a09c240b' => 
     array (
       0 => 'views/gabrielayeric/components/information.tpl',
-      1 => 1772315890,
+      1 => 1773758062,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69a364f66a7718_83726140 (\Smarty\Template $_smarty_tpl) {
+function content_69b966cd5bee96_33436324 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\components';
 ?><section class="invitation-card" id="info">
 
@@ -107,9 +107,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
       <p class="location-address">Av. Mariscal Castilla s/n</p>
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">12:30 pm</p>
-      <a target="_blank"
-        href="https://maps.app.goo.gl/bYNoWawTj6Rnuhqq9"
-        class="location-button">
+      <a target="_blank" href="https://maps.app.goo.gl/bYNoWawTj6Rnuhqq9" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -164,9 +162,8 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\gabrielayeric\\comp
       <p class="location-address">Catarindo</p>
       <p class="location-address">Mollendo - Arequipa</p>
       <p class="location-time">3:00 pm</p>
-      <a target="_blank"
-        href="https://share.google/1fziwWGnliGPSPCIf"
-        class="location-button"> <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+      <a target="_blank" href="https://share.google/1fziwWGnliGPSPCIf" class="location-button"> <svg fill="#fff"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
