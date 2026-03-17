@@ -27,7 +27,7 @@ class sofiaygabrielController extends Controller
 		$this->_obsequio = $this->loadModel('obsequio');
 		$this->_index = $this->loadModel('index');
 		$this->_dt = $this->loadModel('dataTable');
-		$this->_key = 19; // Nuevo ID único para Sofia y Gabriel
+		$this->_key = 1; // Nuevo ID único para Sofia y Gabriel
 	}
 
 	public function index()
@@ -60,6 +60,9 @@ class sofiaygabrielController extends Controller
 
 		$data = $this->getPostParam('cart');
 		$messageId = $this->getTexto('messageId');
+
+
+
 
 
 
