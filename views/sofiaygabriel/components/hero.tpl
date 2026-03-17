@@ -80,6 +80,65 @@
     .countdown-label {
         font-size: 14px;
     }
+
+    /* Media Query para Tablets y Celulares */
+    @media (max-width: 992px) {
+        .wedding-grid {
+            width: 100%;
+            /* Ocupa todo el ancho */
+            grid-template-columns: 1fr;
+            /* Una sola columna */
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .col-left,
+        .col-right {
+            text-align: center;
+            transform: translateY(0);
+            /* Eliminamos el desfase vertical */
+            max-width: 100%;
+        }
+
+        .col-center {
+            display: none;
+            /* Opcional: ocultar el espacio vacío en móviles si no hay foto */
+            height: auto;
+        }
+
+        .logo {
+            width: 80%;
+            /* Logo más pequeño en móviles */
+            max-width: 300px;
+        }
+
+        .count {
+            gap: 15px;
+            /* Menos espacio entre números del contador */
+        }
+
+        .countdown-number {
+            font-size: 30px;
+        }
+
+        /* Ajuste para el menú de navegación si es necesario */
+        .menu {
+            flex-direction: column;
+            display: none;
+            /* Se activaría con tu JS del hamburguesa */
+        }
+    }
+
+    /* Ajuste extra para celulares muy pequeños */
+    @media (max-width: 480px) {
+        .countdown-number {
+            font-size: 24px;
+        }
+
+        .countdown-label {
+            font-size: 11px;
+        }
+    }
 </style>
 <div class="container-page">
 
@@ -89,7 +148,6 @@
 
         <!-- Columna izquierda -->
         <div class="col-left">
-
             <img src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo_02.webp" alt="logo" class="logo">
 
             <audio id="myAudio" src="{$_layoutParams.root}views/sofiaygabriel/sound/song.mp3"></audio>
@@ -130,13 +188,9 @@
             <button class="button button-calendar">
                 AGREGAR A CALENDARIO
             </button>
-
         </div>
-
     </div>
-
 </div>
-
 
 <div class="navigation">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">

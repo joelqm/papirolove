@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-15 22:01:58
+/* Smarty version 5.5.1, created on 2026-03-17 10:14:21
   from 'file:views/sofiaygabriel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69b772a6279d26_65867676',
+  'unifunc' => 'content_69b96fcd006ec9_24245385',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
     array (
       0 => 'views/sofiaygabriel/components/hero.tpl',
-      1 => 1773630084,
+      1 => 1773760456,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69b772a6279d26_65867676 (\Smarty\Template $_smarty_tpl) {
+function content_69b96fcd006ec9_24245385 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><style>
     #player {
@@ -103,6 +103,65 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
 
     .countdown-label {
         font-size: 14px;
+    }
+
+    /* Media Query para Tablets y Celulares */
+    @media (max-width: 992px) {
+        .wedding-grid {
+            width: 100%;
+            /* Ocupa todo el ancho */
+            grid-template-columns: 1fr;
+            /* Una sola columna */
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .col-left,
+        .col-right {
+            text-align: center;
+            transform: translateY(0);
+            /* Eliminamos el desfase vertical */
+            max-width: 100%;
+        }
+
+        .col-center {
+            display: none;
+            /* Opcional: ocultar el espacio vacío en móviles si no hay foto */
+            height: auto;
+        }
+
+        .logo {
+            width: 80%;
+            /* Logo más pequeño en móviles */
+            max-width: 300px;
+        }
+
+        .count {
+            gap: 15px;
+            /* Menos espacio entre números del contador */
+        }
+
+        .countdown-number {
+            font-size: 30px;
+        }
+
+        /* Ajuste para el menú de navegación si es necesario */
+        .menu {
+            flex-direction: column;
+            display: none;
+            /* Se activaría con tu JS del hamburguesa */
+        }
+    }
+
+    /* Ajuste extra para celulares muy pequeños */
+    @media (max-width: 480px) {
+        .countdown-number {
+            font-size: 24px;
+        }
+
+        .countdown-label {
+            font-size: 11px;
+        }
     }
 </style>
 <div class="container-page">
