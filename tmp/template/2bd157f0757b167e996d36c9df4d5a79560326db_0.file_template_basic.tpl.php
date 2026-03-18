@@ -1,27 +1,28 @@
 <?php
 /* Smarty version 5.5.1, created on 2026-03-02 15:23:12
-  from 'file:template_basic.tpl' */
+ from 'file:template_basic.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
-if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
-  'version' => '5.5.1',
-  'unifunc' => 'content_69a5f1b02baa88_97729023',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '2bd157f0757b167e996d36c9df4d5a79560326db' => 
-    array (
-      0 => 'template_basic.tpl',
-      1 => 1772395529,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array(
+'version' => '5.5.1',
+'unifunc' => 'content_69a5f1b02baa88_97729023',
+'has_nocache_code' => false,
+'file_dependency' =>
+array(
+'2bd157f0757b167e996d36c9df4d5a79560326db' =>
+array(
+0 => 'template_basic.tpl',
+1 => 1772395529,
+2 => 'file',
+),
+),
+'includes' =>
+array(
+),
 ))) {
-function content_69a5f1b02baa88_97729023 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\layout\\neela';
+    function content_69a5f1b02baa88_97729023(\Smarty\Template $_smarty_tpl)
+    {
+        $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\layout\\neela';
 ?>
 <!doctype html>
 <html lang="es">
@@ -41,13 +42,13 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\layout\\neela';
         <meta name="apple-mobile-web-app-status-bar-style"
             content="black-translucent" />
         <meta name="description"
-            content="<?php echo $_smarty_tpl->getValue('descripcion');?>
+            content="<?php echo $_smarty_tpl->getValue('descripcion'); ?>
  " />
         <meta name="keywords" content />
 
         <!-- <link rel="icon" type="image/png" sizes="16x16"
-            href="<?php echo $_smarty_tpl->getValue('_layoutParams')['ruta'];?>
-img/f_i/<?php echo $_smarty_tpl->getValue('_layoutParams')['configs']['favicon'];?>
+            href="<?php echo $_smarty_tpl->getValue('_layoutParams')['ruta']; ?>
+img/f_i/<?php echo $_smarty_tpl->getValue('_layoutParams')['configs']['favicon']; ?>
 "> -->
         <?php echo '<script'; ?>
  type="text/javascript"
@@ -69,13 +70,14 @@ img/f_i/<?php echo $_smarty_tpl->getValue('_layoutParams')['configs']['favicon']
         <title>PAPIROLOVE</title>
     </head>
     <body>
-        <input type="hidden" id="root" value="<?php echo $_smarty_tpl->getValue('_layoutParams')['host2'];?>
+        <input type="hidden" id="root" value="<?php echo $_smarty_tpl->getValue('_layoutParams')['host2']; ?>
 ">
         
-        <?php if ((true && ($_smarty_tpl->hasVariable('_contenido') && null !== ($_smarty_tpl->getValue('_contenido') ?? null)))) {?>
-            <?php $_smarty_tpl->renderSubTemplate($_smarty_tpl->getValue('_contenido'), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+        <?php if ((true && ($_smarty_tpl->hasVariable('_contenido') && null !== ($_smarty_tpl->getValue('_contenido') ?? null)))) { ?>
+            <?php $_smarty_tpl->renderSubTemplate($_smarty_tpl->getValue('_contenido'), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int)0, $_smarty_current_dir);
 ?>
-        <?php }?>
+        <?php
+        }?>
         
 
         <?php echo '<script'; ?>
@@ -88,23 +90,23 @@ img/f_i/<?php echo $_smarty_tpl->getValue('_layoutParams')['configs']['favicon']
     <?php echo '</script'; ?>
 >
 
-        <?php if ((true && (true && null !== ($_smarty_tpl->getValue('_layoutParams')['js'] ?? null))) && $_smarty_tpl->getSmarty()->getModifierCallback('count')($_smarty_tpl->getValue('_layoutParams')['js'])) {?>
-        <?php
-$_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('_layoutParams')['js'], 'js');
-$foreach0DoElse = true;
-foreach ($_from ?? [] as $_smarty_tpl->getVariable('js')->value) {
-$foreach0DoElse = false;
+        <?php if ((true && (true && null !== ($_smarty_tpl->getValue('_layoutParams')['js'] ?? null))) && $_smarty_tpl->getSmarty()->getModifierCallback('count')($_smarty_tpl->getValue('_layoutParams')['js'])) { ?>
+        <?php $_from = $_smarty_tpl->getSmarty()->getRuntime('Foreach')->init($_smarty_tpl, $_smarty_tpl->getValue('_layoutParams')['js'], 'js');
+            $foreach0DoElse = true;
+            foreach ($_from ?? [] as $_smarty_tpl->getVariable('js')->value) {
+                $foreach0DoElse = false;
 ?>
         <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->getValue('js');?>
-?v=<?php echo $_smarty_tpl->getValue('_layoutParams')['filever'];?>
+ src="<?php echo $_smarty_tpl->getValue('js'); ?>
+?v=<?php echo $_smarty_tpl->getValue('_layoutParams')['filever']; ?>
 "
             type="text/JavaScript"><?php echo '</script'; ?>
 >
         <?php
-}
-$_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
-        <?php }?>
+            }
+            $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1); ?>
+        <?php
+        }?>
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -127,8 +129,8 @@ $_smarty_tpl->getSmarty()->getRuntime('Foreach')->restore($_smarty_tpl, 1);?>
  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"><?php echo '</script'; ?>
 >
         <footer>
-            <p>© <?php echo $_smarty_tpl->getSmarty()->getModifierCallback('date_format')(time(),"%Y");?>
- celebremos.pe - Todos los derechos reservados. -
+            <p>© <?php echo $_smarty_tpl->getSmarty()->getModifierCallback('date_format')(time(), "%Y"); ?>
+ papirolove.pe - Todos los derechos reservados. -
                 Contáctanos</p>
         </footer>
 
@@ -146,5 +148,6 @@ footer {
 
     </body>
 </html>
-<?php }
+<?php
+    }
 }

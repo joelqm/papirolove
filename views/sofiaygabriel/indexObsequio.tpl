@@ -623,18 +623,18 @@
 
     /*
     .kr-embedded[kr-popin] div.kr-popin-modal-header .kr-popin-modal-header-image img.kr-header-logo {
-        content: url("https://celebremos.pe/views/layout/neela/images/izipay.png");
+        content: url("https://papirolove.pe/views/layout/neela/images/izipay.png");
         object-fit: contain !important;
         filter: brightness(0) invert(1);
     }
 
     .kr-embedded[kr-popin].kr-help-button-inner-field .kr-popin-modal-footer .kr-whitelabel-logo img.kr-logo-mcw {
-        content: url("https://celebremos.pe/views/layout/neela/images/izipay.png");
+        content: url("https://papirolove.pe/views/layout/neela/images/izipay.png");
     }
     */
 
     .kr-embedded[kr-popin] .kr-header-logo {
-        content: url("https://celebremos.pe/views/layout/neela/images/izipay.png") !important;
+        content: url("https://papirolove.pe/views/layout/neela/images/izipay.png") !important;
         background-color: var(--primary-color) !important;
         object-fit: contain !important;
         padding: 5px;

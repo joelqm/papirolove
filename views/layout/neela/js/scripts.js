@@ -25,9 +25,9 @@ var hero_full_screen = true;                    //If true, the hero section will
 
 //HERO BACKGROUND SLIDESHOW IMAGES
 var slidehow_images = [
-    //"https://www.celebremos.pe/views/layout/neela/images/slider/yvannayalfonso.png",
-    //"https://www.celebremos.pe/views/layout/neela/images/slider/yvannayalfonso.png",
-    //"https://www.celebremos.pe/views/layout/neela/images/slider/yvannayalfonso.png"
+    //"https://www.papirolove.pe/views/layout/neela/images/slider/yvannayalfonso.png",
+    //"https://www.papirolove.pe/views/layout/neela/images/slider/yvannayalfonso.png",
+    //"https://www.papirolove.pe/views/layout/neela/images/slider/yvannayalfonso.png"
 ];
 
 //TIMELINE PARALLAX
@@ -470,7 +470,7 @@ var Neela;
             var $_self = this;
 
             if ($_self.heroFullScreen) {
-                $("#hero").css({minHeight: $(window).innerHeight() + "px"});
+                $("#hero").css({ minHeight: $(window).innerHeight() + "px" });
 
                 $(window).resize(function () {
                     var padding = parseInt($("#hero").css("padding-bottom")) + 70;
@@ -491,10 +491,10 @@ var Neela;
                     }
 
                     if (dif > 0 && $(".v-center").length) {
-                        $("#hero >.container").css({"margin-top": (((dif) / 2) + xtraMT) + "px"});
+                        $("#hero >.container").css({ "margin-top": (((dif) / 2) + xtraMT) + "px" });
                     }
 
-                    $("#hero").css({minHeight: $(window).innerHeight() + "px"});
+                    $("#hero").css({ minHeight: $(window).innerHeight() + "px" });
                 });
             }
         },
@@ -505,7 +505,7 @@ var Neela;
                 $("#freewall .item").each(function () {
                     var $item = $(this);
                     $item.width(Math.floor(260 + 200 * Math.random()));
-                    $item.css({"background-image": "url(" + $(">img", $item).attr("src") + ")"});
+                    $item.css({ "background-image": "url(" + $(">img", $item).attr("src") + ")" });
                     $(">img", $item).remove();
                 });
 
@@ -559,74 +559,74 @@ var Neela;
                 styles = [
                     {
                         stylers: [
-                            {hue: $_self.mapColor},
-                            {saturation: -75},
-                            {lightness: 5}
+                            { hue: $_self.mapColor },
+                            { saturation: -75 },
+                            { lightness: 5 }
                         ]
                     },
                     {
                         featureType: "administrative",
                         elementType: "labels.text.fill",
                         stylers: [
-                            {saturation: 20},
-                            {lightness: -70}
+                            { saturation: 20 },
+                            { lightness: -70 }
                         ]
                     },
                     {
                         featureType: "water",
                         elementType: "geometry",
                         stylers: [
-                            {saturation: -50},
-                            {lightness: 40}
+                            { saturation: -50 },
+                            { lightness: 40 }
                         ]
                     },
                     {
                         featureType: "road",
                         elementType: "geometry",
                         stylers: [
-                            {hue: $_self.mapColor},
-                            {saturation: -100},
-                            {lightness: 0}
+                            { hue: $_self.mapColor },
+                            { saturation: -100 },
+                            { lightness: 0 }
                         ]
                     },
                     {
                         featureType: "road.highway",
                         elementType: "geometry",
                         stylers: [
-                            {hue: $_self.mapColor},
-                            {saturation: 5},
-                            {lightness: 5}
+                            { hue: $_self.mapColor },
+                            { saturation: 5 },
+                            { lightness: 5 }
                         ]
                     },
                     {
                         featureType: "road",
                         elementType: "geometry.stroke",
                         stylers: [
-                            {saturation: 10},
-                            {lightness: 0}
+                            { saturation: 10 },
+                            { lightness: 0 }
                         ]
                     },
                     {
                         featureType: "road.highway",
                         elementType: "geometry.stroke",
                         stylers: [
-                            {saturation: 0},
-                            {lightness: 20}
+                            { saturation: 0 },
+                            { lightness: 20 }
                         ]
                     },
                     {
                         featureType: "transit",
                         elementType: "geometry",
                         stylers: [
-                            {hue: $_self.mapColor},
-                            {saturation: 30},
-                            {lightness: -30}
+                            { hue: $_self.mapColor },
+                            { saturation: 30 },
+                            { lightness: -30 }
                         ]
                     }
                 ];
             }
 
-            styledMap = new google.maps.StyledMapType(styles, {name: "Neela"});
+            styledMap = new google.maps.StyledMapType(styles, { name: "Neela" });
 
             zoomCtrlPos = google.maps.ControlPosition.RIGHT_CENTER;
             stViewCtrlPos = google.maps.ControlPosition.RIGHT_BOTTOM;
@@ -764,7 +764,7 @@ var Neela;
                     }
 
                     scrolling = true;
-                    $gallery.animate({scrollLeft: $gallery.scrollLeft() + 380}, function () {
+                    $gallery.animate({ scrollLeft: $gallery.scrollLeft() + 380 }, function () {
                         scrolling = false;
                     });
                 });
@@ -775,7 +775,7 @@ var Neela;
                     }
 
                     scrolling = true;
-                    $gallery.animate({scrollLeft: $gallery.scrollLeft() - 380}, function () {
+                    $gallery.animate({ scrollLeft: $gallery.scrollLeft() - 380 }, function () {
                         scrolling = false;
                     });
                 });
@@ -835,9 +835,9 @@ var Neela;
 
                     if (future && Object.prototype.toString.call(future) === "[object Date]" && !Number.isNaN(future)) {
                         html = "<div class=\"days\"><div></div><span>" + $_self.cDays + "</span></div>" +
-                        "<div class=\"hours\"><div></div><span>" + $_self.cHours + "</span></div>" +
-                        "<div class=\"minutes\"><div></div><span>" + $_self.cMinutes + "</span></div>" +
-                        "<div class=\"seconds\"><div></div><span>" + $_self.cSeconds + "</span></div>";
+                            "<div class=\"hours\"><div></div><span>" + $_self.cHours + "</span></div>" +
+                            "<div class=\"minutes\"><div></div><span>" + $_self.cMinutes + "</span></div>" +
+                            "<div class=\"seconds\"><div></div><span>" + $_self.cSeconds + "</span></div>";
 
                         $parent.html(html);
                     }
@@ -875,7 +875,7 @@ var Neela;
                 });
 
             } else {
-                $(".parallax-background").css({"background-position": "50% 50%", "background-size": "cover", "background-attachment": "scroll"});
+                $(".parallax-background").css({ "background-position": "50% 50%", "background-size": "cover", "background-attachment": "scroll" });
             }
         },
 
@@ -1174,7 +1174,7 @@ var Neela;
             if ($(".element-v2").length) {
                 $(".element-v2").each(function () {
                     var $elem = $(">.image", $(this));
-                    $elem.css({"background-image": "url(" + $(">img", $elem).attr("src") + ")"});
+                    $elem.css({ "background-image": "url(" + $(">img", $elem).attr("src") + ")" });
                     $(">img", $elem).hide();
                 });
             }
@@ -1182,7 +1182,7 @@ var Neela;
             if ($(".overflow-image").length) {
                 $(".overflow-image").each(function () {
                     var $elem = $(this);
-                    $elem.css({"background-image": "url(" + $(">img", $elem).attr("src") + ")"});
+                    $elem.css({ "background-image": "url(" + $(">img", $elem).attr("src") + ")" });
                 });
             }
 

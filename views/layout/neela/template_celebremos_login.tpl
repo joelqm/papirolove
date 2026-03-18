@@ -59,7 +59,7 @@
         </header>
         <main class="px-3">
             <!-- <h1 style="font-size: 60px;"><strong>Celebremos Perú</strong></h1> -->
-            <img src="{$_layoutParams.root}views/layout/neela/images/logo-white-2023.png" alt="Celebremos.pe"
+            <img src="{$_layoutParams.root}views/layout/neela/images/logo-white-2023.png" alt="papirolove.pe"
                 class="img_logo_celebremos" />
             <p class="lead" style="font-size: 2rem;">Celebra con nosotros... <br> "Colectivo virtual"</p>
 
