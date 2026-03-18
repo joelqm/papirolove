@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-17 10:14:21
+/* Smarty version 5.5.1, created on 2026-03-18 09:17:25
   from 'file:views/sofiaygabriel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69b96fcd006ec9_24245385',
+  'unifunc' => 'content_69bab3f5e00b67_33317768',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
     array (
       0 => 'views/sofiaygabriel/components/hero.tpl',
-      1 => 1773760456,
+      1 => 1773760672,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69b96fcd006ec9_24245385 (\Smarty\Template $_smarty_tpl) {
+function content_69bab3f5e00b67_33317768 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><style>
     #player {
@@ -172,7 +172,6 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
 
         <!-- Columna izquierda -->
         <div class="col-left">
-
             <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/sofiaygabriel/imgs/logo_02.webp" alt="logo" class="logo">
 
@@ -215,13 +214,9 @@ views/sofiaygabriel/sound/song.mp3"></audio>
             <button class="button button-calendar">
                 AGREGAR A CALENDARIO
             </button>
-
         </div>
-
     </div>
-
 </div>
-
 
 <div class="navigation">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">

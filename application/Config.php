@@ -1,10 +1,10 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-setlocale(LC_TIME,"es_PE");
+setlocale(LC_TIME, "es_PE");
 date_default_timezone_set("America/Lima");
 
 $host = $_SERVER["HTTP_HOST"];
-define('HOST',$host);
+define('HOST', $host);
 
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'next-theme');
@@ -12,7 +12,7 @@ define('DEFAULT_LAYOUT_CONSTRUCTION', 'construction-theme');
 define('DEFAULT_LAYOUT_CONTENT', 'neela');
 //define('DEFAULT_LAYOUT_ASSETS', 'assets');
 
-define('IMAGE_LOGO','logo_florever.png');
+define('IMAGE_LOGO', 'logo_florever.png');
 define('IMAGE_LOGO_INT', 'logo_florever_interior.png');
 define('FAVICON', 'florever-peru-icono.ico');
 define('APP_NAME', 'PAPIRO');
@@ -20,11 +20,11 @@ define('APP_SLOGAN', 'PAPIRO');
 define('APP_COMPANY', 'www.papirolove.pe');
 define('APP_EMP', '1');
 
-define('BASE_URL', 'http://'. $host.'/papirolove/');
+define('BASE_URL', 'http://' . $host . '/papirolove/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'viverco_coedem');
+define('DB_NAME', 'viverco_papiro');
 define('DB_CHAR', 'utf8');
 
 define('FB_PIXEL_ID', '1544012860146677');

@@ -74,6 +74,10 @@ class sofiaygabrielController extends Controller
 
 
 
+
+
+
+
 		
 $cartArray = json_decode($data, true); // The 'true' makes it an associative array
 
@@ -248,11 +252,7 @@ $cartArray = json_decode($data, true); // The 'true' makes it an associative arr
 		}
 		else {
 			$this->redireccionar('/sofiaygabriel');
-
 		}
-
-	// exit;
-	// 
 
 	}
 

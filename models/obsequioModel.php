@@ -17,18 +17,18 @@ class obsequioModel extends Model
 
 
     public function obtenerObsequiosPareja($parejaId, $categoriaId = 0)
-{
+    {
 
 
-    $where = "";
-    $params = [':parejaId' => $parejaId];
+        $where = "";
+        $params = [':parejaId' => $parejaId];
 
-    if ($categoriaId != 0) {
-        $where .= " AND tc.categoria_id = :categoriaId";
-        $params[':categoriaId'] = $categoriaId;
-    }
+        if ($categoriaId != 0) {
+            $where .= " AND tc.categoria_id = :categoriaId";
+            $params[':categoriaId'] = $categoriaId;
+        }
 
-    $sql = "
+        $sql = "
         SELECT
             top.obsequio_pareja_id as id,
             o.nombre as nombreObsequio,
@@ -54,15 +54,16 @@ class obsequioModel extends Model
             top.obsequio_pareja_id
     ";
 
-    try {
-        $stmt = $this->_db->prepare($sql);
-        $stmt->execute($params);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        error_log("Error al obtener obsequios de la pareja: " . $e->getMessage());
-        return false;
+        try {
+            $stmt = $this->_db->prepare($sql);
+            $stmt->execute($params);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e) {
+            error_log("Error al obtener obsequios de la pareja: " . $e->getMessage());
+            return false;
+        }
     }
-}
 
     public function obtenerObsequiosParejaCategoria()
     {
@@ -78,7 +79,8 @@ class obsequioModel extends Model
 
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e) {
             // Manejo de errores
             error_log("Error al obtener categorías de obsequio: " . $e->getMessage());
             return false;
@@ -100,22 +102,24 @@ class obsequioModel extends Model
                     tm.m_codigo = toe.mensaje_id 
                 WHERE toe.activo = 1 
                 AND tm.m_id = :id";
-    
+
         try {
             $stmt = $this->_db->prepare($sql);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
-    
+
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
-        } catch (PDOException $e) {
+        }
+        catch (PDOException $e) {
             // Manejo de errores
             error_log("Error al obtener obsequios recibidos: " . $e->getMessage());
             return false;
         }
     }
-    
-    public function guardarObsequio($mensajeId, $obsequios) {
+
+    public function guardarObsequio($mensajeId, $obsequios)
+    {
         try {
             $this->_db->beginTransaction();
 
@@ -132,13 +136,15 @@ class obsequioModel extends Model
 
             $this->_db->commit();
             return true;
-        } catch (Exception $e) {
+        }
+        catch (Exception $e) {
             $this->_db->rollBack();
             return false;
         }
     }
 
-    public function save($mensajeId, $obsequioCantidad, $obsequioPrecio, $subtotal, $obsequioId) {
+    public function save($mensajeId, $obsequioCantidad, $obsequioPrecio, $subtotal, $obsequioId)
+    {
         try {
             $this->_db->beginTransaction();
 
@@ -153,7 +159,8 @@ class obsequioModel extends Model
 
             $this->_db->commit();
             return true;
-        } catch (Exception $e) {
+        }
+        catch (Exception $e) {
             $this->_db->rollBack();
             return false;
         }
