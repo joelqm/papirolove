@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-15 23:39:29
+/* Smarty version 5.5.1, created on 2026-03-18 11:48:57
   from 'file:views/sofiaygabriel/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69b789810393a0_24475687',
+  'unifunc' => 'content_69bad77953f126_05071092',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8fb935fe331814c82a45e3da970316e3933834e6' => 
     array (
       0 => 'views/sofiaygabriel/components/gifts.tpl',
-      1 => 1773635963,
+      1 => 1773850757,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69b789810393a0_24475687 (\Smarty\Template $_smarty_tpl) {
+function content_69bad77953f126_05071092 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -42,9 +42,9 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
 
         <!-- <p class="gift-couple-name">Sofia y Gabriel</p> -->
 
-        <img style="margin:25px 0px;" class="history-logo" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/sofiaygabriel/imgs/logo_02.webp"
-            alt="logo">
+        <img style="margin:25px 0px;" class="history-logo"
+            src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/sofiaygabriel/imgs/logo_02.webp" alt="logo">
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -68,8 +68,8 @@ views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
             <aside class="sidebar">
                 <button class="category-button primary" data-id="0">TODAS LAS CATEGORÍAS</button>
                 <button class="category-button" data-id="1">LUNA DE MIEL</button>
-                <!-- <button class="category-button" data-id="2">MOBILIARIO & DECORACION</button>
-                <button class="category-button" data-id="4">TECNOLOGIA</button> -->
+                <button class="category-button" data-id="2">MOBILIARIO & DECORACION</button>
+                <button class="category-button" data-id="4">TECNOLOGIA</button>
                 <button class="category-button" data-id="5">REGALO LIBRE</button>
             </aside>
 

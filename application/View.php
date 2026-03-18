@@ -298,4 +298,68 @@ class View extends Smarty
 
 
 
+    public function render_template_bodas_clean($vista, $item = false)
+    {
+
+        $this->template_dir = ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_BODAS . DS;
+        $this->config_dir = ROOT . 'views' . DS . 'layout' . DS . DEFAULT_LAYOUT_BODAS . DS . 'configs' . DS;
+        $this->cache_dir = ROOT . 'tmp' . 'cache' . DS . 'cache' . DS;
+        $this->compile_dir = ROOT . 'tmp' . DS . 'template' . DS;
+
+        $js = array();
+        if (count($this->_js)) {
+            $js = $this->_js;
+        }
+
+        if (HOST == 'localhost') {
+            $host2 = BASE_URL;
+        }
+        else {
+            $host2 = 'https://' . HOST . '/';
+        }
+
+        $_params = array(
+            'rutacentral' => BASE_URL . 'views/',
+            'ruta_css' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_BODAS . '/css/',
+            'ruta' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_BODAS . '/',
+            'ruta_img' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_BODAS . '/img/',
+            'ruta_js' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_BODAS . '/js/',
+            'ruta_plugin' => BASE_URL . 'views/layout/' . DEFAULT_LAYOUT_BODAS . '/css/plugins/',
+            'js' => $js,
+            'item' => $item,
+            'root' => BASE_URL,
+            'host' => HOST,
+            'host2' => $host2,
+            'filever' => rand(),
+            'anio' => date("Y"),
+            'configs' => array(
+                'favicon' => FAVICON,
+                'app_name' => APP_NAME,
+                'app_slogan' => APP_SLOGAN,
+                'app_company' => APP_COMPANY,
+                'correo' => $_SESSION['correo'],
+                'nomlar' => $_SESSION['nomlar'],
+                'nomcor' => $_SESSION['nomcor'],
+                'rol' => $_SESSION['rol'],
+                'est' => $_SESSION['est'],
+                'codigo' => $_SESSION['codigo'],
+                'img' => $_SESSION['usuario_img']
+            )
+        );
+
+        if (is_readable($this->_rutas['view'] . $vista . '.tpl')) {
+            $this->assign('_contenido', $this->_rutas['view'] . $vista . '.tpl');
+        }
+        else {
+            throw new Exception('Error de vista');
+        }
+
+        $this->assign('_acl', $this->_acl);
+        $this->assign('_layoutParams', $_params);
+        $this->display('template_bodas_clean.tpl');
+
+    }
+
+
+
 }
