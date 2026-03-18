@@ -62,22 +62,6 @@ class sofiaygabrielController extends Controller
 		$messageId = $this->getTexto('messageId');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		
 $cartArray = json_decode($data, true); // The 'true' makes it an associative array
 
@@ -243,17 +227,13 @@ $cartArray = json_decode($data, true); // The 'true' makes it an associative arr
 
 	public function lista($codigo)
 	{
-
 		if ($codigo === "pdcgb") {
-
 			$this->_view->setJs(array('scriptLista'));
 			$this->_view->render_template_bodas_clean('indexLista');
-
 		}
 		else {
 			$this->redireccionar('/sofiaygabriel');
 		}
-
 	}
 
 	public function mostrarListaRegistros()
