@@ -18,8 +18,8 @@
 
         <!-- <p class="gift-couple-name">Sofia y Gabriel</p> -->
 
-        <img style="margin:25px 0px;" class="history-logo" src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo_02.webp"
-            alt="logo">
+        <img style="margin:25px 0px;" class="history-logo"
+            src="{$_layoutParams.root}views/sofiaygabriel/imgs/logo_02.webp" alt="logo">
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -41,8 +41,8 @@
             <aside class="sidebar">
                 <button class="category-button primary" data-id="0">TODAS LAS CATEGORÍAS</button>
                 <button class="category-button" data-id="1">LUNA DE MIEL</button>
-                <!-- <button class="category-button" data-id="2">MOBILIARIO & DECORACION</button>
-                <button class="category-button" data-id="4">TECNOLOGIA</button> -->
+                <button class="category-button" data-id="2">MOBILIARIO & DECORACION</button>
+                <button class="category-button" data-id="4">TECNOLOGIA</button>
                 <button class="category-button" data-id="5">REGALO LIBRE</button>
             </aside>
 
