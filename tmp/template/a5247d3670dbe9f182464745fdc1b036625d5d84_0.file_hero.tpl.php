@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-18 09:17:25
+/* Smarty version 5.5.1, created on 2026-03-24 09:06:26
   from 'file:views/sofiaygabriel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69bab3f5e00b67_33317768',
+  'unifunc' => 'content_69c29a62141e71_18569391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
     array (
       0 => 'views/sofiaygabriel/components/hero.tpl',
-      1 => 1773760672,
+      1 => 1774360832,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69bab3f5e00b67_33317768 (\Smarty\Template $_smarty_tpl) {
+function content_69c29a62141e71_18569391 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><style>
     #player {
@@ -134,6 +134,8 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
             width: 80%;
             /* Logo más pequeño en móviles */
             max-width: 300px;
+            top: -125px;
+            position: relative;
         }
 
         .count {
@@ -151,6 +153,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
             display: none;
             /* Se activaría con tu JS del hamburguesa */
         }
+
     }
 
     /* Ajuste extra para celulares muy pequeños */

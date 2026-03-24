@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-15 23:34:41
+/* Smarty version 5.5.1, created on 2026-03-24 09:06:26
   from 'file:views/sofiaygabriel/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69b78861349141_77792547',
+  'unifunc' => 'content_69c29a62152270_96506092',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e23de242a5ed44b96383a230aa97843e8995dbf1' => 
     array (
       0 => 'views/sofiaygabriel/components/attendance.tpl',
-      1 => 1773635675,
+      1 => 1774361182,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69b78861349141_77792547 (\Smarty\Template $_smarty_tpl) {
+function content_69c29a62152270_96506092 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><div class="attendace-container" id="dresscode">
 
@@ -90,13 +90,13 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
             <div class="text-body">
                 <span style="display: inline;">ETIQUETA ESTRICTA</span><br><br>
                 <span class="texto-content">Mujeres<br>
-                Vestido largo de color entero, sin flores
-                ni diseños. Les pedimos evitar los
-                colores rojo y blanco.
-                <br><br>
-                Hombres<br>
-                Les pedimos no utilizar trajes en tonos
-                gris ni beige.</span>
+                    Vestido largo de color entero, sin flores
+                    ni diseños. Les pedimos evitar los
+                    colores rojo y blanco.
+                    <br><br>
+                    Hombres<br>
+                    Les pedimos no utilizar trajes en tonos
+                    gris ni beige.</span>
             </div>
         </div>
 
@@ -116,13 +116,14 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
     <div id="attendance"></div>
 
 
-    <div class="gift-section" data-aos="fade-up" >
+    <div class="gift-section" data-aos="fade-up">
         <!-- <h5>CONFIRMA</h5> -->
         <h1 class="gift-title-small">Confirma tu Asistencia</h1>
         <!-- <p class="big">tu Asistencia</p> -->
 
         <p class="text">
-            Agradeceremos confirmar tu asistencia hasta el
+            AGRADECEREMOS CONFIRMAR TU
+            ASISTENCIA HASTA EL
         </p>
 
         <h3 class="date">13.04.2026</h3>

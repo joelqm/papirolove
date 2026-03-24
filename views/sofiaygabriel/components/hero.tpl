@@ -110,6 +110,8 @@
             width: 80%;
             /* Logo más pequeño en móviles */
             max-width: 300px;
+            top: -125px;
+            position: relative;
         }
 
         .count {
@@ -127,6 +129,7 @@
             display: none;
             /* Se activaría con tu JS del hamburguesa */
         }
+
     }
 
     /* Ajuste extra para celulares muy pequeños */

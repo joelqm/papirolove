@@ -66,13 +66,13 @@
             <div class="text-body">
                 <span style="display: inline;">ETIQUETA ESTRICTA</span><br><br>
                 <span class="texto-content">Mujeres<br>
-                Vestido largo de color entero, sin flores
-                ni diseños. Les pedimos evitar los
-                colores rojo y blanco.
-                <br><br>
-                Hombres<br>
-                Les pedimos no utilizar trajes en tonos
-                gris ni beige.</span>
+                    Vestido largo de color entero, sin flores
+                    ni diseños. Les pedimos evitar los
+                    colores rojo y blanco.
+                    <br><br>
+                    Hombres<br>
+                    Les pedimos no utilizar trajes en tonos
+                    gris ni beige.</span>
             </div>
         </div>
 
@@ -92,13 +92,14 @@
     <div id="attendance"></div>
 
 
-    <div class="gift-section" data-aos="fade-up" >
+    <div class="gift-section" data-aos="fade-up">
         <!-- <h5>CONFIRMA</h5> -->
         <h1 class="gift-title-small">Confirma tu Asistencia</h1>
         <!-- <p class="big">tu Asistencia</p> -->
 
         <p class="text">
-            Agradeceremos confirmar tu asistencia hasta el
+            AGRADECEREMOS CONFIRMAR TU
+            ASISTENCIA HASTA EL
         </p>
 
         <h3 class="date">13.04.2026</h3>
