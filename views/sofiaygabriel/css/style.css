@@ -720,7 +720,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     text-align: center;
 }
 
@@ -2026,14 +2026,11 @@ footer {
     .history-section,
     .invitation-card {
         /*background-image: url('../imgs/background-flowers-3.webp');*/
-
         /*background-size: contain;*/
         background-position: center center;
         background-repeat: repeat;
-        justify-content: center;
-
-        background-attachment: scroll !important;
-
+        background-attachment: fixed;
+        /*background-attachment: scroll !important;*/
     }
 
     .container-history {
