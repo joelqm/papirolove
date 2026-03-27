@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-24 09:06:26
+/* Smarty version 5.5.1, created on 2026-03-27 09:00:58
   from 'file:views/sofiaygabriel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69c29a62141e71_18569391',
+  'unifunc' => 'content_69c68d9a0869c7_40542528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5247d3670dbe9f182464745fdc1b036625d5d84' => 
     array (
       0 => 'views/sofiaygabriel/components/hero.tpl',
-      1 => 1774360832,
+      1 => 1774620056,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69c29a62141e71_18569391 (\Smarty\Template $_smarty_tpl) {
+function content_69c68d9a0869c7_40542528 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><style>
     #player {
@@ -181,11 +181,7 @@ views/sofiaygabriel/imgs/logo_02.webp" alt="logo" class="logo">
             <audio id="myAudio" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/sofiaygabriel/sound/song.mp3"></audio>
 
-            <button id="player" class="button-2">
-                <i class="fa-solid fa-play play-icon"></i>
-                <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
-                NUESTRA CANCIÓN
-            </button>
+
 
         </div>
 
@@ -215,7 +211,19 @@ views/sofiaygabriel/sound/song.mp3"></audio>
             </div>
 
             <button class="button button-calendar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                </svg>
                 AGREGAR A CALENDARIO
+            </button>
+
+            <button id="player" class="button-2">
+                <i class="fa-solid fa-play play-icon"></i>
+                <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
+                NUESTRA CANCIÓN
             </button>
         </div>
     </div>

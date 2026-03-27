@@ -630,11 +630,12 @@ body {
 
 .text-body .texto-content {
     font-family: "AbhayaLibre";
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     color: #474641;
     text-align: center;
     max-width: 500px;
+    font-weight: bold;
 }
 
 
@@ -2202,7 +2203,7 @@ footer {
     .invitation-card,
     .container-dresscode,
     .attendace-container {
-        background-attachment: scroll !important;
+        /* background-attachment: scroll !important; */
         /* Desactiva el modo fijo que causa el error */
         background-position: center center;
         background-size: cover;
