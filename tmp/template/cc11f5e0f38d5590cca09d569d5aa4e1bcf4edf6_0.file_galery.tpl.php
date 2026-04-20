@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-30 09:57:55
+/* Smarty version 5.5.1, created on 2026-04-20 10:19:59
   from 'file:views/sofiaygabriel/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69ca8f738b6853_26480592',
+  'unifunc' => 'content_69e6441f7d45e3_17483279',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc11f5e0f38d5590cca09d569d5aa4e1bcf4edf6' => 
     array (
       0 => 'views/sofiaygabriel/components/galery.tpl',
-      1 => 1774882673,
+      1 => 1774883379,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69ca8f738b6853_26480592 (\Smarty\Template $_smarty_tpl) {
+function content_69e6441f7d45e3_17483279 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><section class="galery" id="galery">
     <div class="container-galery">
@@ -40,7 +40,6 @@ views/sofiaygabriel/imgs/preboda-5.webp" alt="Imagen 3">
             <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/sofiaygabriel/imgs/preboda-4.webp" alt="Imagen 3">
             </div>
-
         </div>
     </div>
 </section>

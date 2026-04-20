@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-03-24 09:06:26
+/* Smarty version 5.5.1, created on 2026-04-20 10:19:59
   from 'file:views/sofiaygabriel/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69c29a62152270_96506092',
+  'unifunc' => 'content_69e6441f88fc43_44063114',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e23de242a5ed44b96383a230aa97843e8995dbf1' => 
     array (
       0 => 'views/sofiaygabriel/components/attendance.tpl',
-      1 => 1774361182,
+      1 => 1774883554,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69c29a62152270_96506092 (\Smarty\Template $_smarty_tpl) {
+function content_69e6441f88fc43_44063114 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\components';
 ?><div class="attendace-container" id="dresscode">
 
@@ -85,7 +85,6 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\sofiaygabriel\\comp
                     </g>
                 </svg>
             </div>
-
 
             <div class="text-body">
                 <span style="display: inline;">ETIQUETA ESTRICTA</span><br><br>

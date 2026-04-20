@@ -11,7 +11,6 @@
             </div>
             <div class="item"><img src="{$_layoutParams.root}views/sofiaygabriel/imgs/preboda-4.webp" alt="Imagen 3">
             </div>
-
         </div>
     </div>
 </section>
