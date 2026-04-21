@@ -1,4 +1,28 @@
-<div class="container-page">
+<?php
+/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+  from 'file:views/zelmaysamuel/components/hero.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_69e7b9e4cbcdc6_97245401',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4589d8761cfb8e8c9b321c734ebce776c0d6de8d' => 
+    array (
+      0 => 'views/zelmaysamuel/components/hero.tpl',
+      1 => 1776794063,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_69e7b9e4cbcdc6_97245401 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
+?><div class="container-page">
     <div class="background" data-aos="fade-up"></div>
 
     <div class="header" style="justify-items: center;">
@@ -24,7 +48,8 @@
                 </svg>
                 <p>AGREGAR A CALENDARIO</p>
             </button>
-            <audio id="myAudio" src="{$_layoutParams.root}views/zelmaysamuel/sound/song.mp3"></audio>
+            <audio id="myAudio" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/sound/song.mp3"></audio>
             <!-- <button id="player" class="button-2 button-hovers">
                 <i class="fa-solid fa-play play-icon"></i>
                 <i class="fa-solid fa-pause pause-icon" style="display: none;"></i>
@@ -62,4 +87,5 @@
         <a data-id="attendance" class="nav-item">ASISTENCIA</a>
         <a data-id="gifts" class="nav-item">REGALOS</a>
     </div>
-</div>
+</div><?php }
+}

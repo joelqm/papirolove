@@ -17,15 +17,15 @@
     </div>
 
     <div class="rm-container">
-        <img class="logo-history" src="{$_layoutParams.root}views/gabrielayeric/imgs/logo-history.webp" alt="">
+        <img class="logo-history" src="{$_layoutParams.root}views/zelmaysamuel/imgs/logo-history.webp" alt="">
     </div>
 
     <div class="divider"></div>
 
     <div class="history-images" data-aos="fade-up">
-        <img src="{$_layoutParams.root}views/gabrielayeric/imgs/preboda-2.webp" alt="Foto de la pareja"
+        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-2.webp" alt="Foto de la pareja"
             class="circular-image">
-        <img src="{$_layoutParams.root}views/gabrielayeric/imgs/preboda-3.webp" alt="Pareja en las vías del tren"
+        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-3.webp" alt="Pareja en las vías del tren"
             class="rectangular-image">
     </div>
 </div>

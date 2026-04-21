@@ -1,13 +1,41 @@
-<div class="galery-full-wrapper" style="background: #636C53;">
+<?php
+/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+  from 'file:views/zelmaysamuel/components/galery.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_69e7b9e4cd9fb1_04166425',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '83d63ae2ee3e8304eb47faa5db3961f3f76d3e3f' => 
+    array (
+      0 => 'views/zelmaysamuel/components/galery.tpl',
+      1 => 1776794049,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_69e7b9e4cd9fb1_04166425 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
+?><div class="galery-full-wrapper" style="background: #636C53;">
     <div class="container-galery" id="galery">
         <div class="owl-carousel owl-theme">
-            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-1.webp" alt="Imagen 1">
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-1.webp" alt="Imagen 1">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-2.webp" alt="Imagen 2">
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-2.webp" alt="Imagen 2">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-3.webp" alt="Imagen 3">
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-3.webp" alt="Imagen 3">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-4.webp" alt="Imagen 4">
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-4.webp" alt="Imagen 4">
             </div>
         </div>
     </div>
@@ -58,7 +86,8 @@
     }
 </style>
 
-<script>
+<?php echo '<script'; ?>
+>
     $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
             items: 3, // Número de elementos visibles
@@ -81,4 +110,6 @@
             }
         });
     });
-</script>
+<?php echo '</script'; ?>
+><?php }
+}
