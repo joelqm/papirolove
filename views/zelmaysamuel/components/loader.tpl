@@ -5,8 +5,6 @@
     <button class="loader-button">IR A LA PÁGINA</button>
   </div>
 
-
-
   <div class="sponsors">
     <!-- <img class="sponsor-logo" src="{$_layoutParams.root}/src/celebremos-logo.webp" alt="celebremos peru"> -->
     <img class="sponsor-logo" src="{$_layoutParams.root}/src/papiro-logo.webp" alt="papiro peru">
@@ -16,7 +14,6 @@
 
 {literal}
 <script>
-
 
   $(document).ready(function () {
     $(".loader-button").click(function (e) {

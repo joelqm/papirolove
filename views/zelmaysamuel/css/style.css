@@ -19,7 +19,7 @@
 @font-face {
     font-family: 'Bacalisties';
     src: url("../fonts/Bacalisties.woff2") format("woff2"),
-         url("../fonts/Bacalisties.ttf") format("truetype");
+        url("../fonts/Bacalisties.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -32,7 +32,7 @@
 @font-face {
     font-family: 'Forum';
     src: url("../fonts/Forum-Regular.woff2") format("woff2"),
-         url("../fonts/Forum-Regular.ttf") format("truetype");
+        url("../fonts/Forum-Regular.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -45,24 +45,43 @@
 @font-face {
     font-family: 'AbhayaLibre';
     src: url("../fonts/AbhayaLibre-Regular.woff2") format("woff2"),
-         url("../fonts/AbhayaLibre-Regular.ttf") format("truetype");
+        url("../fonts/AbhayaLibre-Regular.ttf") format("truetype");
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'BaskervilleBT';    
+    font-family: 'BaskervilleBT';
     src: url("../fonts/BaskervilleBT.woff2") format("woff2"),
-         url("../fonts/BaskervilleBT.ttf") format("truetype");
+        url("../fonts/BaskervilleBT.ttf") format("truetype");
     font-display: swap;
-    
+
 }
 
 @font-face {
     font-family: 'Alana';
     src: url("../fonts/Alana.woff2") format("woff2"),
-         url("../fonts/Alana.otf") format("opentype");
+        url("../fonts/Alana.otf") format("opentype");
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Marginal';
+    src: url("../fonts/new/marginal.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Qafinte';
+    src: url("../fonts/new/qafinte.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Switzerland';
+    src: url("../fonts/new/switzerland.ttf");
+    font-display: swap;
+}
+
 
 /*solicita tu web*/
 
@@ -107,6 +126,10 @@
     width: 100%;
 
     background: var(--primary-ligth-color);
+    background-image: url('../imgs/fondo_loader.webp');
+    background-size: 100% 100%;
+    background-position: center;
+
 
     height: 100vh;
     /* Altura total de la ventana */
@@ -221,7 +244,7 @@
 
 :root {
     --primary-ligth-color: #67725b;
-    --primary-color: #67725b;
+    --primary-color: #D76E2B;
     --background-color: #f7f2e7;
     --secondary-color: #555;
     --footer-color: #8ba273;
@@ -283,9 +306,12 @@ body {
     padding-top: 80px;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column; /* Alinea los elementos uno debajo del otro */
-    align-items: center;    /* Centra horizontalmente todo el contenido */
-    text-align: center;     /* Asegura que el texto interno también se centre */
+    flex-direction: column;
+    /* Alinea los elementos uno debajo del otro */
+    align-items: center;
+    /* Centra horizontalmente todo el contenido */
+    text-align: center;
+    /* Asegura que el texto interno también se centre */
     width: 100%;
 }
 
@@ -330,6 +356,19 @@ body {
 .font-Alana {
     font-family: 'Alana';
 }
+
+.font-marginal {
+    font-family: 'Marginal';
+}
+
+.font-qafinte {
+    font-family: 'Qafinte';
+}
+
+.font-switzerland {
+    font-family: 'Switzerland';
+}
+
 
 
 
@@ -380,7 +419,7 @@ body {
     justify-content: center;
     gap: 40px;
     margin-bottom: 30px;
-    
+
 }
 
 .countdown-item {
@@ -388,7 +427,7 @@ body {
     flex-direction: column;
     align-items: center;
     color: white;
-
+    font-family: "Qafinte";
 }
 
 
