@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-22 10:17:11
+/* Smarty version 5.5.1, created on 2026-04-27 08:27:21
   from 'file:views/zelmaysamuel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e8e677cff9d4_21203160',
+  'unifunc' => 'content_69ef64395cf400_11309028',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4589d8761cfb8e8c9b321c734ebce776c0d6de8d' => 
     array (
       0 => 'views/zelmaysamuel/components/hero.tpl',
-      1 => 1776871030,
+      1 => 1776871073,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69e8e677cff9d4_21203160 (\Smarty\Template $_smarty_tpl) {
+function content_69ef64395cf400_11309028 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><style>
     .couple-name {
@@ -111,6 +111,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
 
 
         <div class="buttons">
+
             <button class="button button-hover button-calendar font-qafinte">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -120,20 +121,17 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
                 </svg>
                 <p>AGREGAR A CALENDARIO</p>
             </button>
+
             <audio id="myAudio" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/zelmaysamuel/sound/song.mp3"></audio>
+
             <!-- <button id="player" class="button-2 button-hovers">
                 <i class="fa-solid fa-play play-icon"></i>
                 <i class="fa-solid fa-pause pause-icon" style="display: none;"></i>
                 <p>NUESTRA CANCIÓN</p>
             </button> -->
         </div>
-
-
-
     </div>
-
-
 </div>
 <div class="navigation">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">
