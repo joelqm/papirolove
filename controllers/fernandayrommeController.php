@@ -29,7 +29,7 @@ class fernandayrommeController extends Controller
 		$this->_dt = $this->loadModel('dataTable');
 
 		// TODO: actualizar al ID real (tbl_sede) de Fernanda y Rommel
-		$this->_key = 1;
+		$this->_key = 2;
 	}
 
 	public function index()
