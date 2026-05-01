@@ -196,7 +196,7 @@ class fernandayrommeController extends Controller
 			$this->_view->render_template_bodas_clean('indexLista');
 		}
 		else {
-			$this->redireccionar('/fernandayrommel');
+			$this->redireccionar('/fernandayromme');
 		}
 	}
 
