@@ -40,21 +40,21 @@ class fernandayrommeController extends Controller
 
 		$this->_view->assign('pk', $ps_k['defpk']);
 		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
-		#$this->_view->renderContent('index');
-		$this->_view->renderContent('proximamente');
-	}
-
-
-	public function test()
-	{
-		$this->_view->assign('titulo', 'Fernanda y Rommel');
-
-		$ps_k = $this->_fernandayrommel->keysEmp($this->_key);
-
-		$this->_view->assign('pk', $ps_k['defpk']);
-		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
 		$this->_view->renderContent('index');
+		#$this->_view->renderContent('proximamente');
 	}
+
+
+	// public function test()
+	// {
+	// 	$this->_view->assign('titulo', 'Fernanda y Rommel');
+
+	// 	$ps_k = $this->_fernandayrommel->keysEmp($this->_key);
+
+	// 	$this->_view->assign('pk', $ps_k['defpk']);
+	// 	$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
+	// 	$this->_view->renderContent('index');
+	// }
 
 
 	public function guardarMensaje()
