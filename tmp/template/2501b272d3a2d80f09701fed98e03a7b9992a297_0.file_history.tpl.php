@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 12:22:32
+/* Smarty version 5.5.1, created on 2026-05-01 17:55:22
   from 'file:views/fernandayromme/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f4e158693124_88786394',
+  'unifunc' => 'content_69f52f5a691bd7_71694966',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2501b272d3a2d80f09701fed98e03a7b9992a297' => 
     array (
       0 => 'views/fernandayromme/components/history.tpl',
-      1 => 1777656087,
+      1 => 1777676121,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f4e158693124_88786394 (\Smarty\Template $_smarty_tpl) {
+function content_69f52f5a691bd7_71694966 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?>
 <style>
@@ -180,7 +180,7 @@ views/fernandayromme/sound/song.mp3" preload="auto"></audio>
                 </div>
             </div>
 
-
+            <br><br>
 
         </div>
 

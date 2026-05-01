@@ -55,10 +55,10 @@
         #attendance .attendance-decor { width: 240px; }
     }
     @media (max-width: 768px) {
-        #attendance .attendance-decor { width: 170px; opacity: 0.45; }
+        #attendance .attendance-decor { width: 0px; opacity: 0px; }
     }
     @media (max-width: 480px) {
-        #attendance .attendance-decor { width: 120px; opacity: 0.3; }
+        #attendance .attendance-decor { width: 0px; opacity: 0px; }
     }
 </style>
 {/literal}

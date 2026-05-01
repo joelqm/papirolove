@@ -241,7 +241,7 @@ body {
 }
 
 .text-elige-un-obsequio {
-    font-family: "AbhayaLibre";
+    font-family: "newAthenaUnicode";
     color: white;
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -2033,7 +2033,7 @@ footer {
     }
 
     .wedding-date {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .count {
@@ -2041,11 +2041,11 @@ footer {
     }
 
     .countdown-number {
-        font-size: 1.5rem;
+        font-size: 2.5rem !important;
     }
 
     .countdown-label {
-        font-size: 1rem;
+        font-size: 1.2rem !important;
     }
 
     .buttons {
@@ -2212,7 +2212,7 @@ footer {
             url(../imgs/background-flowers.webp);
         */
 
-        background: url(../imgs/background-flowers.webp);
+        background: none;
         background-size: cover;
         background-position: center center;
         background-repeat: repeat;
@@ -2244,7 +2244,7 @@ footer {
     }
 
     .history-title-small-3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
 }

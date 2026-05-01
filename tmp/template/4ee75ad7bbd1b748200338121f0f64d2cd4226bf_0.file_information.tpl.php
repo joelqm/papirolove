@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 16:51:40
+/* Smarty version 5.5.1, created on 2026-05-01 17:58:56
   from 'file:views/fernandayromme/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f5206c640bb6_22154779',
+  'unifunc' => 'content_69f53030e291b9_82992788',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ee75ad7bbd1b748200338121f0f64d2cd4226bf' => 
     array (
       0 => 'views/fernandayromme/components/information.tpl',
-      1 => 1777671911,
+      1 => 1777676290,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f5206c640bb6_22154779 (\Smarty\Template $_smarty_tpl) {
+function content_69f53030e291b9_82992788 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><section class="invitation-card" id="info">
 
@@ -37,9 +37,9 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
 views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="image-anillos" width="200px">
   </center>
 
-  <h1 class="history-title-small-2" style="top: -50px; position: relative;">Ceremonia y Recepción</h1>
+  <h1 class="history-title-small-2" style="color:#747d5b; top: -50px; position: relative;">Ceremonia y Recepción</h1>
 
-  <h1 class="history-title-small-3" style="font-size: 1.8rem;">
+  <h1 class="history-title-small-3">
     Fundo el Rosal
     <br>
     Calle Talara S/N - Cerro Colorado
@@ -54,7 +54,7 @@ views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="im
     <div class="location-card" data-aos="fade-up">
 
       
-      <a target="_blank" href="https://share.google/tOGSCf4eU4tGT2bfW" class="location-button">
+      <a target="_blank" href="https://maps.app.goo.gl/zKBoxQmWDYPyFicF8" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

@@ -12,9 +12,9 @@
     <img src="{$_layoutParams.root}views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="image-anillos" width="200px">
   </center>
 
-  <h1 class="history-title-small-2" style="top: -50px; position: relative;">Ceremonia y Recepción</h1>
+  <h1 class="history-title-small-2" style="color:#747d5b; top: -50px; position: relative;">Ceremonia y Recepción</h1>
 
-  <h1 class="history-title-small-3" style="font-size: 1.8rem;">
+  <h1 class="history-title-small-3">
     Fundo el Rosal
     <br>
     Calle Talara S/N - Cerro Colorado
@@ -29,7 +29,7 @@
     <div class="location-card" data-aos="fade-up">
 
       
-      <a target="_blank" href="https://share.google/tOGSCf4eU4tGT2bfW" class="location-button">
+      <a target="_blank" href="https://maps.app.goo.gl/zKBoxQmWDYPyFicF8" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

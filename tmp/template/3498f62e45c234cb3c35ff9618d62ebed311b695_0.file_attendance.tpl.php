@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 16:38:37
+/* Smarty version 5.5.1, created on 2026-05-01 18:00:19
   from 'file:views/fernandayromme/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f51d5d231624_96838522',
+  'unifunc' => 'content_69f530834ac0f2_23268268',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3498f62e45c234cb3c35ff9618d62ebed311b695' => 
     array (
       0 => 'views/fernandayromme/components/attendance.tpl',
-      1 => 1777671465,
+      1 => 1777676416,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f51d5d231624_96838522 (\Smarty\Template $_smarty_tpl) {
+function content_69f530834ac0f2_23268268 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><div class="attendace-container" id="attendance" style="position: relative; overflow: hidden;">
 
@@ -80,10 +80,10 @@ views/fernandayromme/imgs/img_001.png"
         #attendance .attendance-decor { width: 240px; }
     }
     @media (max-width: 768px) {
-        #attendance .attendance-decor { width: 170px; opacity: 0.45; }
+        #attendance .attendance-decor { width: 0px; opacity: 0px; }
     }
     @media (max-width: 480px) {
-        #attendance .attendance-decor { width: 120px; opacity: 0.3; }
+        #attendance .attendance-decor { width: 0px; opacity: 0px; }
     }
 </style>
 <?php }

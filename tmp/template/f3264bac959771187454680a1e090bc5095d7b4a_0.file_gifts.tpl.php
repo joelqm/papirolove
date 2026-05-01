@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 16:41:54
+/* Smarty version 5.5.1, created on 2026-05-01 18:03:15
   from 'file:views/fernandayromme/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f51e228a1858_86758708',
+  'unifunc' => 'content_69f53133bc31a2_72381471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f3264bac959771187454680a1e090bc5095d7b4a' => 
     array (
       0 => 'views/fernandayromme/components/gifts.tpl',
-      1 => 1777671712,
+      1 => 1777676594,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f51e228a1858_86758708 (\Smarty\Template $_smarty_tpl) {
+function content_69f53133bc31a2_72381471 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -45,6 +45,14 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
                 ROMMEL
             </h1>
         </div>
+
+
+        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+            <b>Cuenta BCP:</b>
+            21598509055090 <br>
+            <b>CCI:</b> 00221519850905509027
+        </p>
+
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">

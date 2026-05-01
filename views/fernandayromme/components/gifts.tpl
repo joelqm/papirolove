@@ -22,6 +22,14 @@
             </h1>
         </div>
 
+
+        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+            <b>Cuenta BCP:</b>
+            21598509055090 <br>
+            <b>CCI:</b> 00221519850905509027
+        </p>
+
+
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
                 <p>Powered by</p>
