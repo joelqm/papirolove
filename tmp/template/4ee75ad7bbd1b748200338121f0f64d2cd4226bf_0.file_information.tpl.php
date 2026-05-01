@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-30 14:52:32
+/* Smarty version 5.5.1, created on 2026-05-01 15:15:50
   from 'file:views/fernandayromme/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f3b3001ef7b7_62091421',
+  'unifunc' => 'content_69f509f6d57ce8_01071104',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ee75ad7bbd1b748200338121f0f64d2cd4226bf' => 
     array (
       0 => 'views/fernandayromme/components/information.tpl',
-      1 => 1777578750,
+      1 => 1777666548,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f3b3001ef7b7_62091421 (\Smarty\Template $_smarty_tpl) {
+function content_69f509f6d57ce8_01071104 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><section class="invitation-card" id="info">
 
@@ -30,16 +30,16 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
 
   <h1 class="history-title-small-3">El amor nos encontró y decidimos quedarnos.</h1>
 
-  <h1 class="history-title-small-3">Hoy sellamos nuestra promesa eterna,<br>y será un honor que nos acompañen en este<br>día tan significativo para nosotros.</h1>
+  <h1 class="history-title-small-3">Hoy sellamos nuestra promesa eterna, y será un honor<br> que nos acompañen en este día tan <br>significativo para nosotros.</h1>
 
-  <center>
+  <center class="m-0 p-0">
     <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="image-anillos" width="200px">
   </center>
 
-  <h1 class="history-title-small-2">Ceremonia y Recepción</h1>
+  <h1 class="history-title-small-2" style="top: -50px; position: relative;">Ceremonia y Recepción</h1>
 
-  <h1 class="history-title-small-3">
+  <h1 class="history-title-small-3" style="font-size: 1.8rem;">
     Fundo el Rosal
     <br>
     Calle Talara S/N - Cerro Colorado
@@ -48,19 +48,6 @@ views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="im
     <br>
     2:30 pm
   </h1>
-
-
-
-
-  <h1 class="history-title-small-3">
-    QUEREMOS COMPARTIR CONTIGO LA FELICIDAD DE CELEBRAR <br> NUESTRO MATRIMONIO
-  </h1>
-
-
-  <div class="history-title aos-init aos-animate" data-aos="fade-up" style="margin-bottom: -4rem;">
-    <p class="history-title-big">Celebremos</p>
-
-  </div>
 
 
   <div class="locations">
@@ -77,7 +64,7 @@ views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="im
             </path>
           </g>
         </svg>
-        UBICACIÓN</a>
+        Ubicación</a>
     </div>
 
     

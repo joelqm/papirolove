@@ -13,7 +13,9 @@
 {include file="views/fernandayromme/components/galery.tpl"}
 
 
-
+{include file="views/fernandayromme/components/dresscode.tpl"}
 {include file="views/fernandayromme/components/attendance.tpl"}
+
 {include file="views/fernandayromme/components/gifts.tpl"}
+
 {include file="views/fernandayromme/components/button-whatsapp.tpl"}

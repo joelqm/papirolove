@@ -6,15 +6,15 @@
 
   <h1 class="history-title-small-3">El amor nos encontró y decidimos quedarnos.</h1>
 
-  <h1 class="history-title-small-3">Hoy sellamos nuestra promesa eterna,<br>y será un honor que nos acompañen en este<br>día tan significativo para nosotros.</h1>
+  <h1 class="history-title-small-3">Hoy sellamos nuestra promesa eterna, y será un honor<br> que nos acompañen en este día tan <br>significativo para nosotros.</h1>
 
-  <center>
+  <center class="m-0 p-0">
     <img src="{$_layoutParams.root}views/fernandayromme/imgs/imagen_anillos.webp" alt="Imagen de anillos" class="image-anillos" width="200px">
   </center>
 
-  <h1 class="history-title-small-2">Ceremonia y Recepción</h1>
+  <h1 class="history-title-small-2" style="top: -50px; position: relative;">Ceremonia y Recepción</h1>
 
-  <h1 class="history-title-small-3">
+  <h1 class="history-title-small-3" style="font-size: 1.8rem;">
     Fundo el Rosal
     <br>
     Calle Talara S/N - Cerro Colorado
@@ -23,19 +23,6 @@
     <br>
     2:30 pm
   </h1>
-
-
-
-
-  <h1 class="history-title-small-3">
-    QUEREMOS COMPARTIR CONTIGO LA FELICIDAD DE CELEBRAR <br> NUESTRO MATRIMONIO
-  </h1>
-
-
-  <div class="history-title aos-init aos-animate" data-aos="fade-up" style="margin-bottom: -4rem;">
-    <p class="history-title-big">Celebremos</p>
-
-  </div>
 
 
   <div class="locations">
@@ -52,7 +39,7 @@
             </path>
           </g>
         </svg>
-        UBICACIÓN</a>
+        Ubicación</a>
     </div>
 
     

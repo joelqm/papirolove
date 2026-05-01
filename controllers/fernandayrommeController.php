@@ -40,7 +40,8 @@ class fernandayrommeController extends Controller
 
 		$this->_view->assign('pk', $ps_k['defpk']);
 		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
-		$this->_view->renderContent('index');
+		#$this->_view->renderContent('index');
+		$this->_view->renderContent('proximamente');
 	}
 
 
