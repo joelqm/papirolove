@@ -2069,7 +2069,7 @@ footer {
 
     .history-section,
     .invitation-card {
-        /*background-image: url('../imgs/background-flowers-3.webp');*/
+        background-image: none;
         /*background-size: contain;*/
         background-position: center center;
         background-repeat: repeat;
@@ -2240,12 +2240,23 @@ footer {
     }
 
     .gift-section .text {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .history-title-small-3 {
         font-size: 1.5rem;
     }
+
+
+    .text-body .texto-content {
+        font-family: "font-NewAthenaUnicode";
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        color: white;
+        text-align: center;
+        max-width: 500px;
+    }
+    
 
 }
 
