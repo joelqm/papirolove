@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 16:14:44
+/* Smarty version 5.5.1, created on 2026-05-01 16:18:05
   from 'file:C:\laragon\www\papirolove\views\fernandayromme\proximamente.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f517c4489b94_07039899',
+  'unifunc' => 'content_69f5188d5c8ca0_25264171',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '755bc6ac58783b377592f4fb36f88e807d9f13c9' => 
     array (
       0 => 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\proximamente.tpl',
-      1 => 1777670082,
+      1 => 1777670235,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f517c4489b94_07039899 (\Smarty\Template $_smarty_tpl) {
+function content_69f5188d5c8ca0_25264171 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme';
 ?><style>
     @font-face {
@@ -158,7 +158,7 @@ views/fernandayromme/fonts/newyork_personal_use.otf") format("opentype");
 
         <img class="coming-soon-logo"
              src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/fernandayromme/imgs/logo.webp"
+views/fernandayromme/imgs/logo.png"
              alt="Fernanda y Rommel">
 
         <h1 class="coming-soon-names">Fernanda &amp; Rommel</h1>

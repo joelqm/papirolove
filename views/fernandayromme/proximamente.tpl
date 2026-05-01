@@ -130,7 +130,7 @@
     <div class="coming-soon-card">
 
         <img class="coming-soon-logo"
-             src="{$_layoutParams.root}views/fernandayromme/imgs/logo.webp"
+             src="{$_layoutParams.root}views/fernandayromme/imgs/logo.png"
              alt="Fernanda y Rommel">
 
         <h1 class="coming-soon-names">Fernanda &amp; Rommel</h1>
