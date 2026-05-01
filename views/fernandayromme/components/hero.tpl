@@ -147,10 +147,16 @@
 
     <div class="background" data-aos="fade-up"></div>
 
+    <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+        <img class="|" src="{$_layoutParams.root}views/fernandayromme/imgs/logo.webp" alt="logo" style="width: 75px;margin-top:30px">
+    </div>
+
     <div class="header" style="justify-items: center;">
-        <h1 class="couple-name font-Alana" data-aos="fade-up">Fernanda <span style="margin-left: 1rem;">y</span>
-            Rommel</h1>
-        <p class="wedding-date font-Baskervville" data-aos="fade-up">30 - 05 - 26</p>
+        <h1 class="couple-name font-Alana" data-aos="fade-up">FERNANDA <span style="margin-left: 1rem;">&</span>
+            ROMMEL</h1>
+            <p class="wedding-date font-Baskervville" data-aos="fade-up">
+            30<span style="display:inline-block; margin: 0 0.4em; font-size: 1.2em; line-height: 1; vertical-align: middle;">·</span>05<span style="display:inline-block; margin: 0 0.4em; font-size: 1.2em; line-height: 1; vertical-align: middle;">·</span>26
+            </p>
 
     </div>
 
@@ -179,14 +185,10 @@
                     <line x1="16" y1="2" x2="16" y2="6"></line>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                 </svg>
-                AGREGAR A CALENDARIO
+                Agrega a tu calendario
             </button>
 
-            <button id="player" class="button-2">
-                <i class="fa-solid fa-play play-icon"></i>
-                <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
-                NUESTRA CANCIÓN
-            </button>
+            
         </div>
     </div>
 </div>

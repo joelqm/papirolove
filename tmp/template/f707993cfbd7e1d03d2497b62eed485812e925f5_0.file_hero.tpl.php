@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-30 14:38:29
+/* Smarty version 5.5.1, created on 2026-05-01 11:52:50
   from 'file:views/fernandayromme/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f3afb51cefa2_17765499',
+  'unifunc' => 'content_69f4da6240a849_91755625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f707993cfbd7e1d03d2497b62eed485812e925f5' => 
     array (
       0 => 'views/fernandayromme/components/hero.tpl',
-      1 => 1777577888,
+      1 => 1777653646,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f3afb51cefa2_17765499 (\Smarty\Template $_smarty_tpl) {
+function content_69f4da6240a849_91755625 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><style>
     #player {
@@ -171,10 +171,17 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
 
     <div class="background" data-aos="fade-up"></div>
 
+    <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+        <img class="|" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/fernandayromme/imgs/logo.webp" alt="logo" style="width: 75px;margin-top:30px">
+    </div>
+
     <div class="header" style="justify-items: center;">
-        <h1 class="couple-name font-Alana" data-aos="fade-up">Fernanda <span style="margin-left: 1rem;">y</span>
-            Rommel</h1>
-        <p class="wedding-date font-Baskervville" data-aos="fade-up">30 - 05 - 26</p>
+        <h1 class="couple-name font-Alana" data-aos="fade-up">FERNANDA <span style="margin-left: 1rem;">&</span>
+            ROMMEL</h1>
+            <p class="wedding-date font-Baskervville" data-aos="fade-up">
+            30<span style="display:inline-block; margin: 0 0.4em; font-size: 1.2em; line-height: 1; vertical-align: middle;">·</span>05<span style="display:inline-block; margin: 0 0.4em; font-size: 1.2em; line-height: 1; vertical-align: middle;">·</span>26
+            </p>
 
     </div>
 
@@ -205,14 +212,10 @@ views/fernandayromme/sound/song.mp3"></audio>
                     <line x1="16" y1="2" x2="16" y2="6"></line>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                 </svg>
-                AGREGAR A CALENDARIO
+                Agrega a tu calendario
             </button>
 
-            <button id="player" class="button-2">
-                <i class="fa-solid fa-play play-icon"></i>
-                <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
-                NUESTRA CANCIÓN
-            </button>
+            
         </div>
     </div>
 </div>

@@ -82,6 +82,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'NewAthenaUnicode';
+    src: url("../fonts/new_athena_unicode.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'newyork_personal';
+    src: url("../fonts/newyork_personal_use.otf") format("opentype");
+    font-display: swap;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
@@ -149,6 +161,16 @@ body {
     font-family: 'KarenaSerif';
 }
 
+.font-NewAthenaUnicode {
+    font-family: 'NewAthenaUnicode';
+}
+
+.font-newyork_personal {
+    font-family: 'newyork_personal';
+}
+
+
+
 /* -------------------------------------------------------------------------- */
 
 /* ===== 5. LOADER Y ANIMACIÓN DE INICIO ===== */
@@ -186,6 +208,7 @@ body {
     display: inline-block;
     animation: palpite 1.2s infinite;
 }
+
 
 .loader-logo {
     animation: palpite 1.2s infinite;
@@ -316,8 +339,8 @@ body {
 }
 
 .couple-name {
-    font-family: 'Bellisia', 'Abramo', serif;
-    font-size: 4.8rem;
+    font-family: 'newyork_personal';
+    font-size: 3.3rem;
     margin: 0;
     color: white !important;
     text-align: center;
@@ -334,10 +357,10 @@ body {
 .wedding-date {
     max-width: 80%;
     margin: 0 auto;
-    font-family: "Baskervville-Regular";
+    font-family: "font-NewAthenaUnicode";
     font-weight: normal;
     color: white;
-    font-size: 22px;
+    font-size: 2rem;
     letter-spacing: 3px;
     margin-top: 26px;
 }
@@ -358,13 +381,13 @@ body {
 }
 
 .countdown-number {
-    font-family: "Baskervville-Regular";
+    font-family: "font-NewAthenaUnicode";
     font-size: 28px;
     font-weight: normal;
 }
 
 .countdown-label {
-    font-family: "Baskervville-Regular";
+    font-family: "font-NewAthenaUnicode";
     font-weight: normal;
     font-size: 24px;
     letter-spacing: 1px;
@@ -380,7 +403,7 @@ body {
 }
 
 .button {
-    font-family: "Baskervville-Regular";
+    font-family: "font-NewAthenaUnicode";
     font-size: 2rem;
     background-color: white;
     color: #333;
@@ -396,9 +419,11 @@ body {
 }
 
 .button-calendar {
-    background-color: white;
-    color: var(--accent);
+    font-family: "NewAthenaUnicode";
+    background-color: #6e705c;
+    color: white;
     margin-top: 220px;
+    margin-bottom: 20px;
 }
 
 .button svg {
@@ -620,7 +645,7 @@ body {
 }
 
 .text-body {
-    font-family: "Baskervville-Regular";
+    font-family: "font-NewAthenaUnicode";
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -630,7 +655,7 @@ body {
 }
 
 .text-body .texto-content {
-    font-family: "AbhayaLibre";
+    font-family: "font-NewAthenaUnicode";
     font-size: 1rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -641,7 +666,7 @@ body {
 
 
 .text-body-2 {
-    font-family: "Forum";
+    font-family: "font-NewAthenaUnicode";
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -685,24 +710,31 @@ body {
 
 .circular-image {
     position: relative;
-    width: 200px;
-    height: 300px;
-    border-radius: 50%;
+    top: -80px;
+    width: 260px;
+    height: 340px;
     object-fit: cover;
     margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transform: rotate(7deg);
+    transform-origin: center center;
+    border: 8px solid #6e705c;
+    left: 80px;
 }
 
 .rectangular-image {
     position: absolute;
-    bottom: -40%;
-    left: 10%;
-    z-index: 1000;
-    width: 250px;
-    height: 250px;
+    bottom: -55%;
+    left: 8%;
+    z-index: 1;
+    width: 260px;
+    height: 340px;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: rotate(-7deg);
+    transform-origin: center center;
+    border: 8px solid #6e705c;
 }
 
 /* -------------------------------------------------------------------------- */

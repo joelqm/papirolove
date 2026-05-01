@@ -1,7 +1,121 @@
+
+<style>
+    .song-card {
+        background: #b8bfa6;
+        border-radius: 28px;
+        padding: 5px;
+        width: 100%;
+        max-width: 420px;
+        margin: 0rem auto;
+    }
+    .song-card-inner {
+      background: #f9f4ef;
+      border-radius: 22px;
+      padding: 22px 26px 18px;
+    }
+    .song-card-title {
+      font-family: "Baskervville-Regular", serif;
+      color: #646B5A;
+      font-size: 1.4rem;
+      text-align: center;
+      margin: 0 0 16px;
+      font-weight: bold;
+    }
+    .song-card-progress {
+      position: relative;
+      height: 2px;
+      background: #c9cdb8;
+      border-radius: 2px;
+      margin: 0 4px 22px;
+    }
+    .song-card-progress-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 55%;
+      background: #646B5A;
+      border-radius: 2px;
+    }
+    .song-card-progress-thumb {
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      background: #646B5A;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .song-card-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .song-card-icon {
+      color: #646B5A;
+      font-size: 1.1rem;
+    }
+    .song-card-play {
+      background: #646B5A;
+      color: #fff;
+      border: none;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+    .song-card-play:hover {
+      transform: scale(1.05);
+    }
+    .song-card-play .play-icon {
+      margin-left: 3px;
+    }
+  </style>
+
 <section class="history-section">
+
+    <audio id="myAudio" src="{$_layoutParams.root}views/fernandayromme/sound/song.mp3" preload="auto"></audio>
+
+    <div class="song-card" data-aos="fade-up">
+        <div class="song-card-inner">
+            <p class="song-card-title font-NewAthenaUnicode">Nuestra canción</p>
+            <div class="song-card-progress">
+            <span class="song-card-progress-fill"></span>
+            <span class="song-card-progress-thumb"></span>
+            </div>
+            <div class="song-card-controls">
+            <i class="fa-solid fa-bars song-card-icon"></i>
+            <i class="fa-solid fa-backward-step song-card-icon"></i>
+            <button id="player" class="song-card-play" aria-label="Reproducir">
+                <i class="fa-solid fa-play play-icon"></i>
+                <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
+            </button>
+            <i class="fa-solid fa-forward-step song-card-icon"></i>
+            <i class="fa-regular fa-heart song-card-icon"></i>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- <button id="player" class="button-2">
+        <i class="fa-solid fa-play play-icon"></i>
+        <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
+        NUESTRA CANCIÓN
+    </button> -->
 
     <!-- <div class="flower-left"></div> -->
     <div class="container-history" id="new-history">
+
+        
 
         <div class="section">
             <div class="history-title" data-aos="fade-up">
@@ -22,6 +136,27 @@
                 Porque amarnos no fue casualidad… fue destino.
                 Hoy, con la bendición de Dios, frente a todos, daremos el paso más importante: prometernos seguir caminando juntos, seguir creciendo, seguir soñando… pero ahora como esposos.
             </p>
+
+            <div style="display: flex; flex-direction: column; align-items: flex-end; width: 100%;">
+                <p class="wedding-date" style="margin: 26px 0 0 auto;">Faltan</p>
+                <div class="count" id="countdown" style="justify-content: flex-end;">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="counter1">00</span>
+                        <span class="countdown-label">DÍAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="counter2">00</span>
+                        <span class="countdown-label">HORAS</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="counter3">00</span>
+                        <span class="countdown-label">MINUTOS</span>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
 
         <!-- <div class="rm-container">
@@ -43,23 +178,6 @@
     </div>
 
 
-    <p class="wedding-date">Faltan</p>
-
-    <div class="count" id="countdown">
-        <div class="countdown-item">
-            <span class="countdown-number" id="counter1">00</span>
-            <span class="countdown-label">DÍAS</span>
-        </div>
-
-        <div class="countdown-item">
-            <span class="countdown-number" id="counter2">00</span>
-            <span class="countdown-label">HORAS</span>
-        </div>
-
-        <div class="countdown-item">
-            <span class="countdown-number" id="counter3">00</span>
-            <span class="countdown-label">MINUTOS</span>
-        </div>
-    </div>
+    
     
 </section>
