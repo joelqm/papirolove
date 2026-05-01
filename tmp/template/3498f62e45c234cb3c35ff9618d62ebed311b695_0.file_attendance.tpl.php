@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 16:07:49
+/* Smarty version 5.5.1, created on 2026-05-01 16:38:37
   from 'file:views/fernandayromme/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f51625259ec5_02286889',
+  'unifunc' => 'content_69f51d5d231624_96838522',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3498f62e45c234cb3c35ff9618d62ebed311b695' => 
     array (
       0 => 'views/fernandayromme/components/attendance.tpl',
-      1 => 1777669566,
+      1 => 1777671465,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f51625259ec5_02286889 (\Smarty\Template $_smarty_tpl) {
+function content_69f51d5d231624_96838522 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
-?><div class="attendace-container" id="attendance">
+?><div class="attendace-container" id="attendance" style="position: relative; overflow: hidden;">
 
     <div class="gift-section" data-aos="fade-up">
         <!-- <h5>CONFIRMA</h5> -->
@@ -30,13 +30,12 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
         <!-- <p class="big">tu Asistencia</p> -->
 
         <p class="text">
-            AGRADECEREMOS CONFIRMAR TU
-            ASISTENCIA HASTA EL
+            Agradeceremos confirmar tu asistencia hasta el
         </p>
 
-        <h3 class="date">13.04.2026</h3>
+        <h3 class="date">15.05.26</h3>
 
-        <a href="https://wa.link/r01p5j" class="button-3">
+        <a href="https://wa.link/p6d4yp" class="button-3">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="button-3-svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -48,15 +47,44 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
                         d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z">
                     </path>
                 </g>
-            </svg> CONFIRMA AQUÍ
+            </svg> Confirmar asistencia
         </a>
-
-        <p class="text">
-            Invitación exclusiva para adultos
-        </p>
-
 
     </div>
 
-</div><?php }
+    <img class="attendance-decor"
+         src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/fernandayromme/imgs/img_001.png"
+         alt=""
+         aria-hidden="true">
+
+</div>
+
+
+<style>
+    #attendance .attendance-decor {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 340px;
+        height: auto;
+        pointer-events: none;
+        z-index: 0;
+    }
+    #attendance .gift-section {
+        position: relative;
+        z-index: 1;
+    }
+    @media (max-width: 992px) {
+        #attendance .attendance-decor { width: 240px; }
+    }
+    @media (max-width: 768px) {
+        #attendance .attendance-decor { width: 170px; opacity: 0.45; }
+    }
+    @media (max-width: 480px) {
+        #attendance .attendance-decor { width: 120px; opacity: 0.3; }
+    }
+</style>
+<?php }
 }

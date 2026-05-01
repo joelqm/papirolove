@@ -2,7 +2,7 @@
 
   <div class="invitation-pattern"></div>
 
-  <h1 class="history-title-small-2">¡Eres mi hoy y todos mis mañanas!</h1>
+  <h1 class="history-title-small-2" style="color:#747d5b;">¡Eres mi hoy y todos mis mañanas!</h1>
 
   <h1 class="history-title-small-3">El amor nos encontró y decidimos quedarnos.</h1>
 

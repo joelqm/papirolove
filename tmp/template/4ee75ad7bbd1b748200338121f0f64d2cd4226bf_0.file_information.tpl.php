@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-01 15:15:50
+/* Smarty version 5.5.1, created on 2026-05-01 16:51:40
   from 'file:views/fernandayromme/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f509f6d57ce8_01071104',
+  'unifunc' => 'content_69f5206c640bb6_22154779',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4ee75ad7bbd1b748200338121f0f64d2cd4226bf' => 
     array (
       0 => 'views/fernandayromme/components/information.tpl',
-      1 => 1777666548,
+      1 => 1777671911,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f509f6d57ce8_01071104 (\Smarty\Template $_smarty_tpl) {
+function content_69f5206c640bb6_22154779 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><section class="invitation-card" id="info">
 
   <div class="invitation-pattern"></div>
 
-  <h1 class="history-title-small-2">¡Eres mi hoy y todos mis mañanas!</h1>
+  <h1 class="history-title-small-2" style="color:#747d5b;">¡Eres mi hoy y todos mis mañanas!</h1>
 
   <h1 class="history-title-small-3">El amor nos encontró y decidimos quedarnos.</h1>
 

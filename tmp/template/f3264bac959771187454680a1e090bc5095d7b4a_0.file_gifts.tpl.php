@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-30 14:16:47
+/* Smarty version 5.5.1, created on 2026-05-01 16:41:54
   from 'file:views/fernandayromme/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69f3aa9f99b3d7_43458235',
+  'unifunc' => 'content_69f51e228a1858_86758708',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f3264bac959771187454680a1e090bc5095d7b4a' => 
     array (
       0 => 'views/fernandayromme/components/gifts.tpl',
-      1 => 1777576605,
+      1 => 1777671712,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69f3aa9f99b3d7_43458235 (\Smarty\Template $_smarty_tpl) {
+function content_69f51e228a1858_86758708 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -37,14 +37,14 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\com
 
         <br>
         <p class="text-elige-un-obsequio">
-            ELIGE UN OBSEQUIO PARA
+            Elige un obsequio para
         </p>
 
-        <!-- <p class="gift-couple-name">Fernanda y Rommel</p> -->
-
-        <img style="margin:25px 0px;" class="history-logo"
-            src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/fernandayromme/imgs/logo_02.webp" alt="logo">
+        <div class="header" style="justify-items: center;">
+            <h1 class="couple-name font-Alana" data-aos="fade-up">FERNANDA <span style="margin-left: 1rem;">&</span>
+                ROMMEL
+            </h1>
+        </div>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">

@@ -13,13 +13,14 @@
 
         <br>
         <p class="text-elige-un-obsequio">
-            ELIGE UN OBSEQUIO PARA
+            Elige un obsequio para
         </p>
 
-        <!-- <p class="gift-couple-name">Fernanda y Rommel</p> -->
-
-        <img style="margin:25px 0px;" class="history-logo"
-            src="{$_layoutParams.root}views/fernandayromme/imgs/logo_02.webp" alt="logo">
+        <div class="header" style="justify-items: center;">
+            <h1 class="couple-name font-Alana" data-aos="fade-up">FERNANDA <span style="margin-left: 1rem;">&</span>
+                ROMMEL
+            </h1>
+        </div>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">

@@ -1,13 +1,41 @@
+<?php
+/* Smarty version 5.5.1, created on 2026-05-01 16:49:04
+  from 'file:C:\laragon\www\papirolove\views\fernandayromme\indexObsequio.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_69f51fd0399525_08573598',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3f25ac2fb508379f97f379a385f1e88475f58fe4' => 
+    array (
+      0 => 'C:\\laragon\\www\\papirolove\\views\\fernandayromme\\indexObsequio.tpl',
+      1 => 1777672141,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_69f51fd0399525_08573598 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme';
+$_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
+?>
 <style>
     body {
         visibility: hidden;
     }
 </style>
-<script>
+<?php echo '<script'; ?>
+>
     window.addEventListener('load', function () {
         document.body.style.visibility = 'visible';
     });
-</script>
+<?php echo '</script'; ?>
+>
 
 <section id="section_form_mensaje" class="section-bg-color" style="display: none;">
     <!-- Notification Bar -->
@@ -36,8 +64,10 @@
                 <div class="message-container">
                     <h3 class="section-title">Tu mensaje para los novios</h3>
                     <div class="message-content">
-                        <span class="sender-name">{$nombre}</span>
-                        <p class="message-text">"{$mensaje}"</p>
+                        <span class="sender-name"><?php echo $_smarty_tpl->getValue('nombre');?>
+</span>
+                        <p class="message-text">"<?php echo $_smarty_tpl->getValue('mensaje');?>
+"</p>
                     </div>
                 </div>
 
@@ -68,7 +98,8 @@
                             banco.</span>
                     </div>
 
-                    <div class="kr-embedded" kr-popin kr-form-token="{$crearToken}">
+                    <div class="kr-embedded" kr-popin kr-form-token="<?php echo $_smarty_tpl->getValue('crearToken');?>
+">
                         <!-- payment form fields -->
                         <div class="kr-pan"></div>
                         <div class="kr-expiry"></div>
@@ -101,11 +132,27 @@
 
 <!-- IZIPAY -->
 <link rel="stylesheet" href="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic-reset.css">
-<script src="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic.js"></script>
-<script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-    kr-public-key="{$pk}" kr-post-url-success="{$_layoutParams.root}fernandayromme/estado/{$codigo}">
-    </script>
-{block name="styles"}
+<?php echo '<script'; ?>
+ src="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+    kr-public-key="<?php echo $_smarty_tpl->getValue('pk');?>
+" kr-post-url-success="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+fernandayromme/estado/<?php echo $_smarty_tpl->getValue('codigo');?>
+">
+    <?php echo '</script'; ?>
+>
+<?php 
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_84605454569f51fd038fa20_66093824', "styles");
+}
+/* {block "styles"} */
+class Block_84605454569f51fd038fa20_66093824 extends \Smarty\Runtime\Block
+{
+public function callBlock(\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\fernandayromme';
+?>
+
 <style>
     /* General Styles */
 
@@ -674,4 +721,8 @@
         font-weight: normal !important;
     }
 </style>
-{/block}
+<?php
+}
+}
+/* {/block "styles"} */
+}

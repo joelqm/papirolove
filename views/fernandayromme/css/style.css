@@ -98,7 +98,7 @@
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
 :root {
-    --accent: #3b5355;
+    --accent: #6e705c;
     --background-color: #f9f4ef;
     --button-color: #333;
     --button-hover-scale: 110%;
@@ -106,7 +106,7 @@
     --primary-color: #646B5A;
     --primary-ligth-color: #f9f4ef;
     --secondary-color: #555;
-    --text-color: #3b5355;
+    --text-color: #6e705c;
     --transition-duration: 0.3s;
     --text-color-light: #fff;
 }
@@ -992,7 +992,7 @@ body {
 }
 
 .dresscode-img {
-    fill: #3b5355;
+    fill: #6e705c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1181,6 +1181,7 @@ body {
     gap: 0.4rem;
     cursor: pointer;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .button-3-svg {
@@ -1200,7 +1201,7 @@ body {
 }
 
 .gift-container {
-    background: #3b5355;
+    background: #6e705c;
     color: white;
     padding: 3rem 0rem;
     display: flex;
@@ -1251,7 +1252,7 @@ body {
     margin-bottom: 0rem;
     font-size: 3.2rem;
     font-weight: normal;
-    color: #474641 !important;
+    color: #6e705c !important;
 }
 
 .gift-title-big {
@@ -1273,10 +1274,11 @@ body {
 .gift-section .text {
     width: 18rem;
     padding-top: 0.8rem;
-    font-family: "AbhayaLibre";
-    color: #474641;
+    font-family: "NewAthenaUnicode";
+    color: #6e705c;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: bold;
 }
 
 .gift-section .date {
@@ -1284,7 +1286,7 @@ body {
     font-size: 3.5rem;
     padding: 1rem 0rem;
     font-family: "Forum";
-    color: #474641;
+    color: #6e705c;
     text-align: center;
     font-weight: normal;
 }
@@ -2087,7 +2089,7 @@ footer {
 
     .history-images {
         margin-top: 1rem;
-        height: 500px;
+        height: 720px;
     }
 
     .divider {
@@ -2103,13 +2105,25 @@ footer {
     }
 
     .circular-image {
-        top: -10%;
-        right: -20%;
+        top: -25%;
+        left: 0;
+        right: auto;
     }
 
     .rectangular-image {
-        bottom: -9%;
-        right: -25%;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) rotate(-7deg);
+    }
+
+    #new-history .wedding-date {
+        margin: 26px auto 0 !important;
+    }
+
+    #new-history .count {
+        justify-content: center !important;
+        align-self: center !important;
     }
 
     .gift-title-small {
