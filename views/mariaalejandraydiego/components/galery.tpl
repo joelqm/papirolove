@@ -31,6 +31,20 @@
         pointer-events: none;
     }
 
+    @media (max-width: 992px) {
+
+        .flower-top-left {
+                width: 283px;
+    height: 350px;
+        }
+
+        .flower-bottom-right {
+            width: 214px;
+    height: 288px;
+        }
+
+    }
+
 </style>
 
 <section class="galery" id="galery">

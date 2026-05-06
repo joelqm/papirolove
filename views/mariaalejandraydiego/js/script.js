@@ -207,3 +207,27 @@ function crearEventoEnGoogleCalendar() {
   window.open(url, "_blank");
 
 }
+
+// ===== PARALLAX para decoraciones Dress Code + Asistencia =====
+$(window).on('scroll', function () {
+  var wrapper = $('.dresscode-attendance-wrapper');
+  if (wrapper.length === 0) return;
+
+  var wrapperTop = wrapper.offset().top;
+  var wrapperHeight = wrapper.outerHeight();
+  var scrollTop = $(window).scrollTop();
+  var windowHeight = $(window).height();
+
+  // Solo animar cuando el wrapper está visible en pantalla
+  if (scrollTop + windowHeight > wrapperTop && scrollTop < wrapperTop + wrapperHeight) {
+    // Calcular cuánto se ha scrolleado dentro del wrapper (0 a 1)
+    var progress = (scrollTop + windowHeight - wrapperTop) / (wrapperHeight + windowHeight);
+    
+    // Mover las flores con un offset sutil (parallax)
+    var offsetTopLeft = -30 + (progress * 60); // se mueve de -30px a +30px
+    var offsetBottomRight = 30 - (progress * 60); // se mueve de +30px a -30px
+
+    $('.decor-corner-top-left').css('transform', 'translateY(' + offsetTopLeft + 'px)');
+    $('.decor-corner-bottom-right').css('transform', 'translateY(' + offsetBottomRight + 'px)');
+  }
+});

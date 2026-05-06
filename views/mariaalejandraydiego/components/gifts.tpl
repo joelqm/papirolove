@@ -16,9 +16,17 @@
             Elige un obsequio para
         </p>
 
+        <style>
+            @media (max-width: 480px) {
+                #couple-name-1 {
+                    top: -10px;
+                }
+            }
+        </style>
+
         <div class="header" style="justify-items: center;">
-            <h1 class="couple-name font-photograph_signature" data-aos="fade-up">Maria Alejandra <span style="margin-left: 1rem;">&</span>
-                Diego
+            <h1 class="couple-name font-photograph_signature" data-aos="fade-up" id="couple-name-1">
+            Maria Alejandra <span style="margin-left: 1rem;">&</span> Diego
             </h1>
         </div>
 

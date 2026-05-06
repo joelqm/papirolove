@@ -12,16 +12,15 @@
         <h3 class="date">15.05.26</h3>
 
         <a href="https://wa.link/p6d4yp" class="button-3">
-           
             Confirma Aquí
         </a>
 
     </div>
 
-    <img class="attendance-decor"
+    <!-- <img class="attendance-decor"
          src="{$_layoutParams.root}views/mariaalejandraydiego/imgs/img_001.png"
          alt=""
-         aria-hidden="true">
+         aria-hidden="true"> -->
 
 </div>
 

@@ -85,37 +85,70 @@
 
     .decor-left {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 35%; /* Ajusta el ancho según el tamaño de tu imagen */
+      bottom: -2px;
+      left: -2px;
+      width: 40%;
       height: 100%;
-      /* Asegúrate de poner la ruta correcta a tu imagen de flores */
       background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flores-izquierda.png'); 
-      background-size: contain; /* Evita que la imagen se deforme */
-      background-position: bottom left; /* Pega la imagen abajo y   lizquierda */
+      background-size: contain;
+      background-position: bottom left;
       background-repeat: no-repeat;
-      z-index: 1; /* Se queda al fondo */
-      pointer-events: none; /* Evita que la imagen bloquee clicaccidentale  en el texto */
+      z-index: 1;
+      pointer-events: none;
     }
     .decor-right {
         position: absolute;
-        bottom: -5%; /* Puedes jugar con valores negativos para "sacar" un poco la imagen */
-        right: 0;
+        bottom: -2px;
+        right: -2px;
         width: 45%; 
-        height: 80%;
-        /* Asegúrate de poner la ruta correcta a tu imagen de fondo/acuarela */
+        height: 100%;
         background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flores-derecha.png'); 
         background-size: contain;
         background-position: bottom right;
         background-repeat: no-repeat;
-        z-index: 1; /* Se queda al fondo */
-        opacity: 0.6; /* Le baja un poco la opacidad para que sea un fondo sutil */
+        z-index: 1;
+        opacity: 0.6;
         pointer-events: none;
     }
 
 
-  </style>
+    @media (max-width: 992px) {
 
+        .song-card {
+            background: #ba8d72;
+            border-radius: 28px;
+            padding: 0px;
+            width: 97%;
+            max-width: 300px;
+            margin: 0rem auto;
+            top: -60px;
+            position: relative;
+        }
+
+        
+        
+    }
+     
+
+    @media (max-width: 480px) {
+
+
+      .countdown-wrapper {
+            top: -100px !important;
+        }
+    }
+
+    /* --- ESTILOS DEL CONTADOR --- */
+    .countdown-wrapper {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      top: -140px;
+      position: relative;
+    }
+
+  </style>
 
 
 <section class="history-section">
@@ -194,17 +227,7 @@
 
         <div class="history-images" data-aos="fade-up">
 
-          <style>
-            /* --- ESTILOS DEL CONTADOR --- */
-            .countdown-wrapper {
-              display: block;
-              flex-direction: column;
-              align-items: center;
-              margin-bottom: 40px;
-              top: -140px;
-              position: relative;
-            }
-          </style>
+          
 
           <!-- Contenedor del contador -->
           <div class="countdown-wrapper">

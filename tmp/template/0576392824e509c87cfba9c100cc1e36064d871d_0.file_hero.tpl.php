@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-05 10:32:36
+/* Smarty version 5.5.1, created on 2026-05-06 16:50:16
   from 'file:views/mariaalejandraydiego/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fa0d94384714_46778997',
+  'unifunc' => 'content_69fbb798566324_29722668',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0576392824e509c87cfba9c100cc1e36064d871d' => 
     array (
       0 => 'views/mariaalejandraydiego/components/hero.tpl',
-      1 => 1777995057,
+      1 => 1778104204,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fa0d94384714_46778997 (\Smarty\Template $_smarty_tpl) {
+function content_69fbb798566324_29722668 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><style>
     #player {
@@ -174,7 +174,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
     <div class="header" style="justify-items: center;">
         <h1 class="couple-name font-photograph_signature" data-aos="fade-up">Maria Alejandra <span style="margin-left: 1rem;">&</span>
             Diego</h1>
-            <p class="wedding-date font-Baskervville" data-aos="fade-up">
+            <p class="wedding-date-2" data-aos="fade-up">
             30
             .
             05

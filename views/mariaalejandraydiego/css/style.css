@@ -362,6 +362,17 @@ body {
     transform: translateY(0);
 }
 
+.wedding-date-2 {
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: "newyork_personal";
+    font-weight: normal;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-top: 26px;
+}
+
 .wedding-date {
     max-width: 80%;
     margin: 0 auto;
@@ -547,20 +558,12 @@ body {
 /* ===== 9. HISTORY SECTION (Nuestra Historia) ===== */
 .history-section {
     background-color: #fff;
-    padding: 80px 20px;
+    padding: 80px 0;
     display: flex;
     position: relative;
     color: #BB8465;
     flex-direction: column;
     gap: 1.4rem;
-    border-radius: 10px;
-    /*
-    background-image: url('../imgs/background-flowers.webp');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    */
     text-align: center;
 }
 
@@ -748,19 +751,12 @@ body {
 /* ===== 10. INVITATION & LOCATIONS SECTION (Información del evento) ===== */
 .invitation-card {
     background-color: #BB8465;
-    padding: 80px 20px;
+    padding: 80px 0;
     display: flex;
     position: relative;
     color: #fff;
     flex-direction: column;
     gap: 1.4rem;
-    border-radius: 10px;
-    /* background-image: url('../imgs/background-flowers.webp'); 
-    background-image: none;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;*/
-    /*background-attachment: fixed;*/
     text-align: center;
 }
 
@@ -2037,10 +2033,18 @@ footer {
     /* Hero Section */
     .couple-name {
         font-size: 2.8rem;
+        position: relative;
+        top: -262px;
     }
 
     .wedding-date {
         font-size: 2rem;
+    }
+
+    .wedding-date-2 {
+        font-size: 2rem;
+        position: relative;
+        top: -262px;
     }
 
     .count {
@@ -2112,16 +2116,21 @@ footer {
     }
 
     .circular-image {
-        top: -25%;
+        width: 224px;
+        height: 287px;
+        top: -35%;
         left: 0;
         right: auto;
     }
 
     .rectangular-image {
-        bottom: 0;
+        width: 218px;
+        height: 303px;
+        bottom: -12px;
         left: 50%;
         right: auto;
         transform: translateX(-50%) rotate(-7deg);
+        top: 430px;
     }
 
     #new-history .wedding-date {
@@ -2259,9 +2268,35 @@ footer {
         font-family: "font-NewAthenaUnicode";
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
-        color: white;
+        color: #BB8465;
         text-align: center;
         max-width: 500px;
+    }
+
+    /* --- Dress Code mobile adjustments --- */
+    .dresscode-container {
+        padding: 40px 15px;
+    }
+
+    .dresscode-content .row {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .dresscode-img {
+        width: 120px !important;
+    }
+
+    .dresscode-content .right-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dresscode-content .right-section iframe {
+        width: 100%;
+        max-width: 345px;
     }
     
 
@@ -2272,11 +2307,84 @@ footer {
 @media (max-width: 1024px) {
 
     .invitation-card,
-    .container-dresscode,
+    .dresscode-container,
     .attendace-container {
         /* background-attachment: scroll !important; */
         /* Desactiva el modo fijo que causa el error */
         background-position: center center;
         background-size: cover;
+    }
+}
+
+/* ===== WRAPPER COMPARTIDO: DRESSCODE + ASISTENCIA ===== */
+/* Contenedor padre que envuelve ambas secciones para compartir decoraciones */
+.dresscode-attendance-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Las secciones hijas quedan por encima de las decoraciones */
+.dresscode-attendance-wrapper .dresscode-container,
+.dresscode-attendance-wrapper .attendace-container {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+}
+
+/* --- DECORACIONES COMPARTIDAS (esquinas del wrapper) --- */
+.decor-corner-top-left {
+    position: fixed; /* fixed para efecto parallax */
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 950px;
+    background-image: url('../imgs/flores-arriba-izq.png');
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.decor-corner-bottom-right {
+    position: fixed; /* fixed para efecto parallax */
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 950px;
+    background-image: url('../imgs/flores-abajo-der.png');
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Cuando el wrapper está visible en pantalla, las flores aparecen */
+.dresscode-attendance-wrapper .decor-corner-top-left,
+.dresscode-attendance-wrapper .decor-corner-bottom-right {
+    position: absolute;
+    opacity: 1;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .decor-corner-top-left { width: 150px; height: 200px; }
+    .decor-corner-bottom-right { width: 150px; height: 150px; }
+}
+
+@media (max-width: 480px) {
+    .decor-corner-top-left { 
+        width: 168px;
+        height: 400px;
+    }
+    .decor-corner-bottom-right { 
+                width: 200px;
+        height: 430px;
     }
 }

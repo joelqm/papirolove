@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 12:37:37
+/* Smarty version 5.5.1, created on 2026-05-06 18:00:36
   from 'file:views/mariaalejandraydiego/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fb7c617531f0_14066762',
+  'unifunc' => 'content_69fbc8141245e8_56948647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83ef451aac7e4bfe6cd943067b277753f73cd130' => 
     array (
       0 => 'views/mariaalejandraydiego/components/history.tpl',
-      1 => 1778088868,
+      1 => 1778108433,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fb7c617531f0_14066762 (\Smarty\Template $_smarty_tpl) {
+function content_69fbc8141245e8_56948647 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?>
 <style>
@@ -109,39 +109,72 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
 
     .decor-left {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 35%; /* Ajusta el ancho según el tamaño de tu imagen */
+      bottom: -2px;
+      left: -2px;
+      width: 40%;
       height: 100%;
-      /* Asegúrate de poner la ruta correcta a tu imagen de flores */
       background-image: url('<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/mariaalejandraydiego/imgs/flores-izquierda.png'); 
-      background-size: contain; /* Evita que la imagen se deforme */
-      background-position: bottom left; /* Pega la imagen abajo y   lizquierda */
+      background-size: contain;
+      background-position: bottom left;
       background-repeat: no-repeat;
-      z-index: 1; /* Se queda al fondo */
-      pointer-events: none; /* Evita que la imagen bloquee clicaccidentale  en el texto */
+      z-index: 1;
+      pointer-events: none;
     }
     .decor-right {
         position: absolute;
-        bottom: -5%; /* Puedes jugar con valores negativos para "sacar" un poco la imagen */
-        right: 0;
+        bottom: -2px;
+        right: -2px;
         width: 45%; 
-        height: 80%;
-        /* Asegúrate de poner la ruta correcta a tu imagen de fondo/acuarela */
+        height: 100%;
         background-image: url('<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/mariaalejandraydiego/imgs/flores-derecha.png'); 
         background-size: contain;
         background-position: bottom right;
         background-repeat: no-repeat;
-        z-index: 1; /* Se queda al fondo */
-        opacity: 0.6; /* Le baja un poco la opacidad para que sea un fondo sutil */
+        z-index: 1;
+        opacity: 0.6;
         pointer-events: none;
     }
 
 
-  </style>
+    @media (max-width: 992px) {
 
+        .song-card {
+            background: #ba8d72;
+            border-radius: 28px;
+            padding: 0px;
+            width: 97%;
+            max-width: 300px;
+            margin: 0rem auto;
+            top: -60px;
+            position: relative;
+        }
+
+        
+        
+    }
+     
+
+    @media (max-width: 480px) {
+
+
+      .countdown-wrapper {
+            top: -100px !important;
+        }
+    }
+
+    /* --- ESTILOS DEL CONTADOR --- */
+    .countdown-wrapper {
+      display: block;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      top: -140px;
+      position: relative;
+    }
+
+  </style>
 
 
 <section class="history-section">
@@ -222,17 +255,7 @@ views/mariaalejandraydiego/imgs/logo.webp" alt="logo">
 
         <div class="history-images" data-aos="fade-up">
 
-          <style>
-            /* --- ESTILOS DEL CONTADOR --- */
-            .countdown-wrapper {
-              display: block;
-              flex-direction: column;
-              align-items: center;
-              margin-bottom: 40px;
-              top: -140px;
-              position: relative;
-            }
-          </style>
+          
 
           <!-- Contenedor del contador -->
           <div class="countdown-wrapper">

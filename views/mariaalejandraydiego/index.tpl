@@ -11,8 +11,13 @@
 {include file="views/mariaalejandraydiego/components/galery.tpl"}
 
 
-{include file="views/mariaalejandraydiego/components/dresscode.tpl"}
-{include file="views/mariaalejandraydiego/components/attendance.tpl"}
+<div class="dresscode-attendance-wrapper">
+    <div class="decor-corner-top-left"></div>
+    <div class="decor-corner-bottom-right"></div>
+
+    {include file="views/mariaalejandraydiego/components/dresscode.tpl"}
+    {include file="views/mariaalejandraydiego/components/attendance.tpl"}
+</div>
 
 {include file="views/mariaalejandraydiego/components/gifts.tpl"}
 

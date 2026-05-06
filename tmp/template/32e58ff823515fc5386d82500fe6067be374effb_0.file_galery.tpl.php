@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 12:45:21
+/* Smarty version 5.5.1, created on 2026-05-06 17:40:24
   from 'file:views/mariaalejandraydiego/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fb7e31064473_30112262',
+  'unifunc' => 'content_69fbc358bd26c2_72347732',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32e58ff823515fc5386d82500fe6067be374effb' => 
     array (
       0 => 'views/mariaalejandraydiego/components/galery.tpl',
-      1 => 1778089519,
+      1 => 1778106189,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fb7e31064473_30112262 (\Smarty\Template $_smarty_tpl) {
+function content_69fbc358bd26c2_72347732 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><style>
 
@@ -55,6 +55,20 @@ views/mariaalejandraydiego/imgs/flor-abajo-der.png'); /* ¡Cambia esto por tu ar
         background-repeat: no-repeat;
         z-index: 1; /* La mantiene en el fondo */
         pointer-events: none;
+    }
+
+    @media (max-width: 992px) {
+
+        .flower-top-left {
+                width: 283px;
+    height: 350px;
+        }
+
+        .flower-bottom-right {
+            width: 214px;
+    height: 288px;
+        }
+
     }
 
 </style>
