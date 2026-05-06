@@ -83,6 +83,35 @@
 
 
 
+    .decor-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 35%; /* Ajusta el ancho según el tamaño de tu imagen */
+      height: 100%;
+      /* Asegúrate de poner la ruta correcta a tu imagen de flores */
+      background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flores-izquierda.png'); 
+      background-size: contain; /* Evita que la imagen se deforme */
+      background-position: bottom left; /* Pega la imagen abajo y   lizquierda */
+      background-repeat: no-repeat;
+      z-index: 1; /* Se queda al fondo */
+      pointer-events: none; /* Evita que la imagen bloquee clicaccidentale  en el texto */
+    }
+    .decor-right {
+        position: absolute;
+        bottom: -5%; /* Puedes jugar con valores negativos para "sacar" un poco la imagen */
+        right: 0;
+        width: 45%; 
+        height: 80%;
+        /* Asegúrate de poner la ruta correcta a tu imagen de fondo/acuarela */
+        background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flores-derecha.png'); 
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        z-index: 1; /* Se queda al fondo */
+        opacity: 0.6; /* Le baja un poco la opacidad para que sea un fondo sutil */
+        pointer-events: none;
+    }
 
 
   </style>
@@ -92,10 +121,9 @@
 <section class="history-section">
 
     
-    <!--
-  <div class="decor-left"></div>
-  <div class="decor-right"></div>
-     -->
+    
+    <div class="decor-left"></div>
+    <div class="decor-right"></div>
 
 
       <!-- <button id="player" class="button-2">

@@ -131,9 +131,9 @@
 
         <img class="coming-soon-logo"
              src="{$_layoutParams.root}views/mariaalejandraydiego/imgs/logo.png"
-             alt="Fernanda y Rommel">
+             alt="Maria Alejandra y Diego">
 
-        <h1 class="coming-soon-names">Fernanda &amp; Rommel</h1>
+        <h1 class="coming-soon-names">Maria Alejandra &amp; Diego</h1>
 
         <p class="coming-soon-date">
             30<span class="dot">·</span>05<span class="dot">·</span>26

@@ -1,5 +1,47 @@
+<style>
+
+
+    /* 2. Flor Arriba Izquierda */
+    .flower-top-left {
+        position: absolute;
+        top: -39px;
+        left: -10px;
+        width: 400px;
+        height: 370px;
+        background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flor-arriba-izq.png'); /* ¡Cambia esto por tu archivo real! */
+        background-size: contain;
+        background-position: top left;
+        background-repeat: no-repeat;
+        z-index: 1; /* La mantiene en el fondo */
+        pointer-events: none; /* Las hace "invisibles" a los clics del ratón */
+    }
+
+    /* 3. Flor Abajo Derecha */
+    .flower-bottom-right {
+        position: absolute;
+        bottom: -40px;
+        right: -10px;
+        width: 325px; /* Ajusta según el tamaño de tu imagen */
+        height: 350px;
+        background-image: url('{$_layoutParams.root}views/mariaalejandraydiego/imgs/flor-abajo-der.png'); /* ¡Cambia esto por tu archivo real! */
+        background-size: contain;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        z-index: 1; /* La mantiene en el fondo */
+        pointer-events: none;
+    }
+
+</style>
+
 <section class="galery" id="galery">
 
+    <div class="flower-top-left"></div>
+    <div class="flower-bottom-right"></div>
+
+    <br>
+    <br>
+    <br>
+        
     <center>
         <h1 class="history-title-small-2" style="color: #BB8465;font-weight: bold;">Nuestras Fotos</h1>
     </center>
@@ -20,6 +62,7 @@
 
 <script>
     $(document).ready(function () {
+        
         $(".owl-carousel").owlCarousel({
             items: 3, // Número de elementos visibles
             loop: true, // Hacer el carrusel en bucle
@@ -40,5 +83,6 @@
                 }
             }
         });
+
     });
 </script>

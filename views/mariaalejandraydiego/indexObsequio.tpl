@@ -15,7 +15,7 @@
         <div class="notification-content">
             <span class="heart-icon">♥</span> Deslízate hacia abajo y presiona
             el botón <strong>Obsequiar y enviar</strong> para completar el
-            registro y hacer llegar tu presente a Fernanda y Rommel
+            registro y hacer llegar tu presente a Maria Alejandra & Diego
         </div>
     </div>
 
@@ -23,7 +23,7 @@
         <!-- Gift Form Card -->
         <div class="gift-card">
             <div class="card-header">
-                <span class="font-titulo-obsequio">Fernanda & Rommel</span>
+                <span class="font-titulo-obsequio">Maria Alejandra & Diego</span>
             </div>
 
             <div class="card-body">

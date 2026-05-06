@@ -17,18 +17,16 @@
         </p>
 
         <div class="header" style="justify-items: center;">
-            <h1 class="couple-name font-Alana" data-aos="fade-up">FERNANDA <span style="margin-left: 1rem;">&</span>
-                ROMMEL
+            <h1 class="couple-name font-photograph_signature" data-aos="fade-up">Maria Alejandra <span style="margin-left: 1rem;">&</span>
+                Diego
             </h1>
         </div>
 
-
         <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
             <b>Cuenta BCP:</b>
-            21598509055090 <br>
-            <b>CCI:</b> 00221519850905509027
+            215 - 21532764956-0-10 <br>
+            <b>CCI:</b> 00221513276495601025
         </p>
-
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -44,8 +42,7 @@
 
     </div>
     <div style="" data-aos="fade-up">
-
-
+        
         <div class="content-products">
             <aside class="sidebar">
                 <button class="category-button primary" data-id="0">TODAS LAS CATEGORÍAS</button>

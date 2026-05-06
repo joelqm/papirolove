@@ -1116,8 +1116,10 @@ body {
 /* ===== 12. GALERY SECTION (Galería de imágenes) ===== */
 .galery {
     width: 100%;
-    padding: 50px 0px;
+    padding: 0px 0px;
     background: #D1C9BC;
+    position: relative;
+    overflow: hidden;
 }
 
 .container-galery {
@@ -1207,7 +1209,7 @@ body {
 }
 
 .gift-container {
-    background: #6e705c;
+    background: #95988D;
     color: white;
     padding: 3rem 0rem;
     display: flex;
@@ -1915,7 +1917,7 @@ textarea.form-control {
 /* ===== 16. FOOTER ===== */
 footer {
     text-align: center;
-    background: var(--footer-color);
+    background: #836E63;
     color: #fff;
     font-family: "Baskervville-Regular";
     padding: 1rem 0rem;

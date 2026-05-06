@@ -174,7 +174,7 @@ $(document).ready(function () {
 function crearEventoEnGoogleCalendar() {
   // Datos del evento: cámbialos directamente aquí
   /*
-  const titulo = "Boda Fernanda y Rommel";
+  const titulo = "Boda Maria Alejandra y Diego";
   const descripcion = "¡No faltes! 💍🎉";
   const lugar = "Arequipa, Perú";
   const fechaInicioTexto = "02/05/2026 14:00"; // DD/MM/YYYY HH:mm hora Perú
