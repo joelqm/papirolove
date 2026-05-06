@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-05 12:56:21
+/* Smarty version 5.5.1, created on 2026-05-05 18:13:56
   from 'file:views/mariaalejandraydiego/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fa2f45e17b21_72497084',
+  'unifunc' => 'content_69fa79b47179a2_39049147',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3123ecd8a40ec9b59b7315853a8f57d50da08482' => 
     array (
       0 => 'views/mariaalejandraydiego/components/dresscode.tpl',
-      1 => 1778003778,
+      1 => 1778022818,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fa2f45e17b21_72497084 (\Smarty\Template $_smarty_tpl) {
+function content_69fa79b47179a2_39049147 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><div class="dresscode-container" id="dresscode">
 
@@ -76,9 +76,6 @@ views/mariaalejandraydiego/imgs/dresscode-2.png" alt="Varones" class="dresscode-
 views/mariaalejandraydiego/imgs/paleta_colores.png" alt="paleta_colores" class="paleta_colores-img" width="200px">
 
                 <br>
-                <span class="texto-content">
-                    Reserva el blanco y azul para los novios
-                </span>
             </div>
 
         </div>

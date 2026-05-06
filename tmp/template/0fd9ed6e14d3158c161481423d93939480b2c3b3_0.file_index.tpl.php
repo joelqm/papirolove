@@ -1,24 +1,23 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-05 12:55:01
+/* Smarty version 5.5.1, created on 2026-05-05 18:14:47
   from 'file:C:\laragon\www\papirolove\views\mariaalejandraydiego\index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fa2ef5dc2281_14735253',
+  'unifunc' => 'content_69fa79e7e51306_93231473',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fd9ed6e14d3158c161481423d93939480b2c3b3' => 
     array (
       0 => 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\index.tpl',
-      1 => 1778003699,
+      1 => 1778022886,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:views/mariaalejandraydiego/components/loader.tpl' => 1,
     'file:views/mariaalejandraydiego/components/cart.tpl' => 1,
     'file:views/mariaalejandraydiego/components/hero.tpl' => 1,
     'file:views/mariaalejandraydiego/components/history.tpl' => 1,
@@ -30,16 +29,13 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:views/mariaalejandraydiego/components/button-whatsapp.tpl' => 1,
   ),
 ))) {
-function content_69fa2ef5dc2281_14735253 (\Smarty\Template $_smarty_tpl) {
+function content_69fa79e7e51306_93231473 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_111002970369fa2ef5dab264_99760656', "styles");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_106447522469fa79e7e30fd1_84377439', "styles");
 ?>
 
 
-<!-- 
-<?php $_smarty_tpl->renderSubTemplate("file:views/mariaalejandraydiego/components/loader.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?> -->
 <?php $_smarty_tpl->renderSubTemplate("file:views/mariaalejandraydiego/components/cart.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 $_smarty_tpl->renderSubTemplate("file:views/mariaalejandraydiego/components/hero.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
@@ -60,7 +56,7 @@ $_smarty_tpl->renderSubTemplate("file:views/mariaalejandraydiego/components/atte
 <?php $_smarty_tpl->renderSubTemplate("file:views/mariaalejandraydiego/components/button-whatsapp.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 }
 /* {block "styles"} */
-class Block_111002970369fa2ef5dab264_99760656 extends \Smarty\Runtime\Block
+class Block_106447522469fa79e7e30fd1_84377439 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego';

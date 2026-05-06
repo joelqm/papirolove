@@ -49,9 +49,6 @@
                 <img src="{$_layoutParams.root}views/mariaalejandraydiego/imgs/paleta_colores.png" alt="paleta_colores" class="paleta_colores-img" width="200px">
 
                 <br>
-                <span class="texto-content">
-                    Reserva el blanco y azul para los novios
-                </span>
             </div>
 
         </div>
