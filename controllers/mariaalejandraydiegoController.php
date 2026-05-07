@@ -28,13 +28,13 @@ class mariaalejandraydiegoController extends Controller
 		$this->_index = $this->loadModel('index');
 		$this->_dt = $this->loadModel('dataTable');
 
-		// TODO: actualizar al ID real (tbl_sede) de Fernanda y Rommel
-		$this->_key = 2;
+		// TODO: actualizar al ID real (tbl_sede) de Maria Alejandra y Diego
+		$this->_key = 3;
 	}
 
 	public function index()
 	{
-		$this->_view->assign('titulo', 'Fernanda y Rommel');
+		$this->_view->assign('titulo', 'Maria Alejandra y Diego');
 
 		$ps_k = $this->_mariaalejandraydiego->keysEmp($this->_key);
 
@@ -47,7 +47,7 @@ class mariaalejandraydiegoController extends Controller
 
 	// public function test()
 	// {
-	// 	$this->_view->assign('titulo', 'Fernanda y Rommel');
+	// 	$this->_view->assign('titulo', 'Maria Alejandra y Diego');
 
 	// 	$ps_k = $this->_mariaalejandraydiego->keysEmp($this->_key);
 

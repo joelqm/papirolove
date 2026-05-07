@@ -1309,6 +1309,7 @@ body {
     color: #BB8465;
     text-align: center;
     font-size: 1.7rem;
+    -webkit-text-stroke: 0.5px #BB8465;
 }
 
 .gift-section .date {

@@ -340,7 +340,7 @@ $(document).ready(function () {
 
 const getGifts = async (categoryId = 0) => {
   try {
-    const coupleId = 2; // ID actualizado para 
+    const coupleId = 3; // ID actualizado para 
 
     const payload = {
       parejaId: coupleId,
