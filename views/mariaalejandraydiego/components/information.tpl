@@ -21,7 +21,7 @@
 
   <h1 class="history-title-small-3">Nuestros padrinos</h1>
 
-  <h1 class="history-title-small-3">César Bocangel & Sandra Fernández</h1>
+  <h1 class="history-title-small-3">César Bocangel & <br> Sandra Fernández</h1>
 
   <div data-aos="fade-up" class="text-invitation-primary">
     Los esperamos para celebrar juntos el inicio de nuestra nueva vida.

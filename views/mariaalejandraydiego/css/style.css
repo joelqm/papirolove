@@ -430,6 +430,7 @@ body {
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 5px;
+    -webkit-text-stroke: 0.5px #BB8465;
 }
 
 .buttons {
@@ -647,6 +648,7 @@ body {
     font-size: 1.5rem;
     font-weight: normal;
     color: #fff;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .detalle-nombre {
@@ -822,12 +824,15 @@ body {
     font-family: "newyork_personal";
     color: #fff;
     font-size: 1.5rem;
+    -webkit-text-stroke: 0.5px #fff;
+    
 }
 
 .text-invitation-secondary {
     color: #fff;
     font-size: 1.5rem;
     font-family: "newyork_personal";
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .parents {
@@ -919,6 +924,7 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .location-time {
@@ -926,6 +932,7 @@ body {
     color: #fff;
     margin-bottom: 15px;
     letter-spacing: 1px;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .location-button {

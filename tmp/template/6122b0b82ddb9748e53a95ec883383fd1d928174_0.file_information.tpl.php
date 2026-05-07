@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-05 12:07:18
+/* Smarty version 5.5.1, created on 2026-05-07 12:45:28
   from 'file:views/mariaalejandraydiego/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fa23c6ce97c3_75829628',
+  'unifunc' => 'content_69fccfb874c409_73751076',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6122b0b82ddb9748e53a95ec883383fd1d928174' => 
     array (
       0 => 'views/mariaalejandraydiego/components/information.tpl',
-      1 => 1778000540,
+      1 => 1778175904,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fa23c6ce97c3_75829628 (\Smarty\Template $_smarty_tpl) {
+function content_69fccfb874c409_73751076 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><section class="invitation-card" id="info">
 
@@ -45,7 +45,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
 
   <h1 class="history-title-small-3">Nuestros padrinos</h1>
 
-  <h1 class="history-title-small-3">César Bocangel & Sandra Fernández</h1>
+  <h1 class="history-title-small-3">César Bocangel & <br> Sandra Fernández</h1>
 
   <div data-aos="fade-up" class="text-invitation-primary">
     Los esperamos para celebrar juntos el inicio de nuestra nueva vida.
