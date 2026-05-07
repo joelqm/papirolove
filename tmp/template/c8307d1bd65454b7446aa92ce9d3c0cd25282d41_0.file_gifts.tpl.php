@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 18:14:17
+/* Smarty version 5.5.1, created on 2026-05-07 09:04:29
   from 'file:views/mariaalejandraydiego/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fbcb491d2073_18464048',
+  'unifunc' => 'content_69fc9bed9e1213_54692623',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8307d1bd65454b7446aa92ce9d3c0cd25282d41' => 
     array (
       0 => 'views/mariaalejandraydiego/components/gifts.tpl',
-      1 => 1778109255,
+      1 => 1778162666,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fbcb491d2073_18464048 (\Smarty\Template $_smarty_tpl) {
+function content_69fc9bed9e1213_54692623 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -43,13 +43,13 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
         <style>
             @media (max-width: 480px) {
                 #couple-name-1 {
-                    top: -250px;
+                    top: -10px;
                 }
             }
         </style>
 
         <div class="header" style="justify-items: center;">
-            <h1 class="couple-name font-photograph_signature" data-aos="fade-up" id="couple-name-1">
+            <h1 class="couple-name-2 font-photograph_signature" data-aos="fade-up">
             Maria Alejandra <span style="margin-left: 1rem;">&</span> Diego
             </h1>
         </div>

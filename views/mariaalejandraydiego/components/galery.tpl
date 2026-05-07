@@ -57,7 +57,7 @@
     <br>
         
     <center>
-        <h1 class="history-title-small-2" style="color: #BB8465;font-weight: bold;">Nuestras Fotos</h1>
+        <h1 class="history-title-small-2" style="color: #BB8465;">Nuestras Fotos</h1>
     </center>
 
     <div class="container-galery">

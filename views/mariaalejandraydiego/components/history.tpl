@@ -14,7 +14,7 @@
       padding: 22px 26px 18px;
     }
     .song-card-title {
-      font-family: "Baskervville-Regular", serif;
+      font-family: "newyork_personal", serif;
       color: #fff;
       font-size: 1.4rem;
       text-align: center;
@@ -200,7 +200,7 @@
         
             <div class="song-card" data-aos="fade-up">
                 <div class="song-card-inner">
-                    <p class="song-card-title font-NewAthenaUnicode">Nuestra canción</p>
+                    <p class="song-card-title newyork_personal">Nuestra canción</p>
                     <div class="song-card-progress">
                     <span class="song-card-progress-fill"></span>
                     <span class="song-card-progress-thumb"></span>

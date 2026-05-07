@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 18:00:36
+/* Smarty version 5.5.1, created on 2026-05-07 10:47:58
   from 'file:views/mariaalejandraydiego/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fbc8141245e8_56948647',
+  'unifunc' => 'content_69fcb42e0ed865_51564285',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83ef451aac7e4bfe6cd943067b277753f73cd130' => 
     array (
       0 => 'views/mariaalejandraydiego/components/history.tpl',
-      1 => 1778108433,
+      1 => 1778168784,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fbc8141245e8_56948647 (\Smarty\Template $_smarty_tpl) {
+function content_69fcb42e0ed865_51564285 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?>
 <style>
@@ -38,7 +38,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
       padding: 22px 26px 18px;
     }
     .song-card-title {
-      font-family: "Baskervville-Regular", serif;
+      font-family: "newyork_personal", serif;
       color: #fff;
       font-size: 1.4rem;
       text-align: center;
@@ -227,7 +227,7 @@ views/mariaalejandraydiego/sound/song.mp3" preload="auto"></audio>
         
             <div class="song-card" data-aos="fade-up">
                 <div class="song-card-inner">
-                    <p class="song-card-title font-NewAthenaUnicode">Nuestra canción</p>
+                    <p class="song-card-title newyork_personal">Nuestra canción</p>
                     <div class="song-card-progress">
                     <span class="song-card-progress-fill"></span>
                     <span class="song-card-progress-thumb"></span>

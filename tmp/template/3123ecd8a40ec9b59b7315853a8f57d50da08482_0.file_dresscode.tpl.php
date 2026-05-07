@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 16:04:29
+/* Smarty version 5.5.1, created on 2026-05-07 10:58:04
   from 'file:views/mariaalejandraydiego/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fbacdd47d894_86749819',
+  'unifunc' => 'content_69fcb68cef9c96_33636174',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3123ecd8a40ec9b59b7315853a8f57d50da08482' => 
     array (
       0 => 'views/mariaalejandraydiego/components/dresscode.tpl',
-      1 => 1778101421,
+      1 => 1778169428,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fbacdd47d894_86749819 (\Smarty\Template $_smarty_tpl) {
+function content_69fcb68cef9c96_33636174 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><div class="dresscode-container" id="dresscode">
 
     <div class="dresscode-content">
         <div class="color-section " data-aos="fade-up">
-            <h1 class="history-title-small-2" style="color: #BB8465;font-weight: bold;font-size: 2.5rem;">
+            <h1 class="history-title-small-2" style="color: #BB8465;">
                 Dress Code
             </h1>
 
@@ -76,7 +76,7 @@ views/mariaalejandraydiego/imgs/paleta_colores.png" alt="paleta_colores" class="
         <div class="right-section" data-aos="fade-up">
             <a href="https://assets.pinterest.com/ext/embed.html?id=422281212243479" class="button-3"
                 style="margin-bottom: 12px;text-decoration: none;cursor: pointer;">
-                INSPIRACIÓN
+                Inspiración
             </a>
             <iframe src="https://assets.pinterest.com/ext/embed.html?id=422281212243479" height="532" width="345"
                 frameborder="0" scrolling="no"></iframe>

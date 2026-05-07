@@ -25,7 +25,7 @@
         </style>
 
         <div class="header" style="justify-items: center;">
-            <h1 class="couple-name font-photograph_signature" data-aos="fade-up" id="couple-name-1">
+            <h1 class="couple-name-2 font-photograph_signature" data-aos="fade-up">
             Maria Alejandra <span style="margin-left: 1rem;">&</span> Diego
             </h1>
         </div>

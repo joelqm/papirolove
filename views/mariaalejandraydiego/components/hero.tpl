@@ -142,6 +142,7 @@
             font-size: 11px;
         }
     }
+
 </style>
 <div class="container-page">
 
@@ -164,9 +165,7 @@
         <!-- Columna izquierda -->
         <!-- <div class="col-left">
             <img src="{$_layoutParams.root}views/mariaalejandraydiego/imgs/logo_02.webp" alt="logo" class="logo">
-
             <audio id="myAudio" src="{$_layoutParams.root}views/mariaalejandraydiego/sound/song.mp3"></audio>
-
         </div> -->
 
         <!-- Columna central (solo espacio para ver imagen) -->
@@ -175,9 +174,7 @@
         <!-- Columna derecha -->
         <div class="col-right">
 
-            <!--  -->
-
-            <!-- <button class="button button-calendar">
+            <button class="button button-calendar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -185,9 +182,8 @@
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                 </svg>
                 Agrega a tu calendario
-            </button> -->
+            </button>
 
-            
         </div>
     </div>
 </div>

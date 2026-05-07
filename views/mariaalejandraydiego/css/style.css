@@ -58,8 +58,8 @@
 }
 
 @font-face {
-    font-family: 'Bacalisties';
-    src: url("../fonts/Bacalisties.ttf");
+    font-family: 'Bacalislisties';
+    src: url("../fonts/Bacalislisties.ttf");
     font-display: swap;
 }
 
@@ -96,7 +96,8 @@
 
 @font-face {
     font-family: 'photograph_signature';
-    src: url("../fonts/photograph_signature.ttf") format("truetype");
+    src: url("../fonts/photograph_signature.woff2") format("woff2"),
+        url("../fonts/photograph_signature.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -155,8 +156,8 @@ body {
     font-family: 'Lile';
 }
 
-.font-Bacalisties {
-    font-family: 'Bacalisties';
+.font-photograph_signature {
+    font-family: 'photograph_signature';
 }
 
 .font-CaviarDreams {
@@ -362,6 +363,23 @@ body {
     transform: translateY(0);
 }
 
+.couple-name-2 {
+    font-family: 'photograph_signature';
+    font-size: 3.3rem;
+    margin: 0;
+    color: white !important;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.couple-name-2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .wedding-date-2 {
     max-width: 80%;
     margin: 0 auto;
@@ -376,13 +394,13 @@ body {
 .wedding-date {
     max-width: 80%;
     margin: 0 auto;
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     font-weight: normal;
     color: #BB8465;
     font-size: 2rem;
     letter-spacing: 3px;
     margin-top: 26px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .count {
@@ -401,13 +419,13 @@ body {
 }
 
 .countdown-number {
-    font-family: "font-NewAthenaUnicode";
+    font-family: "newyork_personal";
     font-size: 28px;
     font-weight: normal;
 }
 
 .countdown-label {
-    font-family: "font-NewAthenaUnicode";
+    font-family: "newyork_personal";
     font-weight: normal;
     font-size: 24px;
     letter-spacing: 1px;
@@ -439,11 +457,12 @@ body {
 }
 
 .button-calendar {
-    font-family: "NewAthenaUnicode";
-    background-color: #6e705c;
-    color: white;
+    font-family: "newyork_personal";
+    background-color: #fff;
+    color: #bb8465;
     margin-top: 220px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .button svg {
@@ -504,7 +523,7 @@ body {
 }
 
 .nav-item {
-    font-family: "Baskervville-Regular", serif;
+    font-family: "newyork_personal";
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -615,11 +634,11 @@ body {
 }
 
 .history-title-small-2 {
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     margin-bottom: 0rem;
-    font-size: 2.5rem;
-    font-weight: normal;
+    font-size: 2.8rem;
     color: white;
+    font-weight: normal;
 }
 
 .history-title-small-3 {
@@ -649,25 +668,26 @@ body {
 }
 
 .history-title-big {
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     font-size: 3.2rem;
     color: #BB8465;
     padding: 5px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .text-body {
-    font-family: "font-NewAthenaUnicode";
+    font-family: "newyork_personal";
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: #BB8465;
     text-align: center;
     max-width: 500px;
     font-weight: normal;
+    -webkit-text-stroke: 0.5px #BB8465;
 }
 
 .text-body .texto-content {
-    font-family: "font-NewAthenaUnicode";
+    font-family: "newyork_personal";
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: #BB8465;
@@ -676,7 +696,7 @@ body {
 }
 
 .text-body-2 {
-    font-family: "font-NewAthenaUnicode";
+    font-family: "newyork_personal";
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -886,9 +906,9 @@ body {
 }
 
 .location-type {
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     color: #fff;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
     font-weight: normal;
 }
@@ -896,7 +916,7 @@ body {
 .location-address {
     font-family: "newyork_personal";
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -915,7 +935,7 @@ body {
     padding: 8px 20px;
     border-radius: 20px;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     transition: background-color 0.3s;
     font-family: "NewAthenaUnicode";
 }
@@ -1252,7 +1272,7 @@ body {
 }
 
 .gift-title-small {
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     margin-bottom: 0rem;
     font-size: 3.2rem;
     font-weight: normal;
@@ -1260,7 +1280,7 @@ body {
 }
 
 .gift-title-big {
-    font-family: "Bacalisties";
+    font-family: "photograph_signature";
     margin-bottom: 0rem;
     font-size: 3.2rem;
     font-weight: normal;
@@ -1278,7 +1298,7 @@ body {
 .gift-section .text {
     width: 18rem;
     padding-top: 0.8rem;
-    font-family: "new";
+    font-family: "newyork_personal";
     color: #BB8465;
     text-align: center;
     font-size: 1.7rem;
@@ -1288,8 +1308,8 @@ body {
     width: 18rem;
     font-size: 3.5rem;
     padding: 1rem 0rem;
-    font-family: "Forum";
-    color: #6e705c;
+    font-family: "newyork_personal";
+    color: #BB8465;
     text-align: center;
     font-weight: normal;
 }
@@ -2034,6 +2054,10 @@ footer {
     .couple-name {
         font-size: 2.8rem;
         position: relative;
+        top: -120px;
+    }
+
+    #couple-name-2 {
         top: -262px;
     }
 
@@ -2044,7 +2068,7 @@ footer {
     .wedding-date-2 {
         font-size: 2rem;
         position: relative;
-        top: -262px;
+        top: -120px;
     }
 
     .count {
@@ -2252,7 +2276,7 @@ footer {
     }
 
     .text-invitation-secondary {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .gift-section .text {
@@ -2265,7 +2289,7 @@ footer {
 
 
     .text-body .texto-content {
-        font-family: "font-NewAthenaUnicode";
+        font-family: "newyork_personal";
         font-size: 1.4rem;
         margin-bottom: 1.5rem;
         color: #BB8465;

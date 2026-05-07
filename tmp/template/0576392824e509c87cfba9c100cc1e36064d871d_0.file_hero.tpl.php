@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 16:50:16
+/* Smarty version 5.5.1, created on 2026-05-07 09:04:29
   from 'file:views/mariaalejandraydiego/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fbb798566324_29722668',
+  'unifunc' => 'content_69fc9bed2d0279_53703338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0576392824e509c87cfba9c100cc1e36064d871d' => 
     array (
       0 => 'views/mariaalejandraydiego/components/hero.tpl',
-      1 => 1778104204,
+      1 => 1778162643,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fbb798566324_29722668 (\Smarty\Template $_smarty_tpl) {
+function content_69fc9bed2d0279_53703338 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><style>
     #player {
@@ -166,6 +166,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
             font-size: 11px;
         }
     }
+
 </style>
 <div class="container-page">
 
@@ -189,10 +190,8 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
         <!-- <div class="col-left">
             <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/mariaalejandraydiego/imgs/logo_02.webp" alt="logo" class="logo">
-
             <audio id="myAudio" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/mariaalejandraydiego/sound/song.mp3"></audio>
-
         </div> -->
 
         <!-- Columna central (solo espacio para ver imagen) -->
@@ -201,9 +200,7 @@ views/mariaalejandraydiego/sound/song.mp3"></audio>
         <!-- Columna derecha -->
         <div class="col-right">
 
-            <!--  -->
-
-            <!-- <button class="button button-calendar">
+            <button class="button button-calendar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
@@ -211,9 +208,8 @@ views/mariaalejandraydiego/sound/song.mp3"></audio>
                     <line x1="8" y1="2" x2="8" y2="6"></line>
                 </svg>
                 Agrega a tu calendario
-            </button> -->
+            </button>
 
-            
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
 
     <div class="dresscode-content">
         <div class="color-section " data-aos="fade-up">
-            <h1 class="history-title-small-2" style="color: #BB8465;font-weight: bold;font-size: 2.5rem;">
+            <h1 class="history-title-small-2" style="color: #BB8465;">
                 Dress Code
             </h1>
 
@@ -49,7 +49,7 @@
         <div class="right-section" data-aos="fade-up">
             <a href="https://assets.pinterest.com/ext/embed.html?id=422281212243479" class="button-3"
                 style="margin-bottom: 12px;text-decoration: none;cursor: pointer;">
-                INSPIRACIÓN
+                Inspiración
             </a>
             <iframe src="https://assets.pinterest.com/ext/embed.html?id=422281212243479" height="532" width="345"
                 frameborder="0" scrolling="no"></iframe>

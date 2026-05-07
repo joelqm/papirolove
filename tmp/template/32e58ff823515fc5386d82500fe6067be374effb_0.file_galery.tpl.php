@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-06 17:40:24
+/* Smarty version 5.5.1, created on 2026-05-07 10:54:01
   from 'file:views/mariaalejandraydiego/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fbc358bd26c2_72347732',
+  'unifunc' => 'content_69fcb5993ca312_06432151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '32e58ff823515fc5386d82500fe6067be374effb' => 
     array (
       0 => 'views/mariaalejandraydiego/components/galery.tpl',
-      1 => 1778106189,
+      1 => 1778169227,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fbc358bd26c2_72347732 (\Smarty\Template $_smarty_tpl) {
+function content_69fcb5993ca312_06432151 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><style>
 
@@ -83,7 +83,7 @@ views/mariaalejandraydiego/imgs/flor-abajo-der.png'); /* ¡Cambia esto por tu ar
     <br>
         
     <center>
-        <h1 class="history-title-small-2" style="color: #BB8465;font-weight: bold;">Nuestras Fotos</h1>
+        <h1 class="history-title-small-2" style="color: #BB8465;">Nuestras Fotos</h1>
     </center>
 
     <div class="container-galery">
