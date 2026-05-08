@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-07 10:47:58
+/* Smarty version 5.5.1, created on 2026-05-08 11:11:16
   from 'file:views/mariaalejandraydiego/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fcb42e0ed865_51564285',
+  'unifunc' => 'content_69fe0b24cc3e86_41315044',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83ef451aac7e4bfe6cd943067b277753f73cd130' => 
     array (
       0 => 'views/mariaalejandraydiego/components/history.tpl',
-      1 => 1778168784,
+      1 => 1778256669,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fcb42e0ed865_51564285 (\Smarty\Template $_smarty_tpl) {
+function content_69fe0b24cc3e86_41315044 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?>
 <style>
@@ -212,7 +212,7 @@ views/mariaalejandraydiego/imgs/flores-derecha.png');
               
             </p>
             <p class="text-body" data-aos="fade-up">
-              Hoy, después de más de tres anos de risas, complicidad y
+              Hoy, después de más de tres años de risas, complicidad y
               amor, han decidido dar el paso más importante
               el 30 de mayo de 2026, demostrando que las
               mejores historias no se planean, solo se viven y se eligen cada día.

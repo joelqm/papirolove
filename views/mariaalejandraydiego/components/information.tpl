@@ -14,7 +14,7 @@
       Leticia Díaz de Medrano
     </div>
     <div data-aos="fade-up" class="text-invitation-secondary">
-      Wilfredo lazo Lazo &amp; <br>
+      Wilfredo Lazo Lazo &amp; <br>
       Gloria Santa Cruz Rufran
     </div>
   </div>

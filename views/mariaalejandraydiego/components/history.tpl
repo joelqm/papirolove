@@ -186,7 +186,7 @@
               
             </p>
             <p class="text-body" data-aos="fade-up">
-              Hoy, después de más de tres anos de risas, complicidad y
+              Hoy, después de más de tres años de risas, complicidad y
               amor, han decidido dar el paso más importante
               el 30 de mayo de 2026, demostrando que las
               mejores historias no se planean, solo se viven y se eligen cada día.

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-07 12:45:28
+/* Smarty version 5.5.1, created on 2026-05-08 11:11:17
   from 'file:views/mariaalejandraydiego/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69fccfb874c409_73751076',
+  'unifunc' => 'content_69fe0b253a65a6_44895978',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6122b0b82ddb9748e53a95ec883383fd1d928174' => 
     array (
       0 => 'views/mariaalejandraydiego/components/information.tpl',
-      1 => 1778175904,
+      1 => 1778256634,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69fccfb874c409_73751076 (\Smarty\Template $_smarty_tpl) {
+function content_69fe0b253a65a6_44895978 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydiego\\components';
 ?><section class="invitation-card" id="info">
 
@@ -38,7 +38,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\mariaalejandraydieg
       Leticia Díaz de Medrano
     </div>
     <div data-aos="fade-up" class="text-invitation-secondary">
-      Wilfredo lazo Lazo &amp; <br>
+      Wilfredo Lazo Lazo &amp; <br>
       Gloria Santa Cruz Rufran
     </div>
   </div>
