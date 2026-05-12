@@ -14,6 +14,7 @@
 {include file="views/zelmaysamuel/components/history.tpl"}
 {include file="views/zelmaysamuel/components/information.tpl"}
 {include file="views/zelmaysamuel/components/galery.tpl"}
+
 <div class="pattern">
     {include file="views/zelmaysamuel/components/dresscode.tpl"}
 </div>
