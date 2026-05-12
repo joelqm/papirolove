@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+/* Smarty version 5.5.1, created on 2026-05-11 22:36:04
   from 'file:views/zelmaysamuel/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e7b9e4cc5d76_37242317',
+  'unifunc' => 'content_6a02a024d0bf98_84761402',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6dbc6d4bc0da4a57eb75d0931c19fc0fdb1107ce' => 
     array (
       0 => 'views/zelmaysamuel/components/history.tpl',
-      1 => 1776794076,
+      1 => 1778556960,
       2 => 'file',
     ),
   ),
@@ -20,29 +20,53 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69e7b9e4cc5d76_37242317 (\Smarty\Template $_smarty_tpl) {
+function content_6a02a024d0bf98_84761402 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><div class="container-history" id="new-history">
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
             <h1 class="history-title-small-2">NUESTRA HISTORIA</h1>
-            <h2 class="history-title-big">de Amor</h2>
+            <!-- <h2 class="history-title-big">de Amor</h2> -->
         </div>
-        <p class="text-body" data-aos="fade-up" style="color: #636C53;">
-            Y hasta el final de los días te amaré<br>
-            con el alma porque el corazón deja de latir. <br><br>
-            Mejor son dos que uno porque obtienen más<br>
-            fruto de su esfuerzo.<br>
-            Si caen, el uno levanta al otro.<br>
-            La cuerda triple no se rompe fácilmente.<br><br>
-            Eclesiastés 4:9-12b<br>
+        <p class="text-body" data-aos="fade-up" style="color: #d86f2c;">
+            La historia de Sam y Zelma no comenzó con
+            un gran momento explosivo, y a ninguno de los dos le
+            habría gustado que fuera así. Comenzó de la manera más
+            simple y, quizás, más sincera: en Bluestone Café,
+            entre miradas, sonrisas y conversaciones que, sin darse
+            <br>
+            cuenta, empezaban a significarlo todo.
+            Las conversaciones fluían, los planes se daban
+            sin mucho esfuerzo, y esa sensación tranquila
+            de estar exactamente donde debían estar. Y, por supuesto,
+            la aprobación más importante: Paisley, que sin dudarlo
+            <br>
+            le dio a Zelma su visto bueno con la pata
+            (porque si Paisley no aprobaba,
+            no había nada que hacer).
+            <br>
+            Han recorrido caminos juntos cerca
+            y lejos, han llenado sus días
+            de aventuras, de naturaleza y
+            de conversaciones que se extienden
+            hasta la madrugada, descubriendo
+            en cada paso que el amor también se
+            construye en lo cotidiano, en lo simple,
+            en lo compartido.
+            <br>
+            Y ahora, con el corazón lleno y la
+            mano del otro bien tomada, eligen
+            seguir escribiendo su historia juntos...
+            porque saben que lo más bonito aún
+            está por venir.
+            Primera parada: ¡Perú!✨
         </p>
     </div>
 
     <div class="rm-container">
         <img class="logo-history" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/zelmaysamuel/imgs/logo-history.webp" alt="">
+views/zelmaysamuel/imgs/img_001.png" alt="">
     </div>
 
     <div class="divider"></div>

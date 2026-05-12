@@ -244,7 +244,7 @@
 
 :root {
     --primary-ligth-color: #67725b;
-    --primary-color: #D76E2B;
+    --primary-color: #eed179;
     --background-color: #f7f2e7;
     --secondary-color: #555;
     --footer-color: #8ba273;
@@ -511,14 +511,14 @@ body {
 }
 
 .navigation:hover {
-    background-color: var(--footer-color);
+    background-color: var(--primary-color);
 }
 
 /* Estilo de los ítems de navegación */
 .nav-item {
-    font-family: "AbhayaLibre", serif;
+    font-family: "qafinte", serif;
     font-weight: bold;
-    color: white;
+    color: #d86f2c;
     text-decoration: none;
     font-size: 14px;
     padding: 8px 15px;
@@ -734,11 +734,12 @@ body {
     margin: 0;
     /* Asegúrate de que no haya margen que genere espacios */
 
-    background-image: url(../imgs/pattern.webp);
+    background-color: #eed179;
+    /* background-image: url(../imgs/pattern.webp);
     background-repeat: repeat;
     background-blend-mode: multiply;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; */
 }
 
 .section {

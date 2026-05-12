@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+/* Smarty version 5.5.1, created on 2026-05-11 15:57:46
   from 'file:C:\laragon\www\papirolove\views\zelmaysamuel\index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e7b9e4c9c9c2_28610734',
+  'unifunc' => 'content_6a0242cac560a7_09327332',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a243461c1c40a2046d85004f7a0d04e0f1017c5b' => 
     array (
       0 => 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\index.tpl',
-      1 => 1776794026,
+      1 => 1777596322,
       2 => 'file',
     ),
   ),
@@ -29,10 +29,10 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:views/zelmaysamuel/components/button-whatsapp.tpl' => 1,
   ),
 ))) {
-function content_69e7b9e4c9c9c2_28610734 (\Smarty\Template $_smarty_tpl) {
+function content_6a0242cac560a7_09327332 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_161479391069e7b9e4c8f838_31533301', "styles");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_5705895106a0242ca81b449_45349385', "styles");
 ?>
 
 
@@ -57,7 +57,7 @@ $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/galery.tpl",
 <?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/button-whatsapp.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 }
 /* {block "styles"} */
-class Block_161479391069e7b9e4c8f838_31533301 extends \Smarty\Runtime\Block
+class Block_5705895106a0242ca81b449_45349385 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel';
