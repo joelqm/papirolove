@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-27 08:27:21
+/* Smarty version 5.5.1, created on 2026-05-13 00:31:01
   from 'file:views/zelmaysamuel/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69ef64395cf400_11309028',
+  'unifunc' => 'content_6a040c958c9d13_38989017',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4589d8761cfb8e8c9b321c734ebce776c0d6de8d' => 
     array (
       0 => 'views/zelmaysamuel/components/hero.tpl',
-      1 => 1776871073,
+      1 => 1778650112,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69ef64395cf400_11309028 (\Smarty\Template $_smarty_tpl) {
+function content_6a040c958c9d13_38989017 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><style>
     .couple-name {
@@ -65,6 +65,38 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
         font-size: 40px;
         /* El símbolo & más pequeño */
         vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+        .name-top {
+            font-size: 90px;
+            left: -20px;
+            margin-bottom: -55px;
+        }
+        .name-bottom {
+            font-size: 45px;
+            left: 20px;
+            letter-spacing: 3px;
+        }
+        .ampersand {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .name-top {
+            font-size: 75px;
+            left: -15px;
+            margin-bottom: -45px;
+        }
+        .name-bottom {
+            font-size: 38px;
+            left: 15px;
+            letter-spacing: 2px;
+        }
+        .ampersand {
+            font-size: 26px;
+        }
     }
 </style>
 

@@ -1,3 +1,6 @@
+/* Importar fuentes elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&display=swap');
+
 @font-face {
     font-family: 'Gatha';
     src: url("../fonts/Gatha.ttf");
@@ -86,21 +89,22 @@
 /*solicita tu web*/
 
 .whatsapp-button {
-    text-decoration: none;
+text-decoration: none;
     color: #06bd3d;
     z-index: 5000;
     position: fixed;
-    left: 2rem;
-    bottom: 2rem;
+    left: 1rem;
+    bottom: 1rem;
     display: flex;
+    font-size: 0.5rem;
     border-radius: 30px;
     border: 1px solid #06bd3d;
     justify-items: center;
     align-items: center;
     gap: 0.3rem;
     background: #fff;
-    padding: 0.5rem 0.8rem;
-    font-family: "BaskervilleBT";
+    padding: 0.2rem 0.5rem;
+    font-family: "Baskervville-Regular";
 }
 
 .whatsapp-button svg {
@@ -243,10 +247,10 @@
 }
 
 :root {
-    --primary-ligth-color: #67725b;
+    --primary-ligth-color: #eed179;
     --primary-color: #eed179;
     --background-color: #f7f2e7;
-    --secondary-color: #555;
+    --secondary-color: #d86f2c;
     --footer-color: #8ba273;
     --location-button-color: #f1e9d2;
     --text-color: #797979;
@@ -373,11 +377,11 @@ body {
 
 
 .name-bank-account {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
-
-    color: var(--text-color);
+    font-family: "switzerland";
+    -webkit-text-stroke: 0.5px #d86f2c;
+    color: #d86f2c;
 }
 
 
@@ -390,10 +394,11 @@ body {
 }
 
 .invitation-message {
-    font-size: 2rem;
+    font-family: "switzerland";
+    font-size: 3rem;
     width: 80%;
     margin: 0 auto;
-    color: #6b7052;
+    color: #fff;
     line-height: 50px;
 }
 
@@ -751,10 +756,10 @@ body {
 }
 
 .text-body {
-    font-family: "BaskervilleBT";
-    font-size: 1.1rem;
+    font-family: "qafinte";
+    font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: white;
+    color: #d8722d;
     text-align: center;
     /*line-height: 1.6;*/
     max-width: 500px;
@@ -769,31 +774,32 @@ body {
 }
 
 .history-title-small-2 {
-    font-family: "BaskervilleBT";
+    font-family: "switzerland";
     margin-bottom: 0rem;
     text-align: center !important;
     top: 10%;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #6b7052;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #d86f2c;
+    -webkit-text-stroke: 0.5px #d86f2c;
 }
 
 .history-title-small {
-    font-family: "Alana";
+    font-family: "switzerland";
     margin-bottom: 0rem;
     text-align: center !important;
     top: 10%;
     font-size: 3.5rem;
     font-weight: normal;
-    color: #6b7052;
+    color: #fff;
     line-height: 80px;
 }
 
 .history-title-big {
-    font-family: "Alana";
+    font-family: "switzerland";
     font-size: 2rem;
     /* font-weight: 500; */
-    color: #6b7052;
+    color: #fff;
     top: -10px;
     left: 80px;
     position: relative;
@@ -815,12 +821,12 @@ body {
 
 .divider {
     position: absolute;
-    top: 20%;
+    top: 25%;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     width: 1px;
-    border-left: 1px solid var(--primary-color);
+    border-left: 1px solid var(--secondary-color);
     height: 60%;
 }
 
@@ -857,11 +863,11 @@ body {
 }
 
 .gift-title {
-    font-family: "Alana";
+    font-family: "switzerland";
     font-weight: 100;
     font-size: 3.5rem;
     white-space: nowrap;
-    color: var(--background-color);
+    color: #d86f2c;
 }
 
 
@@ -892,11 +898,9 @@ body {
 @media (max-width: 400px) {
 
     .gift-title {
-        font-family: "AmalfiCoast";
         font-weight: 100;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         white-space: nowrap;
-        color: var(--background-color);
     }
 }
 
@@ -1025,27 +1029,32 @@ body {
     border-radius: 10px;
     text-align: center;
 
+    /*
     background-image: url(../imgs/pattern.webp);
     background-repeat: repeat;
     background-blend-mode: multiply;
     width: 100%;
     overflow: hidden;
+    */
+
+    background-color: #d86f2c;
+    color: #fff;
 }
 
 
 
 .text-invitation-primary {
     padding: 0rem 2rem;
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    font-family: "qafinte";
+    color: #fff;
     font-size: 1.1rem !important;
     font-weight: normal !important;
 }
 
 .text-invitation-secondary {
     padding: 0rem 2rem;
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    font-family: "qafinte";
+    color: #fff;
     font-size: 1.1rem !important;
     font-weight: normal !important;
 }
@@ -1060,6 +1069,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+    color: #fff;
 }
 
 .couple-info {
@@ -1111,11 +1121,12 @@ body {
 }
 
 .location-type {
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    font-family: "switzerland";
     font-weight: normal;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 2.4rem !important;
+    margin: 10px 0 !important;
+    color: #fff !important;
+
 }
 
 .location-button svg {
@@ -1130,19 +1141,26 @@ body {
 }
 
 .location-address {
-    font-family: "BaskervilleBT";
+    font-family: "qafinte";
     color: #6b7052;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: normal;
     margin-bottom: 10px;
+
+    margin: 5px 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #fff !important;
+
 }
 
 .location-time {
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    font-family: "qafinte";
     font-weight: normal;
-    margin-bottom: 15px;
-    font-size: 1rem;
+
+    margin-top: 10px !important;
+    font-size: 1.2rem !important;
+    color: #fff !important;
 }
 
 .location-button {
@@ -1185,10 +1203,14 @@ body {
 /*DRESSCODE*/
 
 .container {
-    padding: 3rem 0rem;
+    padding: 5rem 0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#dresscode {
+    background-color: #94b43f;
 }
 
 .dresscode-title {
@@ -1236,8 +1258,8 @@ body {
 
 .palette-title {
     text-align: center;
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    font-family: "qafinte";
+    color: #fff;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1249,6 +1271,17 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+
+.texto-content-inspiracion {
+    font-family: "switzerland";
+    color: #fff;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    /* margin-bottom: 15px; */
+    text-align: center;
+    margin: 0px auto;
 }
 
 .color:hover {
@@ -1338,6 +1371,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #eed179;
 }
 
 .gift-section {
@@ -1350,41 +1384,53 @@ body {
 }
 
 .gift-section h5 {
-    font-family: "Alana";
+    font-family: "switzerland";
     font-size: 3rem;
     color: #6b7052;
     font-weight: 100;
 }
 
 .gift-section .big {
-    font-family: "AmalfiCoast";
+    font-family: "switzerland";
     font-weight: 100;
-    font-size: 1.6rem;
-    white-space: nowrap;
-    color: #6b7052;
+    font-size: 3.5rem;
+    color: #d86f2c;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .gift-section .big {
+        font-size: 2.5rem;
+    }
+    .gift-section .date {
+        font-size: 2.2rem !important;
+        padding: 1.5rem 0rem !important;
+    }
 }
 
 .gift-section .text {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     text-align: center;
-    padding: 0rem 2rem;
-    font-family: "BaskervilleBT";
-    color: #6b7052;
-    font-size: 1.2rem !important;
+    padding: 0rem 1.5rem;
+    font-family: "qafinte";
+    color: #d86f2c;
+    font-size: 1.3rem !important;
     font-weight: normal !important;
 }
 
 .gift-section .date {
-    width: 450px;
-    font-size: 2rem;
-    padding: 1rem 0rem;
-    font-family: "BaskervilleBT";
-    color: #6b7052;
+    width: 100%;
+    max-width: 450px;
+    font-size: 3rem;
+    padding: 3rem 0rem;
+    font-family: "qafinte";
+    color: #d86f2c;
     text-align: center;
 }
 
 .gift-section svg {
-    fill: white;
+    fill: #d86f2c;
     width: 8rem;
     height: 8rem;
     margin: 0.8rem;
@@ -1420,9 +1466,9 @@ body {
 }
 
 .button-3 {
-    font-family: "BaskervilleBT";
-    color: #fff;
-    background: var(--primary-ligth-color);
+    font-family: "qafinte";
+    color: #d86f2c;
+    background: white;
     border: none;
     border-radius: 2rem;
     padding: 0.8rem 1.5rem;
@@ -1437,6 +1483,7 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     margin: inherit;
+    fill: #d86f2c;
 }
 
 .line-base {
@@ -2132,4 +2179,79 @@ textarea.form-control {
     font-size: 14px;
     margin-top: 5px;
     display: block;
+}
+
+/* --- NUEVOS ESTILOS PARA LA SECCIÓN DE INFORMACIÓN --- */
+.invitation-card {
+    background-color: #d36f31 !important;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.locations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.location-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-icon img, .location-icon svg {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    fill: #fff !important;
+}
+
+
+/* Estilo del botón Blanco */
+.location-button {
+    display: inline-flex !important;
+    align-items: center;
+    background-color: white !important;
+    color: #d36f31 !important;
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 25px;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.location-button:hover {
+    transform: scale(1.05);
+}
+
+.location-button svg {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    fill: #d36f31 !important;
+}
+
+.location-button svg path {
+    fill: #d36f31 !important;
+    stroke: #d36f31 !important;
+}
+
+/* RESPONSIVE: De 2 columnas a 1 sola en celulares */
+@media (max-width: 768px) {
+    .locations {
+        grid-template-columns: 1fr !important;
+        gap: 60px;
+    }
+    
+    .location-type {
+        font-size: 2.4rem !important;
+    }
 }

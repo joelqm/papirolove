@@ -13,13 +13,14 @@
 
 {include file="views/zelmaysamuel/components/history.tpl"}
 {include file="views/zelmaysamuel/components/information.tpl"}
+
+{include file="views/zelmaysamuel/components/dresscode.tpl"}
+
+
 {include file="views/zelmaysamuel/components/galery.tpl"}
 
-<div class="pattern">
-    {include file="views/zelmaysamuel/components/dresscode.tpl"}
-</div>
 
-<!-- {include file="views/zelmaysamuel/components/attendance.tpl"} -->
+{include file="views/zelmaysamuel/components/attendance.tpl"}
 {include file="views/zelmaysamuel/components/gifts.tpl"}
 
 {include file="views/zelmaysamuel/components/button-whatsapp.tpl"}

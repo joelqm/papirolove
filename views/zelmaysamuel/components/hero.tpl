@@ -42,6 +42,38 @@
         /* El símbolo & más pequeño */
         vertical-align: middle;
     }
+
+    @media (max-width: 768px) {
+        .name-top {
+            font-size: 90px;
+            left: -20px;
+            margin-bottom: -55px;
+        }
+        .name-bottom {
+            font-size: 45px;
+            left: 20px;
+            letter-spacing: 3px;
+        }
+        .ampersand {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .name-top {
+            font-size: 75px;
+            left: -15px;
+            margin-bottom: -45px;
+        }
+        .name-bottom {
+            font-size: 38px;
+            left: 15px;
+            letter-spacing: 2px;
+        }
+        .ampersand {
+            font-size: 26px;
+        }
+    }
 </style>
 
 <div class="container-page">

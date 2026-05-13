@@ -31,16 +31,16 @@ class zelmaysamuelController extends Controller
 		$this->_key = 3;
 	}
 
-    /*
+    
     public function index()
     {
         $this->_view->assign('titulo', 'Zelma y Samuel');
         $this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
         $this->_view->renderContent('index');
     }
-    */
+    
 
-
+/*
 	public function index()
 	{
 		$this->_view->assign('titulo', 'Zelma y Samuel');
@@ -52,7 +52,7 @@ class zelmaysamuelController extends Controller
 		//$this->_view->renderContent('index');
 		$this->_view->renderContent('proximamente');
 	}
-
+*/
 
 
 

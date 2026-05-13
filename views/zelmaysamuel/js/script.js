@@ -181,7 +181,7 @@ function crearEventoEnGoogleCalendar() {
 
   // const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${description}`;
 
-  const url = `https://calendar.app.google/zDmJaYyiN9c5VmKz9`;
+  const url = `https://calendar.app.google/LRhxAbsquL5iJPhz6`;
 
   window.open(url, '_blank');
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+/* Smarty version 5.5.1, created on 2026-05-13 00:19:23
   from 'file:views/zelmaysamuel/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e7b9e4cf5129_39498301',
+  'unifunc' => 'content_6a0409dbe1e0c1_69304990',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27f5d78651d9701411adf54b554c82cd15fd1df5' => 
     array (
       0 => 'views/zelmaysamuel/components/gifts.tpl',
-      1 => 1772735668,
+      1 => 1778649517,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69e7b9e4cf5129_39498301 (\Smarty\Template $_smarty_tpl) {
+function content_6a0409dbe1e0c1_69304990 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
-?><div class="container" id="gifts" style="background: #636C53;color: white !important;">
+?><div class="container" id="gifts" style="background: #eed179;color: #d86f2c !important;">
     <div class="gift-section" data-aos="fade-up">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#fff">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#d86f2c">
             <g id="a" />
             <g id="b">
                 <g id="c">
@@ -35,27 +35,20 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
             </g>
         </svg>
 
-        <p class="gift-title">Regalos</p>
+        <p class="gift-title">Obsequios</p>
         <br>
 
-        <p class="text-body" style="padding: 0 2rem;">
-            CUALQUIER DETALLE EN ESTA <br>
-            NUEVA ETAPA SERÁ AGRADECIDO
+        <p class="text-body" >
+            Si deseas hacernos llegar un obsequio lo puedes a hacer a través de:
 
         </p>
 
-        <p class="text-body">Cta Soles BCP<br>
-            385-13844000-0-05<br>
-            CCI: 00238511384400000534</p>
-
-        <p class="name-bank-account font-Alana" style="color:white;">Eric Velásquez</p>
-
-        <p class="text-body">Cta Soles BCP<br>
-            215-37096605-0-14<br>
-            CCI: 00221513709660501424
+        <p class="text-body">Cuenta ahorros soles Bcp<br>
+            193-95058908-0-97<br>
+            CCI: 00219319505890809712
         </p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Gabriela Bustamante</p>
+        <p class="name-bank-account">Juana Cisneros Illanes</p>
 
     </div>
 

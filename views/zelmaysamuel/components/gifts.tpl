@@ -1,7 +1,7 @@
-<div class="container" id="gifts" style="background: #636C53;color: white !important;">
+<div class="container" id="gifts" style="background: #eed179;color: #d86f2c !important;">
     <div class="gift-section" data-aos="fade-up">
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#fff">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11" fill="#d86f2c">
             <g id="a" />
             <g id="b">
                 <g id="c">
@@ -11,27 +11,20 @@
             </g>
         </svg>
 
-        <p class="gift-title">Regalos</p>
+        <p class="gift-title">Obsequios</p>
         <br>
 
-        <p class="text-body" style="padding: 0 2rem;">
-            CUALQUIER DETALLE EN ESTA <br>
-            NUEVA ETAPA SERÁ AGRADECIDO
+        <p class="text-body" >
+            Si deseas hacernos llegar un obsequio lo puedes a hacer a través de:
 
         </p>
 
-        <p class="text-body">Cta Soles BCP<br>
-            385-13844000-0-05<br>
-            CCI: 00238511384400000534</p>
-
-        <p class="name-bank-account font-Alana" style="color:white;">Eric Velásquez</p>
-
-        <p class="text-body">Cta Soles BCP<br>
-            215-37096605-0-14<br>
-            CCI: 00221513709660501424
+        <p class="text-body">Cuenta ahorros soles Bcp<br>
+            193-95058908-0-97<br>
+            CCI: 00219319505890809712
         </p>
 
-        <p class="name-bank-account font-Alana" style="color:white;">Gabriela Bustamante</p>
+        <p class="name-bank-account">Juana Cisneros Illanes</p>
 
     </div>
 

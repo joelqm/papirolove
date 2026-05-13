@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-12 17:09:28
+/* Smarty version 5.5.1, created on 2026-05-13 00:53:26
   from 'file:C:\laragon\www\papirolove\views\zelmaysamuel\index.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a03a518de1997_34517291',
+  'unifunc' => 'content_6a0411d656f7d0_58397517',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a243461c1c40a2046d85004f7a0d04e0f1017c5b' => 
     array (
       0 => 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\index.tpl',
-      1 => 1778593447,
+      1 => 1778651435,
       2 => 'file',
     ),
   ),
@@ -22,17 +22,17 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
     'file:views/zelmaysamuel/components/hero.tpl' => 1,
     'file:views/zelmaysamuel/components/history.tpl' => 1,
     'file:views/zelmaysamuel/components/information.tpl' => 1,
-    'file:views/zelmaysamuel/components/galery.tpl' => 1,
     'file:views/zelmaysamuel/components/dresscode.tpl' => 1,
+    'file:views/zelmaysamuel/components/galery.tpl' => 1,
     'file:views/zelmaysamuel/components/attendance.tpl' => 1,
     'file:views/zelmaysamuel/components/gifts.tpl' => 1,
     'file:views/zelmaysamuel/components/button-whatsapp.tpl' => 1,
   ),
 ))) {
-function content_6a03a518de1997_34517291 (\Smarty\Template $_smarty_tpl) {
+function content_6a0411d656f7d0_58397517 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_17332095506a03a518d9b674_01754930', "styles");
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_7100378086a0411d6533470_85032822', "styles");
 ?>
 
 
@@ -42,23 +42,24 @@ $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/hero.tpl", $
 
 <?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/history.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/information.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-$_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/galery.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
 
-<div class="pattern">
-    <?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/dresscode.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+<?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/dresscode.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
-</div>
 
-<!-- <?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/attendance.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
-?> -->
-<?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/gifts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+
+<?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/galery.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+
+
+<?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/attendance.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+$_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/gifts.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 ?>
 
 <?php $_smarty_tpl->renderSubTemplate("file:views/zelmaysamuel/components/button-whatsapp.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
 }
 /* {block "styles"} */
-class Block_17332095506a03a518d9b674_01754930 extends \Smarty\Runtime\Block
+class Block_7100378086a0411d6533470_85032822 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel';

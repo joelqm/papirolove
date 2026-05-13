@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-21 12:54:44
+/* Smarty version 5.5.1, created on 2026-05-12 23:48:29
   from 'file:views/zelmaysamuel/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e7b9e4cd9fb1_04166425',
+  'unifunc' => 'content_6a04029deff4b0_11274813',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '83d63ae2ee3e8304eb47faa5db3961f3f76d3e3f' => 
     array (
       0 => 'views/zelmaysamuel/components/galery.tpl',
-      1 => 1776794049,
+      1 => 1778647705,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69e7b9e4cd9fb1_04166425 (\Smarty\Template $_smarty_tpl) {
+function content_6a04029deff4b0_11274813 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
-?><div class="galery-full-wrapper" style="background: #636C53;">
+?><div class="galery-full-wrapper" style="background: repeating-linear-gradient(90deg, #d36f31, #d36f31 20px, #ffffff 20px, #ffffff 40px);">
     <div class="container-galery" id="galery">
         <div class="owl-carousel owl-theme">
             <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
@@ -36,6 +36,12 @@ views/zelmaysamuel/imgs/preboda-3.webp" alt="Imagen 3">
             </div>
             <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/zelmaysamuel/imgs/preboda-4.webp" alt="Imagen 4">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-5.webp" alt="Imagen 5">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/preboda-6.webp" alt="Imagen 6">
             </div>
         </div>
     </div>
@@ -52,7 +58,7 @@ views/zelmaysamuel/imgs/preboda-4.webp" alt="Imagen 4">
     .container-galery {
         max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 60px 0;
     }
 
     .owl-carousel .item {

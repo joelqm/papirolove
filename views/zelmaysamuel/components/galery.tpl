@@ -1,4 +1,4 @@
-<div class="galery-full-wrapper" style="background: #636C53;">
+<div class="galery-full-wrapper" style="background: repeating-linear-gradient(90deg, #d36f31, #d36f31 20px, #ffffff 20px, #ffffff 40px);">
     <div class="container-galery" id="galery">
         <div class="owl-carousel owl-theme">
             <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-1.webp" alt="Imagen 1">
@@ -8,6 +8,10 @@
             <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-3.webp" alt="Imagen 3">
             </div>
             <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-4.webp" alt="Imagen 4">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-5.webp" alt="Imagen 5">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/zelmaysamuel/imgs/preboda-6.webp" alt="Imagen 6">
             </div>
         </div>
     </div>
@@ -24,7 +28,7 @@
     .container-galery {
         max-width: 1000px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 60px 0;
     }
 
     .owl-carousel .item {

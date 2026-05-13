@@ -2,7 +2,7 @@
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
-            <h1 class="history-title-small-2">NUESTRA HISTORIA</h1>
+            <h1 class="history-title-small-2">Nuestra Historia</h1>
             <!-- <h2 class="history-title-big">de Amor</h2> -->
         </div>
         <p class="text-body" data-aos="fade-up" style="color: #d86f2c;">

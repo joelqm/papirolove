@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-11 22:36:04
+/* Smarty version 5.5.1, created on 2026-05-12 21:41:38
   from 'file:views/zelmaysamuel/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a02a024d0bf98_84761402',
+  'unifunc' => 'content_6a03e4e28d03a2_67133151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6dbc6d4bc0da4a57eb75d0931c19fc0fdb1107ce' => 
     array (
       0 => 'views/zelmaysamuel/components/history.tpl',
-      1 => 1778556960,
+      1 => 1778640058,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a02a024d0bf98_84761402 (\Smarty\Template $_smarty_tpl) {
+function content_6a03e4e28d03a2_67133151 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><div class="container-history" id="new-history">
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
-            <h1 class="history-title-small-2">NUESTRA HISTORIA</h1>
+            <h1 class="history-title-small-2">Nuestra Historia</h1>
             <!-- <h2 class="history-title-big">de Amor</h2> -->
         </div>
         <p class="text-body" data-aos="fade-up" style="color: #d86f2c;">
