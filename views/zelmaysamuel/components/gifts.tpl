@@ -14,12 +14,11 @@
         <p class="gift-title">Obsequios</p>
         <br>
 
-        <p class="text-body" >
+        <p class="text-body gifts-text">
             Si deseas hacernos llegar un obsequio lo puedes a hacer a través de:
-
         </p>
 
-        <p class="text-body">Cuenta ahorros soles Bcp<br>
+        <p class="text-body gifts-text">Cuenta ahorros soles Bcp<br>
             193-95058908-0-97<br>
             CCI: 00219319505890809712
         </p>

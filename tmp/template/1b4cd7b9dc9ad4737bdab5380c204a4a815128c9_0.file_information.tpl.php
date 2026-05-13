@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-12 23:21:29
+/* Smarty version 5.5.1, created on 2026-05-13 09:19:19
   from 'file:views/zelmaysamuel/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a03fc496e08b1_75439442',
+  'unifunc' => 'content_6a048867ce23c4_89870324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b4cd7b9dc9ad4737bdab5380c204a4a815128c9' => 
     array (
       0 => 'views/zelmaysamuel/components/information.tpl',
-      1 => 1778646036,
+      1 => 1778681954,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a03fc496e08b1_75439442 (\Smarty\Template $_smarty_tpl) {
+function content_6a048867ce23c4_89870324 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><section class="invitation-card" id="info">
 
@@ -68,7 +68,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
     <div class="location-card" data-aos="fade-up">
       <div class="location-icon">
         <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/zelmaysamuel/imgs/coctel.png" alt="Cóctel de Bienvenida" width="120px">
+views/zelmaysamuel/imgs/ceremonia.png" alt="Ceremonia" width="120px">
       </div>
       <p class="location-address" style="margin-bottom: -5px; font-weight: bold; font-size: 1.3rem;">31/07/26</p>
       <h3 class="location-type">Cóctel de Bienvenida</h3>
@@ -91,7 +91,7 @@ views/zelmaysamuel/imgs/coctel.png" alt="Cóctel de Bienvenida" width="120px">
     <div class="location-card" data-aos="fade-up">
       <div class="location-icon">
         <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/zelmaysamuel/imgs/ceremonia.png" alt="Ceremonia" width="120px">
+views/zelmaysamuel/imgs/coctel.png" alt="Cóctel de Bienvenida" width="120px">
       </div>
       <h3 class="location-type">Ceremonia</h3>
       <p class="location-address">Parroquia San Lázaro</p>

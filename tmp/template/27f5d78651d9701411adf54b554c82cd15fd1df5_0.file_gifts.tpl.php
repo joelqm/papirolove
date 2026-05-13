@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-13 00:19:23
+/* Smarty version 5.5.1, created on 2026-05-13 09:41:00
   from 'file:views/zelmaysamuel/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a0409dbe1e0c1_69304990',
+  'unifunc' => 'content_6a048d7c9f7961_90008155',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27f5d78651d9701411adf54b554c82cd15fd1df5' => 
     array (
       0 => 'views/zelmaysamuel/components/gifts.tpl',
-      1 => 1778649517,
+      1 => 1778683253,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a0409dbe1e0c1_69304990 (\Smarty\Template $_smarty_tpl) {
+function content_6a048d7c9f7961_90008155 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><div class="container" id="gifts" style="background: #eed179;color: #d86f2c !important;">
     <div class="gift-section" data-aos="fade-up">
@@ -38,12 +38,11 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
         <p class="gift-title">Obsequios</p>
         <br>
 
-        <p class="text-body" >
+        <p class="text-body gifts-text">
             Si deseas hacernos llegar un obsequio lo puedes a hacer a través de:
-
         </p>
 
-        <p class="text-body">Cuenta ahorros soles Bcp<br>
+        <p class="text-body gifts-text">Cuenta ahorros soles Bcp<br>
             193-95058908-0-97<br>
             CCI: 00219319505890809712
         </p>

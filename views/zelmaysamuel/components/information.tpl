@@ -43,7 +43,7 @@
     <!-- Cóctel de Bienvenida -->
     <div class="location-card" data-aos="fade-up">
       <div class="location-icon">
-        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/coctel.png" alt="Cóctel de Bienvenida" width="120px">
+        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/ceremonia.png" alt="Ceremonia" width="120px">
       </div>
       <p class="location-address" style="margin-bottom: -5px; font-weight: bold; font-size: 1.3rem;">31/07/26</p>
       <h3 class="location-type">Cóctel de Bienvenida</h3>
@@ -65,7 +65,7 @@
 
     <div class="location-card" data-aos="fade-up">
       <div class="location-icon">
-        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/ceremonia.png" alt="Ceremonia" width="120px">
+        <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/coctel.png" alt="Cóctel de Bienvenida" width="120px">
       </div>
       <h3 class="location-type">Ceremonia</h3>
       <p class="location-address">Parroquia San Lázaro</p>
