@@ -89,7 +89,7 @@
 /*solicita tu web*/
 
 .whatsapp-button {
-text-decoration: none;
+    text-decoration: none;
     color: #06bd3d;
     z-index: 5000;
     position: fixed;
@@ -436,8 +436,6 @@ body {
     color: white;
     font-family: "Qafinte";
 }
-
-
 
 .countdown-number {
     font-size: 40px;
@@ -787,6 +785,7 @@ body {
     font-weight: normal;
     color: #d86f2c;
     -webkit-text-stroke: 0.5px #d86f2c;
+
 }
 
 .history-title-small {
@@ -798,6 +797,7 @@ body {
     font-weight: normal;
     color: #fff;
     line-height: 80px;
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .history-title-big {
@@ -873,6 +873,7 @@ body {
     font-size: 3.5rem;
     white-space: nowrap;
     color: #d86f2c;
+    -webkit-text-stroke: 0.5px #d86f2c;
 }
 
 
@@ -973,6 +974,7 @@ body {
     .gifts-text {
         top: -40px;
         position: relative;
+
     }
 
     .invitation-message {
@@ -1137,7 +1139,7 @@ body {
     font-size: 2.4rem !important;
     margin: 0px 0 !important;
     color: #fff !important;
-
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 .location-button svg {
@@ -1407,12 +1409,14 @@ body {
     font-size: 3.5rem;
     color: #d86f2c;
     text-decoration: none;
+    -webkit-text-stroke: 0.5px #d86f2c;
 }
 
 @media (max-width: 768px) {
     .gift-section .big {
         font-size: 2.5rem;
     }
+
     .gift-section .date {
         font-size: 2.2rem !important;
         padding: 1.5rem 0rem !important;
@@ -2215,7 +2219,8 @@ textarea.form-control {
     align-items: center;
 }
 
-.location-icon img, .location-icon svg {
+.location-icon img,
+.location-icon svg {
     width: 120px;
     height: auto;
     margin-bottom: 0px;
@@ -2261,7 +2266,7 @@ textarea.form-control {
         grid-template-columns: 1fr !important;
         gap: 60px;
     }
-    
+
     .location-type {
         font-size: 2.4rem !important;
     }

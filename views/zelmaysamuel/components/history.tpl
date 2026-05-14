@@ -1,3 +1,17 @@
+<style>
+    img.paisley-image {
+        width: 236px;
+        float: inline-start;
+    }
+
+    @media (max-width: 992px) {
+        img.paisley-image {
+            width: 100%;
+            float: inline-start;
+        }
+    }
+</style>
+
 <div class="container-history" id="new-history">
 
     <div class="section">
@@ -22,6 +36,10 @@
             (porque si Paisley no aprobaba,
             no había nada que hacer).
             <br>
+
+            <img src="{$_layoutParams.root}views/zelmaysamuel/imgs/img_zelma_01.png" alt="Paisley"
+                class="paisley-image">
+
             Han recorrido caminos juntos cerca
             y lejos, han llenado sus días
             de aventuras, de naturaleza y

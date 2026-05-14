@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-12 21:41:38
+/* Smarty version 5.5.1, created on 2026-05-14 08:45:24
   from 'file:views/zelmaysamuel/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a03e4e28d03a2_67133151',
+  'unifunc' => 'content_6a05d1f406a7b0_22218934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6dbc6d4bc0da4a57eb75d0931c19fc0fdb1107ce' => 
     array (
       0 => 'views/zelmaysamuel/components/history.tpl',
-      1 => 1778640058,
+      1 => 1778766312,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,23 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a03e4e28d03a2_67133151 (\Smarty\Template $_smarty_tpl) {
+function content_6a05d1f406a7b0_22218934 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
-?><div class="container-history" id="new-history">
+?><style>
+    img.paisley-image {
+        width: 236px;
+        float: inline-start;
+    }
+
+    @media (max-width: 992px) {
+        img.paisley-image {
+            width: 100%;
+            float: inline-start;
+        }
+    }
+</style>
+
+<div class="container-history" id="new-history">
 
     <div class="section">
         <div class="history-title" data-aos="fade-up">
@@ -46,6 +60,11 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\compo
             (porque si Paisley no aprobaba,
             no había nada que hacer).
             <br>
+
+            <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/zelmaysamuel/imgs/img_zelma_01.png" alt="Paisley"
+                class="paisley-image">
+
             Han recorrido caminos juntos cerca
             y lejos, han llenado sus días
             de aventuras, de naturaleza y
