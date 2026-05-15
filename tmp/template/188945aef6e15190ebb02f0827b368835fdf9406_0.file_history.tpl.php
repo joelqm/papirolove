@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-14 12:47:59
+/* Smarty version 5.5.1, created on 2026-05-15 11:27:32
   from 'file:views/paolaymiguel/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a060acfee3e37_07477659',
+  'unifunc' => 'content_6a074974893bf0_71357981',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '188945aef6e15190ebb02f0827b368835fdf9406' => 
     array (
       0 => 'views/paolaymiguel/components/history.tpl',
-      1 => 1778780698,
+      1 => 1778862392,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a060acfee3e37_07477659 (\Smarty\Template $_smarty_tpl) {
+function content_6a074974893bf0_71357981 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><section class="history-section">
 
@@ -73,6 +73,10 @@ views/paolaymiguel/imgs/preboda-2.webp" alt="Foto de la pareja"
 views/paolaymiguel/imgs/preboda-1.webp" alt="Pareja en las vías del tren"
                 class="rectangular-image">
         </div>
+
+
+
+
 
     </div>
 

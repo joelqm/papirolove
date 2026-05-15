@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-14 10:17:15
+/* Smarty version 5.5.1, created on 2026-05-15 12:58:36
   from 'file:views/paolaymiguel/components/galery.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a05e77b4e72a4_14980127',
+  'unifunc' => 'content_6a075ecc3933c4_78603263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1740a3300b65c2910548e5754dc5617b9c4534d' => 
     array (
       0 => 'views/paolaymiguel/components/galery.tpl',
-      1 => 1778771790,
+      1 => 1778867851,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a05e77b4e72a4_14980127 (\Smarty\Template $_smarty_tpl) {
+function content_6a075ecc3933c4_78603263 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><section class="galery" id="galery">
     <div class="container-galery">
@@ -33,6 +33,21 @@ views/paolaymiguel/imgs/preboda.webp" alt="Imagen 2">
             </div>
             <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
 views/paolaymiguel/imgs/preboda-2.webp" alt="Imagen 3">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/paolaymiguel/imgs/preboda-3.webp" alt="Imagen 4">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/paolaymiguel/imgs/preboda-4.webp" alt="Imagen 5">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/paolaymiguel/imgs/preboda-5.webp" alt="Imagen 6">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/paolaymiguel/imgs/preboda-6.webp" alt="Imagen 7">
+            </div>
+            <div class="item"><img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/paolaymiguel/imgs/preboda-7.webp" alt="Imagen 7">
             </div>
         </div>
     </div>

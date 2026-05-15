@@ -587,6 +587,7 @@ body {
     font-size: 2.5rem;
     font-weight: normal;
     color: var(--secondary-color);
+    -webkit-text-stroke: 0.5px var(--secondary-color);
 }
 
 .history-title-small-3 {
@@ -595,6 +596,7 @@ body {
     font-size: 1.5rem;
     font-weight: normal;
     color: var(--secondary-color);
+    -webkit-text-stroke: 0.5px var(--secondary-color);
 }
 
 .detalle-nombre {
@@ -676,6 +678,7 @@ body {
     align-items: center;
 }
 
+/*
 .circular-image {
     position: relative;
     width: 200px;
@@ -697,6 +700,33 @@ body {
     object-fit: cover;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+*/
+
+.circular-image {
+    position: relative;
+    width: 250px;
+    height: 340px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    transform: rotate(6deg);
+    border: 10px solid #B4B29E;
+    top: -160px;
+    left: 50px;
+}
+
+.rectangular-image {
+    position: absolute;
+    top: 160px;
+    left: 70px;
+    z-index: 1;
+    width: 250px;
+    height: 340px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: rotate(-6deg);
+    border: 10px solid #B4B29E;
+}
 
 /* -------------------------------------------------------------------------- */
 
@@ -710,12 +740,39 @@ body {
     flex-direction: column;
     gap: 1.4rem;
     border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.invitation-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url('../imgs/background-flowers.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: center;
+    z-index: -2;
+}
+
+.invitation-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(240, 234, 218, 0.7);
+    /* Capa beige con transparencia */
+    backdrop-filter: blur(0px);
+    /* Efecto de difuminado */
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
 }
 
 .pigeon svg {
@@ -766,6 +823,7 @@ body {
     color: var(--secondary-color);
     font-size: 1.5rem;
     font-family: "CaviarDreams";
+    -webkit-text-stroke: 0.5px var(--secondary-color);
 }
 
 .parents {
@@ -846,7 +904,7 @@ body {
 .location-type {
     font-family: "KarenaSerif";
     color: #474641;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: normal;
 }
@@ -854,9 +912,9 @@ body {
 .location-address {
     font-family: "CaviarDreams";
     color: #474641;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 10px;
-    font-weight: bold;
+    -webkit-text-stroke: 0.5px #474641;
 }
 
 .location-time {
@@ -887,20 +945,49 @@ body {
 /* -------------------------------------------------------------------------- */
 
 /* ===== 11. DRESSCODE SECTION (Código de vestimenta) ===== */
-.container-dresscode {
-    /* background: none; */
-    padding: 3rem 0rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    background-image: url(../imgs/background-flowers.webp);
+.container-dresscode {
+    background-color: #f0eada;
+    padding: 80px 20px;
+    display: flex;
+    position: relative;
+    color: #474641;
+    flex-direction: column;
+    gap: 1.4rem;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container-dresscode::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imgs/background-flowers.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: center;
+    z-index: -2;
+}
+
+.container-dresscode::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(240, 234, 218, 0.7);
+    /* Capa beige con transparencia */
+    backdrop-filter: blur(0px);
+    /* Efecto de difuminado */
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
 }
 
 .dresscode-title {
@@ -1101,21 +1188,49 @@ body {
 /* ===== 13. GIFTS & ATTENDANCE SECTION (Regalos y Asistencia) ===== */
 
 /* Contenedor principal de Asistencia */
+
 .attendace-container {
-    background: #f0eada;
-    padding: 60px 20px;
+    background-color: #f0eada;
+    padding: 80px 20px;
     display: flex;
-    gap: 3rem;
+    position: relative;
+    color: #474641;
     flex-direction: column;
-    align-items: center;
-    background-image: url(../imgs/background-flowers.webp);
+    gap: 1.4rem;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.attendace-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imgs/background-flowers.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    text-align: center;
-    color: #fff;
-    z-index: 1;
+    z-index: -2;
+}
+
+.attendace-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(240, 234, 218, 0.7);
+    /* Capa beige con transparencia */
+    backdrop-filter: blur(0px);
+    /* Efecto de difuminado */
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
 }
 
 .button-3 {
@@ -2188,6 +2303,7 @@ footer {
 @media (max-width: 1024px) {
 
     .invitation-card,
+    .invitation-card::before,
     .container-dresscode,
     .attendace-container {
         background-attachment: scroll !important;
@@ -2195,4 +2311,5 @@ footer {
         background-position: center center;
         background-size: cover;
     }
+
 }

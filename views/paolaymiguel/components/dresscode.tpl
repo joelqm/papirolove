@@ -1,4 +1,7 @@
 <div class="container-dresscode" id="dresscode">
+
+    <div class="invitation-pattern"></div>
+
     <div class="dresscode-title" data-aos="fade-up">
         <!-- <h1 class="gift-title-small">Código de Vestimenta</h1> -->
         <h2 class="gift-title-big">Código de Vestimenta</h2>
@@ -80,4 +83,5 @@
         </div> -->
 
     </div>
+
 </div>

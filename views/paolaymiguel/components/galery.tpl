@@ -7,6 +7,16 @@
             </div>
             <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-2.webp" alt="Imagen 3">
             </div>
+            <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-3.webp" alt="Imagen 4">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-4.webp" alt="Imagen 5">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-5.webp" alt="Imagen 6">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-6.webp" alt="Imagen 7">
+            </div>
+            <div class="item"><img src="{$_layoutParams.root}views/paolaymiguel/imgs/preboda-7.webp" alt="Imagen 7">
+            </div>
         </div>
     </div>
 </section>

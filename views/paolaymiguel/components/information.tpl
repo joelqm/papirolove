@@ -10,37 +10,31 @@
   <div class="couple">
 
     <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>César Ibarra Zavala &</p>
-      <p>Yane Hernani Tapia</p>
+      <p>Manuel Hinojosa Uchofen &</p>
+      <p>Ruby Chirinos de Hinojosa</p>
     </div>
 
     <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>Edgar Valladares Velasquez &</p>
-      <p>Marcia Caceres Arroyo</p>
+      <p>Vidal Chávez Lipa &</p>
+      <p>Daysi Toledo de Chávez</p>
     </div>
 
   </div>
 
+  <h1 class="history-title-small-3">Nuestros padrinos</h1>
 
-  <!-- <div class="couple">
-
-    <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>PADRINOS DE RELIGIOSO</p><br>
-      <p>EDGAR CHAVEZ MEJIA &amp;</p>
-      <p>ADA ZUÑIGA GONZALES</p>
-    </div>
+  <div class="couple">
 
     <div data-aos="fade-up" class="text-invitation-secondary aos-init aos-animate">
-      <p>PADRINO DE AROS</p><br>
-      <p>JOSE ZUÑIGA GONZALES</p>
+      <p>Armando Rafael Llaza Loayza</p>
+      <p>& Maria Del Pilar Corrales De Llaza</p>
     </div>
 
-  </div> -->
+  </div>
 
-  <h1 class="history-title-small-3">
-    Deseamos compartir con ustedes la alegría de
-    nuestro matrimonio.
-  </h1>
+  <h1 class="history-title-small-3">Los esperamos para celebrar juntos el inicio de nuestra nueva vida.<br> ¡Nuestro
+    matrimonio!</h1>
+
 
 
   <div class="history-title aos-init aos-animate" data-aos="fade-up" style="margin-bottom: -4rem;">
@@ -84,11 +78,11 @@
         </svg>
       </div>
       <h3 class="location-type">CEREMONIA</h3>
-      <p class="location-address">Parroquia “San Juan Bautista”</p>
-      <p class="location-address">Cta del Ángel 4, Yanahuara</p>
+      <p class="location-address">Parroquia “San Pedro del Solar”</p>
+      <p class="location-address">Callejón del Solar - Cercado</p>
       <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">1:00 pm</p>
-      <a target="_blank" href="https://share.google/2iJwBtqO6mFFF21mB" class="location-button">
+      <p class="location-time">11:30 am</p>
+      <a target="_blank" href="https://maps.app.goo.gl/1MhPdkAPCjW3DLH46" class="location-button">
         <svg fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -139,11 +133,11 @@
           </svg></span>
       </div>
       <h3 class="location-type">RECEPCIÓN</h3>
-      <p class="location-address">Molino Blanco</p>
-      <p class="location-address">Alameda San Lázaro 137, Cercado</p>
+      <p class="location-address">Mansión Ugarteche</p>
+      <p class="location-address">Calle Manuel Ugarteche 313, Cercado</p>
       <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">3:00 pm</p>
-      <a target="_blank" href="https://share.google/nmlrFtEzoVupsfdlM" class="location-button"> <svg fill="#fff"
+      <p class="location-time">1:30 pm</p>
+      <a target="_blank" href="https://maps.app.goo.gl/uhssfu97cdLhzJsw7" class="location-button"> <svg fill="#fff"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
