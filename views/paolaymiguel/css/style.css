@@ -82,6 +82,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'KarenaSerif';
+    src: url("../fonts/KarenaSerif.otf") format("opentype");
+    font-display: swap;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
@@ -223,7 +229,7 @@ body {
 }
 
 .text-elige-un-obsequio {
-    font-family: "KarenaSerif";
+    font-family: "CaviarDreams";
     color: #474641;
     font-size: 1.1rem;
     margin-bottom: 10px;
@@ -626,13 +632,14 @@ body {
 }
 
 .text-body {
-    font-family: "Baskervville-Regular";
+    font-family: "CaviarDreams";
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: #474641;
     text-align: center;
     line-height: 1.6;
     max-width: 500px;
+    -webkit-text-stroke: 0.5px #474641;
 }
 
 .text-body-2 {
@@ -907,6 +914,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: normal;
+    -webkit-text-stroke: 0.5px #474641;
 }
 
 .location-address {
@@ -1210,7 +1218,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../imgs/background-flowers.webp');
+    background-image: url('../imgs/background-flowers-4.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1304,7 +1312,7 @@ body {
 }
 
 .gift-couple-name {
-    font-family: "Bellisia";
+    font-family: "photograph_signature";
     font-size: 4rem;
     white-space: nowrap;
     color: var(--accent);
@@ -2170,13 +2178,18 @@ footer {
     }
 
     .circular-image {
-        top: -10%;
-        right: -20%;
+        top: -20% !important;
+        right: 0% !important;
+        width: 200px;
+        height: auto;
     }
 
     .rectangular-image {
-        bottom: -9%;
-        right: -25%;
+        bottom: -9% !important;
+        right: -25% !important;
+        width: 200px;
+        height: auto;
+        top: 50%;
     }
 
     .gift-title-small {
@@ -2294,6 +2307,11 @@ footer {
 
     .gift-section .text {
         font-size: 1.2rem;
+    }
+
+
+    .font-photograph_signature {
+        font-size: 3.7rem !important;
     }
 
 }

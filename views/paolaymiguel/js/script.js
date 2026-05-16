@@ -209,7 +209,7 @@ function crearEventoEnGoogleCalendar() {
   */
 
 
-  const url = `https://calendar.app.google/9TK6ehnkoWAf5wJ46`;
+  const url = ` https://calendar.app.google/zczFG7mif3uBDGfCA`;
 
   window.open(url, "_blank");
 }

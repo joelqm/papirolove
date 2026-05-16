@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-14 10:17:15
+/* Smarty version 5.5.1, created on 2026-05-16 11:56:26
   from 'file:views/paolaymiguel/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a05e77b4f6893_48013565',
+  'unifunc' => 'content_6a08a1bae72b84_10789205',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2cd02248f817ada9173ac4995a8a09dc796d391' => 
     array (
       0 => 'views/paolaymiguel/components/gifts.tpl',
-      1 => 1778771815,
+      1 => 1778950565,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a05e77b4f6893_48013565 (\Smarty\Template $_smarty_tpl) {
+function content_6a08a1bae72b84_10789205 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -40,11 +40,15 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\compo
             ELIGE UN OBSEQUIO PARA
         </p>
 
-        <!-- <p class="gift-couple-name">Paola & Miguel</p> -->
+        <p class="gift-couple-name">Paola & Miguel</p>
 
-        <img style="margin:25px 0px;" class="history-logo" src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/paolaymiguel/imgs/logo.webp"
-            alt="logo">
+
+        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+            <b>BCP:</b> <br>
+            215-26535823-0-57 <br><br>
+            <b>CCI:</b> <br>
+            00221512653582305729
+        </p>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -58,7 +62,9 @@ views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
                 style="width: 100px;">
         </div>
 
-        <p class="text-body-2">Todas tus transacciones son 100% seguras</p>
+        <p class="text-body-2">
+            Todas tus transacciones son 100% seguras
+        </p>
 
     </div>
     <div style="" data-aos="fade-up">

@@ -16,10 +16,15 @@
             ELIGE UN OBSEQUIO PARA
         </p>
 
-        <!-- <p class="gift-couple-name">Paola & Miguel</p> -->
+        <p class="gift-couple-name">Paola & Miguel</p>
 
-        <img style="margin:25px 0px;" class="history-logo" src="{$_layoutParams.root}views/paolaymiguel/imgs/logo.webp"
-            alt="logo">
+
+        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+            <b>BCP:</b> <br>
+            215-26535823-0-57 <br><br>
+            <b>CCI:</b> <br>
+            00221512653582305729
+        </p>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -31,7 +36,9 @@
                 style="width: 100px;">
         </div>
 
-        <p class="text-body-2">Todas tus transacciones son 100% seguras</p>
+        <p class="text-body-2">
+            Todas tus transacciones son 100% seguras
+        </p>
 
     </div>
     <div style="" data-aos="fade-up">
