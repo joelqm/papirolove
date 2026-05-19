@@ -7,7 +7,7 @@
 
     <div class="dresscode-content">
         <div class="text-body" style="width: auto;">
-            <span class="font-KarenaSerif" style="display: inline;font-size: 1.7rem;">FORMAL ELEGANTE</span><br>
+            <span class="font-KarenaSerif" style="display: inline;font-size: 1.5rem;">FORMAL ELEGANTE</span><br>
         </div>
 
         <!-- <div class="right-section" data-aos="fade-up">

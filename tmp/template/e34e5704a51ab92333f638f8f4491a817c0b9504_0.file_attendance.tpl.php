@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-16 12:02:57
+/* Smarty version 5.5.1, created on 2026-05-19 11:04:15
   from 'file:views/paolaymiguel/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a08a34184d622_24453468',
+  'unifunc' => 'content_6a0c89ff70fe08_52908750',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e34e5704a51ab92333f638f8f4491a817c0b9504' => 
     array (
       0 => 'views/paolaymiguel/components/attendance.tpl',
-      1 => 1778950975,
+      1 => 1779206654,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a08a34184d622_24453468 (\Smarty\Template $_smarty_tpl) {
+function content_6a0c89ff70fe08_52908750 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><div class="attendace-container" id="dresscode">
 
@@ -31,7 +31,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\compo
 
     <div class="dresscode-content">
         <div class="text-body" style="width: auto;">
-            <span class="font-KarenaSerif" style="display: inline;font-size: 1.7rem;">FORMAL ELEGANTE</span><br>
+            <span class="font-KarenaSerif" style="display: inline;font-size: 1.5rem;">FORMAL ELEGANTE</span><br>
         </div>
 
         <!-- <div class="right-section" data-aos="fade-up">

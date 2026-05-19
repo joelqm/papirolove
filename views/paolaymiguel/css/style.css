@@ -585,6 +585,7 @@ body {
     font-size: 18px;
     font-weight: normal;
     color: var(--secondary-color);
+    -webkit-text-stroke: 0.5px var(--secondary-color);
 }
 
 .history-title-small-2 {
@@ -592,15 +593,12 @@ body {
     margin-bottom: 0rem;
     font-size: 2.5rem;
     font-weight: normal;
-    color: var(--secondary-color);
-    -webkit-text-stroke: 0.5px var(--secondary-color);
 }
 
 .history-title-small-3 {
     font-family: "CaviarDreams";
     margin-bottom: 0rem;
     font-size: 1.5rem;
-    font-weight: normal;
     color: var(--secondary-color);
     -webkit-text-stroke: 0.5px var(--secondary-color);
 }
@@ -778,7 +776,7 @@ body {
     /* Capa beige con transparencia */
     backdrop-filter: blur(0px);
     /* Efecto de difuminado */
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(0px);
     z-index: -1;
 }
 
@@ -994,7 +992,7 @@ body {
     /* Capa beige con transparencia */
     backdrop-filter: blur(0px);
     /* Efecto de difuminado */
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(0px);
     z-index: -1;
 }
 
@@ -2215,6 +2213,7 @@ footer {
     .couple,
     .locations {
         flex-direction: column;
+        gap: 1rem;
     }
 
     /* Dresscode Section */
@@ -2302,16 +2301,25 @@ footer {
     }
 
     .text-invitation-secondary {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .gift-section .text {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        color: var(--secondary-color);
+        -webkit-text-stroke: 0.5px var(--secondary-color);
     }
-
 
     .font-photograph_signature {
         font-size: 3.7rem !important;
+
+    }
+
+    .history-title-small-3 {
+        font-weight: normal;
+        font-size: 1.3rem !important;
+        color: var(--secondary-color);
+        -webkit-text-stroke: 0.5px var(--secondary-color);
     }
 
 }
@@ -2328,6 +2336,7 @@ footer {
         /* Desactiva el modo fijo que causa el error */
         background-position: center center;
         background-size: cover;
+        /* backdrop-filter: blur(0px); */
     }
 
 }

@@ -28,7 +28,7 @@ class paolaymiguelController extends Controller
 		$this->_dt = $this->loadModel('dataTable');
 
 		// TODO: actualizar al ID real (tbl_sede) de Fernanda y Rommel
-		$this->_key = 3;
+		$this->_key = 4;
 	}
 
 
