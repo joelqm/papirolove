@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-16 11:56:26
+/* Smarty version 5.5.1, created on 2026-05-19 21:48:05
   from 'file:views/paolaymiguel/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a08a1bae72b84_10789205',
+  'unifunc' => 'content_6a0d20e5acc620_78469235',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2cd02248f817ada9173ac4995a8a09dc796d391' => 
     array (
       0 => 'views/paolaymiguel/components/gifts.tpl',
-      1 => 1778950565,
+      1 => 1779245283,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a08a1bae72b84_10789205 (\Smarty\Template $_smarty_tpl) {
+function content_6a0d20e5acc620_78469235 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><div class="gift-container" id="gifts">
     <div class="gift-section" data-aos="fade-up">
@@ -42,8 +42,9 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\compo
 
         <p class="gift-couple-name">Paola & Miguel</p>
 
+        <p class="gift-transfer-label ">TRANSFERENCIA</p>
 
-        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+        <p class="text-elige-un-obsequio gift-transfer-cuenta">
             <b>BCP:</b> <br>
             215-26535823-0-57 <br><br>
             <b>CCI:</b> <br>
@@ -67,6 +68,10 @@ views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
         </p>
 
     </div>
+
+
+    <p class="gift-transfer-label">COLECTIVO VIRTUAL</p>
+
     <div style="" data-aos="fade-up">
 
 
@@ -84,5 +89,37 @@ views/layout/neela/images/cards.png" alt="Logotipo de Izipay"
             </main>
         </div>
     </div>
-</div><?php }
+</div>
+
+
+<style>
+    .gift-transfer-label {
+        display: inline-block;
+        background: #444440;
+        color: #fff;
+        font-family: "Forum";
+        font-size: 1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.55rem 2rem;
+        border-radius: 50px;
+        margin: 20px 0 12px;
+    }
+    .gift-transfer-cuenta {
+        font-size: 1.2rem;
+        margin: 0 0 20px;
+    }
+    @media (max-width: 480px) {
+        .gift-transfer-label {
+            font-size: 0.85rem;
+            padding: 0.5rem 1.4rem;
+            letter-spacing: 1.5px;
+        }
+        .gift-transfer-cuenta {
+            font-size: 1rem;
+        }
+    }
+</style>
+<?php }
 }

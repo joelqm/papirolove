@@ -18,8 +18,9 @@
 
         <p class="gift-couple-name">Paola & Miguel</p>
 
+        <p class="gift-transfer-label ">TRANSFERENCIA</p>
 
-        <p class="text-elige-un-obsequio" style="font-size: 1.2rem;margin:20px 0px;">
+        <p class="text-elige-un-obsequio gift-transfer-cuenta">
             <b>BCP:</b> <br>
             215-26535823-0-57 <br><br>
             <b>CCI:</b> <br>
@@ -41,6 +42,10 @@
         </p>
 
     </div>
+
+
+    <p class="gift-transfer-label">COLECTIVO VIRTUAL</p>
+
     <div style="" data-aos="fade-up">
 
 
@@ -59,3 +64,35 @@
         </div>
     </div>
 </div>
+
+{literal}
+<style>
+    .gift-transfer-label {
+        display: inline-block;
+        background: #444440;
+        color: #fff;
+        font-family: "Forum";
+        font-size: 1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.55rem 2rem;
+        border-radius: 50px;
+        margin: 20px 0 12px;
+    }
+    .gift-transfer-cuenta {
+        font-size: 1.2rem;
+        margin: 0 0 20px;
+    }
+    @media (max-width: 480px) {
+        .gift-transfer-label {
+            font-size: 0.85rem;
+            padding: 0.5rem 1.4rem;
+            letter-spacing: 1.5px;
+        }
+        .gift-transfer-cuenta {
+            font-size: 1rem;
+        }
+    }
+</style>
+{/literal}

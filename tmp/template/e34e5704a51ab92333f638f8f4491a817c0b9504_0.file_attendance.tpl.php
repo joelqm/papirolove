@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-05-19 11:04:15
+/* Smarty version 5.5.1, created on 2026-05-19 20:42:16
   from 'file:views/paolaymiguel/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a0c89ff70fe08_52908750',
+  'unifunc' => 'content_6a0d1178629e31_41766644',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e34e5704a51ab92333f638f8f4491a817c0b9504' => 
     array (
       0 => 'views/paolaymiguel/components/attendance.tpl',
-      1 => 1779206654,
+      1 => 1779240628,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a0c89ff70fe08_52908750 (\Smarty\Template $_smarty_tpl) {
+function content_6a0d1178629e31_41766644 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\paolaymiguel\\components';
 ?><div class="attendace-container" id="dresscode">
 
@@ -87,7 +87,7 @@ views/paolaymiguel/imgs/varones.webp" alt="" width="120" height="120">
 
         <h3 class="date">26.06.2026</h3>
 
-        <a href="#" class="button-3">
+        <a href="https://wa.link/cdil9z" class="button-3">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="button-3-svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

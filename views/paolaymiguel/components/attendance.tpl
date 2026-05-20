@@ -61,7 +61,7 @@
 
         <h3 class="date">26.06.2026</h3>
 
-        <a href="#" class="button-3">
+        <a href="https://wa.link/cdil9z" class="button-3">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="button-3-svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
