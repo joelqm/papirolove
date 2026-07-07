@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-04-22 09:40:52
+/* Smarty version 5.5.1, created on 2026-07-03 09:38:07
   from 'file:views/zelmaysamuel/components/loader.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_69e8ddf42df069_73335460',
+  'unifunc' => 'content_6a47c94f962357_25465787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1cb74e6a0e093374051954452dda72f2eab7c3d3' => 
     array (
       0 => 'views/zelmaysamuel/components/loader.tpl',
-      1 => 1776868532,
+      1 => 1778774047,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_69e8ddf42df069_73335460 (\Smarty\Template $_smarty_tpl) {
+function content_6a47c94f962357_25465787 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\zelmaysamuel\\components';
 ?><div id="loader" class="palpita">
 
