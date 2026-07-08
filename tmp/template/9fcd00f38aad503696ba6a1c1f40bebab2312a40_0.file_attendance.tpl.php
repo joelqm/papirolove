@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 11:59:25
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d306d4af748_93132766',
+  'unifunc' => 'content_6a4e5c955b77c0_08737274',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fcd00f38aad503696ba6a1c1f40bebab2312a40' => 
     array (
       0 => 'views/jesykaygustavo/components/attendance.tpl',
-      1 => 1783443562,
+      1 => 1783520377,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d306d4af748_93132766 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c955b77c0_08737274 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
   #attendance.attendace-container {
@@ -42,28 +42,31 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #attendance .attendance-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 0 16px;
+    line-height: 1.15;
   }
 
   #attendance .attendance-text {
     font-family: 'Humanist521';
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     color: #293E59;
     margin: 0 0 8px;
     max-width: 340px;
+    line-height: 1.5;
     -webkit-text-stroke: 0;
   }
 
   #attendance .attendance-date {
     font-family: 'Humanist521';
-    font-size: 2.4rem;
+    font-size: var(--fs-subtitle);
     color: #293E59;
     letter-spacing: 3px;
     margin: 0 0 24px;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   #attendance .attendance-button {
@@ -74,7 +77,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
     border-radius: 50px;
     text-decoration: none;
     font-family: 'Noteworthy';
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     transition: background-color 0.3s, transform 0.2s;
     margin-bottom: 28px;
@@ -88,7 +91,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #attendance .attendance-note {
     font-family: 'Humanist521';
-    font-size: 1rem;
+    font-size: var(--fs-body-note);
     color: #293E59;
     max-width: 360px;
     line-height: 1.5;
@@ -97,12 +100,30 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
   }
 
   @media (max-width: 992px) {
+    #attendance.attendace-container {
+      padding: 24px 16px 50px;
+    }
+
     #attendance .attendance-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #attendance .attendance-text {
+      font-size: var(--fs-body-sm);
     }
 
     #attendance .attendance-date {
-      font-size: 1.9rem;
+      font-size: var(--fs-subtitle-sm);
+    }
+
+    #attendance .attendance-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
+    }
+
+    #attendance .attendance-note {
+      font-size: var(--fs-body-note-sm);
+      padding: 0 8px;
     }
   }
 </style>
@@ -118,7 +139,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
     <h3 class="attendance-date">01.08.26</h3>
 
-    <a href="https://wa.link/2lr0yv" target="_blank" class="attendance-button">
+    <a href="https://wa.link/pby5al" target="_blank" class="attendance-button">
       Confirma Aquí
     </a>
 

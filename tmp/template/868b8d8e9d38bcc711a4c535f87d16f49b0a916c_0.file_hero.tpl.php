@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 11:30:51
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/hero.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d29bbac4507_26561940',
+  'unifunc' => 'content_6a4e5c953ea1c3_83281895',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '868b8d8e9d38bcc711a4c535f87d16f49b0a916c' => 
     array (
       0 => 'views/jesykaygustavo/components/hero.tpl',
-      1 => 1783436416,
+      1 => 1783520349,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d29bbac4507_26561940 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c953ea1c3_83281895 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
     .container-page {
@@ -61,38 +61,47 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
     .monogram-logo {
         width: 120px;
         height: auto;
-
     }
 
-    /* Media Query para Tablets y Celulares */
     @media (max-width: 992px) {
+        .hero-content {
+            padding: 48px 16px 36px;
+        }
+
         .couple-name {
-            font-size: 1.8rem;
+            font-size: var(--fs-hero-name-sm);
         }
 
         .wedding-date-2 {
-            font-size: 1.9rem;
+            font-size: var(--fs-hero-date-sm);
         }
 
         .monogram-logo {
-            width: 120px;
+            width: 100px;
         }
 
         .menu {
             flex-direction: column;
             display: none;
-            /* Se activaría con tu JS del hamburguesa */
+        }
+
+        .button-calendar {
+            font-size: var(--fs-button-sm);
+            padding: 10px 22px;
         }
     }
 
-    /* Ajuste extra para celulares muy pequeños */
     @media (max-width: 480px) {
         .couple-name {
-            font-size: 1.9rem;
+            font-size: 2rem;
         }
 
         .wedding-date-2 {
-            font-size: 1.6rem;
+            font-size: 1.45rem;
+        }
+
+        .monogram-logo {
+            width: 90px;
         }
     }
 </style>

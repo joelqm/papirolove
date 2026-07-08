@@ -142,11 +142,15 @@
   #new-history .history-title-big {
     font-family: 'CastelaMolgate';
     color: #293E59;
+    font-size: var(--fs-section-title);
+    line-height: 1.15;
   }
 
   #new-history .text-body {
     font-family: 'Humanist521';
     color: #293E59;
+    font-size: var(--fs-body);
+    line-height: 1.55;
     -webkit-text-stroke: 0;
   }
 
@@ -203,6 +207,10 @@
       top: 0;
     }
 
+    .song-card-title {
+      font-size: 1.2rem;
+    }
+
     .decor-left,
     .decor-right {
       width: 32%;
@@ -220,6 +228,27 @@
     .novios-image {
       max-width: 320px;
       top: 0;
+    }
+
+    #new-history .history-title-big {
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #new-history .text-body {
+      font-size: var(--fs-body-sm);
+      padding: 0 8px;
+    }
+
+    .countdown-wrapper .wedding-date {
+      font-size: 1.3rem;
+    }
+
+    .countdown-wrapper .countdown-number {
+      font-size: 18px;
+    }
+
+    .countdown-wrapper .countdown-label {
+      font-size: 12px;
     }
 
   }

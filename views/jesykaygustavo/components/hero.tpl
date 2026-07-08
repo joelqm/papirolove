@@ -37,38 +37,47 @@
     .monogram-logo {
         width: 120px;
         height: auto;
-
     }
 
-    /* Media Query para Tablets y Celulares */
     @media (max-width: 992px) {
+        .hero-content {
+            padding: 48px 16px 36px;
+        }
+
         .couple-name {
-            font-size: 1.8rem;
+            font-size: var(--fs-hero-name-sm);
         }
 
         .wedding-date-2 {
-            font-size: 1.9rem;
+            font-size: var(--fs-hero-date-sm);
         }
 
         .monogram-logo {
-            width: 120px;
+            width: 100px;
         }
 
         .menu {
             flex-direction: column;
             display: none;
-            /* Se activaría con tu JS del hamburguesa */
+        }
+
+        .button-calendar {
+            font-size: var(--fs-button-sm);
+            padding: 10px 22px;
         }
     }
 
-    /* Ajuste extra para celulares muy pequeños */
     @media (max-width: 480px) {
         .couple-name {
-            font-size: 1.9rem;
+            font-size: 2rem;
         }
 
         .wedding-date-2 {
-            font-size: 1.6rem;
+            font-size: 1.45rem;
+        }
+
+        .monogram-logo {
+            width: 90px;
         }
     }
 </style>

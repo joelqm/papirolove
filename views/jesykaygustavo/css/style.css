@@ -98,6 +98,21 @@
     --text-color: #787D63;
     --transition-duration: 0.3s;
     --text-color-light: #fff;
+    /* Escala tipográfica uniforme */
+    --fs-section-title: 3.2rem;
+    --fs-section-title-sm: 2.15rem;
+    --fs-subtitle: 2.2rem;
+    --fs-subtitle-sm: 1.7rem;
+    --fs-body: 1.15rem;
+    --fs-body-sm: 1.05rem;
+    --fs-body-note: 1rem;
+    --fs-body-note-sm: 0.95rem;
+    --fs-button: 16px;
+    --fs-button-sm: 15px;
+    --fs-hero-name: 2.8rem;
+    --fs-hero-name-sm: 2.2rem;
+    --fs-hero-date: 2rem;
+    --fs-hero-date-sm: 1.6rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -335,7 +350,7 @@ body {
 
 .couple-name {
     font-family: 'CastelaMolgate';
-    font-size: 2.8rem;
+    font-size: var(--fs-hero-name);
     margin: 0;
     color: #293E59 !important;
     text-align: center;
@@ -379,7 +394,7 @@ body {
     font-family: 'Humanist521';
     font-weight: normal;
     color: #293E59;
-    font-size: 2rem;
+    font-size: var(--fs-hero-date);
     letter-spacing: 3px;
     margin-top: 14px;
 }
@@ -456,7 +471,7 @@ body {
     color: #f9f4ef;
     margin-top: 25px;
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     padding: 12px 26px;
     border-radius: 50px;
@@ -675,7 +690,7 @@ body {
 
 .history-title-big {
     font-family: "photograph_signature";
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #BB8465;
     padding: 5px;
     font-weight: normal;
@@ -683,22 +698,24 @@ body {
 
 .text-body {
     font-family: "newyork_personal";
-    font-size: 1.2rem;
+    font-size: var(--fs-body);
     margin-bottom: 1.5rem;
     color: #BB8465;
     text-align: center;
     max-width: 500px;
     font-weight: normal;
     -webkit-text-stroke: 0.5px #BB8465;
+    line-height: 1.55;
 }
 
 .text-body .texto-content {
     font-family: "newyork_personal";
-    font-size: 1.2rem;
+    font-size: var(--fs-body);
     margin-bottom: 1.5rem;
     color: #BB8465;
     text-align: center;
     max-width: 500px;
+    line-height: 1.55;
 }
 
 .text-body-2 {
@@ -2064,23 +2081,27 @@ footer {
 
     /* Hero Section */
     .couple-name {
-        font-size: 2.8rem;
-        position: relative;
-        top: -120px;
+        font-size: var(--fs-hero-name-sm);
+        position: static;
+        top: auto;
     }
 
     #couple-name-2 {
-        top: -262px;
+        top: auto;
     }
 
     .wedding-date {
-        font-size: 2rem;
+        font-size: var(--fs-hero-date-sm);
     }
 
     .wedding-date-2 {
-        font-size: 2rem;
-        position: relative;
-        top: -120px;
+        font-size: var(--fs-hero-date-sm);
+        position: static;
+        top: auto;
+    }
+
+    .button-calendar {
+        font-size: var(--fs-button-sm);
     }
 
     .count {
@@ -2088,11 +2109,11 @@ footer {
     }
 
     .countdown-number {
-        font-size: 2.5rem !important;
+        font-size: 1.4rem !important;
     }
 
     .countdown-label {
-        font-size: 1.2rem !important;
+        font-size: 0.85rem !important;
     }
 
     .buttons {
@@ -2102,11 +2123,6 @@ footer {
     .navigation {
         gap: 10px;
         padding: 10px 5px;
-    }
-
-    .nav-item {
-        font-size: 12px;
-        padding: 3px 5px;
     }
 
     /* History Section */
@@ -2136,7 +2152,8 @@ footer {
 
     .history-images {
         margin-top: 1rem;
-        height: 720px;
+        height: auto;
+        min-height: 0;
     }
 
     .divider {
@@ -2176,6 +2193,16 @@ footer {
     #new-history .count {
         justify-content: center !important;
         align-self: center !important;
+        margin-top: 6px !important;
+    }
+
+    #new-history .history-title-big {
+        font-size: var(--fs-section-title-sm);
+    }
+
+    #new-history .text-body,
+    #new-history .text-body .texto-content {
+        font-size: var(--fs-body-sm);
     }
 
     .gift-title-small {
@@ -2270,11 +2297,11 @@ footer {
         background-repeat: repeat;
         background-attachment: fixed;
         justify-content: center;
-        padding: 200px 0px;
+        padding: 40px 20px 60px;
     }
 
     .count {
-        margin-top: 68%;
+        margin-top: 20px;
     }
 
     .history-title-small {
@@ -2283,7 +2310,7 @@ footer {
     }
 
     .history-title-small-2 {
-        font-size: 2.4rem;
+        font-size: var(--fs-section-title-sm);
         padding: 5px 5px;
     }
 
@@ -2292,7 +2319,7 @@ footer {
     }
 
     .gift-section .text {
-        font-size: 1.4rem;
+        font-size: var(--fs-body-sm);
     }
 
     .history-title-small-3 {
@@ -2302,7 +2329,7 @@ footer {
 
     .text-body .texto-content {
         font-family: "newyork_personal";
-        font-size: 1.4rem;
+        font-size: var(--fs-body-sm);
         margin-bottom: 1.5rem;
         color: #BB8465;
         text-align: center;

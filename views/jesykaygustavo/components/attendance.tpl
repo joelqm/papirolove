@@ -18,28 +18,31 @@
 
   #attendance .attendance-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 0 16px;
+    line-height: 1.15;
   }
 
   #attendance .attendance-text {
     font-family: 'Humanist521';
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     color: #293E59;
     margin: 0 0 8px;
     max-width: 340px;
+    line-height: 1.5;
     -webkit-text-stroke: 0;
   }
 
   #attendance .attendance-date {
     font-family: 'Humanist521';
-    font-size: 2.4rem;
+    font-size: var(--fs-subtitle);
     color: #293E59;
     letter-spacing: 3px;
     margin: 0 0 24px;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   #attendance .attendance-button {
@@ -50,7 +53,7 @@
     border-radius: 50px;
     text-decoration: none;
     font-family: 'Noteworthy';
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     transition: background-color 0.3s, transform 0.2s;
     margin-bottom: 28px;
@@ -64,7 +67,7 @@
 
   #attendance .attendance-note {
     font-family: 'Humanist521';
-    font-size: 1rem;
+    font-size: var(--fs-body-note);
     color: #293E59;
     max-width: 360px;
     line-height: 1.5;
@@ -73,12 +76,30 @@
   }
 
   @media (max-width: 992px) {
+    #attendance.attendace-container {
+      padding: 24px 16px 50px;
+    }
+
     #attendance .attendance-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #attendance .attendance-text {
+      font-size: var(--fs-body-sm);
     }
 
     #attendance .attendance-date {
-      font-size: 1.9rem;
+      font-size: var(--fs-subtitle-sm);
+    }
+
+    #attendance .attendance-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
+    }
+
+    #attendance .attendance-note {
+      font-size: var(--fs-body-note-sm);
+      padding: 0 8px;
     }
   }
 </style>

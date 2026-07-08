@@ -26,17 +26,19 @@
 
   #dresscode .dresscode-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 0 10px;
+    line-height: 1.15;
   }
 
   #dresscode .dresscode-subtitle {
     font-family: 'Humanist521';
-    font-size: 1.25rem;
+    font-size: var(--fs-body);
     color: #293E59;
     margin: 0 0 24px;
+    line-height: 1.45;
   }
 
   #dresscode .dresscode-sample {
@@ -49,7 +51,7 @@
 
   #dresscode .dresscode-note {
     font-family: 'Humanist521';
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     color: #293E59;
     line-height: 1.5;
     max-width: 300px;
@@ -78,7 +80,7 @@
     border-radius: 50px;
     text-decoration: none;
     font-family: 'Noteworthy';
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     transition: background-color 0.3s, transform 0.2s;
   }
@@ -90,13 +92,27 @@
   }
 
   @media (max-width: 992px) {
+    #dresscode.dresscode-container {
+      padding: 40px 16px 24px;
+    }
+
     #dresscode .dresscode-content {
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     #dresscode .dresscode-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #dresscode .dresscode-subtitle,
+    #dresscode .dresscode-note {
+      font-size: var(--fs-body-sm);
+    }
+
+    #dresscode .dresscode-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
     }
 
     #dresscode .dresscode-left,
@@ -105,8 +121,12 @@
       width: 100%;
     }
 
+    #dresscode .dresscode-sample {
+      max-width: 180px;
+    }
+
     #dresscode .dresscode-pareja {
-      max-width: 340px;
+      max-width: 300px;
     }
   }
 </style>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 11:30:51
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/history.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d29bbb225b1_76706403',
+  'unifunc' => 'content_6a4e5c95455416_30627883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b65b7676a0f9a23b5d08a772d4868a8e5b03932d' => 
     array (
       0 => 'views/jesykaygustavo/components/history.tpl',
-      1 => 1783436416,
+      1 => 1783520349,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d29bbb225b1_76706403 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c95455416_30627883 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
   .song-card {
@@ -168,11 +168,15 @@ views/jesykaygustavo/imgs/decoracion_historia_der.webp');
   #new-history .history-title-big {
     font-family: 'CastelaMolgate';
     color: #293E59;
+    font-size: var(--fs-section-title);
+    line-height: 1.15;
   }
 
   #new-history .text-body {
     font-family: 'Humanist521';
     color: #293E59;
+    font-size: var(--fs-body);
+    line-height: 1.55;
     -webkit-text-stroke: 0;
   }
 
@@ -229,6 +233,10 @@ views/jesykaygustavo/imgs/decoracion_historia_der.webp');
       top: 0;
     }
 
+    .song-card-title {
+      font-size: 1.2rem;
+    }
+
     .decor-left,
     .decor-right {
       width: 32%;
@@ -246,6 +254,27 @@ views/jesykaygustavo/imgs/decoracion_historia_der.webp');
     .novios-image {
       max-width: 320px;
       top: 0;
+    }
+
+    #new-history .history-title-big {
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #new-history .text-body {
+      font-size: var(--fs-body-sm);
+      padding: 0 8px;
+    }
+
+    .countdown-wrapper .wedding-date {
+      font-size: 1.3rem;
+    }
+
+    .countdown-wrapper .countdown-number {
+      font-size: 18px;
+    }
+
+    .countdown-wrapper .countdown-label {
+      font-size: 12px;
     }
 
   }

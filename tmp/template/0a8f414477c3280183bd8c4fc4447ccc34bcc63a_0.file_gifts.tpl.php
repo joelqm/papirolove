@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 12:16:14
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d345ee65ba3_00731405',
+  'unifunc' => 'content_6a4e5c955f9d76_43965837',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a8f414477c3280183bd8c4fc4447ccc34bcc63a' => 
     array (
       0 => 'views/jesykaygustavo/components/gifts.tpl',
-      1 => 1783444567,
+      1 => 1783520383,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d345ee65ba3_00731405 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c955f9d76_43965837 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
   #gifts.gift-container {
@@ -51,7 +51,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #gifts .gift-intro {
     font-family: 'Humanist521';
-    font-size: 1.2rem;
+    font-size: var(--fs-body);
     color: #fff;
     line-height: 1.55;
     margin: 0 0 36px;
@@ -91,13 +91,13 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #gifts .gift-account-label-title {
     font-family: 'Humanist521';
-    font-size: 1.05rem;
+    font-size: var(--fs-body-note);
     font-weight: normal;
   }
 
   #gifts .gift-account-label-bank {
     font-family: 'Humanist521';
-    font-size: 0.95rem;
+    font-size: var(--fs-body-note-sm);
     text-transform: lowercase;
     font-weight: normal;
   }
@@ -105,7 +105,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
   #gifts .gift-account-number,
   #gifts .gift-account-cci {
     font-family: 'Humanist521';
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: #fff;
     margin: 0;
     letter-spacing: 0.3px;
@@ -114,7 +114,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #gifts .gift-account-holder {
     font-family: 'Humanist521';
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: #fff;
     margin: 0;
     max-width: 420px;
@@ -123,14 +123,28 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
   }
 
   @media (max-width: 992px) {
+    #gifts.gift-container {
+      padding: 50px 16px 60px;
+    }
+
+    #gifts .gift-icon {
+      width: 4.5rem;
+      margin-bottom: 20px;
+    }
+
     #gifts .gift-intro {
-      font-size: 1.05rem;
+      font-size: var(--fs-body-sm);
+      margin-bottom: 28px;
     }
 
     #gifts .gift-account-number,
     #gifts .gift-account-cci,
     #gifts .gift-account-holder {
-      font-size: 1rem;
+      font-size: var(--fs-body-sm);
+    }
+
+    #gifts .gift-account-label-title {
+      font-size: var(--fs-body-note-sm);
     }
   }
 </style>

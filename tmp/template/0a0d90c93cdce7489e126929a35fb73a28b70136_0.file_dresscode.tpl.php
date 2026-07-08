@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 12:02:57
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/dresscode.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d3141304aa6_85532348',
+  'unifunc' => 'content_6a4e5c955552f9_71541422',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a0d90c93cdce7489e126929a35fb73a28b70136' => 
     array (
       0 => 'views/jesykaygustavo/components/dresscode.tpl',
-      1 => 1783443775,
+      1 => 1783520377,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d3141304aa6_85532348 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c955552f9_71541422 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
   #dresscode.dresscode-container {
@@ -50,17 +50,19 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #dresscode .dresscode-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 0 10px;
+    line-height: 1.15;
   }
 
   #dresscode .dresscode-subtitle {
     font-family: 'Humanist521';
-    font-size: 1.25rem;
+    font-size: var(--fs-body);
     color: #293E59;
     margin: 0 0 24px;
+    line-height: 1.45;
   }
 
   #dresscode .dresscode-sample {
@@ -73,7 +75,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
 
   #dresscode .dresscode-note {
     font-family: 'Humanist521';
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     color: #293E59;
     line-height: 1.5;
     max-width: 300px;
@@ -102,7 +104,7 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
     border-radius: 50px;
     text-decoration: none;
     font-family: 'Noteworthy';
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     transition: background-color 0.3s, transform 0.2s;
   }
@@ -114,13 +116,27 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
   }
 
   @media (max-width: 992px) {
+    #dresscode.dresscode-container {
+      padding: 40px 16px 24px;
+    }
+
     #dresscode .dresscode-content {
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     #dresscode .dresscode-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+    }
+
+    #dresscode .dresscode-subtitle,
+    #dresscode .dresscode-note {
+      font-size: var(--fs-body-sm);
+    }
+
+    #dresscode .dresscode-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
     }
 
     #dresscode .dresscode-left,
@@ -129,8 +145,12 @@ $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\com
       width: 100%;
     }
 
+    #dresscode .dresscode-sample {
+      max-width: 180px;
+    }
+
     #dresscode .dresscode-pareja {
-      max-width: 340px;
+      max-width: 300px;
     }
   }
 </style>
@@ -149,7 +169,7 @@ views/jesykaygustavo/imgs/pareja_muestra_dresscode.webp"
 
       <p class="dresscode-note">Reserva el blanco y colores <br> claros para los novios</p>
 
-      <a href="https://assets.pinterest.com/ext/embed.html?id=422281212243479" target="_blank"
+      <a href="https://pin.it/20HSKTsMV" target="_blank"
         class="dresscode-button">Inspírate</a>
     </div>
 

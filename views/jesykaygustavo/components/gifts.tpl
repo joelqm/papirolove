@@ -27,7 +27,7 @@
 
   #gifts .gift-intro {
     font-family: 'Humanist521';
-    font-size: 1.2rem;
+    font-size: var(--fs-body);
     color: #fff;
     line-height: 1.55;
     margin: 0 0 36px;
@@ -67,13 +67,13 @@
 
   #gifts .gift-account-label-title {
     font-family: 'Humanist521';
-    font-size: 1.05rem;
+    font-size: var(--fs-body-note);
     font-weight: normal;
   }
 
   #gifts .gift-account-label-bank {
     font-family: 'Humanist521';
-    font-size: 0.95rem;
+    font-size: var(--fs-body-note-sm);
     text-transform: lowercase;
     font-weight: normal;
   }
@@ -81,7 +81,7 @@
   #gifts .gift-account-number,
   #gifts .gift-account-cci {
     font-family: 'Humanist521';
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: #fff;
     margin: 0;
     letter-spacing: 0.3px;
@@ -90,7 +90,7 @@
 
   #gifts .gift-account-holder {
     font-family: 'Humanist521';
-    font-size: 1.1rem;
+    font-size: var(--fs-body);
     color: #fff;
     margin: 0;
     max-width: 420px;
@@ -99,14 +99,28 @@
   }
 
   @media (max-width: 992px) {
+    #gifts.gift-container {
+      padding: 50px 16px 60px;
+    }
+
+    #gifts .gift-icon {
+      width: 4.5rem;
+      margin-bottom: 20px;
+    }
+
     #gifts .gift-intro {
-      font-size: 1.05rem;
+      font-size: var(--fs-body-sm);
+      margin-bottom: 28px;
     }
 
     #gifts .gift-account-number,
     #gifts .gift-account-cci,
     #gifts .gift-account-holder {
-      font-size: 1rem;
+      font-size: var(--fs-body-sm);
+    }
+
+    #gifts .gift-account-label-title {
+      font-size: var(--fs-body-note-sm);
     }
   }
 </style>

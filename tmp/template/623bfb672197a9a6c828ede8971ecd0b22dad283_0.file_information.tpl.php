@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-07 11:30:51
+/* Smarty version 5.5.1, created on 2026-07-08 09:20:05
   from 'file:views/jesykaygustavo/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a4d29bbba0a37_54117955',
+  'unifunc' => 'content_6a4e5c954d1a99_30670509',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '623bfb672197a9a6c828ede8971ecd0b22dad283' => 
     array (
       0 => 'views/jesykaygustavo/components/information.tpl',
-      1 => 1783436416,
+      1 => 1783520358,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a4d29bbba0a37_54117955 (\Smarty\Template $_smarty_tpl) {
+function content_6a4e5c954d1a99_30670509 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\jesykaygustavo\\components';
 ?><style>
   #info.invitation-card {
@@ -63,12 +63,13 @@ views/jesykaygustavo/imgs/decoracion_detalles_der.webp');
 
   #info .details-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 auto 40px;
     position: relative;
     z-index: 2;
+    line-height: 1.15;
   }
 
   #info .details-locations {
@@ -127,23 +128,25 @@ views/jesykaygustavo/imgs/decoracion_detalles_der.webp');
   #info .location-type {
     font-family: 'CastelaMolgate';
     color: #293E59;
-    font-size: 2.4rem;
+    font-size: var(--fs-subtitle);
     margin-bottom: 0;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   #info .location-address,
   #info .location-time {
     font-family: 'Humanist521';
     color: #293E59;
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     margin-bottom: 6px;
     letter-spacing: 0.5px;
+    line-height: 1.45;
     -webkit-text-stroke: 0;
   }
 
   #info .location-address-name {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
     margin-bottom: 8px;
   }
 
@@ -158,7 +161,7 @@ views/jesykaygustavo/imgs/decoracion_detalles_der.webp');
     padding: 10px 28px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     font-family: 'Noteworthy';
     transition: background-color 0.3s, transform 0.2s;
@@ -171,8 +174,13 @@ views/jesykaygustavo/imgs/decoracion_detalles_der.webp');
   }
 
   @media (max-width: 992px) {
+    #info.invitation-card {
+      padding: 50px 16px;
+    }
+
     #info .details-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+      margin-bottom: 28px;
     }
 
     #info .details-decor-left,
@@ -181,11 +189,35 @@ views/jesykaygustavo/imgs/decoracion_detalles_der.webp');
     }
 
     #info .details-illustration {
-      max-width: 360px;
+      max-width: 300px;
+      margin-bottom: 18px;
+    }
+
+    #info .details-locations {
+      gap: 36px;
     }
 
     #info .location-type {
-      font-size: 2rem;
+      font-size: var(--fs-subtitle-sm);
+    }
+
+    #info .location-icon svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+
+    #info .location-address,
+    #info .location-time {
+      font-size: var(--fs-body-sm);
+    }
+
+    #info .location-address-name {
+      font-size: 1.1rem;
+    }
+
+    #info .location-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
     }
   }
 </style>
@@ -243,7 +275,7 @@ views/jesykaygustavo/imgs/detalles_ceremonia.webp" alt="Ceremonia"
         <p class="location-address">Calle 2 de mayo s/n - Sachaca</p>
         <p class="location-address">Arequipa - Perú</p>
         <p class="location-time">11:30 am</p>
-        <a target="_blank" href="https://maps.app.goo.gl/QHgHDAfgigmZnESS7" class="location-button">Ubicación</a>
+        <a target="_blank" href="https://share.google/lFaZahElmZIDqQWAy" class="location-button">Ubicación</a>
       </div>
     </div>
 
@@ -295,7 +327,7 @@ views/jesykaygustavo/imgs/detalles_recepcion.webp" alt="Recepción"
         <p class="location-address">Callejón ripacha 137-177, San Lázaro</p>
         <p class="location-address">Arequipa - Perú</p>
         <p class="location-time">1:30 pm</p>
-        <a target="_blank" href="https://maps.app.goo.gl/itNajDWNed1DADLT6" class="location-button">Ubicación</a>
+        <a target="_blank" href="https://maps.app.goo.gl/gTpRJD5qmtFYw1Jr5" class="location-button">Ubicación</a>
       </div>
     </div>
 

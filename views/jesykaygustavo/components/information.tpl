@@ -37,12 +37,13 @@
 
   #info .details-title {
     font-family: 'CastelaMolgate';
-    font-size: 3.2rem;
+    font-size: var(--fs-section-title);
     color: #293E59;
     font-weight: normal;
     margin: 0 auto 40px;
     position: relative;
     z-index: 2;
+    line-height: 1.15;
   }
 
   #info .details-locations {
@@ -101,23 +102,25 @@
   #info .location-type {
     font-family: 'CastelaMolgate';
     color: #293E59;
-    font-size: 2.4rem;
+    font-size: var(--fs-subtitle);
     margin-bottom: 0;
     font-weight: normal;
+    line-height: 1.2;
   }
 
   #info .location-address,
   #info .location-time {
     font-family: 'Humanist521';
     color: #293E59;
-    font-size: 1.15rem;
+    font-size: var(--fs-body);
     margin-bottom: 6px;
     letter-spacing: 0.5px;
+    line-height: 1.45;
     -webkit-text-stroke: 0;
   }
 
   #info .location-address-name {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
     margin-bottom: 8px;
   }
 
@@ -132,7 +135,7 @@
     padding: 10px 28px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: var(--fs-button);
     letter-spacing: 0.5px;
     font-family: 'Noteworthy';
     transition: background-color 0.3s, transform 0.2s;
@@ -145,8 +148,13 @@
   }
 
   @media (max-width: 992px) {
+    #info.invitation-card {
+      padding: 50px 16px;
+    }
+
     #info .details-title {
-      font-size: 2.4rem;
+      font-size: var(--fs-section-title-sm);
+      margin-bottom: 28px;
     }
 
     #info .details-decor-left,
@@ -155,11 +163,35 @@
     }
 
     #info .details-illustration {
-      max-width: 360px;
+      max-width: 300px;
+      margin-bottom: 18px;
+    }
+
+    #info .details-locations {
+      gap: 36px;
     }
 
     #info .location-type {
-      font-size: 2rem;
+      font-size: var(--fs-subtitle-sm);
+    }
+
+    #info .location-icon svg {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+
+    #info .location-address,
+    #info .location-time {
+      font-size: var(--fs-body-sm);
+    }
+
+    #info .location-address-name {
+      font-size: 1.1rem;
+    }
+
+    #info .location-button {
+      font-size: var(--fs-button-sm);
+      padding: 10px 24px;
     }
   }
 </style>
