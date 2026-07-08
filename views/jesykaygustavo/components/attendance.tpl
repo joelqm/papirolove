@@ -94,7 +94,7 @@
 
     <h3 class="attendance-date">01.08.26</h3>
 
-    <a href="https://wa.link/2lr0yv" target="_blank" class="attendance-button">
+    <a href="https://wa.link/pby5al" target="_blank" class="attendance-button">
       Confirma Aquí
     </a>
 

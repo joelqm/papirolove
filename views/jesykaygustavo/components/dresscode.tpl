@@ -124,7 +124,7 @@
 
       <p class="dresscode-note">Reserva el blanco y colores <br> claros para los novios</p>
 
-      <a href="https://assets.pinterest.com/ext/embed.html?id=422281212243479" target="_blank"
+      <a href="https://pin.it/20HSKTsMV" target="_blank"
         class="dresscode-button">Inspírate</a>
     </div>
 

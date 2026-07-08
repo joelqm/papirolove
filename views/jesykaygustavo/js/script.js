@@ -202,7 +202,7 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/ZPTaMcCYnmBs32XG9`;
+  const url = `https://calendar.app.google/zczFG7mif3uBDGfCA`;
 
   window.open(url, "_blank");
 

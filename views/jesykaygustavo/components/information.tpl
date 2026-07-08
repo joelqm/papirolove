@@ -216,7 +216,7 @@
         <p class="location-address">Calle 2 de mayo s/n - Sachaca</p>
         <p class="location-address">Arequipa - Perú</p>
         <p class="location-time">11:30 am</p>
-        <a target="_blank" href="https://maps.app.goo.gl/QHgHDAfgigmZnESS7" class="location-button">Ubicación</a>
+        <a target="_blank" href="https://share.google/lFaZahElmZIDqQWAy" class="location-button">Ubicación</a>
       </div>
     </div>
 
@@ -267,7 +267,7 @@
         <p class="location-address">Callejón ripacha 137-177, San Lázaro</p>
         <p class="location-address">Arequipa - Perú</p>
         <p class="location-time">1:30 pm</p>
-        <a target="_blank" href="https://maps.app.goo.gl/itNajDWNed1DADLT6" class="location-button">Ubicación</a>
+        <a target="_blank" href="https://maps.app.goo.gl/gTpRJD5qmtFYw1Jr5" class="location-button">Ubicación</a>
       </div>
     </div>
 
