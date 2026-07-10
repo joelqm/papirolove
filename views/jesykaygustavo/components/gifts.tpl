@@ -88,6 +88,15 @@
     -webkit-text-stroke: 0;
   }
 
+  /* Evita que iOS/Safari convierta números de cuenta en enlaces azules */
+  #gifts .gift-account-number a,
+  #gifts .gift-account-cci a,
+  #gifts .gift-account-holder a {
+    color: #fff !important;
+    text-decoration: none !important;
+    pointer-events: none;
+  }
+
   #gifts .gift-account-holder {
     font-family: 'Humanist521';
     font-size: var(--fs-body);
@@ -150,8 +159,8 @@
           <span class="gift-account-label-title">Cuenta Soles</span>
           <span class="gift-account-label-bank">bcp</span>
         </div>
-        <p class="gift-account-number">215-00793982-0-97</p>
-        <p class="gift-account-cci">CCI: 00221510079398209727</p>
+        <p class="gift-account-number" x-ms-format-detection="none">215&#8209;00793982&#8209;0&#8209;97</p>
+        <p class="gift-account-cci" x-ms-format-detection="none">CCI: 00221510079398209727</p>
       </div>
 
       <div class="gift-account-block">
@@ -159,8 +168,8 @@
           <span class="gift-account-label-title">Cuenta Dólares</span>
           <span class="gift-account-label-bank">bcp</span>
         </div>
-        <p class="gift-account-number">215-95124864-1-16</p>
-        <p class="gift-account-cci">CCI: 00221519512486411622</p>
+        <p class="gift-account-number" x-ms-format-detection="none">215&#8209;95124864&#8209;1&#8209;16</p>
+        <p class="gift-account-cci" x-ms-format-detection="none">CCI: 00221519512486411622</p>
       </div>
 
     </div>

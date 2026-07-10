@@ -295,10 +295,10 @@
           </div>
           <h3 class="location-type">Recepción</h3>
         </div>
-        <p class="location-address location-address-name">Molino Blanco</p>
-        <p class="location-address">Callejón ripacha 137-177, San Lázaro</p>
+        <p class="location-address location-address-name">Mansión Ugarteche</p>
+        <p class="location-address">Calle Manuel Ugarteche 313 - Cercado</p>
         <p class="location-address">Arequipa - Perú</p>
-        <p class="location-time">1:30 pm</p>
+        <p class="location-time">2:00 pm</p>
         <a target="_blank" href="https://maps.app.goo.gl/gTpRJD5qmtFYw1Jr5" class="location-button">Ubicación</a>
       </div>
     </div>
