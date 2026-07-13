@@ -202,7 +202,7 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/zczFG7mif3uBDGfCA`;
+  const url = `https://calendar.app.google/iXyMBMH2AaLgKRYx8`;
 
   window.open(url, "_blank");
 
@@ -222,7 +222,7 @@ $(window).on('scroll', function () {
   if (scrollTop + windowHeight > wrapperTop && scrollTop < wrapperTop + wrapperHeight) {
     // Calcular cuánto se ha scrolleado dentro del wrapper (0 a 1)
     var progress = (scrollTop + windowHeight - wrapperTop) / (wrapperHeight + windowHeight);
-    
+
     // Mover las flores con un offset sutil (parallax)
     var offsetTopLeft = -30 + (progress * 60); // se mueve de -30px a +30px
     var offsetBottomRight = 30 - (progress * 60); // se mueve de +30px a -30px
