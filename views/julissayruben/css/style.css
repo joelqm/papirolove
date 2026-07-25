@@ -105,16 +105,23 @@
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
 :root {
     --accent: #6D8397;
-    --background-color: #f9f4ef;
+    --background-color: #FFFAF4;
     --button-color: #333;
     --button-hover-scale: 110%;
     --footer-color: #6D8397;
     --primary-color: #6D8397;
-    --primary-ligth-color: #f9f4ef;
+    --primary-ligth-color: #FFFAF4;
     --secondary-color: #555;
     --text-color: #6D8397;
     --transition-duration: 0.3s;
     --text-color-light: #fff;
+    /* Tipografía unificada Julissa & Rubén */
+    --jr-color: #6D8397;
+    --jr-bg: #FFFAF4;
+    --jr-title: clamp(2.4rem, 4.5vw, 3.2rem);
+    --jr-title-sm: clamp(2.1rem, 7vw, 2.6rem);
+    --jr-body: 1.2rem;
+    --jr-body-sm: 1.1rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -701,24 +708,22 @@ body {
 
 .history-title-big {
     font-family: "Bacalisties";
-    font-size: clamp(2.8rem, 5vw, 3.6rem);
+    font-size: var(--jr-title);
     color: #6D8397;
     padding: 5px;
     font-weight: normal;
     line-height: 1.1;
-    -webkit-text-stroke: 0.4px #6D8397;
 }
 
 .history-section .text-body {
     font-family: 'NewAthenaUnicode', serif;
-    font-size: 1.2rem;
+    font-size: var(--jr-body);
     margin-bottom: 1rem;
     color: #6D8397;
     text-align: center;
     max-width: 480px;
     font-weight: normal;
     line-height: 1.55;
-    -webkit-text-stroke: 0.4px #6D8397;
 }
 
 .text-body .texto-content {
@@ -812,7 +817,6 @@ body {
     letter-spacing: 2px;
     margin: 0 0 0.6rem;
     font-weight: normal;
-    -webkit-text-stroke: 0.4px #6D8397;
 }
 
 .history-section .count {
@@ -831,7 +835,6 @@ body {
     font-size: clamp(2.4rem, 4vw, 3.2rem);
     font-weight: normal;
     line-height: 1;
-    -webkit-text-stroke: 0.4px #6D8397;
 }
 
 .history-section .countdown-label {
@@ -841,7 +844,6 @@ body {
     letter-spacing: 2px;
     margin-top: 8px;
     text-transform: none;
-    -webkit-text-stroke: 0.4px #6D8397;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1217,14 +1219,24 @@ body {
 /* ===== 12. GALERY SECTION (Galería de imágenes) ===== */
 .galery {
     width: 100%;
-    padding: 50px 0px;
+    padding: 70px 20px 80px;
     background: #6D8397;
+    text-align: center;
+}
+
+.galery .galery-title {
+    font-family: 'Bacalisties', cursive;
+    font-size: var(--jr-title);
+    font-weight: normal;
+    color: #fff;
+    margin: 0 0 1.5rem;
+    line-height: 1.1;
 }
 
 .container-galery {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0 20px;
 }
 
 .owl-carousel .item {
@@ -1232,7 +1244,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    height: 500px;
+    height: 480px;
     overflow: hidden;
 }
 
@@ -1240,7 +1252,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -2039,7 +2051,8 @@ footer {
 @media (max-width: 700px) {
     .background {
         background-image: url("../imgs/preboda.webp");
-        background-position: center;
+        /* Muestra mejor a ambos novios en móvil */
+        background-position: 72% center;
     }
 
     .container-page {
@@ -2225,7 +2238,7 @@ footer {
 
     .history-images {
         margin-top: 1rem;
-        min-height: 480px;
+        min-height: 560px;
     }
 
     .divider {
@@ -2241,19 +2254,19 @@ footer {
     }
 
     .circular-image {
-        top: 0;
-        left: 40px;
+        top: -30px;
+        left: 45px;
         width: 200px;
         height: 260px;
     }
 
     .rectangular-image {
-        bottom: 20px;
+        bottom: 10px;
         left: 50%;
         right: auto;
         width: 200px;
         height: 260px;
-        transform: translateX(-55%) rotate(-10deg);
+        transform: translateX(-60%) rotate(-10deg);
     }
 
     .history-section .count {
@@ -2396,6 +2409,37 @@ footer {
     }
     
 
+}
+
+
+/* Tipografía unificada en móvil */
+@media (max-width: 768px) {
+    :root {
+        --jr-title: var(--jr-title-sm);
+        --jr-body: var(--jr-body-sm);
+    }
+
+    .history-title-big,
+    .galery .galery-title {
+        font-size: var(--jr-title-sm);
+    }
+
+    .history-section .text-body {
+        font-size: var(--jr-body-sm);
+        max-width: 100%;
+    }
+
+    .owl-carousel .item {
+        height: 420px;
+    }
+
+    .couple-name {
+        font-size: clamp(2.6rem, 10vw, 3.4rem);
+    }
+
+    .wedding-date {
+        font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+    }
 }
 
 

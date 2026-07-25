@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-24 12:54:31
+/* Smarty version 5.5.1, created on 2026-07-25 17:05:47
   from 'file:views/julissayruben/components/information.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a63a6d7953b50_63069376',
+  'unifunc' => 'content_6a65333b51f4b2_24415323',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7c471d363bfe6f1c6649e0ea513aa633731a6d70' => 
     array (
       0 => 'views/julissayruben/components/information.tpl',
-      1 => 1784913568,
+      1 => 1785016095,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a63a6d7953b50_63069376 (\Smarty\Template $_smarty_tpl) {
+function content_6a65333b51f4b2_24415323 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\julissayruben\\components';
 ?><section class="invitation-card" id="info">
 
@@ -67,11 +67,13 @@ views/julissayruben/imgs/imagen_historia_flores_inferior_der.webp"
     <div class="details-locations" data-aos="fade-up">
 
       <div class="details-location-card">
-        <div class="details-location-icon">
-          <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/julissayruben/imgs/icono_ceremonia.png" alt="Ceremonia">
+        <div class="details-location-head">
+          <span class="details-location-icon" aria-hidden="true">
+            <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/julissayruben/imgs/icono_iglesia.webp" alt="">
+          </span>
+          <h3 class="details-location-title">Ceremonia</h3>
         </div>
-        <h3 class="details-location-title">Ceremonia</h3>
         <p class="details-location-place">Parroquia "Santa Marta"</p>
         <p class="details-location-text">Plaza España 105 - Cercado</p>
         <p class="details-location-time">11:30 am</p>
@@ -81,11 +83,13 @@ views/julissayruben/imgs/icono_ceremonia.png" alt="Ceremonia">
       </div>
 
       <div class="details-location-card">
-        <div class="details-location-icon">
-          <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
+        <div class="details-location-head">
+          <span class="details-location-icon" aria-hidden="true">
+            <img src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/julissayruben/imgs/icono_copas.webp" alt="">
+          </span>
+          <h3 class="details-location-title">Recepción</h3>
         </div>
-        <h3 class="details-location-title">Recepción</h3>
         <p class="details-location-place">Jardines de Sabandía</p>
         <p class="details-location-text">Prol. Colon 221 - Paucarpata</p>
         <p class="details-location-time">2:30 pm</p>
@@ -142,13 +146,12 @@ views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
 
   #info .details-quote {
     font-family: 'Bacalisties', cursive;
-    font-size: clamp(2.4rem, 4.2vw, 3.1rem);
+    font-size: var(--jr-title);
     font-weight: normal;
     color: #6D8397;
     line-height: 1.2;
     margin: 0 auto 2.2rem;
     max-width: 680px;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-subtitle,
@@ -159,11 +162,10 @@ views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
   #info .details-location-text,
   #info .details-location-time {
     font-family: 'NewAthenaUnicode', serif;
-    font-size: 1.2rem;
+    font-size: var(--jr-body);
     font-weight: normal;
     color: #6D8397;
     line-height: 1.55;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-subtitle {
@@ -207,28 +209,36 @@ views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
     max-width: 280px;
   }
 
+  #info .details-location-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+
   #info .details-location-icon {
-    width: 110px;
-    height: auto;
-    margin-bottom: 0.4rem;
+    width: 90px;
+    height: 90px;
+    color: #6D8397;
+    display: inline-flex;
+    flex-shrink: 0;
   }
 
   #info .details-location-icon img {
     width: 100%;
-    height: auto;
-    display: block;
-    filter: invert(1);
-    mix-blend-mode: multiply;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen;
   }
 
   #info .details-location-title {
-    font-family: 'AbhayaLibre', serif;
-    font-size: 2.5rem;
+    font-family: 'Bacalisties', cursive;
+    font-size: var(--jr-title);
     font-weight: normal;
     color: #6D8397;
-    margin: 0 0 0.7rem;
+    margin: 0;
     line-height: 1.1;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-location-place,
@@ -252,7 +262,6 @@ views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
     font-size: 1.15rem;
     font-family: 'NewAthenaUnicode', serif;
     font-weight: normal;
-    -webkit-text-stroke: 0;
     transition: background-color 0.3s, transform 0.2s;
   }
 
@@ -270,6 +279,10 @@ views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
 
     #info .details-flower {
       width: min(180px, 48vw);
+    }
+
+    #info .details-quote {
+      margin-top: 3.2rem;
     }
 
     #info .details-parents {

@@ -41,10 +41,12 @@
     <div class="details-locations" data-aos="fade-up">
 
       <div class="details-location-card">
-        <div class="details-location-icon">
-          <img src="{$_layoutParams.root}views/julissayruben/imgs/icono_ceremonia.png" alt="Ceremonia">
+        <div class="details-location-head">
+          <span class="details-location-icon" aria-hidden="true">
+            <img src="{$_layoutParams.root}views/julissayruben/imgs/icono_iglesia.webp" alt="">
+          </span>
+          <h3 class="details-location-title">Ceremonia</h3>
         </div>
-        <h3 class="details-location-title">Ceremonia</h3>
         <p class="details-location-place">Parroquia "Santa Marta"</p>
         <p class="details-location-text">Plaza España 105 - Cercado</p>
         <p class="details-location-time">11:30 am</p>
@@ -54,10 +56,12 @@
       </div>
 
       <div class="details-location-card">
-        <div class="details-location-icon">
-          <img src="{$_layoutParams.root}views/julissayruben/imgs/icono_recepcion.png" alt="Recepción">
+        <div class="details-location-head">
+          <span class="details-location-icon" aria-hidden="true">
+            <img src="{$_layoutParams.root}views/julissayruben/imgs/icono_copas.webp" alt="">
+          </span>
+          <h3 class="details-location-title">Recepción</h3>
         </div>
-        <h3 class="details-location-title">Recepción</h3>
         <p class="details-location-place">Jardines de Sabandía</p>
         <p class="details-location-text">Prol. Colon 221 - Paucarpata</p>
         <p class="details-location-time">2:30 pm</p>
@@ -114,13 +118,12 @@
 
   #info .details-quote {
     font-family: 'Bacalisties', cursive;
-    font-size: clamp(2.4rem, 4.2vw, 3.1rem);
+    font-size: var(--jr-title);
     font-weight: normal;
     color: #6D8397;
     line-height: 1.2;
     margin: 0 auto 2.2rem;
     max-width: 680px;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-subtitle,
@@ -131,11 +134,10 @@
   #info .details-location-text,
   #info .details-location-time {
     font-family: 'NewAthenaUnicode', serif;
-    font-size: 1.2rem;
+    font-size: var(--jr-body);
     font-weight: normal;
     color: #6D8397;
     line-height: 1.55;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-subtitle {
@@ -179,28 +181,36 @@
     max-width: 280px;
   }
 
+  #info .details-location-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+
   #info .details-location-icon {
-    width: 110px;
-    height: auto;
-    margin-bottom: 0.4rem;
+    width: 90px;
+    height: 90px;
+    color: #6D8397;
+    display: inline-flex;
+    flex-shrink: 0;
   }
 
   #info .details-location-icon img {
     width: 100%;
-    height: auto;
-    display: block;
-    filter: invert(1);
-    mix-blend-mode: multiply;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen;
   }
 
   #info .details-location-title {
-    font-family: 'AbhayaLibre', serif;
-    font-size: 2.5rem;
+    font-family: 'Bacalisties', cursive;
+    font-size: var(--jr-title);
     font-weight: normal;
     color: #6D8397;
-    margin: 0 0 0.7rem;
+    margin: 0;
     line-height: 1.1;
-    -webkit-text-stroke: 0.4px #6D8397;
   }
 
   #info .details-location-place,
@@ -224,7 +234,6 @@
     font-size: 1.15rem;
     font-family: 'NewAthenaUnicode', serif;
     font-weight: normal;
-    -webkit-text-stroke: 0;
     transition: background-color 0.3s, transform 0.2s;
   }
 
@@ -242,6 +251,10 @@
 
     #info .details-flower {
       width: min(180px, 48vw);
+    }
+
+    #info .details-quote {
+      margin-top: 3.2rem;
     }
 
     #info .details-parents {

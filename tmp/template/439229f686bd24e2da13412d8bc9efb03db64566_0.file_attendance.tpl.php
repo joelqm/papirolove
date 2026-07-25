@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-24 10:02:40
+/* Smarty version 5.5.1, created on 2026-07-25 16:42:18
   from 'file:views/julissayruben/components/attendance.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a637e904ccc84_85471065',
+  'unifunc' => 'content_6a652dbab9efe3_90042821',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '439229f686bd24e2da13412d8bc9efb03db64566' => 
     array (
       0 => 'views/julissayruben/components/attendance.tpl',
-      1 => 1784905258,
+      1 => 1785015276,
       2 => 'file',
     ),
   ),
@@ -20,71 +20,159 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a637e904ccc84_85471065 (\Smarty\Template $_smarty_tpl) {
+function content_6a652dbab9efe3_90042821 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\julissayruben\\components';
-?><div class="attendace-container" id="attendance" style="position: relative; overflow: hidden;">
+?><section class="attendance-section" id="attendance">
 
-    <div class="gift-section" data-aos="fade-up">
-        <!-- <h5>CONFIRMA</h5> -->
-        <h1 class="gift-title-small">Confirma tu Asistencia</h1>
-        <!-- <p class="big">tu Asistencia</p> -->
+    <img class="att-flower att-flower-tr"
+         src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/julissayruben/imgs/imagen_historia_flores_superior_izq.webp"
+         alt=""
+         aria-hidden="true">
 
-        <p class="text">
-            Agradeceremos confirmar tu asistencia hasta el
+    <img class="att-flower att-flower-bl"
+         src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+views/julissayruben/imgs/imagen_historia_flores_inferior_der.webp"
+         alt=""
+         aria-hidden="true">
+
+    <div class="att-content" data-aos="fade-up">
+
+        <h2 class="att-title">Confirma tu asistencia</h2>
+
+        <p class="att-text">
+            Agradeceremos confirmar tu<br>
+            asistencia hasta el
         </p>
 
-        <h3 class="date">15.05.26</h3>
+        <p class="att-date">10.09.26</p>
 
-        <a href="https://wa.link/4pegd3" class="button-3" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="button-3-svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path
-                        d="M6.014 8.00613C6.12827 7.1024 7.30277 5.87414 8.23488 6.01043L8.23339 6.00894C9.14051 6.18132 9.85859 7.74261 10.2635 8.44465C10.5504 8.95402 10.3641 9.4701 10.0965 9.68787C9.7355 9.97883 9.17099 10.3803 9.28943 10.7834C9.5 11.5 12 14 13.2296 14.7107C13.695 14.9797 14.0325 14.2702 14.3207 13.9067C14.5301 13.6271 15.0466 13.46 15.5548 13.736C16.3138 14.178 17.0288 14.6917 17.69 15.27C18.0202 15.546 18.0977 15.9539 17.8689 16.385C17.4659 17.1443 16.3003 18.1456 15.4542 17.9421C13.9764 17.5868 8 15.27 6.08033 8.55801C5.97237 8.24048 5.99955 8.12044 6.014 8.00613Z">
-                    </path>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M12 23C10.7764 23 10.0994 22.8687 9 22.5L6.89443 23.5528C5.56462 24.2177 4 23.2507 4 21.7639V19.5C1.84655 17.492 1 15.1767 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23ZM6 18.6303L5.36395 18.0372C3.69087 16.4772 3 14.7331 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C11.0143 21 10.552 20.911 9.63595 20.6038L8.84847 20.3397L6 21.7639V18.6303Z">
-                    </path>
-                </g>
-            </svg> Confirmar asistencia
+        <p class="att-text">
+            Aunque nos gustan los niños,<br>
+            esta será una celebración<br>
+            solo para adultos.
+        </p>
+
+        <a href="https://wa.link/4pegd3" class="att-button" target="_blank" rel="noopener noreferrer">
+            Confirma<br>Aquí
         </a>
 
     </div>
 
-    <img class="attendance-decor"
-         src="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
-views/julissayruben/imgs/img_001.png"
-         alt=""
-         aria-hidden="true">
-
-</div>
+</section>
 
 
 <style>
-    #attendance .attendance-decor {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 340px;
-        height: auto;
-        pointer-events: none;
-        z-index: 0;
+    #attendance.attendance-section {
+        background-color: #6D8397;
+        position: relative;
+        overflow: hidden;
+        padding: 80px 24px 90px;
+        text-align: center;
     }
-    #attendance .gift-section {
+
+    #attendance .att-flower {
+        position: absolute;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    #attendance .att-flower-tr {
+        top: -10px;
+        right: -20px;
+        width: min(220px, 28vw);
+        transform: scaleX(-1);
+    }
+
+    #attendance .att-flower-bl {
+        bottom: -20px;
+        left: -30px;
+        width: min(300px, 34vw);
+        transform: scaleX(-1);
+    }
+
+    #attendance .att-content {
         position: relative;
         z-index: 1;
+        max-width: 560px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    @media (max-width: 992px) {
-        #attendance .attendance-decor { width: 240px; }
+
+    #attendance .att-title {
+        font-family: 'AngellicaSignature', cursive;
+        font-size: var(--jr-title);
+        font-weight: normal;
+        color: #fff;
+        margin: 0 0 1.4rem;
+        line-height: 1.1;
     }
+
+    #attendance .att-text {
+        font-family: 'NewAthenaUnicode', serif;
+        font-weight: normal;
+        color: #fff;
+        font-size: var(--jr-body);
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    #attendance .att-date {
+        font-family: 'newyork', serif;
+        font-weight: normal;
+        color: #fff;
+        font-size: clamp(2.4rem, 4.5vw, 3rem);
+        letter-spacing: 2px;
+        margin: 1.2rem 0;
+    }
+
+    #attendance .att-text + .att-date {
+        margin-top: 1rem;
+    }
+
+    #attendance .att-button {
+        display: inline-block;
+        margin-top: 2rem;
+        background-color: #FFFAF4;
+        color: #6D8397;
+        font-family: 'NewAthenaUnicode', serif;
+        font-size: 1.15rem;
+        line-height: 1.15;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.9rem 2.2rem;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    #attendance .att-button:hover {
+        transform: translateY(-2px);
+        background-color: #fff;
+        color: #6D8397;
+        text-decoration: none;
+    }
+
     @media (max-width: 768px) {
-        #attendance .attendance-decor { width: 0px; opacity: 0px; }
-    }
-    @media (max-width: 480px) {
-        #attendance .attendance-decor { width: 0px; opacity: 0px; }
+        #attendance.attendance-section {
+            padding: 60px 18px 70px;
+        }
+
+        #attendance .att-flower-tr {
+            width: min(150px, 40vw);
+        }
+
+        #attendance .att-flower-bl {
+            width: min(180px, 46vw);
+        }
+
+        #attendance .att-text {
+            font-size: var(--jr-body);
+        }
     }
 </style>
+
 <?php }
 }

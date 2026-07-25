@@ -1,8 +1,6 @@
 <section class="galery" id="galery">
 
-    <center>
-        <h1 class="history-title-small-2" style="color: white;">Nuestras Fotos</h1>
-    </center>
+    <h1 class="galery-title">Nuestras Fotos</h1>
 
     <div class="container-galery">
         <div class="owl-carousel owl-theme">
@@ -23,22 +21,22 @@
 <script>
     $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
-            items: 3, // Número de elementos visibles
-            loop: true, // Hacer el carrusel en bucle
-            margin: 10, // Márgenes entre los elementos
-            dots: true, // Mostrar puntos de navegación
-            autoplay: true, // Activar autoplay
-            autoplayTimeout: 3000, // Tiempo entre cada cambio de imagen (en milisegundos)
-            autoplayHoverPause: true, // Pausar el autoplay cuando se pasa el mouse sobre el carrusel
+            items: 3,
+            loop: true,
+            margin: 14,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 1,  // En pantallas pequeñas (móviles) mostrar una imagen
+                    items: 1,
                 },
                 600: {
-                    items: 2,  // En pantallas medianas (tabletas) mostrar dos imágenes
+                    items: 2,
                 },
                 1000: {
-                    items: 3,  // En pantallas grandes (escritorio) mostrar tres imágenes
+                    items: 3,
                 }
             }
         });
