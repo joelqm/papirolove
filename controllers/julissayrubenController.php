@@ -28,8 +28,7 @@ class julissayrubenController extends Controller
 		$this->_index = $this->loadModel('index');
 		$this->_dt = $this->loadModel('dataTable');
 
-		// TODO: actualizar al ID real (tbl_sede) de Julissa y Rubén
-		$this->_key = 6;
+		$this->_key = 5;
 	}
 
 	public function index()
