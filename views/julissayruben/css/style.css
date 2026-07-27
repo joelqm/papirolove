@@ -2050,9 +2050,8 @@ footer {
 /* Media Query: Max 700px (Cambio de fondo para Hero) */
 @media (max-width: 700px) {
     .background {
-        background-image: url("../imgs/preboda.webp");
-        /* Muestra mejor a ambos novios en móvil */
-        background-position: 72% center;
+        background-image: url("../imgs/preboda_mobil.webp");
+        background-position: center center;
     }
 
     .container-page {
