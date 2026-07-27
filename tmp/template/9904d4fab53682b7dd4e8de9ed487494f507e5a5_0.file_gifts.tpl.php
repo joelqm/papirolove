@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-25 16:42:18
+/* Smarty version 5.5.1, created on 2026-07-27 11:02:50
   from 'file:views/julissayruben/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a652dbac1c020_71948629',
+  'unifunc' => 'content_6a67812a4fbcf9_94753333',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9904d4fab53682b7dd4e8de9ed487494f507e5a5' => 
     array (
       0 => 'views/julissayruben/components/gifts.tpl',
-      1 => 1785015276,
+      1 => 1785168161,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a652dbac1c020_71948629 (\Smarty\Template $_smarty_tpl) {
+function content_6a67812a4fbcf9_94753333 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\julissayruben\\components';
 ?><section class="gifts-section" id="gifts">
 
@@ -156,6 +156,7 @@ views/layout/neela/images/cards.png" alt="Tarjetas de pago"
         color: #6D8397;
         margin: 0 0 1.4rem;
         line-height: 1.1;
+        -webkit-text-stroke: 0.5px #6D8397;
     }
 
     #gifts .gf-text {

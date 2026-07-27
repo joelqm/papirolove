@@ -22,11 +22,11 @@
             sugerencias con mucho cariño
         </p>
 
-        <a class="gf-btn" href="https://wa.me/51984464752" target="_blank" rel="noopener noreferrer">Yape</a>
+        <span class="gf-btn">Yape</span>
 
         <p class="gf-phone">984 464 752</p>
 
-        <a class="gf-btn" href="https://wa.me/51984464752?text=Hola%2C%20quiero%20participar%20del%20colectivo%20virtual" target="_blank" rel="noopener noreferrer">Colectivo Virtual</a>
+        <span class="gf-btn">Colectivo Virtual</span>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -149,14 +149,8 @@
         text-decoration: none;
         padding: 0.7rem 2.6rem;
         border-radius: 999px;
-        transition: background-color 0.25s ease, transform 0.2s ease;
-    }
-
-    #gifts .gf-btn:hover {
-        background-color: #5a7184;
-        color: #fff !important;
-        text-decoration: none;
-        transform: translateY(-1px);
+        cursor: default;
+        pointer-events: none;
     }
 
     #gifts .gf-phone {
