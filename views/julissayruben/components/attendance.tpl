@@ -82,6 +82,7 @@
         color: #fff;
         margin: 0 0 1.4rem;
         line-height: 1.1;
+        -webkit-text-stroke: 0.5px #fff;
     }
 
     #attendance .att-text {

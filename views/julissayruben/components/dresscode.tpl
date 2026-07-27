@@ -152,6 +152,7 @@
         text-align: center;
         margin: 0 0 2rem;
         line-height: 1.1;
+        -webkit-text-stroke: 0.5px #6D8397;
     }
 
     /* Timeline */

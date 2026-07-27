@@ -124,6 +124,7 @@
     line-height: 1.2;
     margin: 0 auto 2.2rem;
     max-width: 680px;
+    -webkit-text-stroke: 0.5px #6D8397;
   }
 
   #info .details-subtitle,
@@ -211,6 +212,7 @@
     color: #6D8397;
     margin: 0;
     line-height: 1.1;
+    -webkit-text-stroke: 0.5px #6D8397;
   }
 
   #info .details-location-place,
