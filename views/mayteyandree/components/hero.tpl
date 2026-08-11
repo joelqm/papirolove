@@ -132,7 +132,29 @@
 
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 700px) {
+        .container-page {
+            justify-content: flex-start !important;
+            padding-top: 2rem !important;
+        }
+
+        .header {
+            padding-top: 0.5rem !important;
+        }
+
+        .wedding-date-2 {
+            margin-top: 8px !important;
+        }
+
+        .wedding-grid {
+            gap: 10px !important;
+            padding: 0 !important;
+        }
+
+        .button-calendar {
+            margin-top: 0.5rem !important;
+        }
+
         .countdown-number {
             font-size: 1.5rem;
         }

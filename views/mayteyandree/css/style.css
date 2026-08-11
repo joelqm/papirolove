@@ -1986,17 +1986,26 @@ footer {
 
     .container-page {
         align-items: center;
-        justify-content: center;
-        padding: 2.5rem 1.25rem 0;
+        justify-content: flex-start;
+        padding: 3rem 1.25rem 0;
         min-height: 100svh;
     }
 
     .header {
-        padding-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .wedding-date-2 {
+        margin-top: 12px;
+    }
+
+    .wedding-grid {
+        gap: 10px;
+        padding: 0;
     }
 
     .button-calendar {
-        margin-top: 1.6rem;
+        margin-top: 1rem;
     }
 
     .header img {
