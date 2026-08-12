@@ -17,11 +17,11 @@
         <div class="gf-bank">
             <div class="gf-bank-block">
                 <p class="gf-bank-label">Bcp</p>
-                <p class="gf-bank-number">193-02361871-0-27</p>
+                <p class="gf-bank-number">194-98611458-31</p>
             </div>
             <div class="gf-bank-block">
                 <p class="gf-bank-label">CCI</p>
-                <p class="gf-bank-number">00219310236187102712</p>
+                <p class="gf-bank-number">00219419861145803198</p>
             </div>
         </div>
 

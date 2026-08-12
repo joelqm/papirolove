@@ -133,14 +133,24 @@
       padding: 0;
       width: 97%;
       max-width: 300px;
-      margin: 1.5rem auto 0;
+      margin: 1.5rem auto 2rem;
       top: auto;
       position: relative;
     }
 
     .countdown-wrapper {
       top: auto;
-      margin-bottom: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    #new-history .count {
+      margin-top: 0.5rem !important;
+    }
+
+    .history-images {
+      margin-top: 0;
+      padding-top: 0;
     }
 
   }
@@ -157,6 +167,10 @@
     .song-card-title {
       font-size: 1.2rem;
     }
+
+    .song-card {
+      margin-bottom: 1.75rem;
+    }
   }
 
   /* --- ESTILOS DEL CONTADOR --- */
@@ -167,6 +181,19 @@
     margin-bottom: 40px;
     top: auto;
     position: relative;
+    z-index: 3;
+  }
+
+  .photo-stack {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Solo escritorio: subir contador sobre las fotos */
+  @media (min-width: 993px) {
+    .countdown-wrapper {
+      top: -140px;
+    }
   }
 </style>
 
