@@ -34,7 +34,7 @@
             <aside class="sidebar">
                 <button class="category-button primary" data-id="0">TODAS LAS CATEGORÍAS</button>
                 <button class="category-button" data-id="1">LUNA DE MIEL</button>
-                <button class="category-button" data-id="2">MOBILIARIO &amp; DECORACION</button>
+                <button class="category-button" data-id="7">EXPERIENCIAS EN PAREJA</button>
                 <button class="category-button" data-id="4">TECNOLOGIA</button>
                 <button class="category-button" data-id="5">REGALO LIBRE</button>
             </aside>
