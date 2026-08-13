@@ -96,10 +96,29 @@ class obsequioController extends Controller{
 			Lyra\Client::setDefaultSHA256Key($ps_k['defsha']);
 
 			$client = new Lyra\Client();
+			$client->setPassword($ps_k['defpas']);
+			$client->setSHA256Key($ps_k['defsha']);
 
-			$validHash = $client->checkHash($ps_k['defpas'])
-				|| $client->checkHash($ps_k['defsha'])
-				|| $client->checkHash();
+			$validHash = false;
+			$keysToTry = array();
+
+			if (!empty($ps_k['defpas'])) {
+				$keysToTry[] = $ps_k['defpas'];
+			}
+			if (!empty($ps_k['defsha'])) {
+				$keysToTry[] = $ps_k['defsha'];
+			}
+
+			foreach ($keysToTry as $key) {
+				if ($this->validarFirmaIzipay($key)) {
+					$validHash = true;
+					break;
+				}
+			}
+
+			if (!$validHash) {
+				$validHash = $client->checkHash();
+			}
 
 			if (!$validHash) {
 				http_response_code(400);
@@ -136,6 +155,29 @@ class obsequioController extends Controller{
 			http_response_code(500);
 			echo 'Error processing IPN';
 		}
+	}
+
+	private function validarFirmaIzipay($key)
+	{
+		if (empty($_POST['kr-answer']) || empty($_POST['kr-hash']) || $key === '') {
+			return false;
+		}
+
+		$krAnswer = str_replace('\/', '/', $_POST['kr-answer']);
+		$payloads = array(
+			$krAnswer,
+			stripslashes($krAnswer),
+			$_POST['kr-answer'],
+			stripslashes($_POST['kr-answer']),
+		);
+
+		foreach ($payloads as $payload) {
+			if (hash_hmac('sha256', $payload, $key) === $_POST['kr-hash']) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 

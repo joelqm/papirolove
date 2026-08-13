@@ -36,14 +36,25 @@ class coupleModel extends Model
 				FROM
 					tbl_empresa e
 				INNER JOIN tbl_sede s ON s.sede_emp_id = e.emp_id
-				WHERE s.sede_id = $idSed";
-
-		// var_dump($sql);exit;
+				WHERE s.sede_id = " . intval($idSed);
 
 		$rptaSql = $this->_db->query($sql);
+		$keys = $rptaSql->fetch();
 
-		return $rptaSql->fetch();
+		if ($keys) {
+			return $keys;
+		}
 
+		$sqlEmpresa = "SELECT
+					emp_username AS username,
+					emp_defpas AS defpas,
+					emp_defpk AS defpk,
+					emp_defsha AS defsha
+				FROM tbl_empresa
+				ORDER BY emp_id ASC
+				LIMIT 1";
+
+		return $this->_db->query($sqlEmpresa)->fetch();
 	}
 
 	public function guardarmensaje($ao, $nombre, $mensaje, $empresa)
