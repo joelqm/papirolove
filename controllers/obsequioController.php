@@ -13,12 +13,15 @@ class obsequioController extends Controller{
 
 	private $_obsequio;
 	private $_index;
+	private $_couple;
+
 	public function __construct() {
 
 		parent::__construct();
 		$this->_ajax = $this->loadModel('ajax');
 		$this->_obsequio = $this->loadModel('obsequio');
 		$this->_index = $this->loadModel('index');
+		$this->_couple = $this->loadModel('couple');
 
 	}
 
@@ -63,6 +66,72 @@ class obsequioController extends Controller{
 	public function saveCart(){
 		$cart =$this->getTexto("cart");
 		
+	}
+
+	/**
+	 * IPN Izipay (servidor a servidor).
+	 * Configurar en Back Office: API REST > URL de notificación IPN.
+	 */
+	public function ipn()
+	{
+		header('Content-Type: text/plain; charset=UTF-8');
+
+		try {
+			if (empty($_POST)) {
+				http_response_code(400);
+				echo 'No post data received!';
+				return;
+			}
+
+			$ps_k = $this->_couple->keysEmp(1);
+
+			if (!$ps_k) {
+				throw new Exception('No se encontraron credenciales Izipay.');
+			}
+
+			Lyra\Client::setDefaultUsername($ps_k['username']);
+			Lyra\Client::setDefaultPassword($ps_k['defpas']);
+			Lyra\Client::setDefaultEndpoint('https://api.micuentaweb.pe');
+			Lyra\Client::setDefaultPublicKey($ps_k['defpk']);
+			Lyra\Client::setDefaultSHA256Key($ps_k['defsha']);
+
+			$client = new Lyra\Client();
+
+			if (!$client->checkHash($ps_k['defpas'])) {
+				http_response_code(400);
+				echo 'Invalid signature';
+				return;
+			}
+
+			$formAnswer = $client->getParsedFormAnswer();
+			$answer = $formAnswer['kr-answer'];
+			$orderStatus = isset($answer['orderStatus']) ? $answer['orderStatus'] : '';
+
+			if ($orderStatus === 'PAID') {
+				$codigo = '';
+
+				if (isset($answer['orderDetails']['orderId'])) {
+					$codigo = $answer['orderDetails']['orderId'];
+				} elseif (isset($answer['orderId'])) {
+					$codigo = $answer['orderId'];
+				}
+
+				$uuid = isset($answer['transactions'][0]['uuid']) ? $answer['transactions'][0]['uuid'] : '';
+				$hash = $formAnswer['kr-hash'];
+
+				if ($codigo !== '') {
+					$this->_couple->cambiarMensajeEstado($codigo, $uuid, $hash, $orderStatus);
+				}
+			}
+
+			http_response_code(200);
+			echo 'OK! OrderStatus is ' . $orderStatus;
+
+		} catch (Exception $e) {
+			error_log('Izipay IPN error: ' . $e->getMessage());
+			http_response_code(500);
+			echo 'Error processing IPN';
+		}
 	}
 
 
