@@ -325,15 +325,21 @@ class Client
             }
         }
     
-        $calculatedHash = hash_hmac('sha256', $krAnswer, $key);
-        $this->_lastCalculatedHash = $calculatedHash;
+        $candidates = array(
+            $krAnswer,
+            stripslashes($krAnswer),
+            $_POST['kr-answer'],
+            stripslashes($_POST['kr-answer']),
+        );
 
-        /* return true if calculated hash and sent hash are the same */
-        if ($calculatedHash == $_POST['kr-hash']) return TRUE;
+        foreach ($candidates as $payload) {
+            $calculatedHash = hash_hmac('sha256', $payload, $key);
+            $this->_lastCalculatedHash = $calculatedHash;
+            if ($calculatedHash == $_POST['kr-hash']) {
+                return TRUE;
+            }
+        }
 
-        /* some setup has some escaped chars */
-        $calculatedHash = hash_hmac('sha256', stripslashes($krAnswer), $key);
-        $this->_lastCalculatedHash = $calculatedHash;
-        return ($calculatedHash == $_POST['kr-hash']);
+        return FALSE;
     }
 }

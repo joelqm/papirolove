@@ -97,7 +97,11 @@ class obsequioController extends Controller{
 
 			$client = new Lyra\Client();
 
-			if (!$client->checkHash($ps_k['defpas'])) {
+			$validHash = $client->checkHash($ps_k['defpas'])
+				|| $client->checkHash($ps_k['defsha'])
+				|| $client->checkHash();
+
+			if (!$validHash) {
 				http_response_code(400);
 				echo 'Invalid signature';
 				return;
