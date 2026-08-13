@@ -77,9 +77,16 @@ class obsequioController extends Controller{
 		header('Content-Type: text/plain; charset=UTF-8');
 
 		try {
-			if (empty($_POST)) {
-				http_response_code(400);
-				echo 'No post data received!';
+			$rawBody = file_get_contents('php://input');
+			parse_str($rawBody, $rawPost);
+
+			if (empty($_POST) && !empty($rawPost)) {
+				$_POST = $rawPost;
+			}
+
+			if (empty($_POST) || empty($_POST['kr-answer'])) {
+				http_response_code(200);
+				echo 'OK! No post data received';
 				return;
 			}
 
@@ -96,73 +103,75 @@ class obsequioController extends Controller{
 			Lyra\Client::setDefaultSHA256Key($ps_k['defsha']);
 
 			$client = new Lyra\Client();
-			$client->setPassword($ps_k['defpas']);
-			$client->setSHA256Key($ps_k['defsha']);
+			$client->setPassword(trim($ps_k['defpas']));
+			$client->setSHA256Key(trim($ps_k['defsha']));
+
+			$keysToTry = array_filter(array(
+				trim($ps_k['defpas']),
+				trim($ps_k['defsha']),
+			));
 
 			$validHash = false;
-			$keysToTry = array();
-
-			if (!empty($ps_k['defpas'])) {
-				$keysToTry[] = $ps_k['defpas'];
-			}
-			if (!empty($ps_k['defsha'])) {
-				$keysToTry[] = $ps_k['defsha'];
-			}
-
 			foreach ($keysToTry as $key) {
-				if ($this->validarFirmaIzipay($key)) {
+				if ($this->validarFirmaIzipay($key, $rawBody)) {
 					$validHash = true;
 					break;
 				}
 			}
 
 			if (!$validHash) {
-				$validHash = $client->checkHash();
+				try {
+					$validHash = $client->checkHash();
+				} catch (Exception $hashException) {
+					error_log('Izipay IPN checkHash: ' . $hashException->getMessage());
+				}
 			}
 
-			if (!$validHash) {
-				http_response_code(400);
-				echo 'Invalid signature';
+			if ($validHash) {
+				$formAnswer = $client->getParsedFormAnswer();
+				$answer = $formAnswer['kr-answer'];
+				$orderStatus = isset($answer['orderStatus']) ? $answer['orderStatus'] : '';
+
+				if ($orderStatus === 'PAID') {
+					$codigo = '';
+
+					if (isset($answer['orderDetails']['orderId'])) {
+						$codigo = $answer['orderDetails']['orderId'];
+					} elseif (isset($answer['orderId'])) {
+						$codigo = $answer['orderId'];
+					}
+
+					$uuid = isset($answer['transactions'][0]['uuid']) ? $answer['transactions'][0]['uuid'] : '';
+					$hash = $formAnswer['kr-hash'];
+
+					if ($codigo !== '') {
+						$this->_couple->cambiarMensajeEstado($codigo, $uuid, $hash, $orderStatus);
+					}
+				}
+
+				http_response_code(200);
+				echo 'OK! OrderStatus is ' . $orderStatus;
 				return;
 			}
 
-			$formAnswer = $client->getParsedFormAnswer();
-			$answer = $formAnswer['kr-answer'];
-			$orderStatus = isset($answer['orderStatus']) ? $answer['orderStatus'] : '';
-
-			if ($orderStatus === 'PAID') {
-				$codigo = '';
-
-				if (isset($answer['orderDetails']['orderId'])) {
-					$codigo = $answer['orderDetails']['orderId'];
-				} elseif (isset($answer['orderId'])) {
-					$codigo = $answer['orderId'];
-				}
-
-				$uuid = isset($answer['transactions'][0]['uuid']) ? $answer['transactions'][0]['uuid'] : '';
-				$hash = $formAnswer['kr-hash'];
-
-				if ($codigo !== '') {
-					$this->_couple->cambiarMensajeEstado($codigo, $uuid, $hash, $orderStatus);
-				}
-			}
-
+			error_log('Izipay IPN firma no coincidió. hash-key=' . (isset($_POST['kr-hash-key']) ? $_POST['kr-hash-key'] : ''));
 			http_response_code(200);
-			echo 'OK! OrderStatus is ' . $orderStatus;
+			echo 'OK! Notification received';
 
 		} catch (Exception $e) {
 			error_log('Izipay IPN error: ' . $e->getMessage());
-			http_response_code(500);
-			echo 'Error processing IPN';
+			http_response_code(200);
+			echo 'OK! Notification received';
 		}
 	}
 
-	private function validarFirmaIzipay($key)
+	private function validarFirmaIzipay($key, $rawBody = '')
 	{
 		if (empty($_POST['kr-answer']) || empty($_POST['kr-hash']) || $key === '') {
 			return false;
 		}
 
+		$key = trim($key);
 		$krAnswer = str_replace('\/', '/', $_POST['kr-answer']);
 		$payloads = array(
 			$krAnswer,
@@ -170,6 +179,11 @@ class obsequioController extends Controller{
 			$_POST['kr-answer'],
 			stripslashes($_POST['kr-answer']),
 		);
+
+		if (!empty($rawBody) && preg_match('/kr-answer=([^&]*)/', $rawBody, $matches)) {
+			$payloads[] = urldecode($matches[1]);
+			$payloads[] = rawurldecode($matches[1]);
+		}
 
 		foreach ($payloads as $payload) {
 			if (hash_hmac('sha256', $payload, $key) === $_POST['kr-hash']) {
