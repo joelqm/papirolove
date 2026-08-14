@@ -46,7 +46,8 @@ class Bootstrap
             }
             
         } else {
-            throw new Exception('no encontrado');
+            header('Location: ' . BASE_URL . 'e404');
+            exit;
         }
     }
 }

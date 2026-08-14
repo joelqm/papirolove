@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.5.1, created on 2026-07-27 11:02:50
+/* Smarty version 5.5.1, created on 2026-08-12 08:37:52
   from 'file:views/julissayruben/components/gifts.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.5.1',
-  'unifunc' => 'content_6a67812a4fbcf9_94753333',
+  'unifunc' => 'content_6a7c7730e369a6_47822257',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9904d4fab53682b7dd4e8de9ed487494f507e5a5' => 
     array (
       0 => 'views/julissayruben/components/gifts.tpl',
-      1 => 1785168161,
+      1 => 1785171419,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_6a67812a4fbcf9_94753333 (\Smarty\Template $_smarty_tpl) {
+function content_6a7c7730e369a6_47822257 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\julissayruben\\components';
 ?><section class="gifts-section" id="gifts">
 
@@ -48,11 +48,11 @@ views/julissayruben/imgs/icono_regalo.webp" alt="">
             sugerencias con mucho cariño
         </p>
 
-        <a class="gf-btn" href="https://wa.me/51984464752" target="_blank" rel="noopener noreferrer">Yape</a>
+        <span class="gf-btn">Yape</span>
 
         <p class="gf-phone">984 464 752</p>
 
-        <a class="gf-btn" href="https://wa.me/51984464752?text=Hola%2C%20quiero%20participar%20del%20colectivo%20virtual" target="_blank" rel="noopener noreferrer">Colectivo Virtual</a>
+        <span class="gf-btn">Colectivo Virtual</span>
 
         <div class="izi-wrapper">
             <div class="izi-wrapper2">
@@ -177,14 +177,8 @@ views/layout/neela/images/cards.png" alt="Tarjetas de pago"
         text-decoration: none;
         padding: 0.7rem 2.6rem;
         border-radius: 999px;
-        transition: background-color 0.25s ease, transform 0.2s ease;
-    }
-
-    #gifts .gf-btn:hover {
-        background-color: #5a7184;
-        color: #fff !important;
-        text-decoration: none;
-        transform: translateY(-1px);
+        cursor: default;
+        pointer-events: none;
     }
 
     #gifts .gf-phone {

@@ -1,15 +1,40 @@
-<div class="error-404">
+<?php
+/* Smarty version 5.5.1, created on 2026-08-13 11:28:25
+  from 'file:C:\laragon\www\papirolove\views\e404\index.tpl' */
+
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.5.1',
+  'unifunc' => 'content_6a7df0a994e1f6_48200929',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'aa3886397711369d8917c0b6bcdfa209ff4ecd22' => 
+    array (
+      0 => 'C:\\laragon\\www\\papirolove\\views\\e404\\index.tpl',
+      1 => 1786638433,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+))) {
+function content_6a7df0a994e1f6_48200929 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\laragon\\www\\papirolove\\views\\e404';
+?><div class="error-404">
     <div class="error-404__card">
         <p class="error-404__code">404</p>
         <h1 class="error-404__title">Página no encontrada</h1>
         <p class="error-404__text">
             Lo sentimos, la dirección que buscas no existe o fue movida.
         </p>
-        <a class="error-404__btn" href="{$_layoutParams.root}">Volver al inicio</a>
+        <a class="error-404__btn" href="<?php echo $_smarty_tpl->getValue('_layoutParams')['root'];?>
+">Volver al inicio</a>
     </div>
 </div>
 
-{literal}
+
 <style>
     * { box-sizing: border-box; }
     body {
@@ -69,4 +94,6 @@
         opacity: 0.95;
     }
 </style>
-{/literal}
+
+<?php }
+}

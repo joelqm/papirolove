@@ -22,6 +22,10 @@ try{
     Bootstrap::run(new Request);
 }
 catch(Exception $e){
+    if (stripos($e->getMessage(), 'no encontrado') !== false || stripos($e->getMessage(), 'Error de vista') !== false) {
+        header('Location: ' . BASE_URL . 'e404');
+        exit;
+    }
     echo $e->getMessage();
 }
 
