@@ -148,6 +148,7 @@
       margin: 1.5rem auto 2rem;
       top: auto;
       position: relative;
+      z-index: 3;
     }
 
     .countdown-wrapper {

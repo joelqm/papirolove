@@ -100,12 +100,14 @@
         font-family: 'photograph_signature', cursive;
         font-size: 2.4rem;
         color: #525432;
-        margin: 0 0 0.2rem;
-        line-height: 1.1;
+        margin: 0 0 0.55rem;
+        line-height: 1.25;
     }
 
     #dresscode .dc-gender-text {
         font-size: 1.15rem;
+        line-height: 1.45;
+        margin-top: 0.15rem;
         -webkit-text-stroke: 0.4px #525432;
     }
 

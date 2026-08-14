@@ -559,7 +559,7 @@ body {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: #474641;
+    color: #F3F0E2;
     margin-left: 20px;
     transition: transform 0.3s ease;
     position: absolute;
@@ -1206,7 +1206,7 @@ body {
 /* Contenedor principal de Asistencia */
 .attendace-container {
     /*background: #f0eada;*/
-    padding: 60px 20px;
+    padding: 0px 20px 40px 20px;
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -2151,18 +2151,13 @@ footer {
         padding: 10px 5px;
     }
 
-    .nav-item {
-        font-size: 12px;
-        padding: 3px 5px;
-    }
-
     /* History Section */
     .flower-left {
         left: -260px;
     }
 
     .history-section {
-        padding: 50px 16px 70px;
+        padding: 50px 16px 90px;
         overflow: hidden;
     }
 
@@ -2221,6 +2216,15 @@ footer {
         text-align: center;
     }
 
+    .photo-stack {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 0;
+        padding: 0.5rem 0 1.5rem;
+    }
+
     .circular-image {
         position: relative;
         width: 200px;
@@ -2228,7 +2232,7 @@ footer {
         top: 0;
         left: 18px;
         right: auto;
-        margin: 0 auto;
+        margin: 0;
     }
 
     .rectangular-image {
@@ -2239,7 +2243,7 @@ footer {
         bottom: auto;
         left: auto;
         right: auto;
-        margin: -2.5rem auto 0;
+        margin: -2.5rem 0 0;
         transform: translateX(-18px) rotate(-7deg);
     }
 
@@ -2287,7 +2291,7 @@ footer {
     }
 
     .invitation-card {
-        padding: 60px 16px;
+        padding: 60px 16px 90px;
         gap: 1rem;
     }
 
@@ -2385,7 +2389,7 @@ footer {
         background-repeat: repeat;
         background-attachment: scroll;
         justify-content: center;
-        padding: 60px 16px 70px;
+        padding: 0 20px 90px 20px;
     }
 
     .history-title-small {
@@ -2439,6 +2443,11 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .header {
+        top: -16px;
+        padding-top: 0.5rem;
+    }
+
     .couple-name {
         font-size: 2.3rem;
     }

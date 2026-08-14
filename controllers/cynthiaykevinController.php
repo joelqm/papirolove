@@ -28,7 +28,7 @@ class cynthiaykevinController extends Controller
 		$this->_index = $this->loadModel('index');
 		$this->_dt = $this->loadModel('dataTable');
 
-		$this->_key = 9;
+		$this->_key = 9; // Cynthia y Kevin
 	}
 
 	public function index()

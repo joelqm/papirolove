@@ -110,24 +110,15 @@
     /* General Styles */
 
     :root {
-        --primary-color: #bb8464;
-        /* Muted sage green */
-        --primary-light: #c39072;
-        /* Lighter shade of primary */
-        --primary-lighter: #bb8464;
-        /* Even lighter shade */
-        --primary-dark: #bb8464;
-        /* Darker shade of primary */
-        --accent-color: #D4D8C9;
-        /* Light sage for accents */
-        --background-color: #F8F9F5;
-        /* Very light sage background */
+        --primary-color: #525432;
+        --primary-light: #6b6d45;
+        --primary-lighter: #F3F0E2;
+        --primary-dark: #3f4127;
+        --accent-color: #F3F0E2;
+        --background-color: #F3F0E2;
         --text-color: #333333;
-        /* Dark gray for text */
         --text-light: #666666;
-        /* Lighter text */
         --border-color: #D9D9D9;
-        /* Light gray for borders */
         --white: #FFFFFF;
     }
 
@@ -143,7 +134,8 @@
 
     @font-face {
         font-family: 'Dulcinea';
-        src: url("../fonts/Dulcinea.ttf");
+        src: url("{$_layoutParams.root}views/layout/fonts/Dulcinea.ttf");
+        font-display: swap;
     }
 
     @font-face {
@@ -229,10 +221,11 @@
     }
 
     .card-header {
-        font-family: 'photograph_signature', cursive;
+        font-family: 'Dulcinea', cursive;
         font-size: 2.5rem;
         font-weight: normal;
-        background-color: #bb8464;
+        letter-spacing: 2px;
+        background-color: var(--primary-color);
         color: white;
         padding: 40px;
         text-align: center;
@@ -297,7 +290,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #5d4037;
+        background-color: var(--primary-dark);
         color: white;
         font-weight: bold;
     }
@@ -375,7 +368,7 @@
     .gift-table td {
         padding: 16px 20px;
         text-align: center;
-        color: #5d4037;
+        color: var(--primary-color);
         border: none;
         border-bottom: 1px solid #f0e6e6;
         font-size: 15px;
@@ -390,21 +383,21 @@
     }
 
     .gift-table tbody tr:hover {
-        background-color: #faf6f6;
+        background-color: #f7f7f0;
     }
 
     .gift-table tbody tr:nth-child(even) {
-        background-color: #fcf9f9;
+        background-color: #fbfbf6;
     }
 
     .gift-table tbody tr:nth-child(even):hover {
-        background-color: #f7f2f2;
+        background-color: #f3f3ea;
     }
 
     /* Estilos para valores monetarios */
     .gift-table td:last-child {
         font-weight: 600;
-        color: #9c7373;
+        color: var(--primary-color);
     }
 
     /* Estilos para cantidades */
@@ -425,7 +418,7 @@
     @media (max-width: 480px) {
         .gift-table {
             box-shadow: none;
-            border: 1px solid #e8d7d7;
+            border: 1px solid #e4e4d6;
         }
 
         .gift-table th,
@@ -438,14 +431,14 @@
             text-align: center;
             margin-bottom: 15px;
             font-size: 18px;
-            color: #9c7373;
+            color: var(--primary-color);
             letter-spacing: 1px;
         }
     }
 
     /* Payment Container */
     .payment-container {
-        background-color: #f9f7f7;
+        background-color: #f4f4ee;
         padding: 20px;
         border-radius: 10px;
         margin-top: 30px;
@@ -477,12 +470,12 @@
     }
 
     .loading-heart {
-        stroke: #e8d7d7 !important;
+        stroke: var(--primary-lighter) !important;
         text-align: center;
     }
 
     .preloader-title {
-        color: #5d4037 !important;
+        color: var(--primary-color) !important;
         font-family: Brittany, cursive !important;
         margin-top: 15px;
     }
@@ -679,8 +672,9 @@
     }
 
     .font-titulo-obsequio {
-        font-family: "photograph_signature" !important;
+        font-family: 'Dulcinea', cursive !important;
         font-weight: normal !important;
+        letter-spacing: 2px;
     }
 </style>
 {/block}
