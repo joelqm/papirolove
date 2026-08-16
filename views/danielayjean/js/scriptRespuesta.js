@@ -13,7 +13,7 @@ $(function () {
             break;
         case '00':
             title = '¡Muchas gracias!';
-            message = 'Tu mensaje y obsequio para Flavia y Aníbal han sido enviados';
+            message = 'Tu mensaje y obsequio para Daniela y Jean han sido enviados';
             break;
         case '2300':
             title = '¡Pedido cancelado!';

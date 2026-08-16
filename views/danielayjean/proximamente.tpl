@@ -127,9 +127,9 @@
 
         <img class="coming-soon-logo"
              src="{$_layoutParams.root}views/danielayjean/imgs/logo.png"
-             alt="Flavia y Aníbal">
+             alt="Daniela y Jean">
 
-        <h1 class="coming-soon-names">Flavia &amp; Aníbal</h1>
+        <h1 class="coming-soon-names">Daniela &amp; Jean</h1>
 
         <p class="coming-soon-date">
             30<span class="dot">·</span>05<span class="dot">·</span>26

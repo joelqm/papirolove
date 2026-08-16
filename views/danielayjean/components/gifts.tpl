@@ -17,7 +17,7 @@
         <div class="gf-bank">
             <div class="gf-bank-block">
                 <p class="gf-bank-label">Bcp</p>
-                <p class="gf-bank-number">194-98611458-31</p>
+                <p class="gf-bank-number">194-98611458-0-31</p>
             </div>
             <div class="gf-bank-block">
                 <p class="gf-bank-label">CCI</p>

@@ -78,7 +78,7 @@ data.cart = cartJson
      
 
         $.ajax({
-            url: `${$("#root").val()}richiymili/guardarMensajeMonto`, // Reemplaza con tu URL
+            url: `${$("#root").val()}shirleyycrysthian/guardarMensajeMonto`, // Reemplaza con tu URL
             method: 'POST',
             data: data,
             success: function (response) {
@@ -91,7 +91,7 @@ data.cart = cartJson
                 });
 
                 setTimeout(()=>{
-                  window.location.href = `${$("#root").val()}richiymili/obsequio/${formData[0].value}`
+                  window.location.href = `${$("#root").val()}shirleyycrysthian/obsequio/${formData[0].value}`
                 },1000)
 
                 // Opcional: resetear el formulario

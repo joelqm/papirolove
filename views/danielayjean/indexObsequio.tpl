@@ -15,7 +15,7 @@
         <div class="notification-content">
             <span class="heart-icon">♥</span> Deslízate hacia abajo y presiona
             el botón <strong>Obsequiar y enviar</strong> para completar el
-            registro y hacer llegar tu presente a Flavia y Aníbal
+            registro y hacer llegar tu presente a Daniela y Jean
         </div>
     </div>
 
@@ -23,7 +23,7 @@
         <!-- Gift Form Card -->
         <div class="gift-card">
             <div class="card-header">
-                <span class="font-titulo-obsequio">Flavia & Aníbal</span>
+                <span class="font-titulo-obsequio">Daniela & Jean</span>
             </div>
 
             <div class="card-body">

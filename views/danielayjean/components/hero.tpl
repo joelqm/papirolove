@@ -5,9 +5,9 @@
     <div class="hero-content" data-aos="fade-up">
         <img class="hero-logo"
              src="{$_layoutParams.root}views/danielayjean/imgs/logo.webp"
-             alt="Flavia y Aníbal">
+             alt="Daniela y Jean">
 
-        <h1 class="couple-name">Flavia <span class="couple-amp">&</span> Aníbal</h1>
+        <h1 class="couple-name">Daniela <span class="couple-amp">&</span> Jean</h1>
 
         <p class="wedding-date">
             10<span class="date-dot">·</span>10<span class="date-dot">·</span>26

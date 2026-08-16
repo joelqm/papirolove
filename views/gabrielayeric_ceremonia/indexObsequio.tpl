@@ -4,7 +4,7 @@
         <div class="notification-content">
             <span class="heart-icon">♥</span> Deslízate hacia abajo y presiona el botón <strong>Obsequiar y
                 enviar</strong> para completar el
-            registro y hacer llegar tu presente a Richi y Mili.
+            registro y hacer llegar tu presente a Gabriela y Eric.
         </div>
     </div>
 
@@ -12,7 +12,7 @@
         <!-- Gift Form Card -->
         <div class="gift-card">
             <div class="card-header">
-                <h2>Gabriela y Mili</h2>
+                <h2>Gabriela y Eric</h2>
             </div>
 
             <div class="card-body">
