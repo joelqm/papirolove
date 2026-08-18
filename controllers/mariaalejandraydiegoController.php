@@ -76,6 +76,10 @@ class mariaalejandraydiegoController extends Controller
 		$messageId = $this->getTexto('messageId');
 
 		$cartArray = json_decode($data, true);
+		if (!is_array($cartArray)) {
+			$cartArray = array();
+		}
+		$this->_obsequio->borrarPendientesDeMensaje($messageId);
 
 		$totalAmount = 0;
 		foreach ($cartArray as $item) {
@@ -222,6 +226,7 @@ class mariaalejandraydiegoController extends Controller
 
 		$where = array(
 			array('columna' => 'empresa', 'ope' => ' = ', 'value' => $this->_key),
+			array('columna' => 'estado', 'ope' => ' = ', 'value' => "'Mensaje y Obsequio'"),
 		);
 
 		echo json_encode($this->_dt->simple($_GET, 'vw_cellis', 'id', $columns, $where));

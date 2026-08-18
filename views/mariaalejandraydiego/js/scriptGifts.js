@@ -66,6 +66,10 @@ $(document).ready(function () {
     submitHandler: function (form, event) {
       // Evitar el envío tradicional
       event.preventDefault();
+      if ($(form).data('enviando')) {
+        return false;
+      }
+      $(form).data('enviando', true);
 
       // 🧹 Limpiar emojis de los campos antes de enviar
       const messageField = $("#message");
@@ -98,6 +102,7 @@ $(document).ready(function () {
           //$(".form").hide();
         },
         error: function (err) {
+          $(form).data('enviando', false);
           $(".form").hide();
           Swal.fire({
             icon: 'error',

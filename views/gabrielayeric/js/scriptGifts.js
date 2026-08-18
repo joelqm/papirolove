@@ -56,7 +56,11 @@ $(document).ready(function () {
     errorClass: 'error-form',
     submitHandler: function (form) {
         // Evitar el envío tradicional
-        event.preventDefault(); 
+        event.preventDefault();
+        if ($(form).data('enviando')) {
+          return false;
+        }
+        $(form).data('enviando', true); 
 
         // Convertimos el Map a un objeto y luego obtenemos solo los valores
 const cartObj = Object.fromEntries(getCart());
@@ -99,6 +103,7 @@ data.cart = cartJson
                 $(".form").hide();
             },
             error: function (err) {
+              $(form).data('enviando', false);
               $(".form").hide();
                 Swal.fire({
                     icon: 'error',

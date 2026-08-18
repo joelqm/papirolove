@@ -113,47 +113,87 @@ class coupleModel extends Model
 
 		$fecreg = date('Y-m-d');
 		$horreg = date('H:i:s');
-		$fechor = date('Y-m-d H:i:s');
+		$ip = isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : '';
 
-		$sql = "INSERT INTO tbl_mensaje(
-		m_estado,
-		m_codigo,
-		m_fecreg,
-		m_nombre,
-		m_mensaje,
-		m_monto,
-		m_ip,
-		m_empresa,
-		m_hora
-		)
-		VALUES
-		(
-		:estado,
-		:codigo,
-		:fecreg,
-		:nombre,
-		:mensaje,
-		:monto,
-		:ip,
-		:empresa,
-		:hora
-		)";
+		try {
+			$this->_db->beginTransaction();
 
-		$rptaSql = $this->_db->prepare($sql)
-			->execute(array(
-				':estado' => 2,
-				':codigo' => $ao,
-				':fecreg' => $fecreg,
-				':nombre' => $nombre,
-				':mensaje' => $mensaje,
-				':monto' => $monto,
-				':ip' => $_SERVER["REMOTE_ADDR"],
-				':empresa' => $empresa,
-				':hora' => $horreg
-			));
+			$buscar = $this->_db->prepare("SELECT m_id, m_estado FROM tbl_mensaje WHERE m_codigo = :codigo ORDER BY m_id ASC LIMIT 1 FOR UPDATE");
+			$buscar->execute(array(':codigo' => $ao));
+			$existente = $buscar->fetch();
 
-		//$this->enviarCorAdm($nombre,$puesto,$nacionalidad,$edad,$celular,$carrera,$gradoacademico);
-		return $rptaSql;
+			if ($existente) {
+				if (intval($existente['m_estado']) === 3) {
+					$this->_db->commit();
+					return true;
+				}
+
+				$update = $this->_db->prepare("UPDATE tbl_mensaje SET
+					m_nombre = :nombre,
+					m_mensaje = :mensaje,
+					m_monto = :monto,
+					m_ip = :ip,
+					m_empresa = :empresa,
+					m_hora = :hora,
+					m_fecreg = :fecreg,
+					m_estado = 2
+					WHERE m_codigo = :codigo
+					AND m_estado <> 3");
+
+				$rptaSql = $update->execute(array(
+					':nombre' => $nombre,
+					':mensaje' => $mensaje,
+					':monto' => $monto,
+					':ip' => $ip,
+					':empresa' => $empresa,
+					':hora' => $horreg,
+					':fecreg' => $fecreg,
+					':codigo' => $ao
+				));
+			} else {
+				$insert = $this->_db->prepare("INSERT INTO tbl_mensaje(
+					m_estado,
+					m_codigo,
+					m_fecreg,
+					m_nombre,
+					m_mensaje,
+					m_monto,
+					m_ip,
+					m_empresa,
+					m_hora
+				) VALUES (
+					:estado,
+					:codigo,
+					:fecreg,
+					:nombre,
+					:mensaje,
+					:monto,
+					:ip,
+					:empresa,
+					:hora
+				)");
+
+				$rptaSql = $insert->execute(array(
+					':estado' => 2,
+					':codigo' => $ao,
+					':fecreg' => $fecreg,
+					':nombre' => $nombre,
+					':mensaje' => $mensaje,
+					':monto' => $monto,
+					':ip' => $ip,
+					':empresa' => $empresa,
+					':hora' => $horreg
+				));
+			}
+
+			$this->_db->commit();
+			return $rptaSql;
+		} catch (Exception $e) {
+			if ($this->_db->inTransaction()) {
+				$this->_db->rollBack();
+			}
+			return false;
+		}
 
 	}
 
@@ -184,7 +224,10 @@ class coupleModel extends Model
 				m_uuid = :uuid,
 				m_hash = :hash,
 				m_state = :state
-				WHERE m_codigo = :codigo";
+				WHERE m_codigo = :codigo
+				AND m_estado = 2
+				ORDER BY m_id ASC
+				LIMIT 1";
 
 			$stmt = $this->_db->prepare($rptaSql);
 			$stmt->bindParam(':uuid', $uuid);

@@ -143,6 +143,13 @@ class obsequioModel extends Model
         }
     }
 
+    public function borrarPendientesDeMensaje($mensajeId)
+    {
+        $query = $this->_db->prepare("DELETE FROM tbl_obsequio_enviado WHERE mensaje_id = :mensaje_id AND activo = 0");
+        $query->bindParam(':mensaje_id', $mensajeId, PDO::PARAM_INT);
+        return $query->execute();
+    }
+
     public function save($mensajeId, $obsequioCantidad, $obsequioPrecio, $subtotal, $obsequioId)
     {
         try {
