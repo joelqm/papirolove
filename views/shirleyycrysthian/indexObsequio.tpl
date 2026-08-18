@@ -91,6 +91,12 @@
 <style>
     /* General Styles */
     @font-face {
+        font-family: 'Scriptina';
+        src: url("{$_layoutParams.root}views/zelmaysamuel/fonts/hlscriptibk2.ttf") format("truetype");
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: 'Dulcinea';
         src: url("../fonts/Dulcinea.ttf");/
     }
@@ -153,7 +159,7 @@
     }
 
     .card-header {
-        font-family: "Dulcinea";
+        font-family: "Scriptina";
         font-size: 2rem;
         background-color: #e8d7d7;
         padding: 20px;

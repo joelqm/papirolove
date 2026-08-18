@@ -161,6 +161,12 @@
         src: url("../fonts/new_athena_unicode.ttf");
     }
 
+    @font-face {
+        font-family: 'newyork_personal';
+        src: url("{$_layoutParams.root}views/layout/fonts/newyork_personal_use.otf") format("opentype");
+        font-display: swap;
+    }
+
     /* .font-abramo {
         font-family: 'Abramo' !important;
     } */
@@ -670,7 +676,7 @@
     }
 
     .font-titulo-obsequio {
-        font-family: "newAthenaUnicode" !important;
+        font-family: "newyork_personal" !important;
         font-weight: normal !important;
     }
 </style>

@@ -91,6 +91,13 @@
 <style>
     /* General Styles */
     @font-face {
+        font-family: 'Alana';
+        src: url("{$_layoutParams.root}views/gabrielayeric_ceremonia/fonts/Alana.woff2") format("woff2"),
+            url("{$_layoutParams.root}views/gabrielayeric_ceremonia/fonts/Alana.otf") format("opentype");
+        font-display: swap;
+    }
+
+    @font-face {
         font-family: 'Dulcinea';
         src: url("../fonts/Dulcinea.ttf");/
     }
@@ -153,7 +160,7 @@
     }
 
     .card-header {
-        font-family: "Dulcinea";
+        font-family: "Alana";
         font-size: 2rem;
         background-color: #e8d7d7;
         padding: 20px;

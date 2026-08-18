@@ -168,6 +168,13 @@
         font-display: swap;
     }
 
+    @font-face {
+        font-family: 'CastelaMolgate';
+        src: url("{$_layoutParams.root}views/jesykaygustavo/fonts/Castela Molgate.otf") format("opentype"),
+            url("{$_layoutParams.root}views/jesykaygustavo/fonts/Castela Molgate.ttf") format("truetype");
+        font-display: swap;
+    }
+
     /* .font-abramo {
         font-family: 'Abramo' !important;
     } */
@@ -679,7 +686,7 @@
     }
 
     .font-titulo-obsequio {
-        font-family: "photograph_signature" !important;
+        font-family: "CastelaMolgate" !important;
         font-weight: normal !important;
     }
 </style>

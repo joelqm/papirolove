@@ -155,8 +155,8 @@
 
     @font-face {
         font-family: 'photograph_signature';
-        src: url("../fonts/photograph_signature.woff2") format("woff2"),
-            url("../fonts/photograph_signature.ttf") format("truetype");
+        src: url("{$_layoutParams.root}views/layout/fonts/photograph_signature.woff2") format("woff2"),
+            url("{$_layoutParams.root}views/layout/fonts/photograph_signature.ttf") format("truetype");
         font-display: swap;
     }
 
@@ -672,7 +672,7 @@
     }
 
     .font-titulo-obsequio {
-        font-family: 'Dulcinea', cursive !important;
+        font-family: 'photograph_signature', cursive !important;
         font-weight: normal !important;
         letter-spacing: 2px;
     }

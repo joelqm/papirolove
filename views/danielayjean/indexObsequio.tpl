@@ -156,6 +156,12 @@
         src: url("../fonts/new_athena_unicode.ttf");
     }
 
+    @font-face {
+        font-family: 'AngellicaSignature';
+        src: url("{$_layoutParams.root}views/julissayruben/fonts/AngellicaSignature.otf") format("opentype");
+        font-display: swap;
+    }
+
     /* .font-abramo {
         font-family: 'Abramo' !important;
     } */
@@ -665,7 +671,7 @@
     }
 
     .font-titulo-obsequio {
-        font-family: "newAthenaUnicode" !important;
+        font-family: "AngellicaSignature", cursive !important;
         font-weight: normal !important;
     }
 </style>

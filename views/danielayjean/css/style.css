@@ -101,6 +101,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'AngellicaSignature';
+    src: url("../../julissayruben/fonts/AngellicaSignature.otf") format("opentype");
+    font-display: swap;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
