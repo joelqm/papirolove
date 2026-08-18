@@ -220,22 +220,20 @@
         <p class="history-title-big">Nuestra Historia</p>
       </div>
       <p class="text-body" data-aos="fade-up">
-        Desde el primer día que Andree vio a Mayte
-        entrar al trabajo, algo especial sucedió: las miradas hablaron antes que las palabras.
-
-      </p>
-      <p class="text-body" data-aos="fade-up">
-        Su historia empezó sin planes, y aquella primera cita, el 31 de octubre de 2022, nació de un
-        momento espontáneo: un vino compartido y una
-        conversación que, de tímida, se volvió la de dos
-        personas que parecían conocerse de toda la vida... y que simplemente no quería terminar.
-
-      </p>
-      <p class="text-body" data-aos="fade-up">
-        Hoy, después de más de tres años de risas, complicidad y
-        amor, han decidido dar el paso más importante
-        el 31 de octubre de 2026, demostrando que las
-        mejores historias no se planean, solo se viven y se eligen cada día.
+        El viento de la noche del 31 de octubre soplaba
+        con complicidad, envuelto en el misterio y las risas
+        de Halloween. sus miradas se cruzaron para nunca
+        más soltarse, sellando su destino en un primer beso,
+        marcando el inicio de una vida en la que jamás
+        se separaron. Dos años de complicidad absoluta
+        los llevaron a una hermosa isla, donde frente al mar
+        y arropados por el cariño de sus amigos,
+        prometieron entrelazar sus almas para siempre
+        en un emotivo compromiso, demostrando
+        que lo que empezó como una mágica
+        coincidencia de otoño se convirtió
+        en la historia de amor más hermosa y
+        eterna de sus vidas.
       </p>
 
       <br>
