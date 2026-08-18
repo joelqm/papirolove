@@ -1,5 +1,5 @@
 {block name="styles"}
-<link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/carmenygunther/css/style.css">
+<link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/carmenygunther/css/style.css?v={$_layoutParams.filever}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
 

@@ -90,7 +90,8 @@
 
 @font-face {
     font-family: 'newyork_personal';
-    src: url("../../layout/fonts/newyork.otf") format("opentype");
+    src: url("../../layout/fonts/newyork_personal_use.woff2") format("woff2"),
+        url("../../layout/fonts/newyork_personal_use.otf") format("opentype");
     font-display: swap;
     font-weight: normal;
     font-style: normal;
@@ -844,7 +845,7 @@ body {
 }
 
 .text-invitation-primary {
-    font-family: "newyork_personal";
+    font-family: "newyork_personal", Georgia, serif;
     color: #F3F0E2;
     font-size: 1.5rem;
     -webkit-text-stroke: 0;

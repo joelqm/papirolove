@@ -150,14 +150,21 @@
   #info .details-intro {
     width: 100%;
     text-align: center;
+    font-family: "newyork_personal", Georgia, serif;
   }
 
   #info .details-intro,
-  #info .location-type,
   #info .location-address,
   #info .location-time {
     color: #F3F0E2;
     -webkit-text-stroke: 0;
+    font-family: "newyork_personal", Georgia, serif;
+  }
+
+  #info .location-type {
+    color: #F3F0E2;
+    -webkit-text-stroke: 0;
+    font-family: "photograph_signature", cursive;
   }
 
   #info .details-intro p {
