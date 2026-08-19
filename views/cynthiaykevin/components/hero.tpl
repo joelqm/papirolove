@@ -136,6 +136,9 @@
         .container-page {
             justify-content: flex-start !important;
             padding-top: 2rem !important;
+            min-height: unset !important;
+            height: calc(100vw * 1504 / 1080) !important;
+            max-height: calc(100vw * 1504 / 1080) !important;
         }
 
         .header {

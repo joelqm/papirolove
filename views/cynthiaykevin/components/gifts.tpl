@@ -20,11 +20,11 @@
         <div class="gf-bank">
             <div class="gf-bank-block">
                 <p class="gf-bank-label">BCP</p>
-                <p class="gf-bank-number">215-33791856-0-83</p>
+                <p class="gf-bank-number"><span class="gf-bank-number-text" x-apple-data-detectors="none">215-33791856-0-83</span></p>
             </div>
             <div class="gf-bank-block">
                 <p class="gf-bank-label">CCI</p>
-                <p class="gf-bank-number">00221513379185608325</p>
+                <p class="gf-bank-number"><span class="gf-bank-number-text" x-apple-data-detectors="none">00221513379185608325</span></p>
             </div>
         </div>
 
@@ -90,10 +90,25 @@
         letter-spacing: 2px;
         line-height: 1.1;
         color: #F3F0E2 !important;
+        -webkit-text-stroke: 0.65px #F3F0E2;
+        paint-order: stroke fill;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
         text-align: center;
         margin: 0.2rem 0 0.4rem;
         width: auto;
         height: auto;
+    }
+
+    #gifts .gf-bank-number,
+    #gifts .gf-bank-number-text,
+    #gifts .gf-bank-number a,
+    #gifts a.gf-bank-number,
+    #gifts a[href^="tel:"] {
+        color: #F3F0E2 !important;
+        -webkit-text-fill-color: #F3F0E2 !important;
+        font-weight: 600;
+        text-decoration: none !important;
+        pointer-events: none;
     }
 
     #gifts .gf-btn {
@@ -154,6 +169,7 @@
 
         #gifts .gf-logo {
             font-size: 2.6rem;
+            -webkit-text-stroke: 0.55px #F3F0E2;
         }
 
         #gifts .gf-btn {
@@ -172,6 +188,7 @@
 
         #gifts .gf-logo {
             font-size: 2.3rem;
+            -webkit-text-stroke: 0.5px #F3F0E2;
         }
 
         #gifts .gf-bank-number {
