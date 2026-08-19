@@ -385,6 +385,7 @@ body {
     font-family: "newyork_personal";
     font-weight: normal;
     color: #fff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
     font-size: 2rem;
     letter-spacing: 1px;
     margin-top: 26px;
@@ -1979,7 +1980,7 @@ footer {
 /* Media Query: Max 700px (Cambio de fondo para Hero) */
 @media (max-width: 700px) {
     .background {
-        background-image: url("../imgs/preboda.webp");
+        background-image: url("../imgs/preboda_mobil.webp");
         background-position: center center;
     }
 
@@ -1997,6 +1998,10 @@ footer {
 
     .wedding-date-2 {
         margin-top: 12px;
+    }
+
+    .couple-name {
+        text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     }
 
     .wedding-grid {
