@@ -2018,8 +2018,8 @@ footer {
     .wedding-date-2 {
         margin-top: 12px;
         text-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-        font-weight: 600;
-        -webkit-text-stroke: 0.55px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .couple-name {
@@ -2033,8 +2033,8 @@ footer {
 
     .button-calendar {
         margin-top: 1rem;
-        font-weight: 700;
-        -webkit-text-stroke: 0.45px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .header img {
@@ -2151,14 +2151,14 @@ footer {
         position: static;
         top: auto;
         margin-top: 0.9rem;
-        font-weight: 600;
-        -webkit-text-stroke: 0.55px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .button-calendar {
         margin-top: 1.6rem;
-        font-weight: 700;
-        -webkit-text-stroke: 0.45px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .count {
@@ -2492,13 +2492,13 @@ footer {
     }
 
     .wedding-date-2 {
-        font-weight: 600 !important;
-        -webkit-text-stroke: 0.5px #fff;
+        font-weight: normal !important;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .button-calendar {
-        font-weight: 700;
-        -webkit-text-stroke: 0.4px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .history-title-big,

@@ -169,15 +169,15 @@
         }
 
         #gifts .gf-message {
-            font-weight: 600;
-            -webkit-text-stroke: 0.5px #F3F0E2;
+            font-weight: normal;
+            -webkit-text-stroke: 0.35px #F3F0E2;
         }
 
         #gifts .gf-intro,
         #gifts .gf-bank-label,
         #gifts .gf-bank-number {
-            font-weight: 600;
-            -webkit-text-stroke: 0.5px #F3F0E2;
+            font-weight: normal;
+            -webkit-text-stroke: 0.35px #F3F0E2;
         }
 
         #gifts .gf-logo {
@@ -203,8 +203,8 @@
         #gifts .gf-intro,
         #gifts .gf-bank-label,
         #gifts .gf-bank-number {
-            font-weight: 600;
-            -webkit-text-stroke: 0.45px #F3F0E2;
+            font-weight: normal;
+            -webkit-text-stroke: 0.35px #F3F0E2;
         }
 
         #gifts .gf-logo {

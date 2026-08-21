@@ -163,8 +163,8 @@
   #info .details-intro p,
   #info .location-address,
   #info .location-time {
-    font-weight: 600;
-    -webkit-text-stroke: 0.45px #F3F0E2;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #F3F0E2;
   }
 
   #info .location-type {

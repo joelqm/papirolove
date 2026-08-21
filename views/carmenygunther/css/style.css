@@ -425,17 +425,17 @@ body {
 .countdown-number {
     font-family: "newyork_personal";
     font-size: 28px;
-    font-weight: 600;
-    -webkit-text-stroke: 0.55px #99948C;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #99948C;
 }
 
 .countdown-label {
     font-family: "newyork_personal";
-    font-weight: 600;
+    font-weight: normal;
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 5px;
-    -webkit-text-stroke: 0.55px #99948C;
+    -webkit-text-stroke: 0.35px #99948C;
 }
 
 .buttons {
@@ -964,8 +964,8 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    font-weight: 600;
-    -webkit-text-stroke: 0.45px #F3F0E2;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #F3F0E2;
 }
 
 .location-time {
@@ -973,8 +973,8 @@ body {
     color: #F3F0E2;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    font-weight: 600;
-    -webkit-text-stroke: 0.45px #F3F0E2;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #F3F0E2;
 }
 
 .location-button {
@@ -2066,8 +2066,8 @@ footer {
 
     .wedding-date-2 {
         margin-top: 14px;
-        font-weight: 600;
-        -webkit-text-stroke: 0.55px #99948C;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #99948C;
     }
 
     .wedding-grid {
@@ -2077,8 +2077,8 @@ footer {
 
     .button-calendar {
         margin-top: 1.35rem;
-        font-weight: 700;
-        -webkit-text-stroke: 0.45px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .header img {
@@ -2195,14 +2195,14 @@ footer {
         position: static;
         top: auto;
         margin-top: 0.9rem;
-        font-weight: 600;
-        -webkit-text-stroke: 0.55px #99948C;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #99948C;
     }
 
     .button-calendar {
         margin-top: 1.6rem;
-        font-weight: 700;
-        -webkit-text-stroke: 0.45px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .count {
@@ -2579,13 +2579,13 @@ footer {
     }
 
     .wedding-date-2 {
-        font-weight: 600 !important;
-        -webkit-text-stroke: 0.5px #99948C;
+        font-weight: normal !important;
+        -webkit-text-stroke: 0.35px #99948C;
     }
 
     .button-calendar {
-        font-weight: 700;
-        -webkit-text-stroke: 0.4px #fff;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #fff;
     }
 
     .history-title-big,

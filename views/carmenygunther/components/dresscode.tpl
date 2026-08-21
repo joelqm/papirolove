@@ -119,8 +119,8 @@
 
     #dresscode .dc-reserved-colors p {
         margin: 0;
-        font-weight: 600;
-        -webkit-text-stroke: 0.45px #99948C;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #99948C;
     }
 
     #dresscode .dc-color-swatches {

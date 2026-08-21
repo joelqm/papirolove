@@ -118,8 +118,8 @@
 
   .history-section .countdown-number,
   .history-section .countdown-label {
-    font-weight: 600;
-    -webkit-text-stroke: 0.55px #99948C;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #99948C;
   }
 
   @media (max-width: 992px) {
