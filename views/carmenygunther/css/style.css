@@ -424,16 +424,17 @@ body {
 .countdown-number {
     font-family: "newyork_personal";
     font-size: 28px;
-    font-weight: normal;
+    font-weight: 600;
+    -webkit-text-stroke: 0.55px #99948C;
 }
 
 .countdown-label {
     font-family: "newyork_personal";
-    font-weight: normal;
+    font-weight: 600;
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 5px;
-    -webkit-text-stroke: 0.5px #99948C;
+    -webkit-text-stroke: 0.55px #99948C;
 }
 
 .buttons {
@@ -962,7 +963,8 @@ body {
     font-size: 1.3rem;
     margin-bottom: 10px;
     letter-spacing: 1px;
-    -webkit-text-stroke: 0;
+    font-weight: 600;
+    -webkit-text-stroke: 0.45px #F3F0E2;
 }
 
 .location-time {
@@ -970,7 +972,8 @@ body {
     color: #F3F0E2;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    -webkit-text-stroke: 0;
+    font-weight: 600;
+    -webkit-text-stroke: 0.45px #F3F0E2;
 }
 
 .location-button {
@@ -1198,16 +1201,17 @@ body {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    height: 500px;
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
 }
 
 .owl-carousel .item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: unset;
     border-radius: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: block;
 }
 
 .dresscode-container {
@@ -2050,17 +2054,17 @@ footer {
     .container-page {
         align-items: center;
         justify-content: flex-start;
-        padding: 3rem 1.25rem 0;
+        padding: 5.5rem 1.25rem 0;
         min-height: 100svh;
     }
 
     .header {
-        padding-top: 0.75rem;
-        top: -28px;
+        padding-top: 1rem;
+        top: 8px;
     }
 
     .wedding-date-2 {
-        margin-top: 12px;
+        margin-top: 14px;
     }
 
     .wedding-grid {
@@ -2069,7 +2073,7 @@ footer {
     }
 
     .button-calendar {
-        margin-top: 1rem;
+        margin-top: 1.35rem;
     }
 
     .header img {
@@ -2515,7 +2519,7 @@ footer {
     }
 
     .owl-carousel .item {
-        height: 360px;
+        height: auto;
     }
 
     /* --- Dress Code mobile adjustments --- */
@@ -2588,7 +2592,7 @@ footer {
     }
 
     .owl-carousel .item {
-        height: 300px;
+        height: auto;
     }
 
     .gift-section .date {

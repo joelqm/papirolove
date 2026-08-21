@@ -135,15 +135,16 @@
     @media (max-width: 700px) {
         .container-page {
             justify-content: flex-start !important;
-            padding-top: 2rem !important;
+            padding-top: 5rem !important;
         }
 
         .header {
-            padding-top: 0.5rem !important;
+            padding-top: 1rem !important;
+            top: 8px !important;
         }
 
         .wedding-date-2 {
-            margin-top: 8px !important;
+            margin-top: 12px !important;
         }
 
         .wedding-grid {
@@ -152,7 +153,7 @@
         }
 
         .button-calendar {
-            margin-top: 0.5rem !important;
+            margin-top: 1.2rem !important;
         }
 
         .countdown-number {

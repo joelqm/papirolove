@@ -32,6 +32,7 @@
             loop: true,
             margin: 10,
             dots: true,
+            autoHeight: true,
             autoplay: true,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,

@@ -116,8 +116,10 @@
     color: #99948C;
   }
 
+  .history-section .countdown-number,
   .history-section .countdown-label {
-    -webkit-text-stroke: 0;
+    font-weight: 600;
+    -webkit-text-stroke: 0.55px #99948C;
   }
 
   @media (max-width: 992px) {
