@@ -168,6 +168,18 @@
             font-size: 1.15rem;
         }
 
+        #gifts .gf-message {
+            font-weight: 600;
+            -webkit-text-stroke: 0.5px #F3F0E2;
+        }
+
+        #gifts .gf-intro,
+        #gifts .gf-bank-label,
+        #gifts .gf-bank-number {
+            font-weight: 600;
+            -webkit-text-stroke: 0.5px #F3F0E2;
+        }
+
         #gifts .gf-logo {
             font-size: 2.6rem;
         }
@@ -185,6 +197,14 @@
         #gifts .gf-bank-number,
         #gifts .gf-btn {
             font-size: 1.05rem;
+        }
+
+        #gifts .gf-message,
+        #gifts .gf-intro,
+        #gifts .gf-bank-label,
+        #gifts .gf-bank-number {
+            font-weight: 600;
+            -webkit-text-stroke: 0.45px #F3F0E2;
         }
 
         #gifts .gf-logo {

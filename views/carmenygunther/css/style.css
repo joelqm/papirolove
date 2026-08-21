@@ -2066,6 +2066,8 @@ footer {
 
     .wedding-date-2 {
         margin-top: 14px;
+        font-weight: 600;
+        -webkit-text-stroke: 0.55px #99948C;
     }
 
     .wedding-grid {
@@ -2075,6 +2077,8 @@ footer {
 
     .button-calendar {
         margin-top: 1.35rem;
+        font-weight: 700;
+        -webkit-text-stroke: 0.45px #fff;
     }
 
     .header img {
@@ -2191,10 +2195,14 @@ footer {
         position: static;
         top: auto;
         margin-top: 0.9rem;
+        font-weight: 600;
+        -webkit-text-stroke: 0.55px #99948C;
     }
 
     .button-calendar {
         margin-top: 1.6rem;
+        font-weight: 700;
+        -webkit-text-stroke: 0.45px #fff;
     }
 
     .count {
@@ -2568,6 +2576,16 @@ footer {
     .wedding-date,
     #new-history .wedding-date {
         font-size: 1.35rem !important;
+    }
+
+    .wedding-date-2 {
+        font-weight: 600 !important;
+        -webkit-text-stroke: 0.5px #99948C;
+    }
+
+    .button-calendar {
+        font-weight: 700;
+        -webkit-text-stroke: 0.4px #fff;
     }
 
     .history-title-big,

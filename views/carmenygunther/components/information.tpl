@@ -160,6 +160,7 @@
     font-family: "newyork_personal", Georgia, serif;
   }
 
+  #info .details-intro p,
   #info .location-address,
   #info .location-time {
     font-weight: 600;
