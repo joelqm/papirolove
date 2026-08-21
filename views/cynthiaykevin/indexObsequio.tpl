@@ -134,7 +134,8 @@
 
     @font-face {
         font-family: 'Dulcinea';
-        src: url("{$_layoutParams.root}views/layout/fonts/Dulcinea.ttf");
+        src: url("{$_layoutParams.root}views/layout/fonts/Dulcinea.woff2") format("woff2"),
+            url("{$_layoutParams.root}views/layout/fonts/Dulcinea.ttf") format("truetype");
         font-display: swap;
     }
 

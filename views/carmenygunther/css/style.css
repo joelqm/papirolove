@@ -41,7 +41,8 @@
 
 @font-face {
     font-family: 'Dulcinea';
-    src: url("../../layout/fonts/Dulcinea.ttf");
+    src: url("../../layout/fonts/Dulcinea.woff2") format("woff2"),
+        url("../../layout/fonts/Dulcinea.ttf") format("truetype");
     font-display: swap;
 }
 

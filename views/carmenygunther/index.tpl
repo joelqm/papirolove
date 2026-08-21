@@ -1,4 +1,6 @@
 {block name="styles"}
+<link rel="preload" href="{$_layoutParams.root}views/layout/fonts/photograph_signature.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{$_layoutParams.root}views/layout/fonts/newyork_personal_use.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/carmenygunther/css/style.css?v={$_layoutParams.filever}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
