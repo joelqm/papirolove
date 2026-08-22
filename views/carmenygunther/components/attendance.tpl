@@ -11,7 +11,7 @@
 
         <h3 class="date">30.09.26</h3>
 
-        <a href="https://wa.link/qk10sq" class="button-3">
+        <a href="https://wa.link/8e8zur" class="button-3">
             Confirma Aquí
         </a>
 
