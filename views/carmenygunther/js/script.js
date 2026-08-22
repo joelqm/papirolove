@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Definir la fecha de destino
-  var targetDate = new Date("September 26, 2026 14:00:00").getTime();
+  var targetDate = new Date("October 24, 2026 14:00:00").getTime();
 
   // Guardar el último valor para comparar
   var lastDays = -1;

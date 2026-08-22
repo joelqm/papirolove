@@ -178,9 +178,9 @@
         <h1 class="couple-name" data-aos="fade-up">Carmen <span style="margin-left: 1rem;">&</span>
             Gunther</h1>
             <p class="wedding-date-2" data-aos="fade-up">
-            26
+            24
             .
-            09
+            10
             .
             26
             </p>
