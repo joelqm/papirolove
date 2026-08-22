@@ -709,7 +709,7 @@ body {
     text-align: center;
     max-width: 500px;
     font-weight: normal;
-    -webkit-text-stroke: 0.5px #99948C;
+    -webkit-text-stroke: 0.35px #99948C;
 }
 
 .text-body .texto-content {
@@ -2305,7 +2305,8 @@ footer {
         font-size: 1.1rem;
         max-width: 100%;
         margin-bottom: 1rem;
-        -webkit-text-stroke: 0;
+        font-weight: normal;
+        -webkit-text-stroke: 0.35px #99948C;
     }
 
     .divider {

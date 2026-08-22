@@ -106,7 +106,8 @@
   }
 
   .history-section .text-body {
-    -webkit-text-stroke: 0;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #99948C;
   }
 
   .history-section .wedding-date,
@@ -200,20 +201,13 @@
         <p class="history-title-big">Nuestra Historia</p>
       </div>
       <p class="text-body" data-aos="fade-up">
-        Nos conocimos a través de nuestra amiga en común.
-        Sin buscarlo, nos encontramos y, desde entonces,
-        no volvimos a separarnos.
+        Nos conocimos a través de nuestra amiga en común. Sin buscarlo, nos encontramos y, desde entonces, no volvimos a separarnos.
       </p>
       <p class="text-body" data-aos="fade-up">
-        Compartimos grandes historias, muchos viajes
-        y aventuras, y por ello decidimos unir
-        nuestros caminos para crecer de la mano día a día.
+        Compartimos grandes historias, muchos viajes y aventuras, y por ello decidimos unir nuestros caminos para crecer de la mano día a día.
       </p>
       <p class="text-body" data-aos="fade-up">
-        Descubrimos que el amor
-        no es solo un sentimiento, sino la decisión diaria de
-        hacernos felices. Hoy elegimos caminar
-        juntos para siempre.
+        Descubrimos que el amor no es solo un sentimiento, sino la decisión diaria de hacernos felices. Hoy elegimos caminar juntos para siempre.
       </p>
 
       <br>
