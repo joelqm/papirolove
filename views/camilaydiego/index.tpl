@@ -10,6 +10,7 @@
 {include file="views/camilaydiego/components/hero.tpl"}
 
 {include file="views/camilaydiego/components/history.tpl"}
+{include file="views/camilaydiego/components/countdown-banner.tpl"}
 {include file="views/camilaydiego/components/information.tpl"}
 {include file="views/camilaydiego/components/galery.tpl"}
 
@@ -19,9 +20,10 @@
 </div>
 
 {include file="views/camilaydiego/components/gifts.tpl"}
+{include file="views/camilaydiego/components/attendance.tpl"}
 
 <section class="closing-photo" aria-label="Foto final">
-    <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-6.webp"
+    <img src="{$_layoutParams.root}views/camilaydiego/imgs/background_3.webp"
          alt="Camila y Diego"
          class="closing-photo-img">
 </section>

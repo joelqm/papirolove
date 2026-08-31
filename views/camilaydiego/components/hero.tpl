@@ -1,174 +1,76 @@
 <style>
-    #player {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        /* Espacio entre el icono y el texto */
-        margin: 20px auto 0;
-        /* Centrado horizontal automático */
-        cursor: pointer;
-    }
-
     .container-page {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         min-height: 100vh;
     }
 
-    .wedding-grid {
-
-        width: 1200px;
-        /* no ocupa toda la pantalla */
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-        align-items: center;
-    }
-
-    /* columna izquierda */
-
-    .col-left {
-        text-align: right;
-        transform: translateY(-60px);
-    }
-
-    /* columna centro (solo deja ver la foto) */
-
-    .col-center {
-        height: 400px;
-    }
-
-    /* columna derecha */
-
-    .col-right {
-        max-width: 420px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* centra verticalmente */
-        align-items: center;
-        /* centra horizontalmente */
-
-        text-align: center;
-        /* centra el texto */
-        height: 100%;
-        transform: translateY(60px);
-    }
-
-    .logo {
-        width: 380px;
-        margin-bottom: 20px;
-    }
-
-    /* contador */
-
-    .count {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    .countdown-number {
-        font-size: 40px;
-    }
-
-    .countdown-label {
-        font-size: 14px;
-    }
-
-    /* Media Query para Tablets y Celulares */
-    @media (max-width: 992px) {
-        .wedding-grid {
-            width: 100%;
-            /* Ocupa todo el ancho */
-            grid-template-columns: 1fr;
-            /* Una sola columna */
-            gap: 40px;
-            padding: 20px;
-        }
-
-        .col-left,
-        .col-right {
-            text-align: center;
-            transform: translateY(0);
-            /* Eliminamos el desfase vertical */
-            max-width: 100%;
-        }
-
-        .col-center {
-            display: none;
-            /* Opcional: ocultar el espacio vacío en móviles si no hay foto */
-            height: auto;
-        }
-
-        .logo {
-            width: 80%;
-            max-width: 280px;
-            top: auto;
-            position: relative;
-        }
-
-        .count {
-            gap: 15px;
-        }
-
-        .countdown-number {
-            font-size: 1.75rem;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-        }
-
-        .menu {
-            flex-direction: column;
-            display: none;
-        }
-
+    .header {
+        padding-top: 5rem;
     }
 
     @media (max-width: 700px) {
         .container-page {
-            justify-content: flex-start !important;
+            justify-content: space-between !important;
             padding-top: 5rem !important;
+            padding-bottom: 1.75rem !important;
         }
 
         .header {
-            padding-top: 1rem !important;
-            top: 8px !important;
+            padding-top: 2.5rem !important;
+            top: 0 !important;
         }
 
         .wedding-date-2 {
-            margin-top: 12px !important;
+            margin-top: 0.85rem !important;
+            font-size: 0.78rem !important;
+            letter-spacing: 1.5px !important;
         }
 
-        .wedding-grid {
-            gap: 10px !important;
-            padding: 0 !important;
+        .hero-actions {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+            width: 100%;
+            max-width: 96vw;
+            gap: 0.65rem;
+            margin-bottom: 1.75rem;
+            padding: 0 0.35rem;
         }
 
-        .button-calendar {
-            margin-top: 1.2rem !important;
+        .hero-action-btn {
+            font-size: 0.78rem;
+            min-height: 46px;
+            padding: 0.55rem 0.4rem;
+            gap: 0.4rem;
         }
 
-        .countdown-number {
-            font-size: 1.5rem;
+        .hero-action-icon {
+            width: 22px;
+            height: 22px;
         }
 
-        .countdown-label {
-            font-size: 0.85rem;
-        }
-
-        .logo {
-            max-width: 240px;
+        .couple-name {
+            font-size: 4rem;
         }
     }
 
+    @media (max-width: 420px) {
+        .hero-actions {
+            gap: 0.5rem;
+        }
+
+        .hero-action-btn {
+            font-size: 0.72rem;
+            padding: 0.5rem 0.3rem;
+            min-height: 44px;
+        }
+
+        .hero-action-icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
 </style>
 <div class="container-page">
 
@@ -177,41 +79,32 @@
     <div class="header" style="justify-items: center;">
         <h1 class="couple-name" data-aos="fade-up">Camila <span style="margin-left: 1rem;">&</span>
             Diego</h1>
-            <p class="wedding-date-2" data-aos="fade-up">
-            24
-            .
-            10
-            .
-            26
-            </p>
+        <p class="wedding-date-2" data-aos="fade-up">
+            S&#193;BADO <span class="date-num">24</span> DE OCTUBRE DE <span class="date-num">2026</span>
+        </p>
     </div>
 
-    <div class="wedding-grid">
+    <div class="hero-actions" data-aos="fade-up">
+        <button type="button" class="hero-action-btn hero-action-btn--song js-song-player" aria-label="Reproducir nuestra canción">
+            <span>Nuestra canción</span>
+            <img class="hero-action-icon"
+                 src="{$_layoutParams.root}views/camilaydiego/imgs/icono_cancion.svg"
+                 alt=""
+                 aria-hidden="true">
+        </button>
 
-        <!-- Columna izquierda -->
-        <!-- <div class="col-left">
-            <img src="{$_layoutParams.root}views/camilaydiego/imgs/logo_02.webp" alt="logo" class="logo">
-            <audio id="myAudio" src="{$_layoutParams.root}views/camilaydiego/sound/song.mp3"></audio>
-        </div> -->
-
-        <!-- Columna central (solo espacio para ver imagen) -->
-        <div class="col-center"></div>
-
-        <!-- Columna derecha -->
-        <div class="col-right">
-
-            <button class="button button-calendar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                </svg>
-                Agrega a tu calendario
-            </button>
-
-        </div>
+        <button type="button" class="hero-action-btn hero-action-btn--calendar button-calendar" aria-label="Agregar a tu calendario">
+            <img class="hero-action-icon"
+                 src="{$_layoutParams.root}views/camilaydiego/imgs/icono_calendario.svg"
+                 alt=""
+                 aria-hidden="true">
+            <span>Agrega a tu calendario</span>
+        </button>
     </div>
+
+    <audio id="myAudio"
+           src="{$_layoutParams.root}views/camilaydiego/sound/song.mp3"
+           preload="auto"></audio>
 </div>
 
 <div class="navigation">

@@ -105,6 +105,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Athelas-Regular';
+    src: url("../../layout/fonts/Athelas-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'parfumerie-script';
+    src: url("../../layout/fonts/parfumerie-script-old-style.otf") format("opentype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSansVariable';
+    src: url("../../layout/fonts/SourceSans3-Variable.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 200 900;
+    font-style: normal;
+}
+
 /* -------------------------------------------------------------------------- */
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
@@ -114,9 +134,14 @@
     --button-color: #333;
     --button-hover-scale: 110%;
     --footer-color: #b57966;
+    --nav-bg: #CBD7DF;
+    --nav-text: #908C70;
     --primary-color: #99948C;
     --primary-ligth-color: #f9f4ef;
     --secondary-color: #555;
+    --section-title-size: 5.4rem;
+    --section-title-size-mobile: 3.75rem;
+    --section-title-size-small: 3.25rem;
     --text-color: #6e705c;
     --transition-duration: 0.3s;
     --text-color-light: #fff;
@@ -134,11 +159,62 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* ===== 3b. TÍTULOS DE SECCIÓN (tamaño unificado) ===== */
+.history-title-big,
+#info .details-section-title,
+.galery .galery-title,
+.history-title-small-2.galery-title,
+#gifts .gifts-title,
+#dresscode .dc-title,
+#attendance .attendance-title {
+    font-size: var(--section-title-size);
+}
+
+@media (max-width: 768px) {
+
+    .history-title-big,
+    #info .details-section-title,
+    .galery .galery-title,
+    .history-title-small-2.galery-title,
+    #gifts .gifts-title,
+    #dresscode .dc-title,
+    #attendance .attendance-title {
+        font-size: var(--section-title-size-mobile);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .history-title-big,
+    #info .details-section-title,
+    .galery .galery-title,
+    .history-title-small-2.galery-title,
+    #gifts .gifts-title,
+    #dresscode .dc-title,
+    #attendance .attendance-title {
+        font-size: var(--section-title-size-small);
+    }
 }
 
 /* -------------------------------------------------------------------------- */
 
 /* ===== 4. CLASES DE FUENTES UTILITARIAS (Helpers) - Orden alfabético ===== */
+.font-athelas {
+    font-family: 'Athelas-Regular', Georgia, serif;
+}
+
+.font-parfumerie {
+    font-family: 'parfumerie-script', cursive;
+}
+
+.font-source-sans {
+    font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
+}
 .font-abramo {
     font-family: 'Abramo';
 }
@@ -193,7 +269,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #F9FAF3;
+    background-image: url("../imgs/preboda.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,22 +309,22 @@ body {
 }
 
 .loader-button {
-    background: #99948C;
-    color: #F9FAF3;
+    background: rgba(255, 255, 255, 0.95);
+    color: #99948C;
     font-family: "Baskervville-Regular";
     font-size: 1.1rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.65rem 1.4rem;
     border: none;
     font-weight: bold;
     border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .loader-button:hover {
     scale: 110%;
     cursor: pointer;
     transition: all 0.5s;
-    background: #99948C;
-    color: #F9FAF3;
+    background: #fff;
     border: 1px #99948C solid;
 }
 
@@ -319,7 +398,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .background {
@@ -328,7 +408,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../imgs/preboda.webp");
+    background-image: url("../imgs/backgroundprincipal.webp");
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -343,23 +423,26 @@ body {
 
 .header {
     text-align: center;
-    padding-top: 12px;
+    padding-top: 5.5rem;
     position: relative;
-    top: -48px;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .couple-name {
-    font-family: 'photograph_signature';
-    font-size: 3.9rem;
+    font-family: 'parfumerie-script', cursive;
+    font-size: 5.8rem;
     margin: 0;
-    color: #99948C !important;
+    color: #fff !important;
     text-align: center;
-    letter-spacing: 2px;
-    line-height: 1.1;
+    letter-spacing: 1px;
+    line-height: 1.05;
     font-weight: normal;
+    -webkit-text-stroke: 0.55px #fff;
+    paint-order: stroke fill;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 .couple-name.show {
@@ -385,14 +468,21 @@ body {
 
 
 .wedding-date-2 {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
-    font-family: "newyork_personal";
+    font-family: "Athelas-Regular", Georgia, serif;
     font-weight: normal;
-    color: #99948C;
-    font-size: 2rem;
+    color: #fff !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 1.1rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.wedding-date-2 .date-num {
+    font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
     letter-spacing: 1px;
-    margin-top: 26px;
 }
 
 .wedding-date {
@@ -463,12 +553,73 @@ body {
 }
 
 .button-calendar {
-    font-family: "newyork_personal";
-    background-color: #99948C;
-    color: #fff;
-    margin-top: 220px;
-    margin-bottom: 20px;
-    font-weight: bold;
+    font-family: "Athelas-Regular", Georgia, serif;
+    background-color: #CBD7DF;
+    color: #908C70;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    -webkit-text-stroke: 0;
+}
+
+.hero-actions {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.25rem;
+    width: min(640px, 94vw);
+    margin: auto auto 2.75rem;
+    padding: 0 0.25rem;
+}
+
+.hero-action-btn {
+    font-family: "Athelas-Regular", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    background: #CBD7DF;
+    color: #908C70;
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem 1.15rem;
+    min-height: 54px;
+    min-width: 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    text-align: center;
+}
+
+.hero-action-btn--song {
+    justify-content: center;
+}
+
+.hero-action-btn--calendar {
+    justify-content: center;
+}
+
+.hero-action-btn span {
+    text-align: center;
+    min-width: 0;
+}
+
+.hero-action-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-action-btn svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
 }
 
 .button svg {
@@ -504,7 +655,7 @@ body {
 .navigation {
     position: sticky;
     top: 0;
-    background-color: #F9FAF3;
+    background-color: var(--nav-bg);
     width: 100%;
     padding: 15px 0;
     display: flex;
@@ -525,13 +676,13 @@ body {
 }
 
 .menu a {
-    color: #99948C !important;
+    color: var(--nav-text) !important;
 }
 
 .nav-item {
     font-family: "newyork_personal";
     font-weight: normal;
-    color: #99948C;
+    color: var(--nav-text);
     text-decoration: none;
     font-size: 14px;
     padding: 8px 15px;
@@ -549,7 +700,7 @@ body {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #99948C;
+    background-color: var(--nav-text);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -567,7 +718,7 @@ body {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    color: #99948C;
+    color: var(--nav-text);
     margin-left: 20px;
     transition: transform 0.3s ease;
     position: absolute;
@@ -584,12 +735,11 @@ body {
 
 /* ===== 9. HISTORY SECTION (Nuestra Historia) ===== */
 .history-section {
-    background-color: #99948C;
-    padding: 34px 34px;
-    display: flex;
+    background-color: #fff;
+    padding: 0;
+    display: block;
     position: relative;
-    color: #99948C;
-    flex-direction: column;
+    color: #908C70;
     text-align: center;
 }
 
@@ -660,7 +810,7 @@ body {
 .history-title-small-2 {
     font-family: "photograph_signature";
     margin-bottom: 0rem;
-    font-size: 3.6rem;
+    font-size: var(--section-title-size);
     color: #F3F0E2;
     font-weight: normal;
     line-height: 1.15;
@@ -695,7 +845,6 @@ body {
 
 .history-title-big {
     font-family: "photograph_signature";
-    font-size: 3.2rem;
     color: #99948C;
     padding: 5px;
     font-weight: normal;
@@ -855,6 +1004,28 @@ body {
 
 #info .details-intro {
     margin-bottom: 3.5rem;
+}
+
+/* Detalles — capa blanca solo en móvil (ver information.tpl) */
+#info.invitation-card {
+    position: relative;
+}
+
+#info .details-intro,
+#info .locations {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    #info.invitation-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.52);
+        pointer-events: none;
+        z-index: 0;
+    }
 }
 
 .text-invitation-secondary {
@@ -1036,6 +1207,12 @@ body {
     gap: 6rem;
 }
 
+#dresscode .dresscode-content {
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
 .desscode-card {
     display: flex;
     max-width: 50%;
@@ -1181,8 +1358,8 @@ body {
 /* ===== 12. GALERY SECTION (Galería de imágenes) ===== */
 .galery {
     width: 100%;
-    padding: 0px 0px;
-    background: #F9FAF3;
+    padding: 0;
+    background: #908C70;
     position: relative;
     overflow: hidden;
 }
@@ -1229,11 +1406,11 @@ body {
 
 /* Capas Dress Code (misma estructura que Nuestra Historia) */
 .dresscode-section {
-    background-color: #99948C;
-    padding: 34px 34px;
+    background-color: #fff;
+    padding: 0;
     display: flex;
     position: relative;
-    color: #99948C;
+    color: #908C70;
     flex-direction: column;
     text-align: center;
 }
@@ -2048,37 +2225,49 @@ footer {
 /* Media Query: Max 700px (Cambio de fondo para Hero) */
 @media (max-width: 700px) {
     .background {
-        background-image: url("../imgs/preboda.webp");
+        background-image: url("../imgs/backgroundprincipal.webp");
         background-position: center center;
     }
 
     .container-page {
         align-items: center;
-        justify-content: flex-start;
-        padding: 5.5rem 1.25rem 0;
+        justify-content: space-between;
+        padding: 5.5rem 1.25rem 1.5rem;
         min-height: 100svh;
     }
 
     .header {
-        padding-top: 1rem;
-        top: 8px;
+        padding-top: 2.5rem;
+        top: 0;
     }
 
-    .wedding-date-2 {
-        margin-top: 14px;
+    .hero-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        gap: 0.75rem;
+        width: 100%;
+        max-width: 96vw;
+        margin-bottom: 1.75rem;
+        padding: 0 0.35rem;
+        box-sizing: border-box;
+    }
+
+    .hero-action-btn {
+        font-size: 0.82rem;
+        padding: 0.6rem 0.45rem;
+        min-height: 48px;
+        gap: 0.45rem;
+    }
+
+    .hero-action-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .button-calendar,
+    .hero-action-btn {
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #99948C;
-    }
-
-    .wedding-grid {
-        gap: 10px;
-        padding: 0;
-    }
-
-    .button-calendar {
-        margin-top: 1.35rem;
-        font-weight: normal;
-        -webkit-text-stroke: 0.35px #fff;
+        -webkit-text-stroke: 0;
     }
 
     .header img {
@@ -2110,21 +2299,21 @@ footer {
         overflow: hidden;
         opacity: 0;
         transition: all 0.5s ease;
-        color: #99948C !important;
+        color: var(--nav-text) !important;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #F9FAF3;
+        background-color: var(--nav-bg);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
     }
 
     .menu a {
-        color: #99948C !important;
+        color: var(--nav-text) !important;
     }
 
     .menu.active {
         display: flex;
-        color: #99948C;
+        color: var(--nav-text);
         max-height: 500px;
         opacity: 1;
         padding: 1rem 0;
@@ -2177,7 +2366,7 @@ footer {
 
     /* Hero Section */
     .couple-name {
-        font-size: 3rem;
+        font-size: 4.5rem;
         position: static;
         top: auto;
     }
@@ -2191,18 +2380,19 @@ footer {
     }
 
     .wedding-date-2 {
-        font-size: 1.5rem;
+        font-size: 0.85rem;
         position: static;
         top: auto;
         margin-top: 0.9rem;
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #99948C;
+        color: #fff !important;
+        -webkit-text-stroke: 0;
     }
 
-    .button-calendar {
-        margin-top: 1.6rem;
+    .button-calendar,
+    .hero-action-btn {
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #fff;
+        -webkit-text-stroke: 0;
     }
 
     .count {
@@ -2238,7 +2428,7 @@ footer {
         overflow: visible;
     }
 
-    .invitation-card {
+    .invitation-card:not(#info) {
         background-image: none;
         background-position: center center;
         background-repeat: repeat;
@@ -2265,6 +2455,10 @@ footer {
 
     .dresscode-inner {
         padding: 28px 0.75rem 40px;
+    }
+
+    #dresscode .dresscode-inner {
+        padding: 1.25rem 1rem 0;
     }
 
     .container-history {
@@ -2295,10 +2489,6 @@ footer {
         min-height: 0;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-    }
-
-    .history-title-big {
-        font-size: 2.4rem;
     }
 
     .text-body {
@@ -2367,9 +2557,7 @@ footer {
         margin-bottom: 0.75rem;
     }
 
-    .gift-title-small,
-    .gift-title-big,
-    .history-title-small-2 {
+    .gift-title-big {
         font-size: 2.4rem !important;
     }
 
@@ -2426,6 +2614,14 @@ footer {
         font-size: 2.4rem;
     }
 
+    #info .location-type {
+        font-size: 2rem;
+    }
+
+    #info .location-venue {
+        font-size: 2.35rem;
+    }
+
     .location-address,
     .location-time {
         font-size: 1.15rem;
@@ -2439,6 +2635,10 @@ footer {
     .dresscode-content {
         flex-direction: column;
         gap: 3rem;
+    }
+
+    #dresscode .dresscode-content {
+        gap: 0;
     }
 
     .desscode-card {
@@ -2562,12 +2762,12 @@ footer {
 
 @media (max-width: 480px) {
     .header {
-        top: -16px;
-        padding-top: 0.5rem;
+        top: 0;
+        padding-top: 2rem;
     }
 
     .couple-name {
-        font-size: 2.55rem;
+        font-size: 3.6rem;
         max-width: 92vw;
         padding: 0 0.5rem;
         box-sizing: border-box;
@@ -2576,25 +2776,46 @@ footer {
     .wedding-date-2,
     .wedding-date,
     #new-history .wedding-date {
-        font-size: 1.35rem !important;
+        font-size: 0.8rem !important;
     }
 
     .wedding-date-2 {
         font-weight: normal !important;
-        -webkit-text-stroke: 0.35px #99948C;
+        color: #fff !important;
+        -webkit-text-stroke: 0;
     }
 
-    .button-calendar {
+    .button-calendar,
+    .hero-action-btn {
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #fff;
+        -webkit-text-stroke: 0;
     }
 
-    .history-title-big,
-    .gift-title-small,
-    .gift-title-big,
-    .history-title-small-2,
-    .location-type {
+    .hero-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        gap: 0.5rem;
+        width: 100%;
+        max-width: 96vw;
+    }
+
+    .hero-action-btn {
+        font-size: 0.74rem;
+        padding: 0.5rem 0.3rem;
+        min-height: 44px;
+    }
+
+    .hero-action-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .gift-title-big {
         font-size: 2.2rem !important;
+    }
+
+    #info .location-type {
+        font-size: 1.75rem !important;
     }
 
     .countdown-number {
@@ -2665,8 +2886,9 @@ footer {
     height: auto;
     max-width: 100%;
     max-height: none;
-    object-fit: contain;
-    object-position: center;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: center center;
     vertical-align: bottom;
 }
 
@@ -2675,7 +2897,8 @@ footer {
         width: 100%;
         height: auto;
         min-height: 220px;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: left center;
     }
 
     /* Override layout template footer padding so it clears floating buttons */
@@ -2684,5 +2907,62 @@ footer {
         min-height: 4rem;
         position: relative;
         z-index: 20;
+    }
+}
+
+/* ===== CAMILA Y DIEGO — AJUSTES MÓVIL GLOBALES ===== */
+#contenido {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    #gifts .gifts-layout {
+        max-width: 100%;
+    }
+
+    #gifts .gifts-intro {
+        max-width: 100%;
+        padding: 0 0.35rem;
+        letter-spacing: 1.4px;
+    }
+
+    #gifts .gifts-bank-line {
+        word-break: break-word;
+    }
+
+    #attendance .attendance-inner,
+    #dresscode .dresscode-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #gifts.gift-container {
+        padding: 3rem 0.85rem 3.5rem;
+    }
+
+    #attendance.attendance-section,
+    #dresscode .dresscode-inner {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    #new-history .history-simple {
+        padding: 2.75rem 0.85rem 2.75rem;
+    }
+
+    .countdown-banner__values-row .countdown-unit {
+        min-width: 3rem;
+    }
+
+    .countdown-banner__values-row {
+        gap: 0.15rem;
+    }
+
+    .closing-photo-img {
+        min-height: 200px;
+        object-position: 20% center;
     }
 }

@@ -29,6 +29,7 @@ $(document).ready(function () {
 
   getCart();
   generateRandom();
+  rederCart();
 
   // 🔹 Función mejorada para eliminar emojis y símbolos especiales (♀, ♂, etc.)
   function limpiarEmojis(texto) {
@@ -127,7 +128,11 @@ $(document).ready(function () {
     getCart();
 
     if (cart.size === 0) {
-      closeCart();
+      if (!$("#gifts-modal").prop("hidden")) {
+        $("body").addClass("gifts-modal-cart-open");
+      } else {
+        closeCart();
+      }
 
       Swal.fire({
         toast: true,
@@ -241,18 +246,59 @@ $(document).ready(function () {
     });
 
     rederCart();
+
+    if (!$("#gifts-modal").prop("hidden")) {
+      $("body").addClass("gifts-modal-cart-open");
+    }
   });
 
 
 
-  $(".category-button").click(function () {
+  $(document).on("click", ".gifts-modal .category-button", function () {
     const categoryId = $(this).data("id");
     getGifts(categoryId);
-    $(".category-button").removeClass("primary");
+    $(".gifts-modal .category-button").removeClass("primary");
     $(this).addClass("primary");
   });
 
-  getGifts();
+  function openGiftsModal() {
+    const $modal = $("#gifts-modal");
+    closeCart();
+    $("body").removeClass("gifts-modal-cart-open");
+    $modal.prop("hidden", false).attr("aria-hidden", "false");
+    $("body").addClass("gifts-modal-open");
+    getGifts(0);
+    $(".gifts-modal .category-button").removeClass("primary");
+    $('.gifts-modal .category-button[data-id="0"]').addClass("primary");
+    rederCart();
+  }
+
+  function closeGiftsModal() {
+    $("#gifts-modal").prop("hidden", true).attr("aria-hidden", "true");
+    $("body").removeClass("gifts-modal-open gifts-modal-cart-open");
+  }
+
+  $(document).on("click", ".js-gifts-cart-toggle", function () {
+    $("body").toggleClass("gifts-modal-cart-open");
+  });
+
+  $(document).on("click", ".js-gifts-colectivo", function () {
+    openGiftsModal();
+  });
+
+  $(document).on("click", ".js-gifts-modal-close", function () {
+    closeGiftsModal();
+  });
+
+  $(document).on("keydown", function (event) {
+    if (event.key === "Escape" && !$("#gifts-modal").prop("hidden")) {
+      if ($("body").hasClass("gifts-modal-cart-open")) {
+        $("body").removeClass("gifts-modal-cart-open");
+        return;
+      }
+      closeGiftsModal();
+    }
+  });
 
   $("#close-cart").click(function () {
     closeCart();
@@ -372,7 +418,7 @@ const getGifts = async (categoryId = 0) => {
 };
 
 const renderGifts = (items) => {
-  const productGrid = $(".products");
+  const productGrid = $("#gifts-modal .products");
   productGrid.html("");
   let grid = "";
 
@@ -390,7 +436,7 @@ const renderGifts = (items) => {
         grid += `
         <div class="product-card" data-aos="fade-up">
           <div class="product-image">
-            <img src="${item.imagenObsequio}" alt="${item.imagenObsequio}">
+            <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
           </div>
           <div class="product-info">
             <h3 class="product-title">${item.nombreObsequio}</h3>
@@ -406,7 +452,7 @@ const renderGifts = (items) => {
         grid += `
         <div class="product-card" data-aos="fade-up">
           <div class="product-image">
-            <img src="${item.imagenObsequio}" alt="${item.imagenObsequio}">
+            <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
           </div>
           <div class="product-info">
             <h3 class="product-title">${item.nombreObsequio}</h3>
@@ -428,7 +474,7 @@ const renderGifts = (items) => {
 };
 
 const renderFree = (items) => {
-  const productGrid = $(".products");
+  const productGrid = $("#gifts-modal .products");
   productGrid.html("");
   let grid = "";
 
@@ -438,7 +484,7 @@ const renderFree = (items) => {
     grid += `
      <div class="product-card" data-aos="fade-up">
                  <div class="product-image">
-                     <img src="${item.imagenObsequio}" alt="${item.imagenObsequio}">
+                     <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
                  </div>
                  <div class="product-info">
                      <h3 class="product-title">${item.nombreObsequio}</h3>
@@ -523,7 +569,13 @@ const addToCart = (item) => {
 
   saveCart();
   rederCart();
-  showCart();
+
+  const modalOpen = !$("#gifts-modal").prop("hidden");
+  if (modalOpen) {
+    $("body").addClass("gifts-modal-cart-open");
+  } else {
+    showCart();
+  }
 };
 
 const removeToCart = (id) => {
@@ -550,25 +602,8 @@ const removeItem = (id) => {
   saveCart();
 };
 
-const rederCart = () => {
-  getCart();
-
-  if (!cart) {
-    return;
-  }
-
-  const list = $(".cart-items");
-  list.html("");
-
-
-
-
-  let row = "";
-  let total = 0;
-
-  cart.forEach((item, id) => {
-    total += item.quantity * item.price;
-    row += `<div class="cart-item">
+const buildCartItemHtml = (item, id) => {
+  return `<div class="cart-item">
            <div class="cart-item-image">
     <img src="${item.img}" alt="${item.name}">
 </div>
@@ -583,9 +618,45 @@ const rederCart = () => {
                 </div>
             </div>
         </div>`;
+};
+
+const updateCartBadge = () => {
+  getCart();
+  let count = 0;
+  cart.forEach((item) => {
+    count += item.quantity;
   });
 
-  $(".total-price").text(`S/. ${total}`);
+  $(".gifts-modal__cart-badge")
+    .text(count)
+    .attr("data-count", count);
 
-  list.append(row);
+  const $modalCart = $("#gifts-modal-cart");
+  if ($modalCart.length) {
+    $modalCart.toggleClass("is-empty", count === 0);
+  }
+};
+
+const rederCart = () => {
+  getCart();
+
+  if (!cart) {
+    return;
+  }
+
+  let row = "";
+  let total = 0;
+
+  cart.forEach((item, id) => {
+    total += item.quantity * item.price;
+    row += buildCartItemHtml(item, id);
+  });
+
+  const totalText = `S/. ${total}`;
+
+  $(".cart-items").html(row);
+  $(".gifts-modal__cart-items").html(row);
+  $(".total-price").text(totalText);
+  $(".gifts-modal__total-price").text(totalText);
+  updateCartBadge();
 };
