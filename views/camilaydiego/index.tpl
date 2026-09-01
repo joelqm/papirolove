@@ -1,4 +1,5 @@
 {block name="styles"}
+{include file="views/camilaydiego/components/fonts-critical.tpl"}
 <link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/camilaydiego/css/style.css?v={$_layoutParams.filever}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
@@ -25,7 +26,11 @@
 <section class="closing-photo" aria-label="Foto final">
     <img src="{$_layoutParams.root}views/camilaydiego/imgs/background_3.webp"
          alt="Camila y Diego"
-         class="closing-photo-img">
+         class="closing-photo-img"
+         width="1280"
+         height="720"
+         loading="lazy"
+         decoding="async">
 </section>
 
 {include file="views/camilaydiego/components/button-whatsapp.tpl"}

@@ -2,13 +2,28 @@
     <div class="container-galery">
         <div class="owl-carousel owl-theme galery-carousel">
             <div class="item">
-                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-1.webp" alt="Camila y Diego">
+                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-1.webp"
+                     alt="Camila y Diego"
+                     width="540"
+                     height="723"
+                     loading="lazy"
+                     decoding="async">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-2.webp" alt="Camila y Diego">
+                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-2.webp"
+                     alt="Camila y Diego"
+                     width="540"
+                     height="723"
+                     loading="lazy"
+                     decoding="async">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-3.webp" alt="Camila y Diego">
+                <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-3.webp"
+                     alt="Camila y Diego"
+                     width="540"
+                     height="723"
+                     loading="lazy"
+                     decoding="async">
             </div>
         </div>
     </div>

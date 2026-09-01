@@ -143,6 +143,10 @@
   <img class="countdown-banner__logo"
        src="{$_layoutParams.root}views/camilaydiego/imgs/logo_blanco.webp"
        alt="Camila y Diego"
+       width="200"
+       height="173"
+       loading="lazy"
+       decoding="async"
        data-aos="fade-up">
 
   <p class="countdown-banner__message" data-aos="fade-up">

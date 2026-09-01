@@ -1,7 +1,13 @@
 <div id="loader" class="palpita">
 
   <div>
-    <img class="loader-logo" src="{$_layoutParams.root}views/camilaydiego/imgs/logo.webp" alt="logo" width="100px">
+    <img class="loader-logo"
+         src="{$_layoutParams.root}views/camilaydiego/imgs/logo.webp"
+         alt="logo"
+         width="100"
+         height="87"
+         decoding="async"
+         fetchpriority="high">
   </div>
   <button class="loader-button">IR A LA PÁGINA</button>
 
@@ -27,26 +33,20 @@
   });
 
   setTimeout(() => {
-    let total = $('img').length;
-    let loaded = 0;
+    const $logo = $('.loader-logo');
+    const finish = () => {
+      $('#loader').fadeOut(300, function () {
+        $('#contenido').fadeIn(300);
+      });
+    };
 
-    $('img').each(function () {
-      if (this.complete) {
-        imagenCargada();
-      } else {
-        $(this).on('load error', imagenCargada);
-      }
-    });
-
-    function imagenCargada() {
-      loaded++;
-      if (loaded === total) {
-        $('#loader').fadeOut(300, function () {
-          $('#contenido').fadeIn(300);
-        });
-      }
+    if (!$logo.length || $logo[0].complete) {
+      finish();
+      return;
     }
-  }, 3000);
+
+    $logo.one('load error', finish);
+  }, 1500);
 
 </script>
 {/literal}

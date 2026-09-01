@@ -105,27 +105,7 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Athelas-Regular';
-    src: url("../../layout/fonts/Athelas-Regular.ttf") format("truetype");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'parfumerie-script';
-    src: url("../../layout/fonts/parfumerie-script-old-style.otf") format("opentype");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SourceSansVariable';
-    src: url("../../layout/fonts/SourceSans3-Variable.woff2") format("woff2");
-    font-display: swap;
-    font-weight: 200 900;
-    font-style: normal;
-}
-
-/* -------------------------------------------------------------------------- */
+/* Athelas, parfumerie-script y SourceSans: ver components/fonts-critical.tpl */
 
 /* ===== 2. VARIABLES CSS (:root) - Orden alfabético por nombre de variable ===== */
 :root {

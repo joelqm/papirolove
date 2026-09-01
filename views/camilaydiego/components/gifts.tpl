@@ -34,6 +34,10 @@
         <img class="gifts-cats"
              src="{$_layoutParams.root}views/camilaydiego/imgs/regalos_1.webp"
              alt=""
+             width="509"
+             height="540"
+             loading="lazy"
+             decoding="async"
              aria-hidden="true">
     </div>
 

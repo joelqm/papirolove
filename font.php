@@ -12,6 +12,11 @@ $allowed = [
     'photograph_signature.ttf' => 'font/ttf',
     'AbhayaLibre-Regular.woff2' => 'font/woff2',
     'AbhayaLibre-Regular.ttf' => 'font/ttf',
+    'Athelas-Regular.woff2' => 'font/woff2',
+    'Athelas-Regular.ttf' => 'font/ttf',
+    'parfumerie-script-old-style.woff2' => 'font/woff2',
+    'parfumerie-script-old-style.otf' => 'font/otf',
+    'SourceSans3-Variable.woff2' => 'font/woff2',
 ];
 
 if ($file === '' || !isset($allowed[$file])) {

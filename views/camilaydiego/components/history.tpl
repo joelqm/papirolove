@@ -80,6 +80,10 @@
     <img class="history-flowers-top"
          src="{$_layoutParams.root}views/camilaydiego/imgs/nuestra_historia_flores.webp"
          alt=""
+         width="1359"
+         height="484"
+         loading="lazy"
+         decoding="async"
          data-aos="fade-up">
 
     <h2 class="history-title-big" data-aos="fade-up">Nuestra Historia</h2>

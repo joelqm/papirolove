@@ -8,7 +8,11 @@
 
             <img class="dc-illustration"
                  src="{$_layoutParams.root}views/camilaydiego/imgs/dress_code.webp"
-                 alt="Vestido y traje">
+                 alt="Vestido y traje"
+                 width="130"
+                 height="123"
+                 loading="lazy"
+                 decoding="async">
 
             <p class="dc-rule">ELLOS: Traje y Corbata</p>
             <p class="dc-rule">ELLAS: Vestido Largo</p>
@@ -17,6 +21,10 @@
         <img class="dc-bottom-image"
              src="{$_layoutParams.root}views/camilaydiego/imgs/dress_code_1.webp"
              alt=""
+             width="989"
+             height="610"
+             loading="lazy"
+             decoding="async"
              data-aos="fade-up">
 
     </div>
