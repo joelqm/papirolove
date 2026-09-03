@@ -109,10 +109,33 @@ class obsequioModel extends Model
 
         $filename = basename($path);
         $baseName = preg_replace('/\.(png|jpe?g|gif|webp)$/i', '', $filename);
+
+        // Corrige nombres donde se borró la letra "r" (ej. libre->libe, lavadora->lavadoa)
+        $alias = array(
+            'obsequio-libe' => 'obsequio-libre',
+            'cabecea-cama-king' => 'cabecera-cama-king',
+            'mesa-cento' => 'mesa-centro',
+            'cento-entetenimiento' => 'centro-entretenimiento',
+            'alfomba' => 'alfombra',
+            'olla-pesion' => 'olla-presion',
+            'aspiadoa-inalambica' => 'aspiradora-inalambrica',
+            'hidolavadoa' => 'hidrolavadora',
+            'lavadoa' => 'lavadora',
+            'taslados' => 'traslados',
+            'aspiadoa-obot' => 'aspiradora-robot',
+            'cafetea' => 'cafetera',
+            'sesion_fotogafica' => 'sesion_fotografica',
+            'cena_anivesaio' => 'cena_aniversario',
+            'juego-comedo' => 'juego-comedor',
+        );
+        if (isset($alias[$baseName])) {
+            $baseName = $alias[$baseName];
+        }
+
         $localDir = ROOT . 'views' . DS . 'layout' . DS . 'neela' . DS . 'images' . DS;
         $publicBase = rtrim(BASE_URL, '/') . '/views/layout/neela/images/';
 
-        $candidatos = array($baseName . '.png', $baseName . '.jpg', $filename, $baseName . '.webp', $baseName);
+        $candidatos = array($baseName . '.png', $baseName . '.jpg', $baseName . '.webp', $filename, $baseName);
         foreach ($candidatos as $candidato) {
             if ($candidato !== '' && is_file($localDir . $candidato)) {
                 return $publicBase . $candidato;
