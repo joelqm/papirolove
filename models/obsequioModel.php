@@ -75,8 +75,7 @@ class obsequioModel extends Model
     }
 
     /**
-     * Reescribe URLs rotas (img.celebremos.pe, papiolove.pe, .png grandes)
-     * hacia las imágenes locales WebP del mismo dominio.
+     * Reescribe URLs rotas hacia PNG locales en views/layout/neela/images/.
      */
     private function normalizarImagenObsequio($url)
     {
@@ -100,7 +99,8 @@ class obsequioModel extends Model
 
         $esRutaObsequio = $path !== '' && (
             strpos($path, '/resource/obsequios/') !== false
-            || strpos($path, '/views/layout/neela/images/') !== false
+            || strpos($path, '/neela/images/') !== false
+            || strpos($path, '/reels/images/') !== false
         );
 
         if ($host === '' || !in_array($host, $hostsLocales, true) || !$esRutaObsequio) {
@@ -112,14 +112,14 @@ class obsequioModel extends Model
         $localDir = ROOT . 'views' . DS . 'layout' . DS . 'neela' . DS . 'images' . DS;
         $publicBase = rtrim(BASE_URL, '/') . '/views/layout/neela/images/';
 
-        $candidatos = array($baseName . '.webp', $filename, $baseName . '.png', $baseName . '.jpg', $baseName);
+        $candidatos = array($baseName . '.png', $baseName . '.jpg', $filename, $baseName . '.webp', $baseName);
         foreach ($candidatos as $candidato) {
             if ($candidato !== '' && is_file($localDir . $candidato)) {
                 return $publicBase . $candidato;
             }
         }
 
-        return $publicBase . $baseName . '.webp';
+        return $publicBase . $baseName . '.png';
     }
 
     public function obtenerObsequiosParejaCategoria()
