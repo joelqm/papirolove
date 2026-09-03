@@ -64,11 +64,16 @@
 
     #new-history .history-title-big {
       margin-bottom: 1.5rem;
+      -webkit-text-stroke: 0.7px #908C70;
+      paint-order: stroke fill;
     }
 
     #new-history .history-content p {
-      font-size: 0.98rem;
-      line-height: 1.6;
+      font-family: 'Athelas-Regular', Georgia, serif;
+      font-size: 1.08rem;
+      line-height: 1.65;
+      -webkit-text-stroke: 0.35px #908C70;
+      paint-order: stroke fill;
     }
   }
 </style>

@@ -2751,18 +2751,23 @@ footer {
         max-width: 92vw;
         padding: 0 0.5rem;
         box-sizing: border-box;
+        -webkit-text-stroke: 1px #fff;
+        paint-order: stroke fill;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     }
 
     .wedding-date-2,
     .wedding-date,
     #new-history .wedding-date {
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
     }
 
     .wedding-date-2 {
         font-weight: normal !important;
         color: #fff !important;
-        -webkit-text-stroke: 0;
+        -webkit-text-stroke: 0.45px #fff;
+        paint-order: stroke fill;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
     }
 
     .button-calendar,
