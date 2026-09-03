@@ -57,12 +57,69 @@ class obsequioModel extends Model
         try {
             $stmt = $this->_db->prepare($sql);
             $stmt->execute($params);
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            foreach ($rows as &$row) {
+                if (isset($row['imagenObsequio'])) {
+                    $row['imagenObsequio'] = $this->normalizarImagenObsequio($row['imagenObsequio']);
+                }
+            }
+            unset($row);
+
+            return $rows;
         }
         catch (PDOException $e) {
             error_log("Error al obtener obsequios de la pareja: " . $e->getMessage());
             return false;
         }
+    }
+
+    /**
+     * Reescribe URLs rotas (img.celebremos.pe, papiolove.pe, .png grandes)
+     * hacia las imágenes locales WebP del mismo dominio.
+     */
+    private function normalizarImagenObsequio($url)
+    {
+        $url = trim(str_replace(array("\r", "\n"), '', (string) $url));
+        if ($url === '') {
+            return $url;
+        }
+
+        $host = strtolower((string) parse_url($url, PHP_URL_HOST));
+        $path = (string) parse_url($url, PHP_URL_PATH);
+
+        $hostsLocales = array(
+            'img.celebremos.pe',
+            'celebremos.pe',
+            'www.celebremos.pe',
+            'papirolove.pe',
+            'www.papirolove.pe',
+            'papiolove.pe',
+            'www.papiolove.pe',
+        );
+
+        $esRutaObsequio = $path !== '' && (
+            strpos($path, '/resource/obsequios/') !== false
+            || strpos($path, '/views/layout/neela/images/') !== false
+        );
+
+        if ($host === '' || !in_array($host, $hostsLocales, true) || !$esRutaObsequio) {
+            return $url;
+        }
+
+        $filename = basename($path);
+        $baseName = preg_replace('/\.(png|jpe?g|gif|webp)$/i', '', $filename);
+        $localDir = ROOT . 'views' . DS . 'layout' . DS . 'neela' . DS . 'images' . DS;
+        $publicBase = rtrim(BASE_URL, '/') . '/views/layout/neela/images/';
+
+        $candidatos = array($baseName . '.webp', $filename, $baseName . '.png', $baseName . '.jpg', $baseName);
+        foreach ($candidatos as $candidato) {
+            if ($candidato !== '' && is_file($localDir . $candidato)) {
+                return $publicBase . $candidato;
+            }
+        }
+
+        return $publicBase . $baseName . '.webp';
     }
 
     public function obtenerObsequiosParejaCategoria()
