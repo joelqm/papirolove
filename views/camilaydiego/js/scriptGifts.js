@@ -153,11 +153,10 @@ $(document).ready(function () {
       return;
     }
 
-    $(".form").fadeIn(300);
+    // Cerrar popup de colectivo antes de la dedicatoria (evita modales apilados)
+    closeGiftsModal();
     closeCart();
-
-
-
+    $(".form").fadeIn(300);
   });
 
 

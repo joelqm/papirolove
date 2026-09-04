@@ -232,7 +232,18 @@
         padding: 1rem;
     }
 
-    /* SweetAlert por encima del modal de obsequios */
+    /*
+     * Capas de modales (solo Camila y Diego tiene popup de colectivo):
+     * 10000 colectivo | 20000 dedicatoria | 30000 SweetAlert
+     */
+    .form-overlay {
+        z-index: 20000 !important;
+    }
+
+    .form-container {
+        z-index: 20001 !important;
+    }
+
     .swal2-container {
         z-index: 30000 !important;
     }
