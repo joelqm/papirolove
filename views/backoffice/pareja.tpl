@@ -8,25 +8,30 @@
     <style>
         :root { --bg:#0b1220; --card:#111827; --line:#374151; --text:#f3f4f6; --muted:#9ca3af; --accent:#cfb89d; --ok:#34d399; --danger:#f87171; }
         * { box-sizing:border-box; }
-        body { margin:0; font-family: Georgia, serif; background:var(--bg); color:var(--text); }
-        header { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; padding:1rem 1.25rem; border-bottom:1px solid var(--line); background:#111827; position:sticky; top:0; z-index:5; }
+        html, body { margin:0; max-width:100%; overflow-x:hidden; }
+        body { font-family: Georgia, serif; background:var(--bg); color:var(--text); }
+        header { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; padding:1rem 1.25rem; border-bottom:1px solid var(--line); background:#111827; position:sticky; top:0; z-index:5; max-width:100%; }
         header h1 { margin:0; font-size:1.15rem; color:var(--accent); }
         header .meta { color:var(--muted); font-size:.85rem; }
-        main { max-width:1100px; margin:0 auto; padding:1.25rem; }
+        main { max-width:1100px; width:100%; margin:0 auto; padding:1.25rem; overflow-x:hidden; }
         .flash { padding:.75rem 1rem; border-radius:10px; margin-bottom:1rem; }
         .flash.ok { background:rgba(52,211,153,.12); border:1px solid rgba(52,211,153,.35); color:var(--ok); }
         .flash.err { background:rgba(248,113,113,.12); border:1px solid rgba(248,113,113,.35); color:var(--danger); }
-        .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin-bottom:1.25rem; }
+        .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin-bottom:1.25rem; max-width:100%; overflow:hidden; }
         .panel h2 { margin:0 0 .35rem; font-size:1.05rem; }
         .hint { margin:0 0 .85rem; color:var(--muted); font-size:.85rem; }
-        .row { display:flex; gap:.6rem; flex-wrap:wrap; align-items:end; }
+        .row { display:flex; gap:.6rem; flex-wrap:wrap; align-items:end; max-width:100%; }
+        .row > div { min-width:0; max-width:100%; }
+        .field-grow { flex:1 1 220px; }
         label { display:block; font-size:.78rem; color:var(--muted); margin-bottom:.25rem; }
-        select, input { padding:.55rem .65rem; border-radius:8px; border:1px solid var(--line); background:#0b1220; color:var(--text); min-width:120px; }
-        select.wide, input.wide { min-width:min(420px, 100%); width:100%; max-width:100%; }
+        select, input { padding:.55rem .65rem; border-radius:8px; border:1px solid var(--line); background:#0b1220; color:var(--text); width:100%; max-width:100%; min-width:0; }
+        select.wide, input.wide { width:100%; max-width:100%; }
         input[type=file] { max-width:100%; font-size:.85rem; color:var(--muted); }
-        button, a.btn { border:0; border-radius:999px; padding:.55rem 1rem; background:var(--accent); color:#1f2937; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; font-size:.88rem; }
+        input[type=number] { width:auto; min-width:90px; max-width:140px; }
+        button, a.btn { border:0; border-radius:999px; padding:.55rem 1rem; background:var(--accent); color:#1f2937; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; font-size:.88rem; white-space:nowrap; }
         button.ghost, a.ghost { background:transparent; color:var(--text); border:1px solid var(--line); }
         button.danger { background:#7f1d1d; color:#fecaca; }
+        .table-wrap { overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
         table { width:100%; border-collapse:collapse; font-size:.9rem; }
         th, td { padding:.65rem .45rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
         th { color:var(--muted); font-weight:600; font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; }
@@ -34,12 +39,16 @@
         .thumb { width:42px; height:42px; object-fit:cover; border-radius:8px; background:#1f2937; }
         .inline { display:inline; }
         .actions { display:flex; gap:.4rem; flex-wrap:wrap; }
-        .mono { font-family: ui-monospace, Consolas, monospace; font-size:.82rem; color:var(--muted); }
+        .mono { font-family: ui-monospace, Consolas, monospace; font-size:.82rem; color:var(--muted); word-break:break-word; }
     </style>
     <link href="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.css" rel="stylesheet">
     <style>
         /* Select2 dark — después del CSS del plugin para que no lo pise */
-        .select2-container { min-width:min(420px, 100%); width:100% !important; max-width:100%; }
+        .select2-container {
+            width:100% !important;
+            max-width:100% !important;
+            min-width:0 !important;
+        }
         .select2-container--default .select2-selection--single {
             height:auto !important;
             min-height:38px;
@@ -52,6 +61,10 @@
             color:#f3f4f6 !important;
             line-height:1.45;
             padding-left:2px;
+            max-width:100%;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
         }
         .select2-container--default .select2-selection--single .select2-selection__placeholder {
             color:#9ca3af !important;
@@ -71,6 +84,8 @@
             border:1px solid #374151 !important;
             color:#f3f4f6 !important;
             z-index:9999;
+            max-width:min(100vw - 2rem, 640px);
+            box-sizing:border-box;
         }
         .select2-container--default .select2-search--dropdown {
             padding:.5rem;
@@ -82,11 +97,15 @@
             border-radius:6px !important;
             outline:none;
             padding:.45rem .55rem;
+            width:100% !important;
+            box-sizing:border-box;
         }
         .select2-results__option {
             font-size:.88rem;
             color:#e5e7eb !important;
             padding:.45rem .65rem;
+            white-space:normal;
+            word-break:break-word;
         }
         .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
             background:#cfb89d !important;
@@ -133,7 +152,7 @@
                 <input type="hidden" name="asignar_pareja_id" value="{$pareja.id|escape:'html'}">
                 <input type="hidden" name="redirect" value="backoffice/pareja/{$pareja.id|escape:'html'}">
                 <div class="row">
-                    <div style="flex:1; min-width:220px;">
+                    <div class="field-grow">
                         <label for="base_obsequio_id">Basado en (opcional)</label>
                         <select class="wide js-select2" id="base_obsequio_id" name="base_obsequio_id" data-placeholder="Buscar en catálogo…">
                             <option value="0">— Nuevo desde cero —</option>
@@ -144,7 +163,7 @@
                             {/foreach}
                         </select>
                     </div>
-                    <div style="flex:1; min-width:180px;">
+                    <div class="field-grow">
                         <label for="nombre">Nombre</label>
                         <input class="wide" id="nombre" type="text" name="nombre" maxlength="80" placeholder="Si vacío, usa el del base">
                     </div>
@@ -157,11 +176,11 @@
                             {/foreach}
                         </select>
                     </div>
-                    <div style="flex:1; min-width:200px;">
+                    <div class="field-grow">
                         <label for="imagen_upload">Subir imagen nueva</label>
                         <input id="imagen_upload" type="file" name="imagen_upload" accept="image/jpeg,image/png,image/webp">
                     </div>
-                    <div style="flex:1; min-width:180px;">
+                    <div class="field-grow">
                         <label for="imagen_archivo">O imagen ya en carpeta</label>
                         <select class="wide" id="imagen_archivo" name="imagen_archivo">
                             <option value="">= del base / o subida</option>
@@ -190,7 +209,7 @@
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
                 <div class="row">
-                    <div style="flex:1; min-width:220px;">
+                    <div class="field-grow">
                         <label for="obsequio_id">Obsequio</label>
                         <select class="wide js-select2" id="obsequio_id" name="obsequio_id" required data-placeholder="Buscar obsequio…">
                             <option value="">Selecciona…</option>
@@ -212,7 +231,7 @@
 
         <div class="panel">
             <h2>Lista asignada ({$asignaciones|@count}) — recientes primero</h2>
-            <div style="overflow-x:auto;">
+            <div class="table-wrap">
                 <table>
                     <thead>
                         <tr>
