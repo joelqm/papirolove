@@ -15,6 +15,11 @@ AddType application/font-woff .woff
     </FilesMatch>
 </IfModule>
 
+# Bloquear acceso directo a logs y archivos sensibles
+<FilesMatch "(?i)(\.env|PDOErrorLog\.txt|ExceptionLog\.txt|backoffice_login_attempts\.json)$">
+    Require all denied
+</FilesMatch>
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l

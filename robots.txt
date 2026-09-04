@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /backoffice
+Disallow: /backoffice/
+Disallow: /admin
+Disallow: /admin/
+
+Sitemap:
