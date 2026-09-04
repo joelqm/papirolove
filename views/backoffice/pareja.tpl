@@ -17,11 +17,13 @@
         .flash.ok { background:rgba(52,211,153,.12); border:1px solid rgba(52,211,153,.35); color:var(--ok); }
         .flash.err { background:rgba(248,113,113,.12); border:1px solid rgba(248,113,113,.35); color:var(--danger); }
         .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1rem; margin-bottom:1.25rem; }
-        .panel h2 { margin:0 0 .85rem; font-size:1.05rem; }
+        .panel h2 { margin:0 0 .35rem; font-size:1.05rem; }
+        .hint { margin:0 0 .85rem; color:var(--muted); font-size:.85rem; }
         .row { display:flex; gap:.6rem; flex-wrap:wrap; align-items:end; }
         label { display:block; font-size:.78rem; color:var(--muted); margin-bottom:.25rem; }
-        select, input[type=number] { padding:.55rem .65rem; border-radius:8px; border:1px solid var(--line); background:#0b1220; color:var(--text); min-width:140px; }
-        select.wide { min-width:min(420px, 100%); max-width:100%; }
+        select, input { padding:.55rem .65rem; border-radius:8px; border:1px solid var(--line); background:#0b1220; color:var(--text); min-width:120px; }
+        select.wide, input.wide { min-width:min(420px, 100%); width:100%; max-width:100%; }
+        input[type=file] { max-width:100%; font-size:.85rem; color:var(--muted); }
         button, a.btn { border:0; border-radius:999px; padding:.55rem 1rem; background:var(--accent); color:#1f2937; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; font-size:.88rem; }
         button.ghost, a.ghost { background:transparent; color:var(--text); border:1px solid var(--line); }
         button.danger { background:#7f1d1d; color:#fecaca; }
@@ -43,6 +45,8 @@
         </div>
         <div class="actions">
             <a class="btn ghost" href="{$_layoutParams.root}backoffice">← Bodas</a>
+            <a class="btn ghost" href="{$_layoutParams.root}backoffice/catalogo">Catálogo</a>
+            <a class="btn ghost" href="{$_layoutParams.root}backoffice/categorias">Categorías</a>
             <form class="inline" method="post" action="{$_layoutParams.root}backoffice/logout">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <button class="btn ghost" type="submit">Salir</button>
@@ -55,7 +59,66 @@
         {if $flash_error}<div class="flash err">{$flash_error|escape:'html'}</div>{/if}
 
         <div class="panel">
-            <h2>Agregar regalo del catálogo</h2>
+            <h2>Nuevo registro para esta boda (precio propio)</h2>
+            <p class="hint">Crea un nuevo item en <code>tbl_obsequio</code> (puedes reutilizar imagen/nombre de uno existente) y lo asigna a esta boda. Así cada boda puede tener su propio monto.</p>
+            <form method="post" action="{$_layoutParams.root}backoffice/crearObsequio" enctype="multipart/form-data">
+                <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
+                <input type="hidden" name="asignar_pareja_id" value="{$pareja.id|escape:'html'}">
+                <input type="hidden" name="redirect" value="backoffice/pareja/{$pareja.id|escape:'html'}">
+                <div class="row">
+                    <div style="flex:1; min-width:220px;">
+                        <label for="base_obsequio_id">Basado en (opcional)</label>
+                        <select class="wide" id="base_obsequio_id" name="base_obsequio_id">
+                            <option value="0">— Nuevo desde cero —</option>
+                            {foreach from=$catalogo item=c}
+                                <option value="{$c.obsequio_id|escape:'html'}">
+                                    #{$c.obsequio_id|escape:'html'} [{$c.categoria|escape:'html'}] {$c.nombre|escape:'html'} — S/ {$c.monto|escape:'html'}
+                                </option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div style="flex:1; min-width:180px;">
+                        <label for="nombre">Nombre</label>
+                        <input class="wide" id="nombre" type="text" name="nombre" maxlength="80" placeholder="Si vacío, usa el del base">
+                    </div>
+                    <div>
+                        <label for="categoria_id">Categoría</label>
+                        <select id="categoria_id" name="categoria_id">
+                            <option value="">— Selecciona o usa la del base —</option>
+                            {foreach from=$categorias item=cat}
+                                <option value="{$cat.id|escape:'html'}">{$cat.nombre|escape:'html'}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div style="flex:1; min-width:200px;">
+                        <label for="imagen_upload">Subir imagen nueva</label>
+                        <input id="imagen_upload" type="file" name="imagen_upload" accept="image/jpeg,image/png,image/webp">
+                    </div>
+                    <div style="flex:1; min-width:180px;">
+                        <label for="imagen_archivo">O imagen ya en carpeta</label>
+                        <select class="wide" id="imagen_archivo" name="imagen_archivo">
+                            <option value="">= del base / o subida</option>
+                            {foreach from=$imagenes item=img}
+                                <option value="{$img|escape:'html'}">{$img|escape:'html'}</option>
+                            {/foreach}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="monto">Monto S/</label>
+                        <input id="monto" type="number" name="monto" min="0" step="0.01" value="100" required>
+                    </div>
+                    <div>
+                        <label for="cantidad_new">Cupos</label>
+                        <input id="cantidad_new" type="number" name="cantidad" min="1" max="9999" value="1" required>
+                    </div>
+                    <div><button type="submit">Crear y asignar</button></div>
+                </div>
+            </form>
+        </div>
+
+        <div class="panel">
+            <h2>Asignar regalo ya existente del catálogo</h2>
+            <p class="hint">Usa esto solo si el precio del catálogo ya es el correcto para esta boda.</p>
             <form method="post" action="{$_layoutParams.root}backoffice/asignar">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
@@ -66,7 +129,7 @@
                             <option value="">Selecciona…</option>
                             {foreach from=$catalogo item=c}
                                 <option value="{$c.obsequio_id|escape:'html'}">
-                                    [{$c.categoria|escape:'html'}] {$c.nombre|escape:'html'} — S/ {$c.monto|escape:'html'}
+                                    #{$c.obsequio_id|escape:'html'} [{$c.categoria|escape:'html'}] {$c.nombre|escape:'html'} — S/ {$c.monto|escape:'html'}
                                 </option>
                             {/foreach}
                         </select>
@@ -75,15 +138,13 @@
                         <label for="cantidad">Cupos</label>
                         <input id="cantidad" type="number" name="cantidad" min="1" max="9999" value="1" required>
                     </div>
-                    <div>
-                        <button type="submit">Agregar</button>
-                    </div>
+                    <div><button type="submit">Asignar</button></div>
                 </div>
             </form>
         </div>
 
         <div class="panel">
-            <h2>Lista asignada ({$asignaciones|@count})</h2>
+            <h2>Lista asignada ({$asignaciones|@count}) — recientes primero</h2>
             <div style="overflow-x:auto;">
                 <table>
                     <thead>
@@ -101,14 +162,10 @@
                     <tbody>
                         {foreach from=$asignaciones item=a}
                             <tr class="{if $a.activo != 1}off{/if}">
-                                <td>
-                                    {if $a.imagen}
-                                        <img class="thumb" src="{$a.imagen|escape:'html'}" alt="" loading="lazy" width="42" height="42">
-                                    {/if}
-                                </td>
+                                <td>{if $a.imagen}<img class="thumb" src="{$a.imagen|escape:'html'}" alt="" loading="lazy" width="42" height="42">{/if}</td>
                                 <td>
                                     {$a.nombre|escape:'html'}
-                                    <div class="mono">#{$a.id|escape:'html'} · obsequio {$a.obsequio_id|escape:'html'}</div>
+                                    <div class="mono">asig #{$a.id|escape:'html'} · obsequio {$a.obsequio_id|escape:'html'}</div>
                                 </td>
                                 <td>{$a.categoria|escape:'html'}</td>
                                 <td>S/ {$a.monto|escape:'html'}</td>

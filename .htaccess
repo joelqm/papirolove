@@ -16,7 +16,7 @@ AddType application/font-woff .woff
 </IfModule>
 
 # Bloquear acceso directo a logs y archivos sensibles
-<FilesMatch "(?i)(\.env|PDOErrorLog\.txt|ExceptionLog\.txt|backoffice_login_attempts\.json)$">
+<FilesMatch "(?i)(\.env|PDOErrorLog\.txt|ExceptionLog\.txt|backoffice_login_attempts\.json|backoffice_auth\.php|backoffice_parejas\.json)$">
     Require all denied
 </FilesMatch>
 

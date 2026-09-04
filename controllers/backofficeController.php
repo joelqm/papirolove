@@ -21,6 +21,11 @@ class backofficeController extends Controller
         $this->_view->assign('parejas', $parejas);
         $this->_view->assign('csrf', $this->csrfToken());
         $this->_view->assign('usuario', Session::get('bo_user'));
+        $this->_view->assign('flash_ok', Session::get('bo_flash_ok'));
+        $this->_view->assign('flash_error', Session::get('bo_flash_error'));
+        $this->_view->assign('siguiente_id', $this->siguienteParejaId());
+        Session::set('bo_flash_ok', null);
+        Session::set('bo_flash_error', null);
         $this->renderBo('index');
     }
 
@@ -56,13 +61,12 @@ class backofficeController extends Controller
         $usuario = $this->limpiarUsuario($this->getPostRaw('usuario'));
         $clave = (string) $this->getPostRaw('clave');
 
-        // Comparación en tiempo constante / sin filtrar SQL (no hay query)
         $okUser = hash_equals($this->_auth['username'], $usuario);
         $okPass = password_verify($clave, $this->_auth['password_hash']);
 
         if (!$okUser || !$okPass) {
             $this->registrarIntentoFallido();
-            usleep(400000); // ralentiza fuerza bruta
+            usleep(400000);
             Session::set('bo_login_error', 'Usuario o contraseña incorrectos.');
             $this->redireccionar('backoffice/login');
         }
@@ -89,6 +93,118 @@ class backofficeController extends Controller
         $this->redireccionar('backoffice/login');
     }
 
+    public function catalogo()
+    {
+        $this->requerirAuth();
+        $catalogo = $this->_bo->listarCatalogo('', 0, 400);
+        foreach ($catalogo as &$row) {
+            $row['imagen_archivo'] = $this->basenameImagen($row['imagen'] ?? '');
+        }
+        unset($row);
+
+        $this->_view->assign('titulo', 'Backoffice | Catálogo');
+        $this->_view->assign('catalogo', $catalogo);
+        $this->_view->assign('categorias', $this->_bo->listarCategorias(true));
+        $this->_view->assign('categorias_todas', $this->_bo->listarCategorias(false));
+        $this->_view->assign('imagenes', $this->listarImagenesLocales());
+        $this->_view->assign('csrf', $this->csrfToken());
+        $this->_view->assign('usuario', Session::get('bo_user'));
+        $this->_view->assign('flash_ok', Session::get('bo_flash_ok'));
+        $this->_view->assign('flash_error', Session::get('bo_flash_error'));
+        Session::set('bo_flash_ok', null);
+        Session::set('bo_flash_error', null);
+        $this->renderBo('catalogo');
+    }
+
+    public function categorias()
+    {
+        $this->requerirAuth();
+        $this->_view->assign('titulo', 'Backoffice | Categorías');
+        $this->_view->assign('categorias', $this->_bo->listarCategorias(false));
+        $this->_view->assign('csrf', $this->csrfToken());
+        $this->_view->assign('usuario', Session::get('bo_user'));
+        $this->_view->assign('flash_ok', Session::get('bo_flash_ok'));
+        $this->_view->assign('flash_error', Session::get('bo_flash_error'));
+        Session::set('bo_flash_ok', null);
+        Session::set('bo_flash_error', null);
+        $this->renderBo('categorias');
+    }
+
+    public function crearCategoria()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        $nombre = trim(strip_tags((string) $this->getPostRaw('nombre')));
+        if ($nombre === '' || strlen($nombre) > 80) {
+            Session::set('bo_flash_error', 'Nombre de categoría inválido.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        try {
+            $id = $this->_bo->crearCategoria($nombre, 1);
+            Session::set('bo_flash_ok', $id > 0 ? 'Categoría creada (ID ' . $id . ').' : 'No se pudo crear.');
+        } catch (Exception $e) {
+            Session::set('bo_flash_error', 'Error al crear categoría.');
+        }
+        $this->redireccionar('backoffice/categorias');
+    }
+
+    public function actualizarCategoria()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        $id = $this->postInt('categoria_id');
+        $nombre = trim(strip_tags((string) $this->getPostRaw('nombre')));
+        $activo = ((string) $this->getPostRaw('activo') === '1') ? 1 : 0;
+
+        if ($id < 1 || $nombre === '' || strlen($nombre) > 80) {
+            Session::set('bo_flash_error', 'Datos inválidos.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        try {
+            $ok = $this->_bo->actualizarCategoria($id, $nombre, $activo);
+            Session::set('bo_flash_ok', $ok ? 'Categoría actualizada.' : 'No se pudo actualizar.');
+        } catch (Exception $e) {
+            Session::set('bo_flash_error', 'Error al actualizar categoría.');
+        }
+        $this->redireccionar('backoffice/categorias');
+    }
+
+    public function desactivarCategoria()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        $id = $this->postInt('categoria_id');
+        if ($id < 1 || !$this->_bo->obtenerCategoria($id)) {
+            Session::set('bo_flash_error', 'Categoría no válida.');
+            $this->redireccionar('backoffice/categorias');
+        }
+
+        try {
+            $ok = $this->_bo->desactivarCategoria($id);
+            Session::set('bo_flash_ok', $ok ? 'Categoría desactivada.' : 'No se pudo desactivar.');
+        } catch (Exception $e) {
+            Session::set('bo_flash_error', 'Error al desactivar.');
+        }
+        $this->redireccionar('backoffice/categorias');
+    }
+
     public function pareja($parejaId = 0)
     {
         $this->requerirAuth();
@@ -98,15 +214,12 @@ class backofficeController extends Controller
             $this->redireccionar('backoffice');
         }
 
-        $asignaciones = $this->_bo->listarAsignaciones($parejaId);
-        $categorias = $this->_bo->listarCategorias();
-        $catalogo = $this->_bo->listarCatalogo('', 0);
-
         $this->_view->assign('titulo', 'Regalos | ' . $pareja['nombre']);
         $this->_view->assign('pareja', $pareja);
-        $this->_view->assign('asignaciones', $asignaciones);
-        $this->_view->assign('categorias', $categorias);
-        $this->_view->assign('catalogo', $catalogo);
+        $this->_view->assign('asignaciones', $this->_bo->listarAsignaciones($parejaId));
+        $this->_view->assign('categorias', $this->_bo->listarCategorias(true));
+        $this->_view->assign('catalogo', $this->_bo->listarCatalogo('', 0, 400));
+        $this->_view->assign('imagenes', $this->listarImagenesLocales());
         $this->_view->assign('csrf', $this->csrfToken());
         $this->_view->assign('usuario', Session::get('bo_user'));
         $this->_view->assign('flash_ok', Session::get('bo_flash_ok'));
@@ -114,6 +227,220 @@ class backofficeController extends Controller
         Session::set('bo_flash_ok', null);
         Session::set('bo_flash_error', null);
         $this->renderBo('pareja');
+    }
+
+    public function crearBoda()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice');
+        }
+
+        $id = $this->postInt('pareja_id');
+        $nombre = trim(strip_tags((string) $this->getPostRaw('nombre')));
+        $slug = strtolower(trim((string) $this->getPostRaw('slug')));
+        $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
+
+        if ($id < 1 || $nombre === '' || $slug === '') {
+            Session::set('bo_flash_error', 'Completa ID, nombre y slug.');
+            $this->redireccionar('backoffice');
+        }
+
+        if ($this->obtenerPareja($id)) {
+            Session::set('bo_flash_error', 'Ese ID de pareja ya existe.');
+            $this->redireccionar('backoffice');
+        }
+
+        $parejas = $this->leerParejas();
+        array_unshift($parejas, array(
+            'id' => $id,
+            'nombre' => $nombre,
+            'slug' => $slug,
+        ));
+        $this->guardarParejas($parejas);
+        Session::set('bo_flash_ok', 'Boda agregada. Ya puedes asignarle regalos.');
+        $this->redireccionar('backoffice/pareja/' . $id);
+    }
+
+    public function crearObsequio()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice/catalogo');
+        }
+
+        $redirect = $this->sanitizarRedirect((string) $this->getPostRaw('redirect'), 'backoffice/catalogo');
+
+        $baseId = $this->postInt('base_obsequio_id');
+        $categoriaId = $this->postInt('categoria_id');
+        $nombre = trim(strip_tags((string) $this->getPostRaw('nombre')));
+        $monto = round($this->postFloat('monto'), 2);
+        $imagenFile = basename((string) $this->getPostRaw('imagen_archivo'));
+        $asignarPareja = $this->postInt('asignar_pareja_id');
+        $cupos = $this->postInt('cantidad', 1);
+        if ($cupos < 1) {
+            $cupos = 1;
+        }
+
+        // Duplicar desde un obsequio existente (misma imagen/categoría/nombre base)
+        $imagen = '';
+        try {
+            $uploadName = $this->procesarImagenSubida('imagen_upload');
+
+            if ($baseId > 0) {
+                $base = $this->_bo->obtenerObsequio($baseId);
+                if (!$base) {
+                    Session::set('bo_flash_error', 'Obsequio base no encontrado.');
+                    $this->redireccionar($redirect);
+                }
+                if ($categoriaId < 1) {
+                    $categoriaId = (int) $base['categoria_id'];
+                }
+                if ($nombre === '') {
+                    $nombre = $base['nombre'];
+                }
+                if ($uploadName !== '') {
+                    $imagen = $this->urlImagenLocal($uploadName);
+                } elseif ($imagenFile !== '' && $imagenFile !== '.') {
+                    $imagen = $this->urlImagenLocal($imagenFile);
+                } else {
+                    $imagen = $base['imagen'];
+                }
+            } else {
+                if ($nombre === '') {
+                    Session::set('bo_flash_error', 'Escribe el nombre del obsequio.');
+                    $this->redireccionar($redirect);
+                }
+                if ($categoriaId < 1) {
+                    Session::set('bo_flash_error', 'Selecciona una categoría (no dejes “del base” si es nuevo).');
+                    $this->redireccionar($redirect);
+                }
+                if ($uploadName !== '') {
+                    $imagen = $this->urlImagenLocal($uploadName);
+                } elseif ($imagenFile !== '' && $imagenFile !== '.') {
+                    $imagen = $this->urlImagenLocal($imagenFile);
+                } else {
+                    Session::set('bo_flash_error', 'Sube una imagen o elige una existente de la carpeta.');
+                    $this->redireccionar($redirect);
+                }
+            }
+
+            if ($monto < 0 || $monto > 999999.99) {
+                Session::set('bo_flash_error', 'Monto inválido.');
+                $this->redireccionar($redirect);
+            }
+
+            if (strlen($nombre) > 80) {
+                $nombre = substr($nombre, 0, 80);
+            }
+
+            $nuevoId = $this->_bo->crearObsequio($categoriaId, $imagen, $nombre, number_format($monto, 2, '.', ''), 1);
+            if ($nuevoId < 1) {
+                Session::set('bo_flash_error', 'No se pudo crear el obsequio.');
+                $this->redireccionar($redirect);
+            }
+
+            if ($asignarPareja > 0 && $this->obtenerPareja($asignarPareja)) {
+                $this->_bo->asignar($asignarPareja, $nuevoId, $cupos);
+                Session::set('bo_flash_ok', 'Nuevo registro creado (ID ' . $nuevoId . ') y asignado a la boda.');
+                $this->redireccionar('backoffice/pareja/' . $asignarPareja);
+            }
+
+            Session::set('bo_flash_ok', 'Obsequio creado en catálogo (ID ' . $nuevoId . ').');
+        } catch (Exception $e) {
+            $msg = trim($e->getMessage());
+            Session::set('bo_flash_error', $msg !== '' ? $msg : 'Error al crear obsequio. Revisa imagen/datos.');
+        }
+
+        $this->redireccionar($redirect);
+    }
+
+    public function actualizarObsequio()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice/catalogo');
+        }
+
+        $obsequioId = $this->postInt('obsequio_id');
+        $categoriaId = $this->postInt('categoria_id');
+        $nombre = trim(strip_tags((string) $this->getPostRaw('nombre')));
+        $monto = round($this->postFloat('monto'), 2);
+        $imagenFile = basename((string) $this->getPostRaw('imagen_archivo'));
+        $activo = ((string) $this->getPostRaw('activo') === '1') ? 1 : 0;
+
+        $actual = $this->_bo->obtenerObsequio($obsequioId);
+        if (!$actual) {
+            Session::set('bo_flash_error', 'Obsequio no encontrado.');
+            $this->redireccionar('backoffice/catalogo');
+        }
+
+        if ($categoriaId < 1 || $nombre === '' || strlen($nombre) > 80) {
+            Session::set('bo_flash_error', 'Nombre y categoría son obligatorios.');
+            $this->redireccionar('backoffice/catalogo');
+        }
+
+        if ($monto < 0 || $monto > 999999.99) {
+            Session::set('bo_flash_error', 'Monto inválido.');
+            $this->redireccionar('backoffice/catalogo');
+        }
+
+        try {
+            $uploadName = $this->procesarImagenSubida('imagen_upload');
+            if ($uploadName !== '') {
+                $imagen = $this->urlImagenLocal($uploadName);
+            } elseif ($imagenFile !== '' && $imagenFile !== '.') {
+                $imagen = $this->urlImagenLocal($imagenFile);
+            } else {
+                $imagen = $actual['imagen'];
+            }
+
+            $ok = $this->_bo->actualizarObsequio(
+                $obsequioId,
+                $categoriaId,
+                $imagen,
+                $nombre,
+                number_format($monto, 2, '.', ''),
+                $activo
+            );
+            Session::set('bo_flash_ok', $ok ? 'Obsequio #' . $obsequioId . ' actualizado.' : 'No se pudo actualizar.');
+        } catch (Exception $e) {
+            $msg = trim($e->getMessage());
+            Session::set('bo_flash_error', $msg !== '' ? $msg : 'Error al actualizar obsequio.');
+        }
+
+        $this->redireccionar('backoffice/catalogo');
+    }
+
+    private function sanitizarRedirect($redirect, $default)
+    {
+        $redirect = trim($redirect);
+        if ($redirect === '' || strpos($redirect, 'backoffice') !== 0) {
+            return $default;
+        }
+        if (!preg_match('#^backoffice(/[a-zA-Z0-9_\-/]*)?$#', $redirect)) {
+            return $default;
+        }
+        return $redirect;
+    }
+
+    private function basenameImagen($url)
+    {
+        $url = trim((string) $url);
+        if ($url === '') {
+            return '';
+        }
+        $path = parse_url($url, PHP_URL_PATH);
+        if (!$path) {
+            $path = $url;
+        }
+        return basename(rawurldecode($path));
     }
 
     public function asignar()
@@ -125,9 +452,9 @@ class backofficeController extends Controller
             $this->redireccionar('backoffice');
         }
 
-        $parejaId = (int) $this->getInt('pareja_id');
-        $obsequioId = (int) $this->getInt('obsequio_id');
-        $cantidad = (int) $this->getInt('cantidad');
+        $parejaId = $this->postInt('pareja_id');
+        $obsequioId = $this->postInt('obsequio_id');
+        $cantidad = $this->postInt('cantidad', 1);
         if ($cantidad < 1) {
             $cantidad = 1;
         }
@@ -159,10 +486,10 @@ class backofficeController extends Controller
             $this->redireccionar('backoffice');
         }
 
-        $parejaId = (int) $this->getInt('pareja_id');
-        $id = (int) $this->getInt('obsequio_pareja_id');
-        $cantidad = (int) $this->getInt('cantidad');
-        $activo = (int) $this->getInt('activo') === 1 ? 1 : 0;
+        $parejaId = $this->postInt('pareja_id');
+        $id = $this->postInt('obsequio_pareja_id');
+        $cantidad = $this->postInt('cantidad', 1);
+        $activo = ((string) $this->getPostRaw('activo') === '1') ? 1 : 0;
 
         if ($cantidad < 1) {
             $cantidad = 1;
@@ -195,8 +522,8 @@ class backofficeController extends Controller
             $this->redireccionar('backoffice');
         }
 
-        $parejaId = (int) $this->getInt('pareja_id');
-        $id = (int) $this->getInt('obsequio_pareja_id');
+        $parejaId = $this->postInt('pareja_id');
+        $id = $this->postInt('obsequio_pareja_id');
 
         if (!$this->obtenerPareja($parejaId) || !$this->_bo->perteneceAPareja($id, $parejaId)) {
             Session::set('bo_flash_error', 'Registro no válido.');
@@ -211,6 +538,213 @@ class backofficeController extends Controller
         }
 
         $this->redireccionar('backoffice/pareja/' . $parejaId);
+    }
+
+    /* ===================== Datos auxiliares ===================== */
+
+    private function parejasFile()
+    {
+        return ROOT . 'application' . DS . 'backoffice_parejas.json';
+    }
+
+    private function leerParejas()
+    {
+        $file = $this->parejasFile();
+        if (!is_file($file)) {
+            return array();
+        }
+        $data = json_decode((string) file_get_contents($file), true);
+        if (!is_array($data)) {
+            return array();
+        }
+        usort($data, function ($a, $b) {
+            return ((int) $b['id']) - ((int) $a['id']);
+        });
+        return $data;
+    }
+
+    private function guardarParejas($parejas)
+    {
+        usort($parejas, function ($a, $b) {
+            return ((int) $b['id']) - ((int) $a['id']);
+        });
+        file_put_contents(
+            $this->parejasFile(),
+            json_encode(array_values($parejas), JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE),
+            LOCK_EX
+        );
+    }
+
+    private function siguienteParejaId()
+    {
+        $max = 0;
+        foreach ($this->leerParejas() as $p) {
+            $max = max($max, (int) $p['id']);
+        }
+        return $max + 1;
+    }
+
+    private function listarImagenesLocales()
+    {
+        $dir = ROOT . 'views' . DS . 'layout' . DS . 'neela' . DS . 'images';
+        if (!is_dir($dir)) {
+            return array();
+        }
+        $files = scandir($dir);
+        $out = array();
+        foreach ($files as $f) {
+            if ($f === '.' || $f === '..') {
+                continue;
+            }
+            if (!preg_match('/\.(webp|png|jpe?g)$/i', $f)) {
+                continue;
+            }
+            // Evitar decorativos del layout
+            if (preg_match('/^(flower|logo|cards|background|izipay|yvanna)/i', $f)) {
+                continue;
+            }
+            $out[] = $f;
+        }
+        sort($out, SORT_NATURAL | SORT_FLAG_CASE);
+        return $out;
+    }
+
+    private function imagenesDir()
+    {
+        return ROOT . 'views' . DS . 'layout' . DS . 'neela' . DS . 'images';
+    }
+
+    /**
+     * Procesa $_FILES[$campo]: valida, redimensiona y guarda en neela/images.
+     * @return string nombre de archivo guardado, o '' si no hubo upload
+     */
+    private function procesarImagenSubida($campo)
+    {
+        if (!isset($_FILES[$campo]) || !is_array($_FILES[$campo])) {
+            return '';
+        }
+        $file = $_FILES[$campo];
+        if (!isset($file['error']) || (int) $file['error'] === UPLOAD_ERR_NO_FILE) {
+            return '';
+        }
+        if ((int) $file['error'] !== UPLOAD_ERR_OK) {
+            throw new Exception('Error al subir la imagen.');
+        }
+        if (!is_uploaded_file($file['tmp_name'])) {
+            throw new Exception('Archivo de imagen inválido.');
+        }
+
+        $maxBytes = 5 * 1024 * 1024;
+        if ((int) $file['size'] > $maxBytes) {
+            throw new Exception('La imagen supera 5 MB.');
+        }
+
+        $finfo = new finfo(FILEINFO_MIME_TYPE);
+        $mime = $finfo->file($file['tmp_name']);
+        $allowed = array(
+            'image/jpeg' => 'jpg',
+            'image/png' => 'png',
+            'image/webp' => 'webp',
+        );
+        if (!isset($allowed[$mime])) {
+            throw new Exception('Solo se permiten JPG, PNG o WebP.');
+        }
+
+        $dir = $this->imagenesDir();
+        if (!is_dir($dir) || !is_writable($dir)) {
+            throw new Exception('No se puede escribir en la carpeta de imágenes.');
+        }
+
+        $baseName = 'obsequio-' . date('Ymd-His') . '-' . bin2hex(random_bytes(3));
+        $maxSide = 900;
+
+        if (extension_loaded('gd')) {
+            $saved = $this->redimensionarYGuardar($file['tmp_name'], $mime, $dir, $baseName, $maxSide);
+            if ($saved !== '') {
+                return $saved;
+            }
+        }
+
+        // Fallback sin GD: copiar con extensión original
+        $destName = $baseName . '.' . $allowed[$mime];
+        $destPath = $dir . DS . $destName;
+        if (!move_uploaded_file($file['tmp_name'], $destPath)) {
+            throw new Exception('No se pudo guardar la imagen.');
+        }
+        @chmod($destPath, 0644);
+        return $destName;
+    }
+
+    private function redimensionarYGuardar($tmpPath, $mime, $dir, $baseName, $maxSide)
+    {
+        switch ($mime) {
+            case 'image/jpeg':
+                $src = @imagecreatefromjpeg($tmpPath);
+                break;
+            case 'image/png':
+                $src = @imagecreatefrompng($tmpPath);
+                break;
+            case 'image/webp':
+                $src = function_exists('imagecreatefromwebp') ? @imagecreatefromwebp($tmpPath) : false;
+                break;
+            default:
+                $src = false;
+        }
+        if (!$src) {
+            return '';
+        }
+
+        $w = imagesx($src);
+        $h = imagesy($src);
+        if ($w < 1 || $h < 1) {
+            imagedestroy($src);
+            return '';
+        }
+
+        $scale = 1.0;
+        $longest = max($w, $h);
+        if ($longest > $maxSide) {
+            $scale = $maxSide / $longest;
+        }
+        $nw = max(1, (int) round($w * $scale));
+        $nh = max(1, (int) round($h * $scale));
+
+        $dst = imagecreatetruecolor($nw, $nh);
+        imagealphablending($dst, false);
+        imagesavealpha($dst, true);
+        $transparent = imagecolorallocatealpha($dst, 0, 0, 0, 127);
+        imagefilledrectangle($dst, 0, 0, $nw, $nh, $transparent);
+        imagecopyresampled($dst, $src, 0, 0, 0, 0, $nw, $nh, $w, $h);
+        imagedestroy($src);
+
+        $destName = $baseName . '.webp';
+        $destPath = $dir . DS . $destName;
+        $ok = false;
+        if (function_exists('imagewebp')) {
+            $ok = imagewebp($dst, $destPath, 82);
+        }
+        if (!$ok) {
+            $destName = $baseName . '.png';
+            $destPath = $dir . DS . $destName;
+            $ok = imagepng($dst, $destPath, 6);
+        }
+        imagedestroy($dst);
+
+        if (!$ok || !is_file($destPath)) {
+            return '';
+        }
+        @chmod($destPath, 0644);
+        return $destName;
+    }
+
+    private function urlImagenLocal($filename)
+    {
+        $filename = basename($filename);
+        $path = $this->imagenesDir() . DS . $filename;
+        if (!is_file($path)) {
+            throw new Exception('Imagen no encontrada');
+        }
+        return rtrim(BASE_URL, '/') . '/views/layout/neela/images/' . $filename;
     }
 
     /* ===================== Seguridad ===================== */
@@ -291,6 +825,23 @@ class backofficeController extends Controller
     private function getPostRaw($clave)
     {
         return isset($_POST[$clave]) ? $_POST[$clave] : '';
+    }
+
+    /** Entero desde POST sin usar empty() (evita perder el 0). */
+    private function postInt($clave, $default = 0)
+    {
+        if (!isset($_POST[$clave]) || $_POST[$clave] === '' || $_POST[$clave] === null) {
+            return (int) $default;
+        }
+        return (int) $_POST[$clave];
+    }
+
+    private function postFloat($clave, $default = 0.0)
+    {
+        if (!isset($_POST[$clave]) || $_POST[$clave] === '' || $_POST[$clave] === null) {
+            return (float) $default;
+        }
+        return (float) str_replace(',', '.', (string) $_POST[$clave]);
     }
 
     private function limpiarUsuario($usuario)
@@ -375,7 +926,7 @@ class backofficeController extends Controller
 
     private function obtenerPareja($parejaId)
     {
-        foreach ($this->_auth['parejas'] as $p) {
+        foreach ($this->leerParejas() as $p) {
             if ((int) $p['id'] === (int) $parejaId) {
                 return $p;
             }
@@ -386,7 +937,7 @@ class backofficeController extends Controller
     private function enriquecerParejas()
     {
         $out = array();
-        foreach ($this->_auth['parejas'] as $p) {
+        foreach ($this->leerParejas() as $p) {
             $rows = $this->_bo->listarAsignaciones((int) $p['id']);
             $activos = 0;
             foreach ($rows as $r) {

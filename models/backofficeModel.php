@@ -18,6 +18,7 @@ class backofficeModel extends Model
                     top.pareja_id,
                     top.cantidad AS cupos,
                     top.activo,
+                    top.fecha_creacion,
                     o.nombre,
                     o.monto,
                     o.imagen,
@@ -30,7 +31,7 @@ class backofficeModel extends Model
                 LEFT JOIN tbl_obsequio_enviado toe ON toe.obsequio_pareja_id = top.obsequio_pareja_id
                 WHERE top.pareja_id = :parejaId
                 GROUP BY top.obsequio_pareja_id
-                ORDER BY top.activo DESC, tc.nombre ASC, o.nombre ASC";
+                ORDER BY top.obsequio_pareja_id DESC";
 
         $stmt = $this->_db->prepare($sql);
         $stmt->bindValue(':parejaId', (int) $parejaId, PDO::PARAM_INT);
@@ -38,9 +39,9 @@ class backofficeModel extends Model
         return $stmt->fetchAll();
     }
 
-    public function listarCatalogo($q = '', $categoriaId = 0)
+    public function listarCatalogo($q = '', $categoriaId = 0, $limit = 400)
     {
-        $where = " WHERE o.activo = 1 ";
+        $where = " WHERE 1=1 ";
         $params = array();
 
         if ($categoriaId > 0) {
@@ -53,18 +54,22 @@ class backofficeModel extends Model
             $params[':q'] = '%' . $q . '%';
         }
 
+        $limit = max(1, min(500, (int) $limit));
+
         $sql = "SELECT
                     o.obsequio_id,
                     o.nombre,
                     o.monto,
                     o.imagen,
                     o.categoria_id,
+                    o.activo,
+                    o.fecha_creacion,
                     tc.nombre AS categoria
                 FROM tbl_obsequio o
                 INNER JOIN tbl_categoria tc ON tc.categoria_id = o.categoria_id
                 $where
-                ORDER BY tc.nombre ASC, o.nombre ASC
-                LIMIT 300";
+                ORDER BY o.obsequio_id DESC
+                LIMIT $limit";
 
         $stmt = $this->_db->prepare($sql);
         foreach ($params as $key => $value) {
@@ -75,15 +80,111 @@ class backofficeModel extends Model
         return $stmt->fetchAll();
     }
 
-    public function listarCategorias()
+    public function obtenerObsequio($obsequioId)
     {
-        $sql = "SELECT categoria_id AS id, nombre
-                FROM tbl_categoria
-                WHERE activo = 1
-                ORDER BY nombre ASC";
+        $sql = "SELECT obsequio_id, categoria_id, imagen, nombre, monto, activo
+                FROM tbl_obsequio
+                WHERE obsequio_id = :id
+                LIMIT 1";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':id', (int) $obsequioId, PDO::PARAM_INT);
+        $stmt->execute();
+        $row = $stmt->fetch();
+        return $row ? $row : null;
+    }
+
+    public function listarCategorias($soloActivas = true)
+    {
+        $sql = "SELECT categoria_id AS id, nombre, activo
+                FROM tbl_categoria";
+        if ($soloActivas) {
+            $sql .= " WHERE activo = 1";
+            $sql .= " ORDER BY nombre ASC";
+        } else {
+            $sql .= " ORDER BY categoria_id DESC";
+        }
         $stmt = $this->_db->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public function obtenerCategoria($categoriaId)
+    {
+        $sql = "SELECT categoria_id AS id, nombre, activo
+                FROM tbl_categoria
+                WHERE categoria_id = :id
+                LIMIT 1";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':id', (int) $categoriaId, PDO::PARAM_INT);
+        $stmt->execute();
+        $row = $stmt->fetch();
+        return $row ? $row : null;
+    }
+
+    public function crearCategoria($nombre, $activo = 1)
+    {
+        $sql = "INSERT INTO tbl_categoria (nombre, activo)
+                VALUES (:nombre, :activo)";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindValue(':activo', (int) $activo, PDO::PARAM_INT);
+        $stmt->execute();
+        return (int) $this->_db->lastInsertId();
+    }
+
+    public function actualizarCategoria($categoriaId, $nombre, $activo)
+    {
+        $sql = "UPDATE tbl_categoria
+                SET nombre = :nombre, activo = :activo
+                WHERE categoria_id = :id";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindValue(':activo', (int) $activo, PDO::PARAM_INT);
+        $stmt->bindValue(':id', (int) $categoriaId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    public function desactivarCategoria($categoriaId)
+    {
+        $sql = "UPDATE tbl_categoria
+                SET activo = 0
+                WHERE categoria_id = :id";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':id', (int) $categoriaId, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    public function crearObsequio($categoriaId, $imagen, $nombre, $monto, $activo = 1)
+    {
+        $sql = "INSERT INTO tbl_obsequio (categoria_id, imagen, nombre, monto, activo)
+                VALUES (:categoriaId, :imagen, :nombre, :monto, :activo)";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':categoriaId', (int) $categoriaId, PDO::PARAM_INT);
+        $stmt->bindValue(':imagen', $imagen, PDO::PARAM_STR);
+        $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindValue(':monto', $monto, PDO::PARAM_STR);
+        $stmt->bindValue(':activo', (int) $activo, PDO::PARAM_INT);
+        $stmt->execute();
+        return (int) $this->_db->lastInsertId();
+    }
+
+    public function actualizarObsequio($obsequioId, $categoriaId, $imagen, $nombre, $monto, $activo = 1)
+    {
+        $sql = "UPDATE tbl_obsequio
+                SET categoria_id = :categoriaId,
+                    imagen = :imagen,
+                    nombre = :nombre,
+                    monto = :monto,
+                    activo = :activo
+                WHERE obsequio_id = :id";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':categoriaId', (int) $categoriaId, PDO::PARAM_INT);
+        $stmt->bindValue(':imagen', $imagen, PDO::PARAM_STR);
+        $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindValue(':monto', $monto, PDO::PARAM_STR);
+        $stmt->bindValue(':activo', (int) $activo, PDO::PARAM_INT);
+        $stmt->bindValue(':id', (int) $obsequioId, PDO::PARAM_INT);
+        return $stmt->execute();
     }
 
     public function asignar($parejaId, $obsequioId, $cantidad)
