@@ -35,7 +35,27 @@
         .inline { display:inline; }
         .actions { display:flex; gap:.4rem; flex-wrap:wrap; }
         .mono { font-family: ui-monospace, Consolas, monospace; font-size:.82rem; color:var(--muted); }
+        /* Select2 dark */
+        .select2-container { min-width:min(420px, 100%); width:100% !important; max-width:100%; }
+        .select2-container--default .select2-selection--single {
+            height:auto; min-height:38px; padding:.35rem .45rem; border-radius:8px;
+            border:1px solid var(--line); background:#0b1220; color:var(--text);
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color:var(--text); line-height:1.4; padding-left:2px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow { height:100%; top:0; }
+        .select2-dropdown { background:#111827; border:1px solid var(--line); color:var(--text); }
+        .select2-container--default .select2-search--dropdown .select2-search__field {
+            background:#0b1220; border:1px solid var(--line); color:var(--text); border-radius:6px;
+        }
+        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+            background:var(--accent); color:#1f2937;
+        }
+        .select2-results__option { font-size:.88rem; }
+        .select2-container--default .select2-selection--single .select2-selection__placeholder { color:var(--muted); }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -44,6 +64,9 @@
             <div class="meta">ID {$pareja.id|escape:'html'} · {$usuario|escape:'html'}</div>
         </div>
         <div class="actions">
+            {if $pareja.slug}
+            <a class="btn" href="{$_layoutParams.root}{$pareja.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+            {/if}
             <a class="btn ghost" href="{$_layoutParams.root}backoffice">← Bodas</a>
             <a class="btn ghost" href="{$_layoutParams.root}backoffice/catalogo">Catálogo</a>
             <a class="btn ghost" href="{$_layoutParams.root}backoffice/categorias">Categorías</a>
@@ -60,7 +83,7 @@
 
         <div class="panel">
             <h2>Nuevo registro para esta boda (precio propio)</h2>
-            <p class="hint">Crea un nuevo item en <code>tbl_obsequio</code> (puedes reutilizar imagen/nombre de uno existente) y lo asigna a esta boda. Así cada boda puede tener su propio monto.</p>
+            <p class="hint">Crea un <strong>registro nuevo</strong> (no modifica el catálogo ni regalos de otras bodas). “Basado en” solo copia nombre/imagen/categoría como plantilla.</p>
             <form method="post" action="{$_layoutParams.root}backoffice/crearObsequio" enctype="multipart/form-data">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="asignar_pareja_id" value="{$pareja.id|escape:'html'}">
@@ -68,7 +91,7 @@
                 <div class="row">
                     <div style="flex:1; min-width:220px;">
                         <label for="base_obsequio_id">Basado en (opcional)</label>
-                        <select class="wide" id="base_obsequio_id" name="base_obsequio_id">
+                        <select class="wide js-select2" id="base_obsequio_id" name="base_obsequio_id" data-placeholder="Buscar en catálogo…">
                             <option value="0">— Nuevo desde cero —</option>
                             {foreach from=$catalogo item=c}
                                 <option value="{$c.obsequio_id|escape:'html'}">
@@ -118,14 +141,14 @@
 
         <div class="panel">
             <h2>Asignar regalo ya existente del catálogo</h2>
-            <p class="hint">Usa esto solo si el precio del catálogo ya es el correcto para esta boda.</p>
+            <p class="hint">Crea una <strong>copia nueva</strong> del obsequio y la asigna solo a esta boda. No edita el original ni las listas de otras bodas.</p>
             <form method="post" action="{$_layoutParams.root}backoffice/asignar">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
                 <div class="row">
                     <div style="flex:1; min-width:220px;">
                         <label for="obsequio_id">Obsequio</label>
-                        <select class="wide" id="obsequio_id" name="obsequio_id" required>
+                        <select class="wide js-select2" id="obsequio_id" name="obsequio_id" required data-placeholder="Buscar obsequio…">
                             <option value="">Selecciona…</option>
                             {foreach from=$catalogo item=c}
                                 <option value="{$c.obsequio_id|escape:'html'}">
@@ -138,7 +161,7 @@
                         <label for="cantidad">Cupos</label>
                         <input id="cantidad" type="number" name="cantidad" min="1" max="9999" value="1" required>
                     </div>
-                    <div><button type="submit">Asignar</button></div>
+                    <div><button type="submit">Copiar y asignar</button></div>
                 </div>
             </form>
         </div>
@@ -211,5 +234,23 @@
             </div>
         </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(function () {
+            $('.js-select2').each(function () {
+                var $el = $(this);
+                $el.select2({
+                    width: '100%',
+                    allowClear: false,
+                    placeholder: $el.data('placeholder') || 'Buscar…',
+                    language: {
+                        noResults: function () { return 'Sin resultados'; },
+                        searching: function () { return 'Buscando…'; }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

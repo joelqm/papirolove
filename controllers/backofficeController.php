@@ -464,12 +464,37 @@ class backofficeController extends Controller
 
         if (!$this->obtenerPareja($parejaId) || $obsequioId < 1) {
             Session::set('bo_flash_error', 'Datos inválidos.');
-            $this->redireccionar('backoffice/pareja/' . $parejaId);
+            $this->redireccionar('backoffice/pareja/' . max(0, $parejaId));
         }
 
         try {
-            $ok = $this->_bo->asignar($parejaId, $obsequioId, $cantidad);
-            Session::set('bo_flash_ok', $ok ? 'Regalo agregado/actualizado.' : 'No se pudo guardar.');
+            // Copiar el catálogo a un registro NUEVO y asignar solo esa copia a esta boda.
+            // Así no se toca el original ni las listas de otras bodas.
+            $base = $this->_bo->obtenerObsequio($obsequioId);
+            if (!$base) {
+                Session::set('bo_flash_error', 'Obsequio no encontrado.');
+                $this->redireccionar('backoffice/pareja/' . $parejaId);
+            }
+
+            $nuevoId = $this->_bo->crearObsequio(
+                (int) $base['categoria_id'],
+                $base['imagen'],
+                $base['nombre'],
+                $base['monto'],
+                1
+            );
+            if ($nuevoId < 1) {
+                Session::set('bo_flash_error', 'No se pudo copiar el obsequio.');
+                $this->redireccionar('backoffice/pareja/' . $parejaId);
+            }
+
+            $ok = $this->_bo->asignar($parejaId, $nuevoId, $cantidad);
+            Session::set(
+                'bo_flash_ok',
+                $ok
+                    ? 'Copia creada (obsequio #' . $nuevoId . ') y asignada solo a esta boda.'
+                    : 'No se pudo guardar la asignación.'
+            );
         } catch (Exception $e) {
             Session::set('bo_flash_error', 'Error al guardar. Intenta de nuevo.');
         }

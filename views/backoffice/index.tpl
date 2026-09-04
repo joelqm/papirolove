@@ -78,7 +78,12 @@
                     <h2>{$p.nombre|escape:'html'}</h2>
                     <p>ID: {$p.id|escape:'html'} · slug: {$p.slug|escape:'html'}</p>
                     <p><span class="badge">{$p.activos|escape:'html'} activos / {$p.total|escape:'html'} total</span></p>
-                    <a class="btn" href="{$_layoutParams.root}backoffice/pareja/{$p.id|escape:'url'}">Administrar regalos</a>
+                    <div class="actions">
+                        <a class="btn" href="{$_layoutParams.root}backoffice/pareja/{$p.id|escape:'html'}">Administrar regalos</a>
+                        {if $p.slug}
+                        <a class="btn btn-ghost" href="{$_layoutParams.root}{$p.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+                        {/if}
+                    </div>
                 </div>
             {/foreach}
         </div>
