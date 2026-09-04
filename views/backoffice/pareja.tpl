@@ -55,7 +55,7 @@
         .select2-results__option { font-size:.88rem; }
         .select2-container--default .select2-selection--single .select2-selection__placeholder { color:var(--muted); }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link href="{$_layoutParams.root}views/backoffice/vendor/select2/select2.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -234,23 +234,36 @@
             </div>
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{$_layoutParams.root}views/backoffice/vendor/jquery-3.7.1.min.js"></script>
+    <script src="{$_layoutParams.root}views/backoffice/vendor/select2/select2.min.js"></script>
     <script>
-        $(function () {
-            $('.js-select2').each(function () {
-                var $el = $(this);
-                $el.select2({
-                    width: '100%',
-                    allowClear: false,
-                    placeholder: $el.data('placeholder') || 'Buscar…',
-                    language: {
-                        noResults: function () { return 'Sin resultados'; },
-                        searching: function () { return 'Buscando…'; }
+        (function () {
+            function initSelect2() {
+                if (!window.jQuery || !jQuery.fn.select2) {
+                    return;
+                }
+                jQuery('.js-select2').each(function () {
+                    var $el = jQuery(this);
+                    if ($el.hasClass('select2-hidden-accessible')) {
+                        return;
                     }
+                    $el.select2({
+                        width: '100%',
+                        allowClear: false,
+                        placeholder: $el.data('placeholder') || 'Buscar…',
+                        language: {
+                            noResults: function () { return 'Sin resultados'; },
+                            searching: function () { return 'Buscando…'; }
+                        }
+                    });
                 });
-            });
-        });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initSelect2);
+            } else {
+                initSelect2();
+            }
+        })();
     </script>
 </body>
 </html>
