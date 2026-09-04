@@ -161,6 +161,10 @@
                 Guardar aquí <strong>no modifica</strong> las claves de otras bodas.
                 {if $izipay}Empresa #{$izipay.emp_id|escape:'html'}.{else}Aún sin espacio Izipay.{/if}
             </p>
+            <p class="hint">
+                Cópialas desde Izipay → Configuración → Tiendas → Claves / Claves API REST.
+                No intercambies campos: <strong>pública</strong> lleva <code>publickey_</code> y <strong>privada</strong> lleva <code>password_</code>.
+            </p>
             <form method="post" action="{$_layoutParams.root}backoffice/actualizarIzipay" autocomplete="off">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
@@ -169,31 +173,37 @@
                         <label for="izipay_username">Usuario / Shop ID</label>
                         <input class="wide" id="izipay_username" type="text" name="izipay_username" maxlength="80"
                                value="{if $izipay}{$izipay.username|escape:'html'}{/if}" required
-                               placeholder="Ej. 12345678" autocomplete="off">
+                               placeholder="Solo el número, ej. 14855194" autocomplete="off">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defpk">Clave pública</label>
+                        <label for="izipay_defpk">Clave pública (publicKey)</label>
                         <input class="wide" id="izipay_defpk" type="text" name="izipay_defpk" maxlength="255"
                                value="{if $izipay}{$izipay.defpk|escape:'html'}{/if}" required
-                               placeholder="shopId:publickey_…" autocomplete="off">
+                               placeholder="14855194:publickey_… o 14855194:prodpublickey_…" autocomplete="off">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defpas">Clave privada (API REST)</label>
+                        <label for="izipay_defpas">Clave privada API REST (password)</label>
                         <input class="wide" id="izipay_defpas" type="password" name="izipay_defpas" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}privatekey_…{/if}"
+                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}prodpassword_… o testpassword_…{/if}"
                                autocomplete="new-password">
                     </div>
                     <div class="field-grow">
                         <label for="izipay_defsha">Clave HMAC-SHA-256</label>
                         <input class="wide" id="izipay_defsha" type="password" name="izipay_defsha" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave de firma{/if}"
+                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave de firma del Back Office{/if}"
                                autocomplete="new-password">
                     </div>
                     <div><button type="submit">Guardar Izipay</button></div>
                 </div>
-                {if $izipay && $izipay.username && $izipay.defpk && $izipay.defpas && $izipay.defsha}
-                    <p class="hint" style="margin-top:.75rem;color:var(--ok);">Configuración completa para esta boda.</p>
-                {elseif $izipay}
+                {if $izipay_estado == 'ok'}
+                    <p class="hint" style="margin-top:.75rem;color:var(--ok);">Formato de claves parece correcto para esta boda.</p>
+                {elseif $izipay_estado == 'formato_malo'}
+                    <p class="hint" style="margin-top:.75rem;color:var(--danger);">
+                        Formato incorrecto: la clave pública no debe llevar <code>password_</code>.
+                        Debe verse como <code>{if $izipay.username}{$izipay.username|escape:'html'}{else}SHOPID{/if}:publickey_…</code>
+                        y la privada como <code>prodpassword_…</code>.
+                    </p>
+                {elseif $izipay_estado == 'incompleto'}
                     <p class="hint" style="margin-top:.75rem;color:var(--danger);">Faltan claves: completa usuario, pública, privada y HMAC.</p>
                 {/if}
             </form>

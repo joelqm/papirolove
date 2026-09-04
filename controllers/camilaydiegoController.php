@@ -105,6 +105,14 @@ class camilaydiegoController extends Controller
 		$ps_k = $this->_camilaydiego->keysEmp($this->_key);
 		$mensaje = $this->_camilaydiego->buscarMensaje($codigo);
 
+		if (!$ps_k || empty($ps_k['username']) || empty($ps_k['defpas']) || empty($ps_k['defpk']) || empty($ps_k['defsha'])) {
+			throw new Exception('Izipay no configurado para esta boda. Revisa las credenciales en el backoffice (usuario, pública, privada y HMAC).');
+		}
+
+		if (stripos($ps_k['defpk'], 'password_') !== false || strpos($ps_k['defpk'], ':') === false) {
+			throw new Exception('Credenciales Izipay mal cargadas: la clave pública parece una privada (password_). Corrige el orden en backoffice → Izipay.');
+		}
+
 		$this->_view->assign('pk', $ps_k['defpk']);
 		$this->_view->assign('nombre', $mensaje['nombre']);
 		$this->_view->assign('mensaje', $mensaje['mensaje']);
@@ -129,7 +137,12 @@ class camilaydiegoController extends Controller
 
 		if ($response['status'] != 'SUCCESS') {
 			$error = $response['answer'];
-			throw new Exception("error " . $error['errorCode'] . ": " . $error['errorMessage']);
+			$code = isset($error['errorCode']) ? $error['errorCode'] : '';
+			$msg = isset($error['errorMessage']) ? $error['errorMessage'] : 'Error de pago';
+			if ($code === 'INT_905') {
+				throw new Exception('Izipay rechazó las claves (INT_905: login o clave privada inválidos). Verifica Shop ID y prodpassword_ en backoffice → Izipay de esta boda.');
+			}
+			throw new Exception("error " . $code . ": " . $msg);
 		}
 
 		$formToken = $response["answer"]["formToken"];

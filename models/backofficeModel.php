@@ -410,6 +410,23 @@ class backofficeModel extends Model
             throw new Exception('Usuario (shop ID) y clave pública son obligatorios.');
         }
 
+        if (!preg_match('/^\d+$/', $username)) {
+            throw new Exception('El usuario / Shop ID debe ser solo el número de tienda (ej. 14855194).');
+        }
+
+        // Evitar pegar la clave privada en el campo de pública
+        if (preg_match('/password_/i', $defpk) || stripos($defpk, 'prodpassword_') === 0 || stripos($defpk, 'testpassword_') === 0) {
+            throw new Exception('En «Clave pública» pegaste una clave privada (prodpassword_/testpassword_). La pública debe verse así: ' . $username . ':publickey_… o ' . $username . ':prodpublickey_…');
+        }
+
+        if (strpos($defpk, ':') === false || !preg_match('/publickey_/i', $defpk)) {
+            throw new Exception('La clave pública es inválida. Debe incluir el Shop ID y publickey_, por ejemplo: ' . $username . ':publickey_xxxxx');
+        }
+
+        if (strpos($defpk, $username . ':') !== 0) {
+            throw new Exception('La clave pública debe empezar con tu Shop ID: «' . $username . ':…».');
+        }
+
         if ($defpas === '') {
             $defpas = $cred['defpas'];
         }
@@ -418,6 +435,14 @@ class backofficeModel extends Model
         }
         if ($defpas === '' || $defsha === '') {
             throw new Exception('Clave privada y HMAC-SHA-256 son obligatorias (primera configuración).');
+        }
+
+        if (!preg_match('/password_/i', $defpas)) {
+            throw new Exception('La clave privada (API REST) parece incorrecta. Debe verse como prodpassword_… o testpassword_…');
+        }
+
+        if (preg_match('/publickey_/i', $defpas)) {
+            throw new Exception('En «Clave privada» pegaste la clave pública. Intercámbialas: privada = prodpassword_…, pública = ' . $username . ':publickey_…');
         }
 
         // Doble candado: sede de esta boda + emp_id exacto de esa sede

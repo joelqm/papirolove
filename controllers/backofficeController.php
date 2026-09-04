@@ -228,10 +228,26 @@ class backofficeController extends Controller
             }
         }
 
+        $izipayEstado = 'vacio';
+        if (is_array($izipay)) {
+            $user = trim((string) (isset($izipay['username']) ? $izipay['username'] : ''));
+            $pk = trim((string) (isset($izipay['defpk']) ? $izipay['defpk'] : ''));
+            $pas = trim((string) (isset($izipay['defpas']) ? $izipay['defpas'] : ''));
+            $sha = trim((string) (isset($izipay['defsha']) ? $izipay['defsha'] : ''));
+            if ($user === '' || $pk === '' || $pas === '' || $sha === '') {
+                $izipayEstado = 'incompleto';
+            } elseif (stripos($pk, 'password_') !== false || strpos($pk, ':') === false || !preg_match('/publickey_/i', $pk)) {
+                $izipayEstado = 'formato_malo';
+            } else {
+                $izipayEstado = 'ok';
+            }
+        }
+
         $this->_view->assign('titulo', ($tab === 'izipay' ? 'Izipay' : 'Obsequios') . ' | ' . $pareja['nombre']);
         $this->_view->assign('pareja', $pareja);
         $this->_view->assign('tab', $tab);
         $this->_view->assign('izipay', $izipay);
+        $this->_view->assign('izipay_estado', $izipayEstado);
         $this->_view->assign('asignaciones', $this->_bo->listarAsignaciones($parejaId));
         $this->_view->assign('categorias', $this->_bo->listarCategorias(true));
         $this->_view->assign('catalogo', $this->_bo->listarCatalogo('', 0, 400));
