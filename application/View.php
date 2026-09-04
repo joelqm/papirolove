@@ -43,6 +43,14 @@ class View extends Smarty
         }
     }
 
+    /**
+     * Versión estable para cache busting (no usar rand(): invalida caché en cada request).
+     */
+    private function assetFileVer()
+    {
+        return defined('ASSET_VERSION') ? ASSET_VERSION : '1';
+    }
+
     // Función ÚNICA para renderizar
     public function render($vista, $item = false)
     {
@@ -107,7 +115,7 @@ class View extends Smarty
             'js' => $js,
             'item' => $item,
             'root' => BASE_URL,
-            'filever' => rand(),
+            'filever' => $this->assetFileVer(),
             'configs' => array(
                 'app_name' => APP_NAME,
                 'app_company' => APP_COMPANY
@@ -154,7 +162,7 @@ class View extends Smarty
             'js' => $js,
             'item' => $item,
             'root' => BASE_URL,
-            'filever' => rand(),
+            'filever' => $this->assetFileVer(),
             'configs' => array(
                 'app_name' => APP_NAME,
                 'app_company' => APP_COMPANY
@@ -209,7 +217,7 @@ class View extends Smarty
             'js' => $js,
             'item' => $item,
             'root' => BASE_URL,
-            'filever' => rand(),
+            'filever' => $this->assetFileVer(),
             'host2' => $host2,
             'configs' => array(
                 'app_name' => APP_NAME,
@@ -266,7 +274,7 @@ class View extends Smarty
             'root' => BASE_URL,
             'host' => HOST,
             'host2' => $host2,
-            'filever' => rand(),
+            'filever' => $this->assetFileVer(),
             'anio' => date("Y"),
             'configs' => array(
                 'favicon' => FAVICON,
@@ -330,7 +338,7 @@ class View extends Smarty
             'root' => BASE_URL,
             'host' => HOST,
             'host2' => $host2,
-            'filever' => rand(),
+            'filever' => $this->assetFileVer(),
             'anio' => date("Y"),
             'configs' => array(
                 'favicon' => FAVICON,

@@ -1,7 +1,6 @@
 {block name="styles"}
 {include file="views/camilaydiego/components/fonts-critical.tpl"}
 <link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/camilaydiego/css/style.css?v={$_layoutParams.filever}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
 
 {include file="views/camilaydiego/components/loader.tpl"}

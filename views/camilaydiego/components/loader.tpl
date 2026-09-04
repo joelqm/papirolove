@@ -9,44 +9,71 @@
          decoding="async"
          fetchpriority="high">
   </div>
-  <button class="loader-button">IR A LA PÁGINA</button>
-
-
-
-  <!-- <div class="sponsors" style="margin-top: 2rem;">
-    <img class="sponsor-logo" src="{$_layoutParams.root}/src/celebremos-logo.webp" alt="celebremos peru">
-    <img class="sponsor-logo" src="{$_layoutParams.root}/src/papiro-logo.webp" alt="papiro peru" style="margin-left: 15px;">
-  </div> -->
-
+  <button type="button" class="loader-button">IR A LA PÁGINA</button>
 
 </div>
 
 {literal}
 <script>
+(function () {
+  var KEY = 'camilaLoaderSeen';
+  var done = false;
 
-  $(document).ready(function () {
-    $(".loader-button").click(function (e) {
-      $('#loader').fadeOut(300, function () {
-        $('#contenido').fadeIn(300);
-      });
+  function finish() {
+    if (done) return;
+    done = true;
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+
+    var loader = document.getElementById('loader');
+    var content = document.getElementById('contenido');
+    if (!loader) return;
+
+    loader.style.transition = 'opacity .25s ease';
+    loader.style.opacity = '0';
+    setTimeout(function () {
+      loader.style.display = 'none';
+      if (content) {
+        content.style.display = 'block';
+        content.style.opacity = '0';
+        content.style.transition = 'opacity .25s ease';
+        requestAnimationFrame(function () {
+          content.style.opacity = '1';
+        });
+      }
+    }, 250);
+  }
+
+  var btn = document.querySelector('.loader-button');
+  if (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      finish();
     });
-  });
+  }
 
-  setTimeout(() => {
-    const $logo = $('.loader-logo');
-    const finish = () => {
-      $('#loader').fadeOut(300, function () {
-        $('#contenido').fadeIn(300);
-      });
-    };
-
-    if (!$logo.length || $logo[0].complete) {
+  // Visitas siguientes en la misma sesión: entrar al instante
+  try {
+    if (sessionStorage.getItem(KEY)) {
       finish();
       return;
     }
+  } catch (e) {}
 
-    $logo.one('load error', finish);
-  }, 1500);
+  var logo = document.querySelector('.loader-logo');
+  var maxWait = setTimeout(finish, 800);
 
+  function onLogoReady() {
+    clearTimeout(maxWait);
+    // Breve presencia de marca en la primera visita
+    setTimeout(finish, 350);
+  }
+
+  if (!logo || logo.complete) {
+    onLogoReady();
+  } else {
+    logo.addEventListener('load', onLogoReady, { once: true });
+    logo.addEventListener('error', onLogoReady, { once: true });
+  }
+})();
 </script>
 {/literal}

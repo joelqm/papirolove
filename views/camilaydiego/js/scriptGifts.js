@@ -396,8 +396,15 @@ $(document).ready(function () {
       });
   });
 
-  // Precarga en segundo plano para abrir el modal más rápido
-  prefetchGifts();
+  // Precarga en idle para no competir con el primer paint
+  var schedulePrefetch = function () {
+    prefetchGifts();
+  };
+  if (window.requestIdleCallback) {
+    requestIdleCallback(schedulePrefetch, { timeout: 2500 });
+  } else {
+    setTimeout(schedulePrefetch, 1200);
+  }
 
 });
 
