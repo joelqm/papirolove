@@ -24,13 +24,18 @@
 {include file="views/camilaydiego/components/attendance.tpl"}
 
 <section class="closing-photo" aria-label="Foto final">
-    <img src="{$_layoutParams.root}views/camilaydiego/imgs/background_3.webp"
-         alt="Camila y Diego"
-         class="closing-photo-img"
-         width="1280"
-         height="720"
-         loading="lazy"
-         decoding="async">
+    <picture>
+        <source media="(max-width: 768px)"
+                srcset="{$_layoutParams.root}views/camilaydiego/imgs/background_3_background_mobil.webp"
+                type="image/webp">
+        <img src="{$_layoutParams.root}views/camilaydiego/imgs/background_3.webp"
+             alt="Camila y Diego"
+             class="closing-photo-img"
+             width="1280"
+             height="720"
+             loading="lazy"
+             decoding="async">
+    </picture>
 </section>
 
 {include file="views/camilaydiego/components/button-whatsapp.tpl"}

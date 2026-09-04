@@ -165,6 +165,24 @@ body {
     #dresscode .dc-title,
     #attendance .attendance-title {
         font-size: var(--section-title-size-mobile);
+        font-variant-ligatures: none;
+        font-feature-settings: "liga" 0, "clig" 0;
+        paint-order: stroke fill;
+    }
+
+    #dresscode .dc-title,
+    #attendance .attendance-title,
+    #new-history .history-title-big {
+        -webkit-text-stroke: 0.85px #908C70;
+    }
+
+    #gifts .gifts-title {
+        -webkit-text-stroke: 0.9px #fff;
+    }
+
+    .galery .galery-title,
+    .history-title-small-2.galery-title {
+        -webkit-text-stroke: 0.85px #908C70;
     }
 }
 
@@ -2881,9 +2899,10 @@ footer {
     .closing-photo-img {
         width: 100%;
         height: auto;
-        min-height: 220px;
+        min-height: 60vh;
+        max-height: 85vh;
         object-fit: cover;
-        object-position: left center;
+        object-position: center center;
     }
 
     /* Override layout template footer padding so it clears floating buttons */

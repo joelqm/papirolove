@@ -1,7 +1,7 @@
 <section class="attendance-section" id="attendance">
 
     <div class="attendance-inner" data-aos="fade-up">
-        <h2 class="attendance-title">Confirma tu asistencia</h2>
+        <h2 class="attendance-title">Con&#8203;firma tu asistencia</h2>
 
         <p class="attendance-text">
             Agradeceremos confirmar<br>
@@ -42,6 +42,8 @@
         color: #908C70;
         margin: 0 0 1.25rem;
         line-height: 1.05;
+        font-variant-ligatures: none;
+        font-feature-settings: "liga" 0, "clig" 0;
     }
 
     #attendance .attendance-text {
@@ -93,17 +95,22 @@
 
         #attendance .attendance-title {
             margin-bottom: 1rem;
+            -webkit-text-stroke: 0.85px #908C70;
+            paint-order: stroke fill;
+            font-variant-ligatures: none;
+            font-feature-settings: "liga" 0, "clig" 0;
         }
 
         #attendance .attendance-text {
             font-size: 0.88rem;
             margin-bottom: 1.15rem;
+            -webkit-text-stroke: 0.4px #908C70;
         }
     }
 
     @media (max-width: 480px) {
         #attendance .attendance-text {
-            font-size: 0.82rem;
+            font-size: 0.84rem;
         }
     }
 </style>

@@ -18,16 +18,16 @@
                 <button type="button" class="gifts-btn js-gifts-transfer">Regala Aqu&iacute;</button>
             </div>
 
-            <div class="gifts-bank" id="gifts-bank">
+            <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
                 <p class="gifts-bank-line">Cuenta en Soles</p>
                 <p class="gifts-bank-line">BCP</p>
-                <p class="gifts-bank-line">215-18952469-0-03</p>
-                <p class="gifts-bank-line gifts-bank-line--cci">CCI: 00221511895246900329</p>
+                <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
+                <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
 
                 <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
                 <p class="gifts-bank-line">BCP</p>
-                <p class="gifts-bank-line">215-08471486-1-52</p>
-                <p class="gifts-bank-line gifts-bank-line--cci">CCI: 00221510847148615226</p>
+                <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
+                <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
             </div>
         </div>
 
@@ -185,6 +185,22 @@
         line-height: 1.4;
         -webkit-text-stroke: 0.35px #fff;
         paint-order: stroke fill;
+    }
+
+    /* Evitar que iOS/Safari pinte números como links azules */
+    #gifts .gifts-bank-line a,
+    #gifts .gifts-bank-num,
+    #gifts .gifts-bank-line a:link,
+    #gifts .gifts-bank-line a:visited,
+    #gifts .gifts-bank-line a:hover,
+    #gifts .gifts-bank-line a:active,
+    #gifts .gifts-bank a[x-apple-data-detectors] {
+        color: #fff !important;
+        -webkit-text-fill-color: #fff !important;
+        text-decoration: none !important;
+        border-bottom: none !important;
+        pointer-events: none;
+        cursor: text;
     }
 
     #gifts .gifts-bank-line--cci {
@@ -503,13 +519,22 @@
             padding: 3.25rem 1rem 4rem;
         }
 
+        #gifts .gifts-title {
+            -webkit-text-stroke: 0.9px #fff;
+            paint-order: stroke fill;
+            font-variant-ligatures: none;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+        }
+
         #gifts .gifts-intro {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             margin-bottom: 1.75rem;
+            -webkit-text-stroke: 0.4px #fff;
         }
 
         #gifts .gifts-heading {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
+            -webkit-text-stroke: 0.45px #fff;
         }
 
         #gifts .gifts-content {
@@ -624,9 +649,13 @@
 <script>
     $(document).ready(function () {
         $(".js-gifts-transfer").on("click", function () {
+            var $bank = $("#gifts-bank");
+            if (!$bank.length) {
+                return;
+            }
             $("html, body").animate({
-                scrollTop: $("#gifts-bank").offset().top - 120
-            }, 700);
+                scrollTop: $bank.offset().top - 120
+            }, 500);
         });
     });
 </script>

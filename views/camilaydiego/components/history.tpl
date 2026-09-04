@@ -85,8 +85,8 @@
     <img class="history-flowers-top"
          src="{$_layoutParams.root}views/camilaydiego/imgs/nuestra_historia_flores.webp"
          alt=""
-         width="1359"
-         height="484"
+         width="2200"
+         height="824"
          loading="lazy"
          decoding="async"
          data-aos="fade-up">

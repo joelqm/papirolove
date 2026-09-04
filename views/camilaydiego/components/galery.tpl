@@ -4,8 +4,8 @@
             <div class="item">
                 <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-1.webp"
                      alt="Camila y Diego"
-                     width="540"
-                     height="723"
+                     width="870"
+                     height="1200"
                      loading="lazy"
                      decoding="async">
             </div>
@@ -20,8 +20,8 @@
             <div class="item">
                 <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-3.webp"
                      alt="Camila y Diego"
-                     width="540"
-                     height="723"
+                     width="933"
+                     height="1400"
                      loading="lazy"
                      decoding="async">
             </div>

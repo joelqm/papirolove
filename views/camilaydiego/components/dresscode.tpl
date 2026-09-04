@@ -110,9 +110,16 @@
             padding: 1.25rem 1rem 1.75rem;
         }
 
+        #dresscode .dc-title {
+            -webkit-text-stroke: 0.85px #908C70;
+            paint-order: stroke fill;
+            font-variant-ligatures: none;
+        }
+
         #dresscode .dc-subtitle {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             margin: 0.15rem 0 0.35rem;
+            -webkit-text-stroke: 0.4px #908C70;
         }
 
         #dresscode .dc-illustration {
@@ -121,14 +128,15 @@
         }
 
         #dresscode .dc-rule {
-            font-size: 0.98rem;
+            font-size: 0.9rem;
+            -webkit-text-stroke: 0.4px #908C70;
         }
     }
 
     @media (max-width: 480px) {
         #dresscode .dc-subtitle,
         #dresscode .dc-rule {
-            font-size: 0.9rem;
+            font-size: 0.86rem;
         }
     }
 </style>

@@ -314,38 +314,70 @@
       z-index: 0;
     }
 
+    #info .details-intro p.details-blessing {
+      font-size: 0.92rem;
+      letter-spacing: 1.8px;
+      -webkit-text-stroke: 0.45px #908C70;
+    }
+
     #info .details-parents {
-      gap: 0.85rem;
+      gap: 0.7rem;
+    }
+
+    #info .details-parents-col p {
+      font-size: 0.86rem;
+      letter-spacing: 1px;
+      line-height: 1.35;
+      -webkit-text-stroke: 0.4px #908C70;
     }
 
     #info .location-card {
       padding: 0 0.25rem;
     }
+
+    #info .location-type {
+      font-size: 1.55rem;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 0.45px #908C70;
+    }
+
+    #info .location-venue {
+      font-size: 2rem;
+      -webkit-text-stroke: 0.7px #908C70;
+      paint-order: stroke fill;
+      font-variant-ligatures: none;
+    }
+
+    #info .location-address:not(.location-venue),
+    #info .location-time {
+      font-size: 0.86rem;
+      -webkit-text-stroke: 0.4px #908C70;
+    }
   }
 
   @media (max-width: 480px) {
     #info .details-intro p.details-blessing {
-      font-size: 1.02rem;
+      font-size: 0.88rem;
     }
 
     #info .details-parents-col p {
-      font-size: 0.98rem;
-    }
-
-    #info .location-address:not(.location-venue) {
       font-size: 0.82rem;
     }
 
+    #info .location-address:not(.location-venue) {
+      font-size: 0.8rem;
+    }
+
     #info .location-type {
-      font-size: 1.75rem;
+      font-size: 1.4rem;
     }
 
     #info .location-venue {
-      font-size: 2.1rem;
+      font-size: 1.85rem;
     }
 
     #info .location-time {
-      font-size: 0.98rem;
+      font-size: 0.86rem;
     }
   }
 </style>
