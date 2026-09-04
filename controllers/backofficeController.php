@@ -241,6 +241,8 @@ class backofficeController extends Controller
             } else {
                 $izipayEstado = 'ok';
             }
+            $izipay['pas_tail'] = $pas !== '' ? substr($pas, -8) : '';
+            $izipay['sha_tail'] = $sha !== '' ? substr($sha, -8) : '';
         }
 
         $this->_view->assign('titulo', ($tab === 'izipay' ? 'Izipay' : 'Obsequios') . ' | ' . $pareja['nombre']);
@@ -327,12 +329,10 @@ class backofficeController extends Controller
 
         try {
             $this->_bo->asegurarEmpresaSedePareja($parejaId, $pareja['nombre']);
-            $ok = $this->_bo->actualizarIzipay($parejaId, $username, $defpas, $defpk, $defsha);
+            $this->_bo->actualizarIzipay($parejaId, $username, $defpas, $defpk, $defsha);
             Session::set(
                 'bo_flash_ok',
-                $ok
-                    ? 'Credenciales Izipay guardadas solo para «' . $pareja['nombre'] . '» (ID ' . $parejaId . ').'
-                    : 'No se pudo guardar Izipay.'
+                'Credenciales Izipay guardadas y verificadas con la API para «' . $pareja['nombre'] . '» (ID ' . $parejaId . ').'
             );
         } catch (Exception $e) {
             Session::set('bo_flash_error', $e->getMessage());

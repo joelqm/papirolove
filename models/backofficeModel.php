@@ -390,7 +390,7 @@ class backofficeModel extends Model
 
     /**
      * Actualiza Izipay SOLO de la empresa ligada a sede_id = parejaId.
-     * Campos vacíos en password/sha conservan el valor actual.
+     * Exige las 4 claves en cada guardado (evita conservar una contraseña vieja incorrecta).
      */
     public function actualizarIzipay($parejaId, $username, $defpas, $defpk, $defsha)
     {
@@ -401,51 +401,46 @@ class backofficeModel extends Model
         }
 
         $empId = (int) $cred['emp_id'];
-        $username = trim((string) $username);
-        $defpk = trim((string) $defpk);
-        $defpas = trim((string) $defpas);
-        $defsha = trim((string) $defsha);
+        $username = preg_replace('/\s+/', '', trim((string) $username));
+        $defpk = preg_replace('/\s+/', '', trim((string) $defpk));
+        $defpas = preg_replace('/\s+/', '', trim((string) $defpas));
+        $defsha = preg_replace('/\s+/', '', trim((string) $defsha));
 
-        if ($username === '' || $defpk === '') {
-            throw new Exception('Usuario (shop ID) y clave pública son obligatorios.');
+        if ($username === '' || $defpas === '' || $defpk === '' || $defsha === '') {
+            throw new Exception('Debes pegar las 4 claves (usuario, contraseña, pública y HMAC). No dejes la contraseña ni el HMAC vacíos: si quedan vacíos se conserva una clave vieja y Izipay responde INT_905.');
         }
 
         if (!preg_match('/^\d+$/', $username)) {
-            throw new Exception('El usuario / Shop ID debe ser solo el número de tienda (ej. 14855194).');
+            throw new Exception('El usuario debe ser solo el número de tienda (ej. 14855194).');
         }
 
-        // Evitar pegar la clave privada en el campo de pública
-        if (preg_match('/password_/i', $defpk) || stripos($defpk, 'prodpassword_') === 0 || stripos($defpk, 'testpassword_') === 0) {
-            throw new Exception('En «Clave pública» pegaste una clave privada (prodpassword_/testpassword_). La pública debe verse así: ' . $username . ':publickey_… o ' . $username . ':prodpublickey_…');
+        if (preg_match('/password_/i', $defpk)) {
+            throw new Exception('En el campo 3 (clave pública) pegaste una contraseña (prodpassword_). Ese valor va en el campo 2.');
         }
 
         if (strpos($defpk, ':') === false || !preg_match('/publickey_/i', $defpk)) {
-            throw new Exception('La clave pública es inválida. Debe incluir el Shop ID y publickey_, por ejemplo: ' . $username . ':publickey_xxxxx');
+            throw new Exception('La clave pública es inválida. Debe verse así: ' . $username . ':publickey_…');
         }
 
         if (strpos($defpk, $username . ':') !== 0) {
-            throw new Exception('La clave pública debe empezar con tu Shop ID: «' . $username . ':…».');
+            throw new Exception('La clave pública debe empezar con «' . $username . ':».');
         }
 
-        if ($defpas === '') {
-            $defpas = $cred['defpas'];
-        }
-        if ($defsha === '') {
-            $defsha = $cred['defsha'];
-        }
-        if ($defpas === '' || $defsha === '') {
-            throw new Exception('Clave privada y HMAC-SHA-256 son obligatorias (primera configuración).');
-        }
-
-        if (!preg_match('/password_/i', $defpas)) {
-            throw new Exception('La clave privada (API REST) parece incorrecta. Debe verse como prodpassword_… o testpassword_…');
+        if (!preg_match('/^(prod|test)password_/i', $defpas)) {
+            throw new Exception('La contraseña API REST es inválida. Debe empezar con prodpassword_ o testpassword_.');
         }
 
         if (preg_match('/publickey_/i', $defpas)) {
-            throw new Exception('En «Clave privada» pegaste la clave pública. Intercámbialas: privada = prodpassword_…, pública = ' . $username . ':publickey_…');
+            throw new Exception('En el campo 2 (contraseña) pegaste la clave pública. Intercambia campos 2 y 3.');
         }
 
-        // Doble candado: sede de esta boda + emp_id exacto de esa sede
+        if (strlen($defsha) < 20) {
+            throw new Exception('La clave HMAC-SHA-256 parece incompleta.');
+        }
+
+        // Verificar ANTES de guardar: si falla, no se escribe nada incorrecto
+        $this->verificarCredencialesIzipay($username, $defpas, $defpk, $defsha);
+
         $sql = "UPDATE tbl_empresa e
                 INNER JOIN tbl_sede s ON s.sede_emp_id = e.emp_id
                 SET
@@ -463,6 +458,39 @@ class backofficeModel extends Model
         $stmt->bindValue(':parejaId', $parejaId, PDO::PARAM_INT);
         $stmt->bindValue(':empId', $empId, PDO::PARAM_INT);
         $ok = $stmt->execute();
-        return $ok && $stmt->rowCount() >= 0;
+        if (!$ok) {
+            throw new Exception('No se pudo guardar en la base de datos.');
+        }
+
+        return true;
+    }
+
+    /**
+     * Prueba username+password con la API (falla = INT_905 u otro error de auth).
+     */
+    public function verificarCredencialesIzipay($username, $defpas, $defpk, $defsha)
+    {
+        require_once ROOT . 'libs' . DS . 'rest-php-sdk-master' . DS . 'src' . DS . 'autoload.php';
+
+        \Lyra\Client::setDefaultUsername($username);
+        \Lyra\Client::setDefaultPassword($defpas);
+        \Lyra\Client::setDefaultEndpoint('https://api.micuentaweb.pe');
+        \Lyra\Client::setDefaultPublicKey($defpk);
+        \Lyra\Client::setDefaultSHA256Key($defsha);
+
+        $client = new \Lyra\Client();
+        $response = $client->post('V4/Charge/SDKTest', array('value' => 'OK'));
+
+        if (!is_array($response) || !isset($response['status']) || $response['status'] !== 'SUCCESS') {
+            $answer = isset($response['answer']) ? $response['answer'] : array();
+            $code = isset($answer['errorCode']) ? $answer['errorCode'] : '';
+            $msg = isset($answer['errorMessage']) ? $answer['errorMessage'] : 'sin detalle';
+            if ($code === 'INT_905') {
+                throw new Exception('Izipay rechazó usuario/contraseña (INT_905). Revisa el campo 1 (Usuario) y el 2 (Contraseña prodpassword_). No se guardó nada: corrige y vuelve a pegar las 4 claves.');
+            }
+            throw new Exception('Izipay no validó las claves (' . $code . ': ' . $msg . '). No se guardó nada.');
+        }
+
+        return true;
     }
 }

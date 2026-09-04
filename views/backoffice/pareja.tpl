@@ -162,7 +162,8 @@
                 {if $izipay}Empresa #{$izipay.emp_id|escape:'html'}.{else}Aún sin espacio Izipay.{/if}
             </p>
             <p class="hint">
-                Orden igual que en Izipay → Configuración → Tiendas → <strong>Claves de API REST</strong> (usa las de <strong>producción</strong>).
+                Orden igual que en Izipay → Configuración → Tiendas → <strong>Claves de API REST</strong> (producción).
+                <strong>Obligatorio pegar las 4 cada vez</strong> (si dejas vacía la contraseña o el HMAC, se queda la vieja y falla el pago con INT_905).
             </p>
             <form method="post" action="{$_layoutParams.root}backoffice/actualizarIzipay" autocomplete="off">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
@@ -172,27 +173,33 @@
                         <label for="izipay_username">1. Usuario</label>
                         <input class="wide" id="izipay_username" type="text" name="izipay_username" maxlength="80"
                                value="{if $izipay}{$izipay.username|escape:'html'}{/if}" required
-                               placeholder="Ej. 14855194" autocomplete="off">
+                               placeholder="14855194" autocomplete="off">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defpas">2. Contraseña de producción (API REST)</label>
-                        <input class="wide" id="izipay_defpas" type="password" name="izipay_defpas" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}prodpassword_…{/if}"
-                               autocomplete="new-password">
+                        <label for="izipay_defpas">2. Contraseña de producción (API REST) *</label>
+                        <input class="wide" id="izipay_defpas" type="text" name="izipay_defpas" maxlength="255"
+                               value="" required
+                               placeholder="prodpassword_… (pegar completa otra vez)" autocomplete="off">
+                        {if $izipay && $izipay.pas_tail}
+                        <span class="hint" style="margin:0.25rem 0 0;">En BD termina en …{$izipay.pas_tail|escape:'html'} — pégala completa otra vez</span>
+                        {/if}
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defpk">3. Clave pública de producción</label>
+                        <label for="izipay_defpk">3. Clave pública de producción *</label>
                         <input class="wide" id="izipay_defpk" type="text" name="izipay_defpk" maxlength="255"
                                value="{if $izipay}{$izipay.defpk|escape:'html'}{/if}" required
                                placeholder="14855194:publickey_…" autocomplete="off">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defsha">4. Clave HMAC-SHA-256 de producción</label>
-                        <input class="wide" id="izipay_defsha" type="password" name="izipay_defsha" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave HMAC de producción{/if}"
-                               autocomplete="new-password">
+                        <label for="izipay_defsha">4. Clave HMAC-SHA-256 de producción *</label>
+                        <input class="wide" id="izipay_defsha" type="text" name="izipay_defsha" maxlength="255"
+                               value="" required
+                               placeholder="HMAC de producción (pegar completa otra vez)" autocomplete="off">
+                        {if $izipay && $izipay.sha_tail}
+                        <span class="hint" style="margin:0.25rem 0 0;">En BD termina en …{$izipay.sha_tail|escape:'html'} — pégala completa otra vez</span>
+                        {/if}
                     </div>
-                    <div><button type="submit">Guardar Izipay</button></div>
+                    <div><button type="submit">Guardar y verificar con Izipay</button></div>
                 </div>
                 {if $izipay_estado == 'ok'}
                     <p class="hint" style="margin-top:.75rem;color:var(--ok);">Formato de claves parece correcto para esta boda.</p>
