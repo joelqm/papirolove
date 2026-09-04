@@ -56,17 +56,18 @@
             </button>
         </header>
 
-        <div class="gifts-modal__layout content-products gifts-modal__products">
-            <aside class="sidebar gifts-modal__sidebar">
-                <button class="category-button primary" data-id="0">TODAS LAS CATEGOR&Iacute;AS</button>
-                <button class="category-button" data-id="1">LUNA DE MIEL</button>
-                <button class="category-button" data-id="2">MOBILIARIO &amp; DECORACION</button>
-                <button class="category-button" data-id="4">TECNOLOGIA</button>
-                <button class="category-button" data-id="5">REGALO LIBRE</button>
+        <div class="gifts-modal__layout gifts-modal__products">
+            <aside class="sidebar gifts-modal__sidebar" id="gifts-modal-categories">
+                <button type="button" class="category-button primary" data-id="0">TODAS LAS CATEGOR&Iacute;AS</button>
             </aside>
 
             <div class="gifts-modal__catalog">
-                <main class="products gifts-modal__products-grid"></main>
+                <div class="gifts-modal__loader" id="gifts-modal-loader" hidden aria-live="polite">
+                    <div class="gifts-modal__spinner" aria-hidden="true"></div>
+                    <p>Cargando obsequios&hellip;</p>
+                </div>
+                <main class="products gifts-modal__products-grid" id="gifts-modal-products"></main>
+                <p class="gifts-modal__empty" id="gifts-modal-empty" hidden>No hay obsequios en esta categor&iacute;a.</p>
             </div>
 
             <aside class="gifts-modal__cart" id="gifts-modal-cart" aria-label="Tus obsequios">
@@ -336,36 +337,99 @@
     .gifts-modal__layout {
         flex: 1;
         min-height: 0;
-        display: grid;
+        display: grid !important;
         grid-template-columns: 210px minmax(0, 1fr) 280px;
         gap: 1rem;
-        padding: 0;
+        padding: 0.75rem 0 0 !important;
         background: transparent;
         overflow: hidden;
+        align-items: stretch;
     }
 
     .gifts-modal__sidebar {
-        width: auto;
+        width: auto !important;
         min-height: 0;
+        max-height: 100%;
         overflow-y: auto;
+        overflow-x: hidden;
         padding-right: 0.15rem;
+        -webkit-overflow-scrolling: touch;
     }
 
     .gifts-modal__catalog {
+        position: relative;
         min-height: 0;
+        max-height: 100%;
+        height: 100%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
     }
 
     .gifts-modal__products-grid.products {
-        flex: 1;
+        flex: 1 1 auto;
         min-height: 0;
-        overflow-y: auto;
+        max-height: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
         align-content: start;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 0.85rem;
-        padding-right: 0.25rem;
+        padding: 0 0.35rem 0.5rem 0;
+        scrollbar-gutter: stable;
+    }
+
+    .gifts-modal__loader {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background: rgba(255, 255, 255, 0.92);
+        color: #908C70;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+    }
+
+    .gifts-modal__loader[hidden] {
+        display: none !important;
+    }
+
+    .gifts-modal__spinner {
+        width: 42px;
+        height: 42px;
+        border: 3px solid #e5dfd7;
+        border-top-color: #CFB89D;
+        border-radius: 50%;
+        animation: gifts-spin 0.75s linear infinite;
+    }
+
+    @keyframes gifts-spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .gifts-modal__empty {
+        margin: 2rem auto;
+        text-align: center;
+        color: #999;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+    }
+
+    .gifts-modal__empty[hidden] {
+        display: none !important;
+    }
+
+    .gifts-modal__catalog.is-loading .gifts-modal__products-grid,
+    .gifts-modal__catalog.is-loading .gifts-modal__empty {
+        visibility: hidden;
     }
 
     .gifts-modal__products-grid .product-image {
@@ -592,6 +656,15 @@
         .gifts-modal__catalog {
             flex: 1;
             min-height: 0;
+            max-height: none;
+            overflow: hidden;
+        }
+
+        .gifts-modal__products-grid.products {
+            flex: 1;
+            min-height: 0;
+            max-height: 100%;
+            overflow-y: auto !important;
         }
 
         .gifts-modal__cart {

@@ -255,10 +255,10 @@ $(document).ready(function () {
 
 
   $(document).on("click", ".gifts-modal .category-button", function () {
-    const categoryId = $(this).data("id");
-    getGifts(categoryId);
+    const categoryId = Number($(this).data("id")) || 0;
     $(".gifts-modal .category-button").removeClass("primary");
     $(this).addClass("primary");
+    filterGifts(categoryId);
   });
 
   function openGiftsModal() {
@@ -267,9 +267,7 @@ $(document).ready(function () {
     $("body").removeClass("gifts-modal-cart-open");
     $modal.prop("hidden", false).attr("aria-hidden", "false");
     $("body").addClass("gifts-modal-open");
-    getGifts(0);
-    $(".gifts-modal .category-button").removeClass("primary");
-    $('.gifts-modal .category-button[data-id="0"]').addClass("primary");
+    getGifts(0, true);
     rederCart();
   }
 
@@ -387,118 +385,233 @@ $(document).ready(function () {
     });
   });
 
+  // Precarga en segundo plano para abrir el modal más rápido
+  prefetchGifts();
+
 });
 
-const getGifts = async (categoryId = 0) => {
-  try {
-    const coupleId = 12; // Camila y Diego
+const COUPLE_ID = 12; // Camila y Diego
+let giftsCache = null;
+let giftsCachePromise = null;
+let activeCategoryId = 0;
 
-    const payload = {
-      parejaId: coupleId,
-      categoriaId: categoryId,
-    };
-    const response = await $.ajax({
-      type: "POST",
-      url: `${$("#root").val()}obsequio/obtenerObsequiosPareja`,
-      data: payload,
-      dataType: "json",
+const setGiftsLoading = (loading) => {
+  const $catalog = $(".gifts-modal__catalog");
+  const $loader = $("#gifts-modal-loader");
+  $catalog.toggleClass("is-loading", !!loading);
+  $loader.prop("hidden", !loading);
+};
+
+const escapeHtml = (value) => {
+  return String(value == null ? "" : value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+};
+
+const categoryLabel = (nombre) => {
+  return String(nombre || "")
+    .trim()
+    .toUpperCase()
+    .replace(/\s+/g, " ");
+};
+
+const fetchGiftsOnce = () => {
+  if (Array.isArray(giftsCache)) {
+    return Promise.resolve(giftsCache);
+  }
+  if (giftsCachePromise) {
+    return giftsCachePromise;
+  }
+
+  giftsCachePromise = $.ajax({
+    type: "POST",
+    url: `${$("#root").val()}obsequio/obtenerObsequiosPareja`,
+    data: {
+      parejaId: COUPLE_ID,
+      categoriaId: 0,
+    },
+    dataType: "json",
+  })
+    .then(function (response) {
+      giftsCache = Array.isArray(response) ? response : [];
+      return giftsCache;
+    })
+    .always(function () {
+      giftsCachePromise = null;
     });
 
-    if (categoryId != 5) {
-      renderGifts(response);
-      //return
-    } else {
-      renderFree(response)
+  return giftsCachePromise;
+};
+
+const prefetchGifts = () => {
+  fetchGiftsOnce().catch(function () {
+    /* silencioso en precarga */
+  });
+};
+
+const buildCategoryButtons = (items) => {
+  const $sidebar = $("#gifts-modal-categories");
+  if (!$sidebar.length) {
+    return;
+  }
+
+  const cats = new Map();
+  (items || []).forEach(function (item) {
+    const id = Number(item.categoria_id);
+    if (!id || cats.has(id)) {
+      return;
     }
+    cats.set(id, categoryLabel(item.nombreCategoria));
+  });
 
+  let html = '<button type="button" class="category-button primary" data-id="0">TODAS LAS CATEGOR&Iacute;AS</button>';
+  Array.from(cats.entries())
+    .sort(function (a, b) {
+      return a[0] - b[0];
+    })
+    .forEach(function (entry) {
+      html +=
+        '<button type="button" class="category-button" data-id="' +
+        entry[0] +
+        '">' +
+        escapeHtml(entry[1]) +
+        "</button>";
+    });
 
+  $sidebar.html(html);
+};
+
+const filterGifts = (categoryId) => {
+  activeCategoryId = Number(categoryId) || 0;
+  const items = Array.isArray(giftsCache) ? giftsCache : [];
+  const filtered =
+    activeCategoryId === 0
+      ? items
+      : items.filter(function (item) {
+          return Number(item.categoria_id) === activeCategoryId;
+        });
+
+  if (activeCategoryId === 5) {
+    renderFree(filtered);
+  } else {
+    renderGifts(filtered);
+  }
+};
+
+const getGifts = async (categoryId = 0, rebuildCategories = false) => {
+  activeCategoryId = Number(categoryId) || 0;
+  setGiftsLoading(true);
+  $("#gifts-modal-empty").prop("hidden", true);
+
+  try {
+    const items = await fetchGiftsOnce();
+    if (rebuildCategories) {
+      buildCategoryButtons(items);
+      $(".gifts-modal .category-button").removeClass("primary");
+      $('.gifts-modal .category-button[data-id="0"]').addClass("primary");
+      activeCategoryId = 0;
+    }
+    filterGifts(activeCategoryId);
   } catch (error) {
     console.error(error);
+    $("#gifts-modal .products").html("");
+    $("#gifts-modal-empty").text("No se pudieron cargar los obsequios. Intenta de nuevo.").prop("hidden", false);
+  } finally {
+    setGiftsLoading(false);
   }
 };
 
 const renderGifts = (items) => {
   const productGrid = $("#gifts-modal .products");
+  const $empty = $("#gifts-modal-empty");
   productGrid.html("");
   let grid = "";
+  let shown = 0;
 
-
-  items.forEach((item) => {
-
-    if (item.id != 100) {
-
-      const progress = (item.progreso / item.cupos) * 100;
-
-      //console.log(item.categoria_id)
-
-      if (item.categoria_id == 5) {
-        // categoria 5 = free gift -> button-free-gift
-        grid += `
-        <div class="product-card" data-aos="fade-up">
-          <div class="product-image">
-            <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">${item.nombreObsequio}</h3>
-            <p style="color: transparent;">S/. <span class="product-price" style="color: transparent;">${item.montoObsequio}</span></p>
-            <div class="product-progress">
-              <div class="progress-bar" style="width: ${progress}%;"></div>
-            </div>
-            <button data-id="${item.id}" class="button-free-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
-          </div>
-        </div>`;
-      } else {
-        // otras categorias = compra normal -> button-gift
-        grid += `
-        <div class="product-card" data-aos="fade-up">
-          <div class="product-image">
-            <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">${item.nombreObsequio}</h3>
-            <p>S/. <span class="product-price">${item.montoObsequio}</span></p>
-            <div class="product-progress">
-              <div class="progress-bar" style="width: ${progress}%;"></div>
-            </div>
-            <button data-id="${item.id}" data-cupos="${item.cupos}" data-progeso="${item.progreso}" class="button-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
-          </div>
-        </div>`;
-      }
-
-
+  (items || []).forEach((item) => {
+    if (item.id == 100) {
+      return;
     }
 
+    shown += 1;
+    const progress = item.cupos > 0 ? (item.progreso / item.cupos) * 100 : 0;
+    const name = escapeHtml(item.nombreObsequio);
+    const img = escapeHtml(item.imagenObsequio);
+    const price = escapeHtml(item.montoObsequio);
 
+    if (Number(item.categoria_id) === 5) {
+      grid += `
+        <div class="product-card">
+          <div class="product-image">
+            <img src="${img}" alt="${name}" loading="lazy" decoding="async">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">${name}</h3>
+            <p style="color: transparent;">S/. <span class="product-price" style="color: transparent;">${price}</span></p>
+            <div class="product-progress">
+              <div class="progress-bar" style="width: ${progress}%;"></div>
+            </div>
+            <button type="button" data-id="${item.id}" class="button-free-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
+          </div>
+        </div>`;
+    } else {
+      grid += `
+        <div class="product-card">
+          <div class="product-image">
+            <img src="${img}" alt="${name}" loading="lazy" decoding="async">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">${name}</h3>
+            <p>S/. <span class="product-price">${price}</span></p>
+            <div class="product-progress">
+              <div class="progress-bar" style="width: ${progress}%;"></div>
+            </div>
+            <button type="button" data-id="${item.id}" data-cupos="${item.cupos}" data-progeso="${item.progreso}" class="button-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
+          </div>
+        </div>`;
+    }
   });
+
   productGrid.append(grid);
+  $empty.text("No hay obsequios en esta categoría.").prop("hidden", shown > 0);
 };
 
 const renderFree = (items) => {
   const productGrid = $("#gifts-modal .products");
+  const $empty = $("#gifts-modal-empty");
   productGrid.html("");
   let grid = "";
+  let shown = 0;
 
-  items.forEach((item) => {
-    const progress = item.progreso / item.cupos;
+  (items || []).forEach((item) => {
+    shown += 1;
+    const progress = item.cupos > 0 ? (item.progreso / item.cupos) * 100 : 0;
+    const name = escapeHtml(item.nombreObsequio);
+    const img = escapeHtml(item.imagenObsequio);
+    const price = escapeHtml(item.montoObsequio);
 
     grid += `
-     <div class="product-card" data-aos="fade-up">
+     <div class="product-card">
                  <div class="product-image">
-                     <img src="${item.imagenObsequio}" alt="${item.nombreObsequio}">
+                     <img src="${img}" alt="${name}" loading="lazy" decoding="async">
                  </div>
                  <div class="product-info">
-                     <h3 class="product-title">${item.nombreObsequio}</h3>
-                     <p style="color: transparent;">S/. <span class="product-price"  style="color: transparent;">${item.montoObsequio}</span> </p>    
+                     <h3 class="product-title">${name}</h3>
+                     <p style="color: transparent;">S/. <span class="product-price"  style="color: transparent;">${price}</span> </p>    
                       <div class="product-progress">
                      <div class="progress-bar" style="width: ${progress}%;"></div>
                  </div>
 
-                  <button data-id="${item.id}" class="button-free-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
+                  <button type="button" data-id="${item.id}" class="button-free-gift">OBSEQUIAR <i class="fa-solid fa-gift"></i></button>
 
                  </div>
              </div>`;
   });
   productGrid.append(grid);
+  $empty.text("No hay obsequios en esta categoría.").prop("hidden", shown > 0);
 };
 
 /** CART **/
