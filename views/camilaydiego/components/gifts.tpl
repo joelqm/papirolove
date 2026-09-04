@@ -232,6 +232,11 @@
         padding: 1rem;
     }
 
+    /* SweetAlert por encima del modal de obsequios */
+    .swal2-container {
+        z-index: 30000 !important;
+    }
+
     .gifts-modal[hidden] {
         display: none !important;
     }

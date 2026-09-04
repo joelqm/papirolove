@@ -187,17 +187,27 @@ $(document).ready(function () {
     const $btn = $(this);
     const id = Number($btn.data("id"));
     const cupos = Number($btn.data("cupos"));
-    const progreso = Number($btn.data("progeso")); // ojo, en tu HTML está como "data-progeso"
-
-    // 🔹 Calcular los cupos restantes
+    const progreso = Number($btn.data("progeso"));
     const restantes = cupos - progreso;
 
-
     const price = Number(
-      $btn.closest(".product-info").find(".product-price").text().trim()
+      String($btn.closest(".product-info").find(".product-price").text()).replace(/[^\d.]/g, "").trim()
     );
     const name = $btn.closest(".product-info").find(".product-title").text().trim();
     const img = $btn.closest(".product-card").find(".product-image img").attr("src");
+
+    if (!id || !name || !isFinite(price) || price < 0) {
+      Swal.fire({
+        toast: true,
+        position: "top-end",
+        icon: "error",
+        title: "No se pudo agregar este obsequio",
+        showConfirmButton: false,
+        timer: 1800,
+        timerProgressBar: true,
+      });
+      return;
+    }
 
     const item = {
       id: id,
@@ -207,29 +217,6 @@ $(document).ready(function () {
       quantity: 1,
     };
 
-    // 🔹 Obtener carrito como Map
-    // getCart();
-    // const existingItem = cart.get(id);
-    // const currentQty = existingItem ? existingItem.quantity : 0;
-
-    // // 🔸 Validar límite basado en cupos restantes
-    // if (currentQty >= restantes) {
-    //   Swal.fire({
-    //     toast: true,
-    //     position: "top-end",
-    //     icon: "warning",
-    //     title: `Solo quedan ${restantes} cupos disponibles.`,
-    //     showConfirmButton: false,
-    //     timer: 2000,
-    //     timerProgressBar: true,
-    //     background: "#ffc107",
-    //     color: "#000",
-    //     iconColor: "#000",
-    //   });
-    //   return; // 🚫 No agregar más
-    // }
-
-    // ✅ Si aún hay cupos disponibles
     addToCart(item);
 
     Swal.fire({
@@ -289,13 +276,18 @@ $(document).ready(function () {
   });
 
   $(document).on("keydown", function (event) {
-    if (event.key === "Escape" && !$("#gifts-modal").prop("hidden")) {
-      if ($("body").hasClass("gifts-modal-cart-open")) {
-        $("body").removeClass("gifts-modal-cart-open");
-        return;
-      }
-      closeGiftsModal();
+    if (event.key !== "Escape" || $("#gifts-modal").prop("hidden")) {
+      return;
     }
+    // No cerrar el modal si SweetAlert está pidiendo el monto
+    if (typeof Swal !== "undefined" && Swal.isVisible && Swal.isVisible()) {
+      return;
+    }
+    if ($("body").hasClass("gifts-modal-cart-open")) {
+      $("body").removeClass("gifts-modal-cart-open");
+      return;
+    }
+    closeGiftsModal();
   });
 
   $("#close-cart").click(function () {
@@ -307,82 +299,102 @@ $(document).ready(function () {
     showCart();
   });
 
-  $(document).on("click", ".button-free-gift", function () {
+  $(document).on("click", ".button-free-gift", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
 
+    const $btn = $(this);
+    if ($btn.data("asking")) {
+      return;
+    }
+    $btn.data("asking", true);
+    $btn.trigger("blur");
+    if (document.activeElement && document.activeElement.blur) {
+      document.activeElement.blur();
+    }
 
-    const id = $(this).data("id");
-    removeToCart(id)
-    const name = $(this)
-      .closest(".product-info")
-      .find(".product-title")
-      .text()
-      .trim();
+    const id = Number($btn.data("id"));
+    const name = $btn.closest(".product-info").find(".product-title").text().trim();
+    const img = $btn.closest(".product-card").find(".product-image img").attr("src");
 
-    const img = $(this)
-      .closest(".product-card")
-      .find(".product-image img")
-      .attr("src");
-
-    const item = {
-      id: id,
-      name: name,
-      img: img,
-      quantity: 1,
-    };
+    if (!id || !name) {
+      $btn.data("asking", false);
+      return;
+    }
 
     Swal.fire({
-      title: 'Ingresa el monto',
-      input: 'number', // Tipo de entrada para número
+      title: "Ingresa el monto",
+      input: "number",
       inputAttributes: {
-        min: 0, // Mínimo permitido
-        step: 0.01, // Paso de 0.01
+        min: "1",
+        step: "0.01",
+        inputmode: "decimal",
       },
+      inputValue: "",
       showCancelButton: true,
-      confirmButtonText: 'Aceptar',
-      cancelButtonText: 'Cancelar',
-      showLoaderOnConfirm: true,
+      confirmButtonText: "Aceptar",
+      cancelButtonText: "Cancelar",
+      allowOutsideClick: false,
+      allowEscapeKey: true,
+      heightAuto: false,
       customClass: {
-        popup: 'font-Forum', // Añadido para personalizar el popup
-        title: 'font-bellisia', // Añadido para personalizar el título
-        input: 'font-Forum', // Añadido para personalizar el campo de entrada
-        confirmButton: 'custom-button', // Añadido para personalizar el botón de confirmar
-        cancelButton: 'custom-cancel', // Añadido para personalizar el botón de cancelar
+        popup: "font-Forum",
+        title: "font-bellisia",
+        input: "font-Forum",
+        confirmButton: "custom-button",
+        cancelButton: "custom-cancel",
       },
-      background: '#f7f7f7', // Fondo del popup
-      color: '#333', // Color del texto
-      confirmButtonColor: '#c58888', // Color del botón de confirmación
-      cancelButtonColor: '#797979', // Color del botón de cancelar
-      preConfirm: (amount) => {
-        if (!amount || amount <= 0) {
-          Swal.showValidationMessage('Por favor ingresa un monto válido');
-        } else {
-          return amount; // Retorna el monto ingresado
+      background: "#f7f7f7",
+      color: "#333",
+      confirmButtonColor: "#c58888",
+      cancelButtonColor: "#797979",
+      preConfirm: function (amount) {
+        const value = Number(amount);
+        if (!isFinite(value) || value <= 0) {
+          Swal.showValidationMessage("Por favor ingresa un monto válido");
+          return false;
         }
-      }
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const amount = result.value;
+        return value;
+      },
+    })
+      .then(function (result) {
+        if (!result.isConfirmed) {
+          return;
+        }
+
+        const amount = Number(result.value);
+        const item = {
+          id: id,
+          name: name,
+          img: img,
+          quantity: 1,
+          price: amount,
+        };
+
+        removeToCart(id);
+        addToCart(item);
+        rederCart();
+
         Swal.fire({
-          title: `Monto ingresado: S/${amount}`,
-          icon: 'success',
-          customClass: {
-            popup: 'font-forum',
-            title: 'font-forum',
-            confirmButton: 'custom-button',
-          },
-          confirmButtonColor: '#c58888',
-          background: '#fff', // Fondo del popup
+          toast: true,
+          position: "top-end",
+          icon: "success",
+          title: "¡Añadido: S/ " + amount.toFixed(2) + "!",
+          showConfirmButton: false,
+          timer: 1600,
+          timerProgressBar: true,
+          background: "#28a745",
+          color: "#fff",
+          iconColor: "#fff",
         });
-        console.log('Monto ingresado:', amount); // Aquí puedes usar el monto como lo necesites
 
-        item.price = amount;
-        addToCart(item)
-
-
-      } else {
-        console.log('Operación cancelada');
-      }
-    });
+        if (!$("#gifts-modal").prop("hidden")) {
+          $("body").addClass("gifts-modal-cart-open");
+        }
+      })
+      .finally(function () {
+        $btn.data("asking", false);
+      });
   });
 
   // Precarga en segundo plano para abrir el modal más rápido
