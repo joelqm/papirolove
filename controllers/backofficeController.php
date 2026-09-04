@@ -205,7 +205,7 @@ class backofficeController extends Controller
         $this->redireccionar('backoffice/categorias');
     }
 
-    public function pareja($parejaId = 0)
+    public function pareja($parejaId = 0, $tab = 'regalos')
     {
         $this->requerirAuth();
         $parejaId = (int) $parejaId;
@@ -214,8 +214,24 @@ class backofficeController extends Controller
             $this->redireccionar('backoffice');
         }
 
-        $this->_view->assign('titulo', 'Regalos | ' . $pareja['nombre']);
+        $tab = strtolower(trim((string) $tab));
+        if ($tab !== 'izipay') {
+            $tab = 'regalos';
+        }
+
+        try {
+            $izipay = $this->_bo->asegurarEmpresaSedePareja($parejaId, $pareja['nombre']);
+        } catch (Exception $e) {
+            $izipay = false;
+            if (!Session::get('bo_flash_error')) {
+                Session::set('bo_flash_error', 'No se pudo preparar Izipay de esta boda: ' . $e->getMessage());
+            }
+        }
+
+        $this->_view->assign('titulo', ($tab === 'izipay' ? 'Izipay' : 'Obsequios') . ' | ' . $pareja['nombre']);
         $this->_view->assign('pareja', $pareja);
+        $this->_view->assign('tab', $tab);
+        $this->_view->assign('izipay', $izipay);
         $this->_view->assign('asignaciones', $this->_bo->listarAsignaciones($parejaId));
         $this->_view->assign('categorias', $this->_bo->listarCategorias(true));
         $this->_view->assign('catalogo', $this->_bo->listarCatalogo('', 0, 400));
@@ -260,8 +276,53 @@ class backofficeController extends Controller
             'slug' => $slug,
         ));
         $this->guardarParejas($parejas);
-        Session::set('bo_flash_ok', 'Boda agregada. Ya puedes asignarle regalos.');
-        $this->redireccionar('backoffice/pareja/' . $id);
+
+        try {
+            $this->_bo->asegurarEmpresaSedePareja($id, $nombre);
+        } catch (Exception $e) {
+            Session::set('bo_flash_error', 'Boda creada, pero falló el espacio Izipay: ' . $e->getMessage());
+            $this->redireccionar('backoffice/pareja/' . $id . '/izipay');
+        }
+
+        Session::set('bo_flash_ok', 'Boda agregada. Ya puedes asignarle regalos y configurar Izipay.');
+        $this->redireccionar('backoffice/pareja/' . $id . '/regalos');
+    }
+
+    public function actualizarIzipay()
+    {
+        $this->requerirAuth();
+        $this->soloPost();
+        if (!$this->validarCsrf()) {
+            Session::set('bo_flash_error', 'Token CSRF inválido.');
+            $this->redireccionar('backoffice');
+        }
+
+        $parejaId = $this->postInt('pareja_id');
+        $pareja = $this->obtenerPareja($parejaId);
+        if (!$pareja) {
+            Session::set('bo_flash_error', 'Boda no encontrada.');
+            $this->redireccionar('backoffice');
+        }
+
+        $username = trim((string) $this->getPostRaw('izipay_username'));
+        $defpk = trim((string) $this->getPostRaw('izipay_defpk'));
+        $defpas = trim((string) $this->getPostRaw('izipay_defpas'));
+        $defsha = trim((string) $this->getPostRaw('izipay_defsha'));
+
+        try {
+            $this->_bo->asegurarEmpresaSedePareja($parejaId, $pareja['nombre']);
+            $ok = $this->_bo->actualizarIzipay($parejaId, $username, $defpas, $defpk, $defsha);
+            Session::set(
+                'bo_flash_ok',
+                $ok
+                    ? 'Credenciales Izipay guardadas solo para «' . $pareja['nombre'] . '» (ID ' . $parejaId . ').'
+                    : 'No se pudo guardar Izipay.'
+            );
+        } catch (Exception $e) {
+            Session::set('bo_flash_error', $e->getMessage());
+        }
+
+        $this->redireccionar('backoffice/pareja/' . $parejaId . '/izipay');
     }
 
     public function crearObsequio()

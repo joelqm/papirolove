@@ -28,6 +28,12 @@ class coupleModel extends Model
 
 	public function keysEmp($idSed)
 	{
+		$idSed = (int) $idSed;
+		if ($idSed < 1) {
+			return false;
+		}
+
+		// Solo la empresa de esta sede/boda. Sin fallback a otras credenciales.
 		$sql = "SELECT
 					e.emp_username AS username,
 					e.emp_defpas AS defpas,
@@ -36,25 +42,36 @@ class coupleModel extends Model
 				FROM
 					tbl_empresa e
 				INNER JOIN tbl_sede s ON s.sede_emp_id = e.emp_id
-				WHERE s.sede_id = " . intval($idSed);
-
-		$rptaSql = $this->_db->query($sql);
-		$keys = $rptaSql->fetch();
-
-		if ($keys) {
-			return $keys;
-		}
-
-		$sqlEmpresa = "SELECT
-					emp_username AS username,
-					emp_defpas AS defpas,
-					emp_defpk AS defpk,
-					emp_defsha AS defsha
-				FROM tbl_empresa
-				ORDER BY emp_id ASC
+				WHERE s.sede_id = :sedeId
 				LIMIT 1";
 
-		return $this->_db->query($sqlEmpresa)->fetch();
+		$stmt = $this->_db->prepare($sql);
+		$stmt->bindValue(':sedeId', $idSed, PDO::PARAM_INT);
+		$stmt->execute();
+		return $stmt->fetch();
+	}
+
+	/**
+	 * Credenciales Izipay de la boda dueña del mensaje (m_empresa), nunca de otra.
+	 */
+	public function keysEmpPorCodigoMensaje($codigo)
+	{
+		$codigo = trim((string) $codigo);
+		if ($codigo === '') {
+			return false;
+		}
+
+		$stmt = $this->_db->prepare(
+			"SELECT m_empresa FROM tbl_mensaje WHERE m_codigo = :codigo ORDER BY m_id ASC LIMIT 1"
+		);
+		$stmt->bindValue(':codigo', $codigo, PDO::PARAM_STR);
+		$stmt->execute();
+		$row = $stmt->fetch();
+		if (!$row || $row['m_empresa'] === '' || $row['m_empresa'] === null) {
+			return false;
+		}
+
+		return $this->keysEmp((int) $row['m_empresa']);
 	}
 
 	public function guardarmensaje($ao, $nombre, $mensaje, $empresa)

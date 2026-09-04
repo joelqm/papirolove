@@ -40,6 +40,10 @@
         .inline { display:inline; }
         .actions { display:flex; gap:.4rem; flex-wrap:wrap; }
         .mono { font-family: ui-monospace, Consolas, monospace; font-size:.82rem; color:var(--muted); word-break:break-word; }
+        .tabs { display:flex; gap:.4rem; flex-wrap:wrap; margin:0 0 1.1rem; padding:.35rem; background:rgba(17,24,39,.85); border:1px solid var(--line); border-radius:999px; max-width:100%; }
+        .tabs a { border-radius:999px; padding:.5rem 1.05rem; color:var(--muted); border:1px solid transparent; background:transparent; text-decoration:none; font-size:.9rem; font-weight:600; }
+        .tabs a:hover { color:var(--text); border-color:var(--line); }
+        .tabs a.active { background:var(--accent); color:#1f2937; border-color:transparent; }
     </style>
     <link href="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.css" rel="stylesheet">
     <style>
@@ -144,13 +148,64 @@
         {if $flash_ok}<div class="flash ok">{$flash_ok|escape:'html'}</div>{/if}
         {if $flash_error}<div class="flash err">{$flash_error|escape:'html'}</div>{/if}
 
+        <nav class="tabs" aria-label="Secciones de la boda">
+            <a class="{if $tab == 'regalos'}active{/if}" href="{$_layoutParams.root}backoffice/pareja/{$pareja.id|escape:'html'}/regalos">Obsequios</a>
+            <a class="{if $tab == 'izipay'}active{/if}" href="{$_layoutParams.root}backoffice/pareja/{$pareja.id|escape:'html'}/izipay">Izipay</a>
+        </nav>
+
+        {if $tab == 'izipay'}
+        <div class="panel">
+            <h2>Credenciales Izipay (solo esta boda)</h2>
+            <p class="hint">
+                Cada boda tiene su propia empresa/sede (ID {$pareja.id|escape:'html'}).
+                Guardar aquí <strong>no modifica</strong> las claves de otras bodas.
+                {if $izipay}Empresa #{$izipay.emp_id|escape:'html'}.{else}Aún sin espacio Izipay.{/if}
+            </p>
+            <form method="post" action="{$_layoutParams.root}backoffice/actualizarIzipay" autocomplete="off">
+                <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
+                <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
+                <div class="row">
+                    <div class="field-grow">
+                        <label for="izipay_username">Usuario / Shop ID</label>
+                        <input class="wide" id="izipay_username" type="text" name="izipay_username" maxlength="80"
+                               value="{if $izipay}{$izipay.username|escape:'html'}{/if}" required
+                               placeholder="Ej. 12345678" autocomplete="off">
+                    </div>
+                    <div class="field-grow">
+                        <label for="izipay_defpk">Clave pública</label>
+                        <input class="wide" id="izipay_defpk" type="text" name="izipay_defpk" maxlength="255"
+                               value="{if $izipay}{$izipay.defpk|escape:'html'}{/if}" required
+                               placeholder="shopId:publickey_…" autocomplete="off">
+                    </div>
+                    <div class="field-grow">
+                        <label for="izipay_defpas">Clave privada (API REST)</label>
+                        <input class="wide" id="izipay_defpas" type="password" name="izipay_defpas" maxlength="255"
+                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}privatekey_…{/if}"
+                               autocomplete="new-password">
+                    </div>
+                    <div class="field-grow">
+                        <label for="izipay_defsha">Clave HMAC-SHA-256</label>
+                        <input class="wide" id="izipay_defsha" type="password" name="izipay_defsha" maxlength="255"
+                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave de firma{/if}"
+                               autocomplete="new-password">
+                    </div>
+                    <div><button type="submit">Guardar Izipay</button></div>
+                </div>
+                {if $izipay && $izipay.username && $izipay.defpk && $izipay.defpas && $izipay.defsha}
+                    <p class="hint" style="margin-top:.75rem;color:var(--ok);">Configuración completa para esta boda.</p>
+                {elseif $izipay}
+                    <p class="hint" style="margin-top:.75rem;color:var(--danger);">Faltan claves: completa usuario, pública, privada y HMAC.</p>
+                {/if}
+            </form>
+        </div>
+        {else}
         <div class="panel">
             <h2>Nuevo registro para esta boda (precio propio)</h2>
             <p class="hint">Crea un <strong>registro nuevo</strong> (no modifica el catálogo ni regalos de otras bodas). “Basado en” solo copia nombre/imagen/categoría como plantilla.</p>
             <form method="post" action="{$_layoutParams.root}backoffice/crearObsequio" enctype="multipart/form-data">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="asignar_pareja_id" value="{$pareja.id|escape:'html'}">
-                <input type="hidden" name="redirect" value="backoffice/pareja/{$pareja.id|escape:'html'}">
+                <input type="hidden" name="redirect" value="backoffice/pareja/{$pareja.id|escape:'html'}/regalos">
                 <div class="row">
                     <div class="field-grow">
                         <label for="base_obsequio_id">Basado en (opcional)</label>
@@ -296,7 +351,9 @@
                 </table>
             </div>
         </div>
+        {/if}
     </main>
+    {if $tab == 'regalos'}
     <script src="{$_layoutParams.root}views/layout/neela/js/jquery-3.6.0.min.js"></script>
     <script src="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.js"></script>
     <script>
@@ -328,5 +385,6 @@
             }
         })();
     </script>
+    {/if}
 </body>
 </html>

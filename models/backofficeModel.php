@@ -253,4 +253,191 @@ class backofficeModel extends Model
         $stmt->execute();
         return (bool) $stmt->fetch();
     }
+
+    /**
+     * Credenciales Izipay exclusivas de una boda (sede_id = pareja_id).
+     * Sin fallback a otras empresas.
+     */
+    public function obtenerIzipay($parejaId)
+    {
+        $parejaId = (int) $parejaId;
+        if ($parejaId < 1) {
+            return false;
+        }
+
+        $sql = "SELECT
+                    s.sede_id,
+                    e.emp_id,
+                    e.emp_username AS username,
+                    e.emp_defpas AS defpas,
+                    e.emp_defpk AS defpk,
+                    e.emp_defsha AS defsha
+                FROM tbl_sede s
+                INNER JOIN tbl_empresa e ON e.emp_id = s.sede_emp_id
+                WHERE s.sede_id = :parejaId
+                LIMIT 1";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':parejaId', $parejaId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    /**
+     * Garantiza empresa+sede 1:1 para la boda. Nunca reutiliza la empresa de otra sede.
+     */
+    public function asegurarEmpresaSedePareja($parejaId, $nombre)
+    {
+        $parejaId = (int) $parejaId;
+        $nombre = trim((string) $nombre);
+        if ($parejaId < 1) {
+            throw new Exception('ID de pareja inválido.');
+        }
+        if ($nombre === '') {
+            $nombre = 'Boda #' . $parejaId;
+        }
+
+        $existente = $this->obtenerIzipay($parejaId);
+        if ($existente) {
+            return $existente;
+        }
+
+        $this->_db->beginTransaction();
+        try {
+            $chkSede = $this->_db->prepare("SELECT sede_id, sede_emp_id FROM tbl_sede WHERE sede_id = :id LIMIT 1 FOR UPDATE");
+            $chkSede->bindValue(':id', $parejaId, PDO::PARAM_INT);
+            $chkSede->execute();
+            $sede = $chkSede->fetch();
+
+            if ($sede) {
+                // Sede existe pero sin join válido: no reasignar a empresa ajena; crear empresa propia.
+                $empId = (int) $sede['sede_emp_id'];
+                $chkEmp = $this->_db->prepare("SELECT emp_id FROM tbl_empresa WHERE emp_id = :id LIMIT 1");
+                $chkEmp->bindValue(':id', $empId, PDO::PARAM_INT);
+                $chkEmp->execute();
+                if (!$chkEmp->fetch()) {
+                    $empId = $this->crearEmpresaIzipay($parejaId, $nombre);
+                    $upd = $this->_db->prepare("UPDATE tbl_sede SET sede_emp_id = :empId, sede_descripcion = :nom, sede_nom = :nom2 WHERE sede_id = :id");
+                    $upd->execute(array(
+                        ':empId' => $empId,
+                        ':nom' => $nombre,
+                        ':nom2' => $nombre,
+                        ':id' => $parejaId,
+                    ));
+                }
+            } else {
+                $empId = $this->crearEmpresaIzipay($parejaId, $nombre);
+                $insSede = $this->_db->prepare(
+                    "INSERT INTO tbl_sede (sede_id, sede_descripcion, sede_nom, sede_emp_id, sede_estado, sede_fecreg, sede_horreg)
+                     VALUES (:id, :desc, :nom, :empId, 1, :fec, :hor)"
+                );
+                $insSede->execute(array(
+                    ':id' => $parejaId,
+                    ':desc' => $nombre,
+                    ':nom' => $nombre,
+                    ':empId' => $empId,
+                    ':fec' => date('Y-m-d'),
+                    ':hor' => date('H:i:s'),
+                ));
+            }
+
+            $this->_db->commit();
+        } catch (Exception $e) {
+            if ($this->_db->inTransaction()) {
+                $this->_db->rollBack();
+            }
+            throw $e;
+        }
+
+        $cred = $this->obtenerIzipay($parejaId);
+        if (!$cred) {
+            throw new Exception('No se pudo crear el espacio Izipay de esta boda.');
+        }
+        return $cred;
+    }
+
+    private function crearEmpresaIzipay($parejaId, $nombre)
+    {
+        $parejaId = (int) $parejaId;
+        $chk = $this->_db->prepare("SELECT emp_id FROM tbl_empresa WHERE emp_id = :id LIMIT 1");
+        $chk->bindValue(':id', $parejaId, PDO::PARAM_INT);
+        $chk->execute();
+        if ($chk->fetch()) {
+            // emp_id ocupado por otra lógica: crear empresa nueva (auto id) exclusiva
+            $ins = $this->_db->prepare(
+                "INSERT INTO tbl_empresa (emp_razsoc, emp_nomcom, emp_ciudad, emp_est, emp_username, emp_defpas, emp_defpk, emp_defsha, emp_fecreg)
+                 VALUES (:raz, :nom, 'AREQUIPA', 1, '', '', '', '', :fec)"
+            );
+            $ins->execute(array(
+                ':raz' => $nombre,
+                ':nom' => $nombre,
+                ':fec' => date('Y-m-d'),
+            ));
+            return (int) $this->_db->lastInsertId();
+        }
+
+        $ins = $this->_db->prepare(
+            "INSERT INTO tbl_empresa (emp_id, emp_razsoc, emp_nomcom, emp_ciudad, emp_est, emp_username, emp_defpas, emp_defpk, emp_defsha, emp_fecreg)
+             VALUES (:id, :raz, :nom, 'AREQUIPA', 1, '', '', '', '', :fec)"
+        );
+        $ins->execute(array(
+            ':id' => $parejaId,
+            ':raz' => $nombre,
+            ':nom' => $nombre,
+            ':fec' => date('Y-m-d'),
+        ));
+        return $parejaId;
+    }
+
+    /**
+     * Actualiza Izipay SOLO de la empresa ligada a sede_id = parejaId.
+     * Campos vacíos en password/sha conservan el valor actual.
+     */
+    public function actualizarIzipay($parejaId, $username, $defpas, $defpk, $defsha)
+    {
+        $parejaId = (int) $parejaId;
+        $cred = $this->obtenerIzipay($parejaId);
+        if (!$cred) {
+            throw new Exception('Esta boda no tiene empresa Izipay aislada.');
+        }
+
+        $empId = (int) $cred['emp_id'];
+        $username = trim((string) $username);
+        $defpk = trim((string) $defpk);
+        $defpas = trim((string) $defpas);
+        $defsha = trim((string) $defsha);
+
+        if ($username === '' || $defpk === '') {
+            throw new Exception('Usuario (shop ID) y clave pública son obligatorios.');
+        }
+
+        if ($defpas === '') {
+            $defpas = $cred['defpas'];
+        }
+        if ($defsha === '') {
+            $defsha = $cred['defsha'];
+        }
+        if ($defpas === '' || $defsha === '') {
+            throw new Exception('Clave privada y HMAC-SHA-256 son obligatorias (primera configuración).');
+        }
+
+        // Doble candado: sede de esta boda + emp_id exacto de esa sede
+        $sql = "UPDATE tbl_empresa e
+                INNER JOIN tbl_sede s ON s.sede_emp_id = e.emp_id
+                SET
+                    e.emp_username = :username,
+                    e.emp_defpas = :defpas,
+                    e.emp_defpk = :defpk,
+                    e.emp_defsha = :defsha
+                WHERE s.sede_id = :parejaId
+                  AND e.emp_id = :empId";
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':username', $username, PDO::PARAM_STR);
+        $stmt->bindValue(':defpas', $defpas, PDO::PARAM_STR);
+        $stmt->bindValue(':defpk', $defpk, PDO::PARAM_STR);
+        $stmt->bindValue(':defsha', $defsha, PDO::PARAM_STR);
+        $stmt->bindValue(':parejaId', $parejaId, PDO::PARAM_INT);
+        $stmt->bindValue(':empId', $empId, PDO::PARAM_INT);
+        $ok = $stmt->execute();
+        return $ok && $stmt->rowCount() >= 0;
+    }
 }

@@ -90,10 +90,14 @@ class obsequioController extends Controller{
 				return;
 			}
 
-			$ps_k = $this->_couple->keysEmp(1);
+			// Resolver boda dueña del pedido ANTES de validar firma (sin cruzar claves).
+			$codigoPedido = $this->extraerOrderIdIzipay($_POST['kr-answer']);
+			$ps_k = $codigoPedido !== ''
+				? $this->_couple->keysEmpPorCodigoMensaje($codigoPedido)
+				: false;
 
 			if (!$ps_k) {
-				throw new Exception('No se encontraron credenciales Izipay.');
+				throw new Exception('No se encontraron credenciales Izipay de la boda del pedido.');
 			}
 
 			Lyra\Client::setDefaultUsername($ps_k['username']);
@@ -163,6 +167,24 @@ class obsequioController extends Controller{
 			http_response_code(200);
 			echo 'OK! Notification received';
 		}
+	}
+
+	private function extraerOrderIdIzipay($krAnswerRaw)
+	{
+		$json = is_string($krAnswerRaw) ? json_decode($krAnswerRaw, true) : null;
+		if (!is_array($json)) {
+			$json = json_decode(stripslashes((string) $krAnswerRaw), true);
+		}
+		if (!is_array($json)) {
+			return '';
+		}
+		if (isset($json['orderDetails']['orderId']) && $json['orderDetails']['orderId'] !== '') {
+			return (string) $json['orderDetails']['orderId'];
+		}
+		if (isset($json['orderId']) && $json['orderId'] !== '') {
+			return (string) $json['orderId'];
+		}
+		return '';
 	}
 
 	private function validarFirmaIzipay($key, $rawBody = '')
