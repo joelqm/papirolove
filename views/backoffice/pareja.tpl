@@ -55,7 +55,7 @@
         .select2-results__option { font-size:.88rem; }
         .select2-container--default .select2-selection--single .select2-selection__placeholder { color:var(--muted); }
     </style>
-    <link href="{$_layoutParams.root}views/backoffice/vendor/select2/select2.min.css" rel="stylesheet">
+    <link href="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -234,8 +234,8 @@
             </div>
         </div>
     </main>
-    <script src="{$_layoutParams.root}views/backoffice/vendor/jquery-3.7.1.min.js"></script>
-    <script src="{$_layoutParams.root}views/backoffice/vendor/select2/select2.min.js"></script>
+    <script src="{$_layoutParams.root}views/layout/neela/js/jquery-3.6.0.min.js"></script>
+    <script src="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.js"></script>
     <script>
         (function () {
             function initSelect2() {
