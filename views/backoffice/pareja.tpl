@@ -35,27 +35,71 @@
         .inline { display:inline; }
         .actions { display:flex; gap:.4rem; flex-wrap:wrap; }
         .mono { font-family: ui-monospace, Consolas, monospace; font-size:.82rem; color:var(--muted); }
-        /* Select2 dark */
-        .select2-container { min-width:min(420px, 100%); width:100% !important; max-width:100%; }
-        .select2-container--default .select2-selection--single {
-            height:auto; min-height:38px; padding:.35rem .45rem; border-radius:8px;
-            border:1px solid var(--line); background:#0b1220; color:var(--text);
-        }
-        .select2-container--default .select2-selection--single .select2-selection__rendered {
-            color:var(--text); line-height:1.4; padding-left:2px;
-        }
-        .select2-container--default .select2-selection--single .select2-selection__arrow { height:100%; top:0; }
-        .select2-dropdown { background:#111827; border:1px solid var(--line); color:var(--text); }
-        .select2-container--default .select2-search--dropdown .select2-search__field {
-            background:#0b1220; border:1px solid var(--line); color:var(--text); border-radius:6px;
-        }
-        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
-            background:var(--accent); color:#1f2937;
-        }
-        .select2-results__option { font-size:.88rem; }
-        .select2-container--default .select2-selection--single .select2-selection__placeholder { color:var(--muted); }
     </style>
     <link href="{$_layoutParams.root}views/layout/neela/webfonts/Limitless_2_3/admin-theme/global_assets/js/plugins/forms/selects/select2.min.css" rel="stylesheet">
+    <style>
+        /* Select2 dark — después del CSS del plugin para que no lo pise */
+        .select2-container { min-width:min(420px, 100%); width:100% !important; max-width:100%; }
+        .select2-container--default .select2-selection--single {
+            height:auto !important;
+            min-height:38px;
+            padding:.35rem .55rem;
+            border-radius:8px !important;
+            border:1px solid var(--line) !important;
+            background:#0b1220 !important;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color:#f3f4f6 !important;
+            line-height:1.45;
+            padding-left:2px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__placeholder {
+            color:#9ca3af !important;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height:100%;
+            top:0;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color:#9ca3af transparent transparent transparent !important;
+        }
+        .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+            border-color:transparent transparent #9ca3af transparent !important;
+        }
+        .select2-dropdown {
+            background:#111827 !important;
+            border:1px solid #374151 !important;
+            color:#f3f4f6 !important;
+            z-index:9999;
+        }
+        .select2-container--default .select2-search--dropdown {
+            padding:.5rem;
+        }
+        .select2-container--default .select2-search--dropdown .select2-search__field {
+            background:#0b1220 !important;
+            border:1px solid #4b5563 !important;
+            color:#f3f4f6 !important;
+            border-radius:6px !important;
+            outline:none;
+            padding:.45rem .55rem;
+        }
+        .select2-results__option {
+            font-size:.88rem;
+            color:#e5e7eb !important;
+            padding:.45rem .65rem;
+        }
+        .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+            background:#cfb89d !important;
+            color:#1f2937 !important;
+        }
+        .select2-container--default .select2-results__option--selected {
+            background:#1f2937 !important;
+            color:#f3f4f6 !important;
+        }
+        .select2-container--default .select2-results > .select2-results__options {
+            max-height:280px;
+        }
+    </style>
 </head>
 <body>
     <header>
