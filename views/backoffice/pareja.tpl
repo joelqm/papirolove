@@ -162,35 +162,34 @@
                 {if $izipay}Empresa #{$izipay.emp_id|escape:'html'}.{else}Aún sin espacio Izipay.{/if}
             </p>
             <p class="hint">
-                Cópialas desde Izipay → Configuración → Tiendas → Claves / Claves API REST.
-                No intercambies campos: <strong>pública</strong> lleva <code>publickey_</code> y <strong>privada</strong> lleva <code>password_</code>.
+                Orden igual que en Izipay → Configuración → Tiendas → <strong>Claves de API REST</strong> (usa las de <strong>producción</strong>).
             </p>
             <form method="post" action="{$_layoutParams.root}backoffice/actualizarIzipay" autocomplete="off">
                 <input type="hidden" name="csrf" value="{$csrf|escape:'html'}">
                 <input type="hidden" name="pareja_id" value="{$pareja.id|escape:'html'}">
                 <div class="row">
                     <div class="field-grow">
-                        <label for="izipay_username">Usuario / Shop ID</label>
+                        <label for="izipay_username">1. Usuario</label>
                         <input class="wide" id="izipay_username" type="text" name="izipay_username" maxlength="80"
                                value="{if $izipay}{$izipay.username|escape:'html'}{/if}" required
-                               placeholder="Solo el número, ej. 14855194" autocomplete="off">
+                               placeholder="Ej. 14855194" autocomplete="off">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defpk">Clave pública (publicKey)</label>
-                        <input class="wide" id="izipay_defpk" type="text" name="izipay_defpk" maxlength="255"
-                               value="{if $izipay}{$izipay.defpk|escape:'html'}{/if}" required
-                               placeholder="14855194:publickey_… o 14855194:prodpublickey_…" autocomplete="off">
-                    </div>
-                    <div class="field-grow">
-                        <label for="izipay_defpas">Clave privada API REST (password)</label>
+                        <label for="izipay_defpas">2. Contraseña de producción (API REST)</label>
                         <input class="wide" id="izipay_defpas" type="password" name="izipay_defpas" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}prodpassword_… o testpassword_…{/if}"
+                               value="" placeholder="{if $izipay && $izipay.defpas}Dejar vacío para no cambiar{else}prodpassword_…{/if}"
                                autocomplete="new-password">
                     </div>
                     <div class="field-grow">
-                        <label for="izipay_defsha">Clave HMAC-SHA-256</label>
+                        <label for="izipay_defpk">3. Clave pública de producción</label>
+                        <input class="wide" id="izipay_defpk" type="text" name="izipay_defpk" maxlength="255"
+                               value="{if $izipay}{$izipay.defpk|escape:'html'}{/if}" required
+                               placeholder="14855194:publickey_…" autocomplete="off">
+                    </div>
+                    <div class="field-grow">
+                        <label for="izipay_defsha">4. Clave HMAC-SHA-256 de producción</label>
                         <input class="wide" id="izipay_defsha" type="password" name="izipay_defsha" maxlength="255"
-                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave de firma del Back Office{/if}"
+                               value="" placeholder="{if $izipay && $izipay.defsha}Dejar vacío para no cambiar{else}Clave HMAC de producción{/if}"
                                autocomplete="new-password">
                     </div>
                     <div><button type="submit">Guardar Izipay</button></div>
