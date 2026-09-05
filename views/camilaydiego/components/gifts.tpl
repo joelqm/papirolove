@@ -8,26 +8,27 @@
                 Si deseas hacernos llegar un detalle, puedes hacerlo aqu&iacute;.
             </p>
 
-            <div class="gifts-block" data-aos="fade-up" data-aos-delay="100">
+            <div class="gifts-block">
                 <h2 class="gifts-heading">Colectivo Virtual</h2>
-                <button type="button" class="gifts-btn js-gifts-colectivo">Regala Aqu&iacute;</button>
+                <button type="button" class="gifts-btn js-gifts-colectivo" onclick="return window.papiroOpenGiftsModal && window.papiroOpenGiftsModal(event)">Regala Aqu&iacute;</button>
             </div>
 
-            <div class="gifts-block" data-aos="fade-up" data-aos-delay="130">
+            <div class="gifts-block gifts-block--transfer">
                 <h2 class="gifts-heading">Transferencia</h2>
-                <button type="button" class="gifts-btn js-gifts-transfer" aria-expanded="false" aria-controls="gifts-bank">Regala Aqu&iacute;</button>
-            </div>
+                <details class="gifts-transfer-details" id="gifts-transfer-details">
+                    <summary class="gifts-btn gifts-btn--summary">Regala Aqu&iacute;</summary>
+                    <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
+                        <p class="gifts-bank-line">Cuenta en Soles</p>
+                        <p class="gifts-bank-line">BCP</p>
+                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
 
-            <div class="gifts-bank" id="gifts-bank" hidden aria-hidden="true" x-ms-format-detection="none">
-                <p class="gifts-bank-line">Cuenta en Soles</p>
-                <p class="gifts-bank-line">BCP</p>
-                <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
-                <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
-
-                <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
-                <p class="gifts-bank-line">BCP</p>
-                <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
-                <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
+                        <p class="gifts-bank-line">BCP</p>
+                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
+                    </div>
+                </details>
             </div>
         </div>
 
@@ -179,22 +180,33 @@
         opacity: 0.88;
     }
 
+    #gifts .gifts-transfer-details {
+        width: 100%;
+    }
+
+    #gifts .gifts-transfer-details summary {
+        list-style: none;
+        display: inline-flex;
+        margin: 0 auto;
+    }
+
+    #gifts .gifts-transfer-details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    #gifts .gifts-transfer-details summary::marker {
+        content: "";
+    }
+
     #gifts .gifts-bank {
-        margin-top: 0.25rem;
+        margin-top: 0.85rem;
         width: 100%;
         position: relative;
         z-index: 3;
+        padding-top: 0.15rem;
     }
 
-    #gifts .gifts-bank[hidden] {
-        display: none !important;
-    }
-
-    #gifts .gifts-bank.is-visible {
-        display: block;
-    }
-
-    #gifts .gifts-bank.is-visible {
+    #gifts .gifts-transfer-details[open] .gifts-bank {
         animation: gifts-bank-reveal 0.45s ease-out;
     }
 
@@ -871,3 +883,77 @@
         }
     }
 </style>
+
+{literal}
+<script>
+(function () {
+    function portalGiftsModal() {
+        var modal = document.getElementById('gifts-modal');
+        if (modal && modal.parentElement !== document.body) {
+            document.body.appendChild(modal);
+        }
+        return modal;
+    }
+
+    window.papiroOpenGiftsModal = function (event) {
+        if (event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            }
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            }
+        }
+
+        var modal = portalGiftsModal();
+        if (!modal) {
+            return false;
+        }
+
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('gifts-modal-open');
+
+        if (typeof window.papiroLoadGiftsCatalog === 'function') {
+            window.papiroLoadGiftsCatalog();
+        }
+
+        return false;
+    };
+
+    function bindTransferDetails() {
+        var details = document.getElementById('gifts-transfer-details');
+        var section = document.getElementById('gifts');
+        if (!details || !section) {
+            return;
+        }
+
+        details.addEventListener('toggle', function () {
+            section.classList.toggle('bank-open', details.open);
+            if (!details.open) {
+                return;
+            }
+            window.requestAnimationFrame(function () {
+                var bank = document.getElementById('gifts-bank');
+                if (!bank) {
+                    return;
+                }
+                var top = bank.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            portalGiftsModal();
+            bindTransferDetails();
+        });
+    } else {
+        portalGiftsModal();
+        bindTransferDetails();
+    }
+})();
+</script>
+{/literal}

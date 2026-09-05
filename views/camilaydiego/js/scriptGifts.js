@@ -272,6 +272,10 @@ $(document).ready(function () {
   });
 
   function openGiftsModal() {
+    if (typeof window.papiroOpenGiftsModal === 'function') {
+      window.papiroOpenGiftsModal();
+      return;
+    }
     ensureGiftsModalPortal();
     const $modal = $("#gifts-modal");
     closeCart();
@@ -287,21 +291,12 @@ $(document).ready(function () {
     $("body").removeClass("gifts-modal-open gifts-modal-cart-open");
   }
 
-  function setBankDetailsVisible(show) {
-    var $bank = $("#gifts-bank");
-    var $section = $("#gifts");
-    if (!$bank.length) {
-      return;
-    }
-
-    if (show) {
-      $bank.removeAttr("hidden").addClass("is-visible").attr("aria-hidden", "false");
-      $section.addClass("bank-open");
-    } else {
-      $bank.attr("hidden", "hidden").removeClass("is-visible").attr("aria-hidden", "true");
-      $section.removeClass("bank-open");
-    }
-  }
+  window.papiroLoadGiftsCatalog = function () {
+    closeCart();
+    $("body").removeClass("gifts-modal-cart-open");
+    getGifts(0, true);
+    rederCart();
+  };
 
   $(document).on("click", ".js-gifts-cart-toggle", function () {
     $("body").toggleClass("gifts-modal-cart-open");
@@ -310,27 +305,6 @@ $(document).ready(function () {
   $(document).on("click", ".js-gifts-colectivo", function (e) {
     e.preventDefault();
     openGiftsModal();
-  });
-
-  $(document).on("click", ".js-gifts-transfer", function (e) {
-    e.preventDefault();
-
-    var $bank = $("#gifts-bank");
-    var $btn = $(this);
-    if (!$bank.length) {
-      return;
-    }
-
-    var willShow = !$bank.hasClass("is-visible");
-    setBankDetailsVisible(willShow);
-    $btn.attr("aria-expanded", willShow ? "true" : "false");
-
-    if (willShow) {
-      window.requestAnimationFrame(function () {
-        var top = $bank.offset().top - 100;
-        window.scrollTo({ top: top, behavior: "smooth" });
-      });
-    }
   });
 
   $(document).on("click", ".js-gifts-modal-close", function () {
