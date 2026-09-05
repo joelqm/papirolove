@@ -35,10 +35,6 @@ class zelmaysamuelController extends Controller
     public function index()
     {
         $this->_view->assign('titulo', 'Zelma y Samuel');
-
-        $ps_k = $this->_zelmaysamuel->keysEmp($this->_key);
-
-        $this->_view->assign('pk', $ps_k['defpk']);
         $this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
         $this->_view->renderContent('index');
     }
