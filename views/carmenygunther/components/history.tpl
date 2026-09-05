@@ -265,10 +265,30 @@
 
       <!-- Contenedor de las fotos -->
       <div class="photo-stack">
-        <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2.webp" alt="Foto de la pareja"
-          class="circular-image">
-        <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1.webp" alt="Pareja en las vías del tren"
-          class="rectangular-image">
+        <picture>
+          <source media="(max-width: 768px)"
+                  srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2-mobil.webp"
+                  type="image/webp">
+          <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2.webp"
+               alt="Foto de la pareja"
+               class="circular-image img-reveal"
+               width="250"
+               height="340"
+               fetchpriority="high"
+               decoding="async">
+        </picture>
+        <picture>
+          <source media="(max-width: 768px)"
+                  srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1-mobil.webp"
+                  type="image/webp">
+          <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1.webp"
+               alt="Pareja en las vías del tren"
+               class="rectangular-image img-reveal"
+               width="250"
+               height="340"
+               fetchpriority="high"
+               decoding="async">
+        </picture>
       </div>
 
     </div>

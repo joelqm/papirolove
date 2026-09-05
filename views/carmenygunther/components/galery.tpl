@@ -9,25 +9,89 @@
     </center>
 
     <div class="container-galery">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1.webp" alt="Imagen 1">
+        <div class="owl-carousel owl-theme galery-carousel">
+            <div class="item">
+                <picture>
+                    <source media="(max-width: 768px)"
+                            srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1-mobil.webp"
+                            type="image/webp">
+                    <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-1.webp"
+                         alt="Carmen y Gunther"
+                         class="img-reveal"
+                         width="870"
+                         height="1200"
+                         decoding="async">
+                </picture>
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2.webp" alt="Imagen 2">
+            <div class="item">
+                <picture>
+                    <source media="(max-width: 768px)"
+                            srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2-mobil.webp"
+                            type="image/webp">
+                    <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-2.webp"
+                         alt="Carmen y Gunther"
+                         class="img-reveal"
+                         width="540"
+                         height="723"
+                         loading="lazy"
+                         decoding="async">
+                </picture>
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-3.webp" alt="Imagen 3">
+            <div class="item">
+                <picture>
+                    <source media="(max-width: 768px)"
+                            srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-3-mobil.webp"
+                            type="image/webp">
+                    <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-3.webp"
+                         alt="Carmen y Gunther"
+                         class="img-reveal"
+                         width="933"
+                         height="1400"
+                         loading="lazy"
+                         decoding="async">
+                </picture>
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-4.webp" alt="Imagen 4">
+            <div class="item">
+                <picture>
+                    <source media="(max-width: 768px)"
+                            srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-4-mobil.webp"
+                            type="image/webp">
+                    <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-4.webp"
+                         alt="Carmen y Gunther"
+                         class="img-reveal"
+                         width="933"
+                         height="1400"
+                         loading="lazy"
+                         decoding="async">
+                </picture>
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-5.webp" alt="Imagen 5">
+            <div class="item">
+                <picture>
+                    <source media="(max-width: 768px)"
+                            srcset="{$_layoutParams.root}views/carmenygunther/imgs/preboda-5-mobil.webp"
+                            type="image/webp">
+                    <img src="{$_layoutParams.root}views/carmenygunther/imgs/preboda-5.webp"
+                         alt="Carmen y Gunther"
+                         class="img-reveal"
+                         width="933"
+                         height="1400"
+                         loading="lazy"
+                         decoding="async">
+                </picture>
             </div>
         </div>
     </div>
 </section>
 
 <script>
-    $(document).ready(function () {
-
-        $(".owl-carousel").owlCarousel({
+(function () {
+    function initGaleryCarousel() {
+        var $el = $("#galery .galery-carousel");
+        if (!$el.length || typeof $el.owlCarousel !== "function" || $el.data("owl-ready")) {
+            return;
+        }
+        $el.data("owl-ready", true);
+        $el.owlCarousel({
             items: 3,
             loop: true,
             margin: 10,
@@ -36,18 +100,48 @@
             autoplay: true,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
+            lazyLoad: false,
             responsive: {
-                0: {
-                    items: 1,
-                },
-                600: {
-                    items: 2,
-                },
-                1000: {
-                    items: 3,
-                }
+                0: { items: 1 },
+                600: { items: 2 },
+                1000: { items: 3 }
             }
         });
+    }
 
-    });
+    function whenVisible(el, cb) {
+        if (!("IntersectionObserver" in window)) {
+            cb();
+            return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+            if (entries.some(function (e) { return e.isIntersecting; })) {
+                io.disconnect();
+                cb();
+            }
+        }, { rootMargin: "180px 0px" });
+        io.observe(el);
+    }
+
+    function boot() {
+        var section = document.getElementById("galery");
+        if (!section) return;
+        whenVisible(section, function () {
+            var tries = 0;
+            (function waitOwl() {
+                if (window.jQuery && typeof jQuery.fn.owlCarousel === "function") {
+                    initGaleryCarousel();
+                    return;
+                }
+                if (++tries < 40) setTimeout(waitOwl, 100);
+            })();
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+    } else {
+        boot();
+    }
+})();
 </script>

@@ -41,6 +41,7 @@
     requestAnimationFrame(function () {
       content.style.opacity = '1';
       requestAnimationFrame(function () {
+        document.dispatchEvent(new CustomEvent('papiro:content-visible'));
         if (typeof window.initPapiroAos === 'function') {
           window.initPapiroAos();
         }
@@ -113,6 +114,7 @@
       content.style.opacity = '1';
       content.classList.add('is-visible');
     }
+    document.dispatchEvent(new CustomEvent('papiro:content-visible'));
     if (typeof window.initPapiroAos === 'function') {
       window.initPapiroAos();
     }
