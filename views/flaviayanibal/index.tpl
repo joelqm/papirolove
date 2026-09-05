@@ -7,15 +7,5 @@
 
 <div id="contenido">
 {include file="views/flaviayanibal/components/cart.tpl"}
-{include file="views/flaviayanibal/components/hero.tpl"}
-
-{include file="views/flaviayanibal/components/history.tpl"}
-{include file="views/flaviayanibal/components/information.tpl"}
-{include file="views/flaviayanibal/components/galery.tpl"}
-
-{include file="views/flaviayanibal/components/dresscode.tpl"}
-{include file="views/flaviayanibal/components/attendance.tpl"}
 {include file="views/flaviayanibal/components/gifts.tpl"}
-
-{include file="views/flaviayanibal/components/button-whatsapp.tpl"}
 </div>
