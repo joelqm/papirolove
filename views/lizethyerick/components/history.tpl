@@ -1,279 +1,105 @@
 <style>
-  .song-card {
-    background: #99948C;
-    border-radius: 28px;
+  #new-history.history-section {
+    background: #fff;
     padding: 0;
+    margin: 0;
+  }
+
+  #new-history .history-simple {
+    background: #fff;
     width: 100%;
-    max-width: 340px;
+    max-width: 780px;
     margin: 0 auto;
-  }
-
-  .song-card-inner {
-    background: #99948C;
-    border-radius: 28px;
-    padding: 22px 26px 18px;
-  }
-
-  .song-card-title {
-    font-family: "newyork_personal", serif;
-    color: #fff;
-    font-size: 1.4rem;
-    text-align: center;
-    margin: 0 0 16px;
-    font-weight: bold;
-  }
-
-  .song-card-progress {
-    position: relative;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.35);
-    border-radius: 2px;
-    margin: 0 4px 22px;
-  }
-
-  .song-card-progress-fill {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 55%;
-    background: #fff;
-    border-radius: 2px;
-  }
-
-  .song-card-progress-thumb {
-    position: absolute;
-    left: 55%;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .song-card-controls {
+    padding: 4rem 1.5rem 3.5rem;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .song-card-icon {
-    color: #fff;
-    font-size: 1.1rem;
-  }
-
-  .song-card-play {
-    background: #fff;
-    color: #99948C;
-    border: none;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    cursor: pointer;
-    padding: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
-  }
-
-  .song-card-play:hover {
-    transform: scale(1.05);
-  }
-
-  .song-card-play .play-icon {
-    margin-left: 3px;
-  }
-
-  .history-section .section,
-  .history-section .history-images {
-    position: relative;
-    z-index: 2;
-  }
-
-  .history-section .circular-image,
-  .history-section .rectangular-image {
-    border-color: #99948C;
-  }
-
-  .history-section .history-title-big,
-  .history-section .text-body {
-    color: #99948C;
-  }
-
-  .history-section .text-body {
-    font-weight: normal;
-    -webkit-text-stroke: 0.35px #99948C;
-  }
-
-  .history-section .wedding-date,
-  .history-section .countdown-item,
-  .history-section .countdown-number,
-  .history-section .countdown-label {
-    color: #99948C;
-  }
-
-  .history-section .countdown-number,
-  .history-section .countdown-label {
-    font-weight: normal;
-    -webkit-text-stroke: 0.35px #99948C;
-  }
-
-  @media (max-width: 992px) {
-
-    .song-card {
-      background: #99948C;
-      border-radius: 28px;
-      padding: 0;
-      width: 97%;
-      max-width: 300px;
-      margin: 1.5rem auto 2rem;
-      top: auto;
-      position: relative;
-      z-index: 3;
-    }
-
-    .countdown-wrapper {
-      top: auto;
-      margin-top: 0;
-      margin-bottom: 1.25rem;
-    }
-
-    #new-history .count {
-      margin-top: 0.5rem !important;
-    }
-
-    .history-images {
-      margin-top: 0;
-      padding-top: 0;
-    }
-
-  }
-
-
-  @media (max-width: 480px) {
-
-    .song-card-title {
-      font-size: 1.2rem;
-    }
-
-    .song-card {
-      margin-bottom: 1.75rem;
-    }
-  }
-
-  /* --- ESTILOS DEL CONTADOR --- */
-  .countdown-wrapper {
-    display: block;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
-    top: auto;
-    position: relative;
-    z-index: 3;
   }
 
-  .photo-stack {
-    position: relative;
-    z-index: 1;
+  #new-history .history-flowers-top {
+    width: 100%;
+    max-width: min(680px, 92vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem;
   }
 
-  /* Solo escritorio: subir contador sobre las fotos */
-  @media (min-width: 993px) {
-    .countdown-wrapper {
-      top: -140px;
+  #new-history .history-title-big {
+    font-family: 'parfumerie-script', cursive;
+    color: #908C70;
+    margin: 0 0 1.75rem;
+    font-weight: normal;
+    line-height: 1.1;
+  }
+
+  #new-history .history-content {
+    width: 100%;
+    max-width: 560px;
+  }
+
+  #new-history .history-content p {
+    font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #908C70;
+    text-align: center;
+    margin: 0 0 1.25rem;
+    font-weight: 400;
+  }
+
+  #new-history .history-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    #new-history .history-simple {
+      padding: 3rem 1.1rem 3rem;
+    }
+
+    #new-history .history-flowers-top {
+      max-width: min(620px, 94vw);
+      margin-bottom: 1.75rem;
+    }
+
+    #new-history .history-title-big {
+      margin-bottom: 1.5rem;
+      -webkit-text-stroke: 0.7px #908C70;
+      paint-order: stroke fill;
+    }
+
+    #new-history .history-content p {
+      font-family: 'Athelas-Regular', Georgia, serif;
+      font-size: 1.08rem;
+      line-height: 1.65;
+      -webkit-text-stroke: 0.35px #908C70;
+      paint-order: stroke fill;
     }
   }
 </style>
 
+<section class="history-section" id="new-history" data-aos="fade-up">
 
-<section class="history-section">
+  <div class="history-simple">
 
-  <div class="history-pattern-layer">
-  <div class="container-history" id="new-history">
+    <img class="history-flowers-top"
+         src="{$_layoutParams.root}views/lizethyerick/imgs/nuestra_historia_flores.webp"
+         alt=""
+         width="2200"
+         height="824"
+         loading="lazy"
+         decoding="async"
+         data-aos="fade-down"
+         data-aos-delay="40">
 
-    <div class="section">
-      <div class="history-title" data-aos="fade-up">
-        <p class="history-title-big">Nuestra Historia</p>
-      </div>
-      <p class="text-body" data-aos="fade-up">
-        Nos conocimos a través de nuestra amiga en común. Sin buscarlo, nos encontramos y, desde entonces, no volvimos a separarnos.
-      </p>
-      <p class="text-body" data-aos="fade-up">
-        Compartimos grandes historias, muchos viajes y aventuras, y por ello decidimos unir nuestros caminos para crecer de la mano día a día.
-      </p>
-      <p class="text-body" data-aos="fade-up">
-        Descubrimos que el amor no es solo un sentimiento, sino la decisión diaria de hacernos felices. Hoy elegimos caminar juntos para siempre.
-      </p>
+    <h2 class="history-title-big" data-aos="fade-up" data-aos-delay="80">Nuestra Historia</h2>
 
-      <br>
-
-      <div class="audio-container-history" style="margin: 0px auto;">
-        <audio id="myAudio" src="{$_layoutParams.root}views/lizethyerick/sound/song.mp3" preload="auto"></audio>
-      </div>
-
-      <div class="song-card" data-aos="fade-up">
-        <div class="song-card-inner">
-          <p class="song-card-title newyork_personal">Nuestra canción</p>
-          <div class="song-card-progress">
-            <span class="song-card-progress-fill"></span>
-            <span class="song-card-progress-thumb"></span>
-          </div>
-          <div class="song-card-controls">
-            <i class="fa-solid fa-bars song-card-icon"></i>
-            <i class="fa-solid fa-backward-step song-card-icon"></i>
-            <button id="player" class="song-card-play" aria-label="Reproducir">
-              <i class="fa-solid fa-play play-icon"></i>
-              <i class="fa-solid fa-pause pause-icon" style="display:none"></i>
-            </button>
-            <i class="fa-solid fa-forward-step song-card-icon"></i>
-            <i class="fa-regular fa-heart song-card-icon"></i>
-          </div>
-        </div>
-      </div>
-
+    <div class="history-content">
+      <p data-aos="fade-up" data-aos-delay="100">Nos conocimos a trav&eacute;s de nuestra amiga en com&uacute;n. Sin buscarlo, nos encontramos y, desde entonces, no volvimos a separarnos.</p>
+      <p data-aos="fade-up" data-aos-delay="120">Compartimos grandes historias, muchos viajes y aventuras, y por ello decidimos unir nuestros caminos para crecer de la mano d&iacute;a a d&iacute;a.</p>
+      <p data-aos="fade-up" data-aos-delay="140">Descubrimos que el amor no es solo un sentimiento, sino la decisi&oacute;n diaria de hacernos felices. Hoy elegimos caminar juntos para siempre.</p>
     </div>
 
-    <div class="divider"></div>
-
-    <div class="history-images" data-aos="fade-up">
-
-
-
-      <!-- Contenedor del contador -->
-      <div class="countdown-wrapper">
-        <p class="wedding-date">Faltan</p>
-        <div class="count" id="countdown">
-          <div class="countdown-item">
-            <span class="countdown-number" id="counter1">10</span>
-            <span class="countdown-label">DÍAS</span>
-          </div>
-          <div class="countdown-item">
-            <span class="countdown-number" id="counter2">10</span>
-            <span class="countdown-label">HORAS</span>
-          </div>
-          <div class="countdown-item">
-            <span class="countdown-number" id="counter3">10</span>
-            <span class="countdown-label">MINUTOS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contenedor de las fotos -->
-      <div class="photo-stack">
-        <img src="{$_layoutParams.root}views/lizethyerick/imgs/preboda-2.webp" alt="Foto de la pareja"
-          class="circular-image">
-        <img src="{$_layoutParams.root}views/lizethyerick/imgs/preboda-1.webp" alt="Pareja en las vías del tren"
-          class="rectangular-image">
-      </div>
-
-    </div>
-
-  </div>
   </div>
 
 </section>

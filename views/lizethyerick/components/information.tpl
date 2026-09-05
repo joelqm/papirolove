@@ -1,37 +1,22 @@
-<section class="invitation-card" id="info">
+<section class="invitation-card" id="info" data-aos="fade-up">
 
   <div class="invitation-pattern"></div>
 
-  <h2 class="details-section-title" data-aos="fade-up">Detalles</h2>
-
-  <div data-aos="fade-up" class="text-invitation-primary details-intro">
-    <p class="details-blessing">Con la bendición de Dios y de nuestros padres</p>
+  <div data-aos="fade-up" data-aos-delay="60" class="text-invitation-primary details-intro">
+    <p class="details-blessing" data-aos="fade-up" data-aos-delay="80">Con la bendici&oacute;n de Dios y de nuestros padres</p>
 
     <div class="details-parents">
-      <div class="details-parents-col">
-        <p>Padres de Lizeth</p>
-        <p>Próximamente</p>
+      <div class="details-parents-col" data-aos="fade-right" data-aos-delay="100">
+        <p>Padres de Lizeth<br>Pr&oacute;ximamente</p>
       </div>
-      <div class="details-parents-col">
-        <p>Padres de Erick</p>
-        <p>Próximamente</p>
+      <div class="details-parents-col" data-aos="fade-left" data-aos-delay="120">
+        <p>Padres de Erick<br>Pr&oacute;ximamente</p>
       </div>
     </div>
-
-    <p class="details-subtitle">Nuestros padrinos</p>
-    <div class="details-godparents">
-      <p>Padrinos</p>
-      <p>Próximamente</p>
-    </div>
-
-    <p class="details-invite">
-      Los esperamos para celebrar juntos el inicio de este nuevo<br>
-      capítulo. ¡Nuestro matrimonio!
-    </p>
   </div>
 
   <div class="locations">
-    <div class="location-card" data-aos="fade-up">
+    <div class="location-card" data-aos="fade-right" data-aos-delay="100">
       <div class="location-heading">
       <div class="location-icon">
 
@@ -67,14 +52,14 @@
       </div>
       <h3 class="location-type">Ceremonia</h3>
       </div>
-      <p class="location-address">Parroquia “San Juan de la Cruz”</p>
+      <p class="location-address location-venue">Parroquia &ldquo;San Juan de la Cruz&rdquo;</p>
       <p class="location-address">Av. Lambramani 157</p>
-      <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">11:30 am</p>
-      <a target="_blank" href="https://maps.app.goo.gl/dgSeaFhEeUQuUWmh8" class="location-button">Ubicación</a>
+      <p class="location-address">Arequipa - Per&uacute;</p>
+      <p class="location-time">11:30 AM</p>
+      <a target="_blank" href="https://maps.app.goo.gl/dgSeaFhEeUQuUWmh8" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
-    <div class="location-card" data-aos="fade-up">
+    <div class="location-card" data-aos="fade-left" data-aos-delay="180">
       <div class="location-heading">
       <div class="location-icon">
         <span>
@@ -112,13 +97,13 @@
             </g>
           </svg></span>
       </div>
-      <h3 class="location-type">Recepción</h3>
+      <h3 class="location-type">Recepci&oacute;n</h3>
       </div>
-      <p class="location-address">Jardines de Sabandia</p>
-      <p class="location-address">Calle Bajada del Puente de Sabandía S/N</p>
-      <p class="location-address">Arequipa - Perú</p>
-      <p class="location-time">2:00 pm</p>
-      <a target="_blank" href="https://maps.app.goo.gl/XXK1KUX5xsPwfjgS9" class="location-button">Ubicación</a>
+      <p class="location-address location-venue">Jardines de Sabandia</p>
+      <p class="location-address">Calle Bajada del Puente de Saband&iacute;a S/N</p>
+      <p class="location-address">Arequipa - Per&uacute;</p>
+      <p class="location-time">2:00 PM</p>
+      <a target="_blank" href="https://maps.app.goo.gl/XXK1KUX5xsPwfjgS9" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
 
@@ -129,16 +114,23 @@
     overflow: hidden;
   }
 
-  #info .details-section-title {
+  #info.invitation-card {
+    background-color: #d8e4eb;
+    background-image: url("{$_layoutParams.root}views/lizethyerick/imgs/background_2.webp");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 3.75rem 1.25rem 4.5rem;
+    color: #908C70;
     position: relative;
-    z-index: 1;
-    font-family: "photograph_signature", cursive;
-    font-size: 3.2rem;
-    font-weight: normal;
-    color: #F3F0E2;
-    margin: 0 0 1.2rem;
-    line-height: 1.15;
-    text-align: center;
+  }
+
+  #info.invitation-card::before {
+    content: none;
+  }
+
+  #info .invitation-pattern {
+    display: none;
   }
 
   #info .details-intro,
@@ -149,98 +141,245 @@
 
   #info .details-intro {
     width: 100%;
+    max-width: 34rem;
+    margin: 0 auto 1.1rem;
     text-align: center;
-    font-family: "newyork_personal", Georgia, serif;
-  }
-
-  #info .details-intro,
-  #info .location-address,
-  #info .location-time {
-    color: #F3F0E2;
-    font-family: "newyork_personal", Georgia, serif;
   }
 
   #info .details-intro p,
   #info .location-address,
   #info .location-time {
+    color: #908C70;
+    font-family: 'Athelas-Regular', Georgia, serif;
     font-weight: normal;
-    -webkit-text-stroke: 0.35px #F3F0E2;
-  }
-
-  #info .location-type {
-    color: #F3F0E2;
-    -webkit-text-stroke: 0;
-    font-family: "photograph_signature", cursive;
-  }
-
-  #info .details-intro p {
     margin: 0;
+    -webkit-text-stroke: 0.3px #908C70;
   }
 
   #info .details-intro p.details-blessing {
-    margin: 0 auto 1.6rem;
+    font-size: 1.1rem;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    margin: 0 auto 1.25rem;
+    -webkit-text-stroke: 0.55px #908C70;
+    paint-order: stroke fill;
   }
 
   #info .details-parents {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3.5rem;
-    margin: 0 auto 1.8rem;
-    max-width: 46rem;
+    gap: 0.5rem;
+    margin: 0 auto 0.5rem;
+    max-width: 30rem;
     width: 100%;
   }
 
   #info .details-parents-col {
-    flex: 1;
-    min-width: 0;
     width: 100%;
     text-align: center;
   }
 
   #info .details-parents-col p {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
     text-align: center;
+    -webkit-text-stroke: 0.55px #908C70;
+    paint-order: stroke fill;
+  }
+
+  #info .locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+
+  #info .location-card {
     width: 100%;
-  }
-
-  #info .details-intro p.details-subtitle {
-    margin: 0 auto 0.7rem;
-  }
-
-  #info .details-godparents {
-    margin-bottom: 1.8rem;
-  }
-
-  #info .details-intro p.details-invite {
-    display: block;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0 auto;
-    line-height: 1.45;
+    max-width: 24rem;
+    padding: 0;
     text-align: center;
+  }
+
+  #info .location-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 0.35rem;
+  }
+
+  #info .location-icon {
+    display: none;
+  }
+
+  #info .location-type {
+    font-family: 'Athelas-Regular', Georgia, serif;
+    color: #908C70;
+    font-size: 2.25rem;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.05;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.35px #908C70;
+  }
+
+  #info .location-venue {
+    font-family: 'parfumerie-script', cursive;
+    font-size: 2.65rem;
+    line-height: 1.1;
+    margin: 0 0 0.3rem;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #908C70;
+    -webkit-text-stroke: 0.45px #908C70;
+  }
+
+  #info .location-address:not(.location-venue) {
+    font-size: 0.88rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+    -webkit-text-stroke: 0.55px #908C70;
+    paint-order: stroke fill;
+  }
+
+  #info .location-time {
+    font-size: 1.05rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0.1rem 0 0.75rem;
+  }
+
+  #info .location-button {
+    display: inline-block;
+    background-color: #CBD7DF;
+    color: #908C70 !important;
+    padding: 0.55rem 1.75rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'Athelas-Regular', Georgia, serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+    -webkit-text-stroke: 0;
+  }
+
+  #info .location-button:hover {
+    opacity: 0.88;
+    text-decoration: none;
+    color: #908C70 !important;
   }
 
   @media (max-width: 900px) {
-    #info .details-section-title {
-      font-size: 2.6rem;
-      margin-bottom: 1rem;
+    #info.invitation-card {
+      padding: 3rem 1rem 4rem;
+    }
+
+    #info .details-intro {
+      margin-bottom: 0.9rem;
+    }
+
+    #info .location-type {
+      font-size: 2rem;
+    }
+
+    #info .location-venue {
+      font-size: 2.35rem;
+    }
+
+    #info .locations {
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #info.invitation-card {
+      padding: 2.75rem 1rem 3.5rem;
+    }
+
+    #info.invitation-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.52);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #info .details-intro p.details-blessing {
+      font-size: 0.92rem;
+      letter-spacing: 1.8px;
+      -webkit-text-stroke: 0.45px #908C70;
     }
 
     #info .details-parents {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
+      gap: 0.7rem;
     }
 
-    #info .details-parents-col {
-      width: 100%;
-      flex: 0 0 auto;
+    #info .details-parents-col p {
+      font-size: 0.86rem;
+      letter-spacing: 1px;
+      line-height: 1.35;
+      -webkit-text-stroke: 0.4px #908C70;
+    }
+
+    #info .location-card {
+      padding: 0 0.25rem;
+    }
+
+    #info .location-type {
+      font-size: 1.55rem;
+      letter-spacing: 2px;
+      -webkit-text-stroke: 0.45px #908C70;
+    }
+
+    #info .location-venue {
+      font-size: 2rem;
+      -webkit-text-stroke: 0.7px #908C70;
+      paint-order: stroke fill;
+      font-variant-ligatures: none;
+    }
+
+    #info .location-address:not(.location-venue),
+    #info .location-time {
+      font-size: 0.86rem;
+      -webkit-text-stroke: 0.4px #908C70;
     }
   }
 
   @media (max-width: 480px) {
-    #info .details-section-title {
-      font-size: 2.3rem;
+    #info .details-intro p.details-blessing {
+      font-size: 0.88rem;
+    }
+
+    #info .details-parents-col p {
+      font-size: 0.82rem;
+    }
+
+    #info .location-address:not(.location-venue) {
+      font-size: 0.8rem;
+    }
+
+    #info .location-type {
+      font-size: 1.4rem;
+    }
+
+    #info .location-venue {
+      font-size: 1.85rem;
+    }
+
+    #info .location-time {
+      font-size: 0.86rem;
     }
   }
 </style>

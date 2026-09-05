@@ -1,221 +1,959 @@
 <div class="gift-container" id="gifts">
-    <div class="gift-section gf-intro-block" data-aos="fade-up">
 
-        <svg class="svg_gifs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.8 95.11">
-            <g id="a" />
-            <g id="b">
-                <g id="c">
-                    <path
-                        d="M87.77,16.27s0-.02-.01-.04c0-.04,0-.08-.01-.13-.84-3.39-4.74-4.53-7.76-5.13-3.4-.67-6.92-.7-10.38-.57-.02-3.16-.2-7.76-2.89-9.68-2.85-2.04-5.78,.66-7.72,2.65-3.72,3.83-6.57,8.58-9.01,13.29-2.23,4.29-4.04,8.82-5.4,13.46-.61,0-1.22,.01-1.84,.03-2.77-9.65-7.35-19.27-13.95-26.62-1.84-2.05-4.56-4.65-7.47-3-2.95,1.67-3.14,6.7-3.16,9.88-3.47-.12-6.95-.03-10.38,.57C4.79,11.51,.87,12.77,.05,16.11c-.01,.04,0,.08-.01,.13,0,.01,0,.02-.01,.04-.3,2.9,2.17,5.23,4.18,6.95,2.76,2.34,5.89,4.09,9.1,5.71,2.65,1.34,5.35,2.53,8.08,3.65-4.37,1.08-13.03,3.76-11.17,8.02-.01,.07-.02,.14,0,.22,.74,4.79,1.48,9.59,2.22,14.38,.2,1.27,.8,2.29,1.64,3.14,.91,7.29,1.82,14.58,2.73,21.86,.31,2.48,.46,5.04,.92,7.5,.05,.24,.12,.47,.22,.69,.02,.14,.08,.25,.18,.32,.78,1.34,2.44,2.17,3.78,2.77,3.49,1.56,7.4,2.22,11.16,2.75,.02,0,.04,0,.07,0,.03,0,.06,.02,.1,.03,8.51,1.12,17.2,1.14,25.71,.11,3.68-.48,7.36-1.12,10.87-2.36,1.91-.67,4.2-1.63,5.23-3.49,.05-.1,.08-.21,.12-.31,.14-.13,.24-.33,.19-.57,0-.03-.02-.07-.03-.1,.06-.47,.07-.96,.1-1.39,.11-1.66,.22-3.31,.33-4.97,.16-2.35,.31-4.69,.47-7.04,0-.01,0-.03,0-.04,.34-5.14,.69-10.29,1.03-15.43,.78-.6,1.43-1.33,1.75-2.25,.26-.74,.26-1.71,.38-2.48,.29-1.86,.57-3.73,.86-5.59,.4-2.59,.79-5.17,1.19-7.75,.19-.6,.22-1.26,.02-1.97-.54-1.97-2.96-3.15-4.63-3.92-.59-.27-1.19-.51-1.79-.73-.11-.09-.24-.13-.39-.14-2.25-.8-4.6-1.35-6.95-1.8,2.07-.87,4.12-1.78,6.15-2.77,3.31-1.62,6.44-3.41,9.33-5.7,2.17-1.71,4.91-4.24,4.6-7.28ZM57.65,6.8c1.57-2.01,4.05-5.43,6.87-5.59,3.86-.22,3.87,7.38,3.88,9.84,0,.32,.28,.62,.61,.61,2.88-.12,5.76-.1,8.63,.2,2.5,.26,6.44,.85,8.18,3.07-2.36-.63-5.39,.32-7.52,.84-4.06,.99-7.9,2.68-11.56,4.65-5.29,2.85-10.47,6.54-15.01,10.74-.1,.05-.18,.12-.24,.22-.86,.8-1.69,1.61-2.49,2.45-.26,.05-.48,.23-.49,.5-.7,.74-1.37,1.49-2.02,2.25-.43-.35-.98-.49-1.53-.59-.18-.03-.36-.07-.54-.1,2.19-10.41,6.68-20.7,13.26-29.09Zm-4.4,30.55c1.25,.32,2.51,.59,3.77,.83,.07,.03,.15,.05,.24,.05h.01c2.13,.4,4.27,.73,6.4,1.1-2.55,.31-5.21,.32-7.52,1.35-.39,.17-.35,.68-.12,.96,.47,.56,.93,1.12,1.41,1.68,0,.01,.02,.02,.03,.04,.44,.52,.88,1.03,1.34,1.53-4.35-1.06-8.94-2.16-12.82-4.31,.47-.29,.84-.69,1.05-1.16,2.07-.69,4.14-1.37,6.21-2.06Zm3.25-1.11c.02,.2,.05,.4,.07,.61-.38-.08-.76-.16-1.15-.24,.36-.12,.72-.24,1.08-.37Zm4.26,15.07c.54,.96,1.18,1.84,1.74,2.79-.77,.85-1.27,1.9-1.99,2.79-.28-.27-.57-.54-.85-.82-.06-.06-.13-.1-.2-.12-.05-1.02-.11-2.03-.16-3.05l1.46-1.59Zm-1.25,30.54c.53,.93,1.22,1.75,1.72,2.7-.44,.86-.79,1.75-1.2,2.62-.29-.31-.58-.61-.87-.92-.06-1.21-.12-2.42-.18-3.62h.01c.17-.27,.35-.52,.52-.78Zm-1.44-17.23c.44,.52,.84,1.07,1.26,1.6-.38,.6-.73,1.22-1.09,1.83-.06-1.14-.11-2.29-.17-3.43Zm-.6-1.97c-.13-.02-.26,0-.37,.04-8.76,.91-17.76,.73-26.45-.48-.21-4.75-.42-9.5-.63-14.25,1.27,.15,2.55,.29,3.82,.41,7.91,.74,16.02,.83,24.01,.05,.25,4.71,.5,9.41,.75,14.12-.38,.04-.75,.08-1.13,.12Zm-25.18,23.76c-.45-.7-.93-1.38-1.52-1.98,.4-.72,.9-1.38,1.34-2.07,.06,1.35,.12,2.7,.18,4.05ZM11.27,39.15c.02-.14,.08-.26,.13-.39,.59-.08,1.14-.35,1.69-.56,.85-.32,1.76-.49,2.6-.85,.42-.18,1.15-.5,1.25-1.02,.08-.41-.05-.77-.2-1.13,1.94-.74,3.99-1.24,6.01-1.68,.21,.91,.1,1.96,1.16,2.36,.44,.17,1.07-.21,1.45-.4,.46-.24,.89-.53,1.32-.81,0,0,0-.01,.01-.02,1.89,.69,3.79,1.36,5.7,2l-.03,.08c-3.69,.78-7.44,1.25-11.14,2-.34,.07-.46,.36-.42,.63-.77,.4-1.55,.77-2.32,1.15-.3,.15-.37,.56-.22,.83,.57,1.01,.83,2.12,1.09,3.24,0,.04,.04,.07,.05,.1-.84-.25-1.68-.52-2.51-.81-1.75-.62-6.07-2.17-5.62-4.71Zm12.9-4.55c-.08-.14-.09-.35-.12-.5-.03-.16-.05-.33-.07-.49,.43,.17,.86,.33,1.3,.49-.33,.2-.67,.39-1.02,.52-.21,.08-.04,.06-.09-.03Zm14.22,1.87c-.13-.63-.31-1.24-.51-1.84,.86,.89,1.7,1.79,2.49,2.72-.09,.2-.15,.4-.19,.61-.76-.25-1.51-.5-2.27-.74,.3-.08,.55-.35,.47-.74Zm5.08,.47c.06,.02,.12,.02,.18,.02,.51,.07,1.01,.21,1.44,.3,1.4,.29,1.12,1.84,.09,2.39-.93,.33-1.87,.31-2.81,0-1.27-.42-1.31-1.78-.27-2.46,.39-.26,.88-.3,1.37-.25Zm-3.19,2.33c.07,.18,.16,.36,.28,.53,.33,.47,.8,.78,1.34,.99-3.79,2.03-8.25,3.07-12.46,4.09,.96-1.05,1.86-2.15,2.78-3.25,.23-.27,.26-.78-.12-.96-2.31-1.03-4.96-1.04-7.52-1.35,3.39-.58,6.8-1.07,10.14-1.9,1.85,.62,3.71,1.23,5.56,1.84Zm-19.98,4.1c-.18-.7-.41-1.39-.71-2.05,.69-.33,1.37-.66,2.04-1.02,.51,.25,1.02,.5,1.53,.75-.93,.81-1.88,1.59-2.86,2.33Zm4.39-2.04c.22-.19,.22-.56,.06-.79,2.05,.2,4.16,.27,6.04,.92-1.17,1.42-2.35,2.82-3.69,4.09-.3,.28-.19,.69,.07,.9-2.35-.39-4.66-.89-6.92-1.53,1.55-1.12,3.01-2.34,4.44-3.6Zm4.41,4.9c-.06,.17-.11,.34-.17,.51-.39-.05-.77-.11-1.16-.17,.44-.11,.88-.22,1.33-.33Zm.1,10.91c-.5-.74-.94-1.51-1.54-2.18,.43-.72,.9-1.41,1.35-2.12,.06,1.43,.13,2.87,.19,4.3Zm18.94-9.48c-5.86,.11-11.99,0-17.98-.76,.12-.34,.23-.68,.35-1.02,4.57-1.11,9.38-2.3,13.3-4.77,.2,0,.4-.01,.59-.04,.01,0,.02,.02,.03,.02,3.92,2.43,8.65,3.63,13.2,4.75,.05,.44,.1,.88,.15,1.32-3.21,.28-6.42,.43-9.63,.49Zm-3.9-16.29c-.2,.74-.4,1.48-.58,2.23-.18-.74-.37-1.47-.57-2.21,.38,0,.76-.01,1.14-.02ZM10.16,11.86c2.86-.35,5.76-.33,8.63-.2,.33,.01,.61-.29,.61-.61,.01-2.9-.06-7.98,2.84-9.62,2.66-1.5,6.07,3.32,7.36,4.93,6.64,8.38,11.03,19,13.32,29.4-.34,.01-.68,.07-1.04,.19-.28,.1-.52,.25-.74,.42-1.94-2.24-4.07-4.38-6.35-6.37-.08-.22-.24-.34-.43-.37-1.07-.92-2.18-1.81-3.3-2.67-.05-.08-.12-.12-.2-.16-3.13-2.39-6.43-4.54-9.79-6.38-3.66-2.01-7.52-3.59-11.57-4.65-2.11-.55-5.17-1.47-7.53-.84,1.74-2.23,5.68-2.77,8.19-3.07Zm-3.13,11.99c-2.26-1.59-5.87-4.16-5.79-7.27,1.58-1.18,4.28-.44,6-.08,1.79,.38,3.55,.86,5.29,1.44,3.66,1.21,7.08,3.01,10.4,4.94,2.4,1.4,4.77,3,7.07,4.74,.36,1.92,.86,3.8,1.47,5.66,.24,.74,1.42,.42,1.17-.32-.45-1.37-.84-2.75-1.16-4.15,.08,.06,.16,.12,.23,.19,0,.03,0,.06,.02,.09,.57,1.41,.86,2.91,1.15,4.4,.15,.77,1.32,.44,1.18-.32-.17-.91-.36-1.81-.6-2.7,.08,.07,.17,.14,.25,.22,.36,1.35,.7,2.7,1.14,4.03,.24,.74,1.42,.43,1.17-.32-.24-.73-.45-1.47-.65-2.21,.2,.19,.4,.37,.59,.56,0,.07,0,.14,.03,.21,.47,1.27,.94,2.53,1.22,3.86,.02,.09,.05,.15,.09,.21-7.05-2.33-14.03-4.73-20.79-7.87-3.3-1.53-6.52-3.19-9.5-5.29Zm8.59,11.81c.07,.16,.14,.29,.16,.27-.33,.36-1.01,.48-1.46,.62-.38,.12-.75,.23-1.13,.35,.64-.4,1.33-.73,1.86-.98,.18-.09,.38-.17,.56-.25Zm-3.92,6.83c2.03,1.81,5.08,2.69,7.57,3.41,3.11,.9,6.31,1.48,9.53,1.91,.04,.93,.08,1.86,.12,2.79-.07,.05-.12,.12-.17,.22-.63,1.4-1.64,2.58-2.37,3.93-.13,.23-.11,.55,.1,.74,1.11,1.03,1.66,2.49,2.71,3.59,.04,.04,.08,.05,.11,.08l.13,2.9c-.82-.12-1.64-.26-2.45-.4-.46-.08-.92-.16-1.38-.25-.62-1.46-1.67-2.71-2.23-4.21-.15-.39-.69-.65-1.02-.27-.83,.97-1.2,2.18-1.86,3.25-1.76-.55-3.47-1.25-4.99-2.22-1.77-1.12-1.81-2.56-2.09-4.43-.57-3.68-1.14-7.35-1.7-11.02Zm11.72,21.74c-.27-.72-.48-1.46-.73-2.2,.62,.13,1.23,.25,1.79,.36-.31,.62-.62,1.3-1.06,1.83Zm-.74-5.68c.46,.87,1.02,1.68,1.47,2.55-.82-.17-1.64-.37-2.45-.59,.35-.64,.62-1.33,.99-1.96Zm-6.18,9.37s.01,0,.02-.02c.3,.82,.63,1.67,1.1,2.27-.21,.6-.42,1.2-.61,1.8-.17-1.35-.34-2.71-.51-4.06Zm2.69,20.12c.1-.65,.27-1.29,.43-1.93,.08-.34,.34-.87,.24-1.24-.34-1.22-1.28-2.26-1.62-3.52-.02-.06-.05-.11-.08-.15-.1-.81-.2-1.63-.3-2.44-.16-1.26-.31-2.51-.47-3.77,.01-.03,.03-.05,.04-.08,.4-1.61,.94-3.18,1.49-4.74,.09-.27-.04-.5-.24-.64-.78-.85-1.19-2.66-1.65-3.69-.14-.31-.53-.36-.81-.22-.26-2.06-.52-4.13-.77-6.19,1.67,1.09,3.8,1.79,5.86,2.29,0,.02,0,.04,.01,.07,.52,1.24,.77,2.57,1.35,3.79,.13,.28,.58,.4,.83,.22,1.1-.78,1.59-2.01,2.22-3.15,1.83,.36,3.68,.67,5.55,.92,.25,5.53,.49,11.06,.74,16.59-.11,.07-.22,.17-.27,.32-.49,1.4-1.62,2.45-2.24,3.78-.11,.24-.12,.54,.1,.74,1.22,1.13,1.99,2.6,2.81,4.02,.06,1.31,.12,2.62,.17,3.92-1.6-.24-3.19-.52-4.76-.88,.06-.81-.51-1.77-.81-2.42-.57-1.24-1.28-2.42-1.81-3.67-.16-.39-.68-.65-1.02-.27-1.18,1.32-1.13,3.2-2.11,4.56-1.12-.48-2.33-1.17-2.89-2.2Zm5.33-.71c.28,.57,.58,1.14,.86,1.71,.23,.45,1.22,2.2,1.28,2.73-1.17-.3-2.32-.66-3.45-1.08,.58-1.05,.75-2.31,1.31-3.36Zm9.29,5.77c-.06-1.44-.13-2.88-.19-4.32v-.02c-.37-8.35-.75-16.7-1.12-25.05,8.04,.97,16.29,.94,24.32,.18,.1,2.03,.2,4.07,.31,6.11-.02,.09-.01,.17,.01,.25,.39,7.65,.77,15.31,1.16,22.96-8.12,.93-16.38,.91-24.49-.11Zm31.47-1.19c-.15-.3,1.03-2.36,1.28-2.86,.28-.57,.58-1.14,.86-1.71,.62,1.18,.76,2.6,1.54,3.71-1.18,.42-2.4,.76-3.64,1.04-.01-.06-.02-.12-.05-.18Zm8.38-7.35c.25-.45,.51-.91,.74-1.38-.05,.74-.1,1.47-.15,2.21-.2-.28-.4-.56-.59-.82Zm1.48-16.5c.05-.11,.11-.22,.17-.33,.03,.05,.05,.1,.09,.15,0,0,.01,.01,.02,.02-.08,1.19-.16,2.38-.24,3.57-.24-.44-.5-.87-.78-1.28-.09-.13,.61-1.84,.74-2.12Zm.43-2.5c-.25-.05-.53,.03-.65,.28-.62,1.32-1.25,2.45-1.56,3.91-.33,1.51,1.2,2.92,1.64,4.36-.1,1.53-.2,3.05-.31,4.58l-.12,1.8c-.25-.02-.51,.1-.6,.42-.33,1.19-.96,2.31-1.56,3.38-.1,.18-.12,.44,0,.61,.55,.77,1.31,1.69,1.64,2.64-.35,1.45-2.14,2.25-3.37,2.81-.2,.09-.4,.17-.6,.25-.02-.06-.05-.12-.09-.17-1.13-1.37-1-3.36-2.23-4.74-.34-.38-.86-.12-1.02,.27-.53,1.26-1.23,2.44-1.81,3.67-.34,.72-1,1.84-.76,2.7-1.56,.3-3.13,.54-4.66,.74-.08-1.64-.17-3.29-.25-4.93,.17,.18,.33,.35,.5,.53,.27,.28,.77,.21,.96-.12,.28-.51,.51-1.04,.73-1.58,.26-.65,1.08-1.7,1.08-2.4,0-1.38-1.88-2.78-2.32-4.09-.18-.51-.81-.59-1.11-.15-.07,.1-.14,.2-.2,.3-.17-3.46-.35-6.92-.52-10.38,.78-1.23,1.45-2.53,2.25-3.75,.16-.24,.08-.53-.1-.74-.57-.68-1.07-1.4-1.65-2.07,.5-.06,1.01-.11,1.51-.17,1.94-.24,3.89-.53,5.82-.91,.64,1.15,1.13,2.4,2.25,3.19,.26,.18,.7,.06,.83-.22,.58-1.22,.83-2.55,1.35-3.79,.04-.09,.05-.18,.05-.27,.11-.03,.23-.07,.34-.11,.25,.06,.51-.03,.67-.2,.63-.2,1.26-.42,1.89-.65,.76-.29,1.6-.63,2.4-1.06-.14,2.02-.27,4.05-.41,6.07Zm-6.31-7.01c.35,.61,.62,1.28,.96,1.91-.79,.22-1.59,.41-2.39,.59,.44-.85,.99-1.65,1.43-2.49Zm-.74,5.68c-.46-.55-.76-1.25-1.09-1.89,.63-.14,1.25-.29,1.87-.45-.27,.78-.5,1.57-.79,2.34Zm9.61-10.12c-.31,1.99-.67,3.06-2.57,4.18-1.28,.76-2.69,1.34-4.15,1.81-.64-1.05-1.01-2.24-1.83-3.19-.33-.38-.87-.12-1.02,.27-.55,1.48-1.59,2.71-2.21,4.15-.99,.19-1.98,.35-2.94,.51-1.2,.2-2.4,.37-3.61,.53-.08-1.57-.17-3.14-.25-4.71,.19,.18,.38,.36,.57,.54,.24,.23,.63,.24,.86,0,1.05-1.09,1.6-2.55,2.71-3.59,.2-.19,.22-.5,.09-.74-.73-1.35-1.74-2.52-2.37-3.93-.16-.35-.71-.39-.96-.12l-1.25,1.37c-.05-.97-.1-1.95-.16-2.92,3.24-.35,6.46-.84,9.64-1.5,2.23-.46,8.22-1.61,11.18-4.08-.58,3.8-1.17,7.6-1.75,11.4Zm-.67-11.46c-3.44,1.91-7.57,2.72-11.4,3.42-2.34,.43-4.71,.74-7.08,.98-.04-.3-.07-.6-.1-.89,.57,.14,1.13,.28,1.69,.42,.58,.15,1.05-.59,.59-1.02-.96-.92-1.84-1.9-2.69-2.91-.06-.48-.11-.95-.17-1.43,2.81-.72,6-.44,8.75-1.32,.54-.17,.62-1.05,0-1.18-3.06-.62-6.16-1.05-9.23-1.62-.05-.42-.1-.84-.15-1.26,2.12-.74,4.23-1.51,6.33-2.33-.04,.16-.09,.33-.13,.49-.07,.26,.04,.55,.28,.69,1.04,.61,2.4,.85,3.55,1.18,.29,.08,.7-.1,.75-.43,.1-.71,.39-1.28,.67-1.91,1.59,.33,3.19,.72,4.72,1.25-.13,.47-.23,.96-.22,1.44,0,.2,.11,.44,.3,.53,1.29,.58,2.68,.97,4.09,1.1,.4,.04,.98,.06,1.37-.15,1.99,1.88,.18,3.79-1.93,4.96Zm.37-6.05c-1-.07-2.04-.39-2.96-.78,.02-.21,.07-.41,.12-.61,.99,.39,1.94,.85,2.84,1.39Zm-9.92-3.31c-.19,.41-.37,.81-.49,1.24-.75-.19-1.54-.39-2.23-.7,.08-.29,.16-.59,.23-.88,.06-.03,.13-.05,.19-.08,.76,.13,1.53,.27,2.3,.42Zm12.88-9.44c-2.95,2.13-6.22,3.74-9.5,5.29-1.9,.9-3.83,1.73-5.77,2.52-.17,0-.31,.07-.42,.17-5.85,2.34-11.84,4.27-17.83,6.25-.02-.14-.06-.28-.1-.42,.52-.61,1.06-1.22,1.61-1.82,.03,.29,.05,.58,.07,.88,.07,.78,1.29,.78,1.22,0-.06-.66-.09-1.33-.23-1.98,.51-.53,1.03-1.05,1.56-1.56-.03,.41-.07,.83-.11,1.24-.06,.78,1.16,.78,1.22,0,.07-.81,.16-1.61,.14-2.42,.22-.21,.45-.41,.67-.62v1.21c0,.79,1.22,.79,1.22,0v-2.27c.56-.48,1.13-.95,1.7-1.41,0,.03-.01,.06-.01,.09,.06,.74,.07,1.49,.07,2.23,0,.79,1.22,.79,1.22,0s0-1.49-.07-2.23c-.03-.36-.31-.55-.6-.58,2.59-2.04,5.29-3.91,8.03-5.53,3.32-1.96,6.76-3.68,10.4-4.94,1.73-.6,3.5-1.05,5.29-1.44,1.71-.38,4.43-1.09,6,.08,.08,3.14-3.54,5.65-5.78,7.27Z" />
-                </g>
-            </g>
-        </svg>
+    <div class="gifts-layout">
+        <div class="gifts-content">
+            <h1 class="gifts-title" data-aos="fade-up" data-aos-delay="40">Regalos</h1>
 
-        <p class="gf-intro">Elige un obsequio para</p>
+            <p class="gifts-intro" data-aos="fade-up" data-aos-delay="70">
+                Si deseas hacernos llegar un detalle, puedes hacerlo aqu&iacute;.
+            </p>
 
-        <h1 class="gf-logo couple-name">Lizeth <span style="margin-left: 1rem;">&amp;</span> Erick</h1>
-
-        <p class="gf-message">
-            Tu presencia es nuestro mejor regalo,<br>
-            pero si deseas tener un detalle con nosotros,<br>
-            puedes hacerlo a través de:
-        </p>
-
-        <span class="gf-btn">Transferencia</span>
-
-        <div class="gf-bank">
-            <div class="gf-bank-block">
-                <p class="gf-bank-label">BCP</p>
-                <p class="gf-bank-number">193-39649725-0-25</p>
+            <div class="gifts-block">
+                <h2 class="gifts-heading">Colectivo Virtual</h2>
+                <button type="button" class="gifts-btn js-gifts-colectivo" onclick="return window.papiroOpenGiftsModal && window.papiroOpenGiftsModal(event)">Regala Aqu&iacute;</button>
             </div>
-            <div class="gf-bank-block">
-                <p class="gf-bank-label">CCI</p>
-                <p class="gf-bank-number">00219313964972502519</p>
+
+            <div class="gifts-block gifts-block--transfer">
+                <h2 class="gifts-heading">Transferencia</h2>
+                <details class="gifts-transfer-details" id="gifts-transfer-details">
+                    <summary class="gifts-btn gifts-btn--summary">Regala Aqu&iacute;</summary>
+                    <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
+                        <p class="gifts-bank-line">Cuenta en Soles</p>
+                        <p class="gifts-bank-line">BCP</p>
+                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
+
+                        <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
+                        <p class="gifts-bank-line">BCP</p>
+                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
+                    </div>
+                </details>
             </div>
         </div>
 
-        <span class="gf-btn">Colectivo Virtual</span>
-
+        <img class="gifts-cats"
+             src="{$_layoutParams.root}views/lizethyerick/imgs/regalos_1.webp"
+             alt=""
+             width="509"
+             height="540"
+             loading="lazy"
+             decoding="async"
+             aria-hidden="true"
+             data-aos="fade-left"
+             data-aos-delay="160">
     </div>
 
-    <div data-aos="fade-up">
-        <div class="content-products">
-            <aside class="sidebar">
-                <button class="category-button primary" data-id="0">TODAS LAS CATEGORÍAS</button>
-                <button class="category-button" data-id="1">LUNA DE MIEL</button>
-                <button class="category-button" data-id="2">MOBILIARIO &amp; DECORACION</button>
-                <button class="category-button" data-id="4">TECNOLOGIA</button>
-                <button class="category-button" data-id="5">REGALO LIBRE</button>
+</div>
+
+<div class="gifts-modal" id="gifts-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="gifts-modal-title">
+    <div class="gifts-modal__overlay js-gifts-modal-close" aria-hidden="true"></div>
+    <div class="gifts-modal__dialog">
+        <button type="button" class="gifts-modal__close js-gifts-modal-close" aria-label="Cerrar">&times;</button>
+
+        <header class="gifts-modal__header">
+            <h2 class="gifts-modal__title" id="gifts-modal-title">Colectivo Virtual</h2>
+            <button type="button" class="gifts-modal__cart-toggle js-gifts-cart-toggle" aria-label="Ver carrito">
+                <i class="fas fa-gift" aria-hidden="true"></i>
+                <span class="gifts-modal__cart-badge" data-count="0">0</span>
+            </button>
+        </header>
+
+        <div class="gifts-modal__layout gifts-modal__products">
+            <aside class="sidebar gifts-modal__sidebar" id="gifts-modal-categories">
+                <button type="button" class="category-button primary" data-id="0">TODAS LAS CATEGOR&Iacute;AS</button>
             </aside>
-            <main class="products"></main>
+
+            <div class="gifts-modal__catalog">
+                <div class="gifts-modal__loader" id="gifts-modal-loader" hidden aria-live="polite">
+                    <div class="gifts-modal__spinner" aria-hidden="true"></div>
+                    <p>Cargando obsequios&hellip;</p>
+                </div>
+                <main class="products gifts-modal__products-grid" id="gifts-modal-products"></main>
+                <p class="gifts-modal__empty" id="gifts-modal-empty" hidden>No hay obsequios en esta categor&iacute;a.</p>
+            </div>
+
+            <aside class="gifts-modal__cart" id="gifts-modal-cart" aria-label="Tus obsequios">
+                <div class="gifts-modal__cart-head">
+                    <h3>Tus obsequios</h3>
+                </div>
+                <div class="gifts-modal__cart-items"></div>
+                <div class="gifts-modal__cart-empty">A&uacute;n no has elegido ning&uacute;n regalo.</div>
+                <div class="gifts-modal__cart-foot">
+                    <div class="gifts-modal__cart-total">
+                        <span>Total:</span>
+                        <span class="gifts-modal__total-price">S/. 0</span>
+                    </div>
+                    <button type="button" class="gifts-modal__checkout checkout-button">ENVIAR OBSEQUIO</button>
+                </div>
+            </aside>
         </div>
     </div>
 </div>
 
-{literal}
 <style>
     #gifts.gift-container {
-        background: #99948C;
-        color: #F3F0E2;
-        padding: 4rem 1rem 3rem;
+        background: #CFB89D;
+        color: #fff;
+        padding: 3.75rem 1.25rem 4.5rem;
+        position: relative;
+        overflow: hidden;
     }
 
-    #gifts .gf-intro-block {
+    #gifts .gifts-layout {
+        position: relative;
+        max-width: 34rem;
+        margin: 0 auto;
+        z-index: 1;
+    }
+
+    #gifts .gifts-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.85rem;
-        margin-bottom: 2.5rem;
-    }
-
-    #gifts .svg_gifs {
-        width: 5.5rem !important;
-        height: 5.5rem !important;
-        fill: #F3F0E2 !important;
-        margin: 0 !important;
-    }
-
-    #gifts .gf-intro,
-    #gifts .gf-message,
-    #gifts .gf-bank-label,
-    #gifts .gf-bank-number {
-        font-family: 'newyork_personal', serif;
-        font-weight: normal;
-        color: #F3F0E2;
-        margin: 0;
-        -webkit-text-stroke: 0.4px #F3F0E2;
-    }
-
-    #gifts .gf-intro {
-        font-size: 1.25rem;
-    }
-
-    #gifts .gf-message {
-        margin: 0.15rem auto 0.25rem;
-        max-width: 34rem;
-        font-size: 1.2rem;
-        line-height: 1.25;
         text-align: center;
+        padding-bottom: 7rem;
     }
 
-    #gifts .gf-logo {
-        font-family: 'photograph_signature', cursive;
-        font-size: 3.3rem;
+    #gifts .gifts-title {
+        font-family: 'parfumerie-script', cursive;
         font-weight: normal;
-        letter-spacing: 2px;
-        line-height: 1.1;
-        color: #F3F0E2 !important;
-        text-align: center;
-        margin: 0.2rem 0 0.4rem;
-        width: auto;
-        height: auto;
+        color: #fff;
+        margin: 0 0 1rem;
+        line-height: 1.05;
     }
 
-    #gifts .gf-btn {
+    #gifts .gifts-intro {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 auto 2rem;
+        max-width: 26rem;
+        line-height: 1.45;
+        -webkit-text-stroke: 0.4px #fff;
+        paint-order: stroke fill;
+    }
+
+    #gifts .gifts-block {
+        width: 100%;
+        margin-bottom: 1.75rem;
+    }
+
+    #gifts .gifts-heading {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1.55rem;
+        font-weight: normal;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 0 0.85rem;
+        line-height: 1.15;
+        -webkit-text-stroke: 0.4px #fff;
+        paint-order: stroke fill;
+    }
+
+    #gifts .gifts-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 170px;
-        background-color: #F3F0E2;
-        color: #99948C !important;
-        font-family: 'newyork_personal', serif;
-        font-size: 1.15rem;
-        font-weight: normal;
-        padding: 0.75rem 2.2rem;
-        border-radius: 12px;
-        cursor: default;
+        min-width: 150px;
+        min-height: 44px;
+        padding: 0.55rem 1.6rem;
+        border: none;
+        border-radius: 999px;
+        background: #CBD7DF;
+        color: #908C70;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        z-index: 3;
+    }
+
+    #gifts .gifts-btn:hover {
+        opacity: 0.88;
+    }
+
+    #gifts .gifts-transfer-details {
+        width: 100%;
+    }
+
+    #gifts .gifts-transfer-details summary {
+        list-style: none;
+        display: inline-flex;
+        margin: 0 auto;
+    }
+
+    #gifts .gifts-transfer-details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    #gifts .gifts-transfer-details summary::marker {
+        content: "";
+    }
+
+    #gifts .gifts-bank {
+        margin-top: 0.85rem;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        padding-top: 0.15rem;
+    }
+
+    #gifts .gifts-transfer-details[open] .gifts-bank {
+        animation: gifts-bank-reveal 0.45s ease-out;
+    }
+
+    #gifts.gift-container.bank-open {
+        overflow: visible;
+    }
+
+    #gifts.gift-container.bank-open .gifts-cats {
+        opacity: 0.25;
+    }
+
+    @keyframes gifts-bank-reveal {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #gifts .gifts-bank-line {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        color: #fff;
+        margin: 0;
+        line-height: 1.4;
+        -webkit-text-stroke: 0.35px #fff;
+        paint-order: stroke fill;
+    }
+
+    /* Evitar que iOS/Safari pinte números como links azules */
+    #gifts .gifts-bank-line a,
+    #gifts .gifts-bank-num,
+    #gifts .gifts-bank-line a:link,
+    #gifts .gifts-bank-line a:visited,
+    #gifts .gifts-bank-line a:hover,
+    #gifts .gifts-bank-line a:active,
+    #gifts .gifts-bank a[x-apple-data-detectors] {
+        color: #fff !important;
+        -webkit-text-fill-color: #fff !important;
+        text-decoration: none !important;
+        border-bottom: none !important;
         pointer-events: none;
-        -webkit-text-stroke: 0.4px #99948C;
-        box-sizing: border-box;
+        cursor: text;
     }
 
-    #gifts .gf-bank {
+    #gifts .gifts-bank-line--cci {
+        margin-bottom: 0.85rem;
+    }
+
+    #gifts .gifts-bank-line--spaced {
+        margin-top: 0.35rem;
+    }
+
+    #gifts .gifts-cats {
+        position: absolute;
+        right: -12.75rem;
+        bottom: 0;
+        width: min(220px, 52vw);
+        height: auto;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .gifts-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    /*
+     * Capas de modales (solo Lizeth y Erick tiene popup de colectivo):
+     * 10000 colectivo | 20000 dedicatoria | 30000 SweetAlert
+     */
+    .form-overlay {
+        z-index: 20000 !important;
+    }
+
+    .form-container {
+        z-index: 20001 !important;
+    }
+
+    .swal2-container {
+        z-index: 30000 !important;
+    }
+
+    .gifts-modal[hidden]:not(.is-open) {
+        display: none !important;
+    }
+
+    .gifts-modal.is-open {
+        display: flex !important;
+    }
+
+    body.gifts-modal-open {
+        overflow: hidden;
+    }
+
+    body.gifts-modal-open .cart,
+    body.gifts-modal-open .show-cart {
+        display: none !important;
+    }
+
+    .gifts-modal__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .gifts-modal__dialog {
+        position: relative;
+        z-index: 1;
+        width: min(1180px, 100%);
+        height: min(85vh, 820px);
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 18px;
+        padding: 1.25rem 1.25rem 1rem;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    .gifts-modal__close {
+        position: absolute;
+        top: 0.65rem;
+        right: 0.85rem;
+        border: none;
+        background: transparent;
+        color: #908C70;
+        font-size: 2rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        z-index: 3;
+    }
+
+    .gifts-modal__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-shrink: 0;
+        padding: 0 2.25rem 0.85rem 0.25rem;
+        border-bottom: 1px solid #ece8e2;
+    }
+
+    .gifts-modal__title {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #908C70;
+        margin: 0;
+        line-height: 1.2;
+    }
+
+    .gifts-modal__cart-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid #CBD7DF;
+        border-radius: 999px;
+        background: #fff;
+        color: #908C70;
+        cursor: pointer;
+    }
+
+    .gifts-modal__cart-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1.35rem;
+        height: 1.35rem;
+        padding: 0 0.3rem;
+        border-radius: 999px;
+        background: #CFB89D;
+        color: #fff;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    .gifts-modal__cart-badge[data-count="0"] {
+        display: none;
+    }
+
+    .gifts-modal__layout {
+        flex: 1;
+        min-height: 0;
+        display: grid !important;
+        grid-template-columns: 210px minmax(0, 1fr) 280px;
+        gap: 1rem;
+        padding: 0.75rem 0 0 !important;
+        background: transparent;
+        overflow: hidden;
+        align-items: stretch;
+    }
+
+    .gifts-modal__sidebar {
+        width: auto !important;
+        min-height: 0;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 0.15rem;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gifts-modal__catalog {
+        position: relative;
+        min-height: 0;
+        max-height: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+        padding-right: 0.15rem;
+    }
+
+    .gifts-modal__products-grid.products {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-rows: auto !important;
+        align-content: start !important;
+        align-items: start !important;
+        gap: 0.85rem;
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0;
+        overflow: visible !important;
+        padding: 0 0.15rem 1rem 0;
+        flex: none;
+    }
+
+    .gifts-modal__loader {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 0.75rem;
-        margin: 0.15rem 0;
+        background: rgba(255, 255, 255, 0.92);
+        color: #908C70;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
     }
 
-    #gifts .gf-bank-block {
+    .gifts-modal__loader[hidden] {
+        display: none !important;
+    }
+
+    .gifts-modal__spinner {
+        width: 42px;
+        height: 42px;
+        border: 3px solid #e5dfd7;
+        border-top-color: #CFB89D;
+        border-radius: 50%;
+        animation: gifts-spin 0.75s linear infinite;
+    }
+
+    @keyframes gifts-spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .gifts-modal__empty {
+        margin: 2rem auto;
+        text-align: center;
+        color: #999;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.95rem;
+    }
+
+    .gifts-modal__empty[hidden] {
+        display: none !important;
+    }
+
+    .gifts-modal__catalog.is-loading .gifts-modal__products-grid,
+    .gifts-modal__catalog.is-loading .gifts-modal__empty {
+        visibility: hidden;
+    }
+
+    .gifts-modal__products-grid .product-card {
+        display: flex !important;
+        flex-direction: column;
+        align-self: start;
+        width: 100%;
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0;
+        overflow: visible !important;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .gifts-modal__products-grid .product-card:hover {
+        transform: none;
+    }
+
+    .gifts-modal__products-grid .product-image {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 120px !important;
+        max-height: 120px;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .gifts-modal__products-grid .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .gifts-modal__products-grid .product-info {
+        flex: 0 0 auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 0.1rem;
+        gap: 0.35rem;
+        padding: 0.7rem 0.75rem 0.85rem !important;
+        overflow: visible !important;
+        min-height: 0;
     }
 
-    #gifts .gf-bank-label,
-    #gifts .gf-bank-number {
-        font-size: 1.2rem;
-        line-height: 1.35;
+    .gifts-modal__products-grid .product-title {
+        display: block !important;
+        margin: 0 !important;
+        font-size: 0.9rem !important;
+        line-height: 1.3 !important;
+        color: #333 !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        max-height: none !important;
+    }
+
+    .gifts-modal__products-grid .product-info > p {
+        margin: 0 !important;
+        line-height: 1.25;
+        color: #908C70;
+        font-size: 0.88rem;
+    }
+
+    .gifts-modal__products-grid .product-price {
+        font-size: 0.95rem !important;
+        color: #908C70 !important;
+    }
+
+    .gifts-modal__products-grid .product-progress {
+        width: 100%;
+        margin-top: 0.15rem !important;
+        height: 4px;
+        background-color: #eee;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .gifts-modal__products-grid .button-gift,
+    .gifts-modal__products-grid .button-free-gift {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        width: 100%;
+        margin-top: 0.35rem !important;
+        padding: 0.55rem 0.75rem !important;
+        border: none !important;
+        border-radius: 999px !important;
+        background: #CFB89D !important;
+        color: #fff !important;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 0.8rem !important;
+        line-height: 1.2;
+        cursor: pointer;
+        visibility: visible !important;
+        opacity: 1 !important;
+        min-height: 38px;
+    }
+
+    .gifts-modal__cart {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        background: #f7f5f2;
+        border-radius: 14px;
+        padding: 0.85rem 0.85rem 0.75rem;
+        overflow: hidden;
+    }
+
+    .gifts-modal__cart-head h3 {
+        margin: 0 0 0.65rem;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #908C70;
+    }
+
+    .gifts-modal__cart-items {
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        margin-bottom: 0.65rem;
+    }
+
+    .gifts-modal__cart-items .cart-item {
+        background: #fff;
+        border-radius: 10px;
+        padding: 0.55rem;
+        margin-bottom: 0.55rem;
+        border-bottom: none;
+    }
+
+    .gifts-modal__cart-items .cart-item-image {
+        width: 52px;
+        height: 52px;
+    }
+
+    .gifts-modal__cart-items .cart-item-name {
+        font-size: 0.82rem;
+        line-height: 1.25;
+    }
+
+    .gifts-modal__cart-items .cart-item-price {
+        font-size: 0.82rem;
+    }
+
+    .gifts-modal__cart-empty {
+        display: none;
+        text-align: center;
+        color: #999;
+        font-size: 0.88rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .gifts-modal__cart.is-empty .gifts-modal__cart-empty {
+        display: block;
+    }
+
+    .gifts-modal__cart.is-empty .gifts-modal__cart-items {
+        display: none;
+    }
+
+    .gifts-modal__cart-foot {
+        flex-shrink: 0;
+        border-top: 1px solid #e5dfd7;
+        padding-top: 0.65rem;
+    }
+
+    .gifts-modal__cart-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        color: #908C70;
+        margin-bottom: 0.55rem;
+        font-size: 0.95rem;
+    }
+
+    .gifts-modal__total-price {
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    .gifts-modal__checkout {
+        width: 100%;
+        margin-top: 0;
+        border-radius: 999px;
+        background: #908C70;
+        font-size: 0.88rem;
+        letter-spacing: 0.5px;
+    }
+
+    .gifts-modal__products .category-button {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 12px;
+        padding: 0.7rem 0.85rem;
+        border-radius: 999px;
+    }
+
+    .gifts-modal__products .category-button.primary {
+        background-color: #CBD7DF;
+        color: #908C70;
+        border: none;
+    }
+
+    @media (min-width: 1100px) {
+        .gifts-modal__products-grid.products {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        }
+
+        .gifts-modal__products-grid .product-image {
+            height: 130px !important;
+            max-height: 130px;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .gifts-modal__layout {
+            grid-template-columns: 180px minmax(0, 1fr) 250px;
+        }
     }
 
     @media (max-width: 768px) {
         #gifts.gift-container {
-            padding: 3rem 1rem 2.75rem;
+            padding: 3.25rem 1rem 4rem;
         }
 
-        #gifts .svg_gifs {
-            width: 4.5rem !important;
-            height: 4.5rem !important;
+        #gifts .gifts-title {
+            -webkit-text-stroke: 0.9px #fff;
+            paint-order: stroke fill;
+            font-variant-ligatures: none;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
         }
 
-        #gifts .gf-intro,
-        #gifts .gf-message,
-        #gifts .gf-bank-label,
-        #gifts .gf-bank-number,
-        #gifts .gf-btn {
-            font-size: 1.15rem;
+        #gifts .gifts-intro {
+            font-size: 0.9rem;
+            margin-bottom: 1.75rem;
+            -webkit-text-stroke: 0.4px #fff;
         }
 
-        #gifts .gf-message {
-            font-weight: normal;
-            -webkit-text-stroke: 0.35px #F3F0E2;
+        #gifts .gifts-heading {
+            font-size: 1.25rem;
+            -webkit-text-stroke: 0.45px #fff;
         }
 
-        #gifts .gf-intro,
-        #gifts .gf-bank-label,
-        #gifts .gf-bank-number {
-            font-weight: normal;
-            -webkit-text-stroke: 0.35px #F3F0E2;
+        #gifts .gifts-content {
+            padding-bottom: 6.5rem;
         }
 
-        #gifts .gf-logo {
-            font-size: 2.6rem;
+        #gifts .gifts-cats {
+            width: min(175px, 46vw);
+            right: -1.25rem;
         }
 
-        #gifts .gf-btn {
-            min-width: 160px;
-            padding: 0.65rem 1.8rem;
+        .gifts-modal {
+            padding: 0;
+            align-items: flex-end;
+        }
+
+        .gifts-modal__dialog {
+            width: 100%;
+            height: 92vh;
+            max-height: 92vh;
+            border-radius: 16px 16px 0 0;
+            padding: 1rem 0.85rem 0.85rem;
+        }
+
+        .gifts-modal__header {
+            padding-right: 2rem;
+        }
+
+        .gifts-modal__cart-toggle {
+            display: inline-flex;
+        }
+
+        .gifts-modal__layout {
+            display: flex !important;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .gifts-modal__sidebar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 0.15rem;
+            flex-shrink: 0;
+            max-height: none;
+        }
+
+        .gifts-modal__sidebar .category-button {
+            flex: 0 0 auto;
+            white-space: nowrap;
+        }
+
+        .gifts-modal__catalog {
+            flex: 1 1 auto;
+            min-height: 0;
+            max-height: none;
+            height: auto;
+            overflow-y: auto;
+        }
+
+        .gifts-modal__products-grid.products {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 0.65rem;
+            height: auto !important;
+            overflow: visible !important;
+        }
+
+        .gifts-modal__products-grid .product-image {
+            height: 100px !important;
+            max-height: 100px;
+        }
+
+        .gifts-modal__products-grid .product-title {
+            font-size: 0.8rem !important;
+        }
+
+        .gifts-modal__products-grid .button-gift,
+        .gifts-modal__products-grid .button-free-gift {
+            font-size: 0.72rem !important;
+            min-height: 34px;
+            padding: 0.45rem 0.5rem !important;
+        }
+
+        .gifts-modal__cart {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10002;
+            height: min(72vh, 520px);
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18);
+            transform: translateY(110%);
+            transition: transform 0.3s ease;
+        }
+
+        body.gifts-modal-cart-open .gifts-modal__cart {
+            display: flex;
+            transform: translateY(0);
+        }
+
+        body.gifts-modal-cart-open .gifts-modal__overlay {
+            background: rgba(0, 0, 0, 0.65);
         }
     }
 
     @media (max-width: 480px) {
-        #gifts .gf-intro,
-        #gifts .gf-message,
-        #gifts .gf-bank-label,
-        #gifts .gf-bank-number,
-        #gifts .gf-btn {
-            font-size: 1.05rem;
+        #gifts .gifts-intro {
+            font-size: 0.86rem;
         }
 
-        #gifts .gf-message,
-        #gifts .gf-intro,
-        #gifts .gf-bank-label,
-        #gifts .gf-bank-number {
-            font-weight: normal;
-            -webkit-text-stroke: 0.35px #F3F0E2;
+        #gifts .gifts-heading {
+            font-size: 1.2rem;
         }
 
-        #gifts .gf-logo {
-            font-size: 2.3rem;
+        #gifts .gifts-bank-line {
+            font-size: 0.88rem;
         }
 
-        #gifts .gf-bank-number {
-            word-break: break-all;
-            text-align: center;
-            max-width: 92vw;
+        #gifts .gifts-cats {
+            width: min(150px, 40vw);
+            right: -0.5rem;
+        }
+
+        #gifts .gifts-content {
+            padding-bottom: 10.5rem;
         }
     }
 </style>
+
+{literal}
+<script>
+(function () {
+    function portalGiftsModal() {
+        var modal = document.getElementById('gifts-modal');
+        if (modal && modal.parentElement !== document.body) {
+            document.body.appendChild(modal);
+        }
+        return modal;
+    }
+
+    window.papiroOpenGiftsModal = function (event) {
+        if (event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            }
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            }
+        }
+
+        var modal = portalGiftsModal();
+        if (!modal) {
+            return false;
+        }
+
+        modal.removeAttribute('hidden');
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('gifts-modal-open');
+
+        if (typeof window.papiroLoadGiftsCatalog === 'function') {
+            window.papiroLoadGiftsCatalog();
+        }
+
+        return false;
+    };
+
+    function bindTransferDetails() {
+        var details = document.getElementById('gifts-transfer-details');
+        var section = document.getElementById('gifts');
+        if (!details || !section) {
+            return;
+        }
+
+        details.addEventListener('toggle', function () {
+            section.classList.toggle('bank-open', details.open);
+            if (!details.open) {
+                return;
+            }
+            window.requestAnimationFrame(function () {
+                var bank = document.getElementById('gifts-bank');
+                if (!bank) {
+                    return;
+                }
+                var top = bank.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            portalGiftsModal();
+            bindTransferDetails();
+        });
+    } else {
+        portalGiftsModal();
+        bindTransferDetails();
+    }
+})();
+</script>
 {/literal}

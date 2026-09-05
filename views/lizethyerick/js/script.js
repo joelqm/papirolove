@@ -1,63 +1,40 @@
 $(document).ready(function () {
-  // Definir la fecha de destino
-  var targetDate = new Date("October 24, 2026 14:00:00").getTime();
+  var targetDate = new Date("October 24, 2026 00:00:00").getTime();
 
-  // Guardar el último valor para comparar
-  var lastDays = -1;
-  var lastHours = -1;
-  var lastMinutes = -1;
-
-  // Función para animar los números
-  function animateCounter(id, targetNumber, duration) {
-    var currentNumber = 0;
-    var step = targetNumber / (duration / 50); // Incrementar cada 50ms
-
-    var interval = setInterval(function () {
-      currentNumber += step;
-      if (currentNumber >= targetNumber) {
-        clearInterval(interval);
-        currentNumber = targetNumber; // Asegurarse de que no pase del objetivo
-      }
-      $(id).text(Math.floor(currentNumber)); // Actualizar el número en el HTML
-    }, 50);
+  function padTwo(value) {
+    return String(value).padStart(2, "0");
   }
 
-  // Actualizar el contador cada segundo
-  var countdownInterval = setInterval(function () {
+  function updateCountdown() {
     var now = new Date().getTime();
     var timeLeft = targetDate - now;
 
-    // Si el tiempo se ha agotado, detener el contador
     if (timeLeft <= 0) {
-      clearInterval(countdownInterval);
-      $("#counter1").text(0);
-      $("#counter2").text(0);
-      $("#counter3").text(0);
-      return; // Detener más actualizaciones
+      $("#counter1").text("0");
+      $("#counter2").text("00");
+      $("#counter3").text("00");
+      $("#counter4").text("00");
+      return false;
     }
 
-    // Calcular días, horas, minutos y segundos restantes
     var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // Llamar a la función de animación solo si el valor cambió
-    if (days !== lastDays) {
-      animateCounter("#counter1", days, 2000); // Animar días en 2 segundos
-      lastDays = days; // Actualizar el último valor de días
-    }
+    $("#counter1").text(days);
+    $("#counter2").text(padTwo(hours));
+    $("#counter3").text(padTwo(minutes));
+    $("#counter4").text(padTwo(seconds));
+    return true;
+  }
 
-    if (hours !== lastHours) {
-      animateCounter("#counter2", hours, 2000); // Animar horas en 2 segundos
-      lastHours = hours; // Actualizar el último valor de horas
-    }
-
-    if (minutes !== lastMinutes) {
-      animateCounter("#counter3", minutes, 2000); // Animar minutos en 2 segundos
-      lastMinutes = minutes; // Actualizar el último valor de minutos
-    }
-
-  }, 1000);
+  if ($("#counter1").length) {
+    updateCountdown();
+    setInterval(function () {
+      updateCountdown();
+    }, 1000);
+  }
 
 
   $('.nav-item').on('click', function () {
@@ -143,31 +120,23 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  // Reproducir o pausar el audio cuando se haga clic en el botón
-  $("#player").click(function () {
-    toggleAudio(); // Llamar a la función toggleAudio() al hacer clic
-  });
-
-  const toggleAudio = () => {
-    var audio = $("#myAudio")[0];
+  $(".js-song-player").click(function () {
+    var audio = document.getElementById("myAudio");
+    if (!audio) {
+      return;
+    }
 
     if (audio.paused) {
-      audio.play().then(() => {
-        $(".play-icon").hide();
-        $(".pause-icon").show();
-      }).catch(function (error) {
+      audio.play().catch(function (error) {
         console.log("No se pudo reproducir el audio:", error);
       });
     } else {
       audio.pause();
-      $(".pause-icon").hide();
-      $(".play-icon").show();
     }
-  };
+  });
 
-  $(".button-calendar").click(function (e) {
-    crearEventoEnGoogleCalendar()
-
+  $(".button-calendar").click(function () {
+    crearEventoEnGoogleCalendar();
   });
 });
 
@@ -202,7 +171,7 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/ni6W3XrtF6mcSVcK7`;
+  const url = `https://calendar.app.google/csQShipCnveLmcYR8`;
 
   window.open(url, "_blank");
 

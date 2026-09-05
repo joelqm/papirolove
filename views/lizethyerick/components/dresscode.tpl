@@ -1,247 +1,145 @@
 <section class="dresscode-section" id="dresscode">
 
-    <div class="dresscode-pattern-layer">
-        <div class="dresscode-inner">
+    <div class="dresscode-inner">
 
-            <div class="dresscode-content" data-aos="fade-up">
-                <h1 class="dc-title">Dress Code</h1>
-                <p class="dc-subtitle">Etiqueta estricta</p>
+        <div class="dresscode-content" data-aos="fade-up" data-aos-delay="60">
+            <h1 class="dc-title" data-aos="fade-up" data-aos-delay="70">Dress Code</h1>
+            <p class="dc-subtitle" data-aos="fade-up" data-aos-delay="90">Formal Elegante</p>
 
-                <div class="dc-genders">
-                    <div class="dc-gender">
-                        <img src="{$_layoutParams.root}views/lizethyerick/imgs/imagen_ellas.webp" alt="Ellas" class="dc-icon">
-                        <p class="dc-gender-label">Ellas</p>
-                        <p class="dc-gender-text">Vestido Largo</p>
-                    </div>
-                    <div class="dc-gender">
-                        <img src="{$_layoutParams.root}views/lizethyerick/imgs/imagen_ellos.webp" alt="Ellos" class="dc-icon">
-                        <p class="dc-gender-label">Ellos</p>
-                        <p class="dc-gender-text">Traje y corbata</p>
-                    </div>
-                </div>
+            <img class="dc-illustration"
+                 src="{$_layoutParams.root}views/lizethyerick/imgs/dress_code.webp"
+                 alt="Vestido y traje"
+                 width="130"
+                 height="123"
+                 loading="lazy"
+                 decoding="async"
+                 data-aos="zoom-in"
+                 data-aos-delay="105">
 
-                <div class="dc-reserved-colors">
-                    <p>Reserva estos colores<br>para los novios</p>
-                    <div class="dc-color-swatches" aria-label="Colores reservados para los novios">
-                        <span class="dc-color-swatch dc-color-swatch--white" title="Blanco"></span>
-                        <span class="dc-color-swatch dc-color-swatch--cream" title="Crema"></span>
-                        <span class="dc-color-swatch dc-color-swatch--navy" title="Azul marino"></span>
-                    </div>
-                </div>
-            </div>
-
-            {include file="views/lizethyerick/components/attendance.tpl"}
-
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">ELLOS: Traje y Corbata</p>
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">ELLAS: Vestido Largo</p>
         </div>
+
+        <img class="dc-bottom-image"
+             src="{$_layoutParams.root}views/lizethyerick/imgs/dress_code_1.webp"
+             alt=""
+             width="989"
+             height="610"
+             loading="lazy"
+             decoding="async"
+             data-aos="zoom-in"
+             data-aos-delay="160">
+
     </div>
 
 </section>
 
 {literal}
 <style>
+    #dresscode.dresscode-section {
+        background: #fff;
+        padding: 0;
+        color: #908C70;
+    }
+
+    #dresscode .dresscode-inner {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 1.5rem 1.25rem 2rem;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
     #dresscode .dresscode-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-        color: #99948C;
         text-align: center;
+        color: #908C70;
+        margin-bottom: 0.65rem;
         gap: 0;
     }
 
     #dresscode .dc-title {
-        font-family: 'photograph_signature', cursive;
-        font-size: 3.2rem;
+        font-family: 'parfumerie-script', cursive;
         font-weight: normal;
-        color: #99948C;
+        color: #908C70;
         margin: 0;
-        line-height: 1;
-    }
-
-    #dresscode .dc-subtitle,
-    #dresscode .dc-gender-text {
-        font-family: 'newyork_personal', serif;
-        color: #99948C;
-        font-weight: normal;
-        margin: 0;
+        line-height: 1.05;
     }
 
     #dresscode .dc-subtitle {
-        font-size: 1.25rem;
-        margin: 0.35rem 0 1.15rem;
-        -webkit-text-stroke: 0.4px #99948C;
-    }
-
-    #dresscode .dc-genders {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2.75rem;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    #dresscode .dc-gender {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-    }
-
-    #dresscode .dc-icon {
-        width: 100px;
-        height: auto;
-        margin: 0 0 0.3rem;
-    }
-
-    #dresscode .dc-gender-label {
-        font-family: 'photograph_signature', cursive;
-        font-size: 2.15rem;
-        color: #99948C;
-        margin: 0;
-        line-height: 1;
-    }
-
-    #dresscode .dc-gender-text {
-        font-size: 1.08rem;
-        line-height: 1.25;
-        margin: 0.2rem 0 0;
-        -webkit-text-stroke: 0.4px #99948C;
-    }
-
-    #dresscode .dc-reserved-colors {
-        margin-top: 1.2rem;
-        font-family: 'newyork_personal', serif;
-        font-size: 1rem;
-        line-height: 1.25;
-        color: #99948C;
-    }
-
-    #dresscode .dc-reserved-colors p {
-        margin: 0;
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1.05rem;
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #99948C;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #908C70;
+        margin: 0.2rem 0 0.4rem;
+        -webkit-text-stroke: 0.4px #908C70;
+        paint-order: stroke fill;
     }
 
-    #dresscode .dc-color-swatches {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.6rem;
-        margin-top: 0.55rem;
-    }
-
-    #dresscode .dc-color-swatch {
+    #dresscode .dc-illustration {
+        width: min(130px, 36vw);
+        height: auto;
         display: block;
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
+        margin: 0 auto 0.35rem;
     }
 
-    #dresscode .dc-color-swatch--white {
-        background: #fff;
-        border: 1px solid #bcb8af;
-    }
-
-    #dresscode .dc-color-swatch--cream {
-        background: #eee4d2;
-    }
-
-    #dresscode .dc-color-swatch--navy {
-        background: #07304d;
-    }
-
-    #dresscode .attendace-container {
-        background: transparent;
-        padding: 1.35rem 0 0;
-        color: #99948C;
-    }
-
-    #dresscode #attendance .gift-title-small {
+    #dresscode .dc-rule {
+        font-family: 'Athelas-Regular', Georgia, serif;
+        font-size: 1.05rem;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        color: #908C70;
         margin: 0;
-        font-size: 3rem;
-        line-height: 1;
-        color: #99948C !important;
-    }
-
-    #dresscode #attendance .gift-section .text {
-        width: auto;
-        max-width: 22rem;
-        margin: 0.5rem auto 0;
-        padding: 0;
-        font-size: 1.12rem;
-        line-height: 1.3;
-    }
-
-    #dresscode #attendance .gift-section .date {
-        width: auto;
-        margin: 0.35rem 0 0.65rem;
-        padding: 0;
-        font-size: 2.5rem;
         line-height: 1.2;
+        -webkit-text-stroke: 0.4px #908C70;
+        paint-order: stroke fill;
     }
 
-    #dresscode #attendance .button-3 {
-        min-width: 110px;
-        padding: 0.5rem 1.1rem;
-        border-radius: 12px;
-        background: #99948C;
-        color: #fff;
-        font-size: 1rem;
-        line-height: 1;
+    #dresscode .dc-bottom-image {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        display: block;
+        margin: 0.35rem auto 0;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
+        #dresscode .dresscode-inner {
+            padding: 1.25rem 1rem 1.75rem;
+        }
+
         #dresscode .dc-title {
-            font-size: 2.3rem;
+            -webkit-text-stroke: 0.85px #908C70;
+            paint-order: stroke fill;
+            font-variant-ligatures: none;
         }
 
-        #dresscode .dc-subtitle,
-        #dresscode .dc-gender-text {
-            font-size: 1.05rem;
+        #dresscode .dc-subtitle {
+            font-size: 0.92rem;
+            margin: 0.15rem 0 0.35rem;
+            -webkit-text-stroke: 0.4px #908C70;
         }
 
-        #dresscode .dc-gender-label {
-            font-size: 1.85rem;
+        #dresscode .dc-illustration {
+            width: min(115px, 34vw);
+            margin-bottom: 0.3rem;
         }
 
-        #dresscode .dc-icon {
-            width: 80px;
-        }
-
-        #dresscode #attendance .gift-title-small {
-            font-size: 2.35rem !important;
+        #dresscode .dc-rule {
+            font-size: 0.9rem;
+            -webkit-text-stroke: 0.4px #908C70;
         }
     }
 
     @media (max-width: 480px) {
-        #dresscode .dc-title {
-            font-size: 2.1rem;
-        }
-
-        #dresscode .dc-gender-label {
-            font-size: 1.7rem;
-        }
-
         #dresscode .dc-subtitle,
-        #dresscode .dc-gender-text {
-            font-size: 1rem;
-        }
-
-        #dresscode .dc-genders {
-            gap: 1.25rem;
-        }
-
-        #dresscode .dc-subtitle {
-            margin-bottom: 0.95rem;
-        }
-
-        #dresscode .dc-reserved-colors {
-            margin-top: 1rem;
-        }
-
-        #dresscode .attendace-container {
-            padding-top: 1.1rem;
+        #dresscode .dc-rule {
+            font-size: 0.86rem;
         }
     }
 </style>

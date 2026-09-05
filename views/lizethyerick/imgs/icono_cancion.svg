@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 418 396" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-2045.837284,-55.224856)">
+        <g id="Mesa-de-trabajo3" serif:id="Mesa de trabajo3" transform="matrix(0.71588,0,0,0.781699,640.482443,55.224856)">
+            <rect x="1963.115" y="0" width="583.115" height="505.951" style="fill:none;"/>
+            <g transform="matrix(1.396882,0,0,1.279265,-855.445084,321.792287)">
+                <circle cx="2226.471" cy="-53.794" r="92.699" style="fill:white;stroke:white;stroke-width:1px;"/>
+            </g>
+            <g transform="matrix(26.411472,0,0,24.187631,2360.344666,238.753376)">
+                <path d="M0,1.176L-5.456,4.326C-5.909,4.587 -6.474,4.261 -6.474,3.738L-6.474,-2.562C-6.474,-3.085 -5.909,-3.411 -5.456,-3.15L0,0C0.453,0.261 0.453,0.915 0,1.176M-4.001,-8.778C-9.173,-8.778 -13.367,-4.585 -13.367,0.588C-13.367,5.761 -9.173,9.954 -4.001,9.954C1.172,9.954 5.365,5.761 5.365,0.588C5.365,-4.585 1.172,-8.778 -4.001,-8.778" style="fill:rgb(144,140,112);fill-rule:nonzero;"/>
+            </g>
+        </g>
+    </g>
+</svg>
