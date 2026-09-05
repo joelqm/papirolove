@@ -25,8 +25,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <title>PAPIROLOVE</title>
+    <style>
+        /* Si AOS no inicia, el contenido no debe quedar invisible */
+        body.papiro-aos-fallback [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,92 +47,51 @@
     {/if}
     {/nocache}
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         window.papiroAosFailsafe = function () {
-            var stuck = document.querySelectorAll('[data-aos]:not(.aos-animate)');
-            if (!stuck.length) {
-                return;
-            }
-            document.body.classList.add('aos-broken');
-            stuck.forEach(function (el) {
+            document.body.classList.add('papiro-aos-fallback');
+            document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(function (el) {
                 el.classList.add('aos-animate');
             });
         };
 
-        window.resetPapiroAosInView = function () {
-            if (!window.AOS || !window.__papiroAosInit) {
-                return;
-            }
-            document.body.classList.remove('aos-broken');
-            document.querySelectorAll('[data-aos]').forEach(function (el) {
-                el.classList.remove('aos-animate');
-            });
-            if (typeof window.AOS.refreshHard === 'function') {
-                window.AOS.refreshHard();
-            } else if (typeof window.AOS.refresh === 'function') {
-                window.AOS.refresh();
-            }
-        };
-
         window.initPapiroAos = function () {
             if (!window.AOS) {
-                window.__papiroAosPending = true;
-                return;
+                return false;
             }
-            if (window.__papiroAosInit) {
-                if (typeof window.AOS.refresh === 'function') {
-                    window.AOS.refresh();
-                }
-                return;
+            if (!window.__papiroAosInit) {
+                window.__papiroAosInit = true;
+                AOS.init({
+                    once: true,
+                    duration: 500,
+                    offset: 40,
+                    delay: 0,
+                    easing: 'ease-out',
+                    anchorPlacement: 'top-bottom'
+                });
             }
-            window.__papiroAosInit = true;
-            window.__papiroAosPending = false;
-            AOS.init({
-                once: false,
-                duration: 500,
-                offset: 40,
-                delay: 0,
-                easing: 'ease-out',
-                anchorPlacement: 'top-bottom',
-                disableMutationObserver: false
-            });
-            AOS.refresh();
+            if (typeof window.AOS.refresh === 'function') {
+                window.AOS.refresh();
+            }
+            return true;
         };
 
-            var lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-            var topReplayTimer = null;
-            window.addEventListener('scroll', function () {
-                if (!window.__papiroAosInit) {
-                    return;
-                }
-                var y = window.pageYOffset || document.documentElement.scrollTop || 0;
-                if (y < 40 && lastScrollY >= 100) {
-                    if (topReplayTimer) {
-                        clearTimeout(topReplayTimer);
-                    }
-                    topReplayTimer = setTimeout(function () {
-                        window.resetPapiroAosInView();
-                    }, 100);
-                }
-                lastScrollY = y;
-            }, { passive: true });
-        };
-
-        window.addEventListener('load', function () {
-            window.initPapiroAos();
-            if (typeof window.papiroAosFailsafe === 'function') {
-                setTimeout(window.papiroAosFailsafe, 8000);
+        function bootAos() {
+            if (window.initPapiroAos()) {
+                setTimeout(window.papiroAosFailsafe, 2500);
+            } else {
+                setTimeout(bootAos, 120);
             }
-        });
+        }
+
+        document.addEventListener('papiro:content-visible', bootAos);
+        document.addEventListener('DOMContentLoaded', bootAos);
+        window.addEventListener('load', bootAos);
     </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" media="print" onload="this.media='all'">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" defer></script>
 
     {if isset($_layoutParams.js) && count($_layoutParams.js)}

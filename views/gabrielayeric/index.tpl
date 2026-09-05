@@ -7,6 +7,7 @@
 {/block}
 
 {include file="views/gabrielayeric/components/loader.tpl"}
+<div id="contenido">
 {include file="views/gabrielayeric/components/hero.tpl"}
 
 {include file="views/gabrielayeric/components/history.tpl"}
@@ -20,4 +21,5 @@
 {include file="views/gabrielayeric/components/gifts.tpl"}
 
 {include file="views/gabrielayeric/components/button-whatsapp.tpl"}
+</div>
 

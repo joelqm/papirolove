@@ -9,6 +9,7 @@
 {/block}
 
 {include file="views/zelmaysamuel/components/loader.tpl"}
+<div id="contenido">
 {include file="views/zelmaysamuel/components/hero.tpl"}
 
 {include file="views/zelmaysamuel/components/history.tpl"}
@@ -24,3 +25,4 @@
 {include file="views/zelmaysamuel/components/gifts.tpl"}
 
 {include file="views/zelmaysamuel/components/button-whatsapp.tpl"}
+</div>

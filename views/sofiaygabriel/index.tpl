@@ -5,6 +5,7 @@
 
 
 {include file="views/sofiaygabriel/components/loader.tpl"}
+<div id="contenido">
 {include file="views/sofiaygabriel/components/cart.tpl"}
 {include file="views/sofiaygabriel/components/hero.tpl"}
 
@@ -16,3 +17,4 @@
 {include file="views/sofiaygabriel/components/attendance.tpl"}
 {include file="views/sofiaygabriel/components/gifts.tpl"}
 {include file="views/sofiaygabriel/components/button-whatsapp.tpl"}
+</div>

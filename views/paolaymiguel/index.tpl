@@ -6,7 +6,7 @@
 
 {include file="views/paolaymiguel/components/loader.tpl"}
 
-
+<div id="contenido">
 {include file="views/paolaymiguel/components/cart.tpl"}
 {include file="views/paolaymiguel/components/hero.tpl"}
 {include file="views/paolaymiguel/components/history.tpl"}
@@ -16,3 +16,4 @@
 {include file="views/paolaymiguel/components/attendance.tpl"}
 {include file="views/paolaymiguel/components/gifts.tpl"}
 {include file="views/paolaymiguel/components/button-whatsapp.tpl"}
+</div>
