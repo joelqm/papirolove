@@ -38,7 +38,7 @@ class danielayjeanController extends Controller
 		$ps_k = $this->_danielayjean->keysEmp($this->_key);
 
 		$this->_view->assign('pk', $ps_k['defpk']);
-		$this->_view->setJs(array('scriptGifts', 'scriptSend'));
+		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
 		$this->_view->renderContent('index');
 		#$this->_view->renderContent('proximamente');
 	}

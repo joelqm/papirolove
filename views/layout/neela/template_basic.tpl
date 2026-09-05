@@ -88,7 +88,7 @@
                 disableMutationObserver: false
             });
             AOS.refresh();
-            setTimeout(window.papiroAosFailsafe, 8000);
+        };
 
             var lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
             var topReplayTimer = null;
@@ -110,24 +110,12 @@
         };
 
         window.addEventListener('load', function () {
-            var loader = document.getElementById('loader');
-            var content = document.getElementById('contenido');
-            if (!loader || (content && content.classList.contains('is-visible'))) {
-                window.initPapiroAos();
-            }
-            if (window.__papiroAosPending) {
-                window.initPapiroAos();
+            window.initPapiroAos();
+            if (typeof window.papiroAosFailsafe === 'function') {
+                setTimeout(window.papiroAosFailsafe, 8000);
             }
         });
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
-
-    {if isset($_layoutParams.js) && count($_layoutParams.js)}
-    {foreach item=js from=$_layoutParams.js}
-    <script src="{$js}?v={$_layoutParams.filever}" type="text/javascript"></script>
-    {/foreach}
-    {/if}
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
@@ -135,6 +123,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" media="print" onload="this.media='all'">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" defer></script>
+
+    {if isset($_layoutParams.js) && count($_layoutParams.js)}
+    {foreach item=js from=$_layoutParams.js}
+    <script src="{$js}?v={$_layoutParams.filever}" type="text/javascript"></script>
+    {/foreach}
+    {/if}
 
     <footer>
         <p>© {$smarty.now|date_format:"%Y"} papirolove.pe - Todos los derechos reservados. -
