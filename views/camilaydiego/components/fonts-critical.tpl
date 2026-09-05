@@ -26,4 +26,5 @@
 </style>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=parfumerie-script-old-style.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=Athelas-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{$_layoutParams.root}views/camilaydiego/imgs/backgroundprincipal.webp" as="image" fetchpriority="high">
+<link rel="preload" href="{$_layoutParams.root}views/camilaydiego/imgs/backgroundprincipal.webp" as="image" fetchpriority="high" media="(min-width: 701px)">
+<link rel="preload" href="{$_layoutParams.root}views/camilaydiego/imgs/preboda-2-original.webp" as="image" fetchpriority="high" media="(max-width: 700px)">

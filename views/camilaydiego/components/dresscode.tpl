@@ -2,9 +2,9 @@
 
     <div class="dresscode-inner">
 
-        <div class="dresscode-content" data-aos="fade-up">
-            <h1 class="dc-title">Dress Code</h1>
-            <p class="dc-subtitle">Formal Elegante</p>
+        <div class="dresscode-content" data-aos="fade-up" data-aos-delay="60">
+            <h1 class="dc-title" data-aos="fade-up" data-aos-delay="70">Dress Code</h1>
+            <p class="dc-subtitle" data-aos="fade-up" data-aos-delay="90">Formal Elegante</p>
 
             <img class="dc-illustration"
                  src="{$_layoutParams.root}views/camilaydiego/imgs/dress_code.webp"
@@ -12,10 +12,12 @@
                  width="130"
                  height="123"
                  loading="lazy"
-                 decoding="async">
+                 decoding="async"
+                 data-aos="zoom-in"
+                 data-aos-delay="105">
 
-            <p class="dc-rule">ELLOS: Traje y Corbata</p>
-            <p class="dc-rule">ELLAS: Vestido Largo</p>
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">ELLOS: Traje y Corbata</p>
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">ELLAS: Vestido Largo</p>
         </div>
 
         <img class="dc-bottom-image"
@@ -25,7 +27,8 @@
              height="610"
              loading="lazy"
              decoding="async"
-             data-aos="fade-up">
+             data-aos="zoom-in"
+             data-aos-delay="160">
 
     </div>
 

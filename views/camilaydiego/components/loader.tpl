@@ -19,61 +19,104 @@
   var KEY = 'camilaLoaderSeen';
   var done = false;
 
-  function finish() {
-    if (done) return;
-    done = true;
-    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
-
+  function revealContent() {
     var loader = document.getElementById('loader');
     var content = document.getElementById('contenido');
-    if (!loader) return;
+    if (!content) {
+      return false;
+    }
 
-    loader.style.transition = 'opacity .25s ease';
-    loader.style.opacity = '0';
-    setTimeout(function () {
-      loader.style.display = 'none';
-      if (content) {
-        content.style.display = 'block';
-        content.style.opacity = '0';
-        content.style.transition = 'opacity .25s ease';
-        requestAnimationFrame(function () {
-          content.style.opacity = '1';
-        });
-      }
-    }, 250);
-  }
+    if (loader && loader.style.display !== 'none') {
+      loader.style.transition = 'opacity .25s ease';
+      loader.style.opacity = '0';
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 250);
+    }
 
-  var btn = document.querySelector('.loader-button');
-  if (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      finish();
+    content.style.display = 'block';
+    content.classList.add('is-visible');
+    content.style.opacity = '0';
+    content.style.transition = 'opacity .25s ease';
+    requestAnimationFrame(function () {
+      content.style.opacity = '1';
+      requestAnimationFrame(function () {
+        if (typeof window.initPapiroAos === 'function') {
+          window.initPapiroAos();
+        }
+      });
     });
+    return true;
   }
 
-  // Visitas siguientes en la misma sesión: entrar al instante
-  try {
-    if (sessionStorage.getItem(KEY)) {
+  function finish() {
+    if (done) {
+      revealContent();
+      return;
+    }
+    done = true;
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+    revealContent();
+  }
+
+  function boot() {
+    var btn = document.querySelector('.loader-button');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        finish();
+      });
+    }
+
+    var fastTrack = false;
+    try { fastTrack = !!sessionStorage.getItem(KEY); } catch (e) {}
+
+    if (fastTrack) {
       finish();
       return;
     }
-  } catch (e) {}
 
-  var logo = document.querySelector('.loader-logo');
-  var maxWait = setTimeout(finish, 800);
+    var logo = document.querySelector('.loader-logo');
+    var maxWait = setTimeout(finish, 1200);
 
-  function onLogoReady() {
-    clearTimeout(maxWait);
-    // Breve presencia de marca en la primera visita
-    setTimeout(finish, 350);
+    function onLogoReady() {
+      clearTimeout(maxWait);
+      setTimeout(finish, 350);
+    }
+
+    if (!logo || logo.complete) {
+      onLogoReady();
+    } else {
+      logo.addEventListener('load', onLogoReady, { once: true });
+      logo.addEventListener('error', onLogoReady, { once: true });
+    }
   }
 
-  if (!logo || logo.complete) {
-    onLogoReady();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
   } else {
-    logo.addEventListener('load', onLogoReady, { once: true });
-    logo.addEventListener('error', onLogoReady, { once: true });
+    boot();
   }
+
+  // Failsafe: nunca dejar la página en blanco
+  setTimeout(function () {
+    var loader = document.getElementById('loader');
+    var content = document.getElementById('contenido');
+    if (loader) {
+      loader.style.display = 'none';
+    }
+    if (content) {
+      content.style.display = 'block';
+      content.style.opacity = '1';
+      content.classList.add('is-visible');
+    }
+    if (typeof window.initPapiroAos === 'function') {
+      window.initPapiroAos();
+    }
+    if (typeof window.papiroAosFailsafe === 'function') {
+      window.papiroAosFailsafe();
+    }
+  }, 3500);
 })();
 </script>
 {/literal}

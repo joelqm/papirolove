@@ -138,7 +138,7 @@
   }
 </style>
 
-<section class="countdown-banner" id="countdown-section">
+<section class="countdown-banner" id="countdown-section" data-aos="fade-up">
 
   <img class="countdown-banner__logo"
        src="{$_layoutParams.root}views/camilaydiego/imgs/logo_blanco.webp"
@@ -147,19 +147,20 @@
        height="173"
        loading="lazy"
        decoding="async"
-       data-aos="fade-up">
+       data-aos="zoom-in"
+       data-aos-delay="60">
 
-  <p class="countdown-banner__message" data-aos="fade-up">
+  <p class="countdown-banner__message" data-aos="fade-up" data-aos-delay="100">
     EL INICIO DE NUESTRA NUEVA AVENTURA COMIENZA<br>
     AHORA. SU PRESENCIA HARÁ QUE ESTE DÍA<br>
     SEA AÚN MÁS INOLVIDABLE
   </p>
 
-  <p class="countdown-banner__submessage" data-aos="fade-up">
+  <p class="countdown-banner__submessage" data-aos="fade-up" data-aos-delay="140">
     ¡LOS ESPERAMOS CON MUCHA ILUSIÓN!
   </p>
 
-  <div class="countdown-banner__display" data-aos="fade-up">
+  <div class="countdown-banner__display" data-aos="fade-up" data-aos-delay="180">
     <div class="countdown-banner__values-row">
       <div class="countdown-unit">
         <span id="counter1" class="countdown-number">0</span>

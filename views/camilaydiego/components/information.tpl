@@ -1,22 +1,22 @@
-<section class="invitation-card" id="info">
+<section class="invitation-card" id="info" data-aos="fade-up">
 
   <div class="invitation-pattern"></div>
 
-  <div data-aos="fade-up" class="text-invitation-primary details-intro">
-    <p class="details-blessing">Junto a nuestros padres</p>
+  <div data-aos="fade-up" data-aos-delay="60" class="text-invitation-primary details-intro">
+    <p class="details-blessing" data-aos="fade-up" data-aos-delay="80">Junto a nuestros padres</p>
 
     <div class="details-parents">
-      <div class="details-parents-col">
+      <div class="details-parents-col" data-aos="fade-right" data-aos-delay="100">
         <p>Cesar del Carpio Portocarrero &amp;<br>Nery Ugarte Torres de del Carpio</p>
       </div>
-      <div class="details-parents-col">
+      <div class="details-parents-col" data-aos="fade-left" data-aos-delay="120">
         <p>Walter Mantilla Torrej&oacute;n &amp;<br>Rosana Meza Santa Mar&iacute;a</p>
       </div>
     </div>
   </div>
 
   <div class="locations">
-    <div class="location-card" data-aos="fade-up">
+    <div class="location-card" data-aos="fade-right" data-aos-delay="100">
       <div class="location-heading">
       <div class="location-icon">
 
@@ -55,10 +55,10 @@
       <p class="location-address location-venue">Iglesia San Juan Bautista</p>
       <p class="location-address">Cta. del &Aacute;ngel 145, Yanahuara</p>
       <p class="location-time">1:30 PM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/pX2gYYrV42QFXPVC7" class="location-button">Ver Mapa</a>
+      <a target="_blank" href="https://maps.app.goo.gl/pX2gYYrV42QFXPVC7" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
-    <div class="location-card" data-aos="fade-up">
+    <div class="location-card" data-aos="fade-left" data-aos-delay="180">
       <div class="location-heading">
       <div class="location-icon">
         <span>
@@ -101,7 +101,7 @@
       <p class="location-address location-venue">El Roc&iacute;o - Sal&oacute;n</p>
       <p class="location-address">Pasaje Los Molles 200 Sachaca</p>
       <p class="location-time">4:30 PM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/bx5PNNZkB96yXtEV7" class="location-button">Ver Mapa</a>
+      <a target="_blank" href="https://maps.app.goo.gl/bx5PNNZkB96yXtEV7" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
 

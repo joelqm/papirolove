@@ -15,14 +15,14 @@
 {include file="views/camilaydiego/components/galery.tpl"}
 
 
-<div class="dresscode-attendance-wrapper">
+<div class="dresscode-attendance-wrapper" data-aos="fade-up">
     {include file="views/camilaydiego/components/dresscode.tpl"}
 </div>
 
 {include file="views/camilaydiego/components/gifts.tpl"}
 {include file="views/camilaydiego/components/attendance.tpl"}
 
-<section class="closing-photo" aria-label="Foto final">
+<section class="closing-photo" aria-label="Foto final" data-aos="zoom-in">
     <picture>
         <source media="(max-width: 768px)"
                 srcset="{$_layoutParams.root}views/camilaydiego/imgs/background_3_background_mobil.webp"

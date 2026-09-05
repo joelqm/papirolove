@@ -1,24 +1,24 @@
 <div class="gift-container" id="gifts">
 
-    <div class="gifts-layout" data-aos="fade-up">
+    <div class="gifts-layout">
         <div class="gifts-content">
-            <h1 class="gifts-title">Regalos</h1>
+            <h1 class="gifts-title" data-aos="fade-up" data-aos-delay="40">Regalos</h1>
 
-            <p class="gifts-intro">
+            <p class="gifts-intro" data-aos="fade-up" data-aos-delay="70">
                 Si deseas hacernos llegar un detalle, puedes hacerlo aqu&iacute;.
             </p>
 
-            <div class="gifts-block">
+            <div class="gifts-block" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="gifts-heading">Colectivo Virtual</h2>
                 <button type="button" class="gifts-btn js-gifts-colectivo">Regala Aqu&iacute;</button>
             </div>
 
-            <div class="gifts-block">
+            <div class="gifts-block" data-aos="fade-up" data-aos-delay="130">
                 <h2 class="gifts-heading">Transferencia</h2>
-                <button type="button" class="gifts-btn js-gifts-transfer">Regala Aqu&iacute;</button>
+                <button type="button" class="gifts-btn js-gifts-transfer" aria-expanded="false" aria-controls="gifts-bank">Regala Aqu&iacute;</button>
             </div>
 
-            <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
+            <div class="gifts-bank" id="gifts-bank" hidden aria-hidden="true" x-ms-format-detection="none">
                 <p class="gifts-bank-line">Cuenta en Soles</p>
                 <p class="gifts-bank-line">BCP</p>
                 <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
@@ -38,7 +38,9 @@
              height="540"
              loading="lazy"
              decoding="async"
-             aria-hidden="true">
+             aria-hidden="true"
+             data-aos="fade-left"
+             data-aos-delay="160">
     </div>
 
 </div>
@@ -175,6 +177,25 @@
     #gifts .gifts-bank {
         margin-top: 0.25rem;
         width: 100%;
+    }
+
+    #gifts .gifts-bank[hidden] {
+        display: none !important;
+    }
+
+    #gifts .gifts-bank:not([hidden]) {
+        animation: gifts-bank-reveal 0.45s ease-out;
+    }
+
+    @keyframes gifts-bank-reveal {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     #gifts .gifts-bank-line {
@@ -827,17 +848,3 @@
         }
     }
 </style>
-
-<script>
-    $(document).ready(function () {
-        $(".js-gifts-transfer").on("click", function () {
-            var $bank = $("#gifts-bank");
-            if (!$bank.length) {
-                return;
-            }
-            $("html, body").animate({
-                scrollTop: $bank.offset().top - 120
-            }, 500);
-        });
-    });
-</script>

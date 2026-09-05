@@ -80,17 +80,17 @@
 </style>
 <div class="container-page">
 
-    <div class="background" data-aos="fade-up"></div>
+    <div class="background" data-aos="fade-in" data-aos-duration="600"></div>
 
     <div class="header" style="justify-items: center;">
-        <h1 class="couple-name" data-aos="fade-up">Camila <span style="margin-left: 1rem;">&</span>
+        <h1 class="couple-name" data-aos="fade-up" data-aos-delay="80">Camila <span style="margin-left: 1rem;">&</span>
             Diego</h1>
-        <p class="wedding-date-2" data-aos="fade-up">
+        <p class="wedding-date-2" data-aos="fade-up" data-aos-delay="140">
             S&#193;BADO <span class="date-num">24</span> DE OCTUBRE DE <span class="date-num">2026</span>
         </p>
     </div>
 
-    <div class="hero-actions" data-aos="fade-up">
+    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
         <button type="button" class="hero-action-btn hero-action-btn--song js-song-player" aria-label="Reproducir nuestra canción">
             <span>Nuestra canción</span>
             <img class="hero-action-icon"
@@ -113,7 +113,7 @@
            preload="auto"></audio>
 </div>
 
-<div class="navigation">
+<div class="navigation" data-aos="fade-down" data-aos-delay="260">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">
         <i class="fas fa-bars"></i>
     </a>

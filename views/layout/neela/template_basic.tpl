@@ -24,10 +24,7 @@
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </noscript>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    </noscript>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>PAPIROLOVE</title>
 </head>
@@ -42,9 +39,50 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
     <script>
+        window.papiroAosFailsafe = function () {
+            document.body.classList.add('aos-broken');
+            document.querySelectorAll('[data-aos]').forEach(function (el) {
+                if (!el.classList.contains('aos-animate')) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                    el.classList.add('aos-animate');
+                }
+            });
+        };
+
+        window.initPapiroAos = function () {
+            if (!window.AOS) {
+                window.__papiroAosPending = true;
+                return;
+            }
+            if (window.__papiroAosInit) {
+                if (typeof window.AOS.refresh === 'function') {
+                    window.AOS.refresh();
+                }
+                return;
+            }
+            window.__papiroAosInit = true;
+            window.__papiroAosPending = false;
+            AOS.init({
+                once: false,
+                duration: 500,
+                offset: 40,
+                delay: 0,
+                easing: 'ease-out',
+                anchorPlacement: 'top-bottom'
+            });
+            AOS.refresh();
+            setTimeout(window.papiroAosFailsafe, 5000);
+        };
+
         window.addEventListener('load', function () {
-            if (window.AOS) {
-                AOS.init({ once: true, duration: 600, easing: 'ease-out' });
+            var loader = document.getElementById('loader');
+            var content = document.getElementById('contenido');
+            if (!loader || (content && content.classList.contains('is-visible'))) {
+                window.initPapiroAos();
+            }
+            if (window.__papiroAosPending) {
+                window.initPapiroAos();
             }
         });
     </script>

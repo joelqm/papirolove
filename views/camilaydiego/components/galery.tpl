@@ -1,7 +1,7 @@
-<section class="galery" id="galery">
-    <div class="container-galery">
+<section class="galery" id="galery" data-aos="fade-up">
+    <div class="container-galery" data-aos="zoom-in" data-aos-delay="120">
         <div class="owl-carousel owl-theme galery-carousel">
-            <div class="item">
+            <div class="item" data-aos="zoom-in" data-aos-delay="60">
                 <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-1.webp"
                      alt="Camila y Diego"
                      width="870"
@@ -9,7 +9,7 @@
                      loading="lazy"
                      decoding="async">
             </div>
-            <div class="item">
+            <div class="item" data-aos="zoom-in" data-aos-delay="100">
                 <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-2.webp"
                      alt="Camila y Diego"
                      width="540"
@@ -17,7 +17,7 @@
                      loading="lazy"
                      decoding="async">
             </div>
-            <div class="item">
+            <div class="item" data-aos="zoom-in" data-aos-delay="140">
                 <img src="{$_layoutParams.root}views/camilaydiego/imgs/preboda-3.webp"
                      alt="Camila y Diego"
                      width="933"

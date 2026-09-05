@@ -78,7 +78,7 @@
   }
 </style>
 
-<section class="history-section" id="new-history">
+<section class="history-section" id="new-history" data-aos="fade-up">
 
   <div class="history-simple">
 
@@ -89,17 +89,18 @@
          height="824"
          loading="lazy"
          decoding="async"
-         data-aos="fade-up">
+         data-aos="fade-down"
+         data-aos-delay="40">
 
-    <h2 class="history-title-big" data-aos="fade-up">Nuestra Historia</h2>
+    <h2 class="history-title-big" data-aos="fade-up" data-aos-delay="80">Nuestra Historia</h2>
 
-    <div class="history-content" data-aos="fade-up">
-      <p>Nuestra historia comenzó en abril de 2023, con una conversación por internet que pronto se convirtió en algo mucho más especial.</p>
-      <p>Después de casi un mes llegó nuestra primera cita en el centro de Arequipa: una rosa blanca, un show de stand-up, una cena y una caminata que marcaron el inicio de una conexión que desde el comienzo se sintió natural.</p>
-      <p>Poco tiempo después, conversando antes de conocer a nuestros respectivos hermanos, decidimos que era momento de formalizar nuestra relación y comenzar oficialmente esta aventura juntos.</p>
-      <p>Desde entonces hemos compartido viajes, domingos en familia, películas, celebraciones, retos y cientos de momentos cotidianos que se convirtieron en nuestros recuerdos favoritos.</p>
-      <p>En octubre de 2025, frente al atardecer de Casapueblo, en Uruguay, Diego hizo la pregunta más importante y Camila dijo que sí.</p>
-      <p>Ahora, después de más de tres años creciendo y caminando juntos, estamos listos para volver a decirnos que sí, esta vez frente al altar, convencidos de que no importa hacia dónde nos lleve la vida mientras podamos recorrerla juntos.</p>
+    <div class="history-content">
+      <p data-aos="fade-up" data-aos-delay="100">Nuestra historia comenzó en abril de 2023, con una conversación por internet que pronto se convirtió en algo mucho más especial.</p>
+      <p data-aos="fade-up" data-aos-delay="120">Después de casi un mes llegó nuestra primera cita en el centro de Arequipa: una rosa blanca, un show de stand-up, una cena y una caminata que marcaron el inicio de una conexión que desde el comienzo se sintió natural.</p>
+      <p data-aos="fade-up" data-aos-delay="140">Poco tiempo después, conversando antes de conocer a nuestros respectivos hermanos, decidimos que era momento de formalizar nuestra relación y comenzar oficialmente esta aventura juntos.</p>
+      <p data-aos="fade-up" data-aos-delay="160">Desde entonces hemos compartido viajes, domingos en familia, películas, celebraciones, retos y cientos de momentos cotidianos que se convirtieron en nuestros recuerdos favoritos.</p>
+      <p data-aos="fade-up" data-aos-delay="180">En octubre de 2025, frente al atardecer de Casapueblo, en Uruguay, Diego hizo la pregunta más importante y Camila dijo que sí.</p>
+      <p data-aos="fade-up" data-aos-delay="200">Ahora, después de más de tres años creciendo y caminando juntos, estamos listos para volver a decirnos que sí, esta vez frente al altar, convencidos de que no importa hacia dónde nos lleve la vida mientras podamos recorrerla juntos.</p>
     </div>
 
   </div>

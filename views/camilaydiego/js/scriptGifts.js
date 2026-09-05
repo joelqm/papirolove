@@ -270,6 +270,25 @@ $(document).ready(function () {
     openGiftsModal();
   });
 
+  $(document).on("click", ".js-gifts-transfer", function () {
+    var $bank = $("#gifts-bank");
+    var $btn = $(this);
+    if (!$bank.length) {
+      return;
+    }
+
+    var willShow = $bank.prop("hidden");
+    $bank.prop("hidden", !willShow);
+    $bank.attr("aria-hidden", willShow ? "false" : "true");
+    $btn.attr("aria-expanded", willShow ? "true" : "false");
+
+    if (willShow) {
+      $("html, body").animate({
+        scrollTop: $bank.offset().top - 120
+      }, 500);
+    }
+  });
+
   $(document).on("click", ".js-gifts-modal-close", function () {
     closeGiftsModal();
   });
@@ -595,6 +614,9 @@ const renderGifts = (items) => {
 
   productGrid.append(grid);
   $empty.text("No hay obsequios en esta categoría.").prop("hidden", shown > 0);
+  if (typeof window.initPapiroAos === "function") {
+    window.initPapiroAos();
+  }
 };
 
 const renderFree = (items) => {
@@ -630,6 +652,9 @@ const renderFree = (items) => {
   });
   productGrid.append(grid);
   $empty.text("No hay obsequios en esta categoría.").prop("hidden", shown > 0);
+  if (typeof window.initPapiroAos === "function") {
+    window.initPapiroAos();
+  }
 };
 
 /** CART **/

@@ -1,9 +1,9 @@
 <section class="attendance-section" id="attendance">
 
-    <div class="attendance-inner" data-aos="fade-up">
-        <h2 class="attendance-title">Con&#8203;firma tu asistencia</h2>
+    <div class="attendance-inner" data-aos="fade-up" data-aos-delay="60">
+        <h2 class="attendance-title" data-aos="fade-up" data-aos-delay="80">Con&#8203;firma tu asistencia</h2>
 
-        <p class="attendance-text">
+        <p class="attendance-text" data-aos="fade-up" data-aos-delay="100">
             Agradeceremos confirmar<br>
             tu asistencia hasta el<br>
             <span class="attendance-date">10.10.26</span>
@@ -11,6 +11,8 @@
 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvHdisG6v0bLwHmqW8sjKJWmm7HKNvLZ2uSeJMA3nWjg1eoA/viewform?usp=sharing&ouid=116663290609750251722"
            class="attendance-btn"
+           data-aos="zoom-in"
+           data-aos-delay="140"
            target="_blank"
            rel="noopener noreferrer">
             Confirma Aqu&iacute;

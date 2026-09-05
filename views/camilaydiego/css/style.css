@@ -288,6 +288,12 @@ body {
     display: none;
 }
 
+/* Solo si AOS falló por completo */
+body.aos-broken [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 .palpita {
     display: flex;
     flex-direction: column;
@@ -2220,10 +2226,10 @@ footer {
 
 /* ===== 17. MEDIA QUERIES (Responsive Design) ===== */
 
-/* Media Query: Max 700px (Cambio de fondo para Hero) */
+/* Media Query: Max 700px (fondo hero móvil) */
 @media (max-width: 700px) {
     .background {
-        background-image: url("../imgs/backgroundprincipal.webp");
+        background-image: url("../imgs/preboda-2-original.webp");
         background-position: center center;
     }
 
