@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
 
+{include file="views/cynthiaykevin/components/loader.tpl"}
+
+<div id="contenido">
 {include file="views/cynthiaykevin/components/cart.tpl"}
 {include file="views/cynthiaykevin/components/hero.tpl"}
 
@@ -25,3 +28,4 @@
 {include file="views/cynthiaykevin/components/gifts.tpl"}
 
 {include file="views/cynthiaykevin/components/button-whatsapp.tpl"}
+</div>

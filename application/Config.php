@@ -21,7 +21,7 @@ define('APP_SLOGAN', 'PAPIRO');
 define('APP_COMPANY', 'www.papirolove.pe');
 define('APP_EMP', '1');
 /** Versión de assets CSS/JS (subir al desplegar cambios de estáticos). */
-define('ASSET_VERSION', '20260905d');
+define('ASSET_VERSION', '20260905e');
 
 define('BASE_URL', 'http://' . $host . '/papirolove/');
 define('DB_HOST', 'localhost');

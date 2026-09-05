@@ -9,6 +9,8 @@
 {/block}
 
 {include file="views/gabrielayeric_ceremonia/components/loader.tpl"}
+<div id="contenido">
+{include file="views/gabrielayeric_ceremonia/components/cart.tpl"}
 {include file="views/gabrielayeric_ceremonia/components/hero.tpl"}
 
 {include file="views/gabrielayeric_ceremonia/components/history.tpl"}
@@ -22,3 +24,4 @@
 {include file="views/gabrielayeric_ceremonia/components/gifts.tpl"}
 
 {include file="views/gabrielayeric_ceremonia/components/button-whatsapp.tpl"}
+</div>

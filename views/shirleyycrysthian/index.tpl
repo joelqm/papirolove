@@ -5,6 +5,7 @@
 
 {include file="views/shirleyycrysthian/components/loader.tpl"}
 <div id="contenido">
+{include file="views/shirleyycrysthian/components/cart.tpl"}
 {include file="views/shirleyycrysthian/components/hero.tpl"}
 {include file="views/shirleyycrysthian/components/history.tpl"}
 {include file="views/shirleyycrysthian/components/information.tpl"}

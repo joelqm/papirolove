@@ -10,6 +10,7 @@
 
 {include file="views/zelmaysamuel/components/loader.tpl"}
 <div id="contenido">
+{include file="views/zelmaysamuel/components/cart.tpl"}
 {include file="views/zelmaysamuel/components/hero.tpl"}
 
 {include file="views/zelmaysamuel/components/history.tpl"}

@@ -39,7 +39,7 @@ class jesykaygustavoController extends Controller
 		$ps_k = $this->_jesykaygustavo->keysEmp($this->_key);
 
 		$this->_view->assign('pk', $ps_k['defpk']);
-		$this->_view->setJs(array('script'));
+		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
 		$this->_view->renderContent('index');
 	}
 
