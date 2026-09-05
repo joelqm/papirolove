@@ -158,6 +158,7 @@
         align-items: center;
         justify-content: center;
         min-width: 150px;
+        min-height: 44px;
         padding: 0.55rem 1.6rem;
         border: none;
         border-radius: 999px;
@@ -168,6 +169,10 @@
         letter-spacing: 0.5px;
         cursor: pointer;
         transition: opacity 0.3s ease;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        z-index: 3;
     }
 
     #gifts .gifts-btn:hover {
@@ -177,14 +182,28 @@
     #gifts .gifts-bank {
         margin-top: 0.25rem;
         width: 100%;
+        position: relative;
+        z-index: 3;
     }
 
     #gifts .gifts-bank[hidden] {
         display: none !important;
     }
 
-    #gifts .gifts-bank:not([hidden]) {
+    #gifts .gifts-bank.is-visible {
+        display: block;
+    }
+
+    #gifts .gifts-bank.is-visible {
         animation: gifts-bank-reveal 0.45s ease-out;
+    }
+
+    #gifts.gift-container.bank-open {
+        overflow: visible;
+    }
+
+    #gifts.gift-container.bank-open .gifts-cats {
+        opacity: 0.25;
     }
 
     @keyframes gifts-bank-reveal {
@@ -269,8 +288,12 @@
         z-index: 30000 !important;
     }
 
-    .gifts-modal[hidden] {
+    .gifts-modal[hidden]:not(.is-open) {
         display: none !important;
+    }
+
+    .gifts-modal.is-open {
+        display: flex !important;
     }
 
     body.gifts-modal-open {

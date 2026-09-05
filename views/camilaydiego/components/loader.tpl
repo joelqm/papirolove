@@ -44,6 +44,9 @@
         if (typeof window.initPapiroAos === 'function') {
           window.initPapiroAos();
         }
+        if (typeof window.resetPapiroAosInView === 'function') {
+          setTimeout(window.resetPapiroAosInView, 120);
+        }
       });
     });
     return true;

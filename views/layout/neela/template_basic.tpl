@@ -40,14 +40,29 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
     <script>
         window.papiroAosFailsafe = function () {
+            var stuck = document.querySelectorAll('[data-aos]:not(.aos-animate)');
+            if (!stuck.length) {
+                return;
+            }
             document.body.classList.add('aos-broken');
-            document.querySelectorAll('[data-aos]').forEach(function (el) {
-                if (!el.classList.contains('aos-animate')) {
-                    el.style.opacity = '1';
-                    el.style.transform = 'none';
-                    el.classList.add('aos-animate');
-                }
+            stuck.forEach(function (el) {
+                el.classList.add('aos-animate');
             });
+        };
+
+        window.resetPapiroAosInView = function () {
+            if (!window.AOS || !window.__papiroAosInit) {
+                return;
+            }
+            document.body.classList.remove('aos-broken');
+            document.querySelectorAll('[data-aos]').forEach(function (el) {
+                el.classList.remove('aos-animate');
+            });
+            if (typeof window.AOS.refreshHard === 'function') {
+                window.AOS.refreshHard();
+            } else if (typeof window.AOS.refresh === 'function') {
+                window.AOS.refresh();
+            }
         };
 
         window.initPapiroAos = function () {
@@ -69,10 +84,29 @@
                 offset: 40,
                 delay: 0,
                 easing: 'ease-out',
-                anchorPlacement: 'top-bottom'
+                anchorPlacement: 'top-bottom',
+                disableMutationObserver: false
             });
             AOS.refresh();
-            setTimeout(window.papiroAosFailsafe, 5000);
+            setTimeout(window.papiroAosFailsafe, 8000);
+
+            var lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            var topReplayTimer = null;
+            window.addEventListener('scroll', function () {
+                if (!window.__papiroAosInit) {
+                    return;
+                }
+                var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+                if (y < 40 && lastScrollY >= 100) {
+                    if (topReplayTimer) {
+                        clearTimeout(topReplayTimer);
+                    }
+                    topReplayTimer = setTimeout(function () {
+                        window.resetPapiroAosInView();
+                    }, 100);
+                }
+                lastScrollY = y;
+            }, { passive: true });
         };
 
         window.addEventListener('load', function () {
@@ -87,6 +121,8 @@
         });
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"></script>
+
     {if isset($_layoutParams.js) && count($_layoutParams.js)}
     {foreach item=js from=$_layoutParams.js}
     <script src="{$js}?v={$_layoutParams.filever}" type="text/javascript"></script>
@@ -100,7 +136,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" media="print" onload="this.media='all'">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" defer></script>
     <footer>
         <p>© {$smarty.now|date_format:"%Y"} papirolove.pe - Todos los derechos reservados. -
             Contáctanos</p>

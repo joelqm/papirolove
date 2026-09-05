@@ -1,5 +1,9 @@
 let cart = new Map();
 
+function isGiftsModalOpen() {
+  return $("#gifts-modal").hasClass("is-open");
+}
+
 
 const generateRandom = () => {
   const ruta = $("#root").val();
@@ -26,6 +30,14 @@ const generateRandom = () => {
 
 $(document).ready(function () {
 
+  function ensureGiftsModalPortal() {
+    var $modal = $("#gifts-modal");
+    if ($modal.length && !$modal.parent().is("body")) {
+      $("body").append($modal);
+    }
+  }
+
+  ensureGiftsModalPortal();
 
   getCart();
   generateRandom();
@@ -40,6 +52,14 @@ $(document).ready(function () {
       )
       .trim();
   }
+
+  function initGiftFormValidation() {
+    if (!$("#giftForm").length || !$.fn.validate) {
+      return;
+    }
+    if ($("#giftForm").data("validator")) {
+      return;
+    }
 
   $("#giftForm").validate({
     rules: {
@@ -116,6 +136,10 @@ $(document).ready(function () {
       return false;
     }
   });
+  }
+
+  initGiftFormValidation();
+  $(window).on("load", initGiftFormValidation);
 
 
 
@@ -128,7 +152,7 @@ $(document).ready(function () {
     getCart();
 
     if (cart.size === 0) {
-      if (!$("#gifts-modal").prop("hidden")) {
+      if (isGiftsModalOpen()) {
         $("body").addClass("gifts-modal-cart-open");
       } else {
         closeCart();
@@ -233,7 +257,7 @@ $(document).ready(function () {
 
     rederCart();
 
-    if (!$("#gifts-modal").prop("hidden")) {
+    if (isGiftsModalOpen()) {
       $("body").addClass("gifts-modal-cart-open");
     }
   });
@@ -248,44 +272,64 @@ $(document).ready(function () {
   });
 
   function openGiftsModal() {
+    ensureGiftsModalPortal();
     const $modal = $("#gifts-modal");
     closeCart();
     $("body").removeClass("gifts-modal-cart-open");
-    $modal.prop("hidden", false).attr("aria-hidden", "false");
+    $modal.removeAttr("hidden").addClass("is-open").attr("aria-hidden", "false");
     $("body").addClass("gifts-modal-open");
     getGifts(0, true);
     rederCart();
   }
 
   function closeGiftsModal() {
-    $("#gifts-modal").prop("hidden", true).attr("aria-hidden", "true");
+    $("#gifts-modal").attr("hidden", "hidden").removeClass("is-open").attr("aria-hidden", "true");
     $("body").removeClass("gifts-modal-open gifts-modal-cart-open");
+  }
+
+  function setBankDetailsVisible(show) {
+    var $bank = $("#gifts-bank");
+    var $section = $("#gifts");
+    if (!$bank.length) {
+      return;
+    }
+
+    if (show) {
+      $bank.removeAttr("hidden").addClass("is-visible").attr("aria-hidden", "false");
+      $section.addClass("bank-open");
+    } else {
+      $bank.attr("hidden", "hidden").removeClass("is-visible").attr("aria-hidden", "true");
+      $section.removeClass("bank-open");
+    }
   }
 
   $(document).on("click", ".js-gifts-cart-toggle", function () {
     $("body").toggleClass("gifts-modal-cart-open");
   });
 
-  $(document).on("click", ".js-gifts-colectivo", function () {
+  $(document).on("click", ".js-gifts-colectivo", function (e) {
+    e.preventDefault();
     openGiftsModal();
   });
 
-  $(document).on("click", ".js-gifts-transfer", function () {
+  $(document).on("click", ".js-gifts-transfer", function (e) {
+    e.preventDefault();
+
     var $bank = $("#gifts-bank");
     var $btn = $(this);
     if (!$bank.length) {
       return;
     }
 
-    var willShow = $bank.prop("hidden");
-    $bank.prop("hidden", !willShow);
-    $bank.attr("aria-hidden", willShow ? "false" : "true");
+    var willShow = !$bank.hasClass("is-visible");
+    setBankDetailsVisible(willShow);
     $btn.attr("aria-expanded", willShow ? "true" : "false");
 
     if (willShow) {
-      $("html, body").animate({
-        scrollTop: $bank.offset().top - 120
-      }, 500);
+      window.requestAnimationFrame(function () {
+        var top = $bank.offset().top - 100;
+        window.scrollTo({ top: top, behavior: "smooth" });
+      });
     }
   });
 
@@ -294,7 +338,7 @@ $(document).ready(function () {
   });
 
   $(document).on("keydown", function (event) {
-    if (event.key !== "Escape" || $("#gifts-modal").prop("hidden")) {
+    if (event.key !== "Escape" || !isGiftsModalOpen()) {
       return;
     }
     // No cerrar el modal si SweetAlert está pidiendo el monto
@@ -406,7 +450,7 @@ $(document).ready(function () {
           iconColor: "#fff",
         });
 
-        if (!$("#gifts-modal").prop("hidden")) {
+        if (isGiftsModalOpen()) {
           $("body").addClass("gifts-modal-cart-open");
         }
       })
@@ -726,7 +770,7 @@ const addToCart = (item) => {
   saveCart();
   rederCart();
 
-  const modalOpen = !$("#gifts-modal").prop("hidden");
+  const modalOpen = isGiftsModalOpen();
   if (modalOpen) {
     $("body").addClass("gifts-modal-cart-open");
   } else {
