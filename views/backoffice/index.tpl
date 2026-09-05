@@ -82,6 +82,7 @@
                         <a class="btn" href="{$_layoutParams.root}backoffice/pareja/{$p.id|escape:'html'}/regalos">Administrar</a>
                         {if $p.slug}
                         <a class="btn btn-ghost" href="{$_layoutParams.root}{$p.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+                        <a class="btn btn-ghost" href="{$_layoutParams.root}{$p.slug|escape:'html'}/lista/pdcgb" target="_blank" rel="noopener noreferrer">Ver lista</a>
                         {/if}
                     </div>
                 </div>

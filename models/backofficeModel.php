@@ -10,6 +10,32 @@ class backofficeModel extends Model
         $this->_db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
+    /**
+     * Regalos pagados de una boda (m_empresa = pareja_id, m_estado = 3).
+     */
+    public function listarRegistrosPagados($parejaId, $limit = 200)
+    {
+        $limit = max(1, min(500, (int) $limit));
+        $sql = "SELECT
+                    m.m_id AS id,
+                    CONCAT(m.m_fecreg, ' ', IFNULL(m.m_hora, '')) AS fechor,
+                    m.m_nombre AS nombre,
+                    m.m_mensaje AS mensaje,
+                    m.m_monto AS monto,
+                    m.m_codigo AS codigo,
+                    m.m_estado AS estado
+                FROM tbl_mensaje m
+                WHERE m.m_empresa = :parejaId
+                  AND m.m_estado = 3
+                ORDER BY m.m_id DESC
+                LIMIT $limit";
+
+        $stmt = $this->_db->prepare($sql);
+        $stmt->bindValue(':parejaId', (int) $parejaId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public function listarAsignaciones($parejaId)
     {
         $sql = "SELECT

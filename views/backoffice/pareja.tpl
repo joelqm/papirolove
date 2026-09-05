@@ -133,6 +133,7 @@
         <div class="actions">
             {if $pareja.slug}
             <a class="btn" href="{$_layoutParams.root}{$pareja.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+            <a class="btn ghost" href="{$_layoutParams.root}{$pareja.slug|escape:'html'}/lista/pdcgb" target="_blank" rel="noopener noreferrer">Ver lista</a>
             {/if}
             <a class="btn ghost" href="{$_layoutParams.root}backoffice">← Bodas</a>
             <a class="btn ghost" href="{$_layoutParams.root}backoffice/catalogo">Catálogo</a>
@@ -150,6 +151,7 @@
 
         <nav class="tabs" aria-label="Secciones de la boda">
             <a class="{if $tab == 'regalos'}active{/if}" href="{$_layoutParams.root}backoffice/pareja/{$pareja.id|escape:'html'}/regalos">Obsequios</a>
+            <a class="{if $tab == 'lista'}active{/if}" href="{$_layoutParams.root}backoffice/pareja/{$pareja.id|escape:'html'}/lista">Lista</a>
             <a class="{if $tab == 'izipay'}active{/if}" href="{$_layoutParams.root}backoffice/pareja/{$pareja.id|escape:'html'}/izipay">Izipay</a>
         </nav>
 
@@ -213,6 +215,47 @@
                     <p class="hint" style="margin-top:.75rem;color:var(--danger);">Faltan claves: completa usuario, pública, privada y HMAC.</p>
                 {/if}
             </form>
+        </div>
+        {elseif $tab == 'lista'}
+        <div class="panel">
+            <h2>Lista de obsequios pagados</h2>
+            <p class="hint">
+                Solo esta boda (ID {$pareja.id|escape:'html'}). Se muestran registros con pago confirmado.
+            </p>
+            {if $lista_url}
+            <p class="actions" style="margin-bottom:1rem;">
+                <a class="btn" href="{$lista_url|escape:'html'}" target="_blank" rel="noopener noreferrer">Abrir lista completa</a>
+                <span class="mono" style="align-self:center;">{$lista_url|escape:'html'}</span>
+            </p>
+            {else}
+            <p class="hint" style="color:var(--danger);">Esta boda no tiene slug; no se puede armar el link de la lista pública.</p>
+            {/if}
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha / Hora</th>
+                            <th>Nombre</th>
+                            <th>Mensaje</th>
+                            <th>Total</th>
+                            <th>Código</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach from=$registros_lista item=r}
+                            <tr>
+                                <td>{$r.fechor|escape:'html'}</td>
+                                <td>{$r.nombre|escape:'html'}</td>
+                                <td>{$r.mensaje|escape:'html'}</td>
+                                <td>S/ {$r.monto|escape:'html'}</td>
+                                <td class="mono">{$r.codigo|escape:'html'}</td>
+                            </tr>
+                        {foreachelse}
+                            <tr><td colspan="5">Aún no hay obsequios pagados para esta boda.</td></tr>
+                        {/foreach}
+                    </tbody>
+                </table>
+            </div>
         </div>
         {else}
         <div class="panel">

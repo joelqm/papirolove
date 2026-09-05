@@ -215,8 +215,13 @@ class backofficeController extends Controller
         }
 
         $tab = strtolower(trim((string) $tab));
-        if ($tab !== 'izipay') {
+        if (!in_array($tab, array('regalos', 'lista', 'izipay'), true)) {
             $tab = 'regalos';
+        }
+
+        $listaUrl = '';
+        if (!empty($pareja['slug'])) {
+            $listaUrl = rtrim(BASE_URL, '/') . '/' . $pareja['slug'] . '/lista/pdcgb';
         }
 
         try {
@@ -245,9 +250,16 @@ class backofficeController extends Controller
             $izipay['sha_tail'] = $sha !== '' ? substr($sha, -8) : '';
         }
 
-        $this->_view->assign('titulo', ($tab === 'izipay' ? 'Izipay' : 'Obsequios') . ' | ' . $pareja['nombre']);
+        $titulosTab = array(
+            'regalos' => 'Obsequios',
+            'lista' => 'Lista',
+            'izipay' => 'Izipay',
+        );
+        $this->_view->assign('titulo', $titulosTab[$tab] . ' | ' . $pareja['nombre']);
         $this->_view->assign('pareja', $pareja);
         $this->_view->assign('tab', $tab);
+        $this->_view->assign('lista_url', $listaUrl);
+        $this->_view->assign('registros_lista', $tab === 'lista' ? $this->_bo->listarRegistrosPagados($parejaId) : array());
         $this->_view->assign('izipay', $izipay);
         $this->_view->assign('izipay_estado', $izipayEstado);
         $this->_view->assign('asignaciones', $this->_bo->listarAsignaciones($parejaId));
