@@ -213,6 +213,10 @@ class backofficeController extends Controller
         if (!$pareja) {
             $this->redireccionar('backoffice');
         }
+        if ($this->parejaTieneColectivo($pareja) === false) {
+            Session::set('bo_flash_error', 'Esta boda solo tiene web pública; no tiene colectivo virtual.');
+            $this->redireccionar('backoffice');
+        }
 
         $tab = strtolower(trim((string) $tab));
         if (!in_array($tab, array('regalos', 'lista', 'izipay'), true)) {
@@ -672,7 +676,18 @@ class backofficeController extends Controller
             return array();
         }
         usort($data, function ($a, $b) {
-            return ((int) $b['id']) - ((int) $a['id']);
+            $idA = isset($a['id']) ? (int) $a['id'] : 0;
+            $idB = isset($b['id']) ? (int) $b['id'] : 0;
+            if ($idA > 0 && $idB > 0) {
+                return $idB - $idA;
+            }
+            if ($idA > 0) {
+                return -1;
+            }
+            if ($idB > 0) {
+                return 1;
+            }
+            return strcmp((string) $a['nombre'], (string) $b['nombre']);
         });
         return $data;
     }
@@ -680,7 +695,18 @@ class backofficeController extends Controller
     private function guardarParejas($parejas)
     {
         usort($parejas, function ($a, $b) {
-            return ((int) $b['id']) - ((int) $a['id']);
+            $idA = isset($a['id']) ? (int) $a['id'] : 0;
+            $idB = isset($b['id']) ? (int) $b['id'] : 0;
+            if ($idA > 0 && $idB > 0) {
+                return $idB - $idA;
+            }
+            if ($idA > 0) {
+                return -1;
+            }
+            if ($idB > 0) {
+                return 1;
+            }
+            return strcmp((string) $a['nombre'], (string) $b['nombre']);
         });
         file_put_contents(
             $this->parejasFile(),
@@ -693,7 +719,13 @@ class backofficeController extends Controller
     {
         $max = 0;
         foreach ($this->leerParejas() as $p) {
-            $max = max($max, (int) $p['id']);
+            if (!isset($p['id'])) {
+                continue;
+            }
+            $id = (int) $p['id'];
+            if ($id > 0) {
+                $max = max($max, $id);
+            }
         }
         return $max + 1;
     }
@@ -1040,27 +1072,46 @@ class backofficeController extends Controller
 
     private function obtenerPareja($parejaId)
     {
+        $parejaId = (int) $parejaId;
+        if ($parejaId < 1) {
+            return null;
+        }
         foreach ($this->leerParejas() as $p) {
-            if ((int) $p['id'] === (int) $parejaId) {
+            if (!isset($p['id'])) {
+                continue;
+            }
+            if ((int) $p['id'] === $parejaId) {
                 return $p;
             }
         }
         return null;
     }
 
+    private function parejaTieneColectivo($pareja)
+    {
+        return isset($pareja['id']) && (int) $pareja['id'] > 0;
+    }
+
     private function enriquecerParejas()
     {
         $out = array();
         foreach ($this->leerParejas() as $p) {
-            $rows = $this->_bo->listarAsignaciones((int) $p['id']);
-            $activos = 0;
-            foreach ($rows as $r) {
-                if ((int) $r['activo'] === 1) {
-                    $activos++;
+            if ($this->parejaTieneColectivo($p) === false) {
+                $p['sin_colectivo'] = true;
+                $p['total'] = 0;
+                $p['activos'] = 0;
+            } else {
+                $p['sin_colectivo'] = false;
+                $rows = $this->_bo->listarAsignaciones((int) $p['id']);
+                $activos = 0;
+                foreach ($rows as $r) {
+                    if ((int) $r['activo'] === 1) {
+                        $activos++;
+                    }
                 }
+                $p['total'] = count($rows);
+                $p['activos'] = $activos;
             }
-            $p['total'] = count($rows);
-            $p['activos'] = $activos;
             $out[] = $p;
         }
         return $out;

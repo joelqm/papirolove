@@ -18,6 +18,7 @@
         .card h2, .panel h2 { margin:0 0 .4rem; font-size:1.05rem; }
         .card p { margin:0 0 .9rem; color:var(--muted); font-size:.88rem; }
         .badge { display:inline-block; background:#1f2937; border:1px solid var(--line); border-radius:999px; padding:.2rem .55rem; font-size:.75rem; color:var(--ok); }
+        .badge-muted { color:var(--muted); }
         a.btn, button { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border:0; border-radius:999px; padding:.55rem 1rem; background:var(--accent); color:#1f2937; font-weight:700; cursor:pointer; font-size:.9rem; }
         a.btn-ghost, button.ghost { background:transparent; color:var(--text); border:1px solid var(--line); }
         form.inline { display:inline; margin:0; }
@@ -76,13 +77,22 @@
             {foreach from=$parejas item=p}
                 <div class="card">
                     <h2>{$p.nombre|escape:'html'}</h2>
+                    {if $p.sin_colectivo}
+                    <p>ID: — · slug: {$p.slug|escape:'html'}</p>
+                    <p><span class="badge badge-muted">Solo web · sin colectivo</span></p>
+                    {else}
                     <p>ID: {$p.id|escape:'html'} · slug: {$p.slug|escape:'html'}</p>
                     <p><span class="badge">{$p.activos|escape:'html'} activos / {$p.total|escape:'html'} total</span></p>
+                    {/if}
                     <div class="actions">
+                        {if !$p.sin_colectivo}
                         <a class="btn" href="{$_layoutParams.root}backoffice/pareja/{$p.id|escape:'html'}/regalos">Administrar</a>
+                        {/if}
                         {if $p.slug}
-                        <a class="btn btn-ghost" href="{$_layoutParams.root}{$p.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+                        <a class="btn{if $p.sin_colectivo} btn-ghost{/if}" href="{$_layoutParams.root}{$p.slug|escape:'html'}" target="_blank" rel="noopener noreferrer">Ver web</a>
+                        {if !$p.sin_colectivo}
                         <a class="btn btn-ghost" href="{$_layoutParams.root}{$p.slug|escape:'html'}/lista/pdcgb" target="_blank" rel="noopener noreferrer">Ver lista</a>
+                        {/if}
                         {/if}
                     </div>
                 </div>
