@@ -1,5 +1,4 @@
 [
-  {"id": 13, "nombre": "Julissa y Rubén", "slug": "julissayruben"},
   {"id": 12, "nombre": "Camila y Diego", "slug": "camilaydiego"},
   {"id": 11, "nombre": "Lizeth y Erick", "slug": "lizethyerick"},
   {"id": 10, "nombre": "Carmen y Gunther", "slug": "carmenygunther"},
@@ -7,9 +6,9 @@
   {"id": 8, "nombre": "Daniela y Jean", "slug": "danielayjean"},
   {"id": 7, "nombre": "Mayte y Andree", "slug": "mayteyandree"},
   {"id": 6, "nombre": "Flavia y Aníbal", "slug": "flaviayanibal"},
-  {"id": 5, "nombre": "Jesyka y Gustavo", "slug": "jesykaygustavo"},
+  {"id": 5, "nombre": "Julissa y Rubén", "slug": "julissayruben"},
   {"id": 4, "nombre": "Paola y Miguel", "slug": "paolaymiguel"},
-  {"id": 3, "nombre": "Zelma y Samuel / María Alejandra y Diego", "slug": "zelmaysamuel"},
+  {"id": 3, "nombre": "María Alejandra y Diego", "slug": "mariaalejandraydiego"},
   {"id": 2, "nombre": "Fernanda y Romme", "slug": "fernandayromme"},
   {"id": 1, "nombre": "Sofía y Gabriel", "slug": "sofiaygabriel"}
 ]
