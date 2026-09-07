@@ -5,6 +5,7 @@
 
 
 {include file="views/fernandayromme/components/loader.tpl"}
+<div id="contenido">
 {include file="views/fernandayromme/components/cart.tpl"}
 {include file="views/fernandayromme/components/hero.tpl"}
 
@@ -19,3 +20,4 @@
 {include file="views/fernandayromme/components/gifts.tpl"}
 
 {include file="views/fernandayromme/components/button-whatsapp.tpl"}
+</div>

@@ -4,6 +4,7 @@
 
 
 {include file="views/shirleyycrysthian/components/loader.tpl"}
+<div id="contenido">
 {include file="views/shirleyycrysthian/components/hero.tpl"}
 {include file="views/shirleyycrysthian/components/history.tpl"}
 {include file="views/shirleyycrysthian/components/information.tpl"}
@@ -15,3 +16,4 @@
     {include file="views/shirleyycrysthian/components/gifts.tpl"}
 </div>
 {include file="views/shirleyycrysthian/components/button-whatsapp.tpl"}
+</div>

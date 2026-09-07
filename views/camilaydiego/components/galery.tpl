@@ -134,25 +134,29 @@
         io.observe(el);
     }
 
-    function boot() {
-        var section = document.getElementById("galery");
-        if (!section) return;
-        whenVisible(section, function () {
-            var tries = 0;
-            (function waitOwl() {
-                if (window.jQuery && typeof jQuery.fn.owlCarousel === "function") {
-                    initGaleryCarousel();
-                    return;
-                }
-                if (++tries < 40) setTimeout(waitOwl, 100);
-            })();
-        });
+    function waitOwlAndInit() {
+        var tries = 0;
+        (function waitOwl() {
+            if (window.jQuery && typeof jQuery.fn.owlCarousel === "function") {
+                initGaleryCarousel();
+                return;
+            }
+            if (++tries < 40) setTimeout(waitOwl, 100);
+        })();
     }
 
+    function bootLazy() {
+        var section = document.getElementById("galery");
+        if (!section) return;
+        whenVisible(section, waitOwlAndInit);
+    }
+
+    document.addEventListener("papiro:content-visible", waitOwlAndInit);
+
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", boot);
+        document.addEventListener("DOMContentLoaded", bootLazy);
     } else {
-        boot();
+        bootLazy();
     }
 })();
 </script>

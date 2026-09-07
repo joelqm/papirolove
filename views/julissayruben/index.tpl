@@ -5,6 +5,7 @@
 
 
 {include file="views/julissayruben/components/loader.tpl"}
+<div id="contenido">
 {include file="views/julissayruben/components/cart.tpl"}
 {include file="views/julissayruben/components/hero.tpl"}
 
@@ -19,3 +20,4 @@
 {include file="views/julissayruben/components/gifts.tpl"}
 
 {include file="views/julissayruben/components/button-whatsapp.tpl"}
+</div>
