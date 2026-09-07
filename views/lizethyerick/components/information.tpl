@@ -2,16 +2,22 @@
 
   <div class="invitation-pattern"></div>
 
+  <div class="info-flower-left" aria-hidden="true"></div>
+
   <div data-aos="fade-up" data-aos-delay="60" class="text-invitation-primary details-intro">
     <p class="details-blessing" data-aos="fade-up" data-aos-delay="80">Con la bendici&oacute;n de Dios y de nuestros padres</p>
 
     <div class="details-parents">
-      <div class="details-parents-col" data-aos="fade-right" data-aos-delay="100">
-        <p>Padres de Lizeth<br>Pr&oacute;ximamente</p>
+      <div class="details-parents-col" data-aos="fade-up" data-aos-delay="100">
+        <p>Vicente Condori Hualpa &amp;<br>Josefina Villavicencio Nina</p>
       </div>
-      <div class="details-parents-col" data-aos="fade-left" data-aos-delay="120">
-        <p>Padres de Erick<br>Pr&oacute;ximamente</p>
-      </div>
+    </div>
+
+    <div class="details-godparents" data-aos="fade-up" data-aos-delay="120">
+      <p class="details-godparents-title">Y la especial compa&ntilde;&iacute;a de nuestros<br>padrinos</p>
+      <p>Helar Machaca Apaza &amp;<br>Agustina Apaza Justo</p>
+      <p>Juan Solari Cahuana &amp;<br>Luz Marina Berno Puma</p>
+      <p>Miguel Arce Valenzuela &amp;<br>Irma Quispe Arpi</p>
     </div>
   </div>
 
@@ -52,10 +58,10 @@
       </div>
       <h3 class="location-type">Ceremonia</h3>
       </div>
-      <p class="location-address location-venue">Parroquia &ldquo;San Juan de la Cruz&rdquo;</p>
-      <p class="location-address">Av. Lambramani 157</p>
-      <p class="location-address">Arequipa - Per&uacute;</p>
-      <p class="location-time">11:30 AM</p>
+      <p class="location-address location-venue">Parroquia San Miguel Arc&aacute;ngel</p>
+      <p class="location-address">Plaza de Cayma N&deg; 200,</p>
+      <p class="location-address">Cayma</p>
+      <p class="location-time">9:30 AM</p>
       <a target="_blank" href="https://maps.app.goo.gl/dgSeaFhEeUQuUWmh8" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
@@ -99,10 +105,10 @@
       </div>
       <h3 class="location-type">Recepci&oacute;n</h3>
       </div>
-      <p class="location-address location-venue">Jardines de Sabandia</p>
-      <p class="location-address">Calle Bajada del Puente de Saband&iacute;a S/N</p>
-      <p class="location-address">Arequipa - Per&uacute;</p>
-      <p class="location-time">2:00 PM</p>
+      <p class="location-address location-venue">Laguna Dorada - Lado A</p>
+      <p class="location-address">Av. Primavera S/N altura Km6</p>
+      <p class="location-address">de la Av. Aviaci&oacute;n</p>
+      <p class="location-time">12:00 PM</p>
       <a target="_blank" href="https://maps.app.goo.gl/XXK1KUX5xsPwfjgS9" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
@@ -115,18 +121,29 @@
   }
 
   #info.invitation-card {
-    background-color: #d8e4eb;
-    background-image: url("{$_layoutParams.root}views/lizethyerick/imgs/background_2.webp");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: none;
     padding: 3.75rem 1.25rem 4.5rem;
-    color: #908C70;
+    color: #6B665E;
     position: relative;
   }
 
   #info.invitation-card::before {
     content: none;
+  }
+
+  #info .info-flower-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: min(280px, 30vw);
+    background-image: url("{$_layoutParams.root}views/lizethyerick/imgs/imagen_dresscode_izq.webp");
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-size: 100% auto;
+    z-index: 0;
+    pointer-events: none;
   }
 
   #info .invitation-pattern {
@@ -149,11 +166,11 @@
   #info .details-intro p,
   #info .location-address,
   #info .location-time {
-    color: #908C70;
+    color: #6B665E;
     font-family: 'Athelas-Regular', Georgia, serif;
     font-weight: normal;
     margin: 0;
-    -webkit-text-stroke: 0.3px #908C70;
+    -webkit-text-stroke: 0.3px #6B665E;
   }
 
   #info .details-intro p.details-blessing {
@@ -161,7 +178,7 @@
     letter-spacing: 2.2px;
     text-transform: uppercase;
     margin: 0 auto 1.25rem;
-    -webkit-text-stroke: 0.55px #908C70;
+    -webkit-text-stroke: 0.55px #6B665E;
     paint-order: stroke fill;
   }
 
@@ -187,8 +204,39 @@
     letter-spacing: 1.35px;
     text-transform: uppercase;
     text-align: center;
-    -webkit-text-stroke: 0.55px #908C70;
+    -webkit-text-stroke: 0.55px #6B665E;
     paint-order: stroke fill;
+  }
+
+  #info .details-godparents {
+    width: 100%;
+    max-width: 30rem;
+    margin: 1.5rem auto 0.5rem;
+    text-align: center;
+  }
+
+  #info .details-godparents p {
+    font-family: 'Athelas-Regular', Georgia, serif;
+    color: #6B665E;
+    font-size: 1.05rem;
+    line-height: 1.45;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 1rem;
+    -webkit-text-stroke: 0.55px #6B665E;
+    paint-order: stroke fill;
+  }
+
+  #info .details-godparents p:last-child {
+    margin-bottom: 0;
+  }
+
+  #info .details-godparents-title {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.25rem !important;
+    -webkit-text-stroke: 0.55px #6B665E;
   }
 
   #info .locations {
@@ -222,14 +270,14 @@
 
   #info .location-type {
     font-family: 'Athelas-Regular', Georgia, serif;
-    color: #908C70;
+    color: #6B665E;
     font-size: 2.25rem;
     margin: 0;
     font-weight: normal;
     line-height: 1.05;
     letter-spacing: 3px;
     text-transform: uppercase;
-    -webkit-text-stroke: 0.35px #908C70;
+    -webkit-text-stroke: 0.35px #6B665E;
   }
 
   #info .location-venue {
@@ -239,8 +287,8 @@
     margin: 0 0 0.3rem;
     letter-spacing: 0;
     text-transform: none;
-    color: #908C70;
-    -webkit-text-stroke: 0.45px #908C70;
+    color: #6B665E;
+    -webkit-text-stroke: 0.45px #6B665E;
   }
 
   #info .location-address:not(.location-venue) {
@@ -249,7 +297,7 @@
     text-transform: uppercase;
     line-height: 1.3;
     margin-bottom: 0.25rem;
-    -webkit-text-stroke: 0.55px #908C70;
+    -webkit-text-stroke: 0.55px #6B665E;
     paint-order: stroke fill;
   }
 
@@ -262,8 +310,8 @@
 
   #info .location-button {
     display: inline-block;
-    background-color: #CBD7DF;
-    color: #908C70 !important;
+    background-color: #94856F;
+    color: #fff !important;
     padding: 0.55rem 1.75rem;
     border-radius: 999px;
     text-decoration: none;
@@ -277,7 +325,7 @@
   #info .location-button:hover {
     opacity: 0.88;
     text-decoration: none;
-    color: #908C70 !important;
+    color: #fff !important;
   }
 
   @media (max-width: 900px) {
@@ -307,19 +355,15 @@
       padding: 2.75rem 1rem 3.5rem;
     }
 
-    #info.invitation-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.52);
-      pointer-events: none;
-      z-index: 0;
+    #info .info-flower-left {
+      width: min(160px, 38vw);
+      background-size: 100% auto;
     }
 
     #info .details-intro p.details-blessing {
       font-size: 0.92rem;
       letter-spacing: 1.8px;
-      -webkit-text-stroke: 0.45px #908C70;
+      -webkit-text-stroke: 0.45px #6B665E;
     }
 
     #info .details-parents {
@@ -330,7 +374,24 @@
       font-size: 0.86rem;
       letter-spacing: 1px;
       line-height: 1.35;
-      -webkit-text-stroke: 0.4px #908C70;
+      -webkit-text-stroke: 0.4px #6B665E;
+    }
+
+    #info .details-godparents {
+      margin-top: 1.25rem;
+    }
+
+    #info .details-godparents p {
+      font-size: 0.86rem;
+      letter-spacing: 1px;
+      line-height: 1.35;
+      -webkit-text-stroke: 0.4px #6B665E;
+    }
+
+    #info .details-godparents-title {
+      font-size: 0.92rem;
+      letter-spacing: 1.6px;
+      margin-bottom: 1rem !important;
     }
 
     #info .location-card {
@@ -340,12 +401,12 @@
     #info .location-type {
       font-size: 1.55rem;
       letter-spacing: 2px;
-      -webkit-text-stroke: 0.45px #908C70;
+      -webkit-text-stroke: 0.45px #6B665E;
     }
 
     #info .location-venue {
       font-size: 2rem;
-      -webkit-text-stroke: 0.7px #908C70;
+      -webkit-text-stroke: 0.7px #6B665E;
       paint-order: stroke fill;
       font-variant-ligatures: none;
     }
@@ -353,7 +414,7 @@
     #info .location-address:not(.location-venue),
     #info .location-time {
       font-size: 0.86rem;
-      -webkit-text-stroke: 0.4px #908C70;
+      -webkit-text-stroke: 0.4px #6B665E;
     }
   }
 

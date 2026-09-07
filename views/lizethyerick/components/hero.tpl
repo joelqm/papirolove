@@ -86,7 +86,7 @@
         <h1 class="couple-name" data-aos="fade-up" data-aos-delay="80">Lizeth <span style="margin-left: 1rem;">&</span>
             Erick</h1>
         <p class="wedding-date-2" data-aos="fade-up" data-aos-delay="140">
-            S&#193;BADO <span class="date-num">24</span> DE OCTUBRE DE <span class="date-num">2026</span>
+            S&#193;BADO <span class="date-num">26</span> DE SEPTIEMBRE DEL <span class="date-num">2026</span>
         </p>
     </div>
 

@@ -27,7 +27,7 @@
 
   #new-history .history-title-big {
     font-family: 'parfumerie-script', cursive;
-    color: #908C70;
+    color: #6B665E;
     margin: 0 0 1.75rem;
     font-weight: normal;
     line-height: 1.1;
@@ -42,7 +42,7 @@
     font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
     font-size: 1.05rem;
     line-height: 1.65;
-    color: #908C70;
+    color: #6B665E;
     text-align: center;
     margin: 0 0 1.25rem;
     font-weight: 400;
@@ -64,7 +64,7 @@
 
     #new-history .history-title-big {
       margin-bottom: 1.5rem;
-      -webkit-text-stroke: 0.7px #908C70;
+      -webkit-text-stroke: 0.7px #6B665E;
       paint-order: stroke fill;
     }
 
@@ -72,7 +72,7 @@
       font-family: 'Athelas-Regular', Georgia, serif;
       font-size: 1.08rem;
       line-height: 1.65;
-      -webkit-text-stroke: 0.35px #908C70;
+      -webkit-text-stroke: 0.35px #6B665E;
       paint-order: stroke fill;
     }
   }
@@ -95,9 +95,8 @@
     <h2 class="history-title-big" data-aos="fade-up" data-aos-delay="80">Nuestra Historia</h2>
 
     <div class="history-content">
-      <p data-aos="fade-up" data-aos-delay="100">Nos conocimos a trav&eacute;s de nuestra amiga en com&uacute;n. Sin buscarlo, nos encontramos y, desde entonces, no volvimos a separarnos.</p>
-      <p data-aos="fade-up" data-aos-delay="120">Compartimos grandes historias, muchos viajes y aventuras, y por ello decidimos unir nuestros caminos para crecer de la mano d&iacute;a a d&iacute;a.</p>
-      <p data-aos="fade-up" data-aos-delay="140">Descubrimos que el amor no es solo un sentimiento, sino la decisi&oacute;n diaria de hacernos felices. Hoy elegimos caminar juntos para siempre.</p>
+      <p data-aos="fade-up" data-aos-delay="100">Hace 10 a&ntilde;os, la vida quiso que nuestros caminos se cruzaran en un lugar tan inesperado como un banco. Un 21 de septiembre de 2016 comenz&oacute; nuestra historia: &eacute;l, con su carisma, sus ocurrencias y esa empat&iacute;a que siempre me conquist&oacute;; y yo, con mis peque&ntilde;os detalles y esa forma de demostrarle, d&iacute;a a d&iacute;a, cu&aacute;nto me importaba.</p>
+      <p data-aos="fade-up" data-aos-delay="120">Desde entonces hemos compartido risas, aprendizajes, sue&ntilde;os y tantos momentos que hoy nos traen hasta aqu&iacute;. Diez a&ntilde;os despu&eacute;s, seguimos eligi&eacute;ndonos, pero esta vez para decir s&iacute; para toda la vida.</p>
     </div>
 
   </div>

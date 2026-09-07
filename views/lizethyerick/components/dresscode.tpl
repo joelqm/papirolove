@@ -16,19 +16,10 @@
                  data-aos="zoom-in"
                  data-aos-delay="105">
 
-            <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">ELLOS: Traje y Corbata</p>
-            <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">ELLAS: Vestido Largo</p>
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">Hombres: Terno</p>
+            <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">Mujeres: Vestido Largo</p>
+            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="160">Se reserva el blanco y beige<br>para los novios</p>
         </div>
-
-        <img class="dc-bottom-image"
-             src="{$_layoutParams.root}views/lizethyerick/imgs/dress_code_1.webp"
-             alt=""
-             width="989"
-             height="610"
-             loading="lazy"
-             decoding="async"
-             data-aos="zoom-in"
-             data-aos-delay="160">
 
     </div>
 
@@ -39,7 +30,7 @@
     #dresscode.dresscode-section {
         background: #fff;
         padding: 0;
-        color: #908C70;
+        color: #6B665E;
     }
 
     #dresscode .dresscode-inner {
@@ -56,7 +47,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        color: #908C70;
+        color: #6B665E;
         margin-bottom: 0.65rem;
         gap: 0;
     }
@@ -64,7 +55,7 @@
     #dresscode .dc-title {
         font-family: 'parfumerie-script', cursive;
         font-weight: normal;
-        color: #908C70;
+        color: #6B665E;
         margin: 0;
         line-height: 1.05;
     }
@@ -75,9 +66,9 @@
         font-weight: normal;
         letter-spacing: 2.5px;
         text-transform: uppercase;
-        color: #908C70;
+        color: #6B665E;
         margin: 0.2rem 0 0.4rem;
-        -webkit-text-stroke: 0.4px #908C70;
+        -webkit-text-stroke: 0.4px #6B665E;
         paint-order: stroke fill;
     }
 
@@ -93,19 +84,17 @@
         font-size: 1.05rem;
         font-weight: normal;
         letter-spacing: 1.5px;
-        color: #908C70;
+        color: #6B665E;
         margin: 0;
         line-height: 1.2;
-        -webkit-text-stroke: 0.4px #908C70;
+        -webkit-text-stroke: 0.4px #6B665E;
         paint-order: stroke fill;
+        text-transform: uppercase;
     }
 
-    #dresscode .dc-bottom-image {
-        width: 100%;
-        max-width: 520px;
-        height: auto;
-        display: block;
-        margin: 0.35rem auto 0;
+    #dresscode .dc-rule-note {
+        margin-top: 0.85rem;
+        line-height: 1.45;
     }
 
     @media (max-width: 768px) {
@@ -114,7 +103,7 @@
         }
 
         #dresscode .dc-title {
-            -webkit-text-stroke: 0.85px #908C70;
+            -webkit-text-stroke: 0.85px #6B665E;
             paint-order: stroke fill;
             font-variant-ligatures: none;
         }
@@ -122,7 +111,7 @@
         #dresscode .dc-subtitle {
             font-size: 0.92rem;
             margin: 0.15rem 0 0.35rem;
-            -webkit-text-stroke: 0.4px #908C70;
+            -webkit-text-stroke: 0.4px #6B665E;
         }
 
         #dresscode .dc-illustration {
@@ -132,7 +121,7 @@
 
         #dresscode .dc-rule {
             font-size: 0.9rem;
-            -webkit-text-stroke: 0.4px #908C70;
+            -webkit-text-stroke: 0.4px #6B665E;
         }
     }
 

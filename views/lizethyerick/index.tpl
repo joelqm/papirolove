@@ -15,11 +15,15 @@
 {include file="views/lizethyerick/components/galery.tpl"}
 
 
-<div class="dresscode-attendance-wrapper" data-aos="fade-up">
-    {include file="views/lizethyerick/components/dresscode.tpl"}
-</div>
+<div class="dresscode-gifts-wrapper">
+    <div class="dresscode-gifts-flower-right" aria-hidden="true"></div>
 
-{include file="views/lizethyerick/components/gifts.tpl"}
+    <div class="dresscode-attendance-wrapper" data-aos="fade-up">
+        {include file="views/lizethyerick/components/dresscode.tpl"}
+    </div>
+
+    {include file="views/lizethyerick/components/gifts.tpl"}
+</div>
 {include file="views/lizethyerick/components/attendance.tpl"}
 
 <section class="closing-photo" aria-label="Foto final" data-aos="zoom-in">

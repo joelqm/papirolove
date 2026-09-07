@@ -1,6 +1,6 @@
 <style>
   .countdown-banner {
-    background: #908C70;
+    background: #6B665E;
     padding: 3.5rem 1.5rem 3.75rem;
     text-align: center;
     color: #fff;

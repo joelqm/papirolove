@@ -20,28 +20,13 @@
                     <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
                         <p class="gifts-bank-line">Cuenta en Soles</p>
                         <p class="gifts-bank-line">BCP</p>
-                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
-                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
-
-                        <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
-                        <p class="gifts-bank-line">BCP</p>
-                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
-                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
+                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-91541177-0-30</span></p>
+                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221519154117703026</span></p>
                     </div>
                 </details>
             </div>
         </div>
 
-        <img class="gifts-cats"
-             src="{$_layoutParams.root}views/lizethyerick/imgs/regalos_1.webp"
-             alt=""
-             width="509"
-             height="540"
-             loading="lazy"
-             decoding="async"
-             aria-hidden="true"
-             data-aos="fade-left"
-             data-aos-delay="160">
     </div>
 
 </div>
@@ -93,7 +78,7 @@
 
 <style>
     #gifts.gift-container {
-        background: #CFB89D;
+        background: #6B665E;
         color: #fff;
         padding: 3.75rem 1.25rem 4.5rem;
         position: relative;
@@ -112,7 +97,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-bottom: 7rem;
+        padding-bottom: 2rem;
     }
 
     #gifts .gifts-title {
@@ -163,8 +148,8 @@
         padding: 0.55rem 1.6rem;
         border: none;
         border-radius: 999px;
-        background: #CBD7DF;
-        color: #908C70;
+        background: #94856F;
+        color: #fff;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.95rem;
         letter-spacing: 0.5px;
@@ -214,10 +199,6 @@
         overflow: visible;
     }
 
-    #gifts.gift-container.bank-open .gifts-cats {
-        opacity: 0.25;
-    }
-
     @keyframes gifts-bank-reveal {
         from {
             opacity: 0;
@@ -262,16 +243,6 @@
 
     #gifts .gifts-bank-line--spaced {
         margin-top: 0.35rem;
-    }
-
-    #gifts .gifts-cats {
-        position: absolute;
-        right: -12.75rem;
-        bottom: 0;
-        width: min(220px, 52vw);
-        height: auto;
-        pointer-events: none;
-        z-index: 2;
     }
 
     .gifts-modal {
@@ -344,7 +315,7 @@
         right: 0.85rem;
         border: none;
         background: transparent;
-        color: #908C70;
+        color: #6B665E;
         font-size: 2rem;
         line-height: 1;
         cursor: pointer;
@@ -367,7 +338,7 @@
         font-size: 1.35rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: #908C70;
+        color: #6B665E;
         margin: 0;
         line-height: 1.2;
     }
@@ -380,10 +351,10 @@
         min-width: 44px;
         min-height: 44px;
         padding: 0.4rem 0.75rem;
-        border: 1px solid #CBD7DF;
+        border: 1px solid #94856F;
         border-radius: 999px;
         background: #fff;
-        color: #908C70;
+        color: #6B665E;
         cursor: pointer;
     }
 
@@ -395,7 +366,7 @@
         height: 1.35rem;
         padding: 0 0.3rem;
         border-radius: 999px;
-        background: #CFB89D;
+        background: #6B665E;
         color: #fff;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.75rem;
@@ -466,7 +437,7 @@
         justify-content: center;
         gap: 0.75rem;
         background: rgba(255, 255, 255, 0.92);
-        color: #908C70;
+        color: #6B665E;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.95rem;
         letter-spacing: 0.5px;
@@ -480,7 +451,7 @@
         width: 42px;
         height: 42px;
         border: 3px solid #e5dfd7;
-        border-top-color: #CFB89D;
+        border-top-color: #6B665E;
         border-radius: 50%;
         animation: gifts-spin 0.75s linear infinite;
     }
@@ -565,13 +536,13 @@
     .gifts-modal__products-grid .product-info > p {
         margin: 0 !important;
         line-height: 1.25;
-        color: #908C70;
+        color: #6B665E;
         font-size: 0.88rem;
     }
 
     .gifts-modal__products-grid .product-price {
         font-size: 0.95rem !important;
-        color: #908C70 !important;
+        color: #6B665E !important;
     }
 
     .gifts-modal__products-grid .product-progress {
@@ -594,7 +565,7 @@
         padding: 0.55rem 0.75rem !important;
         border: none !important;
         border-radius: 999px !important;
-        background: #CFB89D !important;
+        background: #6B665E !important;
         color: #fff !important;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.8rem !important;
@@ -621,7 +592,7 @@
         font-size: 1rem;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #908C70;
+        color: #6B665E;
     }
 
     .gifts-modal__cart-items {
@@ -680,7 +651,7 @@
         justify-content: space-between;
         align-items: center;
         font-family: 'Athelas-Regular', Georgia, serif;
-        color: #908C70;
+        color: #6B665E;
         margin-bottom: 0.55rem;
         font-size: 0.95rem;
     }
@@ -694,7 +665,7 @@
         width: 100%;
         margin-top: 0;
         border-radius: 999px;
-        background: #908C70;
+        background: #6B665E;
         font-size: 0.88rem;
         letter-spacing: 0.5px;
     }
@@ -707,8 +678,8 @@
     }
 
     .gifts-modal__products .category-button.primary {
-        background-color: #CBD7DF;
-        color: #908C70;
+        background-color: #94856F;
+        color: #6B665E;
         border: none;
     }
 
@@ -753,12 +724,7 @@
         }
 
         #gifts .gifts-content {
-            padding-bottom: 6.5rem;
-        }
-
-        #gifts .gifts-cats {
-            width: min(175px, 46vw);
-            right: -1.25rem;
+            padding-bottom: 2rem;
         }
 
         .gifts-modal {
@@ -873,13 +839,8 @@
             font-size: 0.88rem;
         }
 
-        #gifts .gifts-cats {
-            width: min(150px, 40vw);
-            right: -0.5rem;
-        }
-
         #gifts .gifts-content {
-            padding-bottom: 10.5rem;
+            padding-bottom: 2rem;
         }
     }
 </style>

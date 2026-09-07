@@ -24,10 +24,10 @@
 {literal}
 <style>
     #attendance.attendance-section {
-        background: #CBD7DF;
+        background: #fff;
         padding: 3.5rem 1.25rem 3.75rem;
         text-align: center;
-        color: #908C70;
+        color: #94856F;
     }
 
     #attendance .attendance-inner {
@@ -41,7 +41,7 @@
     #attendance .attendance-title {
         font-family: 'parfumerie-script', cursive;
         font-weight: normal;
-        color: #908C70;
+        color: #94856F;
         margin: 0 0 1.25rem;
         line-height: 1.05;
         font-variant-ligatures: none;
@@ -53,10 +53,10 @@
         font-size: 0.95rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: #908C70;
+        color: #94856F;
         margin: 0 0 1.35rem;
         line-height: 1.45;
-        -webkit-text-stroke: 0.35px #908C70;
+        -webkit-text-stroke: 0.35px #94856F;
         paint-order: stroke fill;
     }
 
@@ -74,7 +74,7 @@
         min-width: 150px;
         padding: 0.55rem 1.6rem;
         border-radius: 999px;
-        background: #CFB89D;
+        background: #94856F;
         color: #fff !important;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.95rem;
@@ -97,7 +97,7 @@
 
         #attendance .attendance-title {
             margin-bottom: 1rem;
-            -webkit-text-stroke: 0.85px #908C70;
+            -webkit-text-stroke: 0.85px #94856F;
             paint-order: stroke fill;
             font-variant-ligatures: none;
             font-feature-settings: "liga" 0, "clig" 0;
@@ -106,7 +106,7 @@
         #attendance .attendance-text {
             font-size: 0.88rem;
             margin-bottom: 1.15rem;
-            -webkit-text-stroke: 0.4px #908C70;
+            -webkit-text-stroke: 0.4px #94856F;
         }
     }
 

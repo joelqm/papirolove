@@ -114,8 +114,8 @@
     --button-color: #333;
     --button-hover-scale: 110%;
     --footer-color: #b57966;
-    --nav-bg: #CBD7DF;
-    --nav-text: #908C70;
+    --nav-bg: #94856F;
+    --nav-text: #fff;
     --primary-color: #99948C;
     --primary-ligth-color: #f9f4ef;
     --secondary-color: #555;
@@ -173,7 +173,7 @@ body {
     #dresscode .dc-title,
     #attendance .attendance-title,
     #new-history .history-title-big {
-        -webkit-text-stroke: 0.85px #908C70;
+        -webkit-text-stroke: 0.85px #6B665E;
     }
 
     #gifts .gifts-title {
@@ -182,7 +182,7 @@ body {
 
     .galery .galery-title,
     .history-title-small-2.galery-title {
-        -webkit-text-stroke: 0.85px #908C70;
+        -webkit-text-stroke: 0.85px #6B665E;
     }
 }
 
@@ -558,8 +558,8 @@ body.aos-broken [data-aos] {
 
 .button-calendar {
     font-family: "Athelas-Regular", Georgia, serif;
-    background-color: #CBD7DF;
-    color: #908C70;
+    background-color: #94856F;
+    color: #fff;
     margin-top: 0;
     margin-bottom: 0;
     font-weight: normal;
@@ -581,8 +581,8 @@ body.aos-broken [data-aos] {
     font-family: "Athelas-Regular", Georgia, serif;
     font-size: 1.05rem;
     line-height: 1.25;
-    background: #CBD7DF;
-    color: #908C70;
+    background: #94856F;
+    color: #fff;
     border: none;
     border-radius: 999px;
     padding: 0.8rem 1.15rem;
@@ -618,6 +618,7 @@ body.aos-broken [data-aos] {
     flex-shrink: 0;
     object-fit: contain;
     display: block;
+    filter: brightness(0) invert(1);
 }
 
 .hero-action-btn svg {
@@ -743,7 +744,7 @@ body.aos-broken [data-aos] {
     padding: 0;
     display: block;
     position: relative;
-    color: #908C70;
+    color: #6B665E;
     text-align: center;
 }
 
@@ -1010,7 +1011,7 @@ body.aos-broken [data-aos] {
     margin-bottom: 3.5rem;
 }
 
-/* Detalles — capa blanca solo en móvil (ver information.tpl) */
+/* Detalles — sección ceremonia con imagen lateral izquierda */
 #info.invitation-card {
     position: relative;
 }
@@ -1019,17 +1020,6 @@ body.aos-broken [data-aos] {
 #info .locations {
     position: relative;
     z-index: 1;
-}
-
-@media (max-width: 768px) {
-    #info.invitation-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(255, 255, 255, 0.52);
-        pointer-events: none;
-        z-index: 0;
-    }
 }
 
 .text-invitation-secondary {
@@ -1363,7 +1353,7 @@ body.aos-broken [data-aos] {
 .galery {
     width: 100%;
     padding: 0;
-    background: #908C70;
+    background: #6B665E;
     position: relative;
     overflow: hidden;
 }
@@ -1414,7 +1404,7 @@ body.aos-broken [data-aos] {
     padding: 0;
     display: flex;
     position: relative;
-    color: #908C70;
+    color: #6B665E;
     flex-direction: column;
     text-align: center;
 }
@@ -2228,6 +2218,11 @@ footer {
 
 /* Media Query: Max 700px (fondo hero móvil) */
 @media (max-width: 700px) {
+    #loader {
+        background-image: url("../imgs/preboda_mobiles.webp");
+        background-position: center center;
+    }
+
     .background {
         background-image: url("../imgs/preboda-2-original.webp");
         background-position: center center;
@@ -2864,6 +2859,34 @@ footer {
     }
 }
 
+/* ===== WRAPPER: DRESSCODE + REGALOS (flor derecha espejo) ===== */
+.dresscode-gifts-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.dresscode-gifts-flower-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: min(280px, 30vw);
+    background-image: url("../imgs/imagen_dresscode_izq.webp");
+    background-repeat: repeat-y;
+    background-position: left top;
+    background-size: 100% auto;
+    transform: scaleX(-1);
+    transform-origin: right center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.dresscode-gifts-wrapper .dresscode-attendance-wrapper,
+.dresscode-gifts-wrapper #gifts.gift-container {
+    position: relative;
+    z-index: 1;
+}
+
 /* ===== WRAPPER: DRESSCODE + ASISTENCIA ===== */
 .dresscode-attendance-wrapper {
     position: relative;
@@ -2945,6 +2968,10 @@ footer {
     #dresscode .dresscode-inner {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .dresscode-gifts-flower-right {
+        width: min(160px, 38vw);
     }
 }
 

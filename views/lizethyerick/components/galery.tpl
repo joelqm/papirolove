@@ -2,7 +2,7 @@
     <div class="container-galery" data-aos="zoom-in" data-aos-delay="120">
         <div class="owl-carousel owl-theme galery-carousel">
             <div class="item" data-aos="zoom-in" data-aos-delay="60">
-                <img src="{$_layoutParams.root}views/lizethyerick/imgs/preboda-1.webp"
+                <img src="{$_layoutParams.root}views/lizethyerick/imgs/background_3_background_mobil.webp"
                      alt="Lizeth y Erick"
                      width="870"
                      height="1200"
@@ -10,7 +10,7 @@
                      decoding="async">
             </div>
             <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="{$_layoutParams.root}views/lizethyerick/imgs/preboda-2.webp"
+                <img src="{$_layoutParams.root}views/lizethyerick/imgs/background_3_background_mobil.webp"
                      alt="Lizeth y Erick"
                      width="540"
                      height="723"
@@ -18,7 +18,7 @@
                      decoding="async">
             </div>
             <div class="item" data-aos="zoom-in" data-aos-delay="140">
-                <img src="{$_layoutParams.root}views/lizethyerick/imgs/preboda-3.webp"
+                <img src="{$_layoutParams.root}views/lizethyerick/imgs/background_3_background_mobil.webp"
                      alt="Lizeth y Erick"
                      width="933"
                      height="1400"
@@ -31,7 +31,7 @@
 
 <style>
   #galery.galery {
-    background: #908C70;
+    background: #6B665E;
     padding: 2.75rem 0 3.25rem;
   }
 

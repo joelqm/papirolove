@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var targetDate = new Date("October 24, 2026 00:00:00").getTime();
+  var targetDate = new Date("September 26, 2026 00:00:00").getTime();
 
   function padTwo(value) {
     return String(value).padStart(2, "0");
