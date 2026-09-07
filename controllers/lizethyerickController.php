@@ -34,6 +34,17 @@ class lizethyerickController extends Controller
 	public function index()
 	{
 		$this->_view->assign('titulo', 'Lizeth y Erick');
+		$this->_view->renderContent('proximamente');
+	}
+
+	public function demo()
+	{
+		$this->renderSitio();
+	}
+
+	private function renderSitio()
+	{
+		$this->_view->assign('titulo', 'Lizeth y Erick');
 
 		$ps_k = $this->_lizethyerick->keysEmp($this->_key);
 
@@ -41,18 +52,6 @@ class lizethyerickController extends Controller
 		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
 		$this->_view->renderContent('index');
 	}
-
-
-	// public function test()
-	// {
-	// 	$this->_view->assign('titulo', 'Lizeth y Erick');
-
-	// 	$ps_k = $this->_lizethyerick->keysEmp($this->_key);
-
-	// 	$this->_view->assign('pk', $ps_k['defpk']);
-	// 	$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
-	// 	$this->_view->renderContent('index');
-	// }
 
 
 	public function guardarMensaje()
