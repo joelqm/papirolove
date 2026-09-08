@@ -33,13 +33,12 @@ class lizethyerickController extends Controller
 
 	public function index()
 	{
-		$this->_view->assign('titulo', 'Lizeth y Erick');
-		$this->_view->renderContent('proximamente');
+		$this->renderSitio();
 	}
 
 	public function demo()
 	{
-		$this->renderSitio();
+		$this->redireccionar('lizethyerick');
 	}
 
 	private function renderSitio()
