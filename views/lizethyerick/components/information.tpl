@@ -62,7 +62,7 @@
       <p class="location-address">Plaza de Cayma N&deg; 200,</p>
       <p class="location-address">Cayma</p>
       <p class="location-time">9:30 AM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/dgSeaFhEeUQuUWmh8" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
+      <a target="_blank" href="https://maps.app.goo.gl/X8PapHoAtwxS2nqD7" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
     <div class="location-card" data-aos="fade-left" data-aos-delay="180">
@@ -109,7 +109,7 @@
       <p class="location-address">Av. Primavera S/N altura Km6</p>
       <p class="location-address">de la Av. Aviaci&oacute;n</p>
       <p class="location-time">12:00 PM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/XXK1KUX5xsPwfjgS9" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
+      <a target="_blank" href="https://maps.app.goo.gl/ESUrqBW6LpBnLUaq6" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
 

@@ -9,7 +9,7 @@
             <span class="attendance-date">30.09.26</span>
         </p>
 
-        <a href="https://wa.link/8e8zur"
+        <a href="https://wa.link/04ocft"
            class="attendance-btn"
            data-aos="zoom-in"
            data-aos-delay="140"

@@ -171,7 +171,7 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/csQShipCnveLmcYR8`;
+  const url = `https://calendar.app.google/z71bdeXtAvCYtNaZ8`;
 
   window.open(url, "_blank");
 
