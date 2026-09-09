@@ -444,9 +444,9 @@ body.aos-broken [data-aos] {
     letter-spacing: 1px;
     line-height: 1.05;
     font-weight: normal;
-    -webkit-text-stroke: 0.55px #fff;
+    -webkit-text-stroke: 0.9px #fff;
     paint-order: stroke fill;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
 .couple-name.show {
@@ -482,6 +482,9 @@ body.aos-broken [data-aos] {
     margin-top: 1.1rem;
     text-transform: uppercase;
     line-height: 1.5;
+    -webkit-text-stroke: 0.5px #fff;
+    paint-order: stroke fill;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .wedding-date-2 .date-num {
@@ -2368,6 +2371,8 @@ footer {
         font-size: 4.5rem;
         position: static;
         top: auto;
+        -webkit-text-stroke: 1px #fff;
+        paint-order: stroke fill;
     }
 
     #couple-name-2 {
@@ -2385,7 +2390,9 @@ footer {
         margin-top: 0.9rem;
         font-weight: normal;
         color: #fff !important;
-        -webkit-text-stroke: 0;
+        -webkit-text-stroke: 0.45px #fff;
+        paint-order: stroke fill;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     }
 
     .button-calendar,
@@ -2770,9 +2777,9 @@ footer {
         max-width: 92vw;
         padding: 0 0.5rem;
         box-sizing: border-box;
-        -webkit-text-stroke: 1px #fff;
+        -webkit-text-stroke: 1.2px #fff;
         paint-order: stroke fill;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
     }
 
     .wedding-date-2,
@@ -2784,9 +2791,9 @@ footer {
     .wedding-date-2 {
         font-weight: normal !important;
         color: #fff !important;
-        -webkit-text-stroke: 0.45px #fff;
+        -webkit-text-stroke: 0.65px #fff;
         paint-order: stroke fill;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
 
     .button-calendar,

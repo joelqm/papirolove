@@ -26,9 +26,9 @@
             margin-top: 0.85rem !important;
             font-size: 0.92rem !important;
             letter-spacing: 1.5px !important;
-            -webkit-text-stroke: 0.45px #fff;
+            -webkit-text-stroke: 0.65px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .hero-actions {
@@ -55,9 +55,9 @@
 
         .couple-name {
             font-size: 4rem;
-            -webkit-text-stroke: 1px #fff;
+            -webkit-text-stroke: 1.2px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
         }
     }
 

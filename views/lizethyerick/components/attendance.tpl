@@ -6,7 +6,7 @@
         <p class="attendance-text" data-aos="fade-up" data-aos-delay="100">
             Agradeceremos confirmar<br>
             tu asistencia hasta el<br>
-            <span class="attendance-date">19 DE SET.</span>
+            <span class="attendance-date">19.09.26</span>
         </p>
 
         <a href="https://wa.link/04ocft"
