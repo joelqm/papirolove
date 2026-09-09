@@ -93,7 +93,7 @@
     <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
         <button type="button" class="hero-action-btn hero-action-btn--song js-song-player" aria-label="Reproducir nuestra canción">
             <span>Nuestra canción</span>
-            <img class="hero-action-icon"
+            <img class="hero-action-icon hero-action-icon--song"
                  src="{$_layoutParams.root}views/lizethyerick/imgs/icono_cancion.svg"
                  alt=""
                  aria-hidden="true">

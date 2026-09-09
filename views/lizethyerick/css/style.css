@@ -624,6 +624,10 @@ body.aos-broken [data-aos] {
     filter: brightness(0) invert(1);
 }
 
+.hero-action-icon--song {
+    filter: none;
+}
+
 .hero-action-btn svg {
     width: 22px;
     height: 22px;
