@@ -39,13 +39,15 @@
   }
 
   #new-history .history-content p {
-    font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
+    font-family: 'Athelas-Regular', Georgia, serif;
     font-size: 1.05rem;
     line-height: 1.65;
     color: #6B665E;
     text-align: center;
     margin: 0 0 1.25rem;
-    font-weight: 400;
+    font-weight: normal;
+    -webkit-text-stroke: 0.35px #6B665E;
+    paint-order: stroke fill;
   }
 
   #new-history .history-content p:last-child {
@@ -69,11 +71,9 @@
     }
 
     #new-history .history-content p {
-      font-family: 'Athelas-Regular', Georgia, serif;
-      font-size: 1.08rem;
-      line-height: 1.65;
-      -webkit-text-stroke: 0.35px #6B665E;
-      paint-order: stroke fill;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      -webkit-text-stroke: 0.4px #6B665E;
     }
   }
 </style>
