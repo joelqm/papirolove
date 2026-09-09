@@ -29,7 +29,7 @@
             letter-spacing: 1.5px !important;
             -webkit-text-stroke: 0.65px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.65), 0 3px 12px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.48), 0 8px 26px rgba(0, 0, 0, 0.36);
         }
 
         .hero-actions {
@@ -58,7 +58,7 @@
             font-size: 4rem;
             -webkit-text-stroke: 1.2px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.72), 0 4px 16px rgba(0, 0, 0, 0.58);
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.52), 0 10px 30px rgba(0, 0, 0, 0.4);
         }
     }
 
