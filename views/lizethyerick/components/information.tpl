@@ -10,6 +10,7 @@
     <div class="details-parents">
       <div class="details-parents-col" data-aos="fade-up" data-aos-delay="100">
         <p>Vicente Condori Hualpa &amp;<br>Josefina Villavicencio Nina</p>
+        <p>Miguel Arce Valenzuela &amp;<br>Irma Quispe Arpi</p>
       </div>
     </div>
 
@@ -17,7 +18,6 @@
       <p class="details-godparents-title">Y la especial compa&ntilde;&iacute;a de nuestros<br>padrinos</p>
       <p>Helar Machaca Apaza &amp;<br>Agustina Apaza Justo</p>
       <p>Juan Solari Cahuana &amp;<br>Luz Marina Berno Puma</p>
-      <p>Miguel Arce Valenzuela &amp;<br>Irma Quispe Arpi</p>
     </div>
   </div>
 
@@ -206,6 +206,10 @@
     text-align: center;
     -webkit-text-stroke: 0.55px #6B665E;
     paint-order: stroke fill;
+  }
+
+  #info .details-parents-col p + p {
+    margin-top: 1rem;
   }
 
   #info .details-godparents {
