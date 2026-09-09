@@ -13,13 +13,14 @@
     @media (max-width: 700px) {
         .container-page {
             justify-content: space-between !important;
-            padding-top: 5rem !important;
+            padding-top: 3.5rem !important;
             padding-bottom: 1.75rem !important;
         }
 
         .header {
-            padding-top: 2.5rem !important;
+            padding-top: 1rem !important;
             top: 0 !important;
+            transform: translateY(-1.25rem);
         }
 
         .wedding-date-2 {
@@ -28,7 +29,7 @@
             letter-spacing: 1.5px !important;
             -webkit-text-stroke: 0.65px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.65), 0 3px 12px rgba(0, 0, 0, 0.5);
         }
 
         .hero-actions {
@@ -57,7 +58,7 @@
             font-size: 4rem;
             -webkit-text-stroke: 1.2px #fff;
             paint-order: stroke fill;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.72), 0 4px 16px rgba(0, 0, 0, 0.58);
         }
     }
 
