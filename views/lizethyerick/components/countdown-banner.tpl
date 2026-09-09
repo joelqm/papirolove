@@ -11,6 +11,7 @@
     height: auto;
     display: block;
     margin: 0 auto 2rem;
+    filter: brightness(0) invert(1);
   }
 
   .countdown-banner__message,
@@ -141,7 +142,7 @@
 <section class="countdown-banner" id="countdown-section" data-aos="fade-up">
 
   <img class="countdown-banner__logo"
-       src="{$_layoutParams.root}views/lizethyerick/imgs/logo_blanco.webp"
+       src="{$_layoutParams.root}views/lizethyerick/imgs/logo.webp"
        alt="Lizeth y Erick"
        width="200"
        height="173"
