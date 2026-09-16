@@ -9,6 +9,10 @@
             <span class="attendance-date">10.10.26</span>
         </p>
 
+        <p class="attendance-note" data-aos="fade-up" data-aos-delay="120">
+            Invitaci&oacute;n exclusiva para adultos
+        </p>
+
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvHdisG6v0bLwHmqW8sjKJWmm7HKNvLZ2uSeJMA3nWjg1eoA/viewform?usp=sharing&ouid=116663290609750251722"
            class="attendance-btn"
            data-aos="zoom-in"
@@ -54,7 +58,7 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #908C70;
-        margin: 0 0 1.35rem;
+        margin: 0 0 0.85rem;
         line-height: 1.45;
         -webkit-text-stroke: 0.35px #908C70;
         paint-order: stroke fill;
@@ -65,6 +69,17 @@
         margin-top: 0.15rem;
         font-size: 1.05rem;
         letter-spacing: 2.5px;
+    }
+
+    #attendance .attendance-note {
+        font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        text-transform: none;
+        color: #908C70;
+        margin: 0 0 1.35rem;
+        line-height: 1.35;
     }
 
     #attendance .attendance-btn {
@@ -105,14 +120,23 @@
 
         #attendance .attendance-text {
             font-size: 0.88rem;
-            margin-bottom: 1.15rem;
+            margin-bottom: 0.75rem;
             -webkit-text-stroke: 0.4px #908C70;
+        }
+
+        #attendance .attendance-note {
+            font-size: 0.9rem;
+            margin: 0 0 1.15rem;
         }
     }
 
     @media (max-width: 480px) {
         #attendance .attendance-text {
             font-size: 0.84rem;
+        }
+
+        #attendance .attendance-note {
+            font-size: 0.86rem;
         }
     }
 </style>

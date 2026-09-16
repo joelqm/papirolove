@@ -18,6 +18,7 @@
 
             <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">ELLOS: Traje y Corbata</p>
             <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">ELLAS: Vestido Largo</p>
+            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="160">Reserva el blanco y colores claros para la novia</p>
         </div>
 
         <img class="dc-bottom-image"
@@ -100,6 +101,14 @@
         paint-order: stroke fill;
     }
 
+    #dresscode .dc-rule-note {
+        margin-top: 0.55rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.8px;
+        text-transform: none;
+        max-width: 22rem;
+    }
+
     #dresscode .dc-bottom-image {
         width: 100%;
         max-width: 520px;
@@ -134,12 +143,21 @@
             font-size: 0.9rem;
             -webkit-text-stroke: 0.4px #908C70;
         }
+
+        #dresscode .dc-rule-note {
+            font-size: 0.84rem;
+            margin-top: 0.45rem;
+        }
     }
 
     @media (max-width: 480px) {
         #dresscode .dc-subtitle,
         #dresscode .dc-rule {
             font-size: 0.86rem;
+        }
+
+        #dresscode .dc-rule-note {
+            font-size: 0.8rem;
         }
     }
 </style>

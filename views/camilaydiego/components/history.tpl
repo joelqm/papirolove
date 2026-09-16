@@ -8,9 +8,9 @@
   #new-history .history-simple {
     background: #fff;
     width: 100%;
-    max-width: 780px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 1.5rem 3.5rem;
+    padding: 3rem 0.75rem 3.5rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -19,10 +19,10 @@
 
   #new-history .history-flowers-top {
     width: 100%;
-    max-width: min(680px, 92vw);
+    max-width: min(1140px, 100%);
     height: auto;
     display: block;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.75rem;
   }
 
   #new-history .history-title-big {
@@ -36,6 +36,8 @@
   #new-history .history-content {
     width: 100%;
     max-width: 560px;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
   }
 
   #new-history .history-content p {
@@ -54,12 +56,13 @@
 
   @media (max-width: 768px) {
     #new-history .history-simple {
-      padding: 3rem 1.1rem 3rem;
+      padding: 2.25rem 0.35rem 2.75rem;
     }
 
     #new-history .history-flowers-top {
-      max-width: min(620px, 94vw);
-      margin-bottom: 1.75rem;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 1.35rem;
     }
 
     #new-history .history-title-big {
