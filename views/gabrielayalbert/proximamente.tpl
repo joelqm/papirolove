@@ -131,9 +131,9 @@
 
         <img class="coming-soon-logo"
              src="{$_layoutParams.root}views/gabrielayalbert/imgs/logo.png"
-             alt="Gabriela y Albert">
+             alt="Gabriela y Alberth">
 
-        <h1 class="coming-soon-names">Gabriela &amp; Albert</h1>
+        <h1 class="coming-soon-names">Gabriela &amp; Alberth</h1>
 
         <p class="coming-soon-date">
             30<span class="dot">·</span>05<span class="dot">·</span>26

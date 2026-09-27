@@ -1,53 +1,104 @@
 <div class="attendace-container" id="attendance" style="position: relative; overflow: hidden;">
 
+
+
     <div class="gift-section" data-aos="fade-up">
+
         <!-- <h5>CONFIRMA</h5> -->
+
         <h1 class="gift-title-small">Confirma tu asistencia</h1>
+
         <!-- <p class="big">tu Asistencia</p> -->
 
+
+
         <p class="text">
+
             Agradeceremos confirmar tu asistencia hasta el
+
         </p>
 
-        <h3 class="date">09.10.26</h3>
 
-        <a href="https://wa.link/ulrkac" class="button-3">
+
+        <h3 class="date">08.10.26</h3>
+
+
+
+        <a href="https://wa.link/8pjepy" class="button-3">
+
             Confirma Aquí
+
         </a>
+
+
 
     </div>
 
-    <!-- <img class="attendance-decor"
-         src="{$_layoutParams.root}views/gabrielayalbert/imgs/img_001.png"
-         alt=""
-         aria-hidden="true"> -->
-
 </div>
 
+
+
 {literal}
+
 <style>
-    #attendance .attendance-decor {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 340px;
-        height: auto;
-        pointer-events: none;
-        z-index: 0;
+
+    #attendance.attendace-container {
+
+        background-color: #8A9279 !important;
+
+        color: #3A4429;
+
     }
+
+
+
     #attendance .gift-section {
+
+        color: #3A4429;
+
         position: relative;
+
         z-index: 1;
+
     }
-    @media (max-width: 992px) {
-        #attendance .attendance-decor { width: 240px; }
+
+
+
+    #attendance .gift-title-small {
+
+        color: #3A4429 !important;
+
     }
-    @media (max-width: 768px) {
-        #attendance .attendance-decor { width: 0px; opacity: 0px; }
+
+
+
+    #attendance .gift-section .text {
+
+        color: #3A4429;
+
+        -webkit-text-stroke: 0.5px #3A4429;
+
     }
-    @media (max-width: 480px) {
-        #attendance .attendance-decor { width: 0px; opacity: 0px; }
+
+
+
+    #attendance .gift-section .date {
+
+        color: #3A4429;
+
     }
+
+
+
+    #attendance .button-3 {
+
+        background-color: #3A4429;
+
+        color: #F3F0E2;
+
+    }
+
 </style>
+
 {/literal}
+

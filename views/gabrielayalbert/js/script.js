@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Definir la fecha de destino
-  var targetDate = new Date("October 17, 2026 14:00:00").getTime();
+  var targetDate = new Date("October 17, 2026 11:30:00").getTime();
 
   // Guardar el último valor para comparar
   var lastDays = -1;
@@ -174,7 +174,7 @@ $(document).ready(function () {
 function crearEventoEnGoogleCalendar() {
   // Datos del evento: cámbialos directamente aquí
   /*
-  const titulo = "Boda Gabriela y Albert";
+  const titulo = "Boda Gabriela y Alberth";
   const descripcion = "¡No faltes! 💍🎉";
   const lugar = "Arequipa, Perú";
   const fechaInicioTexto = "17/10/2026 14:00"; // DD/MM/YYYY HH:mm hora Perú
@@ -202,32 +202,26 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/KWC8JncJ9NzwaLpy6`;
+  const url = `https://calendar.app.google/y7AxmHyigquT7GDZA`;
 
   window.open(url, "_blank");
 
 }
 
-// ===== PARALLAX para decoraciones Dress Code + Asistencia =====
+// ===== PARALLAX para flores del Dress Code =====
 $(window).on('scroll', function () {
-  var wrapper = $('.dresscode-attendance-wrapper');
-  if (wrapper.length === 0) return;
+  var section = $('#dresscode');
+  var flowers = section.find('.decor-corner-top-left');
+  if (section.length === 0 || flowers.length === 0) return;
 
-  var wrapperTop = wrapper.offset().top;
-  var wrapperHeight = wrapper.outerHeight();
+  var sectionTop = section.offset().top;
+  var sectionHeight = section.outerHeight();
   var scrollTop = $(window).scrollTop();
   var windowHeight = $(window).height();
 
-  // Solo animar cuando el wrapper está visible en pantalla
-  if (scrollTop + windowHeight > wrapperTop && scrollTop < wrapperTop + wrapperHeight) {
-    // Calcular cuánto se ha scrolleado dentro del wrapper (0 a 1)
-    var progress = (scrollTop + windowHeight - wrapperTop) / (wrapperHeight + windowHeight);
-    
-    // Mover las flores con un offset sutil (parallax)
-    var offsetTopLeft = -30 + (progress * 60); // se mueve de -30px a +30px
-    var offsetBottomRight = 30 - (progress * 60); // se mueve de +30px a -30px
-
-    $('.decor-corner-top-left').css('transform', 'translateY(' + offsetTopLeft + 'px)');
-    $('.decor-corner-bottom-right').css('transform', 'translateY(' + offsetBottomRight + 'px)');
+  if (scrollTop + windowHeight > sectionTop && scrollTop < sectionTop + sectionHeight) {
+    var progress = (scrollTop + windowHeight - sectionTop) / (sectionHeight + windowHeight);
+    var offsetTopLeft = -30 + (progress * 60);
+    flowers.css('transform', 'translateY(' + offsetTopLeft + 'px)');
   }
 });

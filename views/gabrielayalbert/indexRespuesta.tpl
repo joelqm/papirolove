@@ -6,6 +6,7 @@
             <div class="content-wrapper">
                 <h2 class="section-title"></h2>
                 <p class="section-message"></p>
+                <p class="couple-thanks-name font-photograph_signature">Gabriela <span>&amp;</span> Alberth</p>
                 <a href="{$_layoutParams.root}gabrielayalbert/" class="back-link">
                     <span class="back-icon"></span> Volver
                 </a>
@@ -16,14 +17,15 @@
 </div>
 <style>
     @font-face {
-        font-family: 'Dulcinea';
-        src: url("../fonts/Dulcinea.ttf");/
+        font-family: 'photograph_signature';
+        src: url("../fonts/photograph_signature.woff2") format("woff2"),
+            url("../fonts/photograph_signature.ttf") format("truetype");
+        font-display: swap;
     }
-
 
     @font-face {
         font-family: 'Forum';
-        src: url("../fonts/Forum-Regular.ttf");/
+        src: url("../fonts/Forum-Regular.ttf");
     }
 
     .response-container {
@@ -31,6 +33,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #F8F9F5;
     }
 
 
@@ -38,7 +41,7 @@
     .stepper-container {
 
         max-width: 600px;
-        height: 200px;
+        min-height: 200px;
         margin: 40px auto;
         padding: 30px;
         background-color: #fff;
@@ -52,78 +55,6 @@
         align-items: center;
     }
 
-    /* Stepper Styles */
-    .stepper {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .stepper-progress {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        position: relative;
-    }
-
-    .step {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        flex: 1;
-    }
-
-    .step-circle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #888;
-        border: 2px solid #ddd;
-        position: relative;
-        transition: all 0.3s ease;
-    }
-
-    .step-line {
-        position: absolute;
-        top: 25px;
-        left: 50%;
-        width: 100%;
-        height: 2px;
-        background-color: #ddd;
-    }
-
-    .step:last-child .step-line {
-        display: none;
-    }
-
-    /* Step States */
-    .step.completed .step-circle {
-        background-color: #dbb8b8;
-        border-color: #dbb8b8;
-        color: white;
-    }
-
-    .step.completed .step-line {
-        background-color: #dbb8b8;
-    }
-
-    .step.active .step-circle {
-        background-color: #fff;
-        border-color: #dbb8b8;
-        color: #dbb8b8;
-        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-        transform: scale(1.1);
-    }
-
     /* Content Styles */
     .content-wrapper {
         text-align: center;
@@ -131,39 +62,53 @@
     }
 
     .section-title {
-        font-family: "Dulcinea";
-        color: #333;
+        font-family: "photograph_signature", cursive;
+        color: #314028;
         margin-bottom: 15px;
-        font-size: 28px;
-        font-weight: 600;
+        font-size: 2.6rem;
+        font-weight: normal;
     }
 
     .section-message {
-        font-family: "Forum";
-        color: #666;
+        font-family: "Forum", serif;
+        color: #314028;
         line-height: 1.6;
-        margin-bottom: 30px;
+        margin-bottom: 18px;
         font-size: 16px;
     }
 
+    .couple-thanks-name {
+        font-family: "photograph_signature", cursive;
+        color: #314028;
+        font-size: 2.4rem;
+        font-weight: normal;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        margin: 0 0 24px;
+    }
+
+    .couple-thanks-name span {
+        margin: 0 0.35rem;
+    }
+
     .back-link {
-        font-family: "Forum";
+        font-family: "Forum", serif;
         display: inline-flex;
         align-items: center;
-        color: #dbb8b8;
+        color: #314028;
         text-decoration: none;
         font-weight: 500;
         padding: 10px 20px;
-        border: 1px solid #dbb8b8;
+        border: 1px solid #314028;
         border-radius: 30px;
         transition: all 0.3s ease;
     }
 
     .back-link:hover {
-        background-color: #dbb8b8;
+        background-color: #314028;
         color: white;
         transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+        box-shadow: 0 4px 8px rgba(49, 64, 40, 0.25);
     }
 
     .back-icon {
@@ -178,41 +123,26 @@
             margin: 20px;
         }
 
-        .step-circle {
-            width: 40px;
-            height: 40px;
-            font-size: 14px;
-        }
-
-        .step-line {
-            top: 20px;
-        }
-
         .section-title {
-            font-size: 24px;
+            font-size: 2.2rem;
+        }
+
+        .couple-thanks-name {
+            font-size: 2rem;
+        }
+
+        .section-message {
+            font-size: 15px;
         }
     }
 
     @media (max-width: 480px) {
-        .step-circle {
-            width: 35px;
-            height: 35px;
-            font-size: 12px;
-        }
-
-        .step-line {
-            top: 17px;
-        }
-
         .section-title {
-            font-size: 20px;
+            font-size: 2rem;
         }
 
-        .section-message {
-            font-size: 14px;
+        .couple-thanks-name {
+            font-size: 1.85rem;
         }
     }
 </style>
-<input type="hidden" type="text" name="resultPayment" id="resultPayment" value="{$resultPayment}">
-<input type="hidden" type="text" name="hash" id="hash" value="{$hash}">
-<input type="hidden" type="text" name="resultPaymentCode" id="resultPaymentCode" value="{$resultPaymentCode}">

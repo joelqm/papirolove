@@ -1157,13 +1157,14 @@ body {
 .galery {
     width: 100%;
     padding: 0px 0px;
-    background: #D1C9BC;
+    background: #8A9279;
     position: relative;
     overflow: hidden;
+    color: #3A4429;
 }
 
 .galery .galery-title {
-    color: #314028 !important;
+    color: #3A4429 !important;
 }
 
 .container-galery {
@@ -1963,7 +1964,7 @@ textarea.form-control {
 /* ===== 16. FOOTER ===== */
 footer {
     text-align: center;
-    background: #836E63;
+    background: #314028;
     color: #fff;
     font-family: "Baskervville-Regular";
     padding: 1rem 0rem;
@@ -2497,25 +2498,33 @@ footer {
     }
 }
 
-/* ===== WRAPPER COMPARTIDO: DRESSCODE + ASISTENCIA ===== */
-/* Contenedor padre que envuelve ambas secciones para compartir decoraciones */
+/* ===== WRAPPER: DRESSCODE + ASISTENCIA ===== */
 .dresscode-attendance-wrapper {
     position: relative;
     overflow: hidden;
     background-color: #fff;
 }
 
-/* Las secciones hijas quedan por encima de las decoraciones */
-.dresscode-attendance-wrapper .dresscode-container,
-.dresscode-attendance-wrapper .attendace-container {
+.dresscode-attendance-wrapper .dresscode-container {
     position: relative;
     z-index: 2;
     background-color: transparent;
 }
 
-/* --- DECORACIONES COMPARTIDAS (esquinas del wrapper) --- */
-.decor-corner-top-left {
-    position: fixed; /* fixed para efecto parallax */
+.dresscode-attendance-wrapper .attendace-container {
+    position: relative;
+    z-index: 2;
+    background-color: #8A9279;
+}
+
+/* Flores pegadas al bottom del Dress Code */
+#dresscode.dresscode-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#dresscode .decor-corner-top-left {
+    position: absolute;
     top: auto;
     bottom: 0;
     left: 0;
@@ -2527,38 +2536,25 @@ footer {
     background-repeat: no-repeat;
     z-index: 0;
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.decor-corner-bottom-right {
-    display: none;
-}
-
-/* Cuando el wrapper está visible en pantalla, las flores aparecen */
-.dresscode-attendance-wrapper .decor-corner-top-left,
-.dresscode-attendance-wrapper .decor-corner-bottom-right {
-    position: absolute;
     opacity: 1;
 }
 
-/* --- RESPONSIVO --- */
+#dresscode .dresscode-content,
+#dresscode .dc-timeline {
+    position: relative;
+    z-index: 1;
+}
+
 @media (max-width: 768px) {
-    .decor-corner-top-left {
+    #dresscode .decor-corner-top-left {
         width: 34%;
         height: 36%;
         opacity: 0.55;
-        z-index: 0;
-    }
-
-    .dresscode-attendance-wrapper .dresscode-container,
-    .dresscode-attendance-wrapper .attendace-container {
-        z-index: 2;
     }
 }
 
 @media (max-width: 480px) {
-    .decor-corner-top-left {
+    #dresscode .decor-corner-top-left {
         width: 30%;
         height: 30%;
         opacity: 0.45;

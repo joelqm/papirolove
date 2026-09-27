@@ -13,20 +13,19 @@
 
         <p class="gf-intro">Elige un obsequio para</p>
 
-        <img class="gf-logo"
-             src="{$_layoutParams.root}views/gabrielayalbert/imgs/logo_02.webp"
-             alt="Gabriela y Albert">
+        <h1 class="gf-couple-name font-photograph_signature">Gabriela <span style="margin-left: 1rem;">&amp;</span>
+            Alberth</h1>
 
         <span class="gf-btn">Transferencia</span>
 
         <div class="gf-bank">
             <div class="gf-bank-block">
-                <p class="gf-bank-label">Interbank</p>
-                <p class="gf-bank-number">898 3514689891</p>
+                <p class="gf-bank-label">BCP</p>
+                <p class="gf-bank-number">215-23124939-0-20</p>
             </div>
             <div class="gf-bank-block">
                 <p class="gf-bank-label">CCI</p>
-                <p class="gf-bank-number">00389801351468989145</p>
+                <p class="gf-bank-number">00221512312493902024</p>
             </div>
         </div>
 
@@ -85,10 +84,14 @@
         font-size: 1.25rem;
     }
 
-    #gifts .gf-logo {
-        width: min(320px, 78vw);
-        height: auto;
-        display: block;
+    #gifts .gf-couple-name {
+        font-family: 'photograph_signature', cursive;
+        font-size: clamp(2.8rem, 8vw, 4.2rem);
+        font-weight: normal;
+        color: #F3F0E2 !important;
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.1;
         margin: 0.2rem 0 0.4rem;
     }
 
@@ -148,8 +151,8 @@
             font-size: 1.15rem;
         }
 
-        #gifts .gf-logo {
-            width: min(240px, 78vw);
+        #gifts .gf-couple-name {
+            font-size: clamp(2.4rem, 10vw, 3.4rem);
         }
 
         #gifts .gf-btn {
@@ -166,8 +169,8 @@
             font-size: 1.05rem;
         }
 
-        #gifts .gf-logo {
-            width: min(210px, 74vw);
+        #gifts .gf-couple-name {
+            font-size: clamp(2.2rem, 11vw, 3rem);
         }
 
         #gifts .gf-bank-number {

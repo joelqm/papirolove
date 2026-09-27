@@ -1,5 +1,7 @@
 <div class="dresscode-container" id="dresscode">
 
+    <div class="decor-corner-top-left" aria-hidden="true"></div>
+
     <div class="dresscode-content" data-aos="fade-up">
 
         <div class="dc-left">
@@ -33,6 +35,73 @@
                  class="dc-inspiration-img">
         </div>
 
+    </div>
+
+    <!-- ===== TIMELINE ===== -->
+    <div class="dc-timeline" data-aos="fade-up">
+        <h2 class="dc-title dc-timeline-title">Timeline</h2>
+
+        <ul class="tl-list">
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_iglesia.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_iglesia.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">11:30 am</p>
+                    <p class="tl-label">Ceremonia Religiosa</p>
+                </div>
+            </li>
+
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_copas.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_copas.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">1:30 pm</p>
+                    <p class="tl-label">Cocktail de Bienvenida</p>
+                </div>
+            </li>
+
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_anillos.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_anillos.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">2:30 pm</p>
+                    <p class="tl-label">Ceremonia Civil</p>
+                </div>
+            </li>
+
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_cocina.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_cocina.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">3:00 pm</p>
+                    <p class="tl-label">Almuerzo &amp; Discursos</p>
+                </div>
+            </li>
+
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_ramo.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_ramo.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">4:30 pm</p>
+                    <p class="tl-label">Bouquet</p>
+                </div>
+            </li>
+
+            <li class="tl-item">
+                <span class="tl-icon"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_musica.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_musica.webp');"
+                      aria-hidden="true"></span>
+                <div class="tl-text">
+                    <p class="tl-time">5:00 pm</p>
+                    <p class="tl-label">Apertura de la Pista</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
 </div>
@@ -165,6 +234,61 @@
         border-radius: 4px;
     }
 
+    /* Timeline */
+    #dresscode .dc-timeline {
+        max-width: 420px;
+        margin: 4rem auto 0;
+        text-align: center;
+    }
+
+    #dresscode .dc-timeline-title {
+        margin-bottom: 2rem;
+    }
+
+    #dresscode .tl-list {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 360px;
+    }
+
+    #dresscode .tl-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.35rem;
+    }
+
+    #dresscode .tl-icon {
+        width: 68px;
+        height: 68px;
+        flex-shrink: 0;
+        display: inline-block;
+        background-color: #314028;
+        -webkit-mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+
+    #dresscode .tl-text {
+        text-align: left;
+        flex: 1;
+    }
+
+    #dresscode .tl-time,
+    #dresscode .tl-label {
+        font-family: 'newyork_personal', serif;
+        font-weight: normal;
+        color: #314028;
+        margin: 0;
+        line-height: 1.35;
+        font-size: 1.2rem;
+        -webkit-text-stroke: 0.35px #314028;
+    }
+
     @media (max-width: 900px) {
         #dresscode .dresscode-content {
             grid-template-columns: 1fr;
@@ -179,7 +303,9 @@
         #dresscode .dc-gender-text,
         #dresscode .dc-palette-title,
         #dresscode .dc-note,
-        #dresscode .dc-inspiration-label {
+        #dresscode .dc-inspiration-label,
+        #dresscode .tl-time,
+        #dresscode .tl-label {
             font-size: 1.15rem;
         }
 
@@ -193,6 +319,15 @@
 
         #dresscode .dc-inspiration-img {
             width: min(280px, 88%);
+        }
+
+        #dresscode .dc-timeline {
+            margin-top: 3rem;
+        }
+
+        #dresscode .tl-icon {
+            width: 58px;
+            height: 58px;
         }
     }
 
@@ -209,7 +344,9 @@
         #dresscode .dc-gender-text,
         #dresscode .dc-palette-title,
         #dresscode .dc-note,
-        #dresscode .dc-inspiration-label {
+        #dresscode .dc-inspiration-label,
+        #dresscode .tl-time,
+        #dresscode .tl-label {
             font-size: 1.05rem;
         }
     }

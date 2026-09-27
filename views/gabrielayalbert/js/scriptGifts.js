@@ -345,7 +345,7 @@ $(document).ready(function () {
 
 const getGifts = async (categoryId = 0) => {
   try {
-    const coupleId = 13; // Gabriela y Albert 
+    const coupleId = 13; // Gabriela y Alberth 
 
     const payload = {
       parejaId: coupleId,

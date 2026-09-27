@@ -175,7 +175,7 @@
 
     <div class="header" style="justify-items: center;">
         <h1 class="couple-name font-photograph_signature" data-aos="fade-up">Gabriela <span style="margin-left: 1rem;">&</span>
-            Albert</h1>
+            Alberth</h1>
             <p class="wedding-date-2" data-aos="fade-up">
             17
             .

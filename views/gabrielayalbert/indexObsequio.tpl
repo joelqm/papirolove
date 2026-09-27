@@ -15,7 +15,7 @@
         <div class="notification-content">
             <span class="heart-icon">♥</span> Deslízate hacia abajo y presiona
             el botón <strong>Obsequiar y enviar</strong> para completar el
-            registro y hacer llegar tu presente a Gabriela & Albert
+            registro y hacer llegar tu presente a Gabriela & Alberth
         </div>
     </div>
 
@@ -23,7 +23,7 @@
         <!-- Gift Form Card -->
         <div class="gift-card">
             <div class="card-header">
-                <span class="font-titulo-obsequio">Gabriela & Albert</span>
+                <span class="font-titulo-obsequio">Gabriela & Alberth</span>
             </div>
 
             <div class="card-body">
@@ -111,7 +111,7 @@
 
     :root {
         --primary-color: #314028;
-        /* Gabriela y Albert */
+        /* Gabriela y Alberth */
         --primary-light: #4a5c3c;
         /* Lighter shade of primary */
         --primary-lighter: #5c704c;
@@ -232,7 +232,7 @@
         font-family: 'photograph_signature', cursive;
         font-size: 2.5rem;
         font-weight: normal;
-        background-color: #bb8464;
+        background-color: #314028;
         color: white;
         padding: 40px;
         text-align: center;

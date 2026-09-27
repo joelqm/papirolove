@@ -3,16 +3,59 @@
   <div class="invitation-pattern"></div>
 
   <h1 class="history-title-small-2 details-quote">
-    ¡Eres mi hoy y todos mis mañanas!
+    Detalles
   </h1>
 
   <div data-aos="fade-up" class="text-invitation-primary details-intro">
-    El amor nos encontró y decidimos quedarnos.
+    Con la bendici&oacute;n de Dios y junto a nuestros padres
+
+    <div class="details-parents-grid">
+      <div class="details-parents-col">
+        Haydee Isabel Bazan Peralta &amp;<br>
+        Danny Rony Barbachan Paz
+      </div>
+      <div class="details-parents-col">
+        Flora Rosas de Salcedo &amp;<br>
+        Bernardino Salcedo Umiyauri
+      </div>
+    </div>
+
+    Representaci&oacute;n padres del novio<br>
+    Angelica Teresa Itucayasi Umiyauri &amp; Oswaldo Pedro Rosas Quispe
     <br><br>
-    Hoy sellamos nuestra promesa eterna, y será un honor<br>
-    que nos acompañen en este día tan<br>
-    significativo para nosotros.
+    Nuestros padrinos<br>
+    Alejandra Sofia Barbachan Bazan &amp; Ivan Paul Gaitan Barreda
+    <br><br>
+    Los esperamos para celebrar juntos el inicio de nuestra nueva vida.<br>
+    Nuestro matrimonio
   </div>
+
+  <style>
+    #info .details-parents-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 1.5rem;
+      max-width: 700px;
+      width: 100%;
+      margin: 1.25rem auto;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0 0.75rem;
+    }
+
+    #info .details-parents-col {
+      line-height: 1.45;
+    }
+
+    @media (max-width: 700px) {
+      #info .details-parents-grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        max-width: 100%;
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
 
   <div class="locations">
     <div class="location-card" data-aos="fade-up">
@@ -51,11 +94,11 @@
       </div>
       <h3 class="location-type">Ceremonia</h3>
       </div>
-      <p class="location-address">Parroquia “Nuestra señora de Monserrat”</p>
-      <p class="location-address">La recoleta – Yanahuara</p>
-      <p class="location-address">Arequipa – Perú</p>
+      <p class="location-address">Parroquia &ldquo;Nuestra Se&ntilde;ora del Rosario&rdquo;</p>
+      <p class="location-address">Plaza principal de Saband&iacute;a - Saband&iacute;a</p>
+      <p class="location-address">Arequipa – Per&uacute;</p>
       <p class="location-time">11:30 am</p>
-      <a target="_blank" href="https://share.google/YBUSvEcfIMg65K35T" class="location-button">Ubicación</a>
+      <a target="_blank" href="https://share.google/v0171Kkwe8z1fanrY" class="location-button">Ubicaci&oacute;n</a>
     </div>
 
     <div class="location-card" data-aos="fade-up">
@@ -98,11 +141,11 @@
       </div>
       <h3 class="location-type">Recepción</h3>
       </div>
-      <p class="location-address">Mansión Ugarteche</p>
-      <p class="location-address">Calle Manuel Ugarteche 313 – Cercado</p>
-      <p class="location-address">Arequipa – Perú</p>
+      <p class="location-address">Hacienda Dorada</p>
+      <p class="location-address">Av. Salaverry 107-Socabaya</p>
+      <p class="location-address">Arequipa – Per&uacute;</p>
       <p class="location-time">1:30 pm</p>
-      <a target="_blank" href="https://share.google/TFmrAGO4G5KW9GzwQ" class="location-button">Ubicación</a>
+      <a target="_blank" href="https://share.google/XTswxZTjOLpF8W4Mf" class="location-button">Ubicaci&oacute;n</a>
     </div>
   </div>
 

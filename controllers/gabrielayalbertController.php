@@ -28,12 +28,12 @@ class gabrielayalbertController extends Controller
 		$this->_index = $this->loadModel('index');
 		$this->_dt = $this->loadModel('dataTable');
 
-		$this->_key = 13; // Gabriela y Albert
+		$this->_key = 13; // Gabriela y Alberth
 	}
 
 	public function index()
 	{
-		$this->_view->assign('titulo', 'Gabriela y Albert');
+		$this->_view->assign('titulo', 'Gabriela y Alberth');
 
 		$ps_k = $this->_gabrielayalbert->keysEmp($this->_key);
 
