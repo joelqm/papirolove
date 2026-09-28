@@ -146,3 +146,5 @@
         }
     }
 </style>
+<input type="hidden" type="text" name="resultPayment" id="resultPayment" value="{$resultPayment}">
+<input type="hidden" type="text" name="resultPaymentCode" id="resultPaymentCode" value="{$resultPaymentCode}">

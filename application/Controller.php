@@ -169,6 +169,42 @@ abstract class Controller
         }
         return (string) $krAnswer['orderStatus'];
     }
+
+    /**
+     * Guarda en tmp/logs/izipay_estado.log lo que devolvió Izipay al volver a /estado/.
+     */
+    protected function izipayLogRespuestaEstado($pedido, $krAnswer, $rptaPaymentCode)
+    {
+        $dir = ROOT . 'tmp' . DS . 'logs';
+        if (!is_dir($dir)) {
+            @mkdir($dir, 0755, true);
+        }
+
+        $orderStatus = '';
+        $txStatus = '';
+        $txUuid = '';
+        if (is_array($krAnswer)) {
+            $orderStatus = isset($krAnswer['orderStatus']) ? (string) $krAnswer['orderStatus'] : '';
+            if (isset($krAnswer['transactions'][0]) && is_array($krAnswer['transactions'][0])) {
+                $tx = $krAnswer['transactions'][0];
+                $txStatus = isset($tx['status']) ? (string) $tx['status'] : '';
+                $txUuid = isset($tx['uuid']) ? (string) $tx['uuid'] : '';
+            }
+        }
+
+        $line = sprintf(
+            "[%s] pedido=%s code=%s orderStatus=%s txStatus=%s uuid=%s post_has_kr=%s\n",
+            date('Y-m-d H:i:s'),
+            $pedido,
+            $rptaPaymentCode,
+            $orderStatus !== '' ? $orderStatus : '(vacio)',
+            $txStatus !== '' ? $txStatus : '(vacio)',
+            $txUuid !== '' ? $txUuid : '(vacio)',
+            isset($_POST['kr-answer']) ? '1' : '0'
+        );
+
+        @file_put_contents($dir . DS . 'izipay_estado.log', $line, FILE_APPEND | LOCK_EX);
+    }
 }
 
 ?>

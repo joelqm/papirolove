@@ -8,6 +8,7 @@ $(function () {
 
     switch (code) {
         case '01':
+        case '1':
             title = '¡Ocurrió un error!';
             message = messageText;
             break;
@@ -21,7 +22,7 @@ $(function () {
             break;
         default:
             title = 'Estado desconocido';
-            message = 'No pudimos determinar el resultado del proceso.';
+            message = 'No pudimos determinar el resultado del proceso. (code=' + (code || 'vacio') + ')';
     }
 
     // Inserta los textos en los elementos del HTML ya existente

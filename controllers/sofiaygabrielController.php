@@ -210,6 +210,7 @@ $cartArray = json_decode($data, true); // The 'true' makes it an associative arr
 
 		}
 
+		$this->izipayLogRespuestaEstado($codigo, isset($formAnswer['kr-answer']) ? $formAnswer['kr-answer'] : array(), $rptaPaymentCode);
 		$this->_view->assign('resultPaymentCode', $rptaPaymentCode);
 		$this->_view->assign('resultPayment', $rptaPayment);
 

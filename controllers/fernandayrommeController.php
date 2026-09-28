@@ -181,6 +181,7 @@ class fernandayrommeController extends Controller
 			$rptaPayment = "Transaccion invalida. Los datos fueron alterados en el proceso de respuesta";
 		}
 
+		$this->izipayLogRespuestaEstado($codigo, isset($formAnswer['kr-answer']) ? $formAnswer['kr-answer'] : array(), $rptaPaymentCode);
 		$this->_view->assign('resultPaymentCode', $rptaPaymentCode);
 		$this->_view->assign('resultPayment', $rptaPayment);
 
