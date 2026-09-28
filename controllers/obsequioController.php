@@ -136,7 +136,7 @@ class obsequioController extends Controller{
 				$answer = $formAnswer['kr-answer'];
 				$orderStatus = isset($answer['orderStatus']) ? $answer['orderStatus'] : '';
 
-				if ($orderStatus === 'PAID') {
+				if ($this->izipayEsPagoExitoso($answer)) {
 					$codigo = '';
 
 					if (isset($answer['orderDetails']['orderId'])) {

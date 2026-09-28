@@ -164,7 +164,7 @@ class mayteyandreeController extends Controller
 		$client = new Lyra\Client();
 		$formAnswer = $client->getParsedFormAnswer();
 
-		if ($formAnswer['kr-answer']['orderStatus'] == 'PAID') {
+		if ($this->izipayEsPagoExitoso(isset($formAnswer['kr-answer']) ? $formAnswer['kr-answer'] : array())) {
 
 			$uuid = $formAnswer['kr-answer']['transactions'][0]['uuid'];
 			$hash = $formAnswer['kr-hash'];
@@ -177,7 +177,7 @@ class mayteyandreeController extends Controller
 		}
 		else {
 
-			$rptaPaymentCode = '1';
+			$rptaPaymentCode = '01';
 			$rptaPayment = "Transaccion invalida. Los datos fueron alterados en el proceso de respuesta";
 		}
 

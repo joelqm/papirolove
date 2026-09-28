@@ -137,10 +137,38 @@ abstract class Controller
         }
     }
 
+    /**
+     * Izipay/Lyra: PAID, AUTHORISED, CAPTURED (y *_EXPIRED) = pago OK.
+     * AUTHORISED = autorizada, a veces "en espera de captura".
+     */
+    protected function izipayEsPagoExitoso($krAnswer)
+    {
+        if (!is_array($krAnswer) || !isset($krAnswer['orderStatus'])) {
+            return false;
+        }
+        $status = strtoupper(trim((string) $krAnswer['orderStatus']));
+        $ok = array(
+            'PAID',
+            'AUTHORISED',
+            'CAPTURED',
+            'ACCEPTED',
+            'PARTIALLY_PAID',
+            'AUTHORISED_TO_VALIDATE',
+            'WAITING_AUTHORISATION',
+            'WAITING_AUTHORISATION_TO_VALIDATE',
+            'CAPTURED_EXPIRED',
+            'AUTHORISED_EXPIRED',
+        );
+        return in_array($status, $ok, true);
+    }
 
-
-
-    
+    protected function izipayEstadoRecibido($krAnswer)
+    {
+        if (!is_array($krAnswer) || !isset($krAnswer['orderStatus'])) {
+            return '';
+        }
+        return (string) $krAnswer['orderStatus'];
+    }
 }
 
 ?>
