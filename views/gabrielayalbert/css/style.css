@@ -2006,10 +2006,26 @@ footer {
     .wedding-grid {
         gap: 10px;
         padding: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 4.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        z-index: 2;
+    }
+
+    .col-right {
+        transform: none;
+        margin: 0;
+        height: auto;
     }
 
     .button-calendar {
-        margin-top: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .header img {
@@ -2063,6 +2079,11 @@ footer {
 
     .icon {
         display: block;
+        color: #fff;
+    }
+
+    .icon i {
+        color: #fff;
     }
 
     .icon.active i {
@@ -2129,7 +2150,7 @@ footer {
     }
 
     .button-calendar {
-        margin-top: 1.6rem;
+        margin-top: 0;
     }
 
     .count {

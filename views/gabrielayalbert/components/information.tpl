@@ -3,28 +3,11 @@
   <div class="invitation-pattern"></div>
 
   <h1 class="history-title-small-2 details-quote">
-    Detalles
+    La felicidad se construye con peque&ntilde;os momentos
   </h1>
 
   <div data-aos="fade-up" class="text-invitation-primary details-intro">
-    Con la bendici&oacute;n de Dios y junto a nuestros padres
-
-    <div class="details-parents-grid">
-      <div class="details-parents-col">
-        Haydee Isabel Bazan Peralta &amp;<br>
-        Danny Rony Barbachan Paz
-      </div>
-      <div class="details-parents-col">
-        Flora Rosas de Salcedo &amp;<br>
-        Bernardino Salcedo Umiyauri
-      </div>
-    </div>
-
-    Representaci&oacute;n padres del novio<br>
-    Angelica Teresa Itucayasi Umiyauri &amp; Oswaldo Pedro Rosas Quispe
-    <br><br>
-    Nuestros padrinos<br>
-    Alejandra Sofia Barbachan Bazan &amp; Ivan Paul Gaitan Barreda
+    Con la bendici&oacute;n de Dios y de nuestros padres y el cari&ntilde;o de nuestros padrinos
     <br><br>
     Los esperamos para celebrar juntos el inicio de nuestra nueva vida.<br>
     Nuestro matrimonio
@@ -95,7 +78,7 @@
       <h3 class="location-type">Ceremonia</h3>
       </div>
       <p class="location-address">Parroquia &ldquo;Nuestra Se&ntilde;ora del Rosario&rdquo;</p>
-      <p class="location-address">Plaza principal de Saband&iacute;a - Saband&iacute;a</p>
+      <p class="location-address">Plaza principal de Saband&iacute;a – Saband&iacute;a</p>
       <p class="location-address">Arequipa – Per&uacute;</p>
       <p class="location-time">11:30 am</p>
       <a target="_blank" href="https://share.google/v0171Kkwe8z1fanrY" class="location-button">Ubicaci&oacute;n</a>
@@ -142,7 +125,7 @@
       <h3 class="location-type">Recepción</h3>
       </div>
       <p class="location-address">Hacienda Dorada</p>
-      <p class="location-address">Av. Salaverry 107-Socabaya</p>
+      <p class="location-address">Av. Salaverry 107 – Socabaya</p>
       <p class="location-address">Arequipa – Per&uacute;</p>
       <p class="location-time">1:30 pm</p>
       <a target="_blank" href="https://share.google/XTswxZTjOLpF8W4Mf" class="location-button">Ubicaci&oacute;n</a>

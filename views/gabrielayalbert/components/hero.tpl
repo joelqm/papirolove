@@ -149,10 +149,26 @@
         .wedding-grid {
             gap: 10px !important;
             padding: 0 !important;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 4.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 2;
+        }
+
+        .col-right {
+            transform: none !important;
+            margin: 0 !important;
+            height: auto !important;
         }
 
         .button-calendar {
-            margin-top: 0.5rem !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
 
         .countdown-number {
