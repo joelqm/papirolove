@@ -103,7 +103,7 @@
 <link rel="stylesheet" href="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic-reset.css">
 <script src="https://api.payzen.eu/static/js/krypton-client/V4.0/ext/classic.js"></script>
 <script src="https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-    kr-public-key="{$pk}" kr-post-url-success="{$_layoutParams.root}gabrielayalbert/estado/{$codigo}">
+    kr-public-key="{$pk}" kr-post-url-success="{$_layoutParams.root}gabrielayalberth/estado/{$codigo}">
     </script>
 {block name="styles"}
 <style>

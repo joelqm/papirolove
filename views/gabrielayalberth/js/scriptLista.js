@@ -44,7 +44,7 @@ $(function () {
             "responsive": true,
             'pageLength': 25,
             "order": [[0, 'desc']],
-            "ajax": `${$("#root").val()}gabrielayalbert/mostrarListaRegistros`,
+            "ajax": `${$("#root").val()}gabrielayalberth/mostrarListaRegistros`,
             "columnDefs": [
                 { responsivePriority: 1, targets: 1 },
                 //{ responsivePriority: 2, targets: -1 },

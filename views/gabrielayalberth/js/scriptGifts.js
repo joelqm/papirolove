@@ -9,7 +9,7 @@ const generateRandom = () => {
   ao = parseInt(1) + random;
 
   $.post(
-    ruta + "gabrielayalbert/g_ao",
+    ruta + "gabrielayalberth/g_ao",
     "ao=" + ao,
     function (respuesta) {
       if (respuesta == true) {
@@ -93,11 +93,11 @@ $(document).ready(function () {
       data.cart = cartJson;
 
       $.ajax({
-        url: `${$("#root").val()}gabrielayalbert/guardarMensajeMonto`,
+        url: `${$("#root").val()}gabrielayalberth/guardarMensajeMonto`,
         method: 'POST',
         data: data,
         success: function (response) {
-          window.location.href = `${$("#root").val()}gabrielayalbert/obsequio/${formData[0].value}`;
+          window.location.href = `${$("#root").val()}gabrielayalberth/obsequio/${formData[0].value}`;
           //form.reset();
           //$(".form").hide();
         },

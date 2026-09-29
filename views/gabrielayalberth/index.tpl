@@ -1,33 +1,33 @@
 {block name="styles"}
-<link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/gabrielayalbert/css/style.css?v={$_layoutParams.filever}">
+<link rel="stylesheet" type="text/css" href="{$_layoutParams.root}views/gabrielayalberth/css/style.css?v={$_layoutParams.filever}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {/block}
 
-{include file="views/gabrielayalbert/components/cart.tpl"}
-{include file="views/gabrielayalbert/components/hero.tpl"}
+{include file="views/gabrielayalberth/components/cart.tpl"}
+{include file="views/gabrielayalberth/components/hero.tpl"}
 
-{include file="views/gabrielayalbert/components/history.tpl"}
-{include file="views/gabrielayalbert/components/information.tpl"}
-{include file="views/gabrielayalbert/components/galery.tpl"}
+{include file="views/gabrielayalberth/components/history.tpl"}
+{include file="views/gabrielayalberth/components/information.tpl"}
+{include file="views/gabrielayalberth/components/galery.tpl"}
 
 
 <div class="dresscode-attendance-wrapper">
-    {include file="views/gabrielayalbert/components/dresscode.tpl"}
-    {include file="views/gabrielayalbert/components/attendance.tpl"}
+    {include file="views/gabrielayalberth/components/dresscode.tpl"}
+    {include file="views/gabrielayalberth/components/attendance.tpl"}
 </div>
 
-{include file="views/gabrielayalbert/components/gifts.tpl"}
+{include file="views/gabrielayalberth/components/gifts.tpl"}
 
 <div class="wedding-footer-banner" aria-hidden="true">
     <img class="wedding-footer-banner__desktop"
-         src="{$_layoutParams.root}views/gabrielayalbert/imgs/background-footer.webp"
+         src="{$_layoutParams.root}views/gabrielayalberth/imgs/background-footer.webp"
          alt=""
          width="1920"
          height="400"
          loading="lazy"
          decoding="async">
     <img class="wedding-footer-banner__mobile"
-         src="{$_layoutParams.root}views/gabrielayalbert/imgs/background-footer-mobil.webp"
+         src="{$_layoutParams.root}views/gabrielayalberth/imgs/background-footer-mobil.webp"
          alt=""
          width="900"
          height="500"
@@ -35,7 +35,7 @@
          decoding="async">
 </div>
 
-{include file="views/gabrielayalbert/components/button-whatsapp.tpl"}
+{include file="views/gabrielayalberth/components/button-whatsapp.tpl"}
 
 <style>
     .wedding-footer-banner {

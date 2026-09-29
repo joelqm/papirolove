@@ -1,18 +1,18 @@
 <style>
     @font-face {
         font-family: 'Baskervville-Regular';
-        src: url("{$_layoutParams.root}views/gabrielayalbert/fonts/Baskervville-Regular.ttf");
+        src: url("{$_layoutParams.root}views/gabrielayalberth/fonts/Baskervville-Regular.ttf");
         font-display: swap;
     }
     @font-face {
         font-family: 'CalliforniaSignature';
-        src: url("{$_layoutParams.root}views/gabrielayalbert/fonts/CalliforniaSignature.ttf");
+        src: url("{$_layoutParams.root}views/gabrielayalberth/fonts/CalliforniaSignature.ttf");
         font-display: swap;
     }
 
     @font-face {
         font-family: 'newyork_personal';
-        src: url("{$_layoutParams.root}views/gabrielayalbert/fonts/newyork_personal_use.otf") format("opentype");
+        src: url("{$_layoutParams.root}views/gabrielayalberth/fonts/newyork_personal_use.otf") format("opentype");
         font-display: swap;
     }
 
@@ -130,7 +130,7 @@
     <div class="coming-soon-card">
 
         <img class="coming-soon-logo"
-             src="{$_layoutParams.root}views/gabrielayalbert/imgs/logo.png"
+             src="{$_layoutParams.root}views/gabrielayalberth/imgs/logo.png"
              alt="Gabriela y Alberth">
 
         <h1 class="coming-soon-names">Gabriela &amp; Alberth</h1>

@@ -10,15 +10,15 @@
 
     <div class="container-galery">
         <div class="owl-carousel owl-theme">
-            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-1.webp" alt="Imagen 1">
+            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-1.webp" alt="Imagen 1">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-2.webp" alt="Imagen 2">
+            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-2.webp" alt="Imagen 2">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-3.webp" alt="Imagen 3">
+            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-3.webp" alt="Imagen 3">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-4.webp" alt="Imagen 4">
+            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-4.webp" alt="Imagen 4">
             </div>
-            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-6.webp" alt="Imagen 5">
+            <div class="item"><img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-6.webp" alt="Imagen 5">
             </div>
         </div>
     </div>

@@ -205,8 +205,8 @@
 
         <!-- Columna izquierda -->
         <!-- <div class="col-left">
-            <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/logo_02.webp" alt="logo" class="logo">
-            <audio id="myAudio" src="{$_layoutParams.root}views/gabrielayalbert/sound/song.mp3"></audio>
+            <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/logo_02.webp" alt="logo" class="logo">
+            <audio id="myAudio" src="{$_layoutParams.root}views/gabrielayalberth/sound/song.mp3"></audio>
         </div> -->
 
         <!-- Columna central (solo espacio para ver imagen) -->

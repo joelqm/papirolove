@@ -100,7 +100,7 @@
     width: 24%;
     height: 85%;
     transform: none;
-    background-image: url('{$_layoutParams.root}views/gabrielayalbert/imgs/nuestra_historia_flores.webp');
+    background-image: url('{$_layoutParams.root}views/gabrielayalberth/imgs/nuestra_historia_flores.webp');
     background-size: contain;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -237,7 +237,7 @@
       <br>
 
       <div class="audio-container-history" style="margin: 0px auto;">
-        <audio id="myAudio" src="{$_layoutParams.root}views/gabrielayalbert/sound/song.mp3" preload="auto"></audio>
+        <audio id="myAudio" src="{$_layoutParams.root}views/gabrielayalberth/sound/song.mp3" preload="auto"></audio>
       </div>
 
       <div class="song-card" data-aos="fade-up">
@@ -263,7 +263,7 @@
     </div>
 
     <!-- <div class="rm-container">
-            <img class="history-logo" src="{$_layoutParams.root}views/gabrielayalbert/imgs/logo.webp" alt="logo">
+            <img class="history-logo" src="{$_layoutParams.root}views/gabrielayalberth/imgs/logo.webp" alt="logo">
         </div> -->
     <div class="divider"></div>
 
@@ -292,9 +292,9 @@
 
       <!-- Contenedor de las fotos -->
       <div class="photo-stack">
-        <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-2.webp" alt="Foto de la pareja"
+        <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-2.webp" alt="Foto de la pareja"
           class="circular-image">
-        <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/preboda-1.webp" alt="Pareja en las vías del tren"
+        <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/preboda-1.webp" alt="Pareja en las vías del tren"
           class="rectangular-image">
       </div>
 

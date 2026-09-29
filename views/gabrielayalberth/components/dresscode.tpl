@@ -10,19 +10,19 @@
 
             <div class="dc-genders">
                 <div class="dc-gender">
-                    <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/imagen_ellas.webp" alt="Ellas" class="dc-icon">
+                    <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/imagen_ellas.webp" alt="Ellas" class="dc-icon">
                     <p class="dc-gender-label">Ellas</p>
                     <p class="dc-gender-text">Vestido Largo</p>
                 </div>
                 <div class="dc-gender">
-                    <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/imagen_ellos.webp" alt="Ellos" class="dc-icon">
+                    <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/imagen_ellos.webp" alt="Ellos" class="dc-icon">
                     <p class="dc-gender-label">Ellos</p>
                     <p class="dc-gender-text">Traje y corbata</p>
                 </div>
             </div>
 
             <p class="dc-palette-title">Paleta de inspiración</p>
-            <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/paleta_colores.png"
+            <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/paleta_colores.png"
                  alt="Paleta de colores"
                  class="dc-palette">
             <p class="dc-note">Reserva las tonalidades claras para la novia</p>
@@ -30,7 +30,7 @@
 
         <div class="dc-right">
             <span class="dc-inspiration-label">Inspiración</span>
-            <img src="{$_layoutParams.root}views/gabrielayalbert/imgs/dress_code.webp"
+            <img src="{$_layoutParams.root}views/gabrielayalberth/imgs/dress_code.webp"
                  alt="Inspiración dress code"
                  class="dc-inspiration-img">
         </div>
@@ -44,7 +44,7 @@
         <ul class="tl-list">
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_iglesia.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_iglesia.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_iglesia.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_iglesia.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">11:30 am</p>
@@ -54,7 +54,7 @@
 
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_copas.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_copas.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_copas.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_copas.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">1:30 pm</p>
@@ -64,7 +64,7 @@
 
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_anillos.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_anillos.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_anillos.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_anillos.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">2:30 pm</p>
@@ -74,7 +74,7 @@
 
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_cocina.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_cocina.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_cocina.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_cocina.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">3:00 pm</p>
@@ -84,7 +84,7 @@
 
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_ramo.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_ramo.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_ramo.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_ramo.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">4:30 pm</p>
@@ -94,7 +94,7 @@
 
             <li class="tl-item">
                 <span class="tl-icon"
-                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_musica.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalbert/imgs/icono_musica.webp');"
+                      style="-webkit-mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_musica.webp');mask-image:url('{$_layoutParams.root}views/gabrielayalberth/imgs/icono_musica.webp');"
                       aria-hidden="true"></span>
                 <div class="tl-text">
                     <p class="tl-time">5:00 pm</p>

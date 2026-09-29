@@ -7,7 +7,7 @@
                 <h2 class="section-title"></h2>
                 <p class="section-message"></p>
                 <p class="couple-thanks-name font-photograph_signature">Gabriela <span>&amp;</span> Alberth</p>
-                <a href="{$_layoutParams.root}gabrielayalbert/" class="back-link">
+                <a href="{$_layoutParams.root}gabrielayalberth/" class="back-link">
                     <span class="back-icon"></span> Volver
                 </a>
             </div>
