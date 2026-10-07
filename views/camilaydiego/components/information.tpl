@@ -100,7 +100,7 @@
       </div>
       <p class="location-address location-venue">El Roc&iacute;o - Sal&oacute;n</p>
       <p class="location-address">Pasaje Los Molles 200 Sachaca</p>
-      <p class="location-time">4:30 PM</p>
+      <p class="location-time">3:20 PM</p>
       <a target="_blank" href="https://maps.app.goo.gl/bx5PNNZkB96yXtEV7" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
