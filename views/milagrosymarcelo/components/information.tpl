@@ -232,7 +232,7 @@
 
   #info .location-venue {
     font-family: 'parfumerie-script', cursive;
-    font-size: 2.65rem;
+    font-size: 3.35rem;
     line-height: 1.1;
     margin: 0 0 0.3rem;
     letter-spacing: 0;
@@ -292,7 +292,7 @@
     }
 
     #info .location-venue {
-      font-size: 2.35rem;
+      font-size: 3rem;
     }
 
     #info .locations {
@@ -342,7 +342,7 @@
     }
 
     #info .location-venue {
-      font-size: 2rem;
+      font-size: 2.55rem;
       -webkit-text-stroke: 0.7px #8192A0;
       paint-order: stroke fill;
       font-variant-ligatures: none;
@@ -373,7 +373,7 @@
     }
 
     #info .location-venue {
-      font-size: 1.85rem;
+      font-size: 2.35rem;
     }
 
     #info .location-time {

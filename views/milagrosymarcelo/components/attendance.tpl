@@ -4,9 +4,9 @@
         <h2 class="attendance-title" data-aos="fade-up" data-aos-delay="80">Con&#8203;firma tu asistencia</h2>
 
         <p class="attendance-text" data-aos="fade-up" data-aos-delay="100">
-            Agradeceremos confirmar<br>
-            tu asistencia hasta el<br>
-            <span class="attendance-date">10.10.26</span>
+            AGRADECEREMOS CONFIRMAR<br>
+            TU ASISTENCIA HASTA EL<br>
+            <span class="attendance-date">05.11.26</span>
         </p>
 
         <p class="attendance-note" data-aos="fade-up" data-aos-delay="120">
@@ -25,10 +25,13 @@
 
 </section>
 
-{literal}
 <style>
     #attendance.attendance-section {
-        background: #CBD7DF;
+        background-color: #CBD7DF;
+        background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/background-confirmar-asistencia.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 3.5rem 1.25rem 3.75rem;
         text-align: center;
         color: #8192A0;
@@ -140,4 +143,3 @@
         }
     }
 </style>
-{/literal}
