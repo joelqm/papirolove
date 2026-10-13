@@ -15,6 +15,7 @@ class milagrosymarceloController extends Controller
 	private $_milagrosymarcelo;
 	private $_dt;
 	private $_key;
+	private $_ajax;
 
 	private $_obsequio;
 	private $_index;
@@ -36,8 +37,9 @@ class milagrosymarceloController extends Controller
 		$this->_view->assign('titulo', 'Milagros y Marcelo');
 
 		$ps_k = $this->_milagrosymarcelo->keysEmp($this->_key);
+		$pk = (is_array($ps_k) && !empty($ps_k['defpk'])) ? $ps_k['defpk'] : '';
 
-		$this->_view->assign('pk', $ps_k['defpk']);
+		$this->_view->assign('pk', $pk);
 		$this->_view->setJs(array('script', 'scriptGifts', 'scriptSend'));
 		$this->_view->renderContent('index');
 	}

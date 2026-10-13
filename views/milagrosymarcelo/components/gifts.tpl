@@ -8,40 +8,27 @@
                 Si deseas hacernos llegar un detalle, puedes hacerlo aqu&iacute;.
             </p>
 
-            <div class="gifts-block">
+            <div class="gifts-block" data-aos="fade-up" data-aos-delay="90">
                 <h2 class="gifts-heading">Colectivo Virtual</h2>
                 <button type="button" class="gifts-btn js-gifts-colectivo" onclick="return window.papiroOpenGiftsModal && window.papiroOpenGiftsModal(event)">Regala Aqu&iacute;</button>
             </div>
 
-            <div class="gifts-block gifts-block--transfer">
+            <div class="gifts-block gifts-block--transfer" data-aos="fade-up" data-aos-delay="110">
                 <h2 class="gifts-heading">Transferencia</h2>
-                <details class="gifts-transfer-details" id="gifts-transfer-details">
-                    <summary class="gifts-btn gifts-btn--summary">Regala Aqu&iacute;</summary>
-                    <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
-                        <p class="gifts-bank-line">Cuenta en Soles</p>
-                        <p class="gifts-bank-line">BCP</p>
-                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-18952469-0-03</span></p>
-                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511895246900329</span></p>
+                <button type="button" class="gifts-btn js-gifts-transfer-toggle" aria-expanded="true" aria-controls="gifts-bank">Regala Aqu&iacute;</button>
+                <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
+                    <p class="gifts-bank-line">Cuenta en Soles</p>
+                    <p class="gifts-bank-line">BCP</p>
+                    <p class="gifts-bank-line"><span class="gifts-bank-num">215-97769429-0-93</span></p>
+                    <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221519776942909321</span></p>
 
-                        <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
-                        <p class="gifts-bank-line">BCP</p>
-                        <p class="gifts-bank-line"><span class="gifts-bank-num">215-08471486-1-52</span></p>
-                        <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221510847148615226</span></p>
-                    </div>
-                </details>
+                    <p class="gifts-bank-line gifts-bank-line--spaced">Cuenta en D&oacute;lares</p>
+                    <p class="gifts-bank-line">BCP</p>
+                    <p class="gifts-bank-line"><span class="gifts-bank-num">215-513640778-1-59</span></p>
+                    <p class="gifts-bank-line gifts-bank-line--cci">CCI: <span class="gifts-bank-num">00221511364077815921</span></p>
+                </div>
             </div>
         </div>
-
-        <img class="gifts-cats"
-             src="{$_layoutParams.root}views/milagrosymarcelo/imgs/regalos_1.webp"
-             alt=""
-             width="509"
-             height="540"
-             loading="lazy"
-             decoding="async"
-             aria-hidden="true"
-             data-aos="fade-left"
-             data-aos-delay="160">
     </div>
 
 </div>
@@ -93,9 +80,9 @@
 
 <style>
     #gifts.gift-container {
-        background: #CFB89D;
+        background: #8192A0;
         color: #fff;
-        padding: 3.75rem 1.25rem 4.5rem;
+        padding: 5rem 1.25rem 5.25rem;
         position: relative;
         overflow: hidden;
     }
@@ -112,25 +99,25 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-bottom: 7rem;
+        padding-bottom: 0;
     }
 
     #gifts .gifts-title {
         font-family: 'parfumerie-script', cursive;
         font-weight: normal;
         color: #fff;
-        margin: 0 0 1rem;
+        margin: 0 0 1.5rem;
         line-height: 1.05;
     }
 
     #gifts .gifts-intro {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1rem;
+        font-size: 1.05rem;
         letter-spacing: 1.8px;
         text-transform: uppercase;
         color: #fff;
-        margin: 0 auto 2rem;
-        max-width: 26rem;
+        margin: 0 auto 3rem;
+        max-width: 28rem;
         line-height: 1.45;
         -webkit-text-stroke: 0.4px #fff;
         paint-order: stroke fill;
@@ -138,17 +125,21 @@
 
     #gifts .gifts-block {
         width: 100%;
-        margin-bottom: 1.75rem;
+        margin-bottom: 3rem;
+    }
+
+    #gifts .gifts-block--transfer {
+        margin-bottom: 0;
     }
 
     #gifts .gifts-heading {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1.55rem;
+        font-size: 1.65rem;
         font-weight: normal;
         letter-spacing: 2.5px;
         text-transform: uppercase;
         color: #fff;
-        margin: 0 0 0.85rem;
+        margin: 0 0 1.15rem;
         line-height: 1.15;
         -webkit-text-stroke: 0.4px #fff;
         paint-order: stroke fill;
@@ -163,7 +154,7 @@
         padding: 0.55rem 1.6rem;
         border: none;
         border-radius: 10px;
-        background: #8192A0;
+        background: rgba(255, 255, 255, 0.28);
         color: #fff;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.95rem;
@@ -180,62 +171,21 @@
         opacity: 0.88;
     }
 
-    #gifts .gifts-transfer-details {
-        width: 100%;
-    }
-
-    #gifts .gifts-transfer-details summary {
-        list-style: none;
-        display: inline-flex;
-        margin: 0 auto;
-    }
-
-    #gifts .gifts-transfer-details summary::-webkit-details-marker {
-        display: none;
-    }
-
-    #gifts .gifts-transfer-details summary::marker {
-        content: "";
-    }
-
     #gifts .gifts-bank {
-        margin-top: 0.85rem;
+        margin-top: 1.15rem;
         width: 100%;
         position: relative;
         z-index: 3;
         padding-top: 0.15rem;
     }
 
-    #gifts .gifts-transfer-details[open] .gifts-bank {
-        animation: gifts-bank-reveal 0.45s ease-out;
-    }
-
-    #gifts.gift-container.bank-open {
-        overflow: visible;
-    }
-
-    #gifts.gift-container.bank-open .gifts-cats {
-        opacity: 0.25;
-    }
-
-    @keyframes gifts-bank-reveal {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
     #gifts .gifts-bank-line {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 0.95rem;
+        font-size: 1rem;
         letter-spacing: 1px;
         color: #fff;
         margin: 0;
-        line-height: 1.4;
+        line-height: 1.45;
         -webkit-text-stroke: 0.35px #fff;
         paint-order: stroke fill;
     }
@@ -257,21 +207,11 @@
     }
 
     #gifts .gifts-bank-line--cci {
-        margin-bottom: 0.85rem;
+        margin-bottom: 1rem;
     }
 
     #gifts .gifts-bank-line--spaced {
-        margin-top: 0.35rem;
-    }
-
-    #gifts .gifts-cats {
-        position: absolute;
-        right: -12.75rem;
-        bottom: 0;
-        width: min(220px, 52vw);
-        height: auto;
-        pointer-events: none;
-        z-index: 2;
+        margin-top: 0.85rem;
     }
 
     .gifts-modal {
@@ -731,10 +671,11 @@
 
     @media (max-width: 768px) {
         #gifts.gift-container {
-            padding: 3.25rem 1rem 4rem;
+            padding: 4.25rem 1rem 4.5rem;
         }
 
         #gifts .gifts-title {
+            margin-bottom: 1.25rem;
             -webkit-text-stroke: 0.9px #fff;
             paint-order: stroke fill;
             font-variant-ligatures: none;
@@ -743,22 +684,21 @@
 
         #gifts .gifts-intro {
             font-size: 0.9rem;
-            margin-bottom: 1.75rem;
+            margin-bottom: 2.35rem;
             -webkit-text-stroke: 0.4px #fff;
         }
 
+        #gifts .gifts-block {
+            margin-bottom: 2.5rem;
+        }
+
         #gifts .gifts-heading {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             -webkit-text-stroke: 0.45px #fff;
         }
 
         #gifts .gifts-content {
-            padding-bottom: 6.5rem;
-        }
-
-        #gifts .gifts-cats {
-            width: min(175px, 46vw);
-            right: -1.25rem;
+            padding-bottom: 0;
         }
 
         .gifts-modal {
@@ -861,8 +801,17 @@
     }
 
     @media (max-width: 480px) {
+        #gifts.gift-container {
+            padding: 3.75rem 1rem 4rem;
+        }
+
         #gifts .gifts-intro {
             font-size: 0.86rem;
+            margin-bottom: 2rem;
+        }
+
+        #gifts .gifts-block {
+            margin-bottom: 2.15rem;
         }
 
         #gifts .gifts-heading {
@@ -870,16 +819,11 @@
         }
 
         #gifts .gifts-bank-line {
-            font-size: 0.88rem;
-        }
-
-        #gifts .gifts-cats {
-            width: min(150px, 40vw);
-            right: -0.5rem;
+            font-size: 0.9rem;
         }
 
         #gifts .gifts-content {
-            padding-bottom: 10.5rem;
+            padding-bottom: 0;
         }
     }
 </style>
@@ -922,37 +866,28 @@
         return false;
     };
 
-    function bindTransferDetails() {
-        var details = document.getElementById('gifts-transfer-details');
-        var section = document.getElementById('gifts');
-        if (!details || !section) {
+    function bindTransferToggle() {
+        var btn = document.querySelector('.js-gifts-transfer-toggle');
+        var bank = document.getElementById('gifts-bank');
+        if (!btn || !bank) {
             return;
         }
 
-        details.addEventListener('toggle', function () {
-            section.classList.toggle('bank-open', details.open);
-            if (!details.open) {
-                return;
-            }
-            window.requestAnimationFrame(function () {
-                var bank = document.getElementById('gifts-bank');
-                if (!bank) {
-                    return;
-                }
-                var top = bank.getBoundingClientRect().top + window.pageYOffset - 100;
-                window.scrollTo({ top: top, behavior: 'smooth' });
-            });
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var top = bank.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: top, behavior: 'smooth' });
         });
     }
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function () {
             portalGiftsModal();
-            bindTransferDetails();
+            bindTransferToggle();
         });
     } else {
         portalGiftsModal();
-        bindTransferDetails();
+        bindTransferToggle();
     }
 })();
 </script>

@@ -37,47 +37,47 @@ $(document).ready(function () {
   }
 
 
-  $('.nav-item').on('click', function () {
-    var targetId = $(this).data('id');
-    var navHeight = $(".menu").outerHeight();
+  $(document).on('click', '.nav-item', function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-    // Scroll animado
-    $('html, body').animate({
-      scrollTop: $('#' + targetId).offset().top - navHeight
+    var targetId = $(this).data('id');
+    if (!targetId) {
+      return false;
+    }
+
+    var $target = $('#' + targetId);
+    if (!$target.length) {
+      return false;
+    }
+
+    var navHeight = $(".navigation").outerHeight() || 0;
+
+    $('html, body').stop(true).animate({
+      scrollTop: $target.offset().top - navHeight
     }, 800);
 
-    // Guardar como ítem activo
     $('.nav-item').removeClass('current');
     $(this).addClass('current');
 
-    // Cerrar el menú en móvil
     if ($(window).width() <= 768) {
       $('#menu').removeClass('active');
       $('#hamburger-icon').removeClass('active');
-      $('.nav-item').css({
-
-        'transform': 'translateY(10px)'
-      });
+      $('.nav-item').css({ 'transform': 'translateY(10px)' });
     }
 
-    $("#hamburger-icon").find('i').animate({ rotation: 0 }, {
-      duration: 300,
-      step: function (now) {
-        $(this).css({ transform: 'rotate(' + now + 'deg)' });
-      }
-    });
-
+    return false;
   });
 
 });
 
 $(document).ready(function () {
-  // Toggle del menú al hacer clic en el ícono de hamburguesa
-  $('#hamburger-icon').click(function () {
+  $('#hamburger-icon').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     $('#menu').toggleClass('active');
     $(this).toggleClass('active');
 
-    // Animación del ícono de hamburguesa
     if ($(this).hasClass('active')) {
       $(this).find('i').css({
         transform: 'rotate(90deg)',
@@ -90,53 +90,26 @@ $(document).ready(function () {
       });
     }
   });
-
-  // Asegurarse de que el menú no se cierre al hacer clic en los ítems de navegación
-  $('.nav-item').on('click', function (event) {
-    if ($(window).width() <= 768) {
-      // Evitar que el menú se cierre si el usuario solo hace scroll
-      event.preventDefault();
-
-      // Obtener el destino del enlace
-      const target = $(this).attr('href');
-
-      // Desplazar a la sección correspondiente
-      $('html, body').animate({
-        scrollTop: $(target).offset().top
-      }, 500, function () {
-        // Después de hacer scroll, no cerrar el menú
-        // Solo cerrar si el menú está activo
-        $('#menu').removeClass('active');
-        $('#hamburger-icon').removeClass('active');
-      });
-    }
-  });
-
-  // Asegurarse de que el menú se cierre solo cuando se hace clic en el ícono de hamburguesa
-  $('.menu').on('click', function (event) {
-    if ($(window).width() <= 768) {
-      event.stopPropagation(); // Evitar que se cierre al hacer clic en los elementos del menú
-    }
-  });
 });
-$(document).ready(function () {
-  $(".js-song-player").click(function () {
-    var audio = document.getElementById("myAudio");
-    if (!audio) {
-      return;
-    }
 
-    if (audio.paused) {
-      audio.play().catch(function (error) {
-        console.log("No se pudo reproducir el audio:", error);
-      });
-    } else {
-      audio.pause();
+$(document).ready(function () {
+  // Fallback por si el onclick inline no corre; usa el audio de Milagros
+  $(document).on("click", ".js-song-player", function (e) {
+    if (typeof window.toggleMilagrosSong === "function") {
+      return window.toggleMilagrosSong(e);
     }
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
   });
 
-  $(".button-calendar").click(function () {
-    crearEventoEnGoogleCalendar();
+  $(document).on("click", ".button-calendar", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof crearEventoEnGoogleCalendar === "function") {
+      crearEventoEnGoogleCalendar();
+    }
+    return false;
   });
 });
 
@@ -171,7 +144,7 @@ function crearEventoEnGoogleCalendar() {
     `&ctz=America/Lima`;
   */
 
-  const url = `https://calendar.app.google/csQShipCnveLmcYR8`;
+  const url = `https://calendar.app.google/q1Zg2WGu77i4QHv28`;
 
   window.open(url, "_blank");
 

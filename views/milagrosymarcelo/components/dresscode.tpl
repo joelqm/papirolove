@@ -4,7 +4,7 @@
 
         <div class="dresscode-content" data-aos="fade-up" data-aos-delay="60">
             <h1 class="dc-title" data-aos="fade-up" data-aos-delay="70">Dress Code</h1>
-            <p class="dc-subtitle" data-aos="fade-up" data-aos-delay="90">Formal Elegante</p>
+            <p class="dc-subtitle" data-aos="fade-up" data-aos-delay="90">Formal</p>
 
             <img class="dc-illustration"
                  src="{$_layoutParams.root}views/milagrosymarcelo/imgs/dress_code.webp"
@@ -16,20 +16,14 @@
                  data-aos="zoom-in"
                  data-aos-delay="105">
 
-            <p class="dc-rule" data-aos="fade-up" data-aos-delay="120">ELLOS: Traje y Corbata</p>
-            <p class="dc-rule" data-aos="fade-up" data-aos-delay="140">ELLAS: Vestido Largo</p>
-            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="160">Reserva el blanco y colores claros para la novia</p>
+            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="120">
+                Reserva el blanco y colores<br>
+                claros para la novia
+            </p>
+            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="140">
+                Reserva el azul para el novio
+            </p>
         </div>
-
-        <img class="dc-bottom-image"
-             src="{$_layoutParams.root}views/milagrosymarcelo/imgs/dress_code_1.webp"
-             alt=""
-             width="989"
-             height="610"
-             loading="lazy"
-             decoding="async"
-             data-aos="zoom-in"
-             data-aos-delay="160">
 
     </div>
 
@@ -47,7 +41,7 @@
         width: 100%;
         max-width: 720px;
         margin: 0 auto;
-        padding: 1.5rem 1.25rem 2rem;
+        padding: 5rem 1.25rem 5.25rem;
         background: #fff;
         box-sizing: border-box;
     }
@@ -58,7 +52,7 @@
         align-items: center;
         text-align: center;
         color: #8192A0;
-        margin-bottom: 0.65rem;
+        margin-bottom: 0;
         gap: 0;
     }
 
@@ -66,98 +60,99 @@
         font-family: 'parfumerie-script', cursive;
         font-weight: normal;
         color: #8192A0;
-        margin: 0;
+        margin: 0 0 1.35rem;
         line-height: 1.05;
     }
 
     #dresscode .dc-subtitle {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1.05rem;
+        font-size: 1.35rem;
         font-weight: normal;
-        letter-spacing: 2.5px;
+        letter-spacing: 3px;
         text-transform: uppercase;
         color: #8192A0;
-        margin: 0.2rem 0 0.4rem;
+        margin: 0 0 2rem;
         -webkit-text-stroke: 0.4px #8192A0;
         paint-order: stroke fill;
     }
 
     #dresscode .dc-illustration {
-        width: min(130px, 36vw);
+        width: min(150px, 40vw);
         height: auto;
         display: block;
-        margin: 0 auto 0.35rem;
+        margin: 0 auto 2rem;
     }
 
     #dresscode .dc-rule {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         font-weight: normal;
-        letter-spacing: 1.5px;
+        letter-spacing: 1.2px;
         color: #8192A0;
         margin: 0;
-        line-height: 1.2;
+        line-height: 1.5;
         -webkit-text-stroke: 0.4px #8192A0;
         paint-order: stroke fill;
     }
 
     #dresscode .dc-rule-note {
-        margin-top: 0.55rem;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         letter-spacing: 0.8px;
         text-transform: none;
-        max-width: 22rem;
+        max-width: 24rem;
+        margin: 0;
     }
 
-    #dresscode .dc-bottom-image {
-        width: 100%;
-        max-width: 520px;
-        height: auto;
-        display: block;
-        margin: 0.35rem auto 0;
+    #dresscode .dc-rule-note + .dc-rule-note {
+        margin-top: 1.15rem;
     }
 
     @media (max-width: 768px) {
         #dresscode .dresscode-inner {
-            padding: 1.25rem 1rem 1.75rem;
+            padding: 4.25rem 1rem 4.5rem;
         }
 
         #dresscode .dc-title {
+            margin-bottom: 1.1rem;
             -webkit-text-stroke: 0.85px #8192A0;
             paint-order: stroke fill;
             font-variant-ligatures: none;
         }
 
         #dresscode .dc-subtitle {
-            font-size: 0.92rem;
-            margin: 0.15rem 0 0.35rem;
+            font-size: 1.2rem;
+            margin: 0 0 1.75rem;
             -webkit-text-stroke: 0.4px #8192A0;
         }
 
         #dresscode .dc-illustration {
-            width: min(115px, 34vw);
-            margin-bottom: 0.3rem;
+            width: min(130px, 38vw);
+            margin-bottom: 1.75rem;
         }
 
-        #dresscode .dc-rule {
-            font-size: 0.9rem;
+        #dresscode .dc-rule,
+        #dresscode .dc-rule-note {
+            font-size: 1rem;
             -webkit-text-stroke: 0.4px #8192A0;
         }
 
-        #dresscode .dc-rule-note {
-            font-size: 0.84rem;
-            margin-top: 0.45rem;
+        #dresscode .dc-rule-note + .dc-rule-note {
+            margin-top: 1rem;
         }
     }
 
     @media (max-width: 480px) {
-        #dresscode .dc-subtitle,
-        #dresscode .dc-rule {
-            font-size: 0.86rem;
+        #dresscode .dresscode-inner {
+            padding: 3.75rem 1rem 4rem;
         }
 
+        #dresscode .dc-subtitle {
+            font-size: 1.1rem;
+        }
+
+        #dresscode .dc-rule,
         #dresscode .dc-rule-note {
-            font-size: 0.8rem;
+            font-size: 0.95rem;
         }
     }
 </style>

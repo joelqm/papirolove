@@ -13,7 +13,7 @@
             Invitaci&oacute;n exclusiva para adultos
         </p>
 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvHdisG6v0bLwHmqW8sjKJWmm7HKNvLZ2uSeJMA3nWjg1eoA/viewform?usp=sharing&ouid=116663290609750251722"
+        <a href="https://wa.link/ascd8d"
            class="attendance-btn"
            data-aos="zoom-in"
            data-aos-delay="140"

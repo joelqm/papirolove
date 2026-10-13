@@ -94,8 +94,13 @@
         </p>
     </div>
 
-    <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-        <button type="button" class="hero-action-btn hero-action-btn--song js-song-player" aria-label="Reproducir nuestra canción">
+    <div class="hero-actions">
+        <button type="button"
+                id="btnMilagrosSong"
+                class="hero-action-btn hero-action-btn--song js-song-player"
+                aria-label="Reproducir nuestra canción"
+                aria-pressed="false"
+                onclick="return window.toggleMilagrosSong(event);">
             <span>Nuestra canción</span>
             <img class="hero-action-icon"
                  src="{$_layoutParams.root}views/milagrosymarcelo/imgs/icono_cancion.svg"
@@ -103,7 +108,10 @@
                  aria-hidden="true">
         </button>
 
-        <button type="button" class="hero-action-btn hero-action-btn--calendar button-calendar" aria-label="Agregar a tu calendario">
+        <button type="button"
+                class="hero-action-btn hero-action-btn--calendar button-calendar"
+                aria-label="Agregar a tu calendario"
+                onclick="if (typeof crearEventoEnGoogleCalendar === 'function') { crearEventoEnGoogleCalendar(); } return false;">
             <img class="hero-action-icon"
                  src="{$_layoutParams.root}views/milagrosymarcelo/imgs/icono_calendario.svg"
                  alt=""
@@ -111,22 +119,75 @@
             <span>Agrega a tu calendario</span>
         </button>
     </div>
-
-    <audio id="myAudio"
-           src="{$_layoutParams.root}views/milagrosymarcelo/sound/song.mp3"
-           preload="auto"></audio>
 </div>
 
-<div class="navigation" data-aos="fade-down" data-aos-delay="260">
+<audio id="milagrosSongAudio"
+       class="hero-audio"
+       src="{$_layoutParams.root}views/milagrosymarcelo/sound/song.mp3"
+       preload="auto"
+       playsinline
+       webkit-playsinline></audio>
+
+<script>
+window.toggleMilagrosSong = function (event) {
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (typeof event.stopImmediatePropagation === 'function') {
+            event.stopImmediatePropagation();
+        }
+    }
+
+    var audio = document.getElementById('milagrosSongAudio');
+    var btn = document.getElementById('btnMilagrosSong');
+    if (!audio) {
+        return false;
+    }
+
+    // Evita que el navegador haga scroll al elemento audio
+    try { audio.blur(); } catch (err) {}
+
+    if (audio.paused || audio.ended) {
+        var playPromise = audio.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.then(function () {
+                if (btn) {
+                    btn.classList.add('is-playing');
+                    btn.setAttribute('aria-pressed', 'true');
+                }
+            }).catch(function (err) {
+                console.log('No se pudo reproducir song.mp3:', err);
+                if (btn) {
+                    btn.classList.remove('is-playing');
+                    btn.setAttribute('aria-pressed', 'false');
+                }
+            });
+        } else if (btn) {
+            btn.classList.add('is-playing');
+            btn.setAttribute('aria-pressed', 'true');
+        }
+    } else {
+        audio.pause();
+        if (btn) {
+            btn.classList.remove('is-playing');
+            btn.setAttribute('aria-pressed', 'false');
+        }
+    }
+
+    return false;
+};
+</script>
+
+<div class="navigation">
     <a href="javascript:void(0);" class="icon" id="hamburger-icon">
         <i class="fas fa-bars"></i>
     </a>
     <div class="menu" id="menu">
-        <a data-id="new-history" href="#new-history" class="nav-item">Nuestra Historia</a>
-        <a data-id="info" class="nav-item">Detalles</a>
-        <a data-id="galery" class="nav-item">Fotos</a>
-        <a data-id="dresscode" class="nav-item">Dress Code</a>
-        <a data-id="attendance" class="nav-item">Asistencia</a>
-        <a data-id="gifts" class="nav-item">Regalos</a>
+        <a href="javascript:void(0);" data-id="new-history" class="nav-item">Nuestra Historia</a>
+        <a href="javascript:void(0);" data-id="info" class="nav-item">Detalles</a>
+        <a href="javascript:void(0);" data-id="galery" class="nav-item">Fotos</a>
+        <a href="javascript:void(0);" data-id="dresscode" class="nav-item">Dress Code</a>
+        <a href="javascript:void(0);" data-id="attendance" class="nav-item">Asistencia</a>
+        <a href="javascript:void(0);" data-id="gifts" class="nav-item">Regalos</a>
     </div>
 </div>

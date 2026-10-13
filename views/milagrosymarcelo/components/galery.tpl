@@ -1,27 +1,51 @@
 <section class="galery" id="galery" data-aos="fade-up">
     <div class="container-galery" data-aos="zoom-in" data-aos-delay="120">
         <div class="owl-carousel owl-theme galery-carousel">
-            <div class="item" data-aos="zoom-in" data-aos-delay="60">
+            <div class="item">
                 <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-1.webp"
                      alt="Milagros y Marcelo"
-                     width="870"
-                     height="1200"
                      loading="lazy"
                      decoding="async">
             </div>
-            <div class="item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="item">
                 <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-2.webp"
                      alt="Milagros y Marcelo"
-                     width="540"
-                     height="723"
                      loading="lazy"
                      decoding="async">
             </div>
-            <div class="item" data-aos="zoom-in" data-aos-delay="140">
+            <div class="item">
                 <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-3.webp"
                      alt="Milagros y Marcelo"
-                     width="933"
-                     height="1400"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="item">
+                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-4.webp"
+                     alt="Milagros y Marcelo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="item">
+                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-5.webp"
+                     alt="Milagros y Marcelo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="item">
+                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-6.webp"
+                     alt="Milagros y Marcelo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="item">
+                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-7.webp"
+                     alt="Milagros y Marcelo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="item">
+                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-8.webp"
+                     alt="Milagros y Marcelo"
                      loading="lazy"
                      decoding="async">
             </div>
@@ -31,7 +55,7 @@
 
 <style>
   #galery.galery {
-    background: #8192A0;
+    background: #CBD7DF;
     padding: 2.75rem 0 3.25rem;
   }
 
@@ -58,12 +82,12 @@
   }
 
   #galery .owl-dots .owl-dot span {
-    background: rgba(255, 255, 255, 0.45);
+    background: rgba(129, 146, 160, 0.45);
   }
 
   #galery .owl-dots .owl-dot.active span,
   #galery .owl-dots .owl-dot:hover span {
-    background: #fff;
+    background: #8192A0;
   }
 
   @media (max-width: 768px) {

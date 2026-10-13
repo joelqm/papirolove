@@ -6,11 +6,11 @@
     <p class="details-blessing" data-aos="fade-up" data-aos-delay="80">Junto a nuestros padres</p>
 
     <div class="details-parents">
-      <div class="details-parents-col" data-aos="fade-right" data-aos-delay="100">
-        <p>Cesar del Carpio Portocarrero &amp;<br>Nery Ugarte Torres de del Carpio</p>
+      <div class="details-parents-col" data-aos="fade-up" data-aos-delay="100">
+        <p>Esther Holguin Flores</p>
       </div>
-      <div class="details-parents-col" data-aos="fade-left" data-aos-delay="120">
-        <p>Walter Mantilla Torrej&oacute;n &amp;<br>Rosana Meza Santa Mar&iacute;a</p>
+      <div class="details-parents-col" data-aos="fade-up" data-aos-delay="120">
+        <p>Victor Hugo Enriquez Mansilla &amp;<br>Hamny Angela Carranza Delgado</p>
       </div>
     </div>
   </div>
@@ -52,10 +52,10 @@
       </div>
       <h3 class="location-type">Ceremonia</h3>
       </div>
-      <p class="location-address location-venue">Iglesia San Juan Bautista</p>
-      <p class="location-address">Cta. del &Aacute;ngel 145, Yanahuara</p>
+      <p class="location-address location-venue">Iglesia San L&aacute;zaro</p>
+      <p class="location-address">Alameda San L&aacute;zaro N&deg; 126 Cercado</p>
       <p class="location-time">1:30 PM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/pX2gYYrV42QFXPVC7" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
+      <a target="_blank" href="https://maps.app.goo.gl/mHxrtf9rb3DczT7o7" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
     <div class="location-card" data-aos="fade-left" data-aos-delay="180">
@@ -98,10 +98,10 @@
       </div>
       <h3 class="location-type">Recepci&oacute;n</h3>
       </div>
-      <p class="location-address location-venue">El Roc&iacute;o - Sal&oacute;n</p>
-      <p class="location-address">Pasaje Los Molles 200 Sachaca</p>
-      <p class="location-time">3:20 PM</p>
-      <a target="_blank" href="https://maps.app.goo.gl/bx5PNNZkB96yXtEV7" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
+      <p class="location-address location-venue">Mansi&oacute;n Ugarteche</p>
+      <p class="location-address">Calle Manuel Ugarteche 313 Cercado</p>
+      <p class="location-time">4:30 PM</p>
+      <a target="_blank" href="https://maps.app.goo.gl/uuqoRRybTFerm57S8" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
 
@@ -113,11 +113,11 @@
   }
 
   #info.invitation-card {
-    background-color: #d8e4eb;
-    background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/background_2.webp");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/patron_background.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
     padding: 3.75rem 1.25rem 4.5rem;
     color: #8192A0;
     position: relative;
