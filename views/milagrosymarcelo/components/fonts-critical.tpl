@@ -26,5 +26,28 @@
 </style>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=parfumerie-script-old-style.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=Athelas-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{$_layoutParams.root}views/milagrosymarcelo/imgs/backgroundprincipal.webp" as="image" fetchpriority="high" media="(min-width: 701px)">
-<link rel="preload" href="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-2-original.webp" as="image" fetchpriority="high" media="(max-width: 700px)">
+{literal}
+<script>
+(function () {
+  var root = '{/literal}{$_layoutParams.root|escape:'javascript'}{literal}';
+  var seen = false;
+  try { seen = !!sessionStorage.getItem('milagrosLoaderSeen'); } catch (e) {}
+  function preload(href, priority) {
+    var link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = href;
+    link.setAttribute('fetchpriority', priority);
+    document.head.appendChild(link);
+  }
+  var loaderImg = root + 'views/milagrosymarcelo/imgs/preboda.webp';
+  var heroImg = root + 'views/milagrosymarcelo/imgs/backgroundprincipal.webp';
+  if (seen) {
+    preload(heroImg, 'high');
+  } else {
+    preload(loaderImg, 'high');
+    preload(heroImg, 'low');
+  }
+})();
+</script>
+{/literal}

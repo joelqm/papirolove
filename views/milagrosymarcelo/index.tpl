@@ -39,3 +39,34 @@
 
 {include file="views/milagrosymarcelo/components/button-whatsapp.tpl"}
 </div>
+{literal}
+<script>
+(function () {
+  function arm(el) {
+    if (!el || el.getAttribute("data-bg-armed") === "1") return;
+    el.setAttribute("data-bg-armed", "1");
+    if (!("IntersectionObserver" in window)) {
+      el.classList.add("bg-ready");
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("bg-ready");
+        io.disconnect();
+      });
+    }, { rootMargin: "500px 0px" });
+    io.observe(el);
+  }
+  function armBackgrounds() {
+    arm(document.getElementById("info"));
+    arm(document.getElementById("attendance"));
+  }
+  document.addEventListener("papiro:content-visible", armBackgrounds);
+  var content = document.getElementById("contenido");
+  if (content && content.classList.contains("is-visible")) {
+    armBackgrounds();
+  }
+})();
+</script>
+{/literal}

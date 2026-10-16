@@ -13,18 +13,19 @@
     @media (max-width: 700px) {
         .container-page {
             justify-content: space-between !important;
-            padding-top: 5rem !important;
+            padding-top: 0.85rem !important;
             padding-bottom: 1.75rem !important;
         }
 
         .header {
-            padding-top: 2.5rem !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
             top: 0 !important;
         }
 
         .wedding-date-2 {
             margin-top: 0.85rem !important;
-            font-size: 0.92rem !important;
+            font-size: 1.05rem !important;
             letter-spacing: 1.5px !important;
             color: #8192A0 !important;
             -webkit-text-stroke: 1.1px #8192A0;
@@ -43,7 +44,7 @@
         }
 
         .hero-action-btn {
-            font-size: 0.78rem;
+            font-size: 0.88rem;
             min-height: 46px;
             padding: 0.55rem 0.4rem;
             gap: 0.4rem;
@@ -71,7 +72,7 @@
         }
 
         .hero-action-btn {
-            font-size: 0.72rem;
+            font-size: 0.84rem;
             padding: 0.5rem 0.3rem;
             min-height: 44px;
         }
@@ -124,7 +125,7 @@
 <audio id="milagrosSongAudio"
        class="hero-audio"
        src="{$_layoutParams.root}views/milagrosymarcelo/sound/song.mp3"
-       preload="auto"
+       preload="none"
        playsinline
        webkit-playsinline></audio>
 

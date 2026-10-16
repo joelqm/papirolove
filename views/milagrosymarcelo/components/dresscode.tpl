@@ -132,7 +132,7 @@
 
         #dresscode .dc-rule,
         #dresscode .dc-rule-note {
-            font-size: 1rem;
+            font-size: 1.08rem;
             -webkit-text-stroke: 0.4px #8192A0;
         }
 
@@ -152,7 +152,7 @@
 
         #dresscode .dc-rule,
         #dresscode .dc-rule-note {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
         }
     }
 </style>

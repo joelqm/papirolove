@@ -114,7 +114,6 @@
 
   #info.invitation-card {
     background-color: #fff;
-    background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/patron_background.webp");
     background-size: contain;
     background-position: center;
     background-repeat: repeat;
@@ -125,6 +124,10 @@
 
   #info.invitation-card::before {
     content: none;
+  }
+
+  #info.invitation-card.bg-ready {
+    background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/patron_background.webp");
   }
 
   #info .invitation-pattern {
@@ -155,7 +158,7 @@
   }
 
   #info .details-intro p.details-blessing {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     letter-spacing: 2.2px;
     text-transform: uppercase;
     margin: 0 auto 1.25rem;
@@ -180,7 +183,7 @@
   }
 
   #info .details-parents-col p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.4;
     letter-spacing: 1.35px;
     text-transform: uppercase;
@@ -242,7 +245,7 @@
   }
 
   #info .location-address:not(.location-venue) {
-    font-size: 0.88rem;
+    font-size: 1.05rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     line-height: 1.3;
@@ -252,7 +255,7 @@
   }
 
   #info .location-time {
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin: 0.1rem 0 0.75rem;
@@ -315,7 +318,7 @@
     }
 
     #info .details-intro p.details-blessing {
-      font-size: 0.92rem;
+      font-size: 1.08rem;
       letter-spacing: 1.8px;
       -webkit-text-stroke: 0.45px #8192A0;
     }
@@ -325,7 +328,7 @@
     }
 
     #info .details-parents-col p {
-      font-size: 0.86rem;
+      font-size: 1.05rem;
       letter-spacing: 1px;
       line-height: 1.35;
       -webkit-text-stroke: 0.4px #8192A0;
@@ -350,22 +353,22 @@
 
     #info .location-address:not(.location-venue),
     #info .location-time {
-      font-size: 0.86rem;
+      font-size: 1.02rem;
       -webkit-text-stroke: 0.4px #8192A0;
     }
   }
 
   @media (max-width: 480px) {
     #info .details-intro p.details-blessing {
-      font-size: 0.88rem;
+      font-size: 1.05rem;
     }
 
     #info .details-parents-col p {
-      font-size: 0.82rem;
+      font-size: 1.02rem;
     }
 
     #info .location-address:not(.location-venue) {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
     #info .location-type {
@@ -377,7 +380,7 @@
     }
 
     #info .location-time {
-      font-size: 0.86rem;
+      font-size: 1.02rem;
     }
   }
 </style>

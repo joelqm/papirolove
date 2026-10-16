@@ -2,52 +2,60 @@
     <div class="container-galery" data-aos="zoom-in" data-aos-delay="120">
         <div class="owl-carousel owl-theme galery-carousel">
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-1.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-1.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-2.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-2.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-3.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-3.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-4.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-4.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-5.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-5.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-6.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-6.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-7.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-7.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
             <div class="item">
-                <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-8.webp"
+                <img class="owl-lazy"
+                     data-src="{$_layoutParams.root}views/milagrosymarcelo/imgs/preboda-8.webp"
                      alt="Milagros y Marcelo"
-                     loading="lazy"
-                     decoding="async">
+                     width="562"
+                     height="717">
             </div>
         </div>
     </div>
@@ -132,6 +140,8 @@
             loop: true,
             margin: 14,
             dots: true,
+            lazyLoad: true,
+            lazyLoadEager: 0,
             autoHeight: true,
             autoplay: true,
             autoplayTimeout: 3500,
@@ -174,8 +184,6 @@
         if (!section) return;
         whenVisible(section, waitOwlAndInit);
     }
-
-    document.addEventListener("papiro:content-visible", waitOwlAndInit);
 
     if (document.readyState === "loading") {
         document.addEventListener("DOMContentLoaded", bootLazy);

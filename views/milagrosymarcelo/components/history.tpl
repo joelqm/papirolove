@@ -24,7 +24,7 @@
     font-weight: normal;
     line-height: 1.1;
     text-align: center;
-    font-size: clamp(2.8rem, 6vw, 4.2rem);
+    font-size: var(--section-title-size);
   }
 
   #new-history .history-body {
@@ -61,7 +61,7 @@
 
   #new-history .history-content p {
     font-family: 'Athelas-Regular', Georgia, serif;
-    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    font-size: clamp(1.15rem, 1.6vw, 1.28rem);
     line-height: 1.75;
     color: #8192A0;
     text-align: center;
@@ -76,6 +76,7 @@
 
     #new-history .history-title-big {
       margin-bottom: 1.75rem;
+      font-size: var(--section-title-size-mobile);
       -webkit-text-stroke: 0.7px #8192A0;
       paint-order: stroke fill;
     }
@@ -95,10 +96,16 @@
     }
 
     #new-history .history-content p {
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       line-height: 1.7;
       -webkit-text-stroke: 0.3px #8192A0;
       paint-order: stroke fill;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #new-history .history-title-big {
+      font-size: var(--section-title-size-small);
     }
   }
 </style>
@@ -113,6 +120,8 @@
       <figure class="history-photo" data-aos="fade-right" data-aos-delay="100">
         <img src="{$_layoutParams.root}views/milagrosymarcelo/imgs/nuestra_historia_perrito.webp"
              alt="Milagros y Marcelo"
+             width="452"
+             height="617"
              loading="lazy"
              decoding="async">
       </figure>

@@ -2257,19 +2257,19 @@ footer {
 /* Media Query: Max 700px (fondo hero móvil) */
 @media (max-width: 700px) {
     .background {
-        background-image: url("../imgs/preboda-2-original.webp");
+        background-image: url("../imgs/backgroundprincipal.webp");
         background-position: center center;
     }
 
     .container-page {
         align-items: center;
         justify-content: space-between;
-        padding: 5.5rem 1.25rem 1.5rem;
+        padding: 0.85rem 1.25rem 1.5rem;
         min-height: 100svh;
     }
 
     .header {
-        padding-top: 2rem;
+        padding-top: 0;
         top: 0;
     }
 
@@ -2412,7 +2412,7 @@ footer {
     }
 
     .wedding-date-2 {
-        font-size: 0.85rem;
+        font-size: 1.05rem;
         position: static;
         top: auto;
         margin-top: 0.9rem;
@@ -2798,7 +2798,7 @@ footer {
 @media (max-width: 480px) {
     .header {
         top: 0;
-        padding-top: 2rem;
+        padding-top: 0;
     }
 
     .couple-name {

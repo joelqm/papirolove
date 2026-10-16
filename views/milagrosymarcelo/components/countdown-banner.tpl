@@ -29,12 +29,12 @@
   }
 
   .countdown-banner__message {
-    font-size: 0.98rem;
+    font-size: 1.15rem;
     margin-bottom: 1.75rem;
   }
 
   .countdown-banner__submessage {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     letter-spacing: 2.2px;
     margin-bottom: 2.5rem;
   }
@@ -77,7 +77,7 @@
 
   .countdown-banner__values-row .countdown-label {
     font-family: 'Athelas-Regular', Georgia, serif;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
     color: #fff;
     text-transform: uppercase;
@@ -97,12 +97,12 @@
 
     .countdown-banner__message,
     .countdown-banner__submessage {
-      font-size: 0.85rem;
+      font-size: 1.05rem;
       letter-spacing: 1.5px;
     }
 
     .countdown-banner__submessage {
-      font-size: 0.9rem;
+      font-size: 1.05rem;
       margin-bottom: 2rem;
     }
 
@@ -115,7 +115,7 @@
     }
 
     .countdown-banner__values-row .countdown-label {
-      font-size: 0.65rem;
+      font-size: 0.9rem;
       letter-spacing: 1.5px;
     }
   }
@@ -127,7 +127,7 @@
 
     .countdown-banner__message,
     .countdown-banner__submessage {
-      font-size: 0.78rem;
+      font-size: 1.02rem;
       letter-spacing: 1.2px;
     }
 
@@ -150,6 +150,8 @@
   <img class="countdown-banner__logo"
        src="{$_layoutParams.root}views/milagrosymarcelo/imgs/nuestra_historia_flores.webp"
        alt="Milagros y Marcelo"
+       width="504"
+       height="587"
        loading="lazy"
        decoding="async"
        data-aos="zoom-in"

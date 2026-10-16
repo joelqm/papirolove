@@ -15,8 +15,8 @@
 
             <div class="gifts-block gifts-block--transfer" data-aos="fade-up" data-aos-delay="110">
                 <h2 class="gifts-heading">Transferencia</h2>
-                <button type="button" class="gifts-btn js-gifts-transfer-toggle" aria-expanded="true" aria-controls="gifts-bank">Regala Aqu&iacute;</button>
-                <div class="gifts-bank" id="gifts-bank" x-ms-format-detection="none">
+                <button type="button" class="gifts-btn js-gifts-transfer-toggle" aria-expanded="false" aria-controls="gifts-bank">Regala Aqu&iacute;</button>
+                <div class="gifts-bank" id="gifts-bank" hidden x-ms-format-detection="none">
                     <p class="gifts-bank-line">Cuenta en Soles</p>
                     <p class="gifts-bank-line">BCP</p>
                     <p class="gifts-bank-line"><span class="gifts-bank-num">215-97769429-0-93</span></p>
@@ -112,7 +112,7 @@
 
     #gifts .gifts-intro {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1.05rem;
+        font-size: 1.15rem;
         letter-spacing: 1.8px;
         text-transform: uppercase;
         color: #fff;
@@ -181,7 +181,7 @@
 
     #gifts .gifts-bank-line {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 1rem;
+        font-size: 1.1rem;
         letter-spacing: 1px;
         color: #fff;
         margin: 0;
@@ -683,7 +683,7 @@
         }
 
         #gifts .gifts-intro {
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             margin-bottom: 2.35rem;
             -webkit-text-stroke: 0.4px #fff;
         }
@@ -693,7 +693,7 @@
         }
 
         #gifts .gifts-heading {
-            font-size: 1.35rem;
+            font-size: 1.5rem;
             -webkit-text-stroke: 0.45px #fff;
         }
 
@@ -806,7 +806,7 @@
         }
 
         #gifts .gifts-intro {
-            font-size: 0.86rem;
+            font-size: 1.02rem;
             margin-bottom: 2rem;
         }
 
@@ -815,11 +815,11 @@
         }
 
         #gifts .gifts-heading {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         #gifts .gifts-bank-line {
-            font-size: 0.9rem;
+            font-size: 1.05rem;
         }
 
         #gifts .gifts-content {
@@ -875,8 +875,13 @@
 
         btn.addEventListener('click', function (e) {
             e.preventDefault();
-            var top = bank.getBoundingClientRect().top + window.pageYOffset - 100;
-            window.scrollTo({ top: top, behavior: 'smooth' });
+            var open = bank.hasAttribute('hidden');
+            if (open) {
+                bank.removeAttribute('hidden');
+            } else {
+                bank.setAttribute('hidden', '');
+            }
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
     }
 

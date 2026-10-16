@@ -28,13 +28,22 @@
 <style>
     #attendance.attendance-section {
         background-color: #CBD7DF;
-        background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/background-confirmar-asistencia.webp");
         background-size: cover;
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
-        padding: 3.5rem 1.25rem 3.75rem;
+        height: 700px;
+        min-height: 700px;
+        padding: 4.5rem 1.25rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         color: #8192A0;
+    }
+
+    #attendance.attendance-section.bg-ready {
+        background-image: url("{$_layoutParams.root}views/milagrosymarcelo/imgs/background-confirmar-asistencia.webp");
     }
 
     #attendance .attendance-inner {
@@ -57,7 +66,7 @@
 
     #attendance .attendance-text {
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 0.95rem;
+        font-size: 1.15rem;
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #8192A0;
@@ -76,7 +85,7 @@
 
     #attendance .attendance-note {
         font-family: 'SourceSansVariable', 'Source Sans 3', sans-serif;
-        font-size: 0.95rem;
+        font-size: 1.08rem;
         font-weight: 400;
         letter-spacing: 0.3px;
         text-transform: none;
@@ -95,7 +104,7 @@
         background: #8192A0;
         color: #fff !important;
         font-family: 'Athelas-Regular', Georgia, serif;
-        font-size: 0.95rem;
+        font-size: 1.05rem;
         letter-spacing: 0.5px;
         text-decoration: none;
         transition: opacity 0.3s ease;
@@ -110,7 +119,16 @@
 
     @media (max-width: 768px) {
         #attendance.attendance-section {
-            padding: 3rem 1rem 3.25rem;
+            height: 700px;
+            min-height: 700px;
+            padding: 3.4rem 1.15rem 3.6rem;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
         #attendance .attendance-title {
@@ -122,24 +140,24 @@
         }
 
         #attendance .attendance-text {
-            font-size: 0.88rem;
+            font-size: 1.05rem;
             margin-bottom: 0.75rem;
             -webkit-text-stroke: 0.4px #8192A0;
         }
 
         #attendance .attendance-note {
-            font-size: 0.9rem;
+            font-size: 1.02rem;
             margin: 0 0 1.15rem;
         }
     }
 
     @media (max-width: 480px) {
         #attendance .attendance-text {
-            font-size: 0.84rem;
+            font-size: 1.02rem;
         }
 
         #attendance .attendance-note {
-            font-size: 0.86rem;
+            font-size: 1rem;
         }
     }
 </style>
