@@ -119,14 +119,15 @@
 
     @media (max-width: 768px) {
         #attendance.attendance-section {
-            height: 700px;
-            min-height: 700px;
-            padding: 3.4rem 1.15rem 3.6rem;
+            height: auto;
+            min-height: 0;
+            aspect-ratio: 1024 / 768;
+            padding: 1.6rem 1.15rem;
             box-sizing: border-box;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-size: 100% 100%;
+            background-size: contain;
             background-position: center center;
             background-repeat: no-repeat;
         }

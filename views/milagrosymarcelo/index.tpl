@@ -67,6 +67,27 @@
   if (content && content.classList.contains("is-visible")) {
     armBackgrounds();
   }
+
+  function enableFadeInOut() {
+    if (!window.AOS || typeof window.AOS.init !== "function") return;
+    window.AOS.init({
+      once: false,
+      duration: 800,
+      offset: 80,
+      easing: "ease-in-out",
+      anchorPlacement: "top-bottom"
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    window.papiroAosFailsafe = function () {
+      enableFadeInOut();
+    };
+  });
+
+  document.addEventListener("papiro:content-visible", function () {
+    setTimeout(enableFadeInOut, 60);
+  });
 })();
 </script>
 {/literal}

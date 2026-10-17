@@ -17,11 +17,9 @@
                  data-aos-delay="105">
 
             <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="120">
-                Reserva el blanco y colores<br>
-                claros para la novia
-            </p>
-            <p class="dc-rule dc-rule-note" data-aos="fade-up" data-aos-delay="140">
-                Reserva el azul para el novio
+                Reserva el blanco y tonos nude para la novia,<br>
+                recuerda no usar tonos rojos ni estampados llamativos.<br>
+                Reserva el azul para el novio.
             </p>
         </div>
 
@@ -99,7 +97,7 @@
         font-size: 1.05rem;
         letter-spacing: 0.8px;
         text-transform: none;
-        max-width: 24rem;
+        max-width: 40rem;
         margin: 0;
     }
 

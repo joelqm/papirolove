@@ -68,20 +68,44 @@
       });
     }
 
+    var ALWAYS = {/literal}{if $loader_always|default:0}1{else}0{/if}{literal};
+    var WAIT_PAGE = {/literal}{if $loader_wait_page|default:0}1{else}0{/if}{literal};
     var fastTrack = false;
     try { fastTrack = !!sessionStorage.getItem(KEY); } catch (e) {}
 
-    if (fastTrack) {
+    if (fastTrack && !ALWAYS) {
       finish();
       return;
     }
 
     var logo = document.querySelector('.loader-logo');
-    var maxWait = setTimeout(finish, 1200);
+    var HOLD_MS = {/literal}{$loader_hold|default:350|escape:'javascript'}{literal};
+    var MAX_MS = {/literal}{$loader_max|default:1200|escape:'javascript'}{literal};
+    var holdDone = false;
+    var pageReady = !WAIT_PAGE || document.readyState === 'complete';
+
+    function maybeFinish() {
+      if (holdDone && pageReady) finish();
+    }
+
+    if (WAIT_PAGE && !pageReady) {
+      window.addEventListener('load', function () {
+        pageReady = true;
+        maybeFinish();
+      }, { once: true });
+    }
+
+    var maxWait = setTimeout(function () {
+      holdDone = true;
+      maybeFinish();
+    }, MAX_MS);
 
     function onLogoReady() {
       clearTimeout(maxWait);
-      setTimeout(finish, 350);
+      setTimeout(function () {
+        holdDone = true;
+        maybeFinish();
+      }, HOLD_MS);
     }
 
     if (!logo || logo.complete) {
@@ -100,7 +124,7 @@
 
   setTimeout(function () {
     finish();
-  }, 3500);
+  }, {/literal}{$loader_fallback|default:3500|escape:'javascript'}{literal});
 })();
 </script>
 {/literal}

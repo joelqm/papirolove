@@ -1,1 +1,1 @@
-{include file="views/layout/neela/loader-safe.tpl" loader_logo="{$_layoutParams.root}views/milagrosymarcelo/imgs/nuestra_historia_flores.webp" loader_key="milagrosLoaderSeen"}
+{include file="views/layout/neela/loader-safe.tpl" loader_logo="{$_layoutParams.root}views/milagrosymarcelo/imgs/nuestra_historia_flores.webp" loader_key="milagrosLoaderSeen" loader_hold="5000" loader_max="7000" loader_fallback="12000" loader_always="1" loader_wait_page="1"}

@@ -54,7 +54,7 @@
       </div>
       <p class="location-address location-venue">Iglesia San L&aacute;zaro</p>
       <p class="location-address">Alameda San L&aacute;zaro N&deg; 126 Cercado</p>
-      <p class="location-time">1:30 PM</p>
+      <p class="location-time">11:30 AM</p>
       <a target="_blank" href="https://maps.app.goo.gl/mHxrtf9rb3DczT7o7" class="location-button" data-aos="zoom-in" data-aos-delay="140">Ver Mapa</a>
     </div>
 
@@ -100,7 +100,7 @@
       </div>
       <p class="location-address location-venue">Mansi&oacute;n Ugarteche</p>
       <p class="location-address">Calle Manuel Ugarteche 313 Cercado</p>
-      <p class="location-time">4:30 PM</p>
+      <p class="location-time">1:00 PM</p>
       <a target="_blank" href="https://maps.app.goo.gl/uuqoRRybTFerm57S8" class="location-button" data-aos="zoom-in" data-aos-delay="240">Ver Mapa</a>
     </div>
   </div>
