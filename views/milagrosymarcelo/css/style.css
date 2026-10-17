@@ -401,6 +401,7 @@ body.aos-broken [data-aos] {
 /* ===== 7. HERO SECTION (Sección principal y Contador) ===== */
 .container-page {
     position: relative;
+    isolation: isolate;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -418,6 +419,8 @@ body.aos-broken [data-aos] {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    opacity: 1;
+    transform: none;
 }
 
 .content {
@@ -2259,6 +2262,9 @@ footer {
     .background {
         background-image: url("../imgs/backgroundprincipal.webp");
         background-position: center center;
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
     }
 
     .container-page {

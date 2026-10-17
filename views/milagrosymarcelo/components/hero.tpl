@@ -85,7 +85,7 @@
 </style>
 <div class="container-page">
 
-    <div class="background" data-aos="fade-in" data-aos-duration="600"></div>
+    <div class="background"></div>
 
     <div class="header" style="justify-items: center;">
         <h1 class="couple-name" data-aos="fade-up" data-aos-delay="80">Milagros <span style="margin-left: 1rem;">&</span>
