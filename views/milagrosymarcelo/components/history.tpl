@@ -69,6 +69,10 @@
     font-weight: 400;
   }
 
+  #new-history .history-content p + p {
+    margin-top: 1.15rem;
+  }
+
   @media (max-width: 800px) {
     #new-history .history-simple {
       padding: 2.75rem 1rem 3.25rem;
@@ -128,15 +132,28 @@
 
       <div class="history-content" data-aos="fade-up" data-aos-delay="120">
         <p>
-          Nos encontramos por trabajo, pero nos quedamos<br>
-          por amor. Hablando sin apuro, ri&eacute;ndonos<br>
-          en los descansos, poco a poco esa amistad<br>
-          di&oacute; un gran giro, Hoy llevamos muchos<br>
-          a&ntilde;os caminando juntos y este<br>
-          diciembre damos el paso m&aacute;s<br>
-          importante: nos casamos.<br>
-          De compa&ntilde;eros a complices,<br>
-          y ahora esposos.
+          Nos encontramos por trabajo, pero nos<br>
+          quedamos por amor.
+        </p>
+        <p>
+          Entre conversaciones sin apuro, risas en los descansos<br>
+          y un peque&ntilde;o escondite de dulces<br>
+          que se convirti&oacute; en la excusa perfecta para<br>
+          buscarnos y hablarnos, aquella amistad fue<br>
+          creciendo poco a poco, hasta convertirse en algo<br>
+          mucho m&aacute;s bonito.
+        </p>
+        <p>
+          Hoy, despu&eacute;s de tantos a&ntilde;os caminando<br>
+          juntos, seguimos eligi&eacute;ndonos cada d&iacute;a<br>
+          y estamos listos para dar el paso m&aacute;s<br>
+          importante de nuestra historia:<br>
+          este diciembre, &iexcl;NOS CASAMOS!
+        </p>
+        <p>
+          De colegas a c&oacute;mplices, de c&oacute;mplices<br>
+          a compa&ntilde;eros de vida y, ahora,<br>
+          para siempre, esposos.
         </p>
       </div>
     </div>
