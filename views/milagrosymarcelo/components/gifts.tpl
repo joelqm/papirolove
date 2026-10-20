@@ -80,7 +80,7 @@
 
 <style>
     #gifts.gift-container {
-        background: #8192A0;
+        background: #A2B4C1;
         color: #fff;
         padding: 5rem 1.25rem 5.25rem;
         position: relative;
@@ -284,7 +284,7 @@
         right: 0.85rem;
         border: none;
         background: transparent;
-        color: #8192A0;
+        color: #A2B4C1;
         font-size: 2rem;
         line-height: 1;
         cursor: pointer;
@@ -307,7 +307,7 @@
         font-size: 1.35rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: #8192A0;
+        color: #A2B4C1;
         margin: 0;
         line-height: 1.2;
     }
@@ -323,7 +323,7 @@
         border: 1px solid #CBD7DF;
         border-radius: 999px;
         background: #fff;
-        color: #8192A0;
+        color: #A2B4C1;
         cursor: pointer;
     }
 
@@ -406,7 +406,7 @@
         justify-content: center;
         gap: 0.75rem;
         background: rgba(255, 255, 255, 0.92);
-        color: #8192A0;
+        color: #A2B4C1;
         font-family: 'Athelas-Regular', Georgia, serif;
         font-size: 0.95rem;
         letter-spacing: 0.5px;
@@ -505,13 +505,13 @@
     .gifts-modal__products-grid .product-info > p {
         margin: 0 !important;
         line-height: 1.25;
-        color: #8192A0;
+        color: #A2B4C1;
         font-size: 0.88rem;
     }
 
     .gifts-modal__products-grid .product-price {
         font-size: 0.95rem !important;
-        color: #8192A0 !important;
+        color: #A2B4C1 !important;
     }
 
     .gifts-modal__products-grid .product-progress {
@@ -561,7 +561,7 @@
         font-size: 1rem;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: #8192A0;
+        color: #A2B4C1;
     }
 
     .gifts-modal__cart-items {
@@ -620,7 +620,7 @@
         justify-content: space-between;
         align-items: center;
         font-family: 'Athelas-Regular', Georgia, serif;
-        color: #8192A0;
+        color: #A2B4C1;
         margin-bottom: 0.55rem;
         font-size: 0.95rem;
     }
@@ -634,7 +634,7 @@
         width: 100%;
         margin-top: 0;
         border-radius: 999px;
-        background: #8192A0;
+        background: #A2B4C1;
         font-size: 0.88rem;
         letter-spacing: 0.5px;
     }
@@ -647,7 +647,7 @@
     }
 
     .gifts-modal__products .category-button.primary {
-        background-color: #8192A0;
+        background-color: #A2B4C1;
         color: #fff;
         border: none;
     }

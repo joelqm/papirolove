@@ -32,7 +32,7 @@
     #dresscode.dresscode-section {
         background: #fff;
         padding: 0;
-        color: #8192A0;
+        color: #A2B4C1;
     }
 
     #dresscode .dresscode-inner {
@@ -49,7 +49,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        color: #8192A0;
+        color: #A2B4C1;
         margin-bottom: 0;
         gap: 0;
     }
@@ -57,7 +57,7 @@
     #dresscode .dc-title {
         font-family: 'parfumerie-script', cursive;
         font-weight: normal;
-        color: #8192A0;
+        color: #A2B4C1;
         margin: 0 0 1.35rem;
         line-height: 1.05;
     }
@@ -68,9 +68,9 @@
         font-weight: normal;
         letter-spacing: 3px;
         text-transform: uppercase;
-        color: #8192A0;
+        color: #A2B4C1;
         margin: 0 0 2rem;
-        -webkit-text-stroke: 0.4px #8192A0;
+        -webkit-text-stroke: 0.4px #A2B4C1;
         paint-order: stroke fill;
     }
 
@@ -86,10 +86,10 @@
         font-size: 1.1rem;
         font-weight: normal;
         letter-spacing: 1.2px;
-        color: #8192A0;
+        color: #A2B4C1;
         margin: 0;
         line-height: 1.5;
-        -webkit-text-stroke: 0.4px #8192A0;
+        -webkit-text-stroke: 0.4px #A2B4C1;
         paint-order: stroke fill;
     }
 
@@ -112,7 +112,7 @@
 
         #dresscode .dc-title {
             margin-bottom: 1.1rem;
-            -webkit-text-stroke: 0.85px #8192A0;
+            -webkit-text-stroke: 0.85px #A2B4C1;
             paint-order: stroke fill;
             font-variant-ligatures: none;
         }
@@ -120,7 +120,7 @@
         #dresscode .dc-subtitle {
             font-size: 1.2rem;
             margin: 0 0 1.75rem;
-            -webkit-text-stroke: 0.4px #8192A0;
+            -webkit-text-stroke: 0.4px #A2B4C1;
         }
 
         #dresscode .dc-illustration {
@@ -131,7 +131,7 @@
         #dresscode .dc-rule,
         #dresscode .dc-rule-note {
             font-size: 1.08rem;
-            -webkit-text-stroke: 0.4px #8192A0;
+            -webkit-text-stroke: 0.4px #A2B4C1;
         }
 
         #dresscode .dc-rule-note + .dc-rule-note {

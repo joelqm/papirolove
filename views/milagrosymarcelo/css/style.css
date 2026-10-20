@@ -28,6 +28,14 @@
 }
 
 @font-face {
+    font-family: 'BickhamScriptPro';
+    src: url("../../layout/fonts/BickhamScripproregular.ttf") format("truetype");
+    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'CalliforniaSignature';
     src: url("../../layout/fonts/CalliforniaSignature.ttf");
     font-display: swap;
@@ -114,9 +122,9 @@
     --button-color: #333;
     --button-hover-scale: 110%;
     --footer-color: #b57966;
-    --nav-bg: #8192A0;
+    --nav-bg: #A2B4C1;
     --nav-text: #ffffff;
-    --primary-color: #8192A0;
+    --primary-color: #A2B4C1;
     --primary-ligth-color: #f9f4ef;
     --secondary-color: #555;
     --section-title-size: 5.4rem;
@@ -173,7 +181,7 @@ body {
     #dresscode .dc-title,
     #attendance .attendance-title,
     #new-history .history-title-big {
-        -webkit-text-stroke: 0.85px #8192A0;
+        -webkit-text-stroke: 0.85px #A2B4C1;
     }
 
     #gifts .gifts-title {
@@ -182,7 +190,7 @@ body {
 
     .galery .galery-title,
     .history-title-small-2.galery-title {
-        -webkit-text-stroke: 0.85px #8192A0;
+        -webkit-text-stroke: 0.85px #A2B4C1;
     }
 }
 
@@ -316,7 +324,7 @@ body.aos-broken [data-aos] {
 
 .loader-button {
     background: rgba(255, 255, 255, 0.95);
-    color: #8192A0;
+    color: #A2B4C1;
     font-family: "Baskervville-Regular";
     font-size: 1.1rem;
     padding: 0.65rem 1.4rem;
@@ -331,7 +339,7 @@ body.aos-broken [data-aos] {
     cursor: pointer;
     transition: all 0.5s;
     background: #fff;
-    border: 1px #8192A0 solid;
+    border: 1px #A2B4C1 solid;
 }
 
 .history-logo {
@@ -441,17 +449,19 @@ body.aos-broken [data-aos] {
 }
 
 .couple-name {
-    font-family: 'parfumerie-script', cursive;
+    font-family: 'BickhamScriptPro', 'parfumerie-script', cursive;
     font-size: 5.8rem;
     margin: 0;
-    color: #8192A0 !important;
+    color: #A2B4C1 !important;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     line-height: 1.05;
     font-weight: normal;
-    -webkit-text-stroke: 1.35px #8192A0;
+    font-style: normal;
+    -webkit-text-stroke: 1.05px #A2B4C1;
     paint-order: stroke fill;
     text-shadow: none;
+    white-space: nowrap;
 }
 
 .couple-name.show {
@@ -481,13 +491,13 @@ body.aos-broken [data-aos] {
     margin: 0 auto;
     font-family: "Athelas-Regular", Georgia, serif;
     font-weight: normal;
-    color: #8192A0 !important;
+    color: #A2B4C1 !important;
     font-size: 1rem;
     letter-spacing: 2px;
     margin-top: 1.1rem;
     text-transform: uppercase;
     line-height: 1.5;
-    -webkit-text-stroke: 0.85px #8192A0;
+    -webkit-text-stroke: 0.85px #A2B4C1;
     paint-order: stroke fill;
 }
 
@@ -501,7 +511,7 @@ body.aos-broken [data-aos] {
     margin: 0 auto;
     font-family: "photograph_signature";
     font-weight: normal;
-    color: #8192A0;
+    color: #A2B4C1;
     font-size: 2rem;
     letter-spacing: 3px;
     margin-top: 26px;
@@ -520,14 +530,14 @@ body.aos-broken [data-aos] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #8192A0;
+    color: #A2B4C1;
 }
 
 .countdown-number {
     font-family: "newyork_personal";
     font-size: 28px;
     font-weight: normal;
-    -webkit-text-stroke: 0.35px #8192A0;
+    -webkit-text-stroke: 0.35px #A2B4C1;
 }
 
 .countdown-label {
@@ -536,7 +546,7 @@ body.aos-broken [data-aos] {
     font-size: 24px;
     letter-spacing: 1px;
     margin-top: 5px;
-    -webkit-text-stroke: 0.35px #8192A0;
+    -webkit-text-stroke: 0.35px #A2B4C1;
 }
 
 .buttons {
@@ -565,7 +575,7 @@ body.aos-broken [data-aos] {
 
 .button-calendar {
     font-family: "Athelas-Regular", Georgia, serif;
-    background-color: #8192A0;
+    background-color: #A2B4C1;
     color: #fff;
     margin-top: 0;
     margin-bottom: 0;
@@ -576,12 +586,14 @@ body.aos-broken [data-aos] {
 .hero-actions {
     position: relative;
     z-index: 50;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2.25rem;
-    width: min(640px, 94vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(900px, 86vw);
+    gap: 2rem;
     margin: auto auto 2.75rem;
-    padding: 0 0.25rem;
+    padding: 0;
+    box-sizing: border-box;
     pointer-events: auto;
 }
 
@@ -589,14 +601,15 @@ body.aos-broken [data-aos] {
     font-family: "Athelas-Regular", Georgia, serif;
     font-size: 1.05rem;
     line-height: 1.25;
-    background: #8192A0;
+    background: #A2B4C1;
     color: #fff;
     border: none;
     border-radius: 10px;
-    padding: 0.8rem 1.15rem;
+    padding: 0.8rem 1.35rem;
     min-height: 54px;
-    min-width: 0;
-    width: 100%;
+    width: auto;
+    max-width: 46%;
+    flex: 0 1 auto;
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -605,18 +618,21 @@ body.aos-broken [data-aos] {
     justify-content: center;
     gap: 0.55rem;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .hero-action-btn--song {
     justify-content: center;
     position: relative;
     z-index: 5;
+    margin-right: auto;
 }
 
 .hero-action-btn--calendar {
     justify-content: center;
     position: relative;
     z-index: 5;
+    margin-left: auto;
 }
 
 .hero-action-btn span,
@@ -774,7 +790,7 @@ body.aos-broken [data-aos] {
     padding: 0;
     display: block;
     position: relative;
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
 }
 
@@ -880,7 +896,7 @@ body.aos-broken [data-aos] {
 
 .history-title-big {
     font-family: "photograph_signature";
-    color: #8192A0;
+    color: #A2B4C1;
     padding: 5px;
     font-weight: normal;
 }
@@ -889,18 +905,18 @@ body.aos-broken [data-aos] {
     font-family: "newyork_personal";
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
     max-width: 500px;
     font-weight: normal;
-    -webkit-text-stroke: 0.35px #8192A0;
+    -webkit-text-stroke: 0.35px #A2B4C1;
 }
 
 .text-body .texto-content {
     font-family: "newyork_personal";
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
     max-width: 500px;
 }
@@ -958,7 +974,7 @@ body.aos-broken [data-aos] {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     z-index: 2;
     transform: rotate(6deg);
-    border: 10px solid #8192A0;
+    border: 10px solid #A2B4C1;
     top: -160px;
     left: 50px;
 }
@@ -973,7 +989,7 @@ body.aos-broken [data-aos] {
     object-fit: cover;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transform: rotate(-6deg);
-    border: 10px solid #8192A0;
+    border: 10px solid #A2B4C1;
     outline: 4px solid #fff;
     outline-offset: -14px;
 }
@@ -982,7 +998,7 @@ body.aos-broken [data-aos] {
 
 /* ===== 10. INVITATION & LOCATIONS SECTION (Información del evento) ===== */
 .invitation-card {
-    background-color: #8192A0;
+    background-color: #A2B4C1;
     padding: 80px 0;
     display: flex;
     position: relative;
@@ -1186,7 +1202,7 @@ body.aos-broken [data-aos] {
 .location-button {
     display: inline-block;
     background-color: #F3F0E2;
-    color: #8192A0;
+    color: #A2B4C1;
     padding: 8px 20px;
     border-radius: 20px;
     text-decoration: none;
@@ -1365,7 +1381,7 @@ body.aos-broken [data-aos] {
 /* Inspiración */
 .inspiration-label {
     text-align: center;
-    background-color: #8192A0;
+    background-color: #A2B4C1;
     color: var(--accent);
     padding: 15px 30px;
     border-radius: 20px;
@@ -1400,7 +1416,7 @@ body.aos-broken [data-aos] {
 }
 
 .galery .galery-title {
-    color: #8192A0 !important;
+    color: #A2B4C1 !important;
 }
 
 .container-galery {
@@ -1435,7 +1451,7 @@ body.aos-broken [data-aos] {
     align-items: center;
     background-color: transparent;
     text-align: center;
-    color: #8192A0;
+    color: #A2B4C1;
     z-index: 1;
 }
 
@@ -1445,7 +1461,7 @@ body.aos-broken [data-aos] {
     padding: 0;
     display: flex;
     position: relative;
-    color: #8192A0;
+    color: #A2B4C1;
     flex-direction: column;
     text-align: center;
 }
@@ -1493,7 +1509,7 @@ body.aos-broken [data-aos] {
 
 .button-3 {
     font-family: "NewAthenaUnicode";
-    background-color: #8192A0;
+    background-color: #A2B4C1;
     color: #F3F0E2;
     border: none;
     border-radius: 2rem;
@@ -1575,7 +1591,7 @@ body.aos-broken [data-aos] {
     margin-bottom: 0rem;
     font-size: 3.2rem;
     font-weight: normal;
-    color: #8192A0 !important;
+    color: #A2B4C1 !important;
 }
 
 .gift-title-big {
@@ -1598,10 +1614,10 @@ body.aos-broken [data-aos] {
     width: 18rem;
     padding-top: 0.8rem;
     font-family: "newyork_personal";
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
     font-size: 1.7rem;
-    -webkit-text-stroke: 0.5px #8192A0;
+    -webkit-text-stroke: 0.5px #A2B4C1;
 }
 
 .gift-section .date {
@@ -1609,7 +1625,7 @@ body.aos-broken [data-aos] {
     font-size: 3.5rem;
     padding: 1rem 0rem;
     font-family: "newyork_personal";
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
     font-weight: normal;
 }
@@ -2280,21 +2296,24 @@ footer {
     }
 
     .hero-actions {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-        gap: 0.75rem;
-        width: 100%;
-        max-width: 96vw;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center;
+        gap: 0.95rem;
+        width: 86vw;
+        max-width: none;
         margin-bottom: 1.75rem;
-        padding: 0 0.35rem;
+        padding: 0;
         box-sizing: border-box;
     }
 
     .hero-action-btn {
         font-size: 0.82rem;
-        padding: 0.6rem 0.45rem;
+        padding: 0.6rem 0.7rem;
         min-height: 48px;
         gap: 0.45rem;
+        width: auto;
+        max-width: 48%;
     }
 
     .hero-action-icon {
@@ -2407,6 +2426,9 @@ footer {
         font-size: 4.5rem;
         position: static;
         top: auto;
+        white-space: nowrap;
+        -webkit-text-stroke: 1.2px #A2B4C1;
+        paint-order: stroke fill;
     }
 
     #couple-name-2 {
@@ -2418,13 +2440,13 @@ footer {
     }
 
     .wedding-date-2 {
-        font-size: 1.05rem;
+        font-size: 0.85rem;
         position: static;
         top: auto;
         margin-top: 0.9rem;
         font-weight: normal;
-        color: #8192A0 !important;
-        -webkit-text-stroke: 1px #8192A0;
+        color: #A2B4C1 !important;
+        -webkit-text-stroke: 0.65px #A2B4C1;
         paint-order: stroke fill;
     }
 
@@ -2432,7 +2454,7 @@ footer {
     .hero-action-btn {
         font-weight: normal;
         -webkit-text-stroke: 0;
-        background: #8192A0 !important;
+        background: #A2B4C1 !important;
         color: #fff !important;
     }
 
@@ -2537,7 +2559,7 @@ footer {
         max-width: 100%;
         margin-bottom: 1rem;
         font-weight: normal;
-        -webkit-text-stroke: 0.35px #8192A0;
+        -webkit-text-stroke: 0.35px #A2B4C1;
     }
 
     .divider {
@@ -2764,7 +2786,7 @@ footer {
         font-family: "newyork_personal";
         font-size: 1.15rem;
         margin-bottom: 1.25rem;
-        color: #8192A0;
+        color: #A2B4C1;
         text-align: center;
         max-width: 500px;
     }
@@ -2812,8 +2834,9 @@ footer {
         max-width: 92vw;
         padding: 0 0.5rem;
         box-sizing: border-box;
-        color: #8192A0 !important;
-        -webkit-text-stroke: 1.5px #8192A0;
+        color: #A2B4C1 !important;
+        white-space: nowrap;
+        -webkit-text-stroke: 1.2px #A2B4C1;
         paint-order: stroke fill;
         text-shadow: none;
     }
@@ -2826,8 +2849,8 @@ footer {
 
     .wedding-date-2 {
         font-weight: normal !important;
-        color: #8192A0 !important;
-        -webkit-text-stroke: 1px #8192A0;
+        color: #A2B4C1 !important;
+        -webkit-text-stroke: 0.65px #A2B4C1;
         paint-order: stroke fill;
         text-shadow: none;
     }
@@ -2836,22 +2859,24 @@ footer {
     .hero-action-btn {
         font-weight: normal;
         -webkit-text-stroke: 0;
-        background: #8192A0 !important;
+        background: #A2B4C1 !important;
         color: #fff !important;
     }
 
     .hero-actions {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-        gap: 0.5rem;
-        width: 100%;
-        max-width: 96vw;
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 0.75rem;
+        width: 88vw;
+        max-width: none;
     }
 
     .hero-action-btn {
         font-size: 0.74rem;
-        padding: 0.5rem 0.3rem;
+        padding: 0.5rem 0.55rem;
         min-height: 44px;
+        width: auto;
+        max-width: 48%;
     }
 
     .hero-action-icon {
@@ -2923,7 +2948,7 @@ footer {
     margin: 0;
     padding: 0;
     line-height: 0;
-    background: #8192A0;
+    background: #A2B4C1;
     overflow: visible;
     position: relative;
     z-index: 1;

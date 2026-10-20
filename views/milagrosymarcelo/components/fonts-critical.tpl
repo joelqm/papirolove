@@ -23,9 +23,17 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'BickhamScriptPro';
+    src: url('{$_layoutParams.root}font.php?f=BickhamScripproregular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 </style>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=parfumerie-script-old-style.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{$_layoutParams.root}font.php?f=Athelas-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{$_layoutParams.root}font.php?f=BickhamScripproregular.ttf" as="font" type="font/ttf" crossorigin>
 {literal}
 <script>
 (function () {

@@ -118,7 +118,7 @@
     background-position: center;
     background-repeat: repeat;
     padding: 3.75rem 1.25rem 4.5rem;
-    color: #8192A0;
+    color: #A2B4C1;
     position: relative;
   }
 
@@ -150,11 +150,11 @@
   #info .details-intro p,
   #info .location-address,
   #info .location-time {
-    color: #8192A0;
+    color: #A2B4C1;
     font-family: 'Athelas-Regular', Georgia, serif;
     font-weight: normal;
     margin: 0;
-    -webkit-text-stroke: 0.3px #8192A0;
+    -webkit-text-stroke: 0.3px #A2B4C1;
   }
 
   #info .details-intro p.details-blessing {
@@ -162,7 +162,7 @@
     letter-spacing: 2.2px;
     text-transform: uppercase;
     margin: 0 auto 1.25rem;
-    -webkit-text-stroke: 0.55px #8192A0;
+    -webkit-text-stroke: 0.55px #A2B4C1;
     paint-order: stroke fill;
   }
 
@@ -188,7 +188,7 @@
     letter-spacing: 1.35px;
     text-transform: uppercase;
     text-align: center;
-    -webkit-text-stroke: 0.55px #8192A0;
+    -webkit-text-stroke: 0.55px #A2B4C1;
     paint-order: stroke fill;
   }
 
@@ -223,14 +223,14 @@
 
   #info .location-type {
     font-family: 'Athelas-Regular', Georgia, serif;
-    color: #8192A0;
+    color: #A2B4C1;
     font-size: 2.25rem;
     margin: 0;
     font-weight: normal;
     line-height: 1.05;
     letter-spacing: 3px;
     text-transform: uppercase;
-    -webkit-text-stroke: 0.35px #8192A0;
+    -webkit-text-stroke: 0.35px #A2B4C1;
   }
 
   #info .location-venue {
@@ -240,8 +240,8 @@
     margin: 0 0 0.3rem;
     letter-spacing: 0;
     text-transform: none;
-    color: #8192A0;
-    -webkit-text-stroke: 0.45px #8192A0;
+    color: #A2B4C1;
+    -webkit-text-stroke: 0.45px #A2B4C1;
   }
 
   #info .location-address:not(.location-venue) {
@@ -250,7 +250,7 @@
     text-transform: uppercase;
     line-height: 1.3;
     margin-bottom: 0.25rem;
-    -webkit-text-stroke: 0.55px #8192A0;
+    -webkit-text-stroke: 0.55px #A2B4C1;
     paint-order: stroke fill;
   }
 
@@ -263,7 +263,7 @@
 
   #info .location-button {
     display: inline-block;
-    background-color: #8192A0;
+    background-color: #A2B4C1;
     color: #fff !important;
     padding: 0.55rem 1.75rem;
     border-radius: 10px;
@@ -320,7 +320,7 @@
     #info .details-intro p.details-blessing {
       font-size: 1.08rem;
       letter-spacing: 1.8px;
-      -webkit-text-stroke: 0.45px #8192A0;
+      -webkit-text-stroke: 0.45px #A2B4C1;
     }
 
     #info .details-parents {
@@ -331,7 +331,7 @@
       font-size: 1.05rem;
       letter-spacing: 1px;
       line-height: 1.35;
-      -webkit-text-stroke: 0.4px #8192A0;
+      -webkit-text-stroke: 0.4px #A2B4C1;
     }
 
     #info .location-card {
@@ -341,12 +341,12 @@
     #info .location-type {
       font-size: 1.55rem;
       letter-spacing: 2px;
-      -webkit-text-stroke: 0.45px #8192A0;
+      -webkit-text-stroke: 0.45px #A2B4C1;
     }
 
     #info .location-venue {
       font-size: 2.55rem;
-      -webkit-text-stroke: 0.7px #8192A0;
+      -webkit-text-stroke: 0.7px #A2B4C1;
       paint-order: stroke fill;
       font-variant-ligatures: none;
     }
@@ -354,7 +354,7 @@
     #info .location-address:not(.location-venue),
     #info .location-time {
       font-size: 1.02rem;
-      -webkit-text-stroke: 0.4px #8192A0;
+      -webkit-text-stroke: 0.4px #A2B4C1;
     }
   }
 

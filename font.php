@@ -17,6 +17,7 @@ $allowed = [
     'parfumerie-script-old-style.woff2' => 'font/woff2',
     'parfumerie-script-old-style.otf' => 'font/otf',
     'SourceSans3-Variable.woff2' => 'font/woff2',
+    'BickhamScripproregular.ttf' => 'font/ttf',
 ];
 
 if ($file === '' || !isset($allowed[$file])) {

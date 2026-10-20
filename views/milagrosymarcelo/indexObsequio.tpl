@@ -110,7 +110,7 @@
     /* General Styles */
 
     :root {
-        --primary-color: #8192A0;
+        --primary-color: #A2B4C1;
         --primary-light: #6b6d45;
         --primary-lighter: #F3F0E2;
         --primary-dark: #3f4127;

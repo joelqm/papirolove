@@ -90,12 +90,12 @@
   }
 
   #galery .owl-dots .owl-dot span {
-    background: rgba(129, 146, 160, 0.45);
+    background: rgba(162, 180, 193, 0.45);
   }
 
   #galery .owl-dots .owl-dot.active span,
   #galery .owl-dots .owl-dot:hover span {
-    background: #8192A0;
+    background: #A2B4C1;
   }
 
   @media (max-width: 768px) {

@@ -19,7 +19,7 @@
 
   #new-history .history-title-big {
     font-family: 'parfumerie-script', cursive;
-    color: #8192A0;
+    color: #A2B4C1;
     margin: 0 0 2.75rem;
     font-weight: normal;
     line-height: 1.1;
@@ -63,7 +63,7 @@
     font-family: 'Athelas-Regular', Georgia, serif;
     font-size: clamp(1.15rem, 1.6vw, 1.28rem);
     line-height: 1.75;
-    color: #8192A0;
+    color: #A2B4C1;
     text-align: center;
     margin: 0;
     font-weight: 400;
@@ -81,7 +81,7 @@
     #new-history .history-title-big {
       margin-bottom: 1.75rem;
       font-size: var(--section-title-size-mobile);
-      -webkit-text-stroke: 0.7px #8192A0;
+      -webkit-text-stroke: 0.7px #A2B4C1;
       paint-order: stroke fill;
     }
 
@@ -102,7 +102,7 @@
     #new-history .history-content p {
       font-size: 1.12rem;
       line-height: 1.7;
-      -webkit-text-stroke: 0.3px #8192A0;
+      -webkit-text-stroke: 0.3px #A2B4C1;
       paint-order: stroke fill;
     }
   }

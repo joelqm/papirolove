@@ -25,30 +25,33 @@
 
         .wedding-date-2 {
             margin-top: 0.85rem !important;
-            font-size: 1.05rem !important;
+            font-size: 0.92rem !important;
             letter-spacing: 1.5px !important;
-            color: #8192A0 !important;
-            -webkit-text-stroke: 1.1px #8192A0;
+            color: #A2B4C1 !important;
+            -webkit-text-stroke: 0.65px #A2B4C1;
             paint-order: stroke fill;
             text-shadow: none;
         }
 
         .hero-actions {
-            display: grid !important;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-            width: 100%;
-            max-width: 96vw;
-            gap: 0.65rem;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center;
+            width: 86vw;
+            max-width: none;
+            gap: 0.95rem;
             margin-bottom: 1.75rem;
-            padding: 0 0.35rem;
+            padding: 0;
         }
 
         .hero-action-btn {
             font-size: 0.88rem;
             min-height: 46px;
-            padding: 0.55rem 0.4rem;
+            padding: 0.55rem 0.7rem;
             gap: 0.4rem;
-            background: #8192A0 !important;
+            width: auto;
+            max-width: 48%;
+            background: #A2B4C1 !important;
             color: #fff !important;
         }
 
@@ -59,8 +62,9 @@
 
         .couple-name {
             font-size: 4rem;
-            color: #8192A0 !important;
-            -webkit-text-stroke: 1.6px #8192A0;
+            color: #A2B4C1 !important;
+            white-space: nowrap;
+            -webkit-text-stroke: 1.2px #A2B4C1;
             paint-order: stroke fill;
             text-shadow: none;
         }
@@ -68,7 +72,8 @@
 
     @media (max-width: 420px) {
         .hero-actions {
-            gap: 0.5rem;
+            gap: 0.7rem;
+            width: 88vw;
         }
 
         .hero-action-btn {
@@ -88,8 +93,7 @@
     <div class="background"></div>
 
     <div class="header" style="justify-items: center;">
-        <h1 class="couple-name" data-aos="fade-up" data-aos-delay="80">Milagros <span style="margin-left: 1rem;">&</span>
-            Marcelo</h1>
+        <h1 class="couple-name" data-aos="fade-up" data-aos-delay="80">Milagros &amp; Marcelo</h1>
         <p class="wedding-date-2" data-aos="fade-up" data-aos-delay="140">
             S&#193;BADO <span class="date-num">05</span> DE DICIEMBRE DE <span class="date-num">2026</span>
         </p>
